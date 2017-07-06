@@ -7,8 +7,8 @@ function respawn(NPC)
 end
 
 function hailed(NPC, Spawn)
- FaceTarget(NPC, Spawn)
- conversation = CreateConversation()
+  FaceTarget(NPC, Spawn)
+  conversation = CreateConversation()
 	local choice = math.random(1, 2)
 	if choice == 1 then
     AddConversationOption(conversation, "Am I trapped?", "trapped")
@@ -16,12 +16,11 @@ function hailed(NPC, Spawn)
 	elseif choice == 2 then
 	  StartConversation(conversation, NPC, Spawn, " Did I just see a title?")
     AddConversationOption(conversation, "You've got to be kidding.." )
-	end
+end
   
 function trapped (NPC, Spawn)
-    FaceTarget (NPC, Spawn)
-    
-    Say(npc, "Fight with some dignity!", Spawn)
-    PlayAnimation (npc, 12214, player, 1)
+  FaceTarget (NPC, Spawn)
   
+  Say(npc, "Fight with some dignity!", Spawn)
+  PlayAnimation (npc, 12214, player, 1)  
 end
