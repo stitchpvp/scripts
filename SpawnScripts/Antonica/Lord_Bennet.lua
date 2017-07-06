@@ -25,5 +25,5 @@ function trapped (NPC, Spawn)
   FaceTarget (NPC, Spawn)
   
   Say(NPC, "Fight with some dignity!", Spawn)
-  PlayAnimation (NPC, 12214, player, 1)  
+  PlayAnimation (NPC, 12214, Spawn, 1)  
 end
