@@ -16,8 +16,8 @@ function hailed(NPC, Spawn)
     AddConversationOption(conversation, "Am I trapped?", "trapped")
     StartConversation(conversation, NPC, Spawn, "Ha, " .. GetName(Spawn) .. " these guard's can't protect you for too long!")
   elseif choice == 2 then
-    StartConversation(conversation, NPC, Spawn, "Did I just see a title?")
     AddConversationOption(conversation, "You've got to be kidding..")
+    StartConversation(conversation, NPC, Spawn, "Did I just see a title?")
   end
 end
   
