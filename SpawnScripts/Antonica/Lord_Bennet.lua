@@ -16,6 +16,7 @@ function hailed(NPC, Spawn)
 	elseif choice == 2 then
 	  StartConversation(conversation, NPC, Spawn, " Did I just see a title?")
     AddConversationOption(conversation, "You've got to be kidding.." )
+ end
 end
   
 function trapped (NPC, Spawn)
