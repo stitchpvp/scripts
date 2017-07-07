@@ -12,6 +12,6 @@ end
 
 function scared(NPC, Spawn)
   FaceTarget(NPC, Spawn)
-  StartConversation(conversation, NPC, Spawn, "Oh no! Please I can't survive this much longer!")
+  Say(NPC, "Oh no! Please I can't survive this much longer!", Spawn)
   PlayAnimation (npc, 11275, player, 1)
 end
