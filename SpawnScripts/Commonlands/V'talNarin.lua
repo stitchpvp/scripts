@@ -1,7 +1,12 @@
+
+function spawn(NPC)
+	SetPlayerProximityFunction(NPC, 10, "InRange")
+end
+
+
 function InRange(NPC, Spawn)
 Say(NPC, "Why hasn't my brother written me? What happened to him? Citizen, why are you bothering me?", Spawn)
 end
-
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
