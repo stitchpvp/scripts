@@ -1,3 +1,10 @@
+function spawn(NPC)
+	waypoints(NPC)
+end
+
+
+
+
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
@@ -22,11 +29,6 @@ function Option2(NPC, Spawn)
 
 	AddConversationOption(conversation, "I'll return with what you need, have no doubt about that.  What do you need?")
 	StartConversation(conversation, NPC, Spawn, "Folks are so greedy these days.  I suppose I don't blame them.  In recent years, it's become every gnome for himself.  I need you to venture into the Wailing Caves and retrieve some reagents. I can't tell you why I need them, but I will reward you well if you return with the ingredients. Here, let me write in your journal what I need.")
-end
-
-
-function spawn(NPC)
-	waypoints(NPC)
 end
 
 function respawn(NPC)
