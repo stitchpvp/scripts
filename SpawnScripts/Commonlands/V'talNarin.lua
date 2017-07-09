@@ -1,4 +1,6 @@
 
+local QUEST_1_FROM_IRIZAN = 301
+
 function spawn(NPC)
 	SetPlayerProximityFunction(NPC, 10, "InRange")
 end
