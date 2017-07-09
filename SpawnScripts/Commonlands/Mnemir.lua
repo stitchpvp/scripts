@@ -8,10 +8,9 @@ function hailed(NPC, Spawn)
 
 	AddConversationOption(conversation, "Your taxes weren't all in your mailbox, you still owe more.", "Option1")
 	StartConversation(conversation, NPC, Spawn, "What yous want?")
-end
-if HasQuest(Spawn, QUEST_1_Captain_Feralis)
-	AddConversationOption(conversation, "We'll see about that...")
-	StartConversation(conversation, NPC, Spawn, "I won't! I don't have it! I won't give you anything! You can't make me do anything!")
+  if HasQuest(Spawn, QUEST_1_Captain_Feralis) then
+    AddConversationOption(conversation, "We'll see about that...")
+    StartConversation(conversation, NPC, Spawn, "I won't! I don't have it! I won't give you anything! You can't make me do anything!")
 end
 
 function Option1(NPC, Spawn)
