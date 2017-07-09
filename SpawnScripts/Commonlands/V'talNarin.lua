@@ -1,3 +1,8 @@
+function InRange(NPC, Spawn)
+Say(NPC, "Why hasn't my brother written me? What happened to him? Citizen, why are you bothering me?", Spawn)
+end
+
+
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
@@ -5,7 +10,8 @@ function hailed(NPC, Spawn)
 	AddConversationOption(conversation, "What others?", "Option12")
 	AddConversationOption(conversation, "Fine!")
 	StartConversation(conversation, NPC, Spawn, "Get away from me! You're like the others!")
-
+end  
+if HasQuest(Spawn, QUEST_1_FROM_Irizan)
 	AddConversationOption(conversation, "Goodbye.")
 	AddConversationOption(conversation, "I'm here as a favor to someone else.", "Option13")
 	StartConversation(conversation, NPC, Spawn, "You ridicule my loss as well!")

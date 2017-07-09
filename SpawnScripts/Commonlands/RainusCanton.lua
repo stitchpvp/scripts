@@ -2,9 +2,9 @@ function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 
-	AddConversationOption(conversation, "Melendred, my loyalties remain private.", "Option1")
-	AddConversationOption(conversation, "Melendred, bound in service to none.", "Option2")
-	AddConversationOption(conversation, "Melendred, proudly enacting the will of the Overlord.", "Option3")
+	AddConversationOption(conversation,  .. GetName(Spawn) .. ", my loyalties remain private.", "Option1")
+	AddConversationOption(conversation,  .. GetName(Spawn) .. ", bound in service to none.", "Option2")
+	AddConversationOption(conversation,  .. GetName(Spawn) .. ", proudly enacting the will of the Overlord.", "Option3")
 	StartConversation(conversation, NPC, Spawn, "Rainus Canton, a once wandering sword now bound in service to the Overlord. And yourself?")
 
 	AddConversationOption(conversation, "I have, here are the root samples.", "Option4")
@@ -25,7 +25,7 @@ function Option1(NPC, Spawn)
 	AddConversationOption(conversation, "My business is my own.", "Option7")
 	AddConversationOption(conversation, "No, I am not.", "Option8")
 	AddConversationOption(conversation, "I am.", "Option9")
-	StartConversation(conversation, NPC, Spawn, "Melendred, indeed. Your name has graced the lips of many I have had the fortune--or misfortune--to listen to. It is a, ehm--a pleasure to meet you. Are you out here in the service of the Overlord as well?")
+	StartConversation(conversation, NPC, Spawn,  .. GetName(Spawn) .. ", indeed. Your name has graced the lips of many I have had the fortune--or misfortune--to listen to. It is a, ehm--a pleasure to meet you. Are you out here in the service of the Overlord as well?")
 end
 
 function Option7(NPC, Spawn)
@@ -104,7 +104,7 @@ function Option2(NPC, Spawn)
 
 	AddConversationOption(conversation, "My business is my own.", "Option16")
 	AddConversationOption(conversation, "I am.", "Option17")
-	StartConversation(conversation, NPC, Spawn, "Melendred, indeed. Your name has graced the lips of many I have had the fortune--or misfortune--to listen to. It is a, ehm--a pleasure to meet you. Are you out here in the service of the Overlord as well?")
+	StartConversation(conversation, NPC, Spawn,  .. GetName(Spawn) .. ", indeed. Your name has graced the lips of many I have had the fortune--or misfortune--to listen to. It is a, ehm--a pleasure to meet you. Are you out here in the service of the Overlord as well?")
 end
 
 function Option16(NPC, Spawn)
@@ -128,7 +128,7 @@ function Option3(NPC, Spawn)
 	AddConversationOption(conversation, "My business is my own.", "Option18")
 	AddConversationOption(conversation, "No, I am not.", "Option19")
 	AddConversationOption(conversation, "I am.", "Option20")
-	StartConversation(conversation, NPC, Spawn, "Melendred, indeed. Your name has graced the lips of many I have had the fortune--or misfortune--to listen to. It is a, ehm--a pleasure to meet you. Are you out here in the service of the Overlord as well?")
+	StartConversation(conversation, NPC, Spawn,  .. GetName(Spawn) .. ", indeed. Your name has graced the lips of many I have had the fortune--or misfortune--to listen to. It is a, ehm--a pleasure to meet you. Are you out here in the service of the Overlord as well?")
 end
 
 function Option18(NPC, Spawn)
@@ -191,7 +191,7 @@ function Option4(NPC, Spawn)
 	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "You mentioned having more work for me.", "Option25")
-	StartConversation(conversation, NPC, Spawn, "Good work, Melendred. I'll get these to our alchemist for study.")
+	StartConversation(conversation, NPC, Spawn, "Good work, " .. GetName(Spawn) .. ". I'll get these to our alchemist for study.")
 end
 
 function Option25(NPC, Spawn)
@@ -263,7 +263,7 @@ function Option6(NPC, Spawn)
 	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "What did you discover?", "Option32")
-	StartConversation(conversation, NPC, Spawn, "Wonderful job, Melendred! The orcs will be feeling this for a while. In theory we could harry them endlessly if their leader never returned. That would make an interesting study to return home with. Speaking of that, I got word back on the orc roots.")
+	StartConversation(conversation, NPC, Spawn, "Wonderful job, " .. GetName(Spawn) .. "! The orcs will be feeling this for a while. In theory we could harry them endlessly if their leader never returned. That would make an interesting study to return home with. Speaking of that, I got word back on the orc roots.")
 end
 
 function Option32(NPC, Spawn)
