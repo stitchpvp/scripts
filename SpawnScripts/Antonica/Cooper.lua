@@ -22,4 +22,3 @@ function Option2(NPC, Spawn)
 
 	StartConversation(conversation, NPC, Spawn, "Truly a lifesaver! Deliver this to Riason Hanagom, no need to return here when you're finished. Tell him that he'll need to pay you for your services. Do try not to look at it. The letter is rather personal and I would feel awkward if someone else were to read it.")
 end
-

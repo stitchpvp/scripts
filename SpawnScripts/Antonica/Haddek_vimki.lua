@@ -58,3 +58,4 @@ function Option6(NPC, Spawn)
 	AddConversationOption(conversation, "All right.")
 	StartConversation(conversation, NPC, Spawn, "I'll tell ya what I need when you get back.")
 end
+
