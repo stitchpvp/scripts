@@ -6,6 +6,7 @@ function spawn(NPC)
 end
 
 function InRange(NPC, Spawn)
+local conversation = CreateConversation()
 Say(NPC, "Why hasn't my brother written me? What happened to him? Citizen, why are you bothering me?", Spawn)
 end
 

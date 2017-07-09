@@ -18,8 +18,8 @@ function Option1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 
-	AddConversationOption(conversation, "I'll help you, but there'd better be something in it for me.  I'm not cheap, either.")
-	AddConversationOption(conversation, "I'm not sure you even know what you're talking about.  I'll be on my way.", "Option2")
+	AddConversationOption(conversation, "I'll help you, but there'd better be something in it for me.  I'm not cheap, either.", "Option2")
+	AddConversationOption(conversation, "I'm not sure you even know what you're talking about.  I'll be on my way.")
 	StartConversation(conversation, NPC, Spawn, "Hmm ...  yes, yes, yes!  You CAN help me!  But what would it cost, I wonder ... I would have to divulge the components ... but I suppose I have no other choice.  Will you help me or not?")
 end
 
