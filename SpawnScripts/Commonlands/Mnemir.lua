@@ -1,3 +1,7 @@
+local QUEST_1_Captain_Feralis = 300
+
+
+
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
