@@ -11,7 +11,9 @@ function hailed(NPC, Spawn)
   if HasQuest(Spawn, QUEST_1_Captain_Feralis) then
     AddConversationOption(conversation, "We'll see about that...")
     StartConversation(conversation, NPC, Spawn, "I won't! I don't have it! I won't give you anything! You can't make me do anything!")
-end
+  end
+end  
+  
 
 function Option1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
