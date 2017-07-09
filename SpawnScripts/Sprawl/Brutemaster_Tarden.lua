@@ -17,13 +17,17 @@ function respawn(NPC)
 end
 
 function InRange(NPC, Spawn)
-	local choice = math.random(1, 3)
+	local choice = math.random(1, 5)
 	if choice == 1 then
 		PlayFlavor(NPC, "voiceover/english/tutorial_revamp/brutemaster_tarden/fprt_adv03_sprawl/quest/quest_brutemaster_tarden_callout_1277cb68.mp3", "Don't forget that you all work for me!", "threaten", 938386903, 4034228899, Spawn)
 	elseif choice == 2 then
 		PlayFlavor(NPC, "voiceover/english/tutorial_revamp/brutemaster_tarden/fprt_adv03_sprawl/quest/quest_brutemaster_tarden_callout_372b3277.mp3", "The Giantslayers are the toughest gang around!", "thumbsup", 3470522830, 1311148717, Spawn)
 	elseif choice == 3 then
 		PlayFlavor(NPC, "voiceover/english/tutorial_revamp/brutemaster_tarden/fprt_adv03_sprawl/quest/quest_brutemaster_tarden_callout_d6e87a9e.mp3", "Remember, I'm the boss around here!", "threaten", 3904448873, 572831666, Spawn)
+  elseif choice == 4 then
+   Say(NPC, "We don't take orders from Lucan, and we certainly don't take orders from the militia.", Spawn)
+  elseif choice == 5 then
+   Say(NPC, "Who owns the Sprawl? WE own the Sprawl!", Spawn)
 	end
 end
 
@@ -203,7 +207,3 @@ MovementLoopAddLocation(NPC, -6.69, -2.67, -16.60, 2, 1)
 MovementLoopAddLocation(NPC, -10.52, -2.67, -11.09, 2, 1)
 MovementLoopAddLocation(NPC, -8.09, -2.67, -15.03, 2, 1)
 end
-
-
--- We don't take orders from Lucan, and we certainly don't take orders from the militia.
--- Who owns the Sprawl? WE own the Sprawl!
