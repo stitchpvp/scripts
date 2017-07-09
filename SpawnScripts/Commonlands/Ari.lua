@@ -11,7 +11,7 @@ function hailed(NPC, Spawn)
   elseif choice == 3 then
     Say(NPC, "Do not challenge my authority, citizen. In Freeport, the Overlord's word is law!", Spawn)
     PlayAnimation(NPC, 11649, Spawn, 1)
-  elseif choice == 4
+  elseif choice == 4 then
     Say(NPC, "The Overlord commands me to patrol this area, and so I must.", Spawn)
     PlayAnimation(NPC, 10815, Spawn, 1)
   end
