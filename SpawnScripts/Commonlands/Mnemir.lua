@@ -5,12 +5,11 @@ local QUEST_1_Captain_Feralis = 300
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-
+  Say(NPC, "What do you want?", Spawn)
+  
+  if HasQuest(Spawn, QUEST_1_Captain_Feralis) then
 	AddConversationOption(conversation, "Your taxes weren't all in your mailbox, you still owe more.", "Option1")
 	StartConversation(conversation, NPC, Spawn, "What yous want?")
-  if HasQuest(Spawn, QUEST_1_Captain_Feralis) then
-    AddConversationOption(conversation, "We'll see about that...")
-    StartConversation(conversation, NPC, Spawn, "I won't! I don't have it! I won't give you anything! You can't make me do anything!")
   end
 end  
   
