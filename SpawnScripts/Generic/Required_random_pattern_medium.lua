@@ -59,11 +59,3 @@ function RouteFour(NPC)
 	MovementLoopAddLocation(NPC, X - 8, Y, Z + 8, 2, math.random(20,85))
 	MovementLoopAddLocation(NPC, X, Y, Z, 2, math.random(20,85))
 end
-
-function respawn(NPC)
-    spawn(NPC)
-end
-
-function hailed(NPC, Spawn)
-    FaceTarget(NPC, Spawn)
-end
