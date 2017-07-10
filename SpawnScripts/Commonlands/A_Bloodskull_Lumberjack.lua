@@ -12,9 +12,9 @@ function SetTimer(NPC)
   local choice = math.random(1, 2)
 
   if choice == 1 then
-    AddTimer(npc, timerfast, "DoAnimation")
+    AddTimer(NPC, timerfast, "DoAnimation")
   elseif choice == 2 then
-    AddTimer(npc, timerslow, "DoMovement")
+    AddTimer(NPC, timerslow, "DoMovement")
   end
 end
 
