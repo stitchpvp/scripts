@@ -5,6 +5,7 @@ local timerslow = math.random(2000, 8000)
 local timerfast = math.random(1000, 3000)
 
 function spawn(NPC)
+  AddPathing(NPC)
   SetTimer(NPC)
 end
 
@@ -19,11 +20,12 @@ function SetTimer(NPC)
 end
 
 function DoAnimation(NPC)
+  SetInCombat(NPC, true)
   PlayAnimation(NPC, 2809)
   SetTimer(NPC)
 end
 
 function DoMovement(NPC)
-  AddPathing(NPC) 
+  SetInCombat(NPC, false) 
   SetTimer(NPC)
 end
