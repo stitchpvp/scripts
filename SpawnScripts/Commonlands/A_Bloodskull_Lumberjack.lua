@@ -18,12 +18,12 @@ function SetTimer(NPC)
   end
 end
 
-function DoAnimation(NPC, Spawn)
-  PlayAnimation(NPC, 2809, Spawn, 1)
+function DoAnimation(NPC)
+  PlayAnimation(NPC, 2809)
   SetTimer(NPC)
 end
 
-function DoMovement(NPC, Spawn)
+function DoMovement(NPC)
   AddPathing(NPC) 
   SetTimer(NPC)
 end
