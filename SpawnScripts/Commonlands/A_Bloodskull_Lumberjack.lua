@@ -1,6 +1,6 @@
 
 
-require('/SpawnScripts/Generic/random_pattern_medium');
+require('/SpawnScripts/Generic/Required_random_pattern_medium');
 local timerslow = math.random(2000, 8000)
 local timerfast = math.random(1000, 3000)
 
@@ -24,6 +24,6 @@ function DoAnimation(NPC, Spawn)
 end
 
 function DoMovement(NPC, Spawn)
-  MovementChoice(NPC) 
+  AddPathing(NPC) 
   SetTimer(NPC)
 end
