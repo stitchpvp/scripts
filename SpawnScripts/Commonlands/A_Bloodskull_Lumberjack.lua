@@ -19,7 +19,7 @@ function SetTimer(NPC)
 end
 
 function DoAnimation(NPC, Spawn)
-  PlayAnimation(NPC, 10815, Spawn, 1)
+  PlayAnimation(NPC, 2809, Spawn, 1)
   SetTimer(NPC)
 end
 
