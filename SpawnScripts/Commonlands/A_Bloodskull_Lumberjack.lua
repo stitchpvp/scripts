@@ -1,6 +1,6 @@
 
-local Movement = "SpawnScripts.Generic.random_pattern_medium"
-require(Movement);
+
+require('/SpawnScripts/Generic/random_pattern_medium');
 local timerslow = math.random(2000, 8000)
 local timerfast = math.random(1000, 3000)
 
@@ -24,6 +24,6 @@ function DoAnimation(NPC, Spawn)
 end
 
 function DoMovement(NPC, Spawn)
-  Movement.MovementChoice(NPC) 
+  MovementChoice(NPC) 
   SetTimer(NPC)
 end
