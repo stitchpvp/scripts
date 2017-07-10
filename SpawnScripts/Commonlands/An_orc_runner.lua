@@ -18,9 +18,9 @@ function respawn(NPC)
 end
 
 function waypoints(NPC)
-local speed = math.random(32, 37) / 10
+local speed = math.random(42, 47) / 10
 local delay = math.random(1,5)
-MovementLoopAddLocation(NPC, -780.46, -47.39, 630.21, speed, delay)
+MovementLoopAddLocation(NPC, -780.46, -47.39, 630.21, speed, 0)
 MovementLoopAddLocation(NPC, -662.91, -47.33, 638.96, speed, 0)
 MovementLoopAddLocation(NPC, -618.83, -47.88, 635.99, speed, 0)
 MovementLoopAddLocation(NPC, -536.5, -45.07, 642.18, speed, 0)
@@ -59,5 +59,5 @@ MovementLoopAddLocation(NPC, -655.13, -45.02, 420.88, speed, 0)
 MovementLoopAddLocation(NPC, -690, -48.04, 540.61, speed, 0)
 MovementLoopAddLocation(NPC, -857.66, -47.99, 605.48, speed, 0)
 MovementLoopAddLocation(NPC, -851.03, -47.53, 647.4, speed, 0)
-MovementLoopAddLocation(NPC, -818.88, -47.72, 626.26, speed, 0)
+MovementLoopAddLocation(NPC, -818.88, -47.72, 626.26, speed, delay)
 end
