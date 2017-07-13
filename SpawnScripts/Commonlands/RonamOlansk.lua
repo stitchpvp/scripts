@@ -20,6 +20,22 @@ function Option2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 
-	AddConversationOption(conversation, "Don't worry about me.  Have concern with your villagers until the job is done.")
+	AddConversationOption(conversation, "Don't worry about me.  Have concern with your villagers until the job is done.", "Option3")
 	StartConversation(conversation, NPC, Spawn, "I know the task will not be easy.The halls of the Wailing Caves are haunted with the angry, tormented ghosts of orcs left to a grisly death by the members of the Freeport Militia.  I imagine quite a few will need to fall before any progress can be made.")
+end
+
+function Option3(NPC, Spawn)
+	FaceTarget(NPC, Spawn)
+	local conversation = CreateConversation()
+
+	AddConversationOption(conversation, "I'll leave you alone then.", "Option4")
+	StartConversation(conversation, NPC, Spawn, "At least I can find peace and solitude in fishing.")
+end
+
+function Option4(NPC, Spawn)
+	FaceTarget(NPC, Spawn)
+	local conversation = CreateConversation()
+
+	AddConversationOption(conversation, "I'll leave you alone then.")
+	StartConversation(conversation, NPC, Spawn, "At least I can find peace and solitude in fishing.")
 end

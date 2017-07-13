@@ -10,12 +10,14 @@ function spawn(NPC)
 end
 
 function SetTimer(NPC)
-  local choice = math.random(1, 2)
+  local choice = math.random(1, 3)
 
   if choice == 1 then
-    AddTimer(NPC, timerfast, "DoAnimation1")
+    AddTimer(NPC, timerslow, "DoAnimation1")
   elseif choice == 2 then
-    AddTimer(NPC, timerslow, "DoAnimation2")
+    AddTimer(NPC, timerfast, "DoAnimation2")
+  elseif choice == 3 then
+    AddTimer(NPC, timerslow, "DoAnimation3")  
   end
 end
 
@@ -26,5 +28,10 @@ end
 
 function DoAnimation2(NPC)
  PlayAnimation(NPC, 11858)
+  SetTimer(NPC)
+end
+
+function DoAnimation3(NPC)
+  PlayAnimation(NPC, 12153)
   SetTimer(NPC)
 end
