@@ -1,5 +1,30 @@
+local timerslow = math.random(8000, 17000)
+local timerfast = math.random(1000, 3000)
 function spawn(NPC)
-	SetPlayerProximityFunction(NPC, 10, "InRange")
+  SetTimer(NPC)
+  SetPlayerProximityFunction(NPC, 10, "InRange")
+  PlayAnimation(NPC, 221)
+end
+
+function SetTimer(NPC)
+  local choice = math.random(1, 2)
+
+  if choice == 1 then
+    AddTimer(NPC, timerslow, "DoAnimation1")
+  elseif choice == 2 then
+    AddTimer(NPC, timerfast, "DoAnimation2")
+
+  end
+end
+
+function DoAnimation1(NPC)
+  PlayAnimation(NPC, 12978)
+  SetTimer(NPC)
+end
+
+function DoAnimation2(NPC)
+ PlayAnimation(NPC, 13056)
+  SetTimer(NPC)
 end
 
 function InRange(NPC, Spawn)
@@ -12,6 +37,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
+  PlayAnimation(NPC, 220, Spawn, 1))
 	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "What are you going on about?", "Option1")
@@ -128,6 +154,7 @@ end
 
 function Option14(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
+  PlayAnimation(NPC, 219, Spawn, 1)
 	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "So what should I be looking for?")
