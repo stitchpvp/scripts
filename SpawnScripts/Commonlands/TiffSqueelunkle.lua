@@ -1,5 +1,4 @@
 local timerslow = math.random(8000, 17000)
-local timerfast = math.random(1000, 3000)
 function spawn(NPC)
   SetTimer(NPC)
   SetPlayerProximityFunction(NPC, 10, "InRange")
@@ -12,7 +11,7 @@ function SetTimer(NPC)
   if choice == 1 then
     AddTimer(NPC, timerslow, "DoAnimation1")
   elseif choice == 2 then
-    AddTimer(NPC, timerfast, "DoAnimation2")
+    AddTimer(NPC, timerslow, "DoAnimation2")
 
   end
 end
@@ -37,7 +36,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-  PlayAnimation(NPC, 220, Spawn, 1))
+  PlayAnimation(NPC, 220, Spawn, 1)
 	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "What are you going on about?", "Option1")

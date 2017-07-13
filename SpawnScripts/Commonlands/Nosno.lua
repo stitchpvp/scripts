@@ -1,6 +1,5 @@
 function hailed(NPC, Spawn)
   FaceTarget(NPC, Spawn)
-  PlayAnimation(NPC, 539, Spawn, 1)
   conversation = CreateConversation()
 	local choice = math.random(1, 4)
 	if choice == 1 then
