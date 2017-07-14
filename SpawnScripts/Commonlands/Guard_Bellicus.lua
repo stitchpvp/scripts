@@ -1,6 +1,4 @@
-function hailed(NPC, Spawn)
-  FaceTarget(NPC, Spawn)
-require('/SpawnScripts/Generic/GenericGuardVoiceOvers.lua');
+require('SpawnScripts/Generic/GenericGuardVoiceOvers.lua');
 
 function hailed(NPC, Spawn)
   FaceTarget(NPC, Spawn)

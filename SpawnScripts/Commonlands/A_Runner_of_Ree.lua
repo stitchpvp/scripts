@@ -1,13 +1,26 @@
-
+require('SpawnScripts/Generic/BrokentuskVoiceOvers');
 function spawn(NPC)
-	waypoints(NPC)
+ waypoints(NPC)
 end
 
-function hailed(NPC, Spawn)
-	FaceTarget(NPC, Spawn)
+function hailed(NPC, Spawn) 
+  FaceTarget(NPC, Spawn) 
+end 
+
+function aggro(NPC, Spawn)
+ generic_aggro(NPC, Spawn)
 end
 
-function respawn(NPC)
+function healthchanged(NPC, Spawn)
+  generic_healthchanged(NPC, Spawn)
+end
+
+function killed(NPC, Spawn)
+  generic_killed(NPC, Spawn)
+end
+
+function death(NPC, Spawn)
+  generic_death(NPC, Spawn)
 end
 
 function waypoints(NPC)
@@ -26,4 +39,8 @@ MovementLoopAddLocation(NPC, -221.23, -45.97, -858.93, 3, 0)
 MovementLoopAddLocation(NPC, -232.8, -48.04, -897.3, 3, 0)
 MovementLoopAddLocation(NPC, -251.24, -48.01, -948.31, 3, 0)
 MovementLoopAddLocation(NPC, -264.3, -47.99, -977.43, 3, 0)
+end
+
+function respawn(NPC)
+	spawn(NPC)
 end

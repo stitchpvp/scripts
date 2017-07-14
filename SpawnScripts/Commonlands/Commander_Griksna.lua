@@ -1,4 +1,4 @@
-require('/SpawnScripts/Generic/BrokentuskVoiceOvers');
+require('SpawnScripts/Generic/BrokentuskVoiceOvers');
 function spawn(NPC)
  waypoints(NPC)
 end
@@ -21,6 +21,10 @@ end
 
 function death(NPC, Spawn)
   generic_death(NPC, Spawn)
+end
+
+function respawn(NPC)
+	spawn(NPC)
 end
 
 function waypoints(NPC)
