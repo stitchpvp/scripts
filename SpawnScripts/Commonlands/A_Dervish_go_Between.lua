@@ -8,9 +8,9 @@ end
 
 function respawn(NPC)
 end
-
+local delay = math.random(1,5)
 function waypoints(NPC)
-MovementLoopAddLocation(NPC, 1327.23, -39.75, 297.03, 3, math.random(3000,8000))
+MovementLoopAddLocation(NPC, 1327.23, -39.75, 297.03, 3, delay)
 MovementLoopAddLocation(NPC, 1307.16, -36.74, 351.40, 3, 0)
 MovementLoopAddLocation(NPC, 1268.11, -16.83, 426.62, 3, 0)
 MovementLoopAddLocation(NPC, 1193.92, -34.11, 448.37, 3, 0)
@@ -32,7 +32,7 @@ MovementLoopAddLocation(NPC, 799.59, -54.40, 335.65, 3, 0)
 MovementLoopAddLocation(NPC, 946.93, -49.64, 374.94, 3, 0)
 MovementLoopAddLocation(NPC, 1120.64, -43.29, 400.03, 3, 0)
 MovementLoopAddLocation(NPC, 1261.04, -32.07, 378.07, 3, 0)
-MovementLoopAddLocation(NPC, 1347.62, -39.05, 286.17, 3, 0)
+MovementLoopAddLocation(NPC, 1347.62, -39.05, 286.17, 3, delay)
 end
 
 function Panic(NPC)
