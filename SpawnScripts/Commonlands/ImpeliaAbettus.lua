@@ -38,7 +38,7 @@ function Option5(NPC, Spawn)
 	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "You mean the Dark Elves allowed someone to build a castle in their forest?", "Option6")
-	StartConversation(conversation, NPC, Spawn, "I tracked down where he found his original test subjects, and it led me into the Nektulos Forest.  It seems the "golems" he was originally using were coming from a mysterious manor, more a castle, actually.  I wasn't able to find out too much about the origins of the place, but it surely wasn't Teir'Dal in origin.")
+	StartConversation(conversation, NPC, Spawn, "I tracked down where he found his original test subjects, and it led me into the Nektulos Forest.  It seems the ""golems"" he was originally using were coming from a mysterious manor, more a castle, actually.  I wasn't able to find out too much about the origins of the place, but it surely wasn't Teir'Dal in origin.")
 end
 
 function Option6(NPC, Spawn)
@@ -142,7 +142,7 @@ function Option17(NPC, Spawn)
 	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "You mean the Dark Elves allowed someone to build a castle in their forest?", "Option18")
-	StartConversation(conversation, NPC, Spawn, "I tracked down where he found his original test subjects, and it led me into the Nektulos Forest.  It seems the "golems" he was originally using were coming from a mysterious manor, more a castle, actually.  I wasn't able to find out too much about the origins of the place, but it surely wasn't Teir'Dal in origin.")
+	StartConversation(conversation, NPC, Spawn, "I tracked down where he found his original test subjects, and it led me into the Nektulos Forest.  It seems the ""golems"" he was originally using were coming from a mysterious manor, more a castle, actually.  I wasn't able to find out too much about the origins of the place, but it surely wasn't Teir'Dal in origin.")
 end
 
 function Option18(NPC, Spawn)
@@ -246,7 +246,7 @@ function Option30(NPC, Spawn)
 	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "You mean the Dark Elves allowed someone to build a castle in their forest?", "Option31")
-	StartConversation(conversation, NPC, Spawn, "I tracked down where he found his original test subjects, and it led me into the Nektulos Forest.  It seems the "golems" he was originally using were coming from a mysterious manor, more a castle, actually.  I wasn't able to find out too much about the origins of the place, but it surely wasn't Teir'Dal in origin.")
+	StartConversation(conversation, NPC, Spawn, "I tracked down where he found his original test subjects, and it led me into the Nektulos Forest.  It seems the ""golems"" he was originally using were coming from a mysterious manor, more a castle, actually.  I wasn't able to find out too much about the origins of the place, but it surely wasn't Teir'Dal in origin.")
 end
 
 function Option31(NPC, Spawn)

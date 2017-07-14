@@ -9,8 +9,8 @@
 local QUEST_2_FROM_KURDEK = 254
 
 function spawn(NPC)
+  waypoints(NPC)
 	SetPlayerProximityFunction(NPC, 10, "InRange")
-	waypoints(NPC)
 end
 
 function respawn(NPC)

@@ -1,8 +1,7 @@
 local timerslow = math.random(8000, 17000)
 function spawn(NPC)
-  SetTimer(NPC)
   SetPlayerProximityFunction(NPC, 10, "InRange")
-  PlayAnimation(NPC, 221)
+  SetTimer(NPC)
 end
 
 function SetTimer(NPC)
@@ -12,7 +11,6 @@ function SetTimer(NPC)
     AddTimer(NPC, timerslow, "DoAnimation1")
   elseif choice == 2 then
     AddTimer(NPC, timerslow, "DoAnimation2")
-
   end
 end
 
@@ -36,9 +34,9 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-  PlayAnimation(NPC, 220, Spawn, 1)
 	local conversation = CreateConversation()
-
+  SpawnSet(NPC, "visual_state", 11463)
+  
 	AddConversationOption(conversation, "What are you going on about?", "Option1")
 	AddConversationOption(conversation, "Perfect fit for what, little bit?", "Option2")
 	AddConversationOption(conversation, "I don't think so.")
@@ -153,9 +151,14 @@ end
 
 function Option14(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-  PlayAnimation(NPC, 219, Spawn, 1)
 	local conversation = CreateConversation()
-
+  AddTimer(NPC, 2000, "ResetVisualState", 1, NPC)
+  
 	AddConversationOption(conversation, "So what should I be looking for?")
 	StartConversation(conversation, NPC, Spawn, "But I need you to go into the smuggler's camp!  I'll reward you, naturally.  I promise!  Break my gears, and curse my mind!  It's just that I've been spotted by 'em several times snoopin' around 'n if I get snagged again they'll sure as Prexxus take my other hand, too!")
+end
+
+
+function ResetVisualState(ThisSpawn, Spawn)
+	SpawnSet(Spawn, "visual_state", 0)
 end
