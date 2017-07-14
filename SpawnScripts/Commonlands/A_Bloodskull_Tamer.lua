@@ -1,4 +1,4 @@
-require('/SpawnScripts/Generic/tiny_movement_loop.lua');
+require('/SpawnScripts/Generic/tiny_movement_loop');
 
 function spawn(NPC)
   ChooseMovement(NPC)
