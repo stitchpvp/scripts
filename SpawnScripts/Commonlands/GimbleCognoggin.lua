@@ -3,8 +3,6 @@ function spawn(NPC)
 end
 
 
-
-
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
