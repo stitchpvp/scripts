@@ -5,6 +5,7 @@ end
 function InRange(NPC, Spawn)
 Say(NPC, "You there! Care to make a trade? I've got resources beyond compare!", Spawn)
 PlayAnimation(NPC, 12028, Spawn, 1)
+FaceTarget(NPC, Spawn)
 end
 
 
