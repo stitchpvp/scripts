@@ -1,12 +1,12 @@
 function AddPathing(NPC)
-	local route = math.random(1,8)
+	local route = math.random(1,4)
 	if route == 1 then
 	    RouteOne(NPC)
 	elseif route == 2 then
 	    RouteTwo(NPC)
 	elseif route == 3 then
 	    RouteThree(NPC)
-	elseif route == 8 then
+	elseif route == 4 then
 	    RouteFour(NPC)
 	end
 end
