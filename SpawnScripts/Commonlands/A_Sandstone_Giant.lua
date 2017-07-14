@@ -1,4 +1,4 @@
-function spawn(npc)
+function spawn(NPC)
   local locations = {
     { 1224.44, -42.90, -285.92, 1.5, 0},
     { 1293.32, -59.24, -334.01, 1.5, 0},
@@ -43,11 +43,11 @@ function spawn(npc)
   }
 
   for _, location in ipairs(locations) do
-    MovementLoopAddLocation(npc, location[1], location[2], location[3], location[4], location[5], location[6], location[7], location[8], location[9], location[10], location[11], location[12], location[13], location[14], location[15], location[16], location[17], location[18], location[19], location[20], location[21], location[22], location[23], location[24], location[25], location[26], location[27], location[28], location[29], location[30], location[31], location[32], location[33], location[34], location[35], location[36], location[37], location[38], location[39])
+    MovementLoopAddLocation(NPC, location[1], location[2], location[3], location[4], location[5], location[6], location[7], location[8], location[9], location[10], location[11], location[12], location[13], location[14], location[15], location[16], location[17], location[18], location[19], location[20], location[21], location[22], location[23], location[24], location[25], location[26], location[27], location[28], location[29], location[30], location[31], location[32], location[33], location[34], location[35], location[36], location[37], location[38], location[39])
   end
 
   for i = #locations - 1, 1, -1 do
-    MovementLoopAddLocation(npc, location[i][1], location[i][2], location[i][3], location[i][4], location[i][5], location[i][6], location[i][7], location[i][8], location[i][9], location[i][10], location[i][11], location[i][12], location[i][13], location[i][14], location[i][15], location[i][16], location[i][17], location[i][18], location[i][19], location[i][20], location[i][21], location[i][22], location[i][23], location[i][24], location[i][25], location[i][26], location[i][27], location[i][28], location[i][29], location[i][30], location[i][31], location[i][32], location[i][33], location[i][34], location[i][35], location[i][36], location[i][37], location[i][38], location[i][39])
+    MovementLoopAddLocation(NPC, location[i][1], location[i][2], location[i][3], location[i][4], location[i][5], location[i][6], location[i][7], location[i][8], location[i][9], location[i][10], location[i][11], location[i][12], location[i][13], location[i][14], location[i][15], location[i][16], location[i][17], location[i][18], location[i][19], location[i][20], location[i][21], location[i][22], location[i][23], location[i][24], location[i][25], location[i][26], location[i][27], location[i][28], location[i][29], location[i][30], location[i][31], location[i][32], location[i][33], location[i][34], location[i][35], location[i][36], location[i][37], location[i][38], location[i][39])
   end
 end
 
