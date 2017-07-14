@@ -1,6 +1,6 @@
 require('/SpawnScripts/Generic/BrokentuskVoiceOvers');
 function spawn(NPC)
-  AddPathing(NPC)
+  waypoints(NPC)
 end
 
 function hailed(NPC, Spawn) 
@@ -22,8 +22,6 @@ end
 function death(NPC, Spawn)
   generic_death(NPC, Spawn)
 end
-
-
 
 
 function waypoints(NPC)
