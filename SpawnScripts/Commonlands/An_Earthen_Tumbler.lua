@@ -36,7 +36,7 @@ local Z = GetZ(NPC)
   MovementLoopAddLocation(NPC, X - 18, Y, Z - 70, 2, math.random(20,85))
 end
 
-function RouteOne(NPC)
+function RouteTwo(NPC)
 local X = GetX(NPC)
 local Y = GetY(NPC)
 local Z = GetZ(NPC)  
