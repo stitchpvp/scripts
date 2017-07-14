@@ -38,7 +38,7 @@ function Option5(NPC, Spawn)
 	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "You mean the Dark Elves allowed someone to build a castle in their forest?", "Option6")
-	StartConversation(conversation, NPC, Spawn, "I tracked down where he found his original test subjects, and it led me into the Nektulos Forest.  It seems the ""golems"" he was originally using were coming from a mysterious manor, more a castle, actually.  I wasn't able to find out too much about the origins of the place, but it surely wasn't Teir'Dal in origin.")
+	StartConversation(conversation, NPC, Spawn, "I tracked down where he found his original test subjects, and it led me into the Nektulos Forest.  It seems the golems he was originally using were coming from a mysterious manor, more a castle, actually.  I wasn't able to find out too much about the origins of the place, but it surely wasn't Teir'Dal in origin.")
 end
 
 function Option6(NPC, Spawn)
@@ -61,7 +61,7 @@ function Option3(NPC, Spawn)
 	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "What happened to him?", "Option8")
-	StartConversation(conversation, NPC, Spawn, "I have been ... commissioned ... to find out what happened to Zarvonn, the Mad Mage.  Several hundred years ago, before Necromancy was widely accepted as a scholarly pursuit, Zarvonn explored the mysteries of the dead.  As a matter of fact, much of his initial research is still being taught at the Academy of Arcane Sciences.")
+	StartConversation(conversation, NPC, Spawn, "I have been .. commissioned .. to find out what happened to Zarvonn, the Mad Mage.  Several hundred years ago, before Necromancy was widely accepted as a scholarly pursuit, Zarvonn explored the mysteries of the dead.  As a matter of fact, much of his initial research is still being taught at the Academy of Arcane Sciences.")
 end
 
 function Option8(NPC, Spawn)
@@ -85,7 +85,7 @@ function Option10(NPC, Spawn)
 	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "Who are these benefactors you're referring to and why do they care?", "Option11")
-	StartConversation(conversation, NPC, Spawn, "Or so the Academy believed ... they just wrote it off to the undead venturing out from the Kithicor Forest.  There was once a forest to the west of the Commonlands before the Shattering.  Now that a decade has passed since the Shattering ended, my... benefactors... wish to continue their research into the mysterious disappearance of Zarvonn.")
+	StartConversation(conversation, NPC, Spawn, "Or so the Academy believed .. they just wrote it off to the undead venturing out from the Kithicor Forest.  There was once a forest to the west of the Commonlands before the Shattering.  Now that a decade has passed since the Shattering ended, my.. benefactors.. wish to continue their research into the mysterious disappearance of Zarvonn.")
 end
 
 function Option11(NPC, Spawn)
@@ -93,7 +93,7 @@ function Option11(NPC, Spawn)
 	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "Oh.  Ummm... perhaps we could just talk about why they care about this Zarvonn guy?", "Option12")
-	StartConversation(conversation, NPC, Spawn, "It would be best if I didn't mention them.  The less you know, the safer you are.  I hate them with a seething passion, and if I still had my strength I'd slit every one of their throats ... who am I kidding ... I'm powerless against them. They own me more than any thrall could ever be owned.")
+	StartConversation(conversation, NPC, Spawn, "It would be best if I didn't mention them.  The less you know, the safer you are.  I hate them with a seething passion, and if I still had my strength I'd slit every one of their throats .. who am I kidding .. I'm powerless against them. They own me more than any thrall could ever be owned.")
 end
 
 function Option12(NPC, Spawn)
@@ -101,7 +101,7 @@ function Option12(NPC, Spawn)
 	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "Have you found any truth to this story?", "Option13")
-	StartConversation(conversation, NPC, Spawn, "Yes, back to what I was saying.  They feel that Zarvonn is still around ... somewhere.  According to the information I was given, they think there is truth to his promise, and that he will return.  The recent return of the undead is making them think he's still alive and is about to follow through with his vow.")
+	StartConversation(conversation, NPC, Spawn, "Yes, back to what I was saying.  They feel that Zarvonn is still around .. somewhere.  According to the information I was given, they think there is truth to his promise, and that he will return.  The recent return of the undead is making them think he's still alive and is about to follow through with his vow.")
 end
 
 function Option13(NPC, Spawn)
@@ -142,7 +142,7 @@ function Option17(NPC, Spawn)
 	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "You mean the Dark Elves allowed someone to build a castle in their forest?", "Option18")
-	StartConversation(conversation, NPC, Spawn, "I tracked down where he found his original test subjects, and it led me into the Nektulos Forest.  It seems the ""golems"" he was originally using were coming from a mysterious manor, more a castle, actually.  I wasn't able to find out too much about the origins of the place, but it surely wasn't Teir'Dal in origin.")
+	StartConversation(conversation, NPC, Spawn, "I tracked down where he found his original test subjects, and it led me into the Nektulos Forest.  It seems the golems he was originally using were coming from a mysterious manor, more a castle, actually.  I wasn't able to find out too much about the origins of the place, but it surely wasn't Teir'Dal in origin.")
 end
 
 function Option18(NPC, Spawn)
@@ -158,7 +158,7 @@ function Option19(NPC, Spawn)
 	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "I'm interested in learning more about this Zarvonn you mentioned.", "Option20")
-	StartConversation(conversation, NPC, Spawn, "I wasn't able to find out if Zarvonn ever moved to Nektropos Castle, but if he did, he'd be dead by now.  That place is crawling with golems, and I'm certain malevolent spirits roam those halls.  I don't know if my sickness came from those golems, the spirits, or even something more ... frightening.  Look, I don't want to talk about this anymore.  If my benefactors want to know more about Zarvonn's tower, they can go speak with the nomads.")
+	StartConversation(conversation, NPC, Spawn, "I wasn't able to find out if Zarvonn ever moved to Nektropos Castle, but if he did, he'd be dead by now.  That place is crawling with golems, and I'm certain malevolent spirits roam those halls.  I don't know if my sickness came from those golems, the spirits, or even something more .. frightening.  Look, I don't want to talk about this anymore.  If my benefactors want to know more about Zarvonn's tower, they can go speak with the nomads.")
 end
 
 function Option20(NPC, Spawn)
@@ -166,7 +166,7 @@ function Option20(NPC, Spawn)
 	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "What happened to him?", "Option21")
-	StartConversation(conversation, NPC, Spawn, "I have been ... commissioned ... to find out what happened to Zarvonn, the Mad Mage.  Several hundred years ago, before Necromancy was widely accepted as a scholarly pursuit, Zarvonn explored the mysteries of the dead.  As a matter of fact, much of his initial research is still being taught at the Academy of Arcane Sciences.")
+	StartConversation(conversation, NPC, Spawn, "I have been .. commissioned .. to find out what happened to Zarvonn, the Mad Mage.  Several hundred years ago, before Necromancy was widely accepted as a scholarly pursuit, Zarvonn explored the mysteries of the dead.  As a matter of fact, much of his initial research is still being taught at the Academy of Arcane Sciences.")
 end
 
 function Option21(NPC, Spawn)
@@ -190,7 +190,7 @@ function Option23(NPC, Spawn)
 	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "Who are these benefactors you're referring to and why do they care?", "Option24")
-	StartConversation(conversation, NPC, Spawn, "Or so the Academy believed ... they just wrote it off to the undead venturing out from the Kithicor Forest.  There was once a forest to the west of the Commonlands before the Shattering.  Now that a decade has passed since the Shattering ended, my... benefactors... wish to continue their research into the mysterious disappearance of Zarvonn.")
+	StartConversation(conversation, NPC, Spawn, "Or so the Academy believed .. they just wrote it off to the undead venturing out from the Kithicor Forest.  There was once a forest to the west of the Commonlands before the Shattering.  Now that a decade has passed since the Shattering ended, my.. benefactors.. wish to continue their research into the mysterious disappearance of Zarvonn.")
 end
 
 function Option24(NPC, Spawn)
@@ -198,7 +198,7 @@ function Option24(NPC, Spawn)
 	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "Oh.  Ummm... perhaps we could just talk about why they care about this Zarvonn guy?", "Option25")
-	StartConversation(conversation, NPC, Spawn, "It would be best if I didn't mention them.  The less you know, the safer you are.  I hate them with a seething passion, and if I still had my strength I'd slit every one of their throats ... who am I kidding ... I'm powerless against them. They own me more than any thrall could ever be owned.")
+	StartConversation(conversation, NPC, Spawn, "It would be best if I didn't mention them.  The less you know, the safer you are.  I hate them with a seething passion, and if I still had my strength I'd slit every one of their throats .. who am I kidding .. I'm powerless against them. They own me more than any thrall could ever be owned.")
 end
 
 function Option25(NPC, Spawn)
@@ -206,7 +206,7 @@ function Option25(NPC, Spawn)
 	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "Have you found any truth to this story?", "Option26")
-	StartConversation(conversation, NPC, Spawn, "Yes, back to what I was saying.  They feel that Zarvonn is still around ... somewhere.  According to the information I was given, they think there is truth to his promise, and that he will return.  The recent return of the undead is making them think he's still alive and is about to follow through with his vow.")
+	StartConversation(conversation, NPC, Spawn, "Yes, back to what I was saying.  They feel that Zarvonn is still around .. somewhere.  According to the information I was given, they think there is truth to his promise, and that he will return.  The recent return of the undead is making them think he's still alive and is about to follow through with his vow.")
 end
 
 function Option26(NPC, Spawn)
@@ -246,7 +246,7 @@ function Option30(NPC, Spawn)
 	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "You mean the Dark Elves allowed someone to build a castle in their forest?", "Option31")
-	StartConversation(conversation, NPC, Spawn, "I tracked down where he found his original test subjects, and it led me into the Nektulos Forest.  It seems the ""golems"" he was originally using were coming from a mysterious manor, more a castle, actually.  I wasn't able to find out too much about the origins of the place, but it surely wasn't Teir'Dal in origin.")
+	StartConversation(conversation, NPC, Spawn, "I tracked down where he found his original test subjects, and it led me into the Nektulos Forest.  It seems the golems he was originally using were coming from a mysterious manor, more a castle, actually.  I wasn't able to find out too much about the origins of the place, but it surely wasn't Teir'Dal in origin.")
 end
 
 function Option31(NPC, Spawn)
@@ -270,5 +270,5 @@ function Option33(NPC, Spawn)
 	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "Thank you for the information.")
-	StartConversation(conversation, NPC, Spawn, "I don't know where we can find them.They have a tendency of moving around for whatever crazy reason they have in their heads.  The last I heard, they set up camp in the north.  Mind you, there are two different tribes that roam the Commonlands.  The ones I find to be a bit more friendly are led by an old woman by the name of Gierasa.  Now leave me to die in peace.")
+	StartConversation(conversation, NPC, Spawn, "I don't know where we can find them. They have a tendency of moving around for whatever crazy reason they have in their heads.  The last I heard, they set up camp in the north.  Mind you, there are two different tribes that roam the Commonlands.  The ones I find to be a bit more friendly are led by an old woman by the name of Gierasa.  Now leave me to die in peace.")
 end
