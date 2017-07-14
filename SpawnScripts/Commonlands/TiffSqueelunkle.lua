@@ -35,7 +35,7 @@ end
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-  SpawnSet(NPC, "visual_state", 11463)
+  SpawnSet(NPC, "visual_state", 221)
   
 	AddConversationOption(conversation, "What are you going on about?", "Option1")
 	AddConversationOption(conversation, "Perfect fit for what, little bit?", "Option2")

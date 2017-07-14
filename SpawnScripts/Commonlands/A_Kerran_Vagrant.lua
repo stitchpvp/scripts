@@ -3,14 +3,15 @@ function hailed(NPC, Spawn)
   PlayAnimation(NPC, 11880, Spawn, 1)
 end 
 
-local timerslow = math.random(7000, 1200)
-local timerfast = math.random(4000, 7000)
+local timerslow = math.random(6000, 900)
+local timerfast = math.random(2000, 5000)
+
 function spawn(NPC)
   SetTimer(NPC)
 end
 
 function SetTimer(NPC)
-  local choice = math.random(1, 3)
+  local choice = math.random(1,3)
 
   if choice == 1 then
     AddTimer(NPC, timerslow, "DoAnimation1")
