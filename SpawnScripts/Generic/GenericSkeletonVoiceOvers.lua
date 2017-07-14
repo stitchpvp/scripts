@@ -93,3 +93,4 @@ function generic_death(NPC, Spawn)
 			PlayFlavor(NPC, "voiceover/english/skeleton_base_1/ft/skeleton/skeleton_base_1_1_death_ff39f327.mp3", "Final death comes at last.", "", 3768284332, 62777040, Spawn)
 		end
 	end
+end  
