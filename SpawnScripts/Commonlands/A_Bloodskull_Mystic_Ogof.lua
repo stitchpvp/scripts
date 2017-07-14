@@ -1,5 +1,5 @@
 
-require('/SpawnScripts/Generic/BrokentuskVoiceOvers');
+require('SpawnScripts/Generic/BrokentuskVoiceOvers');
 function spawn(NPC)
   waypoints(NPC)
 end
@@ -25,12 +25,16 @@ function death(NPC, Spawn)
 end
 
 function waypoints(NPC)
-MovementLoopAddLocation(NPC, -430.75, -45.59, 573.91, 2, 0)
-MovementLoopAddLocation(NPC, -472.99, -47.39, 634.21, 2, 0)
-MovementLoopAddLocation(NPC, -501.05, -48.04, 568.88, 2, 0)
-MovementLoopAddLocation(NPC, -567.46, -48.56, 593.91, 2, 0)
-MovementLoopAddLocation(NPC, -612.99, -48.04, 503.04, 2, 0)
-MovementLoopAddLocation(NPC, -560.67, -47.72, 456.09, 2, 0)
-MovementLoopAddLocation(NPC, -487.72, -48.04, 428.14, 2, 0)
-MovementLoopAddLocation(NPC, -451.43, -48.04, 516.06, 2, 0)
+MovementLoopAddLocation(NPC, -678.09, -48.04, 443.49, 2, 0)
+MovementLoopAddLocation(NPC, -736.66, -48.04, 473.26, 2, 0)
+MovementLoopAddLocation(NPC, -738.31, -48.04, 538.09, 2, 0)
+MovementLoopAddLocation(NPC, -674.76, -47.63, 599.61, 2, 0)
+MovementLoopAddLocation(NPC, -610.05, -47.46, 589.93, 2, 0)
+MovementLoopAddLocation(NPC, -597.13, -48.04, 516.15, 2, 0)
+MovementLoopAddLocation(NPC, -641.07, -47.91, 454.3, 2, 0)
+MovementLoopAddLocation(NPC, -660.7, -46.73, 524.31, 2, 0)
+MovementLoopAddLocation(NPC, -717.55, -48.04, 533.24, 2, 0)
+MovementLoopAddLocation(NPC, -711.87, -48.04, 460.53, 2, 0)
+MovementLoopAddLocation(NPC, -602.53, -47.98, 466.61, 2, 0)
+MovementLoopAddLocation(NPC, -642.09, -48.03, 439.88, 2, 0)
 end
