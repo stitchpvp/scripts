@@ -1,4 +1,4 @@
-require('/SpawnScripts/Generic/Required_random_pattern_small');
+require('SpawnScripts/Generic/random_pattern_small');
 
 function spawn(NPC)
   MovementChoice(NPC)
