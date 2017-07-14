@@ -17,6 +17,9 @@ end
 function healthchanged(NPC, Spawn)
   generic_healthchanged(NPC, Spawn)
 end
+function RandomCallOut(NPC, Spawn)
+ generic_RandomCallOut(NPC, Spawn)
+end 
 
 function killed(NPC, Spawn)
   generic_killed(NPC, Spawn)

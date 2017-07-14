@@ -1,11 +1,12 @@
 require('/SpawnScripts/Generic/Required_random_pattern_medium');
-
+require('SpawnScripts/Generic/GenericGuardVoiceOvers');
 function spawn(NPC)
   AddPathing(NPC)
 end
 
-function hailed(NPC, Spawn) 
-  FaceTarget(NPC, Spawn) 
+function hailed(NPC, Spawn)
+  FaceTarget(NPC, Spawn)
+  GenericGuardHail(NPC, Spawn, Faction)
 end 
 
 function spawn(NPC)
