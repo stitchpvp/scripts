@@ -1,7 +1,7 @@
 require('SpawnScripts/Generic/Required_random_pattern_medium');
 
 function spawn(NPC)
-  MovementChoice(NPC)
+  AddPathing(NPC)
 end
 
 function hailed(NPC, Spawn) 
