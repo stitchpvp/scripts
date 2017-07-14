@@ -1,11 +1,4 @@
---[[
-	Script Name		:	An_Orc_Runner.lua
-	Script Purpose	:	Waypoint Path for An_Orc_Runner.lua
-	Script Author	:	Generated with Movement Loop Generator 2.0
-	Script Date		:	7/9/2017 12:00:00 AM
-	Script Notes	:	<special-instructions>
---]]
-
+require('/SpawnScripts/Generic/BrokentuskVoiceOvers');
 function spawn(NPC)
 	waypoints(NPC)
 end
@@ -60,4 +53,24 @@ MovementLoopAddLocation(NPC, -690, -48.04, 540.61, speed, 0)
 MovementLoopAddLocation(NPC, -857.66, -47.99, 605.48, speed, 0)
 MovementLoopAddLocation(NPC, -851.03, -47.53, 647.4, speed, 0)
 MovementLoopAddLocation(NPC, -818.88, -47.72, 626.26, speed, delay)
+end
+
+function hailed(NPC, Spawn) 
+  FaceTarget(NPC, Spawn) 
+end 
+
+function aggro(NPC, Spawn)
+ generic_aggro(NPC, Spawn)
+end
+
+function healthchanged(NPC, Spawn)
+  generic_healthchanged(NPC, Spawn)
+end
+
+function killed(NPC, Spawn)
+  generic_killed(NPC, Spawn)
+end
+
+function death(NPC, Spawn)
+  generic_death(NPC, Spawn)
 end

@@ -6,13 +6,13 @@ function hailed(NPC, Spawn)
 	AddConversationOption(conversation,  .. GetName(Spawn) .. ", bound in service to none.", "Option2")
 	AddConversationOption(conversation,  .. GetName(Spawn) .. ", proudly enacting the will of the Overlord.", "Option3")
 	StartConversation(conversation, NPC, Spawn, "Rainus Canton, a once wandering sword now bound in service to the Overlord. And yourself?")
-
+  if HasQuest(Spawn, QUEST_1_FROM_Rainus) then
 	AddConversationOption(conversation, "I have, here are the root samples.", "Option4")
 	StartConversation(conversation, NPC, Spawn, "Have you done as I asked?")
-
+  if HasQuest(Spawn, QUEST_2_FROM_Rainus) then
 	AddConversationOption(conversation, "I did. Here you go.", "Option5")
 	StartConversation(conversation, NPC, Spawn, "Did you slay the orcs and get the orders?")
-
+  if HasQuest(Spawn, QUEST_3_FROM_Rainus) then
 	AddConversationOption(conversation, "I'll return when it's done.")
 	AddConversationOption(conversation, "Taken care of.", "Option6")
 	StartConversation(conversation, NPC, Spawn, "The orcs?")

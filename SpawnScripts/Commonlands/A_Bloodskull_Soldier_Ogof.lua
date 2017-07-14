@@ -1,6 +1,7 @@
+
 require('/SpawnScripts/Generic/BrokentuskVoiceOvers');
 function spawn(NPC)
- waypoints(NPC)
+  waypoints(NPC)
 end
 
 function hailed(NPC, Spawn) 
