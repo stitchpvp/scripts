@@ -1,7 +1,7 @@
 require('SpawnScripts/Generic/Required_random_pattern_medium');
 require('SpawnScripts/Generic/BrokentuskVoiceOvers');
-local timerslow = math.random(2000, 8000)
-local timerfast = math.random(1000, 3000)
+local timerslow = math.random(5000, 8000)
+local timerfast = math.random(4000, 6000)
 
 function spawn(NPC)
   AddPathing(NPC)
@@ -20,7 +20,7 @@ end
 
 function DoAnimation(NPC)
   PauseMovement(NPC)
-  PlayAnimation(NPC, 2809)
+  PlayAnimation(NPC, 2809, Spawn, 1)
   SetTimer(NPC)
   Say(NPC, "I am on the animation step", Spawn)
 end
