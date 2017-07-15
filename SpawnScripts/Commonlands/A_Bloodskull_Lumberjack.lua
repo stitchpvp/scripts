@@ -10,7 +10,7 @@ end
 
 
 function SetTimer(NPC, Spawn)
-  local chance = math.random(1, 50)
+  local chance = math.random(1, 40)
 	if chance <= 25 then
     local choice = math.random(1, 2)
   
@@ -29,7 +29,7 @@ function DoAnimation(NPC, Spawn)
 end
 
 function DoMovement(NPC, Spawn)
-  AddTimer(NPC, timerfast, "ResetVisualState")
+  AddTimer(NPC, timerfast, "ResetVisualState", 1, NPC)
   ResumeMovement(NPC)
   SetTimer(NPC)
 end
