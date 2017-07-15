@@ -6,7 +6,6 @@ local timerfast = math.random(4000, 6000)
 function spawn(NPC)
   SetPlayerProximityFunction(NPC, 14, "SetTimer")
   AddPathing(NPC)
-  SetTimer(NPC)
 end
 
 
