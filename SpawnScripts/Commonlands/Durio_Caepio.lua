@@ -21,7 +21,7 @@ end
 function DoAnimation1(NPC)
   PlayAnimation(NPC, 12191)
   SetTimer(NPC)
-  Say(NPC, "I'm just very itchy " .. GetName(Spawn) .. ", could you scratch my back by chance?", Spawn)
+  Say(NPC, "I'm just very itchy, could you scratch my back by chance?", Spawn)
 end
 
 function DoAnimation2(NPC)
