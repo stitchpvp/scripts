@@ -1,5 +1,5 @@
-require('/SpawnScripts/Generic/Required_random_pattern_medium');
-require('/SpawnScripts/Generic/GenericSkeletonVoiceOvers');
+require('SpawnScripts/Generic/Required_random_pattern_medium');
+require('SpawnScripts/Generic/GenericSkeletonVoiceOvers');
 
 function spawn(NPC)
   AddPathing(NPC)
