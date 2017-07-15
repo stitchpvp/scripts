@@ -1,7 +1,7 @@
 require('SpawnScripts/Generic/Required_random_pattern_medium');
 require('SpawnScripts/Generic/BrokentuskVoiceOvers');
-local timerslow = math.random(7000, 12000)
-local timerfast = math.random(6000, 8000)
+local timerslow = math.random(5000, 8000)
+local timerfast = math.random(4000, 6000)
 
 function spawn(NPC)
   SetTimer(NPC)
@@ -17,7 +17,7 @@ function SetTimer(NPC, Spawn)
     if choice == 1 then
       AddTimer(NPC, timerslow, "DoAnimation")
     elseif choice == 2 then
-      AddTimer(NPC, timerslow, "DoMovement")
+      AddTimer(NPC, timerfast, "DoMovement")
     end
   end
 end
@@ -25,6 +25,7 @@ end
 function DoAnimation(NPC, Spawn)
   PauseMovement(NPC)
   SpawnSet(NPC, "visual_state", 2809)
+  AddTimer(NPC, timerfast, "ResetVisualState", 1, NPC)
   SetTimer(NPC)
 end
 
