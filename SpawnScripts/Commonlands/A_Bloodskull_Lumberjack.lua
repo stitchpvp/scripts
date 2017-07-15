@@ -22,11 +22,13 @@ function DoAnimation(NPC)
   PauseMovement(NPC)
   PlayAnimation(NPC, 2809)
   SetTimer(NPC)
+  Say(NPC, "I am on the animation step", Spawn)
 end
 
 function DoMovement(NPC)
   ResumeMovement(NPC)
   SetTimer(NPC)
+  Say(NPC, "I should resume moving", Spawn)
 end
 
 function aggro(NPC, Spawn)
