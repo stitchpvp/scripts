@@ -7,11 +7,6 @@ Say(NPC, "The suffering here is palpable", Spawn)
 PlayAnimation(NPC, 12030, Spawn, 1)
 end
 
-
-
-
-
-
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
