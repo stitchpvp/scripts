@@ -18,9 +18,10 @@ function SetTimer(NPC, Spawn)
     elseif choice == 2 then
       AddTimer(NPC, timerfast, "DoMovement")
     end
-  else 
-    AddTimer(NPC, timerslow, "SetTimer")
+  else
+    AddTimer(NPC, timerfast, "ResetVisualState", 1, NPC)
     ResumeMovement(NPC)  
+    AddTimer(NPC, timerslow, "SetTimer")  
   end
 end
 
