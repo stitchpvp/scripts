@@ -2,7 +2,7 @@ require('SpawnScripts/Generic/Required_random_pattern_medium');
 require('SpawnScripts/Generic/BrokentuskVoiceOvers');
 local timerslow = math.random(5000, 8000)
 local timerfast = math.random(4000, 6000)
-
+local gatheringtimer = math.random(3500, 6000)
 function spawn(NPC)
   SetTimer(NPC)
   AddPathing(NPC)
@@ -25,16 +25,14 @@ end
 function DoAnimation(NPC, Spawn)
   PauseMovement(NPC)
   SpawnSet(NPC, "visual_state", 2809)
-  AddTimer(NPC, timerfast, "ResetVisualState", 1, NPC)
-  SetTimer(NPC)
+  AddTimer(NPC, gatheringtimer, "ResetVisualState", 1, NPC)
   Say(NPC, "Where is it?!", Spawn)
+  SetTimer(NPC)
 end
 
 function DoMovement(NPC, Spawn)
-  AddTimer(NPC, timerfast, "ResetVisualState", 1, NPC)
   ResumeMovement(NPC)
   SetTimer(NPC)
-  Say(NPC, "Not here either!", Spawn)
 end
 
 function aggro(NPC, Spawn)
