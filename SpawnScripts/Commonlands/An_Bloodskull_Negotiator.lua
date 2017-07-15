@@ -1,5 +1,6 @@
 require('/SpawnScripts/Generic/BrokentuskVoiceOvers');
 function spawn(NPC)
+SetTimer(NPC)
 end
 
 function hailed(NPC, Spawn) 
@@ -26,10 +27,6 @@ end
 
 local timerslow = math.random(5000, 8000)
 local timerfast = math.random(2000, 4000)
-
-function spawn(NPC)
-  SetTimer(NPC)
-end
 
 function SetTimer(NPC)
   local choice = math.random(1,3)
