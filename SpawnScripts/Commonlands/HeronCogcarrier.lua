@@ -12,7 +12,7 @@ function Option1(NPC, Spawn)
 	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "Nobody.")
-	AddConversationOption(conversation, .. GetName(Spawn) ..  ", what are you doing here?", "Option2")
+	AddConversationOption(conversation, GetName(Spawn) ..  ", what are you doing here?", "Option2")
 	StartConversation(conversation, NPC, Spawn, "Avast! Ye not know who I be? I be ze dread piratess Heron... an' who migh' ye be?")
 end
 
