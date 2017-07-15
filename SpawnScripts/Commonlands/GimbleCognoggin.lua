@@ -5,6 +5,8 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
+  PauseMovement(NPC)
+  AddTimer(NPC, 6000, "ContinueMoving", 1, NPC)
 	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "Perhaps, if you need something recovered, I can be of assistance...", "Option1")
@@ -31,7 +33,9 @@ end
 
 function respawn(NPC)
 end
-
+function ContinueMoving(NPC)
+  ResumeMovement(NPC)
+end
 function waypoints(NPC)
 MovementLoopAddLocation(NPC, -251.64, -46.81, -435.92, 3, 0)
 MovementLoopAddLocation(NPC, -239.61, -47.34, -452.24, 3, 0)
