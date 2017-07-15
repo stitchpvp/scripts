@@ -1,5 +1,5 @@
-require('/SpawnScripts/Generic/Required_random_pattern_medium');
-require('/SpawnScripts/Generic/BrokentuskVoiceOvers');
+require('SpawnScripts/Generic/Required_random_pattern_medium');
+require('SpawnScripts/Generic/BrokentuskVoiceOvers');
 function spawn(NPC)
   AddPathing(NPC)
 end
