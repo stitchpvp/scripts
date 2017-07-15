@@ -61,7 +61,6 @@ function generic_killed(NPC, Spawn)
 end
 
 function generic_death(NPC, Spawn)
-	spoke = false
 	local chance = math.random(1, 100)
 	if chance <= 25 then
 		local choice = math.random(1, 4)
