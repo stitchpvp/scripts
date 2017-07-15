@@ -2,7 +2,7 @@
 	Script Name		:	AFriendinNeed.lua
 	Script Purpose	:	Handles the quest, "A Friend in Need"
 	Script Author	:	QuestParser (Replace this)
-	Script Date		:	7/8/2017
+	Script Date		:	7/14/2017
 	Script Notes	:	
 
 	Zone			:	Commonlands
