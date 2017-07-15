@@ -20,7 +20,7 @@ end
 
 function DoAnimation(NPC)
   PauseMovement(NPC)
-  PlayAnimation(NPC, 2809, Spawn, 1)
+  PlayAnimation(NPC, 2809)
   SetTimer(NPC)
   Say(NPC, "I am on the animation step", Spawn)
 end
