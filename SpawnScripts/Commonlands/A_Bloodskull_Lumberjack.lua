@@ -4,11 +4,12 @@ local timerslow = math.random(5000, 8000)
 local timerfast = math.random(4000, 6000)
 
 function spawn(NPC)
+  SetPlayerProximityFunction(NPC, 14, "SetTimer")
   AddPathing(NPC)
-  SetTimer(NPC)
 end
 
-function SetTimer(NPC)
+
+function SetTimer(NPC, Spawn)
   local choice = math.random(1, 2)
 
   if choice == 1 then
@@ -18,14 +19,14 @@ function SetTimer(NPC)
   end
 end
 
-function DoAnimation(NPC)
+function DoAnimation(NPC, Spawn)
   PauseMovement(NPC)
-  PlayAnimation(NPC, 2809)
+  PlayAnimation(NPC, 2809, Spawn, 1)
   SetTimer(NPC)
   Say(NPC, "I am on the animation step", Spawn)
 end
 
-function DoMovement(NPC)
+function DoMovement(NPC, Spawn)
   ResumeMovement(NPC)
   SetTimer(NPC)
   Say(NPC, "I should resume moving", Spawn)
