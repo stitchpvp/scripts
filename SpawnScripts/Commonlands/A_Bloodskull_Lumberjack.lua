@@ -21,13 +21,15 @@ end
 
 function DoAnimation(NPC, Spawn)
   PauseMovement(NPC)
-  PlayAnimation(NPC, 11762, Spawn, 1)
+  SpawnSet(NPC, "visual_state", 2809)
+  AddTimer(NPC, 2000, "ResetVisualState", 1, NPC)
   SetTimer(NPC)
   Say(NPC, "I am on the animation step", Spawn)
 end
 
 function DoMovement(NPC, Spawn)
   ResumeMovement(NPC)
+  
   SetTimer(NPC)
   Say(NPC, "I should resume moving", Spawn)
 end
@@ -46,4 +48,8 @@ end
 
 function death(NPC, Spawn)
   generic_death(NPC, Spawn)
+end
+
+function ResetVisualState(ThisSpawn, Spawn)
+	SpawnSet(Spawn, "visual_state", 0)
 end
