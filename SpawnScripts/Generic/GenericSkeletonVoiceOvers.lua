@@ -1,16 +1,3 @@
-local spoke = false
-
-function spawn(NPC)
-	spoke = false
-end
-
-function hailed(NPC, Spawn)
-	FaceTarget(NPC, Spawn)
-end
-
-function respawn(NPC)
-	spawn(NPC)
-end
 
 function generic_aggro(NPC, Spawn)
 	local chance = math.random(1, 100)
@@ -34,10 +21,8 @@ end
 
 function generic_healthchanged(NPC, Spawn)
 	local hp_percent = GetHP(NPC) / GetMaxHP(NPC)
-	if hp_percent <= 0.50 and spoke == false then
-		spoke = true
-		RandomCallOut(NPC, Spawn)
-		AddTimer(NPC, 30000, "ResetSpoke")
+	if hp_percent <= 0.50
+		generic_RandomCallOut(NPC, Spawn)
 	end
 end
 
@@ -56,9 +41,6 @@ function generic_RandomCallOut(NPC, Spawn)
 	end
 end
 
-function ResetSpoke(NPC)
-	spoke = false
-end
 
 function generic_killed(NPC, Spawn)
 	local chance = math.random(1, 100)
