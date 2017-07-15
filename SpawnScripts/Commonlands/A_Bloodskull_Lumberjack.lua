@@ -25,12 +25,11 @@ end
 function DoAnimation(NPC, Spawn)
   PauseMovement(NPC)
   SpawnSet(NPC, "visual_state", 2809)
-  AddTimer(NPC, timerfast, "ResetVisualState")
-  
   SetTimer(NPC)
 end
 
 function DoMovement(NPC, Spawn)
+  AddTimer(NPC, timerfast, "ResetVisualState")
   ResumeMovement(NPC)
   SetTimer(NPC)
 end
