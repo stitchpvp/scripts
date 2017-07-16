@@ -4,5 +4,5 @@ function cast(caster, target)
 end
 
 function remove(caster, target)
-  RemoveControlEffect(target)
+  RemoveControlEffect(target, 5)
 end
