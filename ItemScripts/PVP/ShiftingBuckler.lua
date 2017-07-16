@@ -3,10 +3,11 @@ function equipped(item, player)
 end
 
 function unequipped(item, player)
-  Say(player, "removing proc")
   RemoveProc(player, item)
 end
 
 function proc(item, caster, attacker, proctype)
+  Say(caster, "I am the victim")
+  Say(attacker, "I am the attacker")
   CastSpell(attacker, 1001345, 1, caster)
 end
