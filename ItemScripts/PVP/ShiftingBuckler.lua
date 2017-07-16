@@ -8,5 +8,5 @@ function unequipped(item, player)
 end
 
 function proc(item, caster, attacker, proctype)
-  Say(caster, "Being shifty around " .. GetName(attacker))
+  CastSpell(attacker, 1001345, 1, caster)
 end
