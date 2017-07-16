@@ -7,7 +7,5 @@ function unequipped(item, player)
 end
 
 function proc(item, caster, attacker, proctype)
-  Say(caster, "I am the victim")
-  Say(attacker, "I am the attacker")
   CastSpell(attacker, 1001345, 1, caster)
 end
