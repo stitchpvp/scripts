@@ -11,28 +11,28 @@ function SetTimers(npc)
   AddTimer(npc, 300000, "CastPortal")
 end
 
-function FiveMinutesLeft()
-  local spawn = GetSpawn(330508)
+function FiveMinutesLeft(npc)
+  local spawn = GetSpawn(npc, 330508)
   Say(spawn, "Only five more minutes until the ritual is complete.")
 end
 
-function FourMinutesLeft()
-  local spawn = GetSpawn(330508)
+function FourMinutesLeft(npc)
+  local spawn = GetSpawn(npc, 330508)
   Say(spawn, "Only four more minutes until the ritual is complete.")
 end
 
-function ThreeMinutesLeft()
-  local spawn = GetSpawn(330508)
+function ThreeMinutesLeft(npc)
+  local spawn = GetSpawn(npc, 330508)
   Say(spawn, "Only three more minutes until the ritual is complete.")
 end
 
-function TwoMinutesLeft()
-  local spawn = GetSpawn(330508)
+function TwoMinutesLeft(npc)
+  local spawn = GetSpawn(npc, 330508)
   Say(spawn, "Only two more minutes until the ritual is complete.")
 end
 
-function OneMinuteLeft()
-  local spawn = GetSpawn(330508)
+function OneMinuteLeft(npc)
+  local spawn = GetSpawn(npc, 330508)
   Say(spawn, "Only one more minute until the ritual is complete.")
 end
 
