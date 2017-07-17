@@ -1,5 +1,4 @@
-function cast(Caster, Target, ThreatPriority, Threat)
-  AddHate(Caster, Target, Threat)
+function cast(Caster, Target)
   AddControlEffect(Target, 6)
   AddProc(Target, 2, 30)
 
