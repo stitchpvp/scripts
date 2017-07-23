@@ -8,14 +8,14 @@ function precast (Caster, Target)
   end
 end
 
-function cast(Caster, Pet, dmg, power)
-
+function cast(Caster, Target, dmg, power)
+local Pet = GetPet(Caster)
   SpellDamage(Pet, 5, dmg)
   SpellHeal(Caster, "Power", power)
 end
 
-function tick(Caster, Pet, dmg, power)
-
+function tick(Caster, Target, dmg, power)
+local Pet = GetPet(Caster)
   SpellDamage(Pet, 5, dmg)
   SpellHeal(Caster, "Power", power)
 end
