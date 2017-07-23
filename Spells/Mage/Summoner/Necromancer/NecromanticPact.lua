@@ -9,24 +9,20 @@ function precast (Caster, Target)
 end
 
 function cast(Caster, Target)
-    local Pet = GetPet(Caster)
-    AddProc(Pet, 1, 100)
-    AddProc(Pet, 2, 100)
+    AddProc(Target, 1, 100)
+    AddProc(Target, 2, 100)
     
 end
 
-function proc(Caster, Target, Type, Debuff, SpellMit, procDmg)
+function proc(Caster, Target, Type, Debuff)
     if Type == 1 then
     AddSpellBonus(Target, 201, Debuff)
     elseif Type == 2 then
-    AddSpellBonus(Caster, 201, SpellMit)
+    AddSpellBonus(Target, 201, Debuff)
     end
 end
 
 function remove(Caster, Target)
     RemoveSpellBonus(Target)
-    RemoveSpellBonus(Caster)
-    RemoveProc(Target)
-    RemoveProc(Caster)
-    
+    RemoveProc(Target)    
 end
