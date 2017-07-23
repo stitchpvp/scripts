@@ -1,7 +1,7 @@
 function precast (Caster, Target)
   local Pet = GetPet(Caster)
 
-  if Pet ~= nil
+  if Pet ~= nil then
     return true
   else
     return false
