@@ -4,8 +4,6 @@ function cast(Caster, Target, Debuff, Buff, MaxHp, Mit)
   AddSpellBonus(Caster, 1, Buff)
   --AddSpellBonus(Target 607, MaxHp)
   AddSpellBonus(Caster, 201, Mit)
-  AddSpellBonus(Caster, 202, Mit)
-  AddSpellBonus(Caster, 203, Mit)
 end
 
 function remove(Caster, Target)
