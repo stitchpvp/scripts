@@ -19,3 +19,4 @@ function tick(Caster, Pet, dmg, power)
   SpellDamage(Pet, 5, dmg)
   SpellHeal(Caster, "Power", power)
 end
+
