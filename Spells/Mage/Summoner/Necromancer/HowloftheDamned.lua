@@ -8,8 +8,8 @@ function precast (Caster, Target)
   end
 end
 
-function cast(Caster, Target, atkSpeed, defPenalty, focusBonus, procDmgType, procDmg, procHeal, castSkills)
-    AddSpellBonus(Target, 617, atkSpeed)
+function cast(Caster, Target, atkSpeed, defPenalty, focusBonus, procDmg, procHeal, castSkills)
+    AddSpellBonus(Target, 613, atkSpeed)
     AddSkillBonus(Target, GetSkillIDByName("Defense"), defPenalty)
     AddSkillBonus(Target, GetSkillIDByName("Parry"), defPenalty)
     AddSkillBonus(Target, GetSkillIDByName("Focus"), focusBonus)
@@ -17,8 +17,8 @@ function cast(Caster, Target, atkSpeed, defPenalty, focusBonus, procDmgType, pro
     AddSkillBonus(Target, GetSkillIDByName("Disruption"), castSkills)
 end
 
-function proc(Caster, Target, Type, atkSpeed, defPenalty, focusBonus, procDmgType, procDmg, procHeal, castSkills)
-    ProcDamage(Caster, Target, "Clawing of the Soul", procDmgType, procDmg)
+function proc(Caster, Target, Type, atkSpeed, defPenalty, focusBonus, procDmg, procHeal, castSkills)
+    ProcDamage(Caster, Target, "Clawing of the Soul", 8, procDmg)
     SpellHeal("Heal", procHeal)
 end
 
