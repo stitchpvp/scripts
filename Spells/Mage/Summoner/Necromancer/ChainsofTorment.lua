@@ -1,6 +1,6 @@
 function cast(Caster, Target)
-  AddControlEffect(Target, 6)
-  AddProc(Target, 2, 30)
+    AddControlEffect(Target, 5)
+    AddProc(Target, 2, 15.0)
 end
 
 function proc(Caster, Target)
@@ -8,6 +8,6 @@ function proc(Caster, Target)
 end
 
 function remove(Caster, Target)
-  RemoveControlEffect(Target, 6)
-  RemoveProc(Target, 2)
+    RemoveControlEffect(Target, 5)
+    
 end
