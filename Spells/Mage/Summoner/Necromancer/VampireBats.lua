@@ -8,5 +8,5 @@ function tick(Caster, Target, MinDmg, MaxDmg)
 end
 
 function remove(Caster, Target)
-  RemoveSkillBonus(Target)
+  RemoveSpellBonus(Target)
 end
