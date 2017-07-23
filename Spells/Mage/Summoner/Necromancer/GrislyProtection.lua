@@ -15,8 +15,6 @@ function cast(Caster, Target, agg, procDmg, procHeal, atkSpeed, maxHP, hateGain,
     --AddSpellBonus(Target, 607, maxHP)
     AddSpellBonus(Target, 619, hateGain)
     AddSpellBonus(Target, 201, spellMit)
-    AddSpellBonus(Target, 202, spellMit)
-    AddSpellBonus(Target, 203, spellMit)
 
     AddProc(Target, 1, 100)
     AddProc(Target, 2, 100)
