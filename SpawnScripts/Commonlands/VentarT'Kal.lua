@@ -3,7 +3,7 @@ function hailed(NPC, Spawn)
 	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "Yes. I have these roots for you.", "Option1")
-	StartConversation(conversation, NPC, Spawn, "Are you Melendred?")
+	StartConversation(conversation, NPC, Spawn, "Are you ".. GetName(Spawn) .. "?")
 end
 
 function Option1(NPC, Spawn)
@@ -51,5 +51,5 @@ function Option6(NPC, Spawn)
 	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "I will return.")
-	StartConversation(conversation, NPC, Spawn, "If they get as addicted as Rainus claims the Bloodskull orcs are, this may be the key to drawing the strength of the Ree orcs out from underground. Press your advantages, Melendred, that's what I always say. Speaking of which, while you're there I would like you to find the Ree encampment. Once there, find a current copy of their orders. I'd like to be as up to date as possible.")
+	StartConversation(conversation, NPC, Spawn, "If they get as addicted as Rainus claims the Bloodskull orcs are, this may be the key to drawing the strength of the Ree orcs out from underground. Press your advantages, ".. GetName(Spawn) .. ", that's what I always say. Speaking of which, while you're there I would like you to find the Ree encampment. Once there, find a current copy of their orders. I'd like to be as up to date as possible.")
 end
