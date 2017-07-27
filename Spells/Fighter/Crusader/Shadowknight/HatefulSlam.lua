@@ -1,7 +1,7 @@
 function cast(Caster, Target,MinDmg, MaxDmg, HateAmt, TickHateAmt)
         SpellDamage(Target, 1, MinDmg, MaxDmg)
         AddHate(Caster, Target, HateAmt, 1)
-        Knockback(Caster, Target, 2500)
+        Knockback(Caster, Target, 2500, -20, 10, 0)
         AddControlEffect(Target, 4)
         BlurVision(Target, 1.0)
         AddSpellTimer(2500, "RemoveKnockback")
