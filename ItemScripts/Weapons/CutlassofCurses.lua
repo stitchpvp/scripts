@@ -4,7 +4,7 @@ function equipped(item, player)
 end
 
 function proc(item, caster, target)
-  CastSpell(Caster, 1001468, SpellTier)
+  CastSpell(caster, 1001468, SpellTier)
 end
 
 function unequipped(item, player)

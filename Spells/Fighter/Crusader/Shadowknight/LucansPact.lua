@@ -16,6 +16,5 @@ function cast(Caster, Target, BonusAmt, StaBonusAmt, AvdBonusAmt, OffSkillAmt, D
 end
 
 function remove(Caster, Target)
-    RemoveSpellBonus(Target)
     RemoveSkillBonus(Target)
 end
