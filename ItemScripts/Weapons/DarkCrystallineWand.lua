@@ -1,3 +1,3 @@
 function used(Item, Player)
- CastSpell(Caster, 1001466, SpellTier)
+ CastSpell(Caster, 1001467, SpellTier)
 end
