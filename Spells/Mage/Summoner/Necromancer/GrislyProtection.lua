@@ -10,6 +10,7 @@ end
 
 
 function cast(Caster, Target, agg, procDmg, procHeal, atkSpeed, maxHP, hateGain, spellMit, procHateMin, procHateMax)
+    local Pet = GetPet(Caster)
     AddSkillBonus(Target, GetSkillByName("Aggression"), agg)
     AddSpellBonus(Target, 613, atkSpeed)
     --AddSpellBonus(Target, 607, maxHP)
