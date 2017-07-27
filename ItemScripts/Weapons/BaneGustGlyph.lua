@@ -3,8 +3,8 @@ function equipped(item, player)
   AddProc(player, 3, proc_chance, item)
 end
 
-function proc(item, caster, target)
-  CastSpell(Caster, 1001468, SpellTier)
+function proc(item, caster, target, MinDmg, MaxDmg)
+  ProcDamage(caster, target, "Poison Bolt", 9, MinDmg, MaxDmg, 0, "You hit %t with Poison Bolt")
 end
 
 function unequipped(item, player)
