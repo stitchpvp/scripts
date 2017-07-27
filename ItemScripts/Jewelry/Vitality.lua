@@ -1,7 +1,7 @@
 function equipped(item, player)
-    AddSpellBonus(Target, 602, 13.5)
+    AddSpellBonus(player, 602, 13.5)
 end
 
 function unequipped(item, player)
-  RemoveSpellBonus(Target)
+  RemoveSpellBonus(player)
 end
