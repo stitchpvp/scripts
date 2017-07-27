@@ -1,4 +1,4 @@
-function cast(caster, target, MinDmg, MaxDmg, MinTick, MaxTick)
+function cast(caster, target, MinDmg, MaxDmg, Slow)
   ProcDamage(caster, target, "Tormenting Darkness", 8, MinDmg, MaxDmg, 0, "You hit %t with Tormenting Darkness")
   AddControlEffect(Target, 5)
   AddProc(Target, 2, 5)
@@ -13,7 +13,7 @@ function remove(Caster, Target)
   RemoveProc(Target)
 end
 
-function tick(caster, target, MinDmg, MaxDmg, MinTick, MaxTick)
-   dmgAmount = math.random(MinTick, MaxTick)
+function tick(caster, target, MinDmg, MaxDmg)
+   dmgAmount = math.random(MinDmg, MaxDmg)
    SpellDamage(Target, 8, dmgAmount)
 end
