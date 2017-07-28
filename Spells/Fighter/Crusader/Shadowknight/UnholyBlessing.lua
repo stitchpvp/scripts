@@ -7,8 +7,8 @@ end
 
 function proc(Caster, Target, Type, DmgMin, DmgMax, HealMin, HealMax)
     if Type == 2 then
-        ProcDamage(Caster, Target, "Voraciocus Soul", 8, DmgMin, DmgMax)
-        SpellHeal("Heal", HealMin, HealMax, Caster, 2, 1)
+        ProcDamage(Caster, Target, "Voracious Soul", 8, DmgMin, DmgMax)
+        SpellHeal("Heal", HealMin, HealMax)
 
         RemoveTriggerFromSpell(1)
     end

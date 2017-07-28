@@ -7,7 +7,7 @@ function proc(Caster, Target, Type, DmgMin, DmgMax, HealMin, HealMax)
         ProcDamage(Caster, Target, "Unholy Strike", 8, DmgMin, DmgMax)
 
 
-        SpellHeal("Heal", HealMin, HealMax, Caster, 2, 1)
+        SpellHeal("Heal", HealMin, HealMax)
     end
 end
 
