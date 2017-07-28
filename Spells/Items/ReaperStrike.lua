@@ -1,6 +1,6 @@
 function cast(Caster, Target, MinDmg, MaxDmg, MinHeal, MaxHeal, StrDebuff, StrBuff)
   ProcDamage(Caster, Target, "Reaper Strike", 7, MinDmg, MaxDmg, 0, "You hit %t with Reaper Strike")
-  SpellHeal(Caster, "Heal", MinHeal, MaxHeal)
+  ProcHeal(Caster, Caster, "Reaper Strike", "Heal", MinHeal, MaxHeal)
   AddSpellBonus(Target, 2, StrDebuff)
   AddSpellBonus(Caster, 2, StrBuff)
 end
