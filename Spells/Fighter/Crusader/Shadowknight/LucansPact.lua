@@ -12,7 +12,7 @@ function cast(Caster, Target, BonusAmt, StaBonusAmt, AvdBonusAmt, OffSkillAmt, D
 
     AddSpellBonus(Target, 202, ResistAmt)
 
-    AddSpellBonus(Target, 678, ArmorBonusAmt)
+    AddSpellBonus(Target, 664, ArmorBonusAmt)
 end
 
 function remove(Caster, Target)
