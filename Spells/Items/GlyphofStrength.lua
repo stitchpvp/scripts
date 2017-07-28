@@ -1,5 +1,5 @@
-function cast(caster, target)
-  AddSpellBonus(Target, 0, 6.4)
+function cast(caster, target, Str)
+  AddSpellBonus(Target, 0, Str)
 end
 
 function remove(caster, target)
