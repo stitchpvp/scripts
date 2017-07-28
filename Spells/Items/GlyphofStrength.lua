@@ -1,7 +1,7 @@
 function cast(caster, target, Str)
-  AddSpellBonus(Target, 0, Str)
+  AddSpellBonus(target, 0, Str)
 end
 
 function remove(caster, target)
-  RemoveSpellBonus(Target)
+  RemoveSpellBonus(target)
 end

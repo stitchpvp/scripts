@@ -4,5 +4,5 @@ end
 
 function tick(caster, target, MinDmg, MaxDmg, MinTick, MaxTick)
    dmgAmount = math.random(MinTick, MaxTick)
-   SpellDamage(Target, 8, dmgAmount)
+   SpellDamage(target, 8, dmgAmount)
 end

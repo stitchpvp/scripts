@@ -3,5 +3,5 @@ function equipped(item, player)
 end
 
 function unequipped(item, player)
-  RemoveSpellBonus(player)
+  RemoveSpellBonus(player, item)
 end
