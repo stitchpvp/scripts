@@ -5,7 +5,7 @@ end
 function proc(Caster, Target, Type, DmgMin, DmgMax, HealMin, HealMax)
     if Type == 3 then
         ProcDamage(Caster, Target, "Grim Strike", 8, DmgMin, DmgMax)
-        SpellHeal("Heal", HealMin, HealMax)
+        ProcHeal(Caster, Caster, "Grim Strike", "Heal", HealMin, HealMax)
     end
 end
 
