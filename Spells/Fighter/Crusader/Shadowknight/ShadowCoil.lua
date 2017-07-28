@@ -4,5 +4,5 @@ end
 
 function tick(Caster, Target, MinDmg, MaxDmg, DoTMin, DoTMax, HealMin, HealMax)
         SpellDamage(Target, 8, DoTMin, DoTMax)
-        SpellHeal("Heal", HealMin, HealMax)
+        SpellHeal(Caster, "Heal", HealMin, HealMax)
 end
