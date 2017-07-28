@@ -2,8 +2,8 @@ function equipped(item, player)
   AddProc(player, 2, 5, item)
 end
 
-function proc(item, caster, target, proctype)
- CastSpell(caster, 1001474, SpellTier)
+function proc(item, caster, target)
+ CastSpell(caster, 1001474, 1, caster)
 end
 
 function unequipped(item, player)
