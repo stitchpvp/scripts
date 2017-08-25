@@ -1,10 +1,13 @@
 function cast(Caster, Target, MinVal, MaxVal, ResistAmt)
-        AddHate(Caster, Target, MinVal, MaxVal, 1)
-
+  AddSpellBonus(Target, 202, ResistAmt)  
+    AddHate(Caster, Target, MinVal, MaxVal, 1)
+    end
     if target ~= nil then
     Interrupt(Target)
     end
-    AddSpellBonus(Target, 202, ResistAmt)
+    if IsPlayer(Target) then
+    SetTarget(Target, Caster)
+    end
 end
 
 
