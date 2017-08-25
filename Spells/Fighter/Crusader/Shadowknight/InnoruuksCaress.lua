@@ -9,6 +9,9 @@ function proc(Caster, Target, Type, BonusAmt, HateAmt, Dmg)
     if Type == 4 then
         AddHate(Caster, Target, HateAmt)
         ProcDamage(Caster, Target, "Caress Feedback", 8, Dmg)
+        if IsPlayer(Target) then
+        SetTarget(Target, Caster)
+        end
     end
 end
 

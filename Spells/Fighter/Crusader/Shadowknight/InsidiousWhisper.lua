@@ -3,6 +3,9 @@ function cast(Caster, Target, MinTaunt, MaxTaunt, MinTauntTick, MaxTauntTick, Mi
     AddHate(Caster, Target, hateAmount)
     dmgAmount = math.random(MinDmg, MaxDmg)
     SpellDamage(Target, 8, dmgAmount)
+     if IsPlayer(Target) then
+    SetTarget(Target, Caster)
+    end
 end
 
 function tick(Caster, Target, MinTaunt, MaxTaunt, MinTauntTick, MaxTauntTick, MinDmg, MaxDmg, MinDoT, MaxDoT)
@@ -11,4 +14,7 @@ function tick(Caster, Target, MinTaunt, MaxTaunt, MinTauntTick, MaxTauntTick, Mi
    AddHate(Caster, Target, hateAmount)
    dmgAmount = math.random(MinDoT, MaxDoT)
    SpellDamage(Target, 8, dmgAmount)
+    if IsPlayer(Target) then
+   SetTarget(Target, Caster)
+   end
 end
