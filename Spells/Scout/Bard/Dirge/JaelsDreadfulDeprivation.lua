@@ -1,4 +1,4 @@
-function cast(Caster, Target, MinDmg, MaxDmg, HealAmt)
+function cast(Caster, Target, MinDmg, MaxDmg)
 SpellDamage(Target, 8, MinDmg, MaxDmg)
   if LastSpellAttackHit() then
       SpellDamage(Target, 8, MinDmg, MaxDmg)

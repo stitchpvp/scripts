@@ -8,7 +8,7 @@ function cast(Caster, Target, AgiAmt, MinDmg, MaxDmg, AvoidAmt, PhysMit, EleNoxM
     AddSpellBonus(Target, 202, EleNoxMit)
 end
 
-function proc(Caster, Target, ProcType, AgiAmt, MinDmg, MaxDmg, AvoidAmt, PhysMit, EleNoxMit)
+function proc(Caster, Target, AgiAmt, MinDmg, MaxDmg, AvoidAmt, PhysMit, EleNoxMit)
     ProcDamage(Caster, Target, "Death Barrier", 8, MinDmg, MaxDmg)
 end
 
