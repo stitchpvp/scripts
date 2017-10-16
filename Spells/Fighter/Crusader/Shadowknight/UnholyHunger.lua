@@ -1,16 +1,12 @@
 function cast(Caster, Target)
-    AddProc(Target, 3, 16.0)
+  AddProc(Target, 3, 16.0)
 end
 
 function proc(Caster, Target, Type, DmgMin, DmgMax, HealMin, HealMax)
-    if Type == 3 then
-        ProcDamage(Caster, Target, "Unholy Strike", 8, DmgMin, DmgMax)
-
-
-        SpellHeal("Heal", HealMin, HealMax)
-    end
+  ProcDamage(Caster, Target, "Unholy Strike", 8, DmgMin, DmgMax)
+  ProcHeal(Caster, Caster, "Unholy Strike", "Heal", HealMin, HealMax)
 end
 
 function remove(Caster, Target)
-    RemoveProc(Target)
+  RemoveProc(Target)
 end
