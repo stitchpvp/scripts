@@ -17,4 +17,5 @@ end
 
 function remove(Caster, Target)
   RemoveProc(Target)
+  RemoveSpellBonus(Target)
 end
