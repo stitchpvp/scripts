@@ -1,6 +1,6 @@
 function cast(Caster, Target, AtkSpd, DPS)
-  AddSpellBonus(Target, 613, AtkSpd)
-  AddSpellBonus(Target, 624, DPS)
+  AddSpellBonus(Target, 617, AtkSpd)
+  AddSpellBonus(Target, 629, DPS)
 end
 
 function remove(Caster, Target)

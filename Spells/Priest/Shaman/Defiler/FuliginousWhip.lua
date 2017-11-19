@@ -1,5 +1,5 @@
 function cast(Caster, Target, MinDmg, MaxDmg, AtkSpd)
-  AddSpellBonus(Target, 613, AtkSpd)
+  AddSpellBonus(Target, 617, AtkSpd)
   SpellDamage(Target, 9, MinDmg, MaxDmg)
 end
 
