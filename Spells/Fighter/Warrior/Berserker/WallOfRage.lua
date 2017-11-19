@@ -1,5 +1,5 @@
 function cast(Caster, Target, Debuff, Mitigation)
-  AddSpellBonus(Caster, 613, Debuff)
+  AddSpellBonus(Caster, 617, Debuff)
   AddSpellBonus(Caster, 204, Mitigation)
 
   -- AddProc(Caster, 3, 75)

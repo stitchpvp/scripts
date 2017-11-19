@@ -1,6 +1,5 @@
 function cast(Caster, Target, MultiAmt)
-
-    AddSpellBonus(Target, 634, MultiAmt)
+    AddSpellBonus(Target, 641, MultiAmt)
 end
 
 function remove(Caster, Target)

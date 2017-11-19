@@ -10,7 +10,7 @@ end
 function cast(Caster, Target, MinDmg, MaxDmg, DPSDebuff)
 
     SpellDamage(Target, 2, MinDmg, MaxDmg)
-    AddSpellBonus(Target, 624, DPSDebuff)
+    AddSpellBonus(Target, 629, DPSDebuff)
 end
 
 function remove(Caster, Target)

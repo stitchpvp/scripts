@@ -9,7 +9,7 @@ function precast (Caster, Target)
 end
 
 function cast(Caster, Target, atkSpeed, defPenalty, focusBonus, procDmg, procHeal, castSkills)
-    AddSpellBonus(Target, 613, atkSpeed)
+    AddSpellBonus(Target, 617, atkSpeed)
     AddSkillBonus(Target, GetSkillIDByName("Defense"), defPenalty)
     AddSkillBonus(Target, GetSkillIDByName("Parry"), defPenalty)
     AddSkillBonus(Target, GetSkillIDByName("Focus"), focusBonus)

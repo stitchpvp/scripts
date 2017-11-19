@@ -1,5 +1,5 @@
 function cast(Caster, Target, DpsAmount)
-  AddSpellBonus(Target, 624, DpsAmount)
+  AddSpellBonus(Target, 629, DpsAmount)
 end
 
 function remove(Caster, Target)

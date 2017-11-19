@@ -1,5 +1,5 @@
 function cast(Caster, Target)
-  AddSpellBonus(Target, 628, 1)
+  AddSpellBonus(Target, 634, 1)
   SetVision(Target, 4)
 end
 

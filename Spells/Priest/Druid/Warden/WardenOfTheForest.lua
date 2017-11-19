@@ -9,7 +9,7 @@ function cast(Caster, Target, Focus, Mit, Resist)
   AddSpellBonus(Caster, 202, Resist)
   AddSpellBonus(Caster, 203, Resist)
 
-  AddSpellBonus(Caster, 628, 1)
+  AddSpellBonus(Caster, 634, 1)
 end
 
 function remove(Caster, Target)

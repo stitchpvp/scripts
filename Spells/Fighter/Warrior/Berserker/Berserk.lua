@@ -1,6 +1,6 @@
 function cast(Caster, Target, Amount)
-  AddSpellBonus(Caster, 613, Amount)
-  AddSpellBonus(Caster, 624, Amount)
+  AddSpellBonus(Caster, 617, Amount)
+  AddSpellBonus(Caster, 629, Amount)
 end
 
 function remove(Caster, Target)
