@@ -6,7 +6,7 @@ end
 function remove(Caster, Target)
   local Pet = GetPet(Caster)
 
-  if pet ~= nil then
-    DismissPet()
+  if Pet ~= nil then
+    DismissPet(Pet)
   end
 end
