@@ -1,0 +1,20 @@
+function cast(Caster, Target, BaseAvoidance, MinimumDeflection, ParryBuff, OffensiveDebuff, AggressionBuff, DefensiveBuff, MitigationBuff)
+  AddSpellBonus(Caster, 817, 5)
+  AddSpellBonus(Caster, 696, BaseAvoidance)
+  AddSpellBonus(Caster, 670, MinimumDeflection)
+  AddSkillBonus(Caster, GetSkillIDByName("Parry"), ParryBuff)
+  AddSkillBonus(Caster, GetSkillIDByName("Slashing"), OffensiveDebuff)
+  AddSkillBonus(Caster, GetSkillIDByName("Piercing"), OffensiveDebuff)
+  AddSkillBonus(Caster, GetSkillIDByName("Crushing"), OffensiveDebuff)
+  AddSkillBonus(Caster, GetSkillIDByName("Ranged"), OffensiveDebuff)
+  AddSkillBonus(Caster, GetSkillIDByName("Aggression"), AggressionBuff)
+  AddSkillBonus(Caster, GetSkillIDByName("Defense"), DefensiveBuff)
+  AddSkillBonus(Caster, GetSkillIDByName("Deflection"), DefensiveBuff)
+  AddSpellBonus(Caster, 203, MitigationBuff)
+  AddSpellBonus(Caster, 678, 25)
+end
+
+function remove(Caster, Target)
+  RemoveSpellBonus(Caster)
+  RemoveSkillBonus(Caster)
+end
