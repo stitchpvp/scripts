@@ -1,5 +1,5 @@
 function init_zone_script(Zone)
-  SetLocationProximityFunction(Zone, 43, -5, -1185, 100, "AddProtection", "RemoveProtection")
+  SetLocationProximityFunction(Zone, 43, -5, -1185, 50, "AddProtection", "RemoveProtection")
 end
 
 function AddProtection(Zone, Player)
