@@ -22,7 +22,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 		PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_3_1006.mp3", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "I would like the writ: Saplings", "dlg_1_1")
@@ -69,7 +69,7 @@ end
 
 function dlg_12_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Thank you, I'll get started right away.", "dlg_12_2")

@@ -30,7 +30,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	if not HasQuest(Spawn, PurposefulTrinkets) and not HasCompletedQuest(Spawn, PurposefulTrinkets) then
 		PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_1_1007.mp3", "", "tapfoot", 0, 0, Spawn)
@@ -79,7 +79,7 @@ end
 
 function PurposefulTrinkets_00(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_3_1007.mp3", "", "", 0, 0, Spawn)
 		if not HasCompletedQuest(Spawn, PurposefulTrinkets) and GetQuestStep(Spawn, PurposefulTrinkets) ~= 2 then
@@ -92,7 +92,7 @@ end
 
 function Quest_PurposefulTrinkets(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	AddConversationOption(conversation, "I have!", "Quest_PurposefulTrinkets_01")
 	AddConversationOption(conversation, "No.", "Quest_PurposefulTrinkets_Decline")
@@ -101,7 +101,7 @@ end
 
 function Quest_PurposefulTrinkets_Decline(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	PlayFlavor(NPC, "", "", "brandish", 0, 0, Spawn)
 	StartConversation(conversation, NPC, Spawn, "Then begone before I am forced to clean you from my blade!")
@@ -109,7 +109,7 @@ end
 
 function Quest_PurposefulTrinkets_01(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	AddConversationOption(conversation, "What is the current threat?", "Quest_PurposefulTrinkets_02")
 	StartConversation(conversation, NPC, Spawn, "Good. Neriak requires true statesmen and women who will do all they can to further their city. In my case, I am here in Darklight battling the forces--natural or otherwise--that threaten our city and her throne.")
@@ -117,7 +117,7 @@ end
 
 function Quest_PurposefulTrinkets_02(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	AddConversationOption(conversation, "What is the plan?", "Quest_PurposefulTrinkets_03")
 	StartConversation(conversation, NPC, Spawn, "The never ending tide of undead. New corpses climb from the ground every day and those that we kill do not stay dead for long. I believe, with a little work, we can at least keep those we kill from coming back. But nothing is certain.")
@@ -125,7 +125,7 @@ end
 
 function Quest_PurposefulTrinkets_03(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	AddConversationOption(conversation, "I can do that.", "QuestOffer_PurposefulTrinkets")
 	AddConversationOption(conversation, "No thanks.")
@@ -138,7 +138,7 @@ end
 
 function Quest_PurposefulTrinkets_04(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	if not HasCompletedQuest(Spawn, PurposefulTrinkets) then
 		SetStepComplete(Spawn, PurposefulTrinkets, 2)	
 	end
@@ -155,7 +155,7 @@ end
 
 function PublicService_00(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_3_1007.mp3", "", "", 0, 0, Spawn)
 		if not HasCompletedQuest(Spawn, PublicService) and GetQuestStep(Spawn, PublicService) ~= 3 then
@@ -168,7 +168,7 @@ end
 
 function Quest_PublicService(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	AddConversationOption(conversation, "All right.", "QuestOffer_PublicService")
 	AddConversationOption(conversation, "Maybe later.")
@@ -181,7 +181,7 @@ end
 
 function Quest_PublicService_01(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	if not HasCompletedQuest(Spawn, PublicService) then
 		SetStepComplete(Spawn, PublicService, 3)
 	end
@@ -198,7 +198,7 @@ end
 
 function AFriendlyReminder_00(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_2_1007.mp3", "", "", 0, 0, Spawn)
 		if not HasCompletedQuest(Spawn, AFriendlyReminder) and GetQuestStep(Spawn, AFriendlyReminder) ~= 2 then
@@ -215,7 +215,7 @@ end
 
 function Quest_AFriendlyReminder(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	AddConversationOption(conversation, "How are we to do that?", "Quest_AFriendlyReminder_01")
 	StartConversation(conversation, NPC, Spawn, "Such is a befitting end to a trespasser who foolishly dared to defy our rule of these lands. Now it is time to clean up the mess he has made.")
@@ -223,7 +223,7 @@ end
 
 function Quest_AFriendlyReminder_01(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	SetStepComplete(Spawn, AFriendlyReminder, 2)
 	
 	AddConversationOption(conversation, "How does it work?", "Quest_AFriendlyReminder_02")
@@ -232,7 +232,7 @@ end
 
 function Quest_AFriendlyReminder_02(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	SetStepComplete(Spawn, AFriendlyReminder, 2)
 	
 	AddConversationOption(conversation, "So, I am to kill their spirits?", "Quest_AFriendlyReminder_03")
@@ -241,7 +241,7 @@ end
 
 function Quest_AFriendlyReminder_03(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	if not HasCompletedQuest(Spawn, AFriendlyReminder) then
 		SetStepComplete(Spawn, AFriendlyReminder, 2)
 	end
@@ -261,7 +261,7 @@ end
 
 function Reaping_00(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	PlayFlavor(NPC, "voiceover/english/neriak/laexyra_y_barriath/darklight_wood/tvatar_post/laexyra/laexyra021.mp3", "", "", 3742143393, 3604889298, Spawn)
 		if not HasCompletedQuest(Spawn, Reaping) and GetQuestStep(Spawn, Reaping) ~= 2 then
@@ -274,7 +274,7 @@ end
 
 function Quest_Reaping_01(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	SetStepComplete(Spawn, Reaping, 2)
 	
@@ -284,7 +284,7 @@ end
 
 function Quest_Reaping_02(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	AddConversationOption(conversation, "I can put the spirits in the well.", "QuestOffer_Condemned")
 	AddConversationOption(conversation, "Maybe later.")
@@ -301,7 +301,7 @@ end
 
 function Condemned_00(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_2_1007.mp3", "", "", 0, 0, Spawn)
 		if not HasCompletedQuest(Spawn, Condemned) and GetQuestStep(Spawn, Condemned) ~= 2 then
@@ -314,7 +314,7 @@ end
 
 function Quest_Condemned_01(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	PlayFlavor(NPC, "voiceover/english/neriak/laexyra_y_barriath/darklight_wood/tvatar_post/laexyra/laexyra026.mp3", "", "", 3005578756, 2486978605, Spawn)
 	AddConversationOption(conversation, "None. They are all trapped.", "Quest_Condemned_02")
@@ -323,7 +323,7 @@ end
 
 function Quest_Condemned_02(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	SetStepComplete(Spawn, Condemned, 2)
 	
@@ -333,7 +333,7 @@ end
 
 function Quest_Condemned_03(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_1_1007.mp3", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Is there anything I can help with?", "Quest_ContinuingAssistance_01")
@@ -348,7 +348,7 @@ end
 
 function Quest_ContinuingAssistance_01(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	AddConversationOption(conversation, "All right.", "Quest_ContinuingAssistance_02")
 	StartConversation(conversation, NPC, Spawn, "Actually, yes, I could use your help. I have two correspondences I need delivered immediately. The first goes to Malyl N'Vazin. The second goes to a sniveling wretch named, Vornlin B'Vytyl. You can find them both at Wanderlust Fair.")
@@ -356,7 +356,7 @@ end
 
 function Quest_ContinuingAssistance_02(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	AddConversationOption(conversation, "Okay, I will go find them.", "Temp_ContinuingAssistance")
 	AddConversationOption(conversation, "This task doesn't interest me.")
@@ -365,7 +365,7 @@ end
 
 function Temp_ContinuingAssistance_02(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	AddConversationOption(conversation, "OK.")
 	StartConversation(conversation, NPC, Spawn, "This is where the Accept quest will go, but I have not completed the quest Continuing Assistance yet.")
@@ -381,7 +381,7 @@ end
 
 function Quest_ReporttoZezas_01(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	AddConversationOption(conversation, "Who does it go to?", "Quest_ReporttoZezas_02")
 	StartConversation(conversation, NPC, Spawn, "Quite. On that note, in fact, I've something I'd like you to deliver to a friend of mine within Neriak," .. GetName(Spawn) .. ".")
@@ -389,7 +389,7 @@ end
 
 function Quest_ReporttoZezas_02(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	AddConversationOption(conversation, "All right, I will deliver it.", "Temp_ReporttoZezas")
 	AddConversationOption(conversation, "Maybe at a later date.")
@@ -398,7 +398,7 @@ end
 
 function Temp_ReporttoZezas(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	AddConversationOption(conversation, "OK.")
 	StartConversation(conversation, NPC, Spawn, "This is where the Accept quest will go, but I have not completed the quest Report to Zezas because Neirak is not spawned.")

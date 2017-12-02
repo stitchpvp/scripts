@@ -26,7 +26,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	PlayFlavor(QuestGiver, "voiceover/english/rok_questvo/arozik_sky_ki/_exp04/exp04_rgn_timorous_deep/chrykori_tie/skyki/skyki009.mp3", "", "", 3728908332, 3305312400, Player)
 	AddConversationOption(conversation, "You're welcome.")

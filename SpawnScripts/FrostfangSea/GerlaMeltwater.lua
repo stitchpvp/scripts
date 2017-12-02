@@ -30,7 +30,7 @@ end
 
 function Quest1Chat_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "gerla_meltwater/halas/new_halas_guard_house/gerla_meltwater_002.mp3", "", "", 376722497, 2039361987, Spawn)
 	AddConversationOption(conversation, "That's just it.   It's not.", "Quest1Chat_2")
@@ -39,7 +39,7 @@ end
 
 function Quest1Chat_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "gerla_meltwater/halas/new_halas_guard_house/gerla_meltwater_003.mp3", "", "", 936830392, 1591106960, Spawn)
 	AddConversationOption(conversation, "The Ry'Gorr were digging tunnels below the city.", "Quest1Chat_3")
@@ -48,7 +48,7 @@ end
 
 function Quest1Chat_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "gerla_meltwater/halas/new_halas_guard_house/gerla_meltwater_004.mp3", "", "", 4211598278, 1116854185, Spawn)
 	AddConversationOption(conversation, "Why is that so important?", "Quest1Chat_4")
@@ -58,7 +58,7 @@ end
 
 function Quest1Chat_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "gerla_meltwater/halas/new_halas_guard_house/gerla_meltwater_005.mp3", "", "", 3234303592, 778815839, Spawn)
 	AddConversationOption(conversation, "That's amazing.", "Quest1Chat_5")
@@ -67,7 +67,7 @@ end
 
 function Quest1Chat_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "gerla_meltwater/halas/new_halas_guard_house/gerla_meltwater_006.mp3", "", "", 1707551626, 618350055, Spawn)
 	AddConversationOption(conversation, "And now that it's awake?", "Quest1Chat_6")
@@ -81,7 +81,7 @@ function Quest1Chat_6(NPC, Spawn)
 	SetStepComplete(Spawn, SeekingEducation, 2)
 	
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "gerla_meltwater/halas/new_halas_guard_house/gerla_meltwater_007.mp3", "", "", 2595302383, 231640410, Spawn)
 	AddConversationOption(conversation, "Right away, Gerla.")

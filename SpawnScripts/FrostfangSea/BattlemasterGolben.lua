@@ -29,7 +29,7 @@ end
 function Chat(NPC, Spawn)
 	SetStepComplete(Spawn, DemandSupplies, 2)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "battlemaster_golben/halas/great_shelf/battlemaster_golben/battlemaster_golben002.mp3", "", "", 2225057385, 3178461226, Spawn)
 	AddConversationOption(conversation, "Glad to help.")

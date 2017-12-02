@@ -22,7 +22,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 		PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "It's so wonderful! I just want to go out and start basking in their glory right away!", "dlg_28_1")
@@ -65,7 +65,7 @@ end
 
 function dlg_28_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "philosopher_rhimes/_exp03/deity/deity_historian001.mp3", "", "", 1885768155, 4071330533, Spawn)
 	AddConversationOption(conversation, "You will tell me where to find the prophet of Cazic-Thule. Now!")
@@ -85,7 +85,7 @@ end
 
 function dlg_29_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "philosopher_rhimes/_exp03/deity/deity_historian011.mp3", "", "", 1707355458, 1531415457, Spawn)
 	AddConversationOption(conversation, "I am interested in the powers of Good.  Where might I find their prophets?", "dlg_29_2")
@@ -97,7 +97,7 @@ end
 
 function dlg_29_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "You will tell me where to find the prophet of Cazic-Thule. Now!")
@@ -112,7 +112,7 @@ end
 
 function dlg_29_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "philosopher_rhimes/_exp03/deity/deity_historian011.mp3", "", "", 1707355458, 1531415457, Spawn)
 	AddConversationOption(conversation, "I am interested in the powers of Good.  Where might I find their prophets?")
@@ -124,7 +124,7 @@ end
 
 function dlg_29_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "I'm born of the earth, now tell me about Brell Serilis!")
@@ -139,7 +139,7 @@ end
 
 function dlg_29_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "philosopher_rhimes/_exp03/deity/deity_historian011.mp3", "", "", 1707355458, 1531415457, Spawn)
 	AddConversationOption(conversation, "I am interested in the powers of Good.  Where might I find their prophets?")
@@ -151,7 +151,7 @@ end
 
 function dlg_29_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Please tell me where I may find the prophet of Mithaniel Marr.", "dlg_29_7")
@@ -165,7 +165,7 @@ end
 
 function dlg_29_7(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "philosopher_rhimes/_exp03/deity/deity_historian009.mp3", "", "", 3714246172, 3594253878, Spawn)
 	AddConversationOption(conversation, "Very good, I will be on my way then.", "dlg_29_8")
@@ -175,7 +175,7 @@ end
 
 function dlg_29_8(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "philosopher_rhimes/_exp03/deity/deity_historian011.mp3", "", "", 1707355458, 1531415457, Spawn)
 	AddConversationOption(conversation, "I am interested in the powers of Good.  Where might I find their prophets?")
@@ -187,7 +187,7 @@ end
 
 function dlg_29_9(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Please tell me where I may find the prophet of Mithaniel Marr.", "dlg_29_10")
@@ -201,7 +201,7 @@ end
 
 function dlg_29_10(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "philosopher_rhimes/_exp03/deity/deity_historian007.mp3", "", "", 1991516548, 1632985185, Spawn)
 	AddConversationOption(conversation, "Very good, I will be on my way then.")
@@ -211,7 +211,7 @@ end
 
 function dlg_30_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "philosopher_rhimes/_exp03/deity/deity_historian011.mp3", "", "", 1707355458, 1531415457, Spawn)
 	AddConversationOption(conversation, "I am interested in the powers of Good.  Where might I find their prophets?", "dlg_30_2")
@@ -223,7 +223,7 @@ end
 
 function dlg_30_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Please tell me where I may find the prophet of Mithaniel Marr.", "dlg_30_3")
@@ -237,7 +237,7 @@ end
 
 function dlg_30_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "philosopher_rhimes/_exp03/deity/deity_historian007.mp3", "", "", 1991516548, 1632985185, Spawn)
 	AddConversationOption(conversation, "Very good, I will be on my way then.")
@@ -247,7 +247,7 @@ end
 
 function dlg_30_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "philosopher_rhimes/_exp03/deity/deity_historian011.mp3", "", "", 1707355458, 1531415457, Spawn)
 	AddConversationOption(conversation, "I am interested in the powers of Good.  Where might I find their prophets?")
@@ -259,7 +259,7 @@ end
 
 function dlg_30_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Please tell me where I may find the prophet of Mithaniel Marr.", "dlg_30_6")
@@ -273,7 +273,7 @@ end
 
 function dlg_30_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "philosopher_rhimes/_exp03/deity/deity_historian008.mp3", "", "", 3677729012, 3031035319, Spawn)
 	AddConversationOption(conversation, "Very good, I will be on my way then.")
@@ -283,7 +283,7 @@ end
 
 function dlg_30_7(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "philosopher_rhimes/_exp03/deity/deity_historian011.mp3", "", "", 1707355458, 1531415457, Spawn)
 	AddConversationOption(conversation, "I am interested in the powers of Good.  Where might I find their prophets?")
@@ -295,7 +295,7 @@ end
 
 function dlg_30_8(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Please tell me where I may find the prophet of Mithaniel Marr.", "dlg_30_9")
@@ -309,7 +309,7 @@ end
 
 function dlg_30_9(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Thank you for your guidance.  Farewell to you.")
@@ -319,7 +319,7 @@ end
 
 function dlg_30_10(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "philosopher_rhimes/_exp03/deity/deity_historian011.mp3", "", "", 1707355458, 1531415457, Spawn)
 	AddConversationOption(conversation, "I am interested in the powers of Good.  Where might I find their prophets?")
@@ -331,7 +331,7 @@ end
 
 function dlg_30_11(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Please tell me where I may find the prophet of Mithaniel Marr.", "dlg_30_12")
@@ -345,7 +345,7 @@ end
 
 function dlg_30_12(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "philosopher_rhimes/_exp03/deity/deity_historian011.mp3", "", "", 1707355458, 1531415457, Spawn)
 	AddConversationOption(conversation, "I am interested in the powers of Good.  Where might I find their prophets?")
@@ -357,7 +357,7 @@ end
 
 function dlg_30_13(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "I'm born of the earth, now tell me about Brell Serilis!")
@@ -372,7 +372,7 @@ end
 
 function dlg_30_14(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "philosopher_rhimes/_exp03/deity/deity_historian006.mp3", "", "", 491255471, 488102680, Spawn)
 	AddConversationOption(conversation, "Very good, I will be on my way then.", "dlg_30_15")
@@ -382,7 +382,7 @@ end
 
 function dlg_30_15(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "philosopher_rhimes/_exp03/deity/deity_historian011.mp3", "", "", 1707355458, 1531415457, Spawn)
 	AddConversationOption(conversation, "I am interested in the powers of Good.  Where might I find their prophets?")
@@ -394,7 +394,7 @@ end
 
 function dlg_30_16(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "I'm born of the earth, now tell me about Brell Serilis!")
@@ -409,7 +409,7 @@ end
 
 function dlg_30_17(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "philosopher_rhimes/_exp03/deity/deity_historian012.mp3", "", "", 63830979, 2698789391, Spawn)
 	AddConversationOption(conversation, "Very good, I will be on my way then.")
@@ -419,7 +419,7 @@ end
 
 function dlg_30_18(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "philosopher_rhimes/_exp03/deity/deity_historian011.mp3", "", "", 1707355458, 1531415457, Spawn)
 	AddConversationOption(conversation, "I am interested in the powers of Good.  Where might I find their prophets?")
@@ -431,7 +431,7 @@ end
 
 function dlg_30_19(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "I'm born of the earth, now tell me about Brell Serilis!")
@@ -446,7 +446,7 @@ end
 
 function dlg_30_20(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Very good, I will be on my way then.")
@@ -456,7 +456,7 @@ end
 
 function dlg_30_21(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "philosopher_rhimes/_exp03/deity/deity_historian011.mp3", "", "", 1707355458, 1531415457, Spawn)
 	AddConversationOption(conversation, "I am interested in the powers of Good.  Where might I find their prophets?")
@@ -468,7 +468,7 @@ end
 
 function dlg_30_22(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "I'm born of the earth, now tell me about Brell Serilis!")
@@ -483,7 +483,7 @@ end
 
 function dlg_30_23(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Then I will go to him swiftly.")
@@ -493,7 +493,7 @@ end
 
 function dlg_30_24(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "philosopher_rhimes/_exp03/deity/deity_historian011.mp3", "", "", 1707355458, 1531415457, Spawn)
 	AddConversationOption(conversation, "I am interested in the powers of Good.  Where might I find their prophets?")
@@ -505,7 +505,7 @@ end
 
 function dlg_30_25(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "I'm born of the earth, now tell me about Brell Serilis!")
@@ -520,7 +520,7 @@ end
 
 function dlg_30_26(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "philosopher_rhimes/_exp03/deity/deity_historian011.mp3", "", "", 1707355458, 1531415457, Spawn)
 	AddConversationOption(conversation, "I am interested in the powers of Good.  Where might I find their prophets?")
@@ -532,7 +532,7 @@ end
 
 function dlg_30_27(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "You will tell me where to find the prophet of Cazic-Thule. Now!")
@@ -547,7 +547,7 @@ end
 
 function dlg_30_28(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "philosopher_rhimes/_exp03/deity/deity_historian002.mp3", "", "", 1717778678, 2232573733, Spawn)
 	AddConversationOption(conversation, "Very good, I will be on my way then.", "dlg_30_29")
@@ -557,7 +557,7 @@ end
 
 function dlg_30_29(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "philosopher_rhimes/_exp03/deity/deity_historian011.mp3", "", "", 1707355458, 1531415457, Spawn)
 	AddConversationOption(conversation, "I am interested in the powers of Good.  Where might I find their prophets?")
@@ -569,7 +569,7 @@ end
 
 function dlg_30_30(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "You will tell me where to find the prophet of Cazic-Thule. Now!")
@@ -584,7 +584,7 @@ end
 
 function dlg_30_31(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "philosopher_rhimes/_exp03/deity/deity_historian004.mp3", "", "", 2236120283, 3019102435, Spawn)
 	AddConversationOption(conversation, "Very good, I will be on my way then.")
@@ -594,7 +594,7 @@ end
 
 function dlg_30_32(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "philosopher_rhimes/_exp03/deity/deity_historian011.mp3", "", "", 1707355458, 1531415457, Spawn)
 	AddConversationOption(conversation, "I am interested in the powers of Good.  Where might I find their prophets?")
@@ -606,7 +606,7 @@ end
 
 function dlg_30_33(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "You will tell me where to find the prophet of Cazic-Thule. Now!")
@@ -621,7 +621,7 @@ end
 
 function dlg_30_34(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "philosopher_rhimes/_exp03/deity/deity_historian003.mp3", "", "", 3561850153, 4167915483, Spawn)
 	AddConversationOption(conversation, "Very good, I will be on my way then.")
@@ -631,7 +631,7 @@ end
 
 function dlg_30_35(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "philosopher_rhimes/_exp03/deity/deity_historian011.mp3", "", "", 1707355458, 1531415457, Spawn)
 	AddConversationOption(conversation, "I am interested in the powers of Good.  Where might I find their prophets?")
@@ -643,7 +643,7 @@ end
 
 function dlg_30_36(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "You will tell me where to find the prophet of Cazic-Thule. Now!")
@@ -658,7 +658,7 @@ end
 
 function dlg_30_37(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Very good, I will be on my way then.")
@@ -668,7 +668,7 @@ end
 
 function dlg_30_38(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "philosopher_rhimes/_exp03/deity/deity_historian011.mp3", "", "", 1707355458, 1531415457, Spawn)
 	AddConversationOption(conversation, "I am interested in the powers of Good.  Where might I find their prophets?")
@@ -680,7 +680,7 @@ end
 
 function dlg_30_39(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "You will tell me where to find the prophet of Cazic-Thule. Now!")
@@ -695,7 +695,7 @@ end
 
 function dlg_30_40(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "You have been most helpful.  I will take my leave now.")
@@ -705,7 +705,7 @@ end
 
 function dlg_30_41(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "philosopher_rhimes/_exp03/deity/deity_historian011.mp3", "", "", 1707355458, 1531415457, Spawn)
 	AddConversationOption(conversation, "I am interested in the powers of Good.  Where might I find their prophets?")
@@ -717,7 +717,7 @@ end
 
 function dlg_30_42(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "You will tell me where to find the prophet of Cazic-Thule. Now!")
@@ -732,7 +732,7 @@ end
 
 function dlg_30_43(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "philosopher_rhimes/_exp03/deity/deity_historian011.mp3", "", "", 1707355458, 1531415457, Spawn)
 	AddConversationOption(conversation, "I am interested in the powers of Good.  Where might I find their prophets?")
@@ -744,7 +744,7 @@ end
 
 function dlg_30_44(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "You will tell me where to find the prophet of Cazic-Thule. Now!")
@@ -759,7 +759,7 @@ end
 
 function dlg_31_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "philosopher_rhimes/_exp03/deity/deity_historian001.mp3", "", "", 1885768155, 4071330533, Spawn)
 	AddConversationOption(conversation, "You will tell me where to find the prophet of Cazic-Thule. Now!")
@@ -779,7 +779,7 @@ end
 
 function dlg_31_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "philosopher_rhimes/_exp03/deity/deity_historian002.mp3", "", "", 1717778678, 2232573733, Spawn)
 	AddConversationOption(conversation, "Very good, I will be on my way then.", "dlg_31_3")
@@ -789,7 +789,7 @@ end
 
 function dlg_31_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "philosopher_rhimes/_exp03/deity/deity_historian011.mp3", "", "", 1707355458, 1531415457, Spawn)
 	AddConversationOption(conversation, "I am interested in the powers of Good.  Where might I find their prophets?")
@@ -801,7 +801,7 @@ end
 
 function dlg_31_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_3_1006.mp3", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "It's so wonderful! I just want to go out and start basking in their glory right away!")
@@ -812,7 +812,7 @@ end
 
 function dlg_31_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "philosopher_rhimes/_exp03/deity/deity_historian001.mp3", "", "", 1885768155, 4071330533, Spawn)
 	AddConversationOption(conversation, "You will tell me where to find the prophet of Cazic-Thule. Now!")
@@ -832,7 +832,7 @@ end
 
 function dlg_31_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "philosopher_rhimes/_exp03/deity/deity_historian003.mp3", "", "", 3561850153, 4167915483, Spawn)
 	AddConversationOption(conversation, "Very good, I will be on my way then.")
@@ -842,7 +842,7 @@ end
 
 function dlg_31_7(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "philosopher_rhimes/_exp03/deity/deity_historian011.mp3", "", "", 1707355458, 1531415457, Spawn)
 	AddConversationOption(conversation, "I am interested in the powers of Good.  Where might I find their prophets?")
@@ -854,7 +854,7 @@ end
 
 function dlg_32_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "philosopher_rhimes/_exp03/deity/deity_historian001.mp3", "", "", 1885768155, 4071330533, Spawn)
 	AddConversationOption(conversation, "You will tell me where to find the prophet of Cazic-Thule. Now!")
@@ -874,7 +874,7 @@ end
 
 function dlg_32_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "philosopher_rhimes/_exp03/deity/deity_historian004.mp3", "", "", 2236120283, 3019102435, Spawn)
 	AddConversationOption(conversation, "Very good, I will be on my way then.")
@@ -884,7 +884,7 @@ end
 
 function dlg_32_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "philosopher_rhimes/_exp03/deity/deity_historian011.mp3", "", "", 1707355458, 1531415457, Spawn)
 	AddConversationOption(conversation, "I am interested in the powers of Good.  Where might I find their prophets?")
@@ -896,7 +896,7 @@ end
 
 function dlg_32_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "You will tell me where to find the prophet of Cazic-Thule. Now!")
@@ -911,7 +911,7 @@ end
 
 function dlg_32_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "philosopher_rhimes/_exp03/deity/deity_historian004.mp3", "", "", 2236120283, 3019102435, Spawn)
 	AddConversationOption(conversation, "Very good, I will be on my way then.")

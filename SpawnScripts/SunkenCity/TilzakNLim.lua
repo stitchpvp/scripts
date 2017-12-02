@@ -18,7 +18,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	if not HasCompletedQuest(Spawn, QUEST_1) then
 		if HasQuest(Spawn, QUEST_1) then
@@ -38,7 +38,7 @@ end
 
 function dlg_3_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "Maybe I can offer you a hand. What do you need?", "OfferQuest1")
 	AddConversationOption(conversation, "Your wants mean nothing to me.")
@@ -54,7 +54,7 @@ function dlg_4_1(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_1, 2)
 	
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/optional5/standard_dark_elf_male/fprt_hood05/quests/tilzaknlim/tilzak_x1_finish.mp3", "", "", 1351808605, 3311226361, Spawn)
 	AddConversationOption(conversation, "No thanks. I'll leave that to you. Bye.")

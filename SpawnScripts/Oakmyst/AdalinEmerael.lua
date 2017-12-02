@@ -16,7 +16,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	if HasQuest(Spawn, HIGH_ELF_MENTOR_QUEST_5) then
 		AddConversationOption(conversation, "I come on behalf of Vindain, from Castleview Hamlet.", "WhatNews")
@@ -45,7 +45,7 @@ end
 
 function WhatNews(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	AddConversationOption(conversation, "A corrupted sunshimmer sprite made its way into Castleview Hamlet. Vindain sent me to talk to you because of what that means...", "ThingsAreNotPleasant")
 	StartConversation(conversation, NPC, Spawn, "And what news does he send?")
@@ -57,7 +57,7 @@ function ThingsAreNotPleasant(NPC, Spawn)
 	end
 
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	if not HasQuest(Spawn, QUEST_1) and not HasCompletedQuest(Spawn, QUEST_1) then
 		AddConversationOption(conversation, "What is going on?", "Corruption")
@@ -68,7 +68,7 @@ end
 
 function Corruption(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	AddConversationOption(conversation, "What can I do to help?", "ToHelp")
 	AddConversationOption(conversation, "I will return if I get time.")
@@ -86,7 +86,7 @@ end
 
 function WhatDoYouMean(NPC, Spawn, conversation)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	AddConversationOption(conversation, "Why do you wish that?", "WhyDoYouWishThat")
 	StartConversation(conversation, NPC, Spawn, "At one point in time, this forest was a lonely place. This is not so true anymore, thought I wish it were.")
@@ -94,7 +94,7 @@ end
 
 function WhyDoYouWishThat(NPC, Spawn, conversation)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	AddConversationOption(conversation, "What can I do to help?", "ToHelp")
 	AddConversationOption(conversation, "That is most unfortunate. I will return later if I can help.")
@@ -103,7 +103,7 @@ end
 
 function ToHelp(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	AddConversationOption(conversation, "A gnoll in Oakmyst?", "AGnollInOakmyst")
 	StartConversation(conversation, NPC, Spawn, "I am glad to hear you ask. I was in the process of clearing out the corruption in Oakmyst when I was attacked by a gnoll.")	
@@ -111,7 +111,7 @@ end
 
 function AGnollInOakmyst(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	AddConversationOption(conversation, "What must I do?", "WhatMustIDo")
 	AddConversationOption(conversation, "Sorry, not today.")
@@ -120,7 +120,7 @@ end
 
 function WhatMustIDo(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	AddConversationOption(conversation, "Where are the trees?", "WhereAreTrees")
 	StartConversation(conversation, NPC, Spawn, "Cleanse the trees of the Oakmyst. Be careful, gnolls may be lurking nearby. If you do find a gnoll, it is important you bring proof of its existence to a guard. If my words are not proof enough we shall find something that suffices.")	
@@ -128,7 +128,7 @@ end
 
 function WhereAreTrees(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	AddConversationOption(conversation, "I will, thank you.", "OfferQuest1")
 	StartConversation(conversation, NPC, Spawn, "There is one just weest of the gates to Castleview Hamlet. Another is just east of the Western Falls west of the first tree. The final tree is east of the entrance to the docks on the western end of the forest. Remember, be wary of gnolls.")	
@@ -154,7 +154,7 @@ end
 
 function TreesCleansed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	AddConversationOption(conversation, "Yes, I did. I got his paw.", "GotPaw")
 	StartConversation(conversation, NPC, Spawn, "Good, good. It is a small step for us, but an important one. Did you encounter any gnolls?")
@@ -164,7 +164,7 @@ function GotPaw(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_1, 4)
 	
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	AddConversationOption(conversation, "You're welcome.")
 	StartConversation(conversation, NPC, Spawn, "Now the Qeynos Guard will have to believe me. Show the paw to Lieutenant Charlin. I'm sure it will interest him greatly. Thank you, " .. GetName(Spawn) .. ", for what you've done. ")

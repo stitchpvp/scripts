@@ -17,7 +17,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(QuestGiver, "voiceover/english/tutorial_revamp/enforcer_kurdek/fprt_adv03_sprawl/quests/enforcer_kurdek030.mp3", "", "", 903390823, 1009474399, Player)
 	AddConversationOption(conversation, "Do you have any suggestions on how I could get her to trust me?", "dlg_27_5")

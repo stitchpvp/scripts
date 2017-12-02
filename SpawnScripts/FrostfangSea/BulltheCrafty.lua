@@ -27,7 +27,7 @@ end
 
 function hailed(NPC, Spawn)
     FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
     if HasCompletedQuest(Spawn, HarvestTutorial) and HasQuest(Spawn, HadAHammer) == false and HasCompletedQuest(Spawn, HadAHammer) == false then
 	    Quest1Chat_1(NPC, Spawn)
@@ -55,7 +55,7 @@ end
 
 function Quest1Chat_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Okay, what do I do?", "OfferHadAHammer")
@@ -65,7 +65,7 @@ end
 function Quest1Chat_3(NPC, Spawn)
     SetStepComplete(Spawn, HadAHammer, 4)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Thanks, I might do that.")

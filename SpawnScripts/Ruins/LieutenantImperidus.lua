@@ -42,7 +42,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	if HasCompletedQuest(Spawn, QUEST_FROM_CAPTAIN_ARELLIUS) then
 		if HasCompletedQuest(Spawn, QUEST_1) then
@@ -94,7 +94,7 @@ function dlg_3_1(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_FROM_CAPTAIN_ARELLIUS, 1)
 	
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/lieutenant_imperidus/fprt_adv04_ruins/revamp/lieutenant_imperidus002.mp3", "", "", 3229308725, 1541859820, Spawn)
 	AddConversationOption(conversation, "I did my best to lend a hand.", "dlg_3_2")
@@ -115,7 +115,7 @@ end
 
 function dlg_3_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/lieutenant_imperidus/fprt_adv04_ruins/revamp/lieutenant_imperidus003.mp3", "", "", 1841575062, 2503344613, Spawn)
 	AddConversationOption(conversation, "I won't be facing them alone. I will do so with companions.", "dlg_3_3")
@@ -125,7 +125,7 @@ end
 
 function dlg_3_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/lieutenant_imperidus/fprt_adv04_ruins/revamp/lieutenant_imperidus005.mp3", "", "", 1657740714, 1252843220, Spawn)
 	AddConversationOption(conversation, "That is an excellent suggestion.", "dlg_3_4")
@@ -134,7 +134,7 @@ end
 
 function dlg_3_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/lieutenant_imperidus/fprt_adv04_ruins/revamp/lieutenant_imperidus006.mp3", "", "", 1028343216, 1318001780, Spawn)
 	AddConversationOption(conversation, "Thank you for the advice, lieutenant.", "dlg_3_5")
@@ -143,7 +143,7 @@ end
 
 function dlg_3_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/lieutenant_imperidus/fprt_adv04_ruins/revamp/lieutenant_imperidus007.mp3", "", "", 4286763000, 3876809810, Spawn)
 	AddConversationOption(conversation, "What do you propose we do?", "dlg_3_6")
@@ -153,7 +153,7 @@ end
 
 function dlg_3_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/lieutenant_imperidus/fprt_adv04_ruins/revamp/lieutenant_imperidus008.mp3", "", "", 1581951336, 1122429744, Spawn)
 	AddConversationOption(conversation, "I am ready to take action.", "OfferQuest1")
@@ -177,7 +177,7 @@ end
 
 function dlg_3_8(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/lieutenant_imperidus/fprt_adv04_ruins/revamp/lieutenant_imperidus010.mp3", "", "", 4046535847, 3776787727, Spawn)
 	AddConversationOption(conversation, "Okay, I'll give it a try.")
@@ -190,7 +190,7 @@ function dlg_6_1(NPC, Spawn)
 	end
 	
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/lieutenant_imperidus/fprt_adv04_ruins/revamp/lieutenant_imperidus012.mp3", "", "", 4000237112, 3044994511, Spawn)
 	AddConversationOption(conversation, "Yes, I am ready for action.", "OfferQuest2")
@@ -225,7 +225,7 @@ end
 
 function dlg_6_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/lieutenant_imperidus/fprt_adv04_ruins/revamp/lieutenant_imperidus014.mp3", "", "", 1342102807, 1470622603, Spawn)
 	AddConversationOption(conversation, "I'll return when I've taught the orcs a lesson.", "dlg_6_4")
@@ -238,7 +238,7 @@ function dlg_29_1(NPC, Spawn)
 	end
 	
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/lieutenant_imperidus/fprt_adv04_ruins/revamp/lieutenant_imperidus016.mp3", "", "", 424275819, 2098486813, Spawn)
 	AddConversationOption(conversation, "Have you been able to learn anything from it?", "dlg_29_2")
@@ -259,7 +259,7 @@ end
 
 function dlg_30_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/lieutenant_imperidus/fprt_adv04_ruins/revamp/lieutenant_imperidus017.mp3", "", "", 3515731336, 836251814, Spawn)
 	AddConversationOption(conversation, "I will get the orc to talk.", "OfferQuest3")
@@ -292,7 +292,7 @@ end
 
 function dlg_34_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/lieutenant_imperidus/fprt_adv04_ruins/revamp/lieutenant_imperidus030.mp3", "", "", 795916419, 2847642656, Spawn)
 	AddConversationOption(conversation, "Apparently the orcs have locked them away in some kind of underground bunker.", "dlg_34_2")
@@ -304,7 +304,7 @@ function dlg_34_2(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_3, 2)
 	
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/lieutenant_imperidus/fprt_adv04_ruins/revamp/lieutenant_imperidus031.mp3", "", "", 56234529, 3138552129, Spawn)
 	AddConversationOption(conversation, "I will undertake this mission for my Overlord and my city.", "dlg_34_3")
@@ -315,7 +315,7 @@ function dlg_36_1(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_3, 4)
 	
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/lieutenant_imperidus/fprt_adv04_ruins/revamp/lieutenant_imperidus020.mp3", "", "", 105191340, 2188619231, Spawn)
 	AddConversationOption(conversation, "Now that you mention it, I thought I spotted a Rujarkian advisor of some kind in the area.", "dlg_37_1")
@@ -336,7 +336,7 @@ end
 
 function dlg_37_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/lieutenant_imperidus/fprt_adv04_ruins/revamp/lieutenant_imperidus021.mp3", "", "", 3288112038, 3542005218, Spawn)
 	AddConversationOption(conversation, "I will report back to her.", "OfferQuest4")

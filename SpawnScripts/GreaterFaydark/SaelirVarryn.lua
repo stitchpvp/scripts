@@ -22,7 +22,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 		PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_2_1006.mp3", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Yes, I have collected the materials.", "dlg_2_1")
@@ -70,7 +70,7 @@ end
 
 function dlg_2_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "What did you say?", "dlg_2_2")
@@ -79,7 +79,7 @@ end
 
 function dlg_2_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Fine. Where are they?", "dlg_2_3")
@@ -88,7 +88,7 @@ end
 
 function dlg_2_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "... don't do what you did?", "dlg_2_4")
@@ -97,7 +97,7 @@ end
 
 function dlg_2_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "All right. I'll return.", "dlg_2_5")
@@ -106,7 +106,7 @@ end
 
 function dlg_8_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "You still haven't told me what your plan is.", "dlg_8_2")
@@ -115,7 +115,7 @@ end
 
 function dlg_8_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "They won't listen.", "dlg_8_3")
@@ -124,7 +124,7 @@ end
 
 function dlg_8_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "So what must we do?", "dlg_8_4")
@@ -133,7 +133,7 @@ end
 
 function dlg_8_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "And run?", "dlg_8_5")
@@ -142,7 +142,7 @@ end
 
 function dlg_8_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "They will be pretty mad.", "dlg_8_6")
@@ -151,7 +151,7 @@ end
 
 function dlg_8_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "I suppose. What do I need to do?", "dlg_8_7")
@@ -160,7 +160,7 @@ end
 
 function dlg_8_7(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Okay.", "dlg_8_8")
@@ -169,7 +169,7 @@ end
 
 function dlg_8_8(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "All right.", "dlg_8_9")
@@ -178,7 +178,7 @@ end
 
 function dlg_8_9(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Okay.", "dlg_8_10")
@@ -187,7 +187,7 @@ end
 
 function dlg_8_10(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Okay.", "dlg_8_11")
@@ -196,7 +196,7 @@ end
 
 function dlg_8_11(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "I will return.", "dlg_8_12")
@@ -205,7 +205,7 @@ end
 
 function dlg_14_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "What is it?", "dlg_14_2")
@@ -214,7 +214,7 @@ end
 
 function dlg_14_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Are you chickening out on me?", "dlg_14_3")
@@ -223,7 +223,7 @@ end
 
 function dlg_14_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Why not?", "dlg_14_4")
@@ -232,7 +232,7 @@ end
 
 function dlg_14_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Yes, I know exactly what you mean. You're giving up!", "dlg_14_5")
@@ -242,7 +242,7 @@ end
 
 function dlg_14_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "But we didn't go through with it, that's the important part.")
@@ -251,7 +251,7 @@ end
 
 function dlg_14_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "It's all right. Have a nice day, Saelir.", "dlg_14_7")
@@ -260,7 +260,7 @@ end
 
 function dlg_14_7(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Goodbye.", "dlg_14_8")
@@ -269,7 +269,7 @@ end
 
 function dlg_104_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Yeah, I think I do. It's like they don't trust me to be as good as they are.", "dlg_104_2")
@@ -280,7 +280,7 @@ end
 
 function dlg_104_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "I get that feeling too. It's like they don't trust me to be as good as they are.")
@@ -290,7 +290,7 @@ end
 
 function dlg_104_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Good luck finding yourself, Saelir.")
@@ -299,7 +299,7 @@ end
 
 function dlg_105_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Yeah, I think I do. It's like they don't trust me to be as good as they are.", "dlg_105_2")
@@ -310,7 +310,7 @@ end
 
 function dlg_105_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Yes.", "dlg_105_3")
@@ -320,7 +320,7 @@ end
 
 function dlg_105_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Good luck finding yourself, Saelir.")
@@ -329,7 +329,7 @@ end
 
 function dlg_106_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Yeah, I think I do. It's like they don't trust me to be as good as they are.", "dlg_106_2")
@@ -340,7 +340,7 @@ end
 
 function dlg_106_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "I get that feeling too. It's like they don't trust me to be as good as they are.")
@@ -350,7 +350,7 @@ end
 
 function dlg_106_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Yes.", "dlg_106_4")
@@ -360,7 +360,7 @@ end
 
 function dlg_106_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "How were you going to do that?", "dlg_106_5")
@@ -369,7 +369,7 @@ end
 
 function dlg_106_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Well, maybe I'd like to show them all as well.", "dlg_106_6")
@@ -378,7 +378,7 @@ end
 
 function dlg_106_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "I'm in.", "dlg_106_7")
@@ -387,7 +387,7 @@ end
 
 function dlg_106_7(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "What do you mean?", "dlg_106_8")
@@ -396,7 +396,7 @@ end
 
 function dlg_106_8(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "No, who is he?", "dlg_106_9")
@@ -407,7 +407,7 @@ end
 
 function dlg_106_9(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "What's a Sul Sphere?", "dlg_106_10")
@@ -416,7 +416,7 @@ end
 
 function dlg_106_10(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "So what do you want to do about it?", "dlg_106_11")
@@ -425,7 +425,7 @@ end
 
 function dlg_106_11(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "What are the components?", "dlg_106_12")
@@ -434,7 +434,7 @@ end
 
 function dlg_106_12(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "All right, I'll gather them.", "dlg_106_13")
@@ -443,7 +443,7 @@ end
 
 function dlg_106_13(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "All right.", "dlg_106_14")

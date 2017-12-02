@@ -20,7 +20,7 @@ end
 function Accepted(Quest, QuestGiver, Player)
 	SummonItem(Player, 157116)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	AddConversationOption(conversation, "Wonderful.")
 	StartConversation(conversation, NPC, Spawn, "You must wear him in order to hear him.  Now, promise to bring him back -safe and sound.  And do not be swayed by his bloodlust. He often forgets he no longer has claws.")

@@ -18,7 +18,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/scholar_neola/qey_adv01_oakmyst/scholarneola000.mp3", "", "", 684527020, 3141115058, Spawn)
 	if not HasCompletedQuest(Spawn, QUEST_1) and not HasQuest(Spawn, QUEST_1) then
@@ -32,7 +32,7 @@ end
 
 function dlg_3_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/scholar_neola/qey_adv01_oakmyst/scholarneola001.mp3", "", "", 4101705727, 2237841081, Spawn)
 	AddConversationOption(conversation, "Is there anything I can do to help the sapling? ", "OfferQuest1")
@@ -49,7 +49,7 @@ function SavedSapling(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_1, 3)
 	
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "I will speak to the judge.")
 	StartConversation(conversation, NPC, Spawn, "The sapling has a young battle ahead to become a timber lord. Your help brings it closer to this goal. Now you must seek out the Judge. She awaits those who aid this forest.")

@@ -29,7 +29,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(QuestGiver, "voiceover/english/tutorial_revamp/custodian_zaddar_sullissia/fprt_adv02_graveyard/custodian_zaddar030.mp3", "", "", 3091175973, 1298049191, Player)
 	AddConversationOption(conversation, "The things I do for fame and fortune...")

@@ -35,7 +35,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(NPC, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "Okay.")
 	StartConversation(conversation, NPC, Player, "That's the spirit! Here, take this letter to a gnome named Tish Tickers at guard tower three. She's being harassed by a collection agency again. They sound pretty serious now. I can't wait to see what her excuse for not paying will be this time. Come back when you have her reply.")

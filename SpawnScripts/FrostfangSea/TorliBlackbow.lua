@@ -20,7 +20,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	if GetQuestStep(Spawn, SeekingEducation) == 1 then
 	    PlayFlavor(NPC, "torli_blackbow/halas/new_halas_guard_house/torli_blackaxe_001.mp3", "", "", 3560007019, 2375962342, Spawn)
 	    AddConversationOption(conversation, "My name is " .. GetName(Spawn) .. ".  I was sent by Thirin Veliumdelver.", "Quest1Chat_1")
@@ -45,7 +45,7 @@ end
 
 function Quest1Chat_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "torli_blackbow/halas/new_halas_guard_house/torli_blackaxe_002.mp3", "", "", 1601353175, 2170594653, Spawn)
 	AddConversationOption(conversation, "We found a large ice and velium elemental living below New Halas!", "Quest1Chat_2")
@@ -54,7 +54,7 @@ end
 
 function Quest1Chat_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "torli_blackbow/halas/new_halas_guard_house/torli_blackaxe_003.mp3", "", "", 3538220054, 491792113, Spawn)
 	AddConversationOption(conversation, "It killed Ordin Sleetfoot.", "Quest1Chat_3")
@@ -63,7 +63,7 @@ end
 
 function Quest1Chat_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "torli_blackbow/halas/new_halas_guard_house/torli_blackaxe_004.mp3", "", "", 1850979310, 1092709933, Spawn)
 	AddConversationOption(conversation, "We could go in and kill it.", "Quest1Chat_4")
@@ -73,7 +73,7 @@ end
 
 function Quest1Chat_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "torli_blackbow/halas/new_halas_guard_house/torli_blackaxe_005.mp3", "", "", 2755216840, 3266695694, Spawn)
 	AddConversationOption(conversation, "I know.", "Quest1Chat_5")
@@ -84,7 +84,7 @@ end
 
 function Quest1Chat_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "torli_blackbow/halas/new_halas_guard_house/torli_blackaxe_006.mp3", "", "", 2649012761, 1864543312, Spawn)
 	AddConversationOption(conversation, "Glacierbane's Vault?", "Quest1Chat_6")
@@ -94,7 +94,7 @@ end
 function Quest1Chat_6(NPC, Spawn)
 	SetStepComplete(Spawn, SeekingEducation, 1)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "torli_blackbow/halas/new_halas_guard_house/torli_blackaxe_007.mp3", "", "", 1644016563, 4176143932, Spawn)
 	AddConversationOption(conversation, "I'll speak with her.")
@@ -107,7 +107,7 @@ function Quest1Chat_7(NPC, Spawn)
 	end
 	SetStepComplete(Spawn, SeekingEducation, 3)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "torli_blackbow/halas/new_halas_guard_house/torli_blackaxe_009.mp3", "", "", 2780367632, 539709516, Spawn)
 	AddConversationOption(conversation, "Thank you.", "Quest2Chat_1")
@@ -116,7 +116,7 @@ end
 
 function Quest2Chat_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "torli_blackbow/halas/new_halas_guard_house/torli_blackaxe_010.mp3", "", "", 1175740555, 3997329463, Spawn)
 	AddConversationOption(conversation, "What do you mean?", "Quest2Chat_2")
@@ -125,7 +125,7 @@ end
 
 function Quest2Chat_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "torli_blackbow/halas/new_halas_guard_house/torli_blackaxe_011.mp3", "", "", 772395501, 910422100, Spawn)
 	AddConversationOption(conversation, "What did it say?", "Quest2Chat_3")
@@ -134,7 +134,7 @@ end
 
 function Quest2Chat_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "torli_blackbow/halas/new_halas_guard_house/torli_blackaxe_012.mp3", "", "", 1978800607, 2542267623, Spawn)
 	AddConversationOption(conversation, "I can do that!", "OfferNapEvigis")
@@ -145,7 +145,7 @@ end
 function Quest2Chat_4(NPC, Spawn)
 	SetStepComplete(Spawn, NapEvigis, 2)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	AddConversationOption(conversation, "Thank you.")
 	AddConversationOption(conversation, "I did what I could.")

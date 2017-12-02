@@ -149,7 +149,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(QuestGiver, "voiceover/english/the_wandering_augur/steppes/quests/quest_wandering_augur/wandering_augur003.mp3", "", "", 430514653, 1419831869, Player)
 	AddConversationOption(conversation, "Well, okay.")

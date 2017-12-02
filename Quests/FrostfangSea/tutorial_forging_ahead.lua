@@ -21,7 +21,7 @@ function Accepted(Quest, QuestGiver, Player)
 	SummonItem(Player, 31371, 1)
 	SummonItem(Player, 4142, 1)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "Thanks.  Here I go.")
 	StartConversation(conversation, QuestGiver, Player, "Of course, it'll be easier to understand once you can see it in action.  Here's a recipe book, and some fuel.  Scribe the recipe book by finding it in your inventory and right-clicking it.  Check that you have some elm, tin, and roots in your bags, and head over to the forge.  Click on the forge to bring up your recipe list, and select the recipe for the simple candelabra.")

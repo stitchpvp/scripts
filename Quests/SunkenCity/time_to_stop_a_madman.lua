@@ -17,7 +17,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(QuestGiver, "voiceover/english/tutorial_revamp/inquisitor_thorson/fprt_adv01_sunken/inquisitor_thorson045.mp3", "", "", 1129031439, 214486034, Player)
 	AddConversationOption(conversation, "I will return... I hope.")

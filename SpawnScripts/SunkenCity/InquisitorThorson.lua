@@ -43,7 +43,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	RandomVoiceOver(NPC, Spawn)
 
 	if HasQuest(Spawn, HALFELF_MENTOR_QUEST_5) then
@@ -114,7 +114,7 @@ function Delcairn(NPC, Spawn)
 	SetStepComplete(Spawn, HALFELF_MENTOR_QUEST_5, 1)
 
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	if not HasQuest(Spawn, QUEST_1) and not HasCompleted(Spawn, QUEST_1) then
 		AddConversationOption(conversation, "I would be an honor to serve Freeport.", "dlg_0_1")
@@ -136,7 +136,7 @@ end
 
 function dlg_0_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/inquisitor_thorson/fprt_adv01_sunken/inquisitor_thorson003.mp3", "", "", 463981298, 3396454386, Spawn)
 	AddConversationOption(conversation, "What is the Dismal Rage?", "dlg_0_2")
@@ -146,7 +146,7 @@ end
 
 function dlg_0_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "What gods do you serve?", "dlg_0_3")
 	AddConversationOption(conversation, "I have heard enough about the Dismal Rage. What is this place?", "dlg_0_6")
@@ -156,7 +156,7 @@ end
 
 function dlg_0_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "If there are no gods around anymore, from where do you draw your power?", "dlg_0_4")
 	AddConversationOption(conversation, "I think I've heard enough.")
@@ -165,7 +165,7 @@ end
 
 function dlg_0_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "What principles do you mean?", "dlg_0_5")
 	AddConversationOption(conversation, "I think I should be leaving.")
@@ -174,7 +174,7 @@ end
 
 function dlg_0_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "What is this place?", "dlg_0_6")
 	AddConversationOption(conversation, "I think I should be leaving.")
@@ -183,7 +183,7 @@ end
 
 function dlg_0_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "What do you mean?", "dlg_0_7")
 	AddConversationOption(conversation, "I don't need to hear anything else.")
@@ -192,7 +192,7 @@ end
 
 function dlg_0_7(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "I will do it.", "OfferQuest1")
 	StartConversation(conversation, NPC, Spawn, "I will tell you more if you want to hear it, but first I must review the notes I have been taking on what I have observed since my arrival here. To learn a bit more about this place, go through the archway just ahead and speak to an iksar named Saydith Yarr.")
@@ -217,7 +217,7 @@ function dlg_2_1(NPC, Spawn)
 	end
 	
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "I'd like to hear more about the Sunken City.", "dlg_2_2")
 	AddConversationOption(conversation, "Enough chatter. Do you have anything for me to do?", "dlg_2_10")
@@ -237,7 +237,7 @@ end
 
 function dlg_2_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "Go on.", "dlg_2_3")
 	AddConversationOption(conversation, "I've heard enough.")
@@ -246,7 +246,7 @@ end
 
 function dlg_2_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "Please continue.", "dlg_2_4")
 	AddConversationOption(conversation, "I've heard enough.")
@@ -255,7 +255,7 @@ end
 
 function dlg_2_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "I see.", "dlg_2_5")
 	AddConversationOption(conversation, "I've heard enough.")
@@ -264,7 +264,7 @@ end
 
 function dlg_2_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "Who followed Aquel?", "dlg_2_6")
 	AddConversationOption(conversation, "I'm losing interest in this story. Do you have any work for me?", "dlg_2_10")
@@ -274,7 +274,7 @@ end
 
 function dlg_2_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "Did Aquel really want to help them?", "dlg_2_7")
 	AddConversationOption(conversation, "I've heard enough.")
@@ -283,7 +283,7 @@ end
 
 function dlg_2_7(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "Did anyone try to stop him?", "dlg_2_8")
 	AddConversationOption(conversation, "Enough of this babbling.")
@@ -292,7 +292,7 @@ end
 
 function dlg_2_8(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "Was all of Freeport flooded?", "dlg_2_9")
 	AddConversationOption(conversation, "I've heard enough.")
@@ -301,7 +301,7 @@ end
 
 function dlg_2_9(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "This area is haunted?", "dlg_2_10")
 	AddConversationOption(conversation, "I don't like ghosts. Time to go.")
@@ -310,7 +310,7 @@ end
 
 function dlg_2_10(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "What do you want me to do?", "dlg_2_11")
 	AddConversationOption(conversation, "I have no interest in this.")
@@ -319,7 +319,7 @@ end
 
 function dlg_2_11(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "I'll do it. Where can I find these creatures?", "OfferQuest2")
 	StartConversation(conversation, NPC, Spawn, "When the undead are defeated and their spirits are freed, they often leave behind a spectral essence that, if properly analyzed, reveals much about their past. I must find out what is causing the increase in activity among the undead. I need you to obtain four spectral essences from the undead creatures.")
@@ -342,7 +342,7 @@ function dlg_7_1(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_2, 2)
 	
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "What other inhabitants?", "dlg_7_2")
 	AddConversationOption(conversation, "No thanks, I will be going.")
@@ -361,7 +361,7 @@ end
 
 function dlg_7_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "What kind of vermin?", "dlg_7_3")
 	AddConversationOption(conversation, "Just tell me how to collect the information you need.")
@@ -370,7 +370,7 @@ end
 
 function dlg_7_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "What other creatures?", "dlg_7_4")
 	StartConversation(conversation, NPC, Spawn, "Crabs like to roam in shallow water, so I need a rough estimate of their density here. You should find plenty of brine sifters just through the archway, as well as farther on to the east.")
@@ -378,7 +378,7 @@ end
 
 function dlg_7_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "Anything else?", "dlg_7_5")
 	StartConversation(conversation, NPC, Spawn, "Though a coastal city, Freeport has a very arid climate. Scorpions may be found here on some of the dry portions of ground. You might try going west, then south a bit.")
@@ -386,7 +386,7 @@ end
 
 function dlg_7_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "How do I collect information on these creatures?", "OfferQuest3")
 	StartConversation(conversation, NPC, Spawn, "Of particular interest to me are the strange rust monsters that scurry around here. There is little information on where they come from, but they showed up in this area after the destruction caused by the Rending. They get their name not only for their brownish color, but for their odd taste for consuming rusty metal. If any of your gear becomes rusty due to the moisture here, be on your guard.")
@@ -409,7 +409,7 @@ function dlg_10_1(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_3, 5)
 	
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "Are you working alone here?", "dlg_10_2")
 	AddConversationOption(conversation, "I think I will go now.")
@@ -428,7 +428,7 @@ end
 
 function dlg_10_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "Who am I looking for?", "dlg_10_3")
 	AddConversationOption(conversation, "Run your own errands.")
@@ -437,7 +437,7 @@ end
 
 function dlg_10_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "I'll do it. Where can I find him?", "OfferQuest4")
 	StartConversation(conversation, NPC, Spawn, "Seek out Investigator Curfeld, a highly respected member of our order. He has spent a lot of time researching the events that transpired here, and no doubt has some insight into the recent rise in undead activity. Take my findings on the spectral essences and give them to him.")
@@ -459,7 +459,7 @@ end
 
 function DidntFindHim(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	AddConversationOption(conversation, "I'll have another look.")
 	StartConversation(conversation, NPC, Spawn, "He is near the gateway to the Graveyard. Look to the south and the west of here, near some other inquisitors from the Dismal Rage. Investigator Curfield often makes expeditions deeper into the Sunken City, so if you don't see him right now just wait a while and he should present himself.")
@@ -480,7 +480,7 @@ function dlg_22_1(NPC, Spawn)
 	end
 
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/inquisitor_thorson/fprt_adv01_sunken/inquisitor_thorson037.mp3", "", "", 1891000932, 649787837, Spawn)
 	AddConversationOption(conversation, "First he had me uncover what some unsavory pirates are doing in the area.", "dlg_22_2")
@@ -500,7 +500,7 @@ end
 
 function dlg_22_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/inquisitor_thorson/fprt_adv01_sunken/inquisitor_thorson038.mp3", "", "", 4129824747, 1521555979, Spawn)
 	AddConversationOption(conversation, "No, he just had me retrieve some documents that were in their possession.", "dlg_22_3")
@@ -510,7 +510,7 @@ end
 
 function dlg_22_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/inquisitor_thorson/fprt_adv01_sunken/inquisitor_thorson039.mp3", "", "", 4059080083, 3742743573, Spawn)
 	AddConversationOption(conversation, "He had me investigate a ruined shrine to Prexus that was guarded by zombies.", "dlg_22_4")
@@ -520,7 +520,7 @@ end
 
 function dlg_22_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/inquisitor_thorson/fprt_adv01_sunken/inquisitor_thorson040.mp3", "", "", 3404715072, 1791529373, Spawn)
 	AddConversationOption(conversation, "Uh, actually not. He just asked me to find out whether it still emanated mystical energy.", "dlg_22_5")
@@ -530,7 +530,7 @@ end
 
 function dlg_22_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/inquisitor_thorson/fprt_adv01_sunken/inquisitor_thorson041.mp3", "", "", 3942402517, 3906834551, Spawn)
 	AddConversationOption(conversation, "I'm sure there must be a good explanation.", "dlg_22_6")
@@ -540,7 +540,7 @@ end
 
 function dlg_22_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/inquisitor_thorson/fprt_adv01_sunken/inquisitor_thorson042.mp3", "", "", 3952859177, 2366255979, Spawn)
 	AddConversationOption(conversation, "Why would he have such notes?", "dlg_22_7")
@@ -550,7 +550,7 @@ end
 
 function dlg_22_7(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/inquisitor_thorson/fprt_adv01_sunken/inquisitor_thorson043.mp3", "", "", 3919422201, 2706704450, Spawn)
 	AddConversationOption(conversation, "What should we do?", "dlg_22_8")
@@ -560,7 +560,7 @@ end
 
 function dlg_22_8(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/inquisitor_thorson/fprt_adv01_sunken/inquisitor_thorson044.mp3", "", "", 4213844077, 3519190459, Spawn)
 	AddConversationOption(conversation, "I will. But what if he refuses to surrender?", "OfferQuest5")
@@ -588,7 +588,7 @@ function dlg_24_1(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_5, 2)
 
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "It was my pleasure to serve. Do you have any other tasks for me?", "OfferQuest6")
 	AddConversationOption(conversation, "I'm tired of being around you.")
@@ -618,7 +618,7 @@ end
 
 function dlg_24_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/inquisitor_thorson/fprt_adv01_sunken/inquisitor_thorson049.mp3", "", "", 3163252250, 288796806, Spawn)
 	AddConversationOption(conversation, "Are there any other places you could recommend where I can find adventures?", "dlg_24_4")
@@ -628,7 +628,7 @@ end
 
 function dlg_24_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/inquisitor_thorson/fprt_adv01_sunken/inquisitor_thorson061.mp3", "", "", 2845086086, 1715171802, Spawn)
 	AddConversationOption(conversation, "Tell me more about Custodian Zaddar.", "dlg_24_5")
@@ -639,7 +639,7 @@ end
 
 function dlg_24_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/inquisitor_thorson/fprt_adv01_sunken/inquisitor_thorson062.mp3", "", "", 4025975768, 1084751097, Spawn)
 	AddConversationOption(conversation, "Tell me more about Enforcer Kurdek.", "dlg_24_6")
@@ -649,7 +649,7 @@ end
 
 function dlg_24_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/inquisitor_thorson/fprt_adv01_sunken/inquisitor_thorson063.mp3", "", "", 3377387482, 1184471101, Spawn)
 	AddConversationOption(conversation, "Tell me more about Custodian Zaddar.", "dlg_24_5")

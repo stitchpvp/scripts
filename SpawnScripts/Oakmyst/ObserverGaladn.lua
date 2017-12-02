@@ -15,7 +15,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	choice = math.random(1, 3)
 	if choice == 1 then

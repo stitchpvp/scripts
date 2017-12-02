@@ -42,7 +42,7 @@ end
 
 function hailed(NPC, Spawn)
     FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
     if HasCompletedQuest(Spawn, UnbearableProblem) == false and HasQuest(Spawn, UnbearableProblem) == false then
 	    PlayFlavor(NPC, "flibbit_quagmarr/halas/gwenevyns_cove/flibbit_quagmarr/flibbit_quagmarr_001.mp3", "", "", 3105180851, 2650595838, Spawn)
@@ -113,7 +113,7 @@ end
 
 function Quest1Chat_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "flibbit_quagmarr/halas/gwenevyns_cove/flibbit_quagmarr/flibbit_quagmarr_019.mp3", "", "", 3157384930, 341257107, Spawn)
 	AddConversationOption(conversation, "What is wrong with the path?", "Quest1Chat_3")
@@ -122,7 +122,7 @@ end
 
 function Quest1Chat_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "flibbit_quagmarr/halas/gwenevyns_cove/flibbit_quagmarr/flibbit_quagmarr_020.mp3", "", "", 3443691770, 4044378382, Spawn)
 	AddConversationOption(conversation, "My reasons are my own, but I will help any pilgrims in need.", "Quest1Chat_3")
@@ -131,7 +131,7 @@ end
 
 function Quest1Chat_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "flibbit_quagmarr/halas/gwenevyns_cove/flibbit_quagmarr/flibbit_quagmarr_021.mp3", "", "", 2518687003, 3994330850, Spawn)
 	AddConversationOption(conversation, "What would you have me do?", "Quest1Chat_4")
@@ -140,7 +140,7 @@ end
 
 function Quest1Chat_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "flibbit_quagmarr/halas/gwenevyns_cove/flibbit_quagmarr/flibbit_quagmarr_022.mp3", "", "", 2370229113, 461588246, Spawn)
 	AddConversationOption(conversation, "I understand. I shall clear a safe path for the pilgrims and return to you once I have finished.", "OfferUnbearableProblem")
@@ -151,7 +151,7 @@ end
 
 function Quest1Chat_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "flibbit_quagmarr/halas/gwenevyns_cove/flibbit_quagmarr/flibbit_quagmarr_062.mp3", "", "", 2223435732, 36629853, Spawn)
 	AddConversationOption(conversation, "No wonder it is so important that I clear a safe path for the pilgrims.", "OfferUnbearableProblem")
@@ -161,7 +161,7 @@ end
 
 function Quest1Chat_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "I shall continue to hunt the pilgrim-eating grizzlies.")
 	StartConversation(conversation, NPC, Spawn, "They hunt and roam southwest of here.")
@@ -170,7 +170,7 @@ end
 function Quest1Chat_7(NPC, Spawn)
     SetStepComplete(Spawn, UnbearableProblem, 2)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "flibbit_quagmarr/halas/gwenevyns_cove/flibbit_quagmarr/flibbit_quagmarr_025.mp3", "", "", 2597773991, 3326444156, Spawn)
 	AddConversationOption(conversation, "Thank you, Flibbit.", "Quest2Chat_1")
@@ -179,7 +179,7 @@ end
 
 function Quest2Chat_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "flibbit_quagmarr/halas/gwenevyns_cove/flibbit_quagmarr/flibbit_quagmarr_063.mp3", "", "", 1125643024, 3387202205, Spawn)
 	AddConversationOption(conversation, "What is it?  Who?", "Quest2Chat_2")
@@ -189,7 +189,7 @@ end
 
 function Quest2Chat_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "flibbit_quagmarr/halas/gwenevyns_cove/flibbit_quagmarr/flibbit_quagmarr_004.mp3", "", "", 2980400722, 2578144339, Spawn)
 	AddConversationOption(conversation, "Someone has taken Splorpy?", "Quest2Chat_3")
@@ -198,7 +198,7 @@ end
 
 function Quest2Chat_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "flibbit_quagmarr/halas/gwenevyns_cove/flibbit_quagmarr/flibbit_quagmarr_026.mp3", "", "", 2928995229, 3951798794, Spawn)
 	AddConversationOption(conversation, "What can I do to help?", "Quest2Chat_4")
@@ -208,7 +208,7 @@ end
 
 function Quest2Chat_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "flibbit_quagmarr/halas/gwenevyns_cove/flibbit_quagmarr/flibbit_quagmarr_027.mp3", "", "", 3820799248, 3563722850, Spawn)
 	AddConversationOption(conversation, "Is there anyone I can ask at Gwenevyn's Cove that might know where Splorpy has gone?", "Quest2Chat_5")
@@ -217,7 +217,7 @@ end
 
 function Quest2Chat_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "flibbit_quagmarr/halas/gwenevyns_cove/flibbit_quagmarr/flibbit_quagmarr_028.mp3", "", "", 968886797, 3430688549, Spawn)
 	AddConversationOption(conversation, "I will ask Sigbrith if she has seen Splorpy and then I will go out and look for him.", "OfferLostFroglok")
@@ -226,7 +226,7 @@ end
 
 function Quest2Chat_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "flibbit_quagmarr/halas/gwenevyns_cove/flibbit_quagmarr/flibbit_quagmarr_029.mp3", "", "", 1372379832, 3108068275, Spawn)
 	AddConversationOption(conversation, "I will return once I have found Splorpy.")
@@ -235,7 +235,7 @@ end
 
 function Quest2Chat_7(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "flibbit_quagmarr/halas/gwenevyns_cove/flibbit_quagmarr/flibbit_quagmarr_031.mp3", "", "", 1539671456, 2276621725, Spawn)
 	AddConversationOption(conversation, "He said it was not a barbarian.", "Quest2Chat_8")
@@ -244,7 +244,7 @@ end
 
 function Quest2Chat_8(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "flibbit_quagmarr/halas/gwenevyns_cove/flibbit_quagmarr/flibbit_quagmarr_032.mp3", "", "", 1459827383, 2517890106, Spawn)
 	AddConversationOption(conversation, "I am planning on ending up there myself.", "Quest2Chat_9")
@@ -253,7 +253,7 @@ end
 
 function Quest2Chat_9(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "flibbit_quagmarr/halas/gwenevyns_cove/flibbit_quagmarr/flibbit_quagmarr_033.mp3", "", "", 2748996768, 1461112434, Spawn)
 	AddConversationOption(conversation, "I could not stand by and do nothing.", "Quest2Chat_10")
@@ -265,7 +265,7 @@ function Quest2Chat_10(NPC, Spawn)
 	Despawn(GetSpawn(Spawn, 4701835))
 	AddSpawnAccess(GetSpawnByLocationID(GetZone(NPC), 5217), Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "flibbit_quagmarr/halas/gwenevyns_cove/flibbit_quagmarr/flibbit_quagmarr_034.mp3", "", "", 54813479, 1970991654, Spawn)
 	AddConversationOption(conversation, "Thank you, Flibbit.")
@@ -274,7 +274,7 @@ end
 
 function Quest3Chat_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "flibbit_quagmarr/halas/gwenevyns_cove/flibbit_quagmarr/flibbit_quagmarr_035.mp3", "", "", 3761564927, 3120365260, Spawn)
 	AddConversationOption(conversation, "What do you need help with?", "Quest3Chat_3")
@@ -284,7 +284,7 @@ end
 
 function Quest3Chat_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "flibbit_quagmarr/halas/gwenevyns_cove/flibbit_quagmarr/flibbit_quagmarr_036.mp3", "", "", 357106938, 4264008220, Spawn)
 	AddConversationOption(conversation, "I could keep an eye out for it.", "OfferAbsentEffigy")
@@ -293,7 +293,7 @@ end
 
 function Quest3Chat_4(NPC, Spawn)
     FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	AddConversationOption(conversation, "I shall look for it amongst the frigid whirlstorms, then.")
 	StartConversation(conversation, "I figure it's probably been picked up in an eddy of one of those frigid whirlstorms you see ripping about across the ice shelf.")
@@ -302,7 +302,7 @@ end
 function Quest3Chat_5(NPC, Spawn)
 	SetStepComplete(Spawn, AbsentEffigy, 2)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "flibbit_quagmarr/halas/gwenevyns_cove/flibbit_quagmarr/flibbit_quagmarr_039.mp3", "", "", 3267108505, 3934101762, Spawn)
 	AddConversationOption(conversation, "I am glad to be able to return it to Splorpy.", "Quest4Chat_1")
@@ -311,7 +311,7 @@ end
 
 function Quest4Chat_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "flibbit_quagmarr/halas/gwenevyns_cove/flibbit_quagmarr/flibbit_quagmarr_064.mp3", "", "", 1699103453, 3563523529, Spawn)
 	AddConversationOption(conversation, "Yes, I am.  Do you need anything else for your pilgrimage?", "Quest4Chat_3")
@@ -321,7 +321,7 @@ end
 
 function Quest4Chat_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	PlayFlavor(NPC, "flibbit_quagmarr/halas/gwenevyns_cove/flibbit_quagmarr/flibbit_quagmarr_010.mp3", "", "", 3573239731, 1050060111, Spawn)
 	AddConversationOption(conversation, "Hello, Flibbit. Do you need anything else for your pilgrimage?", "Quest4Chat_3")
@@ -330,7 +330,7 @@ end
 
 function Quest4Chat_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "flibbit_quagmarr/halas/gwenevyns_cove/flibbit_quagmarr/flibbit_quagmarr_040.mp3", "", "", 893544611, 973431140, Spawn)
 	AddConversationOption(conversation, "Is there anything I can help with?", "Quest4Chat_4")
@@ -340,7 +340,7 @@ end
 
 function Quest4Chat_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "flibbit_quagmarr/halas/gwenevyns_cove/flibbit_quagmarr/flibbit_quagmarr_041.mp3", "", "", 3728599078, 2071611089, Spawn)
 	AddConversationOption(conversation, "I could head out that way and collect them for you.", "Quest4Chat_5")
@@ -349,7 +349,7 @@ end
 
 function Quest4Chat_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "flibbit_quagmarr/halas/gwenevyns_cove/flibbit_quagmarr/flibbit_quagmarr_042.mp3", "", "", 641871546, 1699897380, Spawn)
 	AddConversationOption(conversation, "What do you hope to do with them?", "Quest4Chat_6")
@@ -358,7 +358,7 @@ end
 
 function Quest4Chat_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "flibbit_quagmarr/halas/gwenevyns_cove/flibbit_quagmarr/flibbit_quagmarr_043.mp3", "", "", 972157207, 757922985, Spawn)
 	AddConversationOption(conversation, "I will look for these strange ice crystals upon the Icemane Plains.", "OfferBarteringCrystals")
@@ -368,7 +368,7 @@ end
 
 function Quest4Chat_7(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	AddConversationOption(conversation, "I shall continue my search for the ice crystals.")
 	StartConversation(conversation, NPC, Spawn, "You can find the crystals south of here, on the Icemane Plains.")
@@ -376,7 +376,7 @@ end
 
 function Quest4Chat_8(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "flibbit_quagmarr/halas/gwenevyns_cove/flibbit_quagmarr/flibbit_quagmarr_046.mp3", "", "", 1845183249, 3762123225, Spawn)
 	AddConversationOption(conversation, "Good luck with your experiments.", "Quest4Chat_9")
@@ -386,7 +386,7 @@ end
 function Quest4Chat_9(NPC, Spawn)
 	SetStepComplete(Spawn, BarteringCrystals, 2)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "flibbit_quagmarr/halas/gwenevyns_cove/flibbit_quagmarr/flibbit_quagmarr_047.mp3", "", "", 235665494, 154066582, Spawn)
 	AddConversationOption(conversation, "It was no problem for me to collect the crystals.", "Quest5Chat_1")
@@ -395,7 +395,7 @@ end
 
 function Quest5Chat_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "flibbit_quagmarr/halas/gwenevyns_cove/flibbit_quagmarr/flibbit_quagmarr_048.mp3", "", "", 146466973, 1233162393, Spawn)
 	AddConversationOption(conversation, "And what is that?", "Quest5Chat_2")
@@ -405,16 +405,16 @@ end
 
 function Quest5Chat_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "flibbit_quagmarr/halas/gwenevyns_cove/flibbit_quagmarr/flibbit_quagmarr_049.mp3", "", "", 1000986096, 336825003, Spawn)
 	AddConversationOption(conversation, "What do you need to repair it?", "Quest5Chat_3")
-	StartConversation(conversation, NPC, Spawn, "Splorpy’s jacket has become torn. He cannot go across the ice shelf with a hole in his jacket, and so we are delayed until I can repair it.")
+	StartConversation(conversation, NPC, Spawn, "Splorpyï¿½s jacket has become torn. He cannot go across the ice shelf with a hole in his jacket, and so we are delayed until I can repair it.")
 end
 
 function Quest5Chat_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "flibbit_quagmarr/halas/gwenevyns_cove/flibbit_quagmarr/flibbit_quagmarr_050.mp3", "", "", 2187218830, 3343226771, Spawn)
 	AddConversationOption(conversation, "I wish you would have told me this before; I could have gotten you pelts while I was collecting the ice crystals.", "Quest5Chat_4")
@@ -423,7 +423,7 @@ end
 
 function Quest5Chat_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "flibbit_quagmarr/halas/gwenevyns_cove/flibbit_quagmarr/flibbit_quagmarr_051.mp3", "", "", 1105807509, 509218310, Spawn)
 	AddConversationOption(conversation, "I shall collect the icemane cub pelts so that you may repair Splorpy's jacket.", "OfferPelted")
@@ -433,7 +433,7 @@ end
 
 function Quest5Chat_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	AddConversationOption(conversation, "I will return with the pelts you requested.")
 	StartConversation(conversation, NPC, Spawn, "They are south of here, on the Icemane Plains.")
@@ -441,7 +441,7 @@ end
 
 function Quest5Chat_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "flibbit_quagmarr/halas/gwenevyns_cove/flibbit_quagmarr/flibbit_quagmarr_054.mp3", "", "", 3723222510, 1362601367, Spawn)
 	AddConversationOption(conversation, "Thank you, Flibbit.", "Quest5Chat_7")
@@ -451,7 +451,7 @@ end
 function Quest5Chat_7(NPC, Spawn)
 	SetStepComplete(Spawn, Pelted, 2)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "flibbit_quagmarr/halas/gwenevyns_cove/flibbit_quagmarr/flibbit_quagmarr_055.mp3", "", "", 160665426, 3368306133, Spawn)
 	AddConversationOption(conversation, "I am glad that I was able to help you and your son on your pilgrimage.")
@@ -460,7 +460,7 @@ end
 
 function Quest6Chat_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "flibbit_quagmarr/halas/gwenevyns_cove/flibbit_quagmarr/flibbit_quagmarr_056.mp3", "", "", 1415595156, 2895327505, Spawn)
 	AddConversationOption(conversation, "What do you need me to do?", "Quest6Chat_2")
@@ -469,7 +469,7 @@ end
 
 function Quest6Chat_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "flibbit_quagmarr/halas/gwenevyns_cove/flibbit_quagmarr/flibbit_quagmarr_057.mp3", "", "", 3437714001, 1568066083, Spawn)
 	AddConversationOption(conversation, "Why would you split up with your son?", "Quest6Chat_4")
@@ -479,7 +479,7 @@ end
 
 function Quest6Chat_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "flibbit_quagmarr/halas/gwenevyns_cove/flibbit_quagmarr/flibbit_quagmarr_065.mp3", "", "", 4039927754, 4221565751, Spawn)
 	AddConversationOption(conversation, "Thanks for the directions. Why would you split up with your son?", "Quest6Chat_4")
@@ -488,7 +488,7 @@ end
 
 function Quest6Chat_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "flibbit_quagmarr/halas/gwenevyns_cove/flibbit_quagmarr/flibbit_quagmarr_058.mp3", "", "", 749342367, 3777170220, Spawn)
 	AddConversationOption(conversation, "Okay, I will take little Splorpy to the Great Shelf.", "OfferGreatShelf")
@@ -498,7 +498,7 @@ end
 
 function Quest6Chat_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	AddConversationOption(conversation, "I am. Is Splorpy ready to go?", "Quest6Chat_6")
 	StartConversation(conversation, NPC, Spawn, "Are you ready, " .. GetName(Spawn) .. "?")
@@ -506,7 +506,7 @@ end
 
 function Quest6Chat_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	AddConversationOption(conversation, "See you there!", "Quest6Chat_7")
 	StartConversation(conversation, NPC, Spawn, "He is. Take care, I shall see you both at the Great Shelf!")

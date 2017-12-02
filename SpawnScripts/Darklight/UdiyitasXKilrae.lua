@@ -20,7 +20,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	if HasQuest(Spawn, ASolidifiedFront) and not QuestStepIsComplete(Spawn, ASolidifiedFront, 1) then
 		SetStepComplete(Spawn, ASolidifiedFront, 1)
@@ -53,7 +53,7 @@ end
 
 function dlg_0_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "udiyitas_x_kilrae/darklight_wood/hates_envy/udiyitas_revamp/udiyitas002.mp3", "", "smirk", 3581344743, 4242686519, Spawn)
 		AddConversationOption(conversation, "Consider them no more!", "QuestOffer")
@@ -67,7 +67,7 @@ end
 
 function dlg_1_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	PlayFlavor(NPC, "udiyitas_x_kilrae/darklight_wood/hates_envy/udiyitas_revamp/udiyitas006.mp3", "", "", 2328635398, 829982468, Spawn)
 	AddConversationOption(conversation, "I wiill return victoriouns!")
@@ -76,7 +76,7 @@ end
 
 function dlg_2_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	SetStepComplete(Spawn, ElementalEncroachment, 2)
 	
 	PlayFlavor(Spawn, "", "", "wave", 0, 0, Player)

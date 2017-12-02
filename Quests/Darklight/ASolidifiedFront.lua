@@ -46,7 +46,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	StartConversation(conversation, QuestGiver, Player, "May Innoruuk guide your blade, young one!")
 end

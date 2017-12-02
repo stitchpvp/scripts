@@ -17,7 +17,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	if HasQuest(Spawn, QUEST_FROM_CHARLIN) and GetQuestStep(Spawn, QUEST_FROM_CHARLIN) == 1 then
 		WhatDoYaNeed(NPC, Spawn, conversation)
@@ -38,7 +38,7 @@ end
 
 function dlg_5_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/bardrian_vorsuth/qey_adv01_oakmyst/quests/bardrian/bardrian001.mp3", "", "", 3275580861, 3455172409, Spawn)
 	AddConversationOption(conversation, "What is it?", "dlg_5_2")
@@ -47,7 +47,7 @@ end
 
 function dlg_5_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/bardrian_vorsuth/qey_adv01_oakmyst/quests/bardrian/bardrian002.mp3", "", "", 133230117, 3607589031, Spawn)
 	AddConversationOption(conversation, "Is there anything else of note?", "dlg_5_3")
@@ -58,7 +58,7 @@ function dlg_5_3(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_FROM_CHARLIN, 1)
 	
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/bardrian_vorsuth/qey_adv01_oakmyst/quests/bardrian/bardrian003.mp3", "", "", 917314149, 3791336463, Spawn)
 	AddConversationOption(conversation, "It is more than enough. Thank you for your help.")

@@ -19,7 +19,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(QuestGiver, "thirin_veliumdelver/halas/cragged_spine/thirin_veliumdelver_cave010.mp3", "", "", 2867242801, 3355205024, Player)
 	AddConversationOption(conversation, "I will.")

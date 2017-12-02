@@ -21,7 +21,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	if HasQuest(Spawn, AnAuthorityOnHate) and not HasCompletedQuest(Spawn, AnAuthorityOnHate) then
 		SetStepComplete(Spawn, AnAuthorityOnHate, 1)
@@ -68,7 +68,7 @@ end
 -----------------------------------------------------------------------------------
 function Quest1Chat_0(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	PlayFlavor(NPC, "jhana_do_zyth/darklight_wood/hates_envy/jhana_revamp/jhana003.mp3", "", "agree", 1064695588, 175136461, Spawn)
 	AddConversationOption(conversation, "I'm up to the task!", "QuestOffer_ProwlerAnnoyance")
@@ -78,7 +78,7 @@ end
 
 function Quest1Chat_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	PlayFlavor(Spawn, "", "", "no", 0, 0, Player)
 	PlayFlavor(NPC, "jhana_do_zyth/darklight_wood/hates_envy/jhana_revamp/jhana007.mp3", "", "tapfoot", 1258715663, 4051557607, Spawn)
@@ -96,7 +96,7 @@ end
 
 function Quest2Chat_0(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	SetStepComplete(Spawn, ProwlerAnnoyance, 2)
 	
@@ -108,7 +108,7 @@ end
 
 function Quest2Chat_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	PlayFlavor(NPC, "jhana_do_zyth/darklight_wood/hates_envy/jhana_revamp/jhana008.mp3", "", "", 2954723683, 1591713165, Spawn)
 	AddConversationOption(conversation, "I will remove the pack leader.", "QuestOffer_AFerociousInconvenience")
@@ -118,7 +118,7 @@ end
 
 function Quest2Chat_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	PlayFlavor(NPC, "jhana_do_zyth/darklight_wood/hates_envy/jhana_revamp/jhana013.mp3", "", "tapfoot", 2892144271, 4226558009, Spawn)
 	AddConversationOption(conversation, "I will return.")
@@ -127,7 +127,7 @@ end
 
 function Quest2Chat_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	SetStepComplete(Spawn, AFerociousInconvenience, 2)
 	

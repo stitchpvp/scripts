@@ -21,7 +21,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	-- arcanic beacon
 	if not HasItem(Player, 3476) then

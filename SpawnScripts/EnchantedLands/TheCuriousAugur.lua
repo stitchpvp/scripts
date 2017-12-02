@@ -18,7 +18,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	
 	if not HasQuest(Spawn, ThreeMeaningsOfLife) and not HasCompletedQuest(Spawn, ThreeMeaningsOfLife) or HasQuest(Spawn, ThreeMeaningsOfLife) and GetQuestStep(Spawn, ThreeMeaningsOfLife) == 1 then
@@ -66,7 +66,7 @@ end
 
 function dlg_0_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/the_curious_augur/enchanted/quests/quest_curious_augur/curious_augur002.mp3", "", "", 722859471, 401514036, Spawn)
 	AddConversationOption(conversation, "You offer such guidance?", "OfferThreeMeaningsOfLife")
@@ -85,7 +85,7 @@ end
 
 function QuestChat_0_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	PlayFlavor(NPC, "voiceover/english/the_curious_augur/enchanted/quests/quest_curious_augur/curious_augur003.mp3", "", "", 4037106442, 3061634368, Spawn)
 	AddConversationOption(conversation, "I have seven fear feeders and eighteen shoal serpents.", "QuestChat_0_4")
@@ -97,7 +97,7 @@ end
 
 function QuestChat_0_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/the_curious_augur/enchanted/quests/quest_curious_augur/curious_augur014.mp3", "", "", 3661262572, 1665365128, Spawn)
 	AddConversationOption(conversation, "If they're all male, half will be male and so will the other half.", "QuestChat_0_4")
@@ -108,7 +108,7 @@ end
 
 function QuestChat_0_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/the_curious_augur/enchanted/quests/quest_curious_augur/curious_augur014.mp3", "", "", 3661262572, 1665365128, Spawn)
 	AddConversationOption(conversation, "Once.  After the first time, you'll be subtracting four from the number eight.", "QuestChat_0_4")
@@ -118,7 +118,7 @@ end
 function QuestChat_0_4(NPC, Spawn)
 	SetStepComplete(Spawn, ThreeMeaningsOfLife, 1)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/the_curious_augur/enchanted/quests/quest_curious_augur/curious_augur015.mp3", "", "", 2363467901, 2977768208, Spawn)
 	AddConversationOption(conversation, "All right.")
@@ -127,7 +127,7 @@ end
 
 function QuestChat_1_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	PlayFlavor(NPC, "voiceover/english/the_curious_augur/enchanted/quests/quest_curious_augur/curious_augur004.mp3", "", "", 2520256937, 2710009453, Spawn)
 	AddConversationOption(conversation, "I suppose so.", "QuestChat_1_2")
@@ -137,7 +137,7 @@ end
 
 function QuestChat_1_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/the_curious_augur/enchanted/quests/quest_curious_augur/curious_augur005.mp3", "", "", 1765847486, 926846301, Spawn)
 	AddConversationOption(conversation, "You want me to remove the salt snappers?", "QuestChat_1_3")
@@ -147,7 +147,7 @@ end
 function QuestChat_1_3(NPC, Spawn)
 	SetStepComplete(Spawn, ThreeMeaningsOfLife, 2)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/the_curious_augur/enchanted/quests/quest_curious_augur/curious_augur006.mp3", "", "", 897853069, 726940756, Spawn)
 	AddConversationOption(conversation, "I'll be back.")
@@ -156,7 +156,7 @@ end
 
 function QuestChat_2_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/the_curious_augur/enchanted/quests/quest_curious_augur/curious_augur006.mp3", "", "", 897853069, 726940756, Spawn)
 	AddConversationOption(conversation, "Yes, didn't you see me?", "QuestChat_2_2")
@@ -166,7 +166,7 @@ end
 
 function QuestChat_2_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/the_curious_augur/enchanted/quests/quest_curious_augur/curious_augur008.mp3", "", "", 3930223149, 1615857141, Spawn)
 	AddConversationOption(conversation, "So I did all that for nothing?", "QuestChat_2_3")
@@ -176,7 +176,7 @@ end
 function QuestChat_2_3(NPC, Spawn)
 	SetStepComplete(Spawn, ThreeMeaningsOfLife, 4)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/the_curious_augur/enchanted/quests/quest_curious_augur/curious_augur009.mp3", "", "", 2774283468, 3531323088, Spawn)
 	AddConversationOption(conversation, "Sarma Singebellows.  All right, I'll be back.")
@@ -185,7 +185,7 @@ end
 
 function QuestChat_3_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/the_curious_augur/enchanted/quests/quest_curious_augur/curious_augur009.mp3", "", "", 2774283468, 3531323088, Spawn)
 	AddConversationOption(conversation, "Yes, I did.", "QuestChat_3_2")
@@ -196,7 +196,7 @@ end
 function QuestChat_3_2(NPC, Spawn)
 	SetStepComplete(Spawn, ThreeMeaningsOfLife, 6)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/the_curious_augur/enchanted/quests/quest_curious_augur/curious_augur009.mp3", "", "", 2774283468, 3531323088, Spawn)
 	AddConversationOption(conversation, "Not really.", "QuestChat_3_3")
@@ -205,7 +205,7 @@ end
 
 function QuestChat_3_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/the_curious_augur/enchanted/quests/quest_curious_augur/curious_augur009.mp3", "", "", 2774283468, 3531323088, Spawn)
 	AddConversationOption(conversation, "I can only hope.")

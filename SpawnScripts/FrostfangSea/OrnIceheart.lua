@@ -29,7 +29,7 @@ function hailed(NPC, Spawn)
 end
 
 function LockChat1(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	FaceTarget(NPC, Spawn)
 
 	AddConversationOption(conversation, "That's useful to know!", "LockChat2")
@@ -37,7 +37,7 @@ function LockChat1(NPC, Spawn)
 end
 
 function LockChat2(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	FaceTarget(NPC, Spawn)
 	
 	AddConversationOption(conversation, "That's interesting.", "LockChat3")
@@ -45,7 +45,7 @@ function LockChat2(NPC, Spawn)
 end
 
 function LockChat3(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	FaceTarget(NPC, Spawn)
 
 	AddConversationOption(conversation, "Thank you for the advice.")

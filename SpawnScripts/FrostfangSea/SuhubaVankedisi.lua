@@ -29,7 +29,7 @@ function hailed(NPC, Spawn)
 end
 
 function ZerkChat1(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	FaceTarget(NPC, Spawn)
 
 	AddConversationOption(conversation, "That will be useful!", "ZerkChat2")
@@ -38,7 +38,7 @@ end
 
 function ZerkChat2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "That's interesting.", "ZerkChat3")
 	StartConversation(conversation, NPC, Spawn, "But it is not just an offensive power.  It also helps reduce the amount of damage inflicted upon you, and can help you regain your health when you have been injured.")
@@ -46,7 +46,7 @@ end
 
 function ZerkChat3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "That's useful to know!", "ZerkChat4")
 	StartConversation(conversation, NPC, Spawn, "If you find items that add to your strength or stamina, be sure to get them!  Strength increases the amount of damage your attacks can inflict on others and raises your ability to carry heavy weight. Your stamina affets your health.  This is crucial.")
@@ -54,7 +54,7 @@ end
 
 function ZerkChat4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "Thank you for the advice.")
 	StartConversation(conversation, NPC, Spawn, "And protect yourself with a good set of plate mail, " .. GetName(Spawn) .. ". The armor would be considered too heavy by others, but with your focus on strength such highly protective armor has no downside.")

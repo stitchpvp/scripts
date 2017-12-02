@@ -26,7 +26,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(QuestGiver, "voiceover/english/neriak/dirzdia_t_zauvirr/darklight_wood/tvatar_post/dirzdia/dirzdia006.mp3", "", "", 1689993769, 508680301, Player)
 	AddConversationOption(conversation, "I'll be back when I've killed them.")

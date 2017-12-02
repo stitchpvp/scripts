@@ -22,7 +22,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 		PlayFlavor(NPC, "kresp/_exp03/exp03_rgn_greater_faydark/kresp/kresp_001.mp3", "", "", 3832374147, 290832441, Spawn)
 	AddConversationOption(conversation, "Sure I will help you.", "dlg_18_1")
@@ -32,7 +32,7 @@ end
 
 function dlg_18_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "kresp/_exp03/exp03_rgn_greater_faydark/kresp/kresp_002.mp3", "", "", 4281501181, 3879995677, Spawn)
 	AddConversationOption(conversation, "No problem.", "dlg_18_2")

@@ -20,7 +20,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	local choice = math.random(1,3)
 	if choice == 1 then
@@ -63,7 +63,7 @@ end
 
 function dlg_0_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "No, I was chased by some dogs and accidentally dropped it.", "dlg_0_2")
 	StartConversation(conversation, NPC, Spawn, "Sure, let's see it... my it looks damaged, what happened here? Did you open it up?")
@@ -71,7 +71,7 @@ end
 
 function dlg_0_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "Um, okay.", "dlg_0_3")
 	AddConversationOption(conversation, "I am not going to do that.")
@@ -84,7 +84,7 @@ end
 
 function dlg_1_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	SetStepComplete(Spawn, SuppliesForBrianna, 2)
 	SetStepComplete(Spawn, WatchYourStepinTheTSPartIII, 3)
@@ -94,7 +94,7 @@ end
 
 function dlg_2_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	AddConversationOption(conversation, "Sure thing.", "dlg_2_2")
 	AddConversationOption(conversation, "Not today.")
@@ -107,7 +107,7 @@ end
 
 function dlg_3_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	SetStepComplete(Spawn, HidesForBrianna, 2)
 	AddConversationOption(conversation, "Thanks.")

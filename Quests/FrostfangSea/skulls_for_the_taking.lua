@@ -19,7 +19,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(QuestGiver, "hillfred_kinloch/halas/cragged_spine/hillfred_kinloch_010.mp3", "", "", 1103422610, 3121183656, Player)
 	AddConversationOption(conversation, "This should be fun!")

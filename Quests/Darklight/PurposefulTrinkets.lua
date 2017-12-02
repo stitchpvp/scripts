@@ -42,7 +42,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	AddConversationOption(conversation, "I'll be back.")
 	StartConversation(conversation, QuestGiver, Player, "Good.")

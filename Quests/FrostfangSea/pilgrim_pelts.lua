@@ -12,7 +12,7 @@
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(QuestGiver, "verien_skysigh/halas/gwenevyns_cove/verien_skysigh_023.mp3", "", "", 4231608247, 3609708675, Player)
 	AddConversationOption(conversation, "I'm glad to help.")

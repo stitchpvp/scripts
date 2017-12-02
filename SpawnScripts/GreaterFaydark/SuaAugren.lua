@@ -22,7 +22,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 		PlayFlavor(NPC, "voiceover/english/exp03_questvo2/sua_augren/_exp03/exp03_rgn_greater_faydark/sua_augren/sua_augren001.mp3", "", "", 3127279058, 3080550258, Spawn)
 	AddConversationOption(conversation, "I understand, goodbye.", "dlg_6_1")
@@ -45,7 +45,7 @@ end
 
 function dlg_9_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/sua_augren/_exp03/exp03_rgn_greater_faydark/sua_augren/sua_augren002.mp3", "", "", 1571651111, 2153698072, Spawn)
 	AddConversationOption(conversation, "What happened?", "dlg_9_2")
@@ -54,7 +54,7 @@ end
 
 function dlg_9_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/sua_augren/_exp03/exp03_rgn_greater_faydark/sua_augren/sua_augren003.mp3", "", "", 611419261, 1072752840, Spawn)
 	AddConversationOption(conversation, "Oh no.", "dlg_9_3")
@@ -63,7 +63,7 @@ end
 
 function dlg_9_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/sua_augren/_exp03/exp03_rgn_greater_faydark/sua_augren/sua_augren004.mp3", "", "", 1417138229, 4170289581, Spawn)
 	AddConversationOption(conversation, "That's good.  So why is Ami upset?", "dlg_9_4")
@@ -72,7 +72,7 @@ end
 
 function dlg_9_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/sua_augren/_exp03/exp03_rgn_greater_faydark/sua_augren/sua_augren005.mp3", "", "", 3498594905, 1976708, Spawn)
 	AddConversationOption(conversation, "I'll get the doll back for her.", "dlg_9_5")
@@ -82,7 +82,7 @@ end
 
 function dlg_9_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/sua_augren/_exp03/exp03_rgn_greater_faydark/sua_augren/sua_augren006.mp3", "", "", 2584537319, 806721000, Spawn)
 	AddConversationOption(conversation, "No problem.  I'll get the doll for Ami.", "dlg_9_6")
@@ -91,7 +91,7 @@ end
 
 function dlg_11_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/sua_augren/_exp03/exp03_rgn_greater_faydark/sua_augren/sua_augren002.mp3", "", "", 1571651111, 2153698072, Spawn)
 	AddConversationOption(conversation, "What happened?", "dlg_11_2")
@@ -100,7 +100,7 @@ end
 
 function dlg_11_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/sua_augren/_exp03/exp03_rgn_greater_faydark/sua_augren/sua_augren003.mp3", "", "", 611419261, 1072752840, Spawn)
 	AddConversationOption(conversation, "Oh no.", "dlg_11_3")
@@ -109,7 +109,7 @@ end
 
 function dlg_11_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/sua_augren/_exp03/exp03_rgn_greater_faydark/sua_augren/sua_augren004.mp3", "", "", 1417138229, 4170289581, Spawn)
 	AddConversationOption(conversation, "That's good.  So why is Ami upset?", "dlg_11_4")
@@ -118,7 +118,7 @@ end
 
 function dlg_11_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/sua_augren/_exp03/exp03_rgn_greater_faydark/sua_augren/sua_augren005.mp3", "", "", 3498594905, 1976708, Spawn)
 	AddConversationOption(conversation, "I'll get the doll back for her.", "dlg_11_5")
@@ -128,7 +128,7 @@ end
 
 function dlg_11_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/sua_augren/_exp03/exp03_rgn_greater_faydark/sua_augren/sua_augren006.mp3", "", "", 2584537319, 806721000, Spawn)
 	AddConversationOption(conversation, "No problem.  I'll get the doll for Ami.", "dlg_11_6")

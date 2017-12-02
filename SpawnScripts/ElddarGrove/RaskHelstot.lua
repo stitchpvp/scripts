@@ -15,7 +15,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 		PlayFlavor(NPC, "voiceover/english/optional1/rask_helstot/qey_elddar/raskhelstot000.mp3", "", "", 2809197179, 4166706387, Spawn)
 	AddConversationOption(conversation, "Trees... bah. ", "dlg_19_1")

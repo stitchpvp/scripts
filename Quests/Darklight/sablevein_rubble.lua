@@ -19,7 +19,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(QuestGiver, "voiceover/english/neriak/danya_halfmoon/darklight_wood/hates_envy/danya/danya005.mp3", "", "", 2830883681, 1931267037, Player)
 	AddConversationOption(conversation, "I'll be back.")

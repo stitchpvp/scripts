@@ -22,7 +22,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 		PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_2_1005.mp3", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "I am XXXXXXXX.", "dlg_38_1")
@@ -31,7 +31,7 @@ end
 
 function dlg_38_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Not yet.", "dlg_38_2")
@@ -40,7 +40,7 @@ end
 
 function dlg_38_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "I'll go find her.", "dlg_38_3")
@@ -49,7 +49,7 @@ end
 
 function dlg_38_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Goodbye.", "dlg_38_4")

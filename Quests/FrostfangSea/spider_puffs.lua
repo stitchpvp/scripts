@@ -19,7 +19,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(QuestGiver, "ribbit_hopson/halas/new_halas/ribbit_hopson/ribbit_hopson_007.mp3", "", "", 1643468307, 2055311986, Player)
 	AddConversationOption(conversation, "I shall return to you once I have collected all of the ingredients you require.")

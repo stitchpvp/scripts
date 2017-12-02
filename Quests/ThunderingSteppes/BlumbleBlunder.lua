@@ -30,7 +30,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "Okay.")
 	StartConversation(conversation, NPC, Spawn, "Thank you very much. Grandpa sometimes gets it into his head to go searching for pirate treasure. None of us are quite sure why, but the whole family worries about him. He has a knack for getting lost. Last time we found him he had fallen asleep digging over on the beach to the north of the docks here and we've been wondering when he'd try it again. You can't miss it, he always marks his dig with a big 'X'.")

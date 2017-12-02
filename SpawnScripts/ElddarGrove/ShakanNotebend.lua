@@ -15,7 +15,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 		PlayFlavor(NPC, "lieoonlioo_croosinian/qey_elddar/trainer_dirge001.mp3", "", "", 3023305177, 4288429789, Spawn)
 	AddConversationOption(conversation, "Just looking around.", "dlg_17_1")

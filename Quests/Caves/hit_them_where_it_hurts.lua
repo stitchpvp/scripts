@@ -21,7 +21,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	PlayFlavor(QuestGiver, "voiceover/english/tutorial_revamp/consul_bree/qey_adv03_caves/quests/bree/bree_007a.mp3", "", "", 1177533650, 1696169122, Player)
 	AddConversationOption(conversation, "You're welcome.")

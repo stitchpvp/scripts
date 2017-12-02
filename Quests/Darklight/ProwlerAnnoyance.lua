@@ -39,7 +39,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	PlayFlavor(QuestGiver, "jhana_do_zyth/darklight_wood/hates_envy/jhana_revamp/jhana004.mp3", "", "", 2033106753, 62697825, Player)
 	AddConversationOption(conversation, "I will return once the deed is done.")

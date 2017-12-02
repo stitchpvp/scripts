@@ -39,7 +39,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	if not HasCompletedQuest(Spawn, NothingWaste) then
 		PlayFlavor(NPC, "", "There are some coldain that could use your help.  Speak with Dolur Axebeard or Belka Thunderheart at the Great Shelf.", "nod", 1689589577, 4560189, Spawn)
@@ -122,7 +122,7 @@ end
 
 function Quest1Chat_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "knut_orcbane/halas/cragged_spine/knut_orcbane_006.mp3", "", "", 1179640233, 2510165864, Spawn)
 	AddConversationOption(conversation, "Yes, sir!", "Quest1Chat_2")
@@ -131,7 +131,7 @@ end
 
 function Quest1Chat_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "knut_orcbane/halas/cragged_spine/knut_orcbane_007.mp3", "", "", 136827615, 2574970832, Spawn)
 	AddConversationOption(conversation, "Uh, excuse me?", "Quest1Chat_3")
@@ -141,7 +141,7 @@ end
 
 function Quest1Chat_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "knut_orcbane/halas/cragged_spine/knut_orcbane_008.mp3", "", "", 1025809423, 508302222, Spawn)
 	AddConversationOption(conversation, "Who is Griz?", "Quest1Chat_4")
@@ -152,7 +152,7 @@ end
 
 function Quest1Chat_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "knut_orcbane/halas/cragged_spine/knut_orcbane_009.mp3", "", "", 461919392, 2357150374, Spawn)
 	AddConversationOption(conversation, "Is he invisible?", "Quest1Chat_5")
@@ -161,7 +161,7 @@ end
 
 function Quest1Chat_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "knut_orcbane/halas/cragged_spine/knut_orcbane_010.mp3", "", "", 1052367641, 1770506603, Spawn)
 	AddConversationOption(conversation, "Where is he?", "Quest1Chat_6")
@@ -170,7 +170,7 @@ end
 
 function Quest1Chat_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "knut_orcbane/halas/cragged_spine/knut_orcbane_011.mp3", "", "", 2787510762, 2957661742, Spawn)
 	AddConversationOption(conversation, "He told you this?", "Quest1Chat_7")
@@ -179,7 +179,7 @@ end
 
 function Quest1Chat_7(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "knut_orcbane/halas/cragged_spine/knut_orcbane_012.mp3", "", "", 3151538382, 1140255767, Spawn)
 	AddConversationOption(conversation, "Almost?", "Quest1Chat_8")
@@ -190,7 +190,7 @@ end
 
 function Quest1Chat_8(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "knut_orcbane/halas/cragged_spine/knut_orcbane_013.mp3", "", "", 3268671132, 2494843375, Spawn)
 	AddConversationOption(conversation, "Yeah, what is the task?", "Quest1Chat_9")
@@ -199,7 +199,7 @@ end
 
 function Quest1Chat_9(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "knut_orcbane/halas/cragged_spine/knut_orcbane_014.mp3", "", "", 3650994868, 4022388430, Spawn)
 	AddConversationOption(conversation, "I'll rid you of the imps.", "OfferImpishThreats")
@@ -209,7 +209,7 @@ end
 
 function Quest1Chat_10(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "knut_orcbane/halas/cragged_spine/knut_orcbane_005.mp3", "", "", 1586450640, 3594709012, Spawn)
 	AddConversationOption(conversation, "Yes, sir!", "Quest1Chat_2")
@@ -218,7 +218,7 @@ end
 
 function Quest1Chat_11(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "knut_orcbane/halas/cragged_spine/knut_orcbane_017.mp3", "", "", 2616213114, 1218999941, Spawn)
 	AddConversationOption(conversation, "No.", "Quest1Chat_12")
@@ -228,7 +228,7 @@ end
 function Quest1Chat_12(NPC, Spawn)
 	SetStepComplete(Spawn, ImpishThreats, 2)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "knut_orcbane/halas/cragged_spine/knut_orcbane_018.mp3", "", "", 4230096106, 3358535, Spawn)
 	AddConversationOption(conversation, "Possibly.", "Quest2Chat_1")
@@ -238,7 +238,7 @@ end
 
 function Quest2Chat_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	PlayFlavor(NPC, "knut_orcbane/halas/cragged_spine/knut_orcbane_019.mp3", "", "", 2687986263, 1290955912, Spawn)
 	AddConversationOption(conversation, "Do you want me to retrieve them?", "Quest2Chat_2")
@@ -248,7 +248,7 @@ end
 
 function Quest2Chat_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "knut_orcbane/halas/cragged_spine/knut_orcbane_021.mp3", "", "", 1541824689, 3333543971, Spawn)
 	AddConversationOption(conversation, "I'll do it.", "OfferClanImps")
@@ -258,7 +258,7 @@ end
 
 function Quest2Chat_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "knut_orcbane/halas/cragged_spine/knut_orcbane_020.mp3", "", "", 2274013459, 2869453130, Spawn)
 	AddConversationOption(conversation, "So you want me to retrieve them?", "Quest2Chat_2")
@@ -267,7 +267,7 @@ end
 
 function Quest2Chat_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "knut_orcbane/halas/cragged_spine/knut_orcbane_023.mp3", "", "", 3386688534, 1781356387, Spawn)
 	AddConversationOption(conversation, "That's good to know.", "Quest2Chat_5")
@@ -276,7 +276,7 @@ end
 
 function Quest2Chat_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "knut_orcbane/halas/cragged_spine/knut_orcbane_024.mp3", "", "", 4143574781, 924201521, Spawn)
 	AddConversationOption(conversation, "I did.  Here's all that I was able to find.", "Quest2Chat_6")
@@ -286,7 +286,7 @@ end
 function Quest2Chat_6(NPC, Spawn)
 	SetStepComplete(Spawn, ClanImps, 3)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "knut_orcbane/halas/cragged_spine/knut_orcbane_025.mp3", "", "", 3946443740, 2381252616, Spawn)
 	AddConversationOption(conversation, "I'm glad to hear it was worth it.")
@@ -295,7 +295,7 @@ end
 
 function Quest3Chat_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "knut_orcbane/halas/cragged_spine/knut_orcbane_028.mp3", "", "", 2981574255, 260475867, Spawn)
 	AddConversationOption(conversation, "Yes, and they are doing something on the chunk of ice next to it.", "Quest3Chat_2")
@@ -304,7 +304,7 @@ end
 
 function Quest3Chat_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "knut_orcbane/halas/cragged_spine/knut_orcbane_029.mp3", "", "", 1298453249, 1624889815, Spawn)
 	AddConversationOption(conversation, "I saw it, myself.", "Quest3Chat_3")
@@ -314,7 +314,7 @@ end
 
 function Quest3Chat_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "knut_orcbane/halas/cragged_spine/knut_orcbane_030.mp3", "", "", 110505260, 1254849801, Spawn)
 	AddConversationOption(conversation, "Sorry.", "Quest3Chat_4")
@@ -324,7 +324,7 @@ end
 
 function Quest3Chat_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "knut_orcbane/halas/cragged_spine/knut_orcbane_031.mp3", "", "", 1992133863, 2456842289, Spawn)
 	AddConversationOption(conversation, "Yeah, but about the orcs?", "Quest3Chat_5")
@@ -333,7 +333,7 @@ end
 
 function Quest3Chat_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "knut_orcbane/halas/cragged_spine/knut_orcbane_032.mp3", "", "", 3606219990, 1558926638, Spawn)
 	AddConversationOption(conversation, "I can.", "OfferMysteryIceberg")
@@ -343,7 +343,7 @@ end
 
 function Quest3Chat_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "knut_orcbane/halas/cragged_spine/knut_orcbane_027.mp3", "", "", 3550762599, 2709264922, Spawn)
 	AddConversationOption(conversation, "Thirin Veliumdelver had me hunting orcs on Jagged Daggers Isle.", "Quest3Chat_1")
@@ -353,7 +353,7 @@ end
 
 function Quest3Chat_7(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "knut_orcbane/halas/cragged_spine/knut_orcbane_035.mp3", "", "", 3450964539, 968602792, Spawn)
 	AddConversationOption(conversation, "No, that is all.", "Quest3Chat_8")
@@ -363,7 +363,7 @@ end
 function Quest3Chat_8(NPC, Spawn)
 	SetStepComplete(Spawn, MysteryIceberg, 3)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "knut_orcbane/halas/cragged_spine/knut_orcbane_036.mp3", "", "", 4224938593, 2388251058, Spawn)
 	AddConversationOption(conversation, "You're welcome.")
@@ -372,7 +372,7 @@ end
 
 function Quest4Chat_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "knut_orcbane/halas/cragged_spine/knut_orcbane_038.mp3", "", "", 4135142976, 4005855669, Spawn)
 	AddConversationOption(conversation, "Not all of them, but there's far less now.", "Quest4Chat_2")
@@ -381,7 +381,7 @@ end
 
 function Quest4Chat_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "knut_orcbane/halas/cragged_spine/knut_orcbane_039.mp3", "", "", 2291485181, 3172762716, Spawn)
 	AddConversationOption(conversation, "No.", "Quest4Chat_3")
@@ -391,7 +391,7 @@ end
 
 function Quest4Chat_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "knut_orcbane/halas/cragged_spine/knut_orcbane_040.mp3", "", "", 4113678321, 3822036418, Spawn)
 	AddConversationOption(conversation, "I said, no.  It will not satisfy me.", "Quest4Chat_4")
@@ -401,7 +401,7 @@ end
 
 function Quest4Chat_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "knut_orcbane/halas/cragged_spine/knut_orcbane_041.mp3", "", "", 2166082015, 1750776733, Spawn)
 	AddConversationOption(conversation, "I'll be sure to use it on them!", "OfferBecomingOrcbane")
@@ -412,7 +412,7 @@ end
 function Quest4Chat_5(NPC, Spawn)
 	SetStepComplete(Spawn, BecomingOrcbane, 2)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	PlayFlavor(NPC, "", "", "bow", 0, 0, Spawn)
 	AddConversationOption(conversation, "Thank you.")
@@ -421,7 +421,7 @@ end
 
 function Quest5Chat_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "knut_orcbane/halas/cragged_spine/knut_orcbane_049.mp3", "", "", 2034719920, 764754594, Spawn)
 	AddConversationOption(conversation, "Should I be worried?", "Quest5Chat_2")
@@ -431,7 +431,7 @@ end
 
 function Quest5Chat_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "knut_orcbane/halas/cragged_spine/knut_orcbane_050.mp3", "", "", 1934837003, 1465604041, Spawn)
 	AddConversationOption(conversation, "That's good.", "Quest5Chat_3")
@@ -440,7 +440,7 @@ end
 
 function Quest5Chat_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "knut_orcbane/halas/cragged_spine/knut_orcbane_052.mp3", "", "", 4209716810, 1939380730, Spawn)
 	AddConversationOption(conversation, "How are we going to get it?", "OfferFlawlessChore")
@@ -450,7 +450,7 @@ end
 
 function Quest5Chat_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "knut_orcbane/halas/cragged_spine/knut_orcbane_051.mp3", "", "", 2778768716, 4176738164, Spawn)
 	AddConversationOption(conversation, "That's good.", "Quest5Chat_3")
@@ -459,7 +459,7 @@ end
 
 function Quest5Chat_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "knut_orcbane/halas/cragged_spine/knut_orcbane_055.mp3", "", "", 724900994, 1307450344, Spawn)
 	AddConversationOption(conversation, "Unless what?", "Quest5Chat_6")
@@ -469,7 +469,7 @@ end
 function Quest5Chat_6(NPC, Spawn)
 	SetStepComplete(Spawn, FlawlessChore, 2)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "knut_orcbane/halas/cragged_spine/knut_orcbane_056.mp3", "", "", 886559545, 4266167856, Spawn)
 	AddConversationOption(conversation, "Glad to be appreciated.", "Quest6Chat_1")
@@ -478,7 +478,7 @@ end
 
 function Quest6Chat_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "knut_orcbane/halas/cragged_spine/knut_orcbane_057.mp3", "", "", 3810409959, 1206652947, Spawn)
 	AddConversationOption(conversation, "What are you talking about?", "Quest6Chat_2")
@@ -487,7 +487,7 @@ end
 
 function Quest6Chat_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "knut_orcbane/halas/cragged_spine/knut_orcbane_058.mp3", "", "", 2407855497, 623007376, Spawn)
 	AddConversationOption(conversation, "But what am I looking for?", "Quest6Chat_3")
@@ -498,7 +498,7 @@ end
 
 function Quest6Chat_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	PlayFlavor(NPC, "", "", "shrug", 0, 0, Spawn)
 	AddConversationOption(conversation, "Then how am I supposed to...", "Quest6Chat_4")
@@ -507,7 +507,7 @@ end
 
 function Quest6Chat_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	AddConversationOption(conversation, "I'll do it. I'll take him down with me.", "OfferSometimesKnut")
 	AddConversationOption(conversation, "No thank you.  You can keep your companion to yourself.")
@@ -516,7 +516,7 @@ end
 
 function Quest6Chat_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	AddConversationOption(conversation, "He told me to destroy it.  It was a black shard, like the ones that were being used to raise Ry'Gorr skeletons.", "Quest6Chat_6")
 	StartConversation(conversation, NPC, Spawn, "What?  I thought he wanted to find it and use it?")
@@ -524,7 +524,7 @@ end
 
 function Quest6Chat_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	AddConversationOption(conversation, "Good thing we found it.", "Quest6Chat_7")
 	StartConversation(conversation, NPC, Spawn, "Ah, then it is best to destroy it. They must have wanted to plant it below New Halas in order to bring forth an army of undead within the city.")
@@ -534,7 +534,7 @@ function Quest6Chat_7(NPC, Spawn)
 	SetStepComplete(Spawn, SometimesKnut, 4)
 	RemoveItem(Spawn, 157116)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	AddConversationOption(conversation, "Certainly.")
 	AddConversationOption(conversation, "I will miss him.")

@@ -22,7 +22,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	PlayFlavor(QuestGiver, "voiceover/english/tutorial_revamp/emma_torque/qey_adv03_caves/quests/emma/emma_009.mp3", "", "", 2928866225, 3555660986, Player)
 	AddConversationOption(conversation, "Thanks.")

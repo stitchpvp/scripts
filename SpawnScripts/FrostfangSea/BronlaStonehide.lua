@@ -29,7 +29,7 @@ function hailed(NPC, Spawn)
 end
 
 function FuryChat1(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	FaceTarget(NPC, Spawn)
 
 	AddConversationOption(conversation, "That's useful to know!", "FuryChat2")
@@ -37,7 +37,7 @@ function FuryChat1(NPC, Spawn)
 end
 
 function FuryChat2(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	FaceTarget(NPC, Spawn)
 
 	AddConversationOption(conversation, "That's interesting.", "FuryChat3")
@@ -45,7 +45,7 @@ function FuryChat2(NPC, Spawn)
 end
 
 function FuryChat3(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	FaceTarget(NPC, Spawn)
 
 	AddConversationOption(conversation, "I agree, that will be useful.", "FuryChat4")
@@ -53,7 +53,7 @@ function FuryChat3(NPC, Spawn)
 end
 
 function FuryChat4(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	FaceTarget(NPC, Spawn)
 
 	AddConversationOption(conversation, "Thank you for the advice.")

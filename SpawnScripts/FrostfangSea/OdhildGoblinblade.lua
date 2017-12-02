@@ -29,7 +29,7 @@ function hailed(NPC, Spawn)
 end
 
 function SwashChat1(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	FaceTarget(NPC, Spawn)
 
 	AddConversationOption(conversation, "That's useful to know!", "SwashChat2")
@@ -37,7 +37,7 @@ function SwashChat1(NPC, Spawn)
 end
 
 function SwashChat2(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	FaceTarget(NPC, Spawn)
 	
 	AddConversationOption(conversation, "That's interesting.", "SwashChat3")
@@ -45,7 +45,7 @@ function SwashChat2(NPC, Spawn)
 end
 
 function SwashChat3(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	FaceTarget(NPC, Spawn)
 
 	AddConversationOption(conversation, "I bet it is!", "SwashChat4")
@@ -53,7 +53,7 @@ function SwashChat3(NPC, Spawn)
 end
 
 function SwashChat4(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	FaceTarget(NPC, Spawn)
 
 	AddConversationOption(conversation, "Thank you for the advice.")

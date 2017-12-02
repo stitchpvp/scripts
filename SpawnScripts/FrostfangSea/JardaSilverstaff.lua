@@ -29,7 +29,7 @@ function hailed(NPC, Spawn)
 end
 
 function ConjChat1(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	FaceTarget(NPC, Spawn)
 
 	AddConversationOption(conversation, "That's useful to know!", "ConjChat2")
@@ -37,7 +37,7 @@ function ConjChat1(NPC, Spawn)
 end
 
 function ConjChat2(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	FaceTarget(NPC, Spawn)
 	
 	AddConversationOption(conversation, "That's interesting.", "ConjChat3")
@@ -45,7 +45,7 @@ function ConjChat2(NPC, Spawn)
 end
 
 function ConjChat3(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	FaceTarget(NPC, Spawn)
 
 	AddConversationOption(conversation, "Thank you for the advice.")

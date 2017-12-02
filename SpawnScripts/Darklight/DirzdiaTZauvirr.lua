@@ -26,7 +26,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	if HasQuest(Spawn, QUEST_DELIVERY_FROM_FILEYL) and GetQuestStep(Spawn, QUEST_DELIVERY_FROM_FILEYL) == 1 then
 		AddConversationOption(conversation, "Hi. I've a delivery from Fileyl for you.", "dlg_24_1")
@@ -65,7 +65,7 @@ function dlg_24_1(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_DELIVERY_FROM_FILEYL, 1)
 	
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/neriak/dirzdia_t_zauvirr/darklight_wood/tvatar_post/dirzdia/dirzdia_delivery001.mp3", "", "", 1749958115, 2883042757, Spawn)
 	
@@ -90,7 +90,7 @@ end
 
 function Hi(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "Hello", "Hello2")
 	StartConversation(conversation, NPC, Spawn, "Hi.")
@@ -98,7 +98,7 @@ end
 
 function Hello2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/neriak/dirzdia_t_zauvirr/darklight_wood/tvatar_post/dirzdia/dirzdia_delivery000.mp3", "", "", 169576251, 1164193707, Spawn)
 	AddConversationOption(conversation, "... goodbye.", "dlg_24_2")
@@ -107,7 +107,7 @@ end
 
 function dlg_24_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/neriak/dirzdia_t_zauvirr/darklight_wood/tvatar_post/dirzdia/dirzdia_delivery002.mp3", "", "", 2799282957, 2320910908, Spawn)
 	AddConversationOption(conversation, "What?", "dlg_24_3")
@@ -116,7 +116,7 @@ end
 
 function dlg_24_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/neriak/dirzdia_t_zauvirr/darklight_wood/tvatar_post/dirzdia/dirzdia003.mp3", "", "", 1931781458, 1316667418, Spawn)
 	AddConversationOption(conversation, "Why do you ask?", "dlg_24_4")
@@ -125,7 +125,7 @@ end
 
 function dlg_24_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/neriak/dirzdia_t_zauvirr/darklight_wood/tvatar_post/dirzdia/dirzdia004.mp3", "", "", 999431120, 423593637, Spawn)
 	AddConversationOption(conversation, "What do you want me to do?", "dlg_24_5")
@@ -134,7 +134,7 @@ end
 
 function dlg_24_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/neriak/dirzdia_t_zauvirr/darklight_wood/tvatar_post/dirzdia/dirzdia005.mp3", "", "", 3936904424, 544099891, Spawn)
 	AddConversationOption(conversation, "All right, I'll help you.", "OfferQuest1")
@@ -165,7 +165,7 @@ function dlg_0_1(NPC, Spawn)
 	end
 	
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/neriak/dirzdia_t_zauvirr/darklight_wood/tvatar_post/dirzdia/dirzdia008.mp3", "", "", 2217132870, 3346276431, Spawn)
 	AddConversationOption(conversation, "I'm " .. GetName(Spawn) .. ".", "dlg_0_2")
@@ -178,7 +178,7 @@ end
 
 function dlg_0_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/neriak/dirzdia_t_zauvirr/darklight_wood/tvatar_post/dirzdia/dirzdia009.mp3", "", "", 389446448, 2794640706, Spawn)
 	AddConversationOption(conversation, "No.", "dlg_0_3")
@@ -189,7 +189,7 @@ end
 
 function dlg_0_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/neriak/dirzdia_t_zauvirr/darklight_wood/tvatar_post/dirzdia/dirzdia010.mp3", "", "", 2956956838, 3113219938, Spawn)
 	AddConversationOption(conversation, "What kind of help?", "dlg_0_4")
@@ -198,7 +198,7 @@ end
 
 function dlg_0_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/neriak/dirzdia_t_zauvirr/darklight_wood/tvatar_post/dirzdia/dirzdia011.mp3", "", "", 3261932029, 3599840953, Spawn)
 	AddConversationOption(conversation, "Sure, I'll help.", "OfferQuest2")
@@ -229,7 +229,7 @@ function dlg_10_1(NPC, Spawn)
 	end
 	
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/neriak/dirzdia_t_zauvirr/darklight_wood/tvatar_post/dirzdia/dirzdia014.mp3", "", "", 3630010163, 822378916, Spawn)
 	AddConversationOption(conversation, "What kind of fish do you need?", "dlg_10_2")
@@ -242,7 +242,7 @@ end
 
 function dlg_10_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/neriak/dirzdia_t_zauvirr/darklight_wood/tvatar_post/dirzdia/dirzdia015.mp3", "", "", 2001952195, 1089349401, Spawn)
 	AddConversationOption(conversation, "I can fish them up.", "OfferQuest3")
@@ -271,7 +271,7 @@ function YoureGreat(NPC, Spawn)
 	end
 	
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "Smolderfin?", "HesAReclusiveOne")
 	StartConversation(conversation, NPC, Spawn, "You're great! A much better fisher than I am, maybe that's why I enjoy it though, I can always get better. I bet you could catch some Smolderfin!")
@@ -283,7 +283,7 @@ end
 
 function HesAReclusiveOne(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "Maybe I could fish him up for you.", "MaybeIfYouWereAGaint")
 	StartConversation(conversation, NPC, Spawn, "He's a reclusive one, swims around up in Smoldering Lake. I hooked him once, but he took my pole down with him. Eventually it was washed ashore and I got it back, but my favorite lure was gone.")
@@ -291,7 +291,7 @@ end
 
 function MaybeIfYouWereAGaint(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "Where can I find him?", "HesInSmolderingLake")
 	StartConversation(conversation, NPC, Spawn, "Maybe if you were a giant. Smolderfin is huge. But if you want to try, I won't stop you, especially if it means I might get my lure back. I'll just tell you to be careful.")
@@ -299,7 +299,7 @@ end
 
 function HesInSmolderingLake(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "Ok, I'm up for the challenge.", "OfferQuest4")
 	AddConversationOption(conversation, "I don't think I'm interested.")

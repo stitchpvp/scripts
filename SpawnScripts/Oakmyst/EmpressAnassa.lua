@@ -20,7 +20,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/empress_anassa/qey_adv01_oakmyst/empressanassa000.mp3", "", "", 122104258, 2418821305, Spawn)
 	
@@ -36,7 +36,7 @@ end
 
 function dlg_5_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/empress_anassa/qey_adv01_oakmyst/empressanassa001.mp3", "", "", 2413694223, 3249886885, Spawn)
 	AddConversationOption(conversation, "I will challenge this evil. ", "OfferQuest1")
@@ -51,7 +51,7 @@ end
 
 function WhatIsRotweed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/empress_anassa/qey_adv01_oakmyst/empressanassa003.mp3", "", "", 1907995091, 655055942, Spawn)
 	AddConversationOption(conversation, "I will battle this Rotweed and return victorious. ", "dlg_5_4")
@@ -62,7 +62,7 @@ function KilledRotweed(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_1, 2)
 	
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "Blllah x2")
 	StartConversation(conversation, NPC, Spawn, "Blah blah blah, if you see this I've forgotten to come back and put in wht she actually says.  Let Scatman know")

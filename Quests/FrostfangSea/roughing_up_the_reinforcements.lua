@@ -24,7 +24,7 @@ end
 function Accepted(Quest, QuestGiver, Player)
 	local thirin = GetSpawnByLocationID(GetZone(QuestGiver), 14520)
 	FaceTarget(thirin, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(thirin, "thirin_veliumdelver/halas/thirin_veliumdelver/thirin_veliumdelver012.mp3", "", "", 830312044, 2813539587, Player)
 	AddConversationOption(conversation, "And you, Thirin.")

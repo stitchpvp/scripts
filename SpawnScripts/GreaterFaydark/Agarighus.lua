@@ -22,7 +22,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 		PlayFlavor(NPC, "voiceover/english/exp03_questvo2/agarighus/_exp03/exp03_rgn_greater_faydark/shroomba/agarighus/agarighus000_complete.mp3", "", "", 730615560, 3996925984, Spawn)
 	AddConversationOption(conversation, "I am XXXXXXXX. Morganellus said I should visit you.", "dlg_23_1")
@@ -43,7 +43,7 @@ end
 
 function dlg_23_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/agarighus/_exp03/exp03_rgn_greater_faydark/shroomba/agarighus/agarighus001.mp3", "", "", 66949189, 2899163364, Spawn)
 	AddConversationOption(conversation, "Actually he didn't.", "dlg_23_2")
@@ -52,7 +52,7 @@ end
 
 function dlg_23_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/agarighus/_exp03/exp03_rgn_greater_faydark/shroomba/agarighus/agarighus002_complete.mp3", "", "", 3839294235, 2098773049, Spawn)
 	AddConversationOption(conversation, "I suppose.", "dlg_23_3")
@@ -62,7 +62,7 @@ end
 
 function dlg_23_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/agarighus/_exp03/exp03_rgn_greater_faydark/shroomba/agarighus/agarighus002.mp3", "", "", 2532533232, 2094215276, Spawn)
 	AddConversationOption(conversation, "What is it?", "dlg_23_4")
@@ -71,7 +71,7 @@ end
 
 function dlg_23_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/agarighus/_exp03/exp03_rgn_greater_faydark/shroomba/agarighus/agarighus003.mp3", "", "", 3779153550, 4100680879, Spawn)
 	AddConversationOption(conversation, "What do you need?", "dlg_23_5")
@@ -80,7 +80,7 @@ end
 
 function dlg_23_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/agarighus/_exp03/exp03_rgn_greater_faydark/shroomba/agarighus/agarighus004.mp3", "", "", 461489714, 806281340, Spawn)
 	AddConversationOption(conversation, "I can transport the shrumblers for you.", "dlg_23_6")
@@ -89,7 +89,7 @@ end
 
 function dlg_23_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/agarighus/_exp03/exp03_rgn_greater_faydark/shroomba/agarighus/agarighus005.mp3", "", "", 1864583073, 2525799582, Spawn)
 	AddConversationOption(conversation, "Okay.", "dlg_23_7")
@@ -98,7 +98,7 @@ end
 
 function dlg_23_7(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/agarighus/_exp03/exp03_rgn_greater_faydark/shroomba/agarighus/agarighus006.mp3", "", "", 3926042365, 1419770262, Spawn)
 	AddConversationOption(conversation, "You are welcome.", "dlg_23_8")
@@ -107,7 +107,7 @@ end
 
 function dlg_25_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/agarighus/_exp03/exp03_rgn_greater_faydark/shroomba/agarighus/agarighus010.mp3", "", "", 3194574992, 1484124224, Spawn)
 	AddConversationOption(conversation, "You are welcome.", "dlg_25_2")
@@ -116,7 +116,7 @@ end
 
 function dlg_25_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/agarighus/_exp03/exp03_rgn_greater_faydark/shroomba/agarighus/agarighus011.mp3", "", "", 2129516882, 4139121979, Spawn)
 	AddConversationOption(conversation, "Why can't you reach it?", "dlg_25_3")
@@ -125,7 +125,7 @@ end
 
 function dlg_25_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/agarighus/_exp03/exp03_rgn_greater_faydark/shroomba/agarighus/agarighus012.mp3", "", "", 2764843418, 2643187457, Spawn)
 	AddConversationOption(conversation, "Why don't you go in and rescue them?", "dlg_25_4")
@@ -134,7 +134,7 @@ end
 
 function dlg_25_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/agarighus/_exp03/exp03_rgn_greater_faydark/shroomba/agarighus/agarighus013.mp3", "", "", 3170133892, 1263246865, Spawn)
 	AddConversationOption(conversation, "Why don't I go in and rescue them?", "dlg_25_5")
@@ -143,7 +143,7 @@ end
 
 function dlg_25_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/agarighus/_exp03/exp03_rgn_greater_faydark/shroomba/agarighus/agarighus014.mp3", "", "", 2525042118, 2230039901, Spawn)
 	AddConversationOption(conversation, "I will go get them.", "dlg_25_6")
@@ -152,7 +152,7 @@ end
 
 function dlg_25_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/agarighus/_exp03/exp03_rgn_greater_faydark/shroomba/agarighus/agarighus015.mp3", "", "", 2574699524, 1590689915, Spawn)
 	AddConversationOption(conversation, "I will return.", "dlg_25_7")
@@ -161,7 +161,7 @@ end
 
 function dlg_28_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/agarighus/_exp03/exp03_rgn_greater_faydark/shroomba/agarighus/agarighus017.mp3", "", "", 1366414831, 600906115, Spawn)
 	AddConversationOption(conversation, "Thank you. I am glad to help.", "dlg_28_2")

@@ -17,7 +17,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(QuestGiver, "voiceover/english/tutorial_revamp/lieutenant_imperidus/fprt_adv04_ruins/revamp/lieutenant_imperidus022.mp3", "", "", 3956036992, 4003496180, Player)
 	AddConversationOption(conversation, "Thank you, lieutenant. You have earned mine as well.")

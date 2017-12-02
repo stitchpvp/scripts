@@ -31,7 +31,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	if HasCompletedQuest(Spawn, QUEST_3_FROM_KURDEK) or (HasQuest(Spawn, QUEST_3_FROM_KURDEK) and GetQuestStep(Spawn, QUEST_3_FROM_KURDEK) > 1) then
 		AddConversationOption(conversation, "As you wish.")
@@ -48,7 +48,7 @@ end
 
 function dlg_28_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/arcanist_tikkeri/fprt_adv03_sprawl/quests/arcanist_tikkeri002.mp3", "", "", 1384331297, 2679607615, Spawn)
 	AddConversationOption(conversation, "I have some information you would find useful.", "dlg_28_2")
@@ -58,7 +58,7 @@ end
 
 function dlg_28_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/arcanist_tikkeri/fprt_adv03_sprawl/quests/arcanist_tikkeri003.mp3", "", "", 429505535, 657718055, Spawn)
 	AddConversationOption(conversation, "I have information about 'the wheel.'", "dlg_28_3")
@@ -68,7 +68,7 @@ end
 
 function dlg_28_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/arcanist_tikkeri/fprt_adv03_sprawl/quests/arcanist_tikkeri004.mp3", "", "", 2113414665, 3782181434, Spawn)
 	AddConversationOption(conversation, "Who are the Marked?", "dlg_28_4")
@@ -79,7 +79,7 @@ end
 function dlg_28_4(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_3_FROM_KURDEK, 1)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/arcanist_tikkeri/fprt_adv03_sprawl/quests/arcanist_tikkeri005.mp3", "", "", 2625005757, 2857555075, Spawn)
 	AddConversationOption(conversation, "But... but... fine.")

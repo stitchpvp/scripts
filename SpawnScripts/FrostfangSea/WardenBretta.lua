@@ -21,7 +21,7 @@ end
 --[[ Need to script the rest out along with her housing quest
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 		PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_1_1041.mp3", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Actually, there are a few things I would like to know.", "dlg_5_1")
@@ -50,7 +50,7 @@ end
 
 function dlg_5_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "How can I place an item in my house?", "dlg_5_2")
@@ -64,7 +64,7 @@ end
 
 function dlg_5_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "What kind of housing is available to me?", "dlg_5_3")
@@ -77,7 +77,7 @@ end
 
 function dlg_5_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "My thanks to you for your help!  I will return if I have any other questions.")
@@ -86,7 +86,7 @@ end
 
 function dlg_15_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "So if I want something larger, what is available to me?")
@@ -99,7 +99,7 @@ end
 
 function dlg_24_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "How can I place an item in my house?", "dlg_24_2")
@@ -113,7 +113,7 @@ end
 
 function dlg_24_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "What kind of housing is available to me?", "dlg_24_3")
@@ -126,7 +126,7 @@ end
 
 function dlg_24_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "So if I want something larger, what is available to me?", "dlg_24_4")
@@ -140,7 +140,7 @@ end
 
 function dlg_24_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "How do I use the marketboard?")
@@ -154,7 +154,7 @@ end
 
 function dlg_24_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "What kind of housing is available to me?")
@@ -167,7 +167,7 @@ end
 
 function dlg_24_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "So if I want something larger, what is available to me?", "dlg_24_7")
@@ -181,7 +181,7 @@ end
 
 function dlg_24_7(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "How can I place an item in my house?", "dlg_24_8")
@@ -194,7 +194,7 @@ end
 
 function dlg_24_8(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "What else can you tell me?")
@@ -208,7 +208,7 @@ end
 
 function dlg_24_9(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "My thanks to you for your help!  I will return if I have any other questions.")

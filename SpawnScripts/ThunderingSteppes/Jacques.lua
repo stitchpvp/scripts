@@ -24,7 +24,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	if not HasQuest(Spawn, WatchYourStepInTheTSPartI) and not HasCompletedQuest(Spawn, WatchYourStepInTheTSPartI) then
 		-- start quest 1
@@ -94,7 +94,7 @@ end
 
 function dlg_0_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "Well, I could use a job.", "dlg_0_2")
 	AddConversationOption(conversation, "So you actually just want someone else to face the danger? I don't have time for cowards.")
@@ -103,7 +103,7 @@ end
 
 function dlg_0_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "Whatever, just as long as you pay me to face all the danger for you.", "dlg_0_3")
 	AddConversationOption(conversation, "Angry dogs? MIGHT earn money? Nevermind.")
@@ -116,7 +116,7 @@ end
 
 function dlg_1_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	SetStepComplete(Spawn, WatchYourStepInTheTSPartI, 3)
 	AddConversationOption(conversation, "Okay.")
@@ -129,7 +129,7 @@ end
 
 function dlg_3_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	SetStepComplete(Spawn, WatchYourStepInTheTSPartII, 3)
 	AddConversationOption(conversation, "I will return as soon as I'm ready.")
@@ -142,7 +142,7 @@ end
 	
 function dlg_4_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "Fine.", "dlg_4_1")
 	AddConversationOption(conversation, "I think I'll pass for now.")
@@ -151,7 +151,7 @@ end
 
 function dlg_5_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	AddConversationOption(conversation, "Okay.")
 	StartConversation(conversation, NPC, Spawn, "Ahh, there is Brianna's receipt. Thank you. Here is your payment for today's work.")

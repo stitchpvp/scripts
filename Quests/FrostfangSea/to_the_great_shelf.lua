@@ -20,7 +20,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(QuestGiver, "flibbit_quagmarr/halas/gwenevyns_cove/flibbit_quagmarr/flibbit_quagmarr_059.mp3", "", "", 1062705629, 386941071, Player)
 	AddConversationOption(conversation, "I'm ready. Is Splorpy ready to go?", "Quest6Chat_6")

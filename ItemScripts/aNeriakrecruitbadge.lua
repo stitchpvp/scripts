@@ -10,5 +10,5 @@
 local AGuardInsignia =140
 
 function examined(Item, Player)
-	OfferQuest(Item, Player, AGuardInsignia)	
+	OfferQuest(Item, Player, AGuardInsignia)
 end

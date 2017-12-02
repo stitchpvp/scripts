@@ -22,7 +22,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 		PlayFlavor(NPC, "voiceover/english/exp03_questvo2/jenthis_viridar/_exp03/exp03_rgn_greater_faydark/scp/jenthis/jenthis000.mp3", "", "", 6246646, 2119314563, Spawn)
 	AddConversationOption(conversation, "I am XXXXXXXX. What is the problem?", "dlg_34_1")
@@ -46,7 +46,7 @@ end
 
 function dlg_34_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/jenthis_viridar/_exp03/exp03_rgn_greater_faydark/scp/jenthis/jenthis001.mp3", "", "", 1747714105, 1617321160, Spawn)
 	AddConversationOption(conversation, "I've also got news from Gomphum.")
@@ -57,7 +57,7 @@ end
 
 function dlg_35_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/jenthis_viridar/_exp03/exp03_rgn_greater_faydark/scp/jenthis/jenthis_gomphum000.mp3", "", "", 3461568007, 163444975, Spawn)
 	AddConversationOption(conversation, "He's a Shroomba. He lives in Dyer Mycoria. There was an orc with the grobins in that cave system.")
@@ -66,7 +66,7 @@ end
 
 function dlg_35_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/jenthis_viridar/_exp03/exp03_rgn_greater_faydark/scp/jenthis/jenthis_gomphum001.mp3", "", "", 17746683, 2156800744, Spawn)
 	AddConversationOption(conversation, "Just one, I killed it.", "dlg_35_3")
@@ -75,7 +75,7 @@ end
 
 function dlg_35_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/jenthis_viridar/_exp03/exp03_rgn_greater_faydark/scp/jenthis/jenthis_gomphum002.mp3", "", "", 283444902, 274954014, Spawn)
 	AddConversationOption(conversation, "What is the trouble you are having?", "dlg_35_4")
@@ -85,7 +85,7 @@ end
 
 function dlg_36_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/jenthis_viridar/_exp03/exp03_rgn_greater_faydark/scp/jenthis/jenthis002.mp3", "", "", 2753677390, 2626213352, Spawn)
 	AddConversationOption(conversation, "Yes?", "dlg_36_2")
@@ -94,7 +94,7 @@ end
 
 function dlg_36_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/jenthis_viridar/_exp03/exp03_rgn_greater_faydark/scp/jenthis/jenthis003.mp3", "", "", 3006752769, 442065699, Spawn)
 	AddConversationOption(conversation, "All right.", "dlg_36_3")
@@ -103,7 +103,7 @@ end
 
 function dlg_36_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/jenthis_viridar/_exp03/exp03_rgn_greater_faydark/scp/jenthis/jenthis004.mp3", "", "", 2745305146, 1693404774, Spawn)
 	AddConversationOption(conversation, "Okay.", "dlg_36_4")

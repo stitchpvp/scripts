@@ -22,7 +22,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 		PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_3_1008.mp3", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Tell me about items and equipment.", "dlg_14_1")
@@ -41,7 +41,7 @@ end
 
 function dlg_14_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Can I put bags inside of bags?")
@@ -51,7 +51,7 @@ end
 
 function dlg_14_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "So one item takes up one bag slot?", "dlg_14_3")
@@ -61,7 +61,7 @@ end
 
 function dlg_14_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "I'll be back if I need to refresh my memory on this.", "dlg_14_4")
@@ -70,7 +70,7 @@ end
 
 function dlg_15_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "What can I do with the treasures I earn while adventuring?", "dlg_15_2")
@@ -79,7 +79,7 @@ end
 
 function dlg_15_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "What does the item information tell me?", "dlg_15_3")
@@ -89,7 +89,7 @@ end
 
 function dlg_15_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Are things like attribute bonuses important?", "dlg_15_4")
@@ -99,7 +99,7 @@ end
 
 function dlg_15_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "How can I tell which of two weapons is better?", "dlg_15_5")
@@ -109,7 +109,7 @@ end
 
 function dlg_15_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "How can I tell which of two pieces of armor is better?", "dlg_15_6")
@@ -119,7 +119,7 @@ end
 
 function dlg_15_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "What about scouts and priests?", "dlg_15_7")
@@ -129,7 +129,7 @@ end
 
 function dlg_15_7(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "What do I do with equipment I can't use?", "dlg_15_8")
@@ -139,7 +139,7 @@ end
 
 function dlg_15_8(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Why are some items marked 'No Value' or 'No Trade'?", "dlg_15_9")
@@ -149,7 +149,7 @@ end
 
 function dlg_15_9(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "What does it mean when an item says it is 'Attuneable'?", "dlg_15_10")
@@ -159,7 +159,7 @@ end
 
 function dlg_15_10(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "How do I manage my inventory?", "dlg_15_11")
@@ -168,7 +168,7 @@ end
 
 function dlg_15_11(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Can I put bags inside of bags?", "dlg_15_12")
@@ -178,7 +178,7 @@ end
 
 function dlg_15_12(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "So one item takes up one bag slot?", "dlg_15_13")
@@ -188,7 +188,7 @@ end
 
 function dlg_15_13(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "I'll be back if I need to refresh my memory on this.", "dlg_15_14")

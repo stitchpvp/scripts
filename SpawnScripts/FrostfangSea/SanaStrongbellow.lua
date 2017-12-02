@@ -15,7 +15,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "hello", 0, 0, Spawn)
 	AddConversationOption(conversation, "I'll work towards that end then.")

@@ -17,7 +17,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(QuestGiver, "voiceover/english/tutorial_revamp/investigator_curfeld/fprt_adv01_sunken/investigator_curfeld008.mp3", "", "", 2335171554, 1884234984, Player)
 	AddConversationOption(conversation, "I will watch my back.")

@@ -19,7 +19,7 @@ end
 
 function start(NPC, Spawn)
     FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	AddConversationOption(conversation, "Tell me about banking", "dlg_1_1")
 	AddConversationOption(conversation, "Tell me about mending items.", "dlg_1_6")
@@ -29,7 +29,7 @@ end
 
 function dlg_1_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	AddConversationOption(conversation, "How do I open my bank?", "dlg_1_2")
 	StartConversation(conversation, NPC, Spawn, "You may already have an account with the Kelethin First Regional Bank. Go see Banker Athinae in Kelethin to access your account. You can access your Kelethin bank account from Qeynos, but not from Freeport.")
@@ -37,7 +37,7 @@ end
 
 function dlg_1_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	AddConversationOption(conversation, "How do I make deposits and withdrawals?", "dlg_1_3")
 	AddConversationOption(conversation, "I'll return for training later.")
@@ -46,7 +46,7 @@ end
 		
 function dlg_1_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	AddConversationOption(conversation, 'What are "shared" bank slots?', "dlg_1_4")
 	StartConversation(conversation, NPC, Spawn, "Coins and items can be dragged from your inventory to the bank window. To drag one item from a stack, hold down the Ctrl key as you drag it. To drag a certain number of coins or items, hold down the shift key and drag, then enter the quantity.")
@@ -54,7 +54,7 @@ end
 
 function dlg_1_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	AddConversationOption(conversation, "Any other banking facts I should know?", "dlg_1_5")
 	StartConversation(conversation, NPC, Spawn, "Items (but not coins) placed in your shared slots can be accessed by other characters on your account that are also citizens of Kelethin. Lore and No-Trade items cannot be put into the shared slots. Characters that are not Kelethin Citizens cannot access a Kelethin bank. So, you could not access a bank in Qeynos or Freeport.")
@@ -62,7 +62,7 @@ end
 
 function dlg_1_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	AddConversationOption(conversation, "I want to learn about mending items", "dlg_1_6")
 	AddConversationOption(conversation, "I'll return for training later.")
@@ -71,7 +71,7 @@ end
 
 function dlg_1_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	AddConversationOption(conversation, "Tell me about banking", "dlg_1_1")
 	AddConversationOption(conversation, "I'll return for training later.")

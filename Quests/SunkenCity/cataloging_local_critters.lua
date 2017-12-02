@@ -23,7 +23,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "I'll return when I'm done.")
 	StartConversation(conversation, QuestGiver, Player, "The Knowledge Book you obtained on the Outpost of the Overlord contains many Abilities that will prove useful to you. Among these Abilities is one called Catalogue Creature. If you draw close to a creature, you can use this ability to obtain information about it. Everything I need to know will be recorded in your Quest Journal. There is no need to attack any of these creatures, simply use the Catalogue Creature ability on them.")

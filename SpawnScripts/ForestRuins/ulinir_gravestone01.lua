@@ -19,7 +19,7 @@ function hailed(NPC, Spawn)
 end
 
 function casted_on(NPC, Spawn, SpellName)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	if HasQuest(Spawn, WOODELF_MENTOR_QUEST_5) and SpellName == "Read Gravestone" then
 		AddConversationOption(conversation, "Place the Tribute.", "PlaceTribute")
 	end

@@ -25,7 +25,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(QuestGiver, "voiceover/english/optional5/standard_dark_elf_male/fprt_hood05/quests/tilzaknlim/tilzak_x1_accept.mp3", "", "", 16004203, 2050489897, Player)
 	AddConversationOption(conversation, "I'll be back when I have them.", "dlg_3_3")

@@ -20,7 +20,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	if HasCompletedQuest(Spawn, QUEST_1) then
 		if HasCompletedQuest(Spawn, QUEST_2) then
@@ -70,7 +70,7 @@ function dlg_27_1(NPC, Spawn)
 	end
 	
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/rok_questvo/varkori_riz_lul/_exp04/exp04_rgn_timorous_deep/chrykori_tie/rizlul/rizlul003.mp3", "", "", 965153171, 3611885529, Spawn)
 	AddConversationOption(conversation, "Sure, I can help.", "dlg_27_2")
@@ -83,7 +83,7 @@ end
 
 function dlg_27_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/rok_questvo/varkori_riz_lul/_exp04/exp04_rgn_timorous_deep/chrykori_tie/rizlul/rizlul004.mp3", "", "", 25576661, 1619798182, Spawn)
 	AddConversationOption(conversation, "All right, I'll go get some.", "OfferQuest2")
@@ -97,7 +97,7 @@ end
 
 function dlg_25_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/rok_questvo/varkori_riz_lul/_exp04/exp04_rgn_timorous_deep/chrykori_tie/rizlul/rizlul001.mp3", "", "", 1972473001, 1216175625, Spawn)
 	AddConversationOption(conversation, "I will get the lizard meat.", "dlg_25_2")
@@ -120,7 +120,7 @@ function dlg_29_1(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_2, 2)
 	
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/rok_questvo/varkori_riz_lul/_exp04/exp04_rgn_timorous_deep/chrykori_tie/rizlul/rizlul007.mp3", "", "", 2978812462, 2156563259, Spawn)
 	AddConversationOption(conversation, "You're welcome.")

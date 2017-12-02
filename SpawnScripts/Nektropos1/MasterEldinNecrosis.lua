@@ -65,7 +65,7 @@ end
 
 function Dialog1_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/master_eldin_necrosis_/nektropos/eldin005.mp3", "", "", 684634683, 4205425239, Spawn)
 	AddConversationOption(conversation, "Alright, I'll do it but I expect to be well paid for my time!", "OfferTrinketsOfTheDead")

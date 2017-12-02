@@ -25,7 +25,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	-- on watch your step part II
 	if HasQuest(Spawn, WatchYourStepInTheTSPartII) and GetQuestStep(Spawn, WatchYourStepInTheTSPartII) == 1 then
@@ -74,7 +74,7 @@ end
 
 function dlg_0_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	AddConversationOption(conversation, "Pardon me, but who is this you're not afraid of?", "dlg_0_2")
 	AddConversationOption(conversation, "I'm not getting involved.")
@@ -83,7 +83,7 @@ end
 
 function dlg_0_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	AddConversationOption(conversation, "So what happens if you don't pay?", "dlg_0_3")
 	AddConversationOption(conversation, "I'm too busy to listen to this.")
@@ -92,7 +92,7 @@ end
 
 function dlg_0_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	AddConversationOption(conversation, "Don't clockworks just do helpful things? Like cleaning?", "dlg_0_4")
 	AddConversationOption(conversation, "I've had enough of this.")
@@ -101,7 +101,7 @@ end
 
 function dlg_0_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	AddConversationOption(conversation, "What do you need?", "dlg_0_5")
 	AddConversationOption(conversation, "I don't think I like where this is going.")
@@ -110,7 +110,7 @@ end
 
 function dlg_0_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	AddConversationOption(conversation, "What are scrying stones?", "dlg_0_7")
 	AddConversationOption(conversation, "I use them all the time, what do you need me to do?", "dlg_0_6")
@@ -120,7 +120,7 @@ end
 
 function dlg_0_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	AddConversationOption(conversation, "Yes, I will help you.", "OfferScryingShame")
 	AddConversationOption(conversation, "No, I don't like the sound of this.")
@@ -129,7 +129,7 @@ end
 
 function dlg_0_7(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	AddConversationOption(conversation, "Okay.", "dlg_0_8")
 	AddConversationOption(conversation, "I think you're on your own.")
@@ -138,7 +138,7 @@ end
 
 function dlg_0_8(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "What sort of things?", "dlg_0_9")
 	AddConversationOption(conversation, "I've had enough of this.")
@@ -147,7 +147,7 @@ end
 
 function dlg_0_9(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "What kind of dangers are we talking about here?", "dlg_0_10")
 	AddConversationOption(conversation, "No, I don't like the sound of this.")
@@ -156,7 +156,7 @@ end
 
 function dlg_0_10(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "I guess so.", "OfferScryingShame")
 	AddConversationOption(conversation, "No thanks.")
@@ -169,7 +169,7 @@ end
 
 function dlg_1_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "Okay.")
 	StartConversation(conversation, NPC, Spawn, "Wonderful! You're a life saver! I wish I could give you a more fitting reward, but I'm in quite a bit of debt. Thank you so much! Here, I've packaged those coins with a return letter. Please deliver this to Jacques for me.")
@@ -179,7 +179,7 @@ end
 
 function dlg_2_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "I suppose I could help you again.", "OfferGnollCave")
 	AddConversationOption(conversation, "I don't have time right now.")
@@ -192,7 +192,7 @@ end
 
 function dlg_3_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "I'll be careful.")
 	StartConversation(conversation, NPC, Spawn, "Well done! Now you should be able to enter the gnoll cave on the hill to the south of this tower. You'll have to search around among the large stone pillars up there. The entrance is hidden in one of the pillars. Be careful going in there. Some of the things they stole were very...volatile. There's no telling what they might do with it.")
@@ -201,7 +201,7 @@ end
 
 function dlg_4_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	AddConversationOption(conversation, "Okay.")
 	StartConversation(conversation, NPC, Spawn, "Thank you so much! I was starting to think I would never get this back. You've helped me more than I could have possibly hoped for. Here, take this reward. It's the least I can do.")

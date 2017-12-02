@@ -26,7 +26,7 @@ end
 
 function first_chat(NPC, Spawn)
     FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
     local choice = math.random(1,2)
 	if choice == 1 then
@@ -46,7 +46,7 @@ end
 
 function bank_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "How do I open my bank?", "bank_2")
@@ -55,7 +55,7 @@ end
 
 function bank_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "How do I make deposits and withdrawals?", "bank_3")
@@ -65,7 +65,7 @@ end
 
 function bank_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, 'What are "shared" bank slots?', "bank_4")
@@ -74,7 +74,7 @@ end
 
 function bank_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Any other banking facts I should know?", "bank_5")
@@ -83,7 +83,7 @@ end
 
 function bank_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "I want to learn about mending items.", "mend_1")
@@ -93,7 +93,7 @@ end
 
 function mend_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Tell me about banking.", "bank_1")

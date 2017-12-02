@@ -22,7 +22,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 		PlayFlavor(NPC, "voiceover/english/exp03_questvo/lyyti_eloranta/_exp03/exp03_cty_kelethin/tutorials/qst_lyyti/qst_lyyti001.mp3", "", "", 4088228408, 3514253455, Spawn)
 	AddConversationOption(conversation, "Lady Katri said that you're the history instructor.", "dlg_39_1")
@@ -45,7 +45,7 @@ end
 
 function dlg_39_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/lyyti_eloranta/_exp03/exp03_cty_kelethin/tutorials/qst_lyyti/qst_lyyti002.mp3", "", "", 2837904161, 4185990953, Spawn)
 	AddConversationOption(conversation, "Sort of.  Did you used to be a history teacher?", "dlg_39_2")
@@ -54,7 +54,7 @@ end
 
 function dlg_39_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/lyyti_eloranta/_exp03/exp03_cty_kelethin/tutorials/qst_lyyti/qst_lyyti003.mp3", "", "", 1895475560, 810904654, Spawn)
 	AddConversationOption(conversation, "Will these lessons fill in all the gaps?", "dlg_39_3")
@@ -63,7 +63,7 @@ end
 
 function dlg_39_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/lyyti_eloranta/_exp03/exp03_cty_kelethin/tutorials/qst_lyyti/qst_lyyti005.mp3", "", "", 3025668755, 1997035225, Spawn)
 	AddConversationOption(conversation, "What must I do now, then?", "dlg_39_4")
@@ -73,7 +73,7 @@ end
 
 function dlg_39_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/lyyti_eloranta/_exp03/exp03_cty_kelethin/tutorials/qst_lyyti/qst_lyyti006.mp3", "", "", 407255999, 3852881, Spawn)
 	AddConversationOption(conversation, "Will all the old memories come back?")
@@ -82,7 +82,7 @@ end
 
 function dlg_40_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/lyyti_eloranta/_exp03/exp03_cty_kelethin/tutorials/qst_lyyti/qst_lyyti002.mp3", "", "", 2837904161, 4185990953, Spawn)
 	AddConversationOption(conversation, "Sort of.  Did you used to be a history teacher?", "dlg_40_2")
@@ -91,7 +91,7 @@ end
 
 function dlg_40_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/lyyti_eloranta/_exp03/exp03_cty_kelethin/tutorials/qst_lyyti/qst_lyyti003.mp3", "", "", 1895475560, 810904654, Spawn)
 	AddConversationOption(conversation, "Will these lessons fill in all the gaps?", "dlg_40_3")
@@ -100,7 +100,7 @@ end
 
 function dlg_40_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/lyyti_eloranta/_exp03/exp03_cty_kelethin/tutorials/qst_lyyti/qst_lyyti005.mp3", "", "", 3025668755, 1997035225, Spawn)
 	AddConversationOption(conversation, "What must I do now, then?", "dlg_40_4")
@@ -110,7 +110,7 @@ end
 
 function dlg_40_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/lyyti_eloranta/_exp03/exp03_cty_kelethin/tutorials/qst_lyyti/qst_lyyti008.mp3", "", "", 226867157, 1271697959, Spawn)
 	AddConversationOption(conversation, "And then? Where's the history in this lesson?", "dlg_40_5")
@@ -119,7 +119,7 @@ end
 
 function dlg_40_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/lyyti_eloranta/_exp03/exp03_cty_kelethin/tutorials/qst_lyyti/qst_lyyti009.mp3", "", "", 1286146575, 1120239850, Spawn)
 	AddConversationOption(conversation, "All right.", "dlg_40_6")

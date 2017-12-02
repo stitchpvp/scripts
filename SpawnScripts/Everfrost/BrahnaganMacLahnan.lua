@@ -144,7 +144,7 @@ end
 
 function Quest2Chat_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "Yes, I killed quite a few of them.", "Quest2Chat_5")
 	StartConversation(conversation, NPC, Spawn, "Well? Are there fewer frostfins than there were before?")
@@ -153,7 +153,7 @@ end
 function Quest2Chat_5(NPC, Spawn)
         SetStepComplete(Spawn, CullTheThreatToThePioneers, 2)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "...")
 	StartConversation(conversation, NPC, Spawn, "I see far fewer fins in the ocean, very good!")
@@ -179,7 +179,7 @@ end
 
 function Quest3Chat_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "No, their blood mixes with the salt water now.", "Quest3Chat_4")
 	StartConversation(conversation, NPC, Spawn, "Well, your fingers seem intact. Are the sharks so fortunate?")
@@ -188,7 +188,7 @@ end
 function Quest3Chat_4(NPC, Spawn)
         SetStepComplete(Spawn, FurtherCulling, 2)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "You're Welcome.", "Quest4Chat_1")
 	StartConversation(conversation, NPC, Spawn, "Ahh, that's good to hear! The trip to land won't be quite so perilous now. Thank you, Player Name")
@@ -196,7 +196,7 @@ end
 
 function Quest4Chat_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "I can do that. It's on my way.", "Offer_Supplies_for_the_Pioneers")
         AddConversationOption(conversation, "No, I don't want to be burdened.")

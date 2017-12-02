@@ -18,7 +18,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	RandomVoice(NPC, Spawn)
 	
@@ -54,7 +54,7 @@ end
 
 function dlg_9_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "What task do you need done?", "OfferQuest1")
 	AddConversationOption(conversation, "Actually, you're wrong. It's not in my interests to do so. Bye.")
@@ -80,7 +80,7 @@ function dlg_1_1(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_1, 2)
 	
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "Servant?! Don't ever refer to me... whatever. Bye.")
 	StartConversation(conversation, NPC, Spawn, "Give me the crystal. Ah, yes, it's filled.  With these souls, Ithelz's puppet barbarians cannot prevent me from ruling over the district. You served me well, servant. Take this coin as a token of my gratitude.")

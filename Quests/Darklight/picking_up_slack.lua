@@ -26,7 +26,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(QuestGiver, "voiceover/english/neriak/ginwyss_d_arkenett/darklight_wood/tvatar_post/ginwyss/ginwyss012.mp3", "", "", 264010058, 2837526220, Player)
 	AddConversationOption(conversation, "Ok.")

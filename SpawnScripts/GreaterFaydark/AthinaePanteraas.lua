@@ -22,7 +22,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 		PlayFlavor(NPC, "voiceover/english/exp03_questvo/athinae_panteraas/_exp03/exp03_cty_kelethin/tutorials/banker_athinae/banker_athinae001.mp3", "", "", 2060518952, 3837644303, Spawn)
 	AddConversationOption(conversation, "Lyyti suggested I come speak with you.", "dlg_42_1")
@@ -32,7 +32,7 @@ end
 
 function dlg_42_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/athinae_panteraas/_exp03/exp03_cty_kelethin/tutorials/banker_athinae/banker_athinae002.mp3", "", "", 2898612991, 4167485514, Spawn)
 	AddConversationOption(conversation, "Do you remember much about Kelethin's past?", "dlg_42_2")
@@ -41,7 +41,7 @@ end
 
 function dlg_42_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/athinae_panteraas/_exp03/exp03_cty_kelethin/tutorials/banker_athinae/banker_athinae003.mp3", "", "", 262079646, 2170522942, Spawn)
 	AddConversationOption(conversation, "I guess you chose the former!  Er, right?", "dlg_42_3")
@@ -50,7 +50,7 @@ end
 
 function dlg_42_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/athinae_panteraas/_exp03/exp03_cty_kelethin/tutorials/banker_athinae/banker_athinae004.mp3", "", "", 72224709, 2528981910, Spawn)
 	AddConversationOption(conversation, "That's good to know!", "dlg_42_4")
@@ -59,7 +59,7 @@ end
 
 function dlg_42_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/athinae_panteraas/_exp03/exp03_cty_kelethin/tutorials/banker_athinae/banker_athinae005.mp3", "", "", 2118102052, 2064632205, Spawn)
 	AddConversationOption(conversation, "Thank you!", "dlg_42_5")

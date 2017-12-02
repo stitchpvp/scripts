@@ -20,7 +20,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(QuestGiver, "voiceover/english/tutorial_revamp/poko_zing/qey_adv02_ruins/quests/poko/poko004a.mp3", "", "", 3746859101, 2602853428, Player)
 	AddConversationOption(conversation, "I will return shortly.")

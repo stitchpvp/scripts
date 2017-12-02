@@ -39,7 +39,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
     if not HasCompletedQuest(Spawn, DisplacedDiscouraged) and not HasQuest(Spawn, DisplacedDiscouraged) then
 		PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_1_1009.mp3", "", "", 0, 0, Spawn)
@@ -123,7 +123,7 @@ end
 
 function Quest1Chat_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "What do you mean?", "Quest1Chat_2")
@@ -133,7 +133,7 @@ end
 
 function Quest1Chat_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "How did you get here?", "Quest1Chat_3")
@@ -144,7 +144,7 @@ end
 
 function Quest1Chat_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "What happened next?", "Quest1Chat_4")
@@ -155,7 +155,7 @@ end
 
 function Quest1Chat_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "belka_thunderheart/halas/great_shelf/belka_thunderheart/belka_thunderheart006.mp3", "", "", 183388199, 507572177, Spawn)
 	AddConversationOption(conversation, "Saw what coming?", "Quest1Chat_5")
@@ -167,7 +167,7 @@ end
 
 function Quest1Chat_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Then what happened?", "Quest1Chat_6")
@@ -178,7 +178,7 @@ end
 
 function Quest1Chat_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Perhaps I could help you with the orcs.", "Quest1Chat_7")
@@ -188,7 +188,7 @@ end
 
 function Quest1Chat_7(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "belka_thunderheart/halas/great_shelf/belka_thunderheart/belka_thunderheart010.mp3", "", "", 679658431, 464088819, Spawn)
 	AddConversationOption(conversation, "I'm happy to help.", "OfferDisplacedDiscouraged")
@@ -198,7 +198,7 @@ end
 
 function Quest1Chat_8(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "How did you get here?", "Quest1Chat_3")
@@ -208,7 +208,7 @@ end
 
 function Quest1Chat_9(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "So what happened next?", "Quest1Chat_5")
@@ -219,7 +219,7 @@ end
 function Quest1Chat_10(NPC, Spawn)
 	SetStepComplete(Spawn, DisplacedDiscouraged, 2)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Like I said before, I'm happy to lend a hand.", "Quest2Chat_1")
@@ -230,7 +230,7 @@ end
 
 function Quest2Chat_1(NPC, Spawn)
     FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
    
     PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_3_1009.mp3", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Tell me more.", "Quest2Chat_3")
@@ -241,7 +241,7 @@ end
 
 function Quest2Chat_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "belka_thunderheart/halas/great_shelf/belka_thunderheart/belka_thunderheart015.mp3", "", "", 2910498444, 2424387451, Spawn)
 	AddConversationOption(conversation, "I thought that'd cheer you up.", "Quest2Chat_3")
@@ -252,7 +252,7 @@ end
 
 function Quest2Chat_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "belka_thunderheart/halas/great_shelf/belka_thunderheart/belka_thunderheart016.mp3", "", "", 2020955980, 3047989742, Spawn)
 	AddConversationOption(conversation, "And, like you said, the orcs have no honor.", "Quest2Chat_4")
@@ -262,7 +262,7 @@ end
 
 function Quest2Chat_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "belka_thunderheart/halas/great_shelf/belka_thunderheart/belka_thunderheart017.mp3", "", "", 736834123, 822536870, Spawn)
 	AddConversationOption(conversation, "I would be happy to deliver your message of justice.", "OfferReclaimingHonor")
@@ -273,7 +273,7 @@ end
 function Quest2Chat_5(NPC, Spawn)
 	SetStepComplete(Spawn, ReclaimingHonor, 2)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Is something else bothering you?", "Quest3Chat_1")
@@ -295,7 +295,7 @@ end
 
 function Quest3Chat_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "belka_thunderheart/halas/great_shelf/belka_thunderheart/belka_thunderheart023.mp3", "", "", 1340808412, 2731736557, Spawn)
 	AddConversationOption(conversation, "The spirits of your brethren bother you?", "Quest3Chat_3")
@@ -305,7 +305,7 @@ end
 
 function Quest3Chat_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Is there anything I can do to help?", "Quest3Chat_4")
@@ -317,7 +317,7 @@ end
 
 function Quest3Chat_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "I'll do it.", "OfferTisUnnatural")
@@ -327,7 +327,7 @@ end
 
 function Quest3Chat_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "I see.  Tell me more.", "Quest3Chat_2")
@@ -337,7 +337,7 @@ end
 
 function Quest3Chat_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Is there anything I can do to help?", "Quest3Chat_4")
@@ -347,7 +347,7 @@ end
 
 function Quest3Chat_7(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Is there anything I can do to help?", "Quest3Chat_4")
@@ -358,7 +358,7 @@ end
 function Quest3Chat_8(NPC, Spawn)
 	SetStepComplete(Spawn, TisUnnatural, 2)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "belka_thunderheart/halas/great_shelf/belka_thunderheart/belka_thunderheart030.mp3", "", "", 3401980101, 2087482309, Spawn)
 	AddConversationOption(conversation, "My pleasure.", "Quest4Chat_1")
@@ -369,7 +369,7 @@ end
 
 function Quest4Chat_1(NPC, Spawn)
     FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
     PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_3_1009.mp3", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "This is a battle of attrition.", "Quest4Chat_2")
@@ -380,7 +380,7 @@ end
 
 function Quest4Chat_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "What do you mean?", "Quest4Chat_3")
@@ -391,7 +391,7 @@ end
 
 function Quest4Chat_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "There must be a way to deal with them permanently.", "Quest4Chat_4")
@@ -401,7 +401,7 @@ end
 
 function Quest4Chat_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "You won't find any solutions in that bottle.", "Quest4Chat_5")
@@ -413,7 +413,7 @@ end
 
 function Quest4Chat_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "What are you planning on doing with that?", "Quest4Chat_6")
@@ -423,7 +423,7 @@ end
 
 function Quest4Chat_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "And you drink that?", "Quest4Chat_7")
@@ -435,7 +435,7 @@ end
 
 function Quest4Chat_7(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "I'll give your plan a try.", "OfferPouringSkellies")
@@ -445,7 +445,7 @@ end
 
 function Quest4Chat_8(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Just how strong is that drink?", "Quest4Chat_6")
@@ -455,7 +455,7 @@ end
 
 function Quest4Chat_9(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "I'll give your plan a try.", "OfferPouringSkellies")
@@ -465,7 +465,7 @@ end
 
 function Quest4Chat_10(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "There must be a way to deal with them permanently.", "Quest4Chat_4")
 	AddConversationOption(conversation, "I'm getting out of here!")
@@ -474,7 +474,7 @@ end
 
 function Quest4Chat_11(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "Just what is in that flask?", "Quest4Chat_6")
 	AddConversationOption(conversation, "I don't even want to know.  Goodbye.")
@@ -484,7 +484,7 @@ end
 function Quest4Chat_12(NPC, Spawn)
     SetStepComplete(Spawn, PouringSkellies, 2)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "It's a good thing you had that flask handy.", "Quest5Chat_1")
 	AddConversationOption(conversation, "Did you have more work for me?", "Quest5Chat_1")
@@ -494,7 +494,7 @@ end
 
 function Quest5Chat_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "Now that the fight isn't hopeless, perhaps we can look into ways to improve our odds.", "Quest5Chat_2")
 	AddConversationOption(conversation, "I'm interested in helping any way I can.", "Quest5Chat_3")
@@ -504,7 +504,7 @@ end
 
 function Quest5Chat_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "What do you need?", "Quest5Chat_3")
 	AddConversationOption(conversation, "Seems like I've done enough already.  Goodbye.")
@@ -513,7 +513,7 @@ end
 
 function Quest5Chat_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "There are probably bits of it strewn across the battlefield.", "Quest5Chat_4")
 	AddConversationOption(conversation, "No, but I'm sure you're about to tell me.", "Quest5Chat_5")
@@ -523,7 +523,7 @@ end
 
 function Quest5Chat_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "So you need someone to gather these velium shards?", "Quest5Chat_5")
 	AddConversationOption(conversation, "I'm no fetcher.  Farewell.")
@@ -532,7 +532,7 @@ end
 
 function Quest5Chat_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "Of course.  You need only to ask.", "OfferNoWork")
 	AddConversationOption(conversation, "Yes, but I expect to be rewarded.", "OfferNoWork")
@@ -543,7 +543,7 @@ end
 function Quest5Chat_6(NPC, Spawn)
     SetStepComplete(Spawn, NoWork, 2)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "It was a dangerous job.", "Quest6Chat_1")
 	AddConversationOption(conversation, "Did you have more work for me?", "Quest6Chat_1")
@@ -571,7 +571,7 @@ end
 
 function Quest6Chat_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "What's the reason?", "Quest6Chat_3")
@@ -582,7 +582,7 @@ end
 
 function Quest6Chat_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Well, far be it from me to argue with the 'plan'.  What needs to be done?", "Quest6Chat_4")
@@ -593,7 +593,7 @@ end
 
 function Quest6Chat_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "belka_thunderheart/halas/great_shelf/belka_thunderheart/belka_thunderheart060.mp3", "", "", 1232599488, 1599939111, Spawn)
 	AddConversationOption(conversation, "This is for research, isn't it?", "Quest6Chat_5")
@@ -604,7 +604,7 @@ end
 
 function Quest6Chat_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "belka_thunderheart/halas/great_shelf/belka_thunderheart/belka_thunderheart081.mp3", "", "", 1553643763, 2988219889, Spawn)
 	AddConversationOption(conversation, "Yes.  I will be back shortly.", "OfferTacklingBasilisks")
@@ -613,7 +613,7 @@ end
 
 function Quest6Chat_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "You mean crazier than storming a battlefield and pouring Dwarven whiskey on orc bones?", "Quest6Chat_7")
@@ -623,7 +623,7 @@ end
 
 function Quest6Chat_7(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "I'm listening.", "Quest6Chat_2")
@@ -633,7 +633,7 @@ end
 
 function Quest6Chat_8(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Trust is in short supply on this floating chunk of ice.  I'll do it.", "Quest6Chat_4")
@@ -645,7 +645,7 @@ end
 function Quest6Chat_9(NPC, Spawn)
     SetStepComplete(Spawn, TacklingBasilisks, 2)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Are you going to explain why I was tasked with hunting basilisks?", "Quest7Chat_1")
@@ -667,7 +667,7 @@ end
 
 function Quest7Chat_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "What question would that be?", "Quest7Chat_3")
@@ -678,7 +678,7 @@ end
 
 function Quest7Chat_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Oh, I see!", "Quest7Chat_4")
@@ -688,7 +688,7 @@ end
 
 function Quest7Chat_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "And therefore, basilisks could be instrumental in holding back the Ry'Gorr.", "Quest7Chat_5")
@@ -698,7 +698,7 @@ end
 
 function Quest7Chat_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Someone needs to harvest those eggs.", "OfferDomesticationSurvivalism")
@@ -708,7 +708,7 @@ end
 
 function Quest7Chat_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Thank you.", "Quest7Chat_4")
@@ -719,7 +719,7 @@ end
 
 function Quest7Chat_7(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Perfect!", "Quest7Chat_8")
@@ -730,7 +730,7 @@ end
 function Quest7Chat_8(NPC, Spawn)
     SetStepComplete(Spawn, DomesticationSurvivalism, 2)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "What do you mean?", "Quest8Chat_1")
@@ -741,7 +741,7 @@ end
 
 function Quest8Chat_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Your tune has changed.", "Quest8Chat_2")
@@ -753,7 +753,7 @@ end
 
 function Quest8Chat_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "My pleasure.", "Quest8Chat_3")
@@ -764,7 +764,7 @@ end
 
 function Quest8Chat_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Will the pilgrims be safe?", "Quest8Chat_4")
@@ -775,7 +775,7 @@ end
 
 function Quest8Chat_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "On my way.", "OfferReportSpine")
@@ -785,7 +785,7 @@ end
 
 function Quest8Chat_5(NPC, Spawn)
     FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
     AddConversationOption(conversation, "True, and most unfortunate. I'm sorry.", "Quest8Chat_3")
     AddConversationOption(conversation, "Just get me out of here.", "Quest8Chat_3")

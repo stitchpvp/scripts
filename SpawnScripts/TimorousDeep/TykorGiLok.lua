@@ -22,7 +22,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	if HasCompletedQuest(Spawn, QUEST_1) then
 		if HasCompletedQuest(Spawn, QUEST_2) then
@@ -57,7 +57,7 @@ end
 
 function dlg_0_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/rok_questvo/tykor_gi_lok/_exp04/exp04_rgn_timorous_deep/chrykori_tie/gilok/gilok000a.mp3", "", "", 2545146439, 3743717142, Spawn)
 	AddConversationOption(conversation, "I will kill the poachers.", "OfferQuest1")
@@ -87,7 +87,7 @@ function dlg_1_1(NPC, Spawn)
 	end
 	
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/rok_questvo/tykor_gi_lok/_exp04/exp04_rgn_timorous_deep/chrykori_tie/gilok/gilok003.mp3", "", "", 1572650022, 3969849806, Spawn)
 	AddConversationOption(conversation, "What do you think is so special about this beach?", "dlg_1_2")
@@ -100,7 +100,7 @@ end
 
 function dlg_1_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/rok_questvo/tykor_gi_lok/_exp04/exp04_rgn_timorous_deep/chrykori_tie/gilok/gilok003a.mp3", "", "", 1948098851, 1635799575, Spawn)
 	AddConversationOption(conversation, "I'll bring us back samples straight away.", "OfferQuest2")
@@ -130,7 +130,7 @@ function dlg_4_1(NPC, Spawn)
 	end
 	
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/rok_questvo/tykor_gi_lok/_exp04/exp04_rgn_timorous_deep/chrykori_tie/gilok/gilok006.mp3", "", "", 2948220406, 1046702347, Spawn)
 	AddConversationOption(conversation, "Very well. ", "OfferQuest3")

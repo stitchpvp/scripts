@@ -20,7 +20,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	if HasCompletedQuest(Spawn, QUEST_1) then
 		if HasCompletedQuest(Spawn, QUEST_2) then
@@ -54,7 +54,7 @@ end
 
 function dlg_11_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/rok_questvo/civ-parser_di_xin/_exp04/exp04_rgn_timorous_deep/chrykori_tie/dixin/dixin003.mp3", "", "", 3327582495, 1668849620, Spawn)
 	AddConversationOption(conversation, "Sure.", "OfferQuest1")
@@ -84,7 +84,7 @@ function dlg_26_1(NPC, Spawn)
 	end
 	
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/rok_questvo/civ-parser_di_xin/_exp04/exp04_rgn_timorous_deep/chrykori_tie/dixin/dixin006.mp3", "", "", 1898035325, 1748406413, Spawn)
 	AddConversationOption(conversation, "What do you mean?", "dlg_26_2")
@@ -97,7 +97,7 @@ end
 
 function dlg_26_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/rok_questvo/civ-parser_di_xin/_exp04/exp04_rgn_timorous_deep/chrykori_tie/dixin/dixin007.mp3", "", "", 3848712834, 1158441901, Spawn)
 	AddConversationOption(conversation, "Perhaps I could retrieve the artifacts from them.", "OfferQuest2")
@@ -125,7 +125,7 @@ function dlg_33_1(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_2, 2)
 	
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/rok_questvo/civ-parser_di_xin/_exp04/exp04_rgn_timorous_deep/chrykori_tie/dixin/dixin010.mp3", "", "", 1056036231, 2932471518, Spawn)
 	AddConversationOption(conversation, "You're welcome.", "dlg_33_2")

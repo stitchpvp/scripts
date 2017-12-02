@@ -22,7 +22,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	if not HasCompletedQuest(Spawn, ProwlerAnnoyance) then
 		StartConversation(conversation, NPC, Spawn, "Leave me be!")
@@ -55,7 +55,7 @@ end
 
 function ChatQuest_1_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	PlayFlavor(NPC, "sselnyl_do_zyth/darklight_wood/hates_envy/sselnyl_revamp/sselnyl002.mp3", "", "", 1862425876, 99259733, Spawn)
 	AddConversationOption(conversation, "What work is that?", "ChatQuest_1_2")
@@ -64,7 +64,7 @@ end
 
 function ChatQuest_1_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	PlayFlavor(NPC, "sselnyl_do_zyth/darklight_wood/hates_envy/sselnyl_revamp/sselnyl003.mp3", "", "smirk", 1447042899, 779642311, Spawn)
 	AddConversationOption(conversation, "Go on.", "ChatQuest_1_3")
@@ -73,7 +73,7 @@ end
 
 function ChatQuest_1_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	PlayFlavor(NPC, "sselnyl_do_zyth/darklight_wood/hates_envy/sselnyl_revamp/sselnyl004.mp3", "", "", 3800789963, 3276371466, Spawn)
 	AddConversationOption(conversation, "I'll return with the remains at once.", "QuestOffer_NoUndeadGoesUnturned")
@@ -83,7 +83,7 @@ end
 
 function ChatQuest_1_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	PlayFlavor(NPC, "sselnyl_do_zyth/darklight_wood/hates_envy/sselnyl_revamp/sselnyl008.mp3", "", "", 107641320, 435607180, Spawn)
 	AddConversationOption(conversation, "I'll return soon.")
@@ -92,7 +92,7 @@ end
 
 function ChatQuest_1_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	SetStepComplete(Spawn, NoUndeadGoesUnturned, 2)
 	
 	PlayFlavor(NPC, "sselnyl_do_zyth/darklight_wood/hates_envy/sselnyl_revamp/sselnyl007.mp3", "", "", 1506804081, 4126548148, Spawn)
@@ -107,7 +107,7 @@ end
 
 function QuestChat_1_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	PlayFlavor(NPC, "sselnyl_do_zyth/darklight_wood/hates_envy/sselnyl_revamp/sselnyl009.mp3", "", "", 2231372796, 2001694414, Spawn)
 	AddConversationOption(conversation, "What can you tell me about the Thexians?", "QuestChat_1_2")
@@ -116,7 +116,7 @@ end
 
 function QuestChat_1_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	PlayFlavor(NPC, "sselnyl_do_zyth/darklight_wood/hates_envy/sselnyl_revamp/sselnyl012.mp3", "", "", 739520586, 1273216737, Spawn)
 	AddConversationOption(conversation, "Go on.", "QuestChat_1_3")
@@ -125,7 +125,7 @@ end
 
 function QuestChat_1_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	PlayFlavor(NPC, "sselnyl_do_zyth/darklight_wood/hates_envy/sselnyl_revamp/sselnyl013.mp3", "", "", 3807512050, 1047350728, Spawn)
 	AddConversationOption(conversation, "How will I do that?", "QuestChat_1_4")
@@ -134,7 +134,7 @@ end
 
 function QuestChat_1_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	PlayFlavor(NPC, "sselnyl_do_zyth/darklight_wood/hates_envy/sselnyl_revamp/sselnyl014.mp3", "", "", 1429242287, 2342006533, Spawn)
 	AddConversationOption(conversation, "I will do this at once!", "QuestChat_1_5")
@@ -143,7 +143,7 @@ end
 
 function QuestChat_1_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	PlayFlavor(NPC, "sselnyl_do_zyth/darklight_wood/hates_envy/sselnyl_revamp/sselnyl015.mp3", "", "", 2064460761, 4053677356, Spawn)
 	AddConversationOption(conversation, "I will not fail you.", "QuestOffer_ThexianTaint")

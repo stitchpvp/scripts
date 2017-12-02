@@ -35,7 +35,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(QuestGiver, "voiceover/english/tutorial_revamp/trainer_durbok/fprt_adv03_sprawl/quests/trainer_durbok008.mp3", "", "", 2693497223, 3993753671, Player)
 	AddConversationOption(conversation, "Will do.")

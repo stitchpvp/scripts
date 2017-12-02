@@ -21,7 +21,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	AddConversationOption(conversation, "Ok, I will do it for you then.")
 	StartConversation(conversation, NPC, Spawn, "This letter needs to go out to Deputy Nettlebrine in The Enchanted Lands. I would take it myself, but after my last trip on a boat I think its best that I don't.")

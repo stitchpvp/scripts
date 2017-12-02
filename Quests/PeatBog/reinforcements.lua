@@ -21,7 +21,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	AddConversationOption(conversation, "I can do this.")
 	StartConversation(conversation, QuestGiver, Player, "I know you can. Qeynos is counting on you, " .. GetName(Player) .. ". Make us proud!")

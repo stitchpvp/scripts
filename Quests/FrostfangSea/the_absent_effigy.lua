@@ -12,7 +12,7 @@
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(QuestGiver, "flibbit_quagmarr/halas/gwenevyns_cove/flibbit_quagmarr/flibbit_quagmarr_037.mp3", "", "", 727383716, 4227868188, Player)
 	AddConversationOption(conversation, "I will look for Splorpy's Effigy of Mithaniel and return to you if I find it.")

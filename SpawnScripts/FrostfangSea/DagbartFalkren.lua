@@ -15,7 +15,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_1_1042.mp3", "", "hello", 0, 0, Spawn)
 	if HasCollectionsToHandIn(Spawn) then
@@ -28,7 +28,7 @@ end
 function TurnInColls(NPC, Spawn)
 	HandInCollections(Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "All right, thanks!")
 	StartConversation(conversation, NPC, Spawn, "This is a magnificent find! Here, take this for all your hard work.")

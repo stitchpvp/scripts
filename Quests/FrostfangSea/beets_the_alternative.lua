@@ -24,7 +24,7 @@ end
  
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(QuestGiver, "wregan_firebeard/halas/gwenevyns_cove/wregan_firebeard_007.mp3", "", "", 2495625045, 3478965655, Player)
 	AddConversationOption(conversation, "I will, believe me.")

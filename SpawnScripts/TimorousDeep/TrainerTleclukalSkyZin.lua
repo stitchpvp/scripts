@@ -15,7 +15,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	choice = math.random(1, 3)
 	if choice == 1 then
@@ -33,7 +33,7 @@ end
 
 function dlg_22_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "How do I open my bank?", "dlg_22_5")
 	StartConversation(conversation, NPC, Spawn, "You may already have an account set up. Speak with my associate to access your account.  You can access your bank account from allied cities as well.")
@@ -41,7 +41,7 @@ end
 
 function dlg_22_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "How do I make deposits and withdrawals?", "dlg_22_6")
 	AddConversationOption(conversation, "I'll return for training later.")
@@ -50,7 +50,7 @@ end
 
 function dlg_22_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "What are \"shared\" bank slots?", "dlg_22_7")
 	StartConversation(conversation, NPC, Spawn, "Coins and items can be dragged from your inventory to the bank window. To drag one item from a stack, hold down the Ctrl key as you drag it. To drag a certain number of coins or items, hold down the Shift key and drag, then enter the quantity.")
@@ -58,7 +58,7 @@ end
 
 function dlg_22_7(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "Any other banking facts I should know?", "dlg_22_8")
 	StartConversation(conversation, NPC, Spawn, "Items (but not coin) placed in your shared slots can be accessed by other characters on your account that are of the same alignment. Lore and No-Trade items cannot be put into the shared slots.")
@@ -66,7 +66,7 @@ end
 
 function dlg_22_8(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "Thank you.")
 	StartConversation(conversation, NPC, Spawn, "If you choose to join a guild made up of your fellow players one day, you can access your guild bank by right-clicking on a banker and selecting 'Guild Bank.'")

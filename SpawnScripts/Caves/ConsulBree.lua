@@ -26,7 +26,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	if HasQuest(Spawn, QUEST_FROM_OAKMYST) or HasQuest(Spawn, QUEST_FROM_PEATBOG) then
 		AddConversationOption(conversation, "I am here as requested.", "HereAsRequested")
@@ -71,7 +71,7 @@ function HereAsRequested(NPC, Spawn)
 	end
 	
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/consul_bree/qey_adv03_caves/quests/bree/bree_001.mp3", "", "", 2064805321, 3198467105)
 	
@@ -98,7 +98,7 @@ end
 
 function dlg_0_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/consul_bree/qey_adv03_caves/quests/bree/bree_002.mp3", "", "", 2428180651, 3557450253)
 	AddConversationOption(conversation, "What must I do?", "dlg_0_2")
@@ -107,7 +107,7 @@ end
 
 function dlg_0_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/consul_bree/qey_adv03_caves/quests/bree/bree_003.mp3", "", "", 502817302, 1202580742)
 	AddConversationOption(conversation, "What can I do to help?", "dlg_0_3")
@@ -117,7 +117,7 @@ end
 
 function dlg_0_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/consul_bree/qey_adv03_caves/quests/bree/bree_004.mp3", "", "", 3518125832, 3106838592)
 	AddConversationOption(conversation, "Very well.", "OfferQuest1")
@@ -126,7 +126,7 @@ end
 
 function dlg_1_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/consul_bree/qey_adv03_caves/quests/bree/bree_info_000.mp3", "", "", 3394008889, 3046376303)
 	AddConversationOption(conversation, "Was there a link?", "dlg_1_2")
@@ -135,7 +135,7 @@ end
 
 function dlg_1_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/consul_bree/qey_adv03_caves/quests/bree/bree_info_001.mp3", "", "", 3459374999, 3197214487)
 	AddConversationOption(conversation, "So what was the link?", "dlg_1_3")
@@ -144,7 +144,7 @@ end
 
 function dlg_1_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/consul_bree/qey_adv03_caves/quests/bree/bree_info_002.mp3", "", "", 16239315, 349954635)
 	AddConversationOption(conversation, "Why not?", "dlg_1_4")
@@ -153,7 +153,7 @@ end
 
 function dlg_1_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/consul_bree/qey_adv03_caves/quests/bree/bree_info_003.mp3", "", "", 3632364295, 1198051029)
 	AddConversationOption(conversation, "They plan on attacking Qeynos?", "dlg_1_5")
@@ -162,7 +162,7 @@ end
 
 function dlg_1_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/consul_bree/qey_adv03_caves/quests/bree/bree_info_004.mp3", "", "", 1057994736, 896440060)
 	AddConversationOption(conversation, "How can I help?", "dlg_0_3")
@@ -193,7 +193,7 @@ end
 
 function AboutCaves(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/consul_bree/qey_adv03_caves/quests/bree/bree_info_000.mp3", "", "", 3394008889, 3046376303)
 	AddConversationOption(conversation, "Was there a link?", "dlg_4_2")
@@ -202,7 +202,7 @@ end
 
 function dlg_4_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/consul_bree/qey_adv03_caves/quests/bree/bree_info_001.mp3", "", "", 3459374999, 3197214487)
 	AddConversationOption(conversation, "So what was the link?", "dlg_4_3")
@@ -211,7 +211,7 @@ end
 
 function dlg_4_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/consul_bree/qey_adv03_caves/quests/bree/bree_info_002.mp3", "", "", 16239315, 349954635)
 	AddConversationOption(conversation, "Why not?", "dlg_4_4")
@@ -220,7 +220,7 @@ end
 
 function dlg_4_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/consul_bree/qey_adv03_caves/quests/bree/bree_info_003.mp3", "", "", 3632364295, 1198051029)
 	AddConversationOption(conversation, "They plan on attacking Qeynos?", "dlg_4_5")
@@ -229,7 +229,7 @@ end
 
 function dlg_4_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/consul_bree/qey_adv03_caves/quests/bree/bree_info_004.mp3", "", "", 1057994736, 896440060)
 	AddConversationOption(conversation, "I will see what I can find out.")
@@ -242,7 +242,7 @@ function dlg_7_1(NPC, Spawn)
 	end
 	
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/consul_bree/qey_adv03_caves/quests/bree/bree_006.mp3", "", "", 3677963528, 2296083792)
 	AddConversationOption(conversation, "I am ready.", "dlg_7_2")
@@ -255,7 +255,7 @@ end
 
 function dlg_7_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/consul_bree/qey_adv03_caves/quests/bree/bree_007.mp3", "", "", 2761151538, 2929645199)
 	AddConversationOption(conversation, "All right.", "OfferQuest2")
@@ -269,7 +269,7 @@ end
 
 function dlg_7_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/consul_bree/qey_adv03_caves/quests/bree/bree_005.mp3", "", "", 3442310120, 962597541)
 	AddConversationOption(conversation, "I have. Here it is.", "dlg_7_4")
@@ -292,7 +292,7 @@ end
 
 function LearnedFromBook(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/consul_bree/qey_adv03_caves/quests/bree/bree_info_005.mp3", "", "", 2808914338, 1740276714)
 	AddConversationOption(conversation, "Can they be stopped?", "dlg_9_2")
@@ -301,7 +301,7 @@ end
 
 function dlg_9_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/consul_bree/qey_adv03_caves/quests/bree/bree_info_006.mp3", "", "", 1238557944, 2958306914)
 	AddConversationOption(conversation, "I see.")
@@ -323,7 +323,7 @@ function dlg_15_1(NPC, Spawn)
 		SetStepComplete(Spawn, QUEST_2, 3)
 	end
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/consul_bree/qey_adv03_caves/quests/bree/bree_009.mp3", "", "", 2550748211, 2686782300)
 	AddConversationOption(conversation, "What do you mean?", "dlg_15_2")
@@ -336,7 +336,7 @@ end
 
 function dlg_15_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/consul_bree/qey_adv03_caves/quests/bree/bree_011.mp3", "", "", 980784513, 319939534)
 	AddConversationOption(conversation, "What is the ritual?", "dlg_15_3")
@@ -345,7 +345,7 @@ end
 
 function dlg_15_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/consul_bree/qey_adv03_caves/quests/bree/bree_012.mp3", "", "", 4286756342, 1858639464)
 	AddConversationOption(conversation, "I can do it.", "OfferQuest3")
@@ -372,7 +372,7 @@ end
 
 function GnollAttack(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "Can they be stopped?", "CanTheyBeStopped")
 	StartConversation(conversation, NPC, Spawn, "The gnolls have a very sophistical attack plan, especially considering they\'re gnolls. They plan to dig under Qeynos and attack inside. Once there, they will fight, but not with much force. Eventually they will attack, forcing us to defend ourselves. As this happens they plan on attacking from every entry point hopefully catching us unaware.")
@@ -380,7 +380,7 @@ end
 
 function CanTheyBeStopped(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "I see.")
 	StartConversation(conversation, NPC, Spawn, "Sure, but not without a heavy loss of life. It would be preferable, by far, to stop them here, now. Crippling their ability to dig and produce armor is our best bet at this point.")
@@ -391,7 +391,7 @@ function dlg_22_1(NPC, Spawn)
 		SetStepComplete(Spawn, QUEST_3, 5)
 	end
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/consul_bree/qey_adv03_caves/quests/bree/bree_014.mp3", "", "", 247398570, 2593527030)
 	AddConversationOption(conversation, "Yes.", "dlg_22_2")
@@ -404,7 +404,7 @@ end
 
 function dlg_22_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/consul_bree/qey_adv03_caves/quests/bree/bree_015.mp3", "", "", 2549188816, 2219129213)
 	AddConversationOption(conversation, "I will return.", "OfferQuest4")
@@ -432,7 +432,7 @@ end
 
 function AnythingElse(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "Thanks.")
 	StartConversation(conversation, NPC, Spawn, "The book spoke of \'Haggletons\' who are Freeportian gnomes. We don\'t know if they acted alone or with some element of their government. It\'s not likely we\'ll ever know. From the way things are around here now, it\'s clear the gnoll\'s production is slowing. I do not expect this to last much longer, thanks in large part to you. I am lucky to have you on my side.")
@@ -449,7 +449,7 @@ function dlg_28_1(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_4, 2)
 	
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/consul_bree/qey_adv03_caves/quests/bree/bree_017.mp3", "", "", 1945105628, 3603406518)
 	AddConversationOption(conversation, "Thank you.")

@@ -42,7 +42,7 @@ function Accepted(Quest, QuestGiver, Player)
         SummonItem(Player, 45117, 1)
 	end
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	Say(QuestGiver, "Excellent. I will be here waiting for you to bring the cubs back. Here is the leash.")
 end

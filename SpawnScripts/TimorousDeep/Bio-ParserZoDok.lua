@@ -20,7 +20,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	if HasCompletedQuest(Spawn, QUEST_1) then
 		if HasCompletedQuest(Spawn, QUEST_2) then
@@ -49,7 +49,7 @@ end
 
 function dlg_34_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/rok_questvo/bio-parser_zo_dok/_exp04/exp04_rgn_timorous_deep/chrykori_tie/zodok/zodok001.mp3", "", "", 609913966, 761927847, Spawn)
 	AddConversationOption(conversation, "I can do it.", "OfferQuest1")
@@ -79,7 +79,7 @@ function dlg_38_1(NPC, Spawn)
 	end
 	
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/rok_questvo/bio-parser_zo_dok/_exp04/exp04_rgn_timorous_deep/chrykori_tie/zodok/zodok004.mp3", "", "", 4099549313, 768729331, Spawn)
 	AddConversationOption(conversation, "Sure, I can help.", "OfferQuest2")
@@ -111,7 +111,7 @@ function dlg_43_1(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_2, 2)
 	
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/rok_questvo/bio-parser_zo_dok/_exp04/exp04_rgn_timorous_deep/chrykori_tie/zodok/zodok007.mp3", "", "", 4179618229, 2858561590, Spawn)
 	AddConversationOption(conversation, "You're welcome.")

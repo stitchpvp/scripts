@@ -17,7 +17,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "I'll go get your fangs.")
 	StartConversation(conversation, QuestGiver, Player, "Good! Mardyp go back to crushing.")

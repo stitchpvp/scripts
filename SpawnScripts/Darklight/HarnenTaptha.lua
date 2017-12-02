@@ -15,7 +15,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	if HasQuest(Spawn, 99) and GetQuestStep(Spawn, 99) == 1 then
 		WhatDoYouWant(NPC, Spawn, conversation)
@@ -32,7 +32,7 @@ end
 
 function dlg_2_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/neriak/harnen_taptha/darklight_wood/tvatar_post/laexyra/harnen/harnen001.mp3", "", "", 1833587639, 1382963065, Spawn)
 	AddConversationOption(conversation, "Laexyra Y'Barriath wanted me to remind you that she was right.", "dlg_2_2")
@@ -45,7 +45,7 @@ function dlg_2_2(NPC, Spawn)
 	SpawnSet(NPC, "show_level", 1)
 	
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "Harnen...")
 	StartConversation(conversation, NPC, Spawn, "...")

@@ -21,7 +21,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "roselia_goldencrust/_exp03/deity/bristlebane/roselia/roselia_goldencrust004.mp3", "", "", 925124071, 4075374228, Spawn)
 	AddConversationOption(conversation, "How's business?", "dlg_0_1")
@@ -31,7 +31,7 @@ end
 
 function dlg_0_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "roselia_goldencrust/_exp03/deity/bristlebane/roselia/roselia_goldencrust005.mp3", "", "", 1048944955, 1278695573, Spawn)
 	AddConversationOption(conversation, "How do you know?", "dlg_0_2")
@@ -40,7 +40,7 @@ end
 
 function dlg_0_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "roselia_goldencrust/_exp03/deity/bristlebane/roselia/roselia_goldencrust006.mp3", "", "", 3761071007, 78243092, Spawn)
 		AddConversationOption(conversation, "Indeed. We shall see!")

@@ -43,7 +43,7 @@ function Accepted(Quest, QuestGiver, Player)
         SummonItem(Player, 48976, 1)
 	end
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	PlayFlavor(QuestGiver, "", "", "salute", 0, 0, Player)
 	AddConversationOption(conversation, "All right.")

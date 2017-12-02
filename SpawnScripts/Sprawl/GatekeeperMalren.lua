@@ -28,7 +28,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	if GetLevel(Spawn) < 12 then
 		AddConversationOption(conversation, "What do you mean?", "WhatDoYouMean")
@@ -43,7 +43,7 @@ end
 
 function WhatDoYouMean(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	AddConversationOption(conversation, "Where should I go once I get to a district?", "OnceGetDestrict")
 	AddConversationOption(conversation, "I will do so.")
@@ -52,7 +52,7 @@ end
 
 function OnceGetDestrict(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	AddConversationOption(conversation, "Why is travel beyond this gate so dangerous?", "WhySoDangerous")
 	AddConversationOption(conversation, "Thank you.")
@@ -61,7 +61,7 @@ end
 
 function WhySoDangerous(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	AddConversationOption(conversation, "Thanks for the advice, Malren.")
 	StartConversation(conversation, NPC, Spawn, "Traveling through this gate isn't very safe unless you bring a group of friends with you. Some very powerful orcs are clashing with the Freeport Militia just beyond it. Entering the Ruins by way of the docks is a much wiser approach.")

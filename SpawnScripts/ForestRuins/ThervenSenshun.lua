@@ -8,7 +8,7 @@
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "Not yet.", "dlg_2_1")
 	StartConversation(conversation, NPC, Spawn, "Did you get the shells?")
@@ -21,7 +21,7 @@ end
 
 function dlg_3_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "Glad to assist.", "dlg_3_2")
 	StartConversation(conversation, NPC, Spawn, "Thanks! I appreciate it! You've really helped me a lot.")

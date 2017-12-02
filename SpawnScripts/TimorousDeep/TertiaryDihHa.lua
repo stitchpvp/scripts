@@ -20,7 +20,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	if HasQuest(Spawn, QUEST_FROM_AROZIK) and GetQuestStep(Spawn, QUEST_FROM_AROZIK) == 1 then
 		AddConversationOption(conversation, "Secondary Sky'Ki told me to speak with you.", "dlg_7_1")
@@ -54,7 +54,7 @@ function dlg_7_1(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_FROM_AROZIK, 1)
 	
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/rok_questvo/tertiary_dih_ha/_exp04/exp04_rgn_timorous_deep/chrykori_tie/dihha/dihha001.mp3", "", "", 936167783, 1220078217, Spawn)
 	
@@ -78,7 +78,7 @@ end
 
 function dlg_7_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/rok_questvo/tertiary_dih_ha/_exp04/exp04_rgn_timorous_deep/chrykori_tie/dihha/dihha002.mp3", "", "", 1333866465, 3526691037, Spawn)
 	AddConversationOption(conversation, "I can do that.", "OfferQuest1")
@@ -108,7 +108,7 @@ function dlg_8_1(NPC, Spawn)
 	end
 	
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/rok_questvo/tertiary_dih_ha/_exp04/exp04_rgn_timorous_deep/chrykori_tie/dihha/dihha005.mp3", "", "", 762224700, 657564648, Spawn)
 	AddConversationOption(conversation, "All right.", "OfferQuest2")
@@ -127,7 +127,7 @@ end
 
 function dlg_8_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/rok_questvo/tertiary_dih_ha/_exp04/exp04_rgn_timorous_deep/chrykori_tie/dihha/dihha006.mp3", "", "", 1880622251, 59486030, Spawn)
 	AddConversationOption(conversation, "I understand and will not fail.", "dlg_8_3")
@@ -136,7 +136,7 @@ end
 
 function dlg_16_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/rok_questvo/tertiary_dih_ha/_exp04/exp04_rgn_timorous_deep/chrykori_tie/dihha/dihha008.mp3", "", "", 2227499160, 838414892, Spawn)
 	AddConversationOption(conversation, "All right.", "dlg_16_2")
@@ -145,7 +145,7 @@ end
 
 function dlg_16_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/rok_questvo/tertiary_dih_ha/_exp04/exp04_rgn_timorous_deep/chrykori_tie/dihha/dihha009.mp3", "", "", 1056066826, 2699516758, Spawn)
 	AddConversationOption(conversation, "I understand.", "dlg_16_3")

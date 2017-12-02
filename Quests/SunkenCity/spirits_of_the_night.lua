@@ -17,7 +17,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "I will return.")
 	StartConversation(conversation, QuestGiver, Player, "The undead walk just ahead, though some lurk a bit farther in. Remember, more of these ghastly creatures can be found after night falls. Return to me when you have their essences.")

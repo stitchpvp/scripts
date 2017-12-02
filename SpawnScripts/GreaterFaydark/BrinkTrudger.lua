@@ -23,7 +23,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	-- says this until you are level 5
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/brink_trudger/_exp03/exp03_rgn_greater_faydark/quest/brink_trudger_low_level_c046f9f.mp3", "Hello, youngin'!  Check back with me when you have a bit more experience under your belt.  I may have some work for you then!", "", 1587078746, 1916787035, Spawn)
@@ -71,7 +71,7 @@ end
 
 function dlg_3_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/brink_trudger/_exp03/exp03_rgn_greater_faydark/brink_trudger/brink_trudger014.mp3", "", "", 4065110799, 2574058259, Spawn)
 	AddConversationOption(conversation, "Thanks, Brink.", "dlg_3_2")
@@ -80,7 +80,7 @@ end
 
 function dlg_5_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/brink_trudger/_exp03/exp03_rgn_greater_faydark/brink_trudger/brink_trudger002.mp3", "", "", 2521303074, 4079509468, Spawn)
 	AddConversationOption(conversation, "Sure.  How can I help?", "dlg_5_2")
@@ -90,7 +90,7 @@ end
 
 function dlg_5_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/brink_trudger/_exp03/exp03_rgn_greater_faydark/brink_trudger/brink_trudger003.mp3", "", "", 860825066, 492028532, Spawn)
 	AddConversationOption(conversation, "I can get the hides for you.", "dlg_5_3")
@@ -99,7 +99,7 @@ end
 
 function dlg_5_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/brink_trudger/_exp03/exp03_rgn_greater_faydark/brink_trudger/brink_trudger003_offer.mp3", "", "", 179963171, 4058842652, Spawn)
 	AddConversationOption(conversation, "This should be no problem.", "dlg_5_4")
@@ -108,7 +108,7 @@ end
 
 function dlg_7_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/brink_trudger/_exp03/exp03_rgn_greater_faydark/brink_trudger/brink_trudger005.mp3", "", "", 904667062, 23815959, Spawn)
 	AddConversationOption(conversation, "Sure, what is it?", "dlg_7_2")
@@ -118,7 +118,7 @@ end
 
 function dlg_7_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/brink_trudger/_exp03/exp03_rgn_greater_faydark/brink_trudger/brink_trudger006.mp3", "", "", 429538583, 2492036558, Spawn)
 	AddConversationOption(conversation, "I'll get the silk for you.", "dlg_7_3")
@@ -127,7 +127,7 @@ end
 
 function dlg_7_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/brink_trudger/_exp03/exp03_rgn_greater_faydark/brink_trudger/brink_trudger009.mp3", "", "", 94899034, 3216566812, Spawn)
 	AddConversationOption(conversation, "I'll be careful.", "dlg_7_4")
@@ -136,7 +136,7 @@ end
 
 function dlg_14_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/brink_trudger/_exp03/exp03_rgn_greater_faydark/brink_trudger/brink_trudger002.mp3", "", "", 2521303074, 4079509468, Spawn)
 	AddConversationOption(conversation, "Sure.  How can I help?", "dlg_14_2")
@@ -146,7 +146,7 @@ end
 
 function dlg_14_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/brink_trudger/_exp03/exp03_rgn_greater_faydark/brink_trudger/brink_trudger003.mp3", "", "", 860825066, 492028532, Spawn)
 	AddConversationOption(conversation, "I can get the hides for you.", "dlg_14_3")
@@ -155,7 +155,7 @@ end
 
 function dlg_14_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/brink_trudger/_exp03/exp03_rgn_greater_faydark/brink_trudger/brink_trudger003_offer.mp3", "", "", 179963171, 4058842652, Spawn)
 	AddConversationOption(conversation, "This should be no problem.", "dlg_14_4")
@@ -164,7 +164,7 @@ end
 
 function dlg_15_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/brink_trudger/_exp03/exp03_rgn_greater_faydark/brink_trudger/brink_trudger008.mp3", "", "", 1249335835, 2386333509, Spawn)
 	AddConversationOption(conversation, "Is there anything else I can help with?", "dlg_15_2")
@@ -174,7 +174,7 @@ end
 
 function dlg_15_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/brink_trudger/_exp03/exp03_rgn_greater_faydark/brink_trudger/brink_trudger010.mp3", "", "", 1214199522, 2851008750, Spawn)
 	AddConversationOption(conversation, "What kind of shells do you need?", "dlg_15_3")
@@ -184,7 +184,7 @@ end
 
 function dlg_15_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/brink_trudger/_exp03/exp03_rgn_greater_faydark/brink_trudger/brink_trudger011.mp3", "", "", 4145013832, 3563128686, Spawn)
 	AddConversationOption(conversation, "I'll get the shells for you.", "dlg_15_4")
@@ -193,7 +193,7 @@ end
 
 function dlg_15_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/brink_trudger/_exp03/exp03_rgn_greater_faydark/brink_trudger/brink_trudger012.mp3", "", "", 3911384586, 1778696172, Spawn)
 	AddConversationOption(conversation, "Okay, I'll be right back.", "dlg_15_5")
@@ -202,7 +202,7 @@ end
 
 function dlg_19_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/brink_trudger/_exp03/exp03_rgn_greater_faydark/brink_trudger/brink_trudger008.mp3", "", "", 1249335835, 2386333509, Spawn)
 	AddConversationOption(conversation, "Is there anything else I can help with?", "dlg_19_2")
@@ -212,7 +212,7 @@ end
 
 function dlg_19_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/brink_trudger/_exp03/exp03_rgn_greater_faydark/brink_trudger/brink_trudger010.mp3", "", "", 1214199522, 2851008750, Spawn)
 	AddConversationOption(conversation, "What kind of shells do you need?", "dlg_19_3")
@@ -222,7 +222,7 @@ end
 
 function dlg_19_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/brink_trudger/_exp03/exp03_rgn_greater_faydark/brink_trudger/brink_trudger011.mp3", "", "", 4145013832, 3563128686, Spawn)
 	AddConversationOption(conversation, "I'll get the shells for you.", "dlg_19_4")
@@ -231,7 +231,7 @@ end
 
 function dlg_19_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/brink_trudger/_exp03/exp03_rgn_greater_faydark/brink_trudger/brink_trudger012.mp3", "", "", 3911384586, 1778696172, Spawn)
 	AddConversationOption(conversation, "Okay, I'll be right back.", "dlg_19_5")

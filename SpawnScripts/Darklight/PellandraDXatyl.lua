@@ -25,7 +25,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
         if not QuestStepIsComplete(Spawn, ASolidifiedFront, 2) then
 			SetStepComplete(Spawn, ASolidifiedFront, 2)
@@ -85,7 +85,7 @@ end
 
 function dlg_0_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "pellandra_d_xatyl/darklight_wood/hates_envy/pellandra_revamp/pellandra003.mp3", "", "frustrated", 1298376887, 2297284297, Spawn)
 	AddConversationOption(conversation, "What is it you would have me do?", "dlg_0_2")
@@ -94,7 +94,7 @@ end
 
 function dlg_0_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "pellandra_d_xatyl/darklight_wood/hates_envy/pellandra_revamp/pellandra004.mp3", "", "", 4198693006, 595147579, Spawn)
 	AddConversationOption(conversation, "Yes, I will seal one of the rifts.", "QuestOffer_SealingTheRift")
@@ -108,7 +108,7 @@ end
 
 function dlg_1_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	AddConversationOption(conversation, "I will find it.")
 		StartConversation(conversation, NPC, Spawn, "Do not return until you have found the rift and sealed it!")
@@ -120,7 +120,7 @@ end
 
 function dlg_2_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	SetStepComplete(Spawn, SealingTheRift, 2)
 
@@ -131,7 +131,7 @@ end
 
 function dlg_2_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "pellandra_d_xatyl/darklight_wood/hates_envy/pellandra_revamp/pellandra009.mp3", "", "", 1573554820, 3218022167, Spawn)
 	AddConversationOption(conversation, "Tell me more.", "dlg_2_3")
@@ -140,7 +140,7 @@ end
 
 function dlg_2_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "pellandra_d_xatyl/darklight_wood/hates_envy/pellandra_revamp/pellandra010.mp3", "", "", 918403175, 3688051078, Spawn)
 	AddConversationOption(conversation, "I will collect sigils from the Sablevein pulverizers.", "QuestOffer_SearchingForSigils")
@@ -154,7 +154,7 @@ end
 
 function dlg_4_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	PlayFlavor(NPC, "pellandra_d_xatyl/darklight_wood/hates_envy/pellandra_revamp/pellandra016.mp3", "", "", 188105745, 1139692175, Spawn)
 	AddConversationOption(conversation, "I see. What can we do to stop them?", "dlg_4_2")
@@ -163,7 +163,7 @@ end
 
 function dlg_4_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	PlayFlavor(NPC, "pellandra_d_xatyl/darklight_wood/hates_envy/pellandra_revamp/pellandra017.mp3", "", "agree", 1551019218, 1492381224, Spawn)
 	AddConversationOption(conversation, "Nothing will stand in my way!", "dlg_4_5")
@@ -178,7 +178,7 @@ end
 
 function dlg_4_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	PlayFlavor(Spawn, "", "", "cheer", 0, 0, Player)
 	PlayFlavor(NPC, "pellandra_d_xatyl/darklight_wood/hates_envy/pellandra_revamp/pellandra018.mp3", "", "", 1441675499, 2064064965, Spawn)
@@ -188,7 +188,7 @@ end
 
 function dlg_4_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	PlayFlavor(NPC, "pellandra_d_xatyl/darklight_wood/hates_envy/pellandra_revamp/pellandra019.mp3", "", "", 1398439421, 3597583644, Spawn)
 	AddConversationOption(conversation, "I will put an end to the attacks!", "QuestOffer_ReclaimingTheSableveinTear")
@@ -202,7 +202,7 @@ end
 
 function dlg_5_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	AddConversationOption(conversation, "I will find the source of the attacks.")
 	StartConversation(conversation, NPC, Spawn, "Time is of the essence, " .. GetName(Spawn) .. ". You must continue your search at once!")
@@ -210,7 +210,7 @@ end
 
 function dlg_6_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	SetStepComplete(Spawn, SearchingForSigils, 2)
 	RemoveItem(Spawn, 11837)
@@ -226,7 +226,7 @@ end
 
 function dlg_6_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	PlayFlavor(NPC, "pellandra_d_xatyl/darklight_wood/hates_envy/pellandra_revamp/pellandra015.mp3", "", "", 1970700762, 2434868211, Spawn)
 	AddConversationOption(conversation, "What can we do to stop them?", "dlg_4_2")
@@ -236,7 +236,7 @@ end
 
 function dlg_7_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	SetStepComplete(Spawn, ReclaimingTheSableveinTear, 2)
 	
@@ -247,7 +247,7 @@ end
 
 function dlg_7_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	PlayFlavor(NPC, "pellandra_d_xatyl/darklight_wood/hates_envy/pellandra_revamp/pellandra024.mp3", "", "", 739852284, 4285882362, Spawn)
 	AddConversationOption(conversation, "What do you mean?", "dlg_7_3")
@@ -256,7 +256,7 @@ end
 
 function dlg_7_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "pellandra_d_xatyl/darklight_wood/hates_envy/pellandra_revamp/pellandra025.mp3", "", "", 360494739, 4156662992, Spawn)
 	AddConversationOption(conversation, "I will speak with her at once.", "QuestOffer_AnAuthorityOnHate")
@@ -276,7 +276,7 @@ end
 
 function dlg_8_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	PlayFlavor(Spawn, "", "", "no", 0, 0, Player)
 	PlayFlavor(NPC, "pellandra_d_xatyl/darklight_wood/hates_envy/pellandra_revamp/pellandra008.mp3", "", "", 4200285970, 1831158049, Spawn)

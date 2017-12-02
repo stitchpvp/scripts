@@ -22,7 +22,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 		PlayFlavor(NPC, "ceft_stoutarm/_exp03/exp03_rgn_greater_faydark/ceft_stoutarm/ceft_001.mp3", "", "", 3428054775, 3943106008, Spawn)
 	AddConversationOption(conversation, "Is everything okay?", "dlg_19_1")
@@ -32,7 +32,7 @@ end
 
 function dlg_19_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "ceft_stoutarm/_exp03/exp03_rgn_greater_faydark/ceft_stoutarm/ceft_002.mp3", "", "", 1222026654, 3497444691, Spawn)
 	AddConversationOption(conversation, "Do you want me to get you a stick?", "dlg_19_2")
@@ -42,7 +42,7 @@ end
 
 function dlg_19_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "ceft_stoutarm/_exp03/exp03_rgn_greater_faydark/ceft_stoutarm/ceft_003.mp3", "", "", 649655305, 3225332806, Spawn)
 	AddConversationOption(conversation, "I will find the most wicked tree in the faydark.", "dlg_19_3")

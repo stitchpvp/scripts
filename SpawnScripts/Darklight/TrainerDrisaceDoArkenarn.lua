@@ -22,7 +22,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 		PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_3_1007.mp3", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "What are Heroic Opportunities?", "dlg_22_1")
@@ -32,7 +32,7 @@ end
 
 function dlg_22_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Are Heroic Opportunities complicated?", "dlg_22_2")
@@ -42,7 +42,7 @@ end
 
 function dlg_22_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "So how does a Heroic Opportunity arise?", "dlg_22_3")
@@ -51,7 +51,7 @@ end
 
 function dlg_22_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Okay, that does sound easy. How do I begin a Heroic Opportunity?", "dlg_22_4")
@@ -61,7 +61,7 @@ end
 
 function dlg_22_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Can I trigger a Starter Chain whenever I want?", "dlg_22_5")
@@ -71,7 +71,7 @@ end
 
 function dlg_22_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "What happens when I trigger a Starter Chain?", "dlg_22_6")
@@ -80,7 +80,7 @@ end
 
 function dlg_22_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Are Heroic Opportunities only usable in groups?", "dlg_22_7")
@@ -90,7 +90,7 @@ end
 
 function dlg_22_7(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "How do I know what I should do to advance the Starter Chain?", "dlg_22_8")
@@ -100,7 +100,7 @@ end
 
 function dlg_22_8(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Use the spell or art that is blinking. That's all there is to it?", "dlg_22_9")
@@ -110,7 +110,7 @@ end
 
 function dlg_22_9(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Why does it trigger one of three?", "dlg_22_10")
@@ -119,7 +119,7 @@ end
 
 function dlg_22_10(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "What does the Combat Wheel tell me?", "dlg_22_11")
@@ -129,7 +129,7 @@ end
 
 function dlg_22_11(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "How can I tell the difference?", "dlg_22_12")
@@ -138,7 +138,7 @@ end
 
 function dlg_22_12(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "How long do I have to complete the Heroic Opportunity?", "dlg_22_13")
@@ -148,7 +148,7 @@ end
 
 function dlg_22_13(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "That sounds easy!", "dlg_22_14")
@@ -157,7 +157,7 @@ end
 
 function dlg_22_14(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Any other tricks I should know?", "dlg_22_15")
@@ -167,7 +167,7 @@ end
 
 function dlg_22_15(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Thank you for the information. I'll try Heroic Opportunities as soon as I can!", "dlg_22_16")

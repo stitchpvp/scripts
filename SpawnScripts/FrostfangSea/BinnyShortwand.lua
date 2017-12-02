@@ -29,7 +29,7 @@ function hailed(NPC, Spawn)
 end
 
 function IlluChat1(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	FaceTarget(NPC, Spawn)
 
 	AddConversationOption(conversation, "That's useful to know!", "IlluChat2")
@@ -37,7 +37,7 @@ function IlluChat1(NPC, Spawn)
 end
 
 function IlluChat2(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	FaceTarget(NPC, Spawn)
 
 	AddConversationOption(conversation, "That's interesting.", "IlluChat3")
@@ -45,7 +45,7 @@ function IlluChat2(NPC, Spawn)
 end
 
 function IlluChat3(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	FaceTarget(NPC, Spawn)
 
 	AddConversationOption(conversation, "Thank you for the advice.")

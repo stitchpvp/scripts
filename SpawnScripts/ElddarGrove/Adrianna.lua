@@ -15,7 +15,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 		PlayFlavor(NPC, "voiceover/english/merchant_adrianna/qey_elddar/merchantadrianna000.mp3", "", "", 2772064820, 4249063361, Spawn)
 	AddConversationOption(conversation, "No, I am good to go thanks. ", "dlg_9_1")
@@ -24,7 +24,7 @@ end
 
 function dlg_9_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/merchant_adrianna/qey_elddar/merchantadrianna000.mp3", "", "", 2772064820, 4249063361, Spawn)
 	AddConversationOption(conversation, "No, I am good to go thanks. ", "dlg_9_2")

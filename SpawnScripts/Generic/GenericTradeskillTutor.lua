@@ -50,7 +50,7 @@ end
 
 function CraftingTutorHail(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	if GetQuestStep(Spawn, HadAHammer) == 5 then
 		SetStepComplete(Spawn, HadAHammer, 5)
 		if not HasCompletedQuest(Spawn, ForgingAhead) then
@@ -121,7 +121,7 @@ end
 
 function TutChat1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "tradeskill_tutorial_master/tradeskill/tutorial/tradeskill_tutorial014.mp3", "", "", 423248729, 3231742282, Spawn)
 	AddConversationOption(conversation, "Yes please.", "TutChat2")
@@ -131,7 +131,7 @@ end
 
 function TutChat2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "Elm, tin, roots ... check.  And I'd like to learn more before I start, yes.", "TutChat3")
 	AddConversationOption(conversation, "No thanks, spare me the details, just tell me where to go.", "OfferForgingAhead")
@@ -141,7 +141,7 @@ end
 
 function TutChat3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "And what skills will I need?", "TutChat4")
 	StartConversation(conversation, NPC, Spawn, "There are a number of different crafting stations that can be used to make different items.  For example, you would use a forge to make metal armor, and a chemistry table to make potions.  The other crafting stations are:  the sewing table, the woodworking table, the sage's engraved desk, the stove & keg, and the jeweler's workbench.")
@@ -149,7 +149,7 @@ end
 
 function TutChat4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "bob_the_crafting_instructor/tradeskill/tutorial/tradeskill_tutorial011.mp3", "", "", 1844695369, 4279963855, Spawn)
 	AddConversationOption(conversation, "So I need to use these tradeskill arts while crafting?", "TutChat5")
@@ -158,7 +158,7 @@ end
 
 function TutChat5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "So what happens next?", "TutChat6")
 	StartConversation(conversation, NPC, Spawn, "That's right. If you mouse-over or examine the arts in your book, you should see what each of them do.  Three will add progress, and three will add durability.  When you're crafting you will want to be sure you know which ones add progress and which ones add durability. If you're having trouble maintaining durability, use all your durability arts all the time!  Or to speed up progress, use the progress arts nonstop.")
@@ -166,7 +166,7 @@ end
 
 function TutChat6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "Once I find the recipe I want to make, what then?", "TutChat7")
 	StartConversation(conversation, NPC, Spawn, "The first step in crafting anything is the recipe.  The recipe you select determines what you will create.  Open your recipe book from the main menu, or press N, to see yours.  If you're new to crafting it will be empty, but as you gain more recipes they will be listed here and you can use the Search box at the top of this window to easily find recipe names.  You can also create custom filters using the Edit button.  ")
@@ -174,7 +174,7 @@ end
 
 function TutChat7(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "I think I'm ready to give it a try.", "TutChat8")
 	StartConversation(conversation, NPC, Spawn, "In this window you would select the name of the recipe you wish to use and then click Create.  You will need to be near a crafting station of the appropriate type.  If you click on the crafting station directly, your recipe book will automatically filter to show you only the recipes you can make on that station.  Once you click Create, you will move to the Resource Window which shows you the list of ingredients that recipe requires.  If you have all those, you click Begin and crafting starts.")
@@ -182,7 +182,7 @@ end
 
 function TutChat8(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "How do I stop losing durability then?", "TutChat9")
 	StartConversation(conversation, NPC, Spawn, "I'd like you to make a candelabra for practice. While you craft it, I'd like you to pay attention to the blue and green bars in the middle area.  This shows you your progress (blue), and the durability (green) of the item you are creating.  The goal is to increase your progress without losing too much durability.  To create the item, you need to fill all four blue progress bars.  If you lose at least one full bar of durability, you will not be able to do this unless you can regain that durability again.   It is safest to keep your durability near maximum just in case of unexpected critical failures.")
@@ -190,7 +190,7 @@ end
 
 function TutChat9(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "It might be easier if I just try it out, can I give it a try now?", "OfferForgingAhead")
 	StartConversation(conversation, NPC, Spawn, "That's where the reaction arts I mentioned come in.  You can use these to add progress (blue) or durability (green). Mouse click these or press 1 through 6 on your keyboard.  You can use these skills proactively throughout crafting to influence the outcome - for example, use skills that add durability if your durability is dropping.  Every 4 seconds a crafting 'round' completes and you will see numbers indicating your overall progress and durability loss or gain for that round above the crafting station.  This is generally easier to see in third-person view (use your mouse wheel to scroll out).")
@@ -198,7 +198,7 @@ end
 
 function Tut2Chat1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	if not HasCompletedQuest(Spawn, ForgingAhead) then
 		SetStepComplete(Spawn, ForgingAhead, 2)
@@ -210,7 +210,7 @@ end
 
 function Tut2Chat2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "I didn't see any of that while making the candelabra...", "OfferCounteringProblems")
 	StartConversation(conversation, NPC, Spawn, "During the crafting process, you will sometimes see a warning icon appear in the area below the four progress bars.  The warning icon will match one of your reaction art icons, and will have a name indicating the type of danger. The crafter can correct these problems by ensuring the next reaction art they use matches the icon of the warning.  Successfully doing so will avoid bad things occurring (such as a loss of progress, or durability, or even injury to the crafter) and may also result in unusually good things happening (such as progress or durability gain, a skill bonus, or even the discovery of a rare harvest).")
@@ -218,7 +218,7 @@ end
 
 function Tut3Chat1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_2_1060.mp3", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Yes please.", "Tut3Chat2")
@@ -228,7 +228,7 @@ end
 
 function Tut3Chat2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "So what next?", "Tut3Chat3")
 	StartConversation(conversation, NPC, Spawn, "Well, let's see.  You've made a candelabra using the carpenter skills, and learned that carpenters make items that can be placed in houses.  Carpenters also make strong boxes for storage, and sales containers for selling items to others.  You've also made a bracelet: jewelers make jewelry like this, and they also make combat art upgrades for scout types.  ")
@@ -236,7 +236,7 @@ end
 
 function Tut3Chat3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "I'll be right back with that cider!", "OfferTutorialCook")
 	AddConversationOption(conversation, "Maybe later.")
@@ -245,7 +245,7 @@ end
 
 function Tut4Chat1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_2_1060.mp3", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "I'll do my best.", "OfferTutorialWeapons")
@@ -255,7 +255,7 @@ end
 
 function Tut5Chat1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_1_1060.mp3", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "I'll start now.", "OfferTutorialScrolls")
@@ -265,7 +265,7 @@ end
 
 function Tut6Chat1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_3_1060.mp3", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "On my way.", "OfferTutorialExperiments")
@@ -275,7 +275,7 @@ end
 
 function Tut7Chat1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_2_1060.mp3", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Coat and a backpack coming up.", "OfferTutorialOutfitting")
@@ -285,7 +285,7 @@ end
 
 function FinishedChat(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	PlayFlavor(NPC, "bob_the_crafting_instructor/tradeskill/tutorial/tradeskill_tutorial062.mp3", "", "", 2242637020, 2504678008, Spawn)
 	AddConversationOption(conversation, "Thank you.")
@@ -295,7 +295,7 @@ end
 
 function FinishedChat2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_2_1060.mp3", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "I have some questions about some of the stuff we already covered.", "RemindChat")
@@ -311,7 +311,7 @@ end
 
 function CommissionChat1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	PlayFlavor(NPC, "bob_the_crafting_instructor/tradeskill/tutorial/tradeskill_tutorial035.mp3", "", "", 2388752041, 1908343081, Spawn)
 	AddConversationOption(conversation, "How do I do it?", "CommissionChat2")
@@ -320,7 +320,7 @@ end
 
 function CommissionChat2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	PlayFlavor(NPC, "bob_the_crafting_instructor/tradeskill/tutorial/tradeskill_tutorial036.mp3", "", "", 2552516382, 2887530961, Spawn)
 	AddConversationOption(conversation, "So instead of targetting the crafting station I target the customer.", "CommissionChat3")
@@ -329,7 +329,7 @@ end
 
 function CommissionChat3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	PlayFlavor(NPC, "bob_the_crafting_instructor/tradeskill/tutorial/tradeskill_tutorial037.mp3", "", "", 691734143, 271413200, Spawn)
 	AddConversationOption(conversation, "And when he's provided everything we agree on?", "CommissionChat4")
@@ -338,7 +338,7 @@ end
 
 function CommissionChat4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	PlayFlavor(NPC, "bob_the_crafting_instructor/tradeskill/tutorial/tradeskill_tutorial038.mp3", "", "", 4067745103, 1643379768, Spawn)
 	AddConversationOption(conversation, "Thank you.", "FinishedChat2")
@@ -347,7 +347,7 @@ end
 
 function BookChat1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	PlayFlavor(NPC, "bob_the_crafting_instructor/tradeskill/tutorial/tradeskill_tutorial039.mp3", "", "", 3191451903, 1275472191, Spawn)
 	AddConversationOption(conversation, "And they'll sell all my recipes?", "BookChat2")
@@ -356,7 +356,7 @@ end
 
 function BookChat2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	PlayFlavor(NPC, "bob_the_crafting_instructor/tradeskill/tutorial/tradeskill_tutorial040.mp3", "", "", 2091121926, 301972007, Spawn)
 	AddConversationOption(conversation, "That's it? " .. '"Essentials" books from the Crafting Trainer and "Advanced" books found out adventuring?', "BookChat3")
@@ -365,7 +365,7 @@ end
 
 function BookChat3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	PlayFlavor(NPC, "bob_the_crafting_instructor/tradeskill/tutorial/tradeskill_tutorial041.mp3", "", "", 1044382648, 4108876671, Spawn)
 	AddConversationOption(conversation, "Thank you.", "FinishedChat2")
@@ -374,7 +374,7 @@ end
 
 function ClassChat1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	PlayFlavor(NPC, "bob_the_crafting_instructor/tradeskill/tutorial/tradeskill_tutorial042.mp3", "", "", 1622424773, 1570512432, Spawn)
 	AddConversationOption(conversation, "What are craftsmen?", "ClassChat2")
@@ -386,7 +386,7 @@ end
 
 function ClassChat2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	PlayFlavor(NPC, "bob_the_crafting_instructor/tradeskill/tutorial/tradeskill_tutorial043.mp3", "", "", 4227555374, 506326062, Spawn)
 	AddConversationOption(conversation, "I see.", "ClassChat1")
@@ -395,7 +395,7 @@ end
 
 function ClassChat3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	PlayFlavor(NPC, "bob_the_crafting_instructor/tradeskill/tutorial/tradeskill_tutorial044.mp3", "", "", 2305144148, 2262225750, Spawn)
 	AddConversationOption(conversation, "I see.", "ClassChat1")
@@ -404,7 +404,7 @@ end
 
 function ClassChat4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	PlayFlavor(NPC, "bob_the_crafting_instructor/tradeskill/tutorial/tradeskill_tutorial045.mp3", "", "", 147861749, 3375095704, Spawn)
 	AddConversationOption(conversation, "I see.", "ClassChat1")
@@ -413,7 +413,7 @@ end
 
 function TypeChat1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	PlayFlavor(NPC, "bob_the_crafting_instructor/tradeskill/tutorial/tradeskill_tutorial046.mp3", "", "", 152150944, 1842039471, Spawn)
 	AddConversationOption(conversation, "Then what?", "TypeChat2")
@@ -422,7 +422,7 @@ end
 
 function TypeChat2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	PlayFlavor(NPC, "bob_the_crafting_instructor/tradeskill/tutorial/tradeskill_tutorial047.mp3", "", "", 2169201999, 3543807969, Spawn)
 	AddConversationOption(conversation, "What if I change my mind?", "TypeChat3")
@@ -431,7 +431,7 @@ end
 
 function TypeChat3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	PlayFlavor(NPC, "bob_the_crafting_instructor/tradeskill/tutorial/tradeskill_tutorial048.mp3", "", "", 2654967587, 4062785753, Spawn)
 	AddConversationOption(conversation, "Thank you.", "FinishedChat2")
@@ -440,7 +440,7 @@ end
 
 function SellChat1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	PlayFlavor(NPC, "bob_the_crafting_instructor/tradeskill/tutorial/tradeskill_tutorial049.mp3", "", "", 2757229171, 476797749, Spawn)
 	AddConversationOption(conversation, "What are the specialized containers for?", "SellChat2")
@@ -449,7 +449,7 @@ end
 
 function SellChat2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	PlayFlavor(NPC, "bob_the_crafting_instructor/tradeskill/tutorial/tradeskill_tutorial050.mp3", "", "", 3628788902, 1698576976, Spawn)
 	AddConversationOption(conversation, "How do I get my money?", "SellChat3")
@@ -458,7 +458,7 @@ end
 
 function SellChat3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	PlayFlavor(NPC, "bob_the_crafting_instructor/tradeskill/tutorial/tradeskill_tutorial051.mp3", "", "", 2662949569, 2327521387, Spawn)
 	AddConversationOption(conversation, "Thank you.", "FinishedChat2")
@@ -467,7 +467,7 @@ end
 
 function SecChat1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	PlayFlavor(NPC, "bob_the_crafting_instructor/tradeskill/tutorial/tradeskill_tutorial052.mp3", "", "", 3509946126, 2374520501, Spawn)
 	AddConversationOption(conversation, "What's tinkering?", "SecChat2")
@@ -479,7 +479,7 @@ end
 
 function SecChat2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	PlayFlavor(NPC, "bob_the_crafting_instructor/tradeskill/tutorial/tradeskill_tutorial053.mp3", "", "", 2218048793, 640438305, Spawn)
 	AddConversationOption(conversation, "I see.", "SecChat1")
@@ -488,7 +488,7 @@ end
 
 function SecChat3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	PlayFlavor(NPC, "bob_the_crafting_instructor/tradeskill/tutorial/tradeskill_tutorial054.mp3", "", "", 2713361023, 2617196209, Spawn)
 	AddConversationOption(conversation, "I see.", "SecChat1")
@@ -497,7 +497,7 @@ end
 
 function SecChat4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	PlayFlavor(NPC, "bob_the_crafting_instructor/tradeskill/tutorial/tradeskill_tutorial055.mp3", "", "", 1159059080, 4034407978, Spawn)
 	AddConversationOption(conversation, "I see.", "SecChat1")
@@ -506,7 +506,7 @@ end
 
 function RemindChat(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	PlayFlavor(NPC, "bob_the_crafting_instructor/tradeskill/tutorial/tradeskill_tutorial063.mp3", "", "", 979701411, 1286564366, Spawn)
 	AddConversationOption(conversation, "Tell me again where I can find harvests to craft with?", "HarvestChat")
@@ -520,7 +520,7 @@ end
 
 function HarvestChat(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	PlayFlavor(NPC, "bob_the_crafting_instructor/tradeskill/tutorial/tradeskill_tutorial032.mp3", "", "", 1760845253, 634861670, Spawn)
 	AddConversationOption(conversation, "Thanks.", "RemindChat")
@@ -529,7 +529,7 @@ end
 
 function ReactionChat(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	PlayFlavor(NPC, "bob_the_crafting_instructor/tradeskill/tutorial/tradeskill_tutorial055.mp3", "", "", 1159059080, 4034407978, Spawn)
 	AddConversationOption(conversation, "And how do they work?", "ReactionChat2")
@@ -538,7 +538,7 @@ end
 
 function ReactionChat2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	AddConversationOption(conversation, "Thank you.", "RemindChat")
 	StartConversation(conversation, NPC, Spawn, "For any recipe, you will have six tradeskill arts that you can use if you want.  If you mouse-over or examine the arts in your book, you should see what each of them do.  Three will add progress, and three will add durability.  There is also a cost associated with each.  When you open up the crafting window, the correct skills you need will automatically appear at the bottom.  Or, if you prefer, you can drag the ones you want onto a custom hotbar.  Either way, when you're crafting you can click on these arts to add progress or durability to the item you are creating.")
@@ -546,7 +546,7 @@ end
 
 function WindowChat(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	AddConversationOption(conversation, "Ok, I see the recipe list, what's next?", "WindowChat2")
 	StartConversation(conversation, NPC, Spawn, "The first step in crafting anything is the recipe.  The recipe you select determines what you will create.  Open your recipe book from the main menu, or press N, to see yours.  If you're new to crafting it will be empty, but as you gain more recipes they will be listed here and you can use the Search box at the top of this window to easily find recipe names.  You can also create custom filters using the Edit button.")
@@ -554,7 +554,7 @@ end
 
 function WindowChat2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	PlayFlavor(NPC, "bob_the_crafting_instructor/tradeskill/tutorial/tradeskill_tutorial031.mp3", "", "", 298839722, 3210850444, Spawn)
 	AddConversationOption(conversation, "Thank you.", "RemindChat")
@@ -563,7 +563,7 @@ end
 
 function CraftChat(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	AddConversationOption(conversation, "And what then?", "CraftChat2")
 	StartConversation(conversation, NPC, Spawn, "While you craft an item, pay attention to the four blue and green horizontal bars in the middle area.  This shows you your progress (blue), and the durability (green) of the item you are creating.  The reaction arts you'll need are found at the bottom of this window.")
@@ -571,7 +571,7 @@ end
 
 function CraftChat2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	AddConversationOption(conversation, "Thank you.", "RemindChat")
 	StartConversation(conversation, NPC, Spawn, "The goal is to increase your progress without losing too much durability.  To create the item, you need to fill all four blue progress bars.  If you lose too much durability (green), you will not be able to do this.  Use your reaction arts to add durability if you lose too much.  If you have plenty of durability, you can use your arts to add progress so you get a finished product faster.")
@@ -579,7 +579,7 @@ end
 
 function RoundChat(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	PlayFlavor(NPC, "bob_the_crafting_instructor/tradeskill/tutorial/tradeskill_tutorial033.mp3", "", "", 3851565796, 3556907959, Spawn)
 	AddConversationOption(conversation, "Okay, let's assume I do that, or there was no warning ... then what?", "RoundChat2")
@@ -588,7 +588,7 @@ end
 
 function RoundChat2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	PlayFlavor(NPC, "bob_the_crafting_instructor/tradeskill/tutorial/tradeskill_tutorial034.mp3", "", "", 1493508972, 307622314, Spawn)
 	AddConversationOption(conversation, "Thank you.", "RemindChat")

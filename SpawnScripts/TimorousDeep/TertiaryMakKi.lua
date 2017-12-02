@@ -20,7 +20,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	if HasCompletedQuest(Spawn, QUEST_1) then
 		if HasCompletedQuest(Spawn, QUEST_2) then
@@ -69,7 +69,7 @@ function dlg_31_1(NPC, Spawn)
 	end
 	
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/rok_questvo/tertiary_mak_ki/_exp04/exp04_rgn_timorous_deep/chrykori_tie/makki/makki003.mp3", "", "", 2020057663, 3501237642, Spawn)
 	AddConversationOption(conversation, "All right, I'll deliver them.", "OfferQuest2")

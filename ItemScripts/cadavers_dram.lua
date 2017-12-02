@@ -3,7 +3,7 @@
 	Script Purpose	:	cavader's dram
 	Script Author	:	theFoof
 	Script Date		:	2013.7.24
-	Script Notes	:	
+	Script Notes	:
 --]]
 
 local BecomingOrcbane = 81

@@ -35,7 +35,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	if GetQuestStep(Spawn, GoodDistraction) == 4 then
 		PlayFlavor(NPC, "", "Help me, please!", "", 0, 0, Spawn)
 	elseif GetQuestStep(Spawn, GoodDistraction) == 5 then
@@ -48,7 +48,7 @@ end
 function Quest1Chat_1(NPC, Spawn)
 	AddTimer(NPC, 2000, "HideSpawn", 1, Spawn)	
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "ordin_sleetfoot/halas/cragged_spine/ordin_sleetfoot_two002.mp3", "", "", 2823426244, 1105831845, Spawn)
 	AddConversationOption(conversation, "Very well.  Good luck.")

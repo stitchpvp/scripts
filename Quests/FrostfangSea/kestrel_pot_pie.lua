@@ -18,7 +18,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(QuestGiver, "alice_swamprunner/halas/new_halas/alice_swamprunner/alice_swamprunner_006.mp3", "", "", 2612887763, 84831884, Player)
 	AddConversationOption(conversation, "I shall return to you Alice with the meat and shrooms.")

@@ -41,7 +41,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	if not HasCompletedQuest(Spawn, NothingWaste) and not HasQuest(Spawn, NothingWaste) then
 	    PlayFlavor(NPC, "thirin_veliumdelver/halas/thirin_veliumdelver/thirin_veliumdelver001.mp3", "", "", 3958889097, 419690768, Spawn)
 	    AddConversationOption(conversation, "Would you happen to be Thirin?  I heard you might need help here.", "Quest1Chat_1")
@@ -89,7 +89,7 @@ end
 
 function Quest1Chat_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "thirin_veliumdelver/halas/thirin_veliumdelver/thirin_veliumdelver002.mp3", "", "", 1122391828, 935093555, Spawn)
 	AddConversationOption(conversation, "Do you have work for me or not?", "Quest1Chat_2")
@@ -98,7 +98,7 @@ end
 
 function Quest1Chat_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "thirin_veliumdelver/halas/thirin_veliumdelver/thirin_veliumdelver003.mp3", "", "", 1628251409, 1305821623, Spawn)
 	AddConversationOption(conversation, "Good, just tell me what needs to be done.", "Quest1Chat_3")
@@ -107,7 +107,7 @@ end
 
 function Quest1Chat_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "thirin_veliumdelver/halas/thirin_veliumdelver/thirin_veliumdelver004.mp3", "", "", 1710386030, 2555471318, Spawn)
 	AddConversationOption(conversation, "So I am to return to The Great Shelf for weapons and armor?", "Quest1Chat_4")
@@ -116,7 +116,7 @@ end
 
 function Quest1Chat_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "thirin_veliumdelver/halas/thirin_veliumdelver/thirin_veliumdelver006.mp3", "", "", 807741417, 1254276267, Spawn)
 	AddConversationOption(conversation, "Alright, Thirin.  I'll help you.", "OfferNothingWaste")
@@ -126,7 +126,7 @@ end
 
 function Quest2Chat_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "thirin_veliumdelver/halas/thirin_veliumdelver/thirin_veliumdelver009.mp3", "", "", 3384327104, 2564907110, Spawn)
 	AddConversationOption(conversation, "Surely you can hold them here, now that you are better equipped.", "Quest2Chat_2")
@@ -135,7 +135,7 @@ end
 
 function Quest2Chat_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "thirin_veliumdelver/halas/thirin_veliumdelver/thirin_veliumdelver010.mp3", "", "", 684443689, 2994100029, Spawn)
 	AddConversationOption(conversation, "Thirin, your troops need you here.  Morale is often frail, supported by a strong foundation.  You are that foundation.  ", "Quest2Chat_3")
@@ -144,7 +144,7 @@ end
 
 function Quest2Chat_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "thirin_veliumdelver/halas/thirin_veliumdelver/thirin_veliumdelver011.mp3", "", "", 4204960887, 1557606971, Spawn)
 	AddConversationOption(conversation, "I will leave at once for the isle.  I won't let them take the beach.", "OfferRoughingReinforcements")
@@ -154,7 +154,7 @@ end
 
 function Quest3Chat_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "thirin_veliumdelver/halas/thirin_veliumdelver/thirin_veliumdelver014.mp3", "", "", 6970253, 3066757715, Spawn)
 	AddConversationOption(conversation, "There you are, I hope it will be useful.", "Quest3Chat_2")
@@ -163,7 +163,7 @@ end
 
 function Quest3Chat_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "thirin_veliumdelver/halas/thirin_veliumdelver/thirin_veliumdelver015.mp3", "", "", 3051702043, 2201190917, Spawn)
 	AddConversationOption(conversation, "It's good we are in possession of this then.  I am sure I can find a Ry'Gorr to use this on.", "OfferThroughEyes")
@@ -173,7 +173,7 @@ end
 
 function Quest4Chat_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "thirin_veliumdelver/halas/thirin_veliumdelver/thirin_veliumdelver018.mp3", "", "", 3389054723, 425793469, Spawn)
 	AddConversationOption(conversation, "I haven't a clue, but I intend to find out.", "Quest4Chat_2")
@@ -182,7 +182,7 @@ end
 
 function Quest4Chat_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "thirin_veliumdelver/halas/thirin_veliumdelver/thirin_veliumdelver020.mp3", "", "", 3456248509, 1625770921, Spawn)
 	AddConversationOption(conversation, "That's awesome!", "OfferBelowWaves")
@@ -191,7 +191,7 @@ end
 
 function Quest5Chat_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "thirin_veliumdelver/halas/thirin_veliumdelver/thirin_veliumdelver022.mp3", "", "", 4095447714, 560323533, Spawn)
 	AddConversationOption(conversation, "Before we travel below, know I have found some sort of cave-in.  It looks to have been recently built by the orcs, though I know not for what purpose.  It's very strange.", "Quest5Chat_2")
@@ -200,7 +200,7 @@ end
 
 function Quest5Chat_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "thirin_veliumdelver/halas/thirin_veliumdelver/thirin_veliumdelver023.mp3", "", "", 1522066613, 3536237484, Spawn)
 	AddConversationOption(conversation, "See you below then.")

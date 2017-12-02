@@ -12,7 +12,7 @@
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(QuestGiver, "blorpisa_bogchild/halas/gwenevyns_cove/blorpisa_bogchild/blorpisa_bogchild_049.mp3", "", "", 3167062203, 1810444442, Player)
 	AddConversationOption(conversation, "I shall return to you once I have gathered the ice lilies.")

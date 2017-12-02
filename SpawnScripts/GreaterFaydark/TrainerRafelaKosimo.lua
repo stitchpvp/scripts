@@ -22,7 +22,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 		PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_rafela_kosimo/_exp03/exp03_cty_kelethin/tutorials/qst_rafela/qst_rafela001.mp3", "", "", 369190615, 678098833, Spawn)
 	AddConversationOption(conversation, "Tell me what my physical attributes do.", "dlg_56_1")
@@ -34,7 +34,7 @@ end
 
 function dlg_56_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_rafela_kosimo/_exp03/exp03_cty_kelethin/tutorials/qst_rafela/qst_rafela002.mp3", "", "", 269298887, 2860978242, Spawn)
 	AddConversationOption(conversation, "Tell me about Agility.", "dlg_56_2")
@@ -46,7 +46,7 @@ end
 
 function dlg_56_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_rafela_kosimo/_exp03/exp03_cty_kelethin/tutorials/qst_rafela/qst_rafela003.mp3", "", "", 618428185, 2242815487, Spawn)
 	AddConversationOption(conversation, "Tell me about Stamina.", "dlg_56_3")
@@ -58,7 +58,7 @@ end
 
 function dlg_56_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_rafela_kosimo/_exp03/exp03_cty_kelethin/tutorials/qst_rafela/qst_rafela004.mp3", "", "", 3361827642, 1990974736, Spawn)
 	AddConversationOption(conversation, "Tell me about Intelligence.", "dlg_56_4")
@@ -70,7 +70,7 @@ end
 
 function dlg_56_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_rafela_kosimo/_exp03/exp03_cty_kelethin/tutorials/qst_rafela/qst_rafela005.mp3", "", "", 1693600094, 3506813775, Spawn)
 	AddConversationOption(conversation, "Tell me about Wisdom.", "dlg_56_5")
@@ -82,7 +82,7 @@ end
 
 function dlg_56_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_rafela_kosimo/_exp03/exp03_cty_kelethin/tutorials/qst_rafela/qst_rafela006.mp3", "", "", 2596932055, 833533845, Spawn)
 	AddConversationOption(conversation, "How do I view my physical attributes?", "dlg_56_6")
@@ -93,7 +93,7 @@ end
 
 function dlg_56_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_rafela_kosimo/_exp03/exp03_cty_kelethin/tutorials/qst_rafela/qst_rafela007.mp3", "", "", 3801545950, 4239189434, Spawn)
 	AddConversationOption(conversation, "Tell me what my physical attributes do.", "dlg_56_7")
@@ -104,7 +104,7 @@ end
 
 function dlg_56_7(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_rafela_kosimo/_exp03/exp03_cty_kelethin/tutorials/qst_rafela/qst_rafela002.mp3", "", "", 269298887, 2860978242, Spawn)
 	AddConversationOption(conversation, "Tell me about Agility.", "dlg_56_8")
@@ -116,7 +116,7 @@ end
 
 function dlg_56_8(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_rafela_kosimo/_exp03/exp03_cty_kelethin/tutorials/qst_rafela/qst_rafela007.mp3", "", "", 3801545950, 4239189434, Spawn)
 	AddConversationOption(conversation, "Tell me what my physical attributes do.")
@@ -127,7 +127,7 @@ end
 
 function dlg_56_9(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_rafela_kosimo/_exp03/exp03_cty_kelethin/tutorials/qst_rafela/qst_rafela008.mp3", "", "", 2282437179, 3119891904, Spawn)
 	AddConversationOption(conversation, "Are there other ways?")
@@ -137,7 +137,7 @@ end
 
 function dlg_56_10(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_rafela_kosimo/_exp03/exp03_cty_kelethin/tutorials/qst_rafela/qst_rafela009.mp3", "", "", 1243763931, 281213796, Spawn)
 	AddConversationOption(conversation, "Tell me what my physical attributes do.", "dlg_56_11")
@@ -148,7 +148,7 @@ end
 
 function dlg_56_11(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_rafela_kosimo/_exp03/exp03_cty_kelethin/tutorials/qst_rafela/qst_rafela007.mp3", "", "", 3801545950, 4239189434, Spawn)
 	AddConversationOption(conversation, "Tell me what my physical attributes do.")
@@ -159,7 +159,7 @@ end
 
 function dlg_56_12(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_rafela_kosimo/_exp03/exp03_cty_kelethin/tutorials/qst_rafela/qst_rafela002.mp3", "", "", 269298887, 2860978242, Spawn)
 	AddConversationOption(conversation, "Tell me about Agility.", "dlg_56_13")
@@ -171,7 +171,7 @@ end
 
 function dlg_56_13(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_rafela_kosimo/_exp03/exp03_cty_kelethin/tutorials/qst_rafela/qst_rafela007.mp3", "", "", 3801545950, 4239189434, Spawn)
 	AddConversationOption(conversation, "Tell me what my physical attributes do.")

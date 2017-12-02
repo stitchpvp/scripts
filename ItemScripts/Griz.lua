@@ -8,7 +8,7 @@
 local SometimesKnut = 84
 
 function GrizChat1_1(Item, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	AddConversationOption(conversation, "I will never doubt him again.")
 	StartDialogConversation(conversation, 4, Item, Spawn, "Yes.  Griz real.  Knut's friend.")
 end

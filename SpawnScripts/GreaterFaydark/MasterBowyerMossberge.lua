@@ -22,7 +22,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 		PlayFlavor(NPC, "master_bowyer_mossberge/_exp03/exp03_rgn_greater_faydark/master_bowyer_mossberge/master_bowyer_mossberge001.mp3", "", "", 3127429571, 2993577902, Spawn)
 	AddConversationOption(conversation, "Who are the Faydark's Champions?", "dlg_83_1")
@@ -39,7 +39,7 @@ end
 
 function dlg_83_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "master_bowyer_mossberge/_exp03/exp03_rgn_greater_faydark/master_bowyer_mossberge/master_bowyer_mossberge002.mp3", "", "", 4179297404, 3815097672, Spawn)
 	AddConversationOption(conversation, "What happened to them?", "dlg_83_2")
@@ -48,7 +48,7 @@ end
 
 function dlg_83_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "master_bowyer_mossberge/_exp03/exp03_rgn_greater_faydark/master_bowyer_mossberge/master_bowyer_mossberge003.mp3", "", "", 3846923539, 1035605128, Spawn)
 	AddConversationOption(conversation, "Did they all die in the siege?", "dlg_83_3")
@@ -57,7 +57,7 @@ end
 
 function dlg_83_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "master_bowyer_mossberge/_exp03/exp03_rgn_greater_faydark/master_bowyer_mossberge/master_bowyer_mossberge004.mp3", "", "", 3957751629, 1890990204, Spawn)
 	AddConversationOption(conversation, "What was their mission?", "dlg_83_4")
@@ -66,7 +66,7 @@ end
 
 function dlg_83_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "master_bowyer_mossberge/_exp03/exp03_rgn_greater_faydark/master_bowyer_mossberge/master_bowyer_mossberge005.mp3", "", "", 2721196409, 2451619839, Spawn)
 	AddConversationOption(conversation, "I understand.  Thanks for the story.", "dlg_83_5")
@@ -76,7 +76,7 @@ end
 
 function dlg_84_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "master_bowyer_mossberge/_exp03/exp03_rgn_greater_faydark/master_bowyer_mossberge/master_bowyer_mossberge002.mp3", "", "", 4179297404, 3815097672, Spawn)
 	AddConversationOption(conversation, "What happened to them?", "dlg_84_2")
@@ -85,7 +85,7 @@ end
 
 function dlg_84_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "master_bowyer_mossberge/_exp03/exp03_rgn_greater_faydark/master_bowyer_mossberge/master_bowyer_mossberge003.mp3", "", "", 3846923539, 1035605128, Spawn)
 	AddConversationOption(conversation, "Did they all die in the siege?", "dlg_84_3")
@@ -94,7 +94,7 @@ end
 
 function dlg_84_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "master_bowyer_mossberge/_exp03/exp03_rgn_greater_faydark/master_bowyer_mossberge/master_bowyer_mossberge004.mp3", "", "", 3957751629, 1890990204, Spawn)
 	AddConversationOption(conversation, "What was their mission?", "dlg_84_4")
@@ -103,7 +103,7 @@ end
 
 function dlg_84_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "master_bowyer_mossberge/_exp03/exp03_rgn_greater_faydark/master_bowyer_mossberge/master_bowyer_mossberge005.mp3", "", "", 2721196409, 2451619839, Spawn)
 	AddConversationOption(conversation, "I understand.  Thanks for the story.", "dlg_84_5")

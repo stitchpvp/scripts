@@ -25,7 +25,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 
 	-- She'll say this hail response once you finish her quests
@@ -69,7 +69,7 @@ end
 
 function dlg_6_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/ami_augren/_exp03/exp03_rgn_greater_faydark/ami_augren/ami_augren002.mp3", "", "", 3768392039, 1880249670, Spawn)
 	AddConversationOption(conversation, "I'll get rid of them for you.... just calm down.", "dlg_6_2")
@@ -79,7 +79,7 @@ end
 
 function dlg_6_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/ami_augren/_exp03/exp03_rgn_greater_faydark/ami_augren/ami_augren003.mp3", "", "", 240117721, 1491988690, Spawn)
 	AddConversationOption(conversation, "I'll take care of them.", "dlg_6_3")
@@ -88,7 +88,7 @@ end
 
 function dlg_8_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/ami_augren/_exp03/exp03_rgn_greater_faydark/ami_augren/ami_augren007.mp3", "", "", 2278432854, 2823393532, Spawn)
 	AddConversationOption(conversation, "Oh no... what now?", "dlg_8_2")
@@ -97,7 +97,7 @@ end
 
 function dlg_8_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/ami_augren/_exp03/exp03_rgn_greater_faydark/ami_augren/ami_augren008.mp3", "", "", 392334320, 811829906, Spawn)
 	AddConversationOption(conversation, "Calm down, calm down.  It's just a button.", "dlg_8_3")
@@ -106,7 +106,7 @@ end
 
 function dlg_8_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/ami_augren/_exp03/exp03_rgn_greater_faydark/ami_augren/ami_augren009.mp3", "", "", 4091874190, 3432128478, Spawn)
 	AddConversationOption(conversation, "Okay, just calm down.", "dlg_8_4")
@@ -116,7 +116,7 @@ end
 
 function dlg_8_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/ami_augren/_exp03/exp03_rgn_greater_faydark/ami_augren/ami_augren010.mp3", "", "", 3660711041, 3242516728, Spawn)
 	AddConversationOption(conversation, "I will.", "dlg_8_5")
@@ -125,7 +125,7 @@ end
 
 function dlg_9_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/ami_augren/_exp03/exp03_rgn_greater_faydark/ami_augren/ami_augren002.mp3", "", "", 3768392039, 1880249670, Spawn)
 	AddConversationOption(conversation, "I'll get rid of them for you.... just calm down.", "dlg_9_2")
@@ -135,7 +135,7 @@ end
 
 function dlg_9_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/ami_augren/_exp03/exp03_rgn_greater_faydark/ami_augren/ami_augren003.mp3", "", "", 240117721, 1491988690, Spawn)
 	AddConversationOption(conversation, "I'll take care of them.", "dlg_9_3")
@@ -144,7 +144,7 @@ end
 
 function dlg_10_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/ami_augren/_exp03/exp03_rgn_greater_faydark/ami_augren/ami_augren006.mp3", "", "", 198532712, 1197028678, Spawn)
 	AddConversationOption(conversation, "Yes... I can tell.", "dlg_10_2")
@@ -153,7 +153,7 @@ end
 
 function dlg_10_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/ami_augren/_exp03/exp03_rgn_greater_faydark/ami_augren/ami_augren007.mp3", "", "", 2278432854, 2823393532, Spawn)
 	AddConversationOption(conversation, "Oh no... what now?", "dlg_10_3")
@@ -162,7 +162,7 @@ end
 
 function dlg_10_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/ami_augren/_exp03/exp03_rgn_greater_faydark/ami_augren/ami_augren008.mp3", "", "", 392334320, 811829906, Spawn)
 	AddConversationOption(conversation, "Calm down, calm down.  It's just a button.", "dlg_10_4")
@@ -171,7 +171,7 @@ end
 
 function dlg_10_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/ami_augren/_exp03/exp03_rgn_greater_faydark/ami_augren/ami_augren009.mp3", "", "", 4091874190, 3432128478, Spawn)
 	AddConversationOption(conversation, "Okay, just calm down.", "dlg_10_5")
@@ -181,7 +181,7 @@ end
 
 function dlg_10_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/ami_augren/_exp03/exp03_rgn_greater_faydark/ami_augren/ami_augren010.mp3", "", "", 3660711041, 3242516728, Spawn)
 	AddConversationOption(conversation, "I will.", "dlg_10_6")
@@ -190,7 +190,7 @@ end
 
 function dlg_12_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/ami_augren/_exp03/exp03_rgn_greater_faydark/ami_augren/ami_augren012.mp3", "", "", 645889165, 2057650400, Spawn)
 	AddConversationOption(conversation, "You are welcome, Ami.  Now mind your mother.", "dlg_12_2")
@@ -199,7 +199,7 @@ end
 
 function dlg_12_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/ami_augren/_exp03/exp03_rgn_greater_faydark/ami_augren/ami_augren013.mp3", "", "", 349671317, 2037979122, Spawn)
 	AddConversationOption(conversation, "Have fun, Ami.", "dlg_12_3")
@@ -208,7 +208,7 @@ end
 
 function dlg_14_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/ami_augren/_exp03/exp03_rgn_greater_faydark/ami_augren/ami_augren012.mp3", "", "", 645889165, 2057650400, Spawn)
 	AddConversationOption(conversation, "You are welcome, Ami.  Now mind your mother.", "dlg_14_2")
@@ -217,7 +217,7 @@ end
 
 function dlg_14_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/ami_augren/_exp03/exp03_rgn_greater_faydark/ami_augren/ami_augren013.mp3", "", "", 349671317, 2037979122, Spawn)
 	AddConversationOption(conversation, "Have fun, Ami.", "dlg_14_3")

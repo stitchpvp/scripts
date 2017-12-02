@@ -20,7 +20,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	if HasCompletedQuest(Spawn, QUEST_1) then
 		if HasCompletedQuest(Spawn, QUEST_2) then
@@ -50,7 +50,7 @@ end
 
 function dlg_13_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "Of course I can. I said I was a problem solver, didn't I?", "dlg_13_2")
 	AddConversationOption(conversation, "Not really... I've got too many other things to do. Maybe some other time.")
@@ -59,7 +59,7 @@ end
 
 function dlg_13_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "Sounds like an easy job.", "OfferQuest1")
 	StartConversation(conversation, NPC, Spawn, "Okay, here's the deal. The guy is a vagrant who lives out in the ruins, right?  We want to send the message that no one messes with us. You need to head south of here and do some dirty work to his buddies, understand?")
@@ -83,7 +83,7 @@ function dlg_23_1(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_1, 2)
 	
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "I told you... I'm a problem solver.")
 	StartConversation(conversation, NPC, Spawn, "I knew you'd take care of 'em! Good show! Oh, and here's a bit-o-coin for all your hard work. Heh, heh.")
@@ -102,7 +102,7 @@ end
 
 function dlg_24_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "As long as you have the money, I'm willing to do it.", "dlg_24_2")
 	AddConversationOption(conversation, "Sorry... I don't work for lazy people... or cowards.")
@@ -111,7 +111,7 @@ end
 
 function dlg_24_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "Don't worry... I'll handle it.", "OfferQuest2")
 	StartConversation(conversation, NPC, Spawn, "That's what I like to hear!  Remember that dirty vagrant you delivered the message to?  Rumor has it he's hiding among rogues and scoundrels from the other districts -- a gang called the Giantslayers.  And his ... brethren ... have gotten their feathers all ruffled and are planning to come here to ... pay court ... if you understand me.  They want to send a message to their leader. Now, I enjoy a good tussle as much as anyone, of course, but, uh ... we don't want to rob you of an opportunity to prove your fighting skills. So, why don't you go to the Giantslayers and tan their mangy hides for us?")
@@ -135,7 +135,7 @@ function dlg_34_1(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_2, 2)
 	
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "Maybe I might, maybe not. We'll see what my schedule is like.")
 	StartConversation(conversation, NPC, Spawn, "I knew you'd take care of 'em!  Good show! Oh, and here's a bit-o-coin for all your hard work.  Heh, heh.")

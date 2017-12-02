@@ -17,7 +17,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	if HasQuest(Spawn, TrustIssues) and not QuestStepIsComplete(Spawn, TrustIssues, 1) then
 		PlayFlavor(NPC, "blibba_nugrud/halas/new_halas_guard_house/blibba_nugrud001.mp3", "", "", 1692822878, 2906055751, Spawn)
@@ -33,7 +33,7 @@ end
 
 function Quest1Chat_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "blibba_nugrud/halas/new_halas_guard_house/blibba_nugrud004.mp3", "", "", 2666827594, 1649429363, Spawn)
 	AddConversationOption(conversation, "Why did you come to Erollis?", "Quest1Chat_2")
@@ -43,7 +43,7 @@ end
 
 function Quest1Chat_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "blibba_nugrud/halas/new_halas_guard_house/blibba_nugrud006.mp3", "", "", 4224849804, 392144788, Spawn)
 	AddConversationOption(conversation, "When did this happen?", "Quest1Chat_3")
@@ -53,7 +53,7 @@ end
 
 function Quest1Chat_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "blibba_nugrud/halas/new_halas_guard_house/blibba_nugrud007.mp3", "", "", 1546450602, 2461406794, Spawn)
 	AddConversationOption(conversation, "Can you explain that further?", "Quest1Chat_4")
@@ -65,7 +65,7 @@ end
 
 function Quest1Chat_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "blibba_nugrud/halas/new_halas_guard_house/blibba_nugrud008.mp3", "", "", 3444575982, 3490248523, Spawn)
 	AddConversationOption(conversation, "Aren't frogloks unfit for the environment of Erollis?", "Quest1Chat_5")
@@ -76,7 +76,7 @@ end
 
 function Quest1Chat_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "blibba_nugrud/halas/new_halas_guard_house/blibba_nugrud009.mp3", "", "", 2086235207, 3956751510, Spawn)
 	AddConversationOption(conversation, "Can you sum this up?", "Quest1Chat_6")
@@ -87,7 +87,7 @@ end
 function Quest1Chat_6(NPC, Spawn)
 	SetStepComplete(Spawn, TrustIssues, 1)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "blibba_nugrud/halas/new_halas_guard_house/blibba_nugrud010.mp3", "", "", 1038495244, 3766399001, Spawn)
 	AddConversationOption(conversation, "Appreciate you taking the time to chat.")
@@ -97,7 +97,7 @@ end
 
 function Quest1Chat_7(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	AddConversationOption(conversation, "It's nothing quote so serious.", "Quest1Chat_1")
 	AddConversationOption(conversation, "Just answer the question!", "Quest1Chat_8")
@@ -107,7 +107,7 @@ end
 
 function Quest1Chat_8(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	AddConversationOption(conversation, "Fine. Goodbye.")
 	StartConversation(conversation, NPC, Spawn, "How rude!  Good day.")
@@ -115,7 +115,7 @@ end
 
 function Quest1Chat_9(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	AddConversationOption(conversation, "Of course.", "Quest1Chat_2")
 	AddConversationOption(conversation, "Just answer the question!", "Quest1Chat_8")

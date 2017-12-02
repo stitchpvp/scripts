@@ -21,7 +21,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	if HasQuest(Spawn, QUEST_FROM_BURK) then
 		ThatLittle(NPC, Spawn, conversation)
@@ -58,7 +58,7 @@ function dlg_0_1(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_FROM_BURK, 1)
 	
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/jorn_sorefoot/qey_adv01_oakmyst/quests/jorn/jorn_burk001.mp3", "", "", 2501778388, 330892647, Spawn)
 	
@@ -82,7 +82,7 @@ end
 
 function BeenWorkingHard(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "Maybe I can help.", "YeahICanUseYourHelp")
 	StartConversation(conversation, NPC, Spawn, "I've been working hard. Too hard for my own good, I'm a bit stubborn, ya know?")
@@ -90,7 +90,7 @@ end
 
 function YeahICanUseYourHelp(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/jorn_sorefoot/qey_adv01_oakmyst/quests/jorn/jorn002.mp3", "", "", 1939299225, 497932785, Spawn)
 	AddConversationOption(conversation, "That is pretty drunk.", "dlg_0_3")
@@ -99,7 +99,7 @@ end
 
 function dlg_0_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/jorn_sorefoot/qey_adv01_oakmyst/quests/jorn/jorn003.mp3", "", "", 2714635802, 3698549932, Spawn)
 	AddConversationOption(conversation, "So what do you need me to do?", "dlg_0_4")
@@ -108,7 +108,7 @@ end
 
 function dlg_0_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/jorn_sorefoot/qey_adv01_oakmyst/quests/jorn/jorn004.mp3", "", "", 653807965, 2666347981, Spawn)
 	AddConversationOption(conversation, "Sure, I can look for him.", "dlg_0_5")
@@ -117,7 +117,7 @@ end
 
 function dlg_0_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/jorn_sorefoot/qey_adv01_oakmyst/quests/jorn/jorn005.mp3", "", "", 908304310, 3978784738, Spawn)
 	AddConversationOption(conversation, "I'll try to find him.", "OfferQuest1")
@@ -145,7 +145,7 @@ end
 
 function dlg_2_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/jorn_sorefoot/qey_adv01_oakmyst/quests/jorn/jorn007.mp3", "", "", 1565958300, 3393057370, Spawn)
 	AddConversationOption(conversation, "You're welcome.", "dlg_2_2")
@@ -156,7 +156,7 @@ function dlg_2_2(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_1, 2)
 	
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/jorn_sorefoot/qey_adv01_oakmyst/quests/jorn/jorn008.mp3", "", "", 964400543, 602275594, Spawn)
 	AddConversationOption(conversation, "All right, I'll speak with him.")

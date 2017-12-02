@@ -34,7 +34,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	if HasCompletedQuest(Spawn, CrustoseRemoval) == false and HasQuest(Spawn, CrustoseRemoval) == false then
 	    PlayFlavor(NPC, "arrin_clelland/halas/pilgrims_landing/clelland_001.mp3", "", "", 316593235, 3019636341, Spawn)
 	    AddConversationOption(conversation, "" .. GetName(Spawn) .. ".  My boat was attacked and destroyed by the orcs, apparently.", "Quest1Chat_2")
@@ -94,7 +94,7 @@ end
 
 function Quest1Chat_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "arrin_clelland/halas/pilgrims_landing/clelland_001.mp3", "", "", 316593235, 3019636341, Spawn)
 	AddConversationOption(conversation, "My boat was attacked and destroyed by the orcs, apparently.", "Quest1Chat_3")
@@ -103,7 +103,7 @@ end
 
 function Quest1Chat_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "arrin_clelland/halas/pilgrims_landing/clelland_002.mp3", "", "", 364246106, 545315196, Spawn)
 	AddConversationOption(conversation, "Me too.", "Quest1Chat_4")
@@ -112,7 +112,7 @@ end
 
 function Quest1Chat_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "arrin_clelland/halas/pilgrims_landing/clelland_003.mp3", "", "", 3988738726, 2897027247, Spawn)
 	AddConversationOption(conversation, "You don't have any food?", "Quest1Chat_5")
@@ -122,7 +122,7 @@ end
 
 function Quest1Chat_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "arrin_clelland/halas/pilgrims_landing/clelland_004.mp3", "", "", 684238252, 3234255296, Spawn)
 	AddConversationOption(conversation, "I can help you.", "Quest1Chat_6")
@@ -132,7 +132,7 @@ end
 
 function Quest1Chat_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "arrin_clelland/halas/pilgrims_landing/clelland_005.mp3", "", "", 4016452199, 1810004622, Spawn)
 	AddConversationOption(conversation, "Right away!", "OfferCrustoseRemoval")
@@ -145,7 +145,7 @@ function Quest2Chat_1(NPC, Spawn)
 	    SetStepComplete(Spawn, CrustoseRemoval, 2)
 	end
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "yasha_redblade/halas/pilgrims_landing/redblade_015.mp3", "", "", 2583587651, 4014807200, Spawn)
 	AddConversationOption(conversation, "I like your thinking!", "Quest2Chat_2")
@@ -155,7 +155,7 @@ end
 
 function Quest2Chat_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "yasha_redblade/halas/pilgrims_landing/redblade_017.mp3", "", "", 2609708421, 904219877, Spawn)
 	AddConversationOption(conversation, "Sure thing.", "OfferRepellingCritters")
@@ -166,7 +166,7 @@ end
 
 function Quest2Chat_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "yasha_redblade/halas/pilgrims_landing/redblade_018.mp3", "", "", 3283115264, 905683886, Spawn)
 	AddConversationOption(conversation, "I like your thinking!", "Quest2Chat_2")
@@ -175,7 +175,7 @@ end
 
 function Quest2Chat_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "yasha_redblade/halas/pilgrims_landing/redblade_019.mp3", "", "", 2496773416, 2201749960, Spawn)
 	AddConversationOption(conversation, "I'll remember that.", "OfferRepellingCritters")
@@ -186,7 +186,7 @@ function Quest2Chat_5(NPC, Spawn)
 	SetStepComplete(Spawn, RepellingCritters, 2)
 
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "yasha_redblade/halas/pilgrims_landing/redblade_022.mp3", "", "", 457686629, 137846411, Spawn)
 	AddConversationOption(conversation, "I'll get right on it.")
@@ -196,7 +196,7 @@ end
 
 function Quest2Chat_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "yasha_redblade/halas/pilgrims_landing/redblade_023.mp3", "", "", 2487757767, 4041358970, Spawn)
 	AddConversationOption(conversation, "I will get right on it!")
@@ -205,7 +205,7 @@ end
 
 function Quest3Chat_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
     PlayFlavor(NPC, "arrin_clelland/halas/pilgrims_landing/clelland_005.mp3", "", "", 4016452199, 1810004622, Spawn)
 	AddConversationOption(conversation, "What can I do for you?", "Quest3Chat_2")
@@ -215,7 +215,7 @@ end
 
 function Quest3Chat_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "arrin_clelland/halas/pilgrims_landing/clelland_005.mp3", "", "", 4016452199, 1810004622, Spawn)
 	AddConversationOption(conversation, "I'll gather them for you.", "OfferScragglyFoodstuffs")
@@ -226,7 +226,7 @@ end
 function Quest3Chat_3(NPC, Spawn)
     SetStepComplete(Spawn, ScragglyFoodstuffs, 2)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "arrin_clelland/halas/pilgrims_landing/clelland_007.mp3", "", "", 256610018, 4036678874, Spawn)
 	AddConversationOption(conversation, "You're welcome. ", "Quest4Chat_1")
@@ -236,7 +236,7 @@ end
 
 function Quest4Chat_1(NPC, Spawn)
     FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
     PlayFlavor(NPC, "arrin_clelland/halas/pilgrims_landing/clelland_008.mp3", "", "", 2456971105, 1721744123, Spawn)
 	AddConversationOption(conversation, "Yeah, I can do that.", "Quest4Chat_2")
@@ -246,7 +246,7 @@ end
 
 function Quest4Chat_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "arrin_clelland/halas/pilgrims_landing/clelland_011.mp3", "", "", 3182846019, 423433267, Spawn)
 	AddConversationOption(conversation, "That's no problem.", "OfferFrigidFishing")
@@ -256,7 +256,7 @@ end
 function Quest4Chat_3(NPC, Spawn)
     SetStepComplete(Spawn, FrigidFishing, 2)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "arrin_clelland/halas/pilgrims_landing/clelland_013.mp3", "", "", 1935077662, 3458701305, Spawn)
 	AddConversationOption(conversation, "You're welcome.")

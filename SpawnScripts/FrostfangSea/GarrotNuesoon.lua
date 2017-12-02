@@ -29,7 +29,7 @@ function hailed(NPC, Spawn)
 end
 
 function SinChat1(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	FaceTarget(NPC, Spawn)
 
 	AddConversationOption(conversation, "I would appreciate it.", "SinChat2")
@@ -37,7 +37,7 @@ function SinChat1(NPC, Spawn)
 end
 
 function SinChat2(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	FaceTarget(NPC, Spawn)
 	
 	AddConversationOption(conversation, "That's useful to know!", "SinChat3")
@@ -45,7 +45,7 @@ function SinChat2(NPC, Spawn)
 end
 
 function SinChat3(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	FaceTarget(NPC, Spawn)
 
 	AddConversationOption(conversation, "That's interesting.", "SinChat4")
@@ -53,7 +53,7 @@ function SinChat3(NPC, Spawn)
 end
 
 function SinChat4(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	FaceTarget(NPC, Spawn)
 
 	AddConversationOption(conversation, "What should I do then?", "SinChat5")
@@ -61,7 +61,7 @@ function SinChat4(NPC, Spawn)
 end
 
 function SinChat5(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	FaceTarget(NPC, Spawn)
 
 	AddConversationOption(conversation, "Thank you for the advice.")

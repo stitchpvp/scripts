@@ -18,7 +18,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	if HasCompletedQuest(Spawn, QUEST_1) then
 		PlayFlavor(NPC, "voiceover/english/rok_questvo/gerwen_di_ki/_exp04/exp04_rgn_timorous_deep/chrykori_tie/qst_diki_done_f06d90c4.mp3", "Thanks for the help.", "", 1995916608, 2179905765, Spawn)
@@ -56,7 +56,7 @@ function dlg_15_1(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_1, 2)
 	
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/rok_questvo/gerwen_di_ki/_exp04/exp04_rgn_timorous_deep/chrykori_tie/diki/diki003.mp3", "", "", 595835432, 1064103179, Spawn)
 	AddConversationOption(conversation, "You're welcome.")

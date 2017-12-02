@@ -18,7 +18,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(QuestGiver, "barker_gordon/halas/new_halas/barker_gordon/barker_gordon_008.mp3", "", "", 3672106737, 3369025535, Player)
 	AddConversationOption(conversation, "Okay then, I will return with the ham and beans.")

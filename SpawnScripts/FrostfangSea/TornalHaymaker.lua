@@ -29,7 +29,7 @@ function hailed(NPC, Spawn)
 end
 
 function BruisChat1(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	FaceTarget(NPC, Spawn)
 
 	AddConversationOption(conversation, "That's useful to know!", "BruisChat2")
@@ -37,7 +37,7 @@ function BruisChat1(NPC, Spawn)
 end
 
 function BruisChat2(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	FaceTarget(NPC, Spawn)
 	
 	AddConversationOption(conversation, "That's good to know.", "BruisChat3")
@@ -45,7 +45,7 @@ function BruisChat2(NPC, Spawn)
 end
 
 function BruisChat3(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	FaceTarget(NPC, Spawn)
 
 	AddConversationOption(conversation, "That's interesting.", "BruisChat4")
@@ -53,7 +53,7 @@ function BruisChat3(NPC, Spawn)
 end
 
 function BruisChat4(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	FaceTarget(NPC, Spawn)
 
 	AddConversationOption(conversation, "That's interesting.", "BruisChat5")
@@ -61,7 +61,7 @@ function BruisChat4(NPC, Spawn)
 end
 
 function BruisChat5(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	FaceTarget(NPC, Spawn)
 
 	AddConversationOption(conversation, "Thank you for the advice.")

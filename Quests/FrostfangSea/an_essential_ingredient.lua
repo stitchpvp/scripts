@@ -15,7 +15,7 @@ local EssentialIngredient = 22
 function Accepted(Quest, QuestGiver, Player)
     SummonItem(Player, 45388, 1)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(QuestGiver, "blorpisa_bogchild/halas/gwenevyns_cove/blorpisa_bogchild/blorpisa_bogchild_039.mp3", "", "", 153842278, 3257954458, Player)
 	AddConversationOption(conversation, "I will return to you once I have collected the elementals.")

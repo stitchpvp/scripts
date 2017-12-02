@@ -19,7 +19,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/judge_eunomia/qey_adv01_oakmyst/judgeeunomia000.mp3", "", "", 3368710342, 876052157, Spawn)
 	
@@ -35,7 +35,7 @@ end
 
 function dlg_1_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/judge_eunomia/qey_adv01_oakmyst/judgeeunomia001.mp3", "", "", 419193252, 168213700, Spawn)
 	AddConversationOption(conversation, "I can hunt down these imposters.", "OfferQuest1")
@@ -52,7 +52,7 @@ function dlg_3_1(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_1, 2)
 	
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/judge_eunomia/qey_adv01_oakmyst/judgeeunomia003.mp3", "", "", 1922975222, 1148613241, Spawn)
 	AddConversationOption(conversation, "It was a pleasure to defend the Oakmyst.")

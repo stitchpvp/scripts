@@ -21,7 +21,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	if HasQuest(Spawn, QUEST_FROM_TAROCHE) and GetQuestStep(Spawn, QUEST_FROM_TAROCHE) == 1 then
 		AddConversationOption(conversation, "I have some special bait from Taroche Dry'Zok.", "dlg_7_1")
@@ -54,7 +54,7 @@ function dlg_7_1(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_FROM_TAROCHE, 1)
 	
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/rok_questvo/citizen_niba_ouz/_exp04/exp04_rgn_timorous_deep/chrykori_tie/nibaouz/nibaouz001.mp3", "", "", 2125587846, 3993478301, Spawn)
 	
@@ -80,7 +80,7 @@ end
 
 function dlg_6_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/rok_questvo/citizen_niba_ouz/_exp04/exp04_rgn_timorous_deep/chrykori_tie/nibaouz/nibaouz002.mp3", "", "", 2083730614, 3398082717, Spawn)
 	AddConversationOption(conversation, "Sure, I'll help.", "OfferQuest1")
@@ -110,7 +110,7 @@ function dlg_7_2(NPC, Spawn)
 	end
 	
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/rok_questvo/citizen_niba_ouz/_exp04/exp04_rgn_timorous_deep/chrykori_tie/nibaouz/nibaouz002.mp3", "", "", 2083730614, 3398082717, Spawn)
 	AddConversationOption(conversation, "Sure, I'll help.", "OfferQuest2")
@@ -144,7 +144,7 @@ function dlg_10_1(NPC, Spawn)
 	end
 	
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/rok_questvo/citizen_niba_ouz/_exp04/exp04_rgn_timorous_deep/chrykori_tie/nibaouz/nibaouz008.mp3", "", "", 3504914136, 1012324265, Spawn)
 	AddConversationOption(conversation, "You're welcome.")

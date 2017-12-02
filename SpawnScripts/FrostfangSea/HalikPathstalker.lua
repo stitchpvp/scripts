@@ -29,7 +29,7 @@ function hailed(NPC, Spawn)
 end
 
 function RangChat1(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	FaceTarget(NPC, Spawn)
 
 	AddConversationOption(conversation, "I'll keep that in mind.", "RangChat2")
@@ -37,7 +37,7 @@ function RangChat1(NPC, Spawn)
 end
 
 function RangChat2(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	FaceTarget(NPC, Spawn)
 	
 	AddConversationOption(conversation, "Sounds like good advice.", "RangChat3")
@@ -45,7 +45,7 @@ function RangChat2(NPC, Spawn)
 end
 
 function RangChat3(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	FaceTarget(NPC, Spawn)
 
 	AddConversationOption(conversation, "That's useful to know!")

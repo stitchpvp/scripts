@@ -22,7 +22,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 		PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "That depends.", "dlg_17_1")
@@ -62,7 +62,7 @@ end
 
 function dlg_17_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Then why don't you go yourself?", "dlg_17_2")
@@ -71,7 +71,7 @@ end
 
 function dlg_17_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "You want me to take a note to her so you don't have to speak to her yourself?", "dlg_17_3")
@@ -80,7 +80,7 @@ end
 
 function dlg_17_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Well.  Okay.", "dlg_17_4")
@@ -89,7 +89,7 @@ end
 
 function dlg_45_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "I won't.")
@@ -98,7 +98,7 @@ end
 
 function dlg_46_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "She said to tell you that she 'wants the clock' and that you'll know what that means.", "dlg_46_2")
@@ -107,7 +107,7 @@ end
 
 function dlg_46_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Er, can I ask you what's going on between the two of you?", "dlg_46_3")
@@ -116,7 +116,7 @@ end
 
 function dlg_46_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Um, okay.", "dlg_46_4")
@@ -125,7 +125,7 @@ end
 
 function dlg_49_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Did you tell her how you felt?", "dlg_49_2")
@@ -134,7 +134,7 @@ end
 
 function dlg_49_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Maybe.  But folks show sadness in different ways.  Maybe her way is different than yours.", "dlg_49_3")
@@ -143,7 +143,7 @@ end
 
 function dlg_49_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "She needs you.", "dlg_49_4")
@@ -152,7 +152,7 @@ end
 
 function dlg_49_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Sure.", "dlg_49_5")
@@ -161,7 +161,7 @@ end
 
 function dlg_49_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "merchant_melilah/_exp03/exp03_cty_kelethin/quest/qst_sisters/qst_melilah014.mp3", "", "", 3364592352, 3085055338, Spawn)
 	AddConversationOption(conversation, "Glad I could help.", "dlg_49_6")

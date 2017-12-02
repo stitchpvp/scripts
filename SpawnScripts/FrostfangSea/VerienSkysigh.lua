@@ -39,7 +39,7 @@ end
 
 function hailed(NPC, Spawn)
     FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
     if GetQuestStep(Spawn, BeetsAlternative) == 3 then
         PlayFlavor(NPC, "verien_skysigh/halas/gwenevyns_cove/verien_skysigh_001.mp3", "", "", 144081749, 1511716196, Spawn)
@@ -94,7 +94,7 @@ end
 
 function Quest1Chat_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "verien_skysigh/halas/gwenevyns_cove/verien_skysigh_002.mp3", "", "", 3370476937, 2935818226, Spawn)
 	AddConversationOption(conversation, "I found orc footprints when I was harvesting the tundra beets.", "Quest1Chat_3")
@@ -107,7 +107,7 @@ function Quest1Chat_3(NPC, Spawn)
 	end
 	
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "verien_skysigh/halas/gwenevyns_cove/verien_skysigh_003.mp3", "", "", 490895384, 2888964692, Spawn)
 	AddConversationOption(conversation, "That sounds plausible.", "Quest2Chat_1")
@@ -117,7 +117,7 @@ end
 
 function Quest2Chat_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "verien_skysigh/halas/gwenevyns_cove/verien_skysigh_004.mp3", "", "", 788435827, 360271773, Spawn)
 	AddConversationOption(conversation, "I'll do that.", "OfferSiftingGarbage")
@@ -127,7 +127,7 @@ end
 
 function Quest2Chat_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "verien_skysigh/halas/gwenevyns_cove/verien_skysigh_005.mp3", "", "", 1213684046, 759187296, Spawn)
 	AddConversationOption(conversation, "Since you put it that way, I'll do it.", "OfferSiftingGarbage")
@@ -138,7 +138,7 @@ end
 function Quest3Chat_1(NPC, Spawn)
     SetStepComplete(Spawn, SiftingGarbage, 2)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "verien_skysigh/halas/gwenevyns_cove/verien_skysigh_007.mp3", "", "", 162612722, 573249743, Spawn)
 	AddConversationOption(conversation, "I do not know.", "Quest3Chat_2")
@@ -151,7 +151,7 @@ end
 
 function Quest3Chat_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "verien_skysigh/halas/gwenevyns_cove/verien_skysigh_009.mp3", "", "", 4139445726, 3566440142, Spawn)
 	AddConversationOption(conversation, "I'll be sure to take in the view while I'm there.", "OfferPilgrimPathfinder")
@@ -167,7 +167,7 @@ end
 
 function Quest3Chat_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "verien_skysigh/halas/gwenevyns_cove/verien_skysigh_011.mp3", "", "", 3584109077, 3566409712, Spawn)
 	AddConversationOption(conversation, "The western shore leads into the dangerous plains ahead, but there seems to be a path leading into the hills above it.", "Quest4Chat_1")
@@ -179,7 +179,7 @@ function Quest4Chat_1(NPC, Spawn)
 	    SetStepComplete(Spawn, PilgrimPathfinder, 2)
 	end
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "verien_skysigh/halas/gwenevyns_cove/verien_skysigh_012.mp3", "", "", 3213043201, 2009251303, Spawn)
 	AddConversationOption(conversation, "I hope so, Verien.", "Quest4Chat_2")
@@ -188,7 +188,7 @@ end
 
 function Quest4Chat_2(NPC, Spawn)
     FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	PlayFlavor(NPC, "verien_skysigh/halas/gwenevyns_cove/verien_skysigh_013.mp3", "", "", 45193987, 852341503, Spawn)
 	AddConversationOption(conversation, "Yeah, that is true.", "Quest4Chat_3")
@@ -198,7 +198,7 @@ end
 
 function Quest4Chat_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "verien_skysigh/halas/gwenevyns_cove/verien_skysigh_014.mp3", "", "", 4224224424, 1811407629, Spawn)
 	AddConversationOption(conversation, "I can do that for us.", "OfferPilgrimScout")
@@ -211,7 +211,7 @@ function Quest4Chat_4(NPC, Spawn)
         SetStepComplete(Spawn, PilgrimScout, 2)
 	end
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "verien_skysigh/halas/gwenevyns_cove/verien_skysigh_017.mp3", "", "", 2885535176, 962895283, Spawn)
 	AddConversationOption(conversation, "It seems the only choice.", "Quest5Chat_1")
@@ -219,7 +219,7 @@ function Quest4Chat_4(NPC, Spawn)
 end
 
 function Quest5Chat_1(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
         PlayFlavor(NPC, "verien_skysigh/halas/gwenevyns_cove/verien_skysigh_018.mp3", "", "", 4165854, 1367268200, Spawn)
 	AddConversationOption(conversation, "I don't know either.", "Quest5Chat_2")
@@ -230,7 +230,7 @@ end
 
 function Quest5Chat_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "verien_skysigh/halas/gwenevyns_cove/verien_skysigh_019.mp3", "", "", 655764296, 405564965, Spawn)
 	AddConversationOption(conversation, "But that's just me.  That's not all of you, too.", "Quest5Chat_3")
@@ -239,7 +239,7 @@ end
 
 function Quest5Chat_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "verien_skysigh/halas/gwenevyns_cove/verien_skysigh_021.mp3", "", "", 4164608708, 1805231816, Spawn)
 	AddConversationOption(conversation, "This is nothing like a swamp.", "Quest5Chat_4")
@@ -248,7 +248,7 @@ end
 
 function Quest5Chat_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "verien_skysigh/halas/gwenevyns_cove/verien_skysigh_022.mp3", "", "", 208330103, 1632388719, Spawn)
 	AddConversationOption(conversation, "I'm your lion hunter!", "OfferPilgrimPelts")
@@ -258,7 +258,7 @@ end
 
 function Quest5Chat_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "verien_skysigh/halas/gwenevyns_cove/verien_skysigh_020.mp3", "", "", 1987107371, 160133318, Spawn)
 	AddConversationOption(conversation, "But that's just me.  That's not all of you, too.", "Quest5Chat_3")
@@ -268,7 +268,7 @@ end
 function Quest5Chat_6(NPC, Spawn)
     SetStepComplete(Spawn, PilgrimPelts, 2)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "verien_skysigh/halas/gwenevyns_cove/verien_skysigh_025.mp3", "", "", 555682283, 4098507949, Spawn)
 	AddConversationOption(conversation, "That would be nice.", "Quest6Chat_1")
@@ -277,7 +277,7 @@ end
 
 function Quest6Chat_1(NPC, Spawn)
     FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
     PlayFlavor(NPC, "verien_skysigh/halas/gwenevyns_cove/verien_skysigh_026.mp3", "", "", 3888781085, 2569289661, Spawn)
 	AddConversationOption(conversation, "No.  Why?", "Quest6Chat_2")
@@ -286,7 +286,7 @@ end
 
 function Quest6Chat_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "verien_skysigh/halas/gwenevyns_cove/verien_skysigh_027.mp3", "", "", 2243105575, 903335403, Spawn)
 	AddConversationOption(conversation, "It would seem so.", "Quest6Chat_3")
@@ -296,7 +296,7 @@ end
 
 function Quest6Chat_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "verien_skysigh/halas/gwenevyns_cove/verien_skysigh_028.mp3", "", "", 3038823377, 2150811874, Spawn)
 	AddConversationOption(conversation, "How are we to fool the cats into doing that?", "Quest6Chat_4")
@@ -306,7 +306,7 @@ end
 
 function Quest6Chat_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "verien_skysigh/halas/gwenevyns_cove/verien_skysigh_029.mp3", "", "", 1710780263, 712522304, Spawn)
 	AddConversationOption(conversation, "I'll do that.", "OfferIcemanesCometh")
@@ -316,7 +316,7 @@ end
 
 function Quest6Chat_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "verien_skysigh/halas/gwenevyns_cove/verien_skysigh_035.mp3", "", "", 1914930424, 1171502027, Spawn)
 	AddConversationOption(conversation, "I can do it.", "Quest6Chat_6")
@@ -326,7 +326,7 @@ end
 
 function Quest6Chat_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "verien_skysigh/halas/gwenevyns_cove/verien_skysigh_036.mp3", "", "", 491269098, 2938508945, Spawn)
 	AddConversationOption(conversation, "Then I wish you good luck.", "CompleteIcemanesCometh")

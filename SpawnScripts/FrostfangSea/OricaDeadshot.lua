@@ -29,7 +29,7 @@ end
 function Chat(NPC, Spawn)
 	SetStepComplete(Spawn, DemandSupplies, 1)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "orica_deadshot/halas/great_shelf/orica_deadshot/orica_deadshot002.mp3", "", "", 17831415, 4241254330, Spawn)
 	AddConversationOption(conversation, "You're welcome.")

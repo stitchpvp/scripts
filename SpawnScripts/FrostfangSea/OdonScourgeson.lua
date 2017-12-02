@@ -36,7 +36,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	if HasCompletedQuest(Spawn, NothingWaste) and not HasCompletedQuest(Spawn, WhirlingTime) and not HasQuest(Spawn, WhirlingTime) then
 		PlayFlavor(NPC, "odon_scourgeson/halas/cragged_spine/odon_scourgeson_001.mp3", "", "", 1144750617, 3119311088, Spawn)
@@ -101,7 +101,7 @@ end
 
 function Quest1Chat_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "odon_scourgeson/halas/cragged_spine/odon_scourgeson_004.mp3", "", "", 1709766346, 172975097, Spawn)
 	AddConversationOption(conversation, "So, let's not be the ones to fall.", "Quest1Chat_2")
@@ -111,7 +111,7 @@ end
 
 function Quest1Chat_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "odon_scourgeson/halas/cragged_spine/odon_scourgeson_008.mp3", "", "", 2616918524, 807359858, Spawn)
 	AddConversationOption(conversation, "Do you have any specific plans?", "Quest1Chat_3")
@@ -120,7 +120,7 @@ end
 
 function Quest1Chat_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "odon_scourgeson/halas/cragged_spine/odon_scourgeson_009.mp3", "", "", 3949479903, 2077309090, Spawn)
 	AddConversationOption(conversation, "How will they help?", "Quest1Chat_4")
@@ -129,7 +129,7 @@ end
 
 function Quest1Chat_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "odon_scourgeson/halas/cragged_spine/odon_scourgeson_010.mp3", "", "", 2575484340, 3344993647, Spawn)
 	AddConversationOption(conversation, "Oh, that sounds great!", "OfferWhirlingTime")
@@ -139,7 +139,7 @@ end
 
 function Quest1Chat_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "odon_scourgeson/halas/cragged_spine/odon_scourgeson_005.mp3", "", "", 292963711, 1258540494, Spawn)
 	AddConversationOption(conversation, "On that, we agree.", "Quest1Chat_2")
@@ -149,7 +149,7 @@ end
 
 function Quest1Chat_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "odon_scourgeson/halas/cragged_spine/odon_scourgeson_006.mp3", "", "", 3024969642, 2041615693, Spawn)
 	AddConversationOption(conversation, "On that, we agree.", "Quest1Chat_2")
@@ -160,7 +160,7 @@ end
 function Quest1Chat_7(NPC, Spawn)
 	SetStepComplete(Spawn, WhirlingTime, 2)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "odon_scourgeson/halas/cragged_spine/odon_scourgeson_013.mp3", "", "", 2453186461, 1568033116, Spawn)
 	AddConversationOption(conversation, "Right!", "Quest2Chat_1")
@@ -169,7 +169,7 @@ end
 
 function Quest2Chat_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
     PlayFlavor(NPC, "odon_scourgeson/halas/cragged_spine/odon_scourgeson_014.mp3", "", "", 4142819387, 1980291564, Spawn)
 	AddConversationOption(conversation, "It stands to reason.", "Quest2Chat_2")
@@ -179,7 +179,7 @@ end
 
 function Quest2Chat_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "odon_scourgeson/halas/cragged_spine/odon_scourgeson_015.mp3", "", "", 3627942377, 4151235206, Spawn)
 	AddConversationOption(conversation, "I can do that.", "OfferHighlyMaterials")
@@ -190,7 +190,7 @@ end
 function Quest2Chat_3(NPC, Spawn)
 	SetStepComplete(Spawn, HighlyMaterials, 3)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "odon_scourgeson/halas/cragged_spine/odon_scourgeson_018.mp3", "", "", 3574043874, 440859829, Spawn)
 	AddConversationOption(conversation, "Yes, I did.")
@@ -199,7 +199,7 @@ end
 
 function Quest3Chat_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "odon_scourgeson/halas/cragged_spine/odon_scourgeson_020.mp3", "", "", 17932445, 4044568976, Spawn)
 	AddConversationOption(conversation, "What do you mean?", "Quest3Chat_2")
@@ -208,7 +208,7 @@ end
 
 function Quest3Chat_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "odon_scourgeson/halas/cragged_spine/odon_scourgeson_021.mp3", "", "", 748617031, 40578181, Spawn)
 	AddConversationOption(conversation, "What makes you say that?", "Quest3Chat_3")
@@ -218,7 +218,7 @@ end
 
 function Quest3Chat_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "odon_scourgeson/halas/cragged_spine/odon_scourgeson_022.mp3", "", "", 3153750446, 2946380071, Spawn)
 	AddConversationOption(conversation, "I agree.", "Quest3Chat_4")
@@ -228,7 +228,7 @@ end
 
 function Quest3Chat_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "odon_scourgeson/halas/cragged_spine/odon_scourgeson_023.mp3", "", "", 1008524247, 3710738942, Spawn)
 	AddConversationOption(conversation, "Nutty Knut.  I get it.", "Quest3Chat_6")
@@ -237,7 +237,7 @@ end
 
 function Quest3Chat_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "odon_scourgeson/halas/cragged_spine/odon_scourgeson_024.mp3", "", "", 626779963, 1838376893, Spawn)
 	AddConversationOption(conversation, "Thank you.", "Quest3Chat_6")
@@ -246,7 +246,7 @@ end
 
 function Quest3Chat_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "odon_scourgeson/halas/cragged_spine/odon_scourgeson_025.mp3", "", "", 2325720721, 1852675464, Spawn)
 	AddConversationOption(conversation, "Actually, yes.  I saw several Ry'Gorr orcs amassing supplies.", "Quest3Chat_7")
@@ -255,7 +255,7 @@ end
 
 function Quest3Chat_7(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "odon_scourgeson/halas/cragged_spine/odon_scourgeson_026.mp3", "", "", 3614477806, 1870107129, Spawn)
 	AddConversationOption(conversation, "Right.  I'm the one yapping like a hound.", "Quest3Chat_8")
@@ -265,7 +265,7 @@ end
 
 function Quest3Chat_8(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "odon_scourgeson/halas/cragged_spine/odon_scourgeson_027.mp3", "", "", 1143831396, 1034337351, Spawn)
 	AddConversationOption(conversation, "I can do that.", "OfferCampsideSpores")
@@ -276,7 +276,7 @@ end
 function Quest3Chat_9(NPC, Spawn)
 	SetStepComplete(Spawn, CampsideSpores, 2)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "odon_scourgeson/halas/cragged_spine/odon_scourgeson_030.mp3", "", "", 23529339, 1329281501, Spawn)
 	AddConversationOption(conversation, "Right.")
@@ -285,7 +285,7 @@ end
 
 function Quest4Chat_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "odon_scourgeson/halas/cragged_spine/odon_scourgeson_033.mp3", "", "", 3483970131, 1743071905, Spawn)
 	AddConversationOption(conversation, "Yes.  And the Ry'Gorr have been making them bigger.", "Quest4Chat_2")
@@ -294,7 +294,7 @@ end
 
 function Quest4Chat_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "odon_scourgeson/halas/cragged_spine/odon_scourgeson_034.mp3", "", "", 491076810, 2688982472, Spawn)
 	AddConversationOption(conversation, "Apparently, they are.", "Quest4Chat_3")
@@ -304,7 +304,7 @@ end
 
 function Quest4Chat_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "odon_scourgeson/halas/cragged_spine/odon_scourgeson_035.mp3", "", "", 3997881517, 11859709, Spawn)
 	AddConversationOption(conversation, "I sure can, Odon.", "OfferRyGorrTaking")
@@ -314,7 +314,7 @@ end
 
 function Quest4Chat_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "odon_scourgeson/halas/cragged_spine/odon_scourgeson_032.mp3", "", "", 775129944, 2032173914, Spawn)
 	AddConversationOption(conversation, "In the caves below Erollis.", "Quest4Chat_1")
@@ -324,7 +324,7 @@ end
 function Quest4Chat_5(NPC, Spawn)
 	SetStepComplete(Spawn, RyGorrTaking, 2)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "odon_scourgeson/halas/cragged_spine/odon_scourgeson_037.mp3", "", "", 3945219846, 2009013253, Spawn)
 	AddConversationOption(conversation, "Thank you.")
@@ -334,7 +334,7 @@ end
 
 function Quest5Chat_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "odon_scourgeson/halas/cragged_spine/odon_scourgeson_039.mp3", "", "", 1313157093, 2613440725, Spawn)
 	AddConversationOption(conversation, "I don't know, but they looked like it.", "Quest5Chat_2")
@@ -343,7 +343,7 @@ end
 
 function Quest5Chat_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "odon_scourgeson/halas/cragged_spine/odon_scourgeson_040.mp3", "", "", 1326282045, 1993468470, Spawn)
 	AddConversationOption(conversation, "Oh, what are you thinking?", "Quest5Chat_3")
@@ -353,7 +353,7 @@ end
 
 function Quest5Chat_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "odon_scourgeson/halas/cragged_spine/odon_scourgeson_041.mp3", "", "", 513600053, 106599260, Spawn)
 	AddConversationOption(conversation, "I'll harvest some from within the Velinoid Catacombs for you.", "OfferWatchBelow")
@@ -364,7 +364,7 @@ end
 function Quest5Chat_4(NPC, Spawn)
 	SetStepComplete(Spawn, WatchBelow, 2)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "odon_scourgeson/halas/cragged_spine/odon_scourgeson_044.mp3", "", "", 4176364117, 3019596787, Spawn)
 	AddConversationOption(conversation, "You're welcome.", "Quest5Chat_5")
@@ -373,7 +373,7 @@ end
 
 function Quest5Chat_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "odon_scourgeson/halas/cragged_spine/odon_scourgeson_045.mp3", "", "", 653096289, 4240580228, Spawn)
 	AddConversationOption(conversation, "Sure, I am!", "OfferWatchBelow")

@@ -18,7 +18,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	PlayFlavor(QuestGiver, "voiceover/english/optional1/steward_tredo/qey_adv01_oakmyst/stewardtredo001.mp3", "", "", 3490306942, 2253910242, Player)
 	AddConversationOption(conversation, "I'll keep my eyes out at night.")

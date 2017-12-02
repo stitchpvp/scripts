@@ -18,7 +18,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	AddConversationOption(conversation, "I understand. I'll be back when it's done.")
 	StartConversation(conversation, QuestGiver, Player, "You choose wisely, friend. I shall use the lessons taught to the Iksar by our dead emperor, Venril Sathir. This is where you come in ... the magic of the dead will put a stop to Ithelz's pompous belief that he is our new ruler.  I will tell you only once: take the crystal, go to the graveyard, and kill the undead knights. As the beasts die, hold out the crystal and collect their souls. Return when you fill the crystal.")

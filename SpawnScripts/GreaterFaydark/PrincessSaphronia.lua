@@ -22,7 +22,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 		PlayFlavor(NPC, "princess_saphronia/_exp03/exp03_cty_kelethin/quest/qst_princess_saphronia/princess_saphronia002.mp3", "", "", 3619994345, 1485938345, Spawn)
 	AddConversationOption(conversation, "Uh... I think I'll be going now.", "dlg_72_1")

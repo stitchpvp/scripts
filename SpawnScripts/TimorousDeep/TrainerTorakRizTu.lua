@@ -15,7 +15,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	choice = math.random(1, 3)
 	if choice == 1 then
@@ -33,7 +33,7 @@ end
 
 function dlg_17_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Tell me about Spells.", "dlg_17_2")
@@ -47,7 +47,7 @@ end
 
 function dlg_17_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Who uses Spells?", "dlg_17_3")
@@ -57,7 +57,7 @@ end
 
 function dlg_17_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "I have more questions.", "dlg_17_1")
@@ -67,7 +67,7 @@ end
 
 function dlg_17_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Who uses Combat Arts?", "dlg_17_6")
@@ -77,7 +77,7 @@ end
 
 function dlg_17_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "I have more questions.", "dlg_17_1")
@@ -87,7 +87,7 @@ end
 
 function dlg_17_8(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "How are Abilities different from Spells and Combat Arts?", "dlg_17_9")
@@ -97,7 +97,7 @@ end
 
 function dlg_17_9(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "I have more questions.", "dlg_17_1")
@@ -107,7 +107,7 @@ end
 
 function dlg_17_11(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "How do I use my Spells, Combat Arts, and Abilities?", "dlg_17_12")
@@ -117,7 +117,7 @@ end
 
 function dlg_17_12(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "I have more questions.", "dlg_17_1")
@@ -127,7 +127,7 @@ end
 
 function dlg_17_14(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "How can I judge the effectiveness of my Spells and Combat Arts?", "dlg_17_15")
@@ -137,7 +137,7 @@ end
 
 function dlg_17_15(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "How can I improve my Spells and Combat Arts?", "dlg_17_16")
@@ -147,7 +147,7 @@ end
 
 function dlg_17_16(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "What about other ranks of Spells and Arts?", "dlg_17_17")
@@ -157,7 +157,7 @@ end
 
 function dlg_17_17(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Are there other ways to improve my Spells and Combat Arts?", "dlg_17_18")
@@ -167,7 +167,7 @@ end
 
 function dlg_17_18(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Are all my Spells and Combat Arts unique?", "dlg_17_19")
@@ -177,7 +177,7 @@ end
 
 function dlg_17_19(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "How can I keep all these Spells and Arts straight in my Knowledge Book?", "dlg_17_20")
@@ -187,7 +187,7 @@ end
 
 function dlg_17_20(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "I have more questions.", "dlg_17_1")

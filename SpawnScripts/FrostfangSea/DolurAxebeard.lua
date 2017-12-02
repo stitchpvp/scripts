@@ -42,7 +42,7 @@ end
 
 function hailed(NPC, Spawn)
     FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
     if not HasQuest(Spawn, GlimmerOrc) and not HasCompletedQuest(Spawn, GlimmerOrc) then
 	    PlayFlavor(NPC, "dolur_axebeard/halas/great_shelf/dolur_axebeard/dolur_axebeard001.mp3", "", "", 1652895933, 4056769103, Spawn)
@@ -131,7 +131,7 @@ end
 
 function Quest1Chat_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "dolur_axebeard/halas/great_shelf/dolur_axebeard/dolur_axebeard002.mp3", "", "", 3776851500, 329099171, Spawn)
 	AddConversationOption(conversation, "How are they ambushing you, especially out in the open?", "Quest1Chat_2")
@@ -143,7 +143,7 @@ end
 
 function Quest1Chat_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "dolur_axebeard/halas/great_shelf/dolur_axebeard/dolur_axebeard003.mp3", "", "", 505371253, 1091559275, Spawn)
 	AddConversationOption(conversation, "Go on.", "Quest1Chat_3")
@@ -153,7 +153,7 @@ end
 
 function Quest1Chat_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "dolur_axebeard/halas/great_shelf/dolur_axebeard/dolur_axebeard005.mp3", "", "", 2412101907, 2364424304, Spawn)
 	AddConversationOption(conversation, "What do they say?", "Quest1Chat_4")
@@ -165,7 +165,7 @@ end
 
 function Quest1Chat_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "dolur_axebeard/halas/great_shelf/dolur_axebeard/dolur_axebeard007.mp3", "", "", 1117927681, 3213137385, Spawn)
 	AddConversationOption(conversation, "It's a fear tactic, for sure.", "Quest1Chat_5")
@@ -176,7 +176,7 @@ end
 
 function Quest1Chat_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "dolur_axebeard/halas/great_shelf/dolur_axebeard/dolur_axebeard008.mp3", "", "", 3224987077, 1613729835, Spawn)
 	AddConversationOption(conversation, "Agreed. ", "Quest1Chat_6")
@@ -187,7 +187,7 @@ end
 
 function Quest1Chat_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "dolur_axebeard/halas/great_shelf/dolur_axebeard/dolur_axebeard010.mp3", "", "", 1224830968, 3279150133, Spawn)
 	AddConversationOption(conversation, "Of course.", "OfferGlimmerOrc")
@@ -197,7 +197,7 @@ end
 
 function Quest1Chat_7(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "dolur_axebeard/halas/great_shelf/dolur_axebeard/dolur_axebeard004.mp3", "", "", 2795765225, 2030897405, Spawn)
 	AddConversationOption(conversation, "What?  Are they invisible?", "Quest1Chat_3")
@@ -207,7 +207,7 @@ end
 
 function Quest1Chat_8(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "dolur_axebeard/halas/great_shelf/dolur_axebeard/dolur_axebeard009.mp3", "", "", 3087697550, 2303509094, Spawn)
 	AddConversationOption(conversation, "I do, and I see what must be done.", "Quest1Chat_6")
@@ -218,7 +218,7 @@ end
 
 function Quest1Chat_9(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "dolur_axebeard/halas/great_shelf/dolur_axebeard/dolur_axebeard006.mp3", "", "", 2420317196, 2002155131, Spawn)
 	AddConversationOption(conversation, "I'm brave AND capable.", "Quest1Chat_10")
@@ -229,7 +229,7 @@ end
 
 function Quest1Chat_10(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "dolur_axebeard/halas/great_shelf/dolur_axebeard/dolur_axebeard011.mp3", "", "", 2906385969, 2703354949, Spawn)
 	AddConversationOption(conversation, "None taken.  So what's the plan?", "Quest1Chat_6")
@@ -250,7 +250,7 @@ end
 function Quest1Chat_12(NPC, Spawn)
     SetStepComplete(Spawn, GlimmerOrc, 2)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "dolur_axebeard/halas/great_shelf/dolur_axebeard/dolur_axebeard014.mp3", "", "", 4267001042, 1944501293, Spawn)
 	AddConversationOption(conversation, "I do whatever it takes to solve the problem.", "Quest1Chat_13")
@@ -260,7 +260,7 @@ end
 
 function Quest1Chat_13(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "dolur_axebeard/halas/great_shelf/dolur_axebeard/dolur_axebeard015.mp3", "", "", 3387435129, 3863442024, Spawn)
 	AddConversationOption(conversation, "Take your time.")
@@ -270,7 +270,7 @@ end
 
 function Quest2Chat_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "dolur_axebeard/halas/great_shelf/dolur_axebeard/dolur_axebeard016.mp3", "", "", 3724550793, 3434645453, Spawn)
 	AddConversationOption(conversation, "The orcs figured out how to solve that problem.", "Quest2Chat_2")
@@ -281,7 +281,7 @@ end
 
 function Quest2Chat_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "dolur_axebeard/halas/great_shelf/dolur_axebeard/dolur_axebeard017.mp3", "", "", 4140277139, 3688959754, Spawn)
 	AddConversationOption(conversation, "Have you noticed the orcs gathering anything out of the ordinary?", "Quest2Chat_3")
@@ -291,7 +291,7 @@ end
 
 function Quest2Chat_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "dolur_axebeard/halas/great_shelf/dolur_axebeard/dolur_axebeard019.mp3", "", "", 1879917767, 2648322812, Spawn)
 	AddConversationOption(conversation, "Just show me where to find them.", "OfferMurkyMystery")
@@ -302,7 +302,7 @@ end
 
 function Quest2Chat_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "dolur_axebeard/halas/great_shelf/dolur_axebeard/dolur_axebeard018.mp3", "", "", 829232573, 947350296, Spawn)
 	AddConversationOption(conversation, "So where could we find that?", "Quest2Chat_3")
@@ -314,7 +314,7 @@ end
 function Quest2Chat_5(NPC, Spawn)
     SetStepComplete(Spawn, MurkyMystery, 2)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "dolur_axebeard/halas/great_shelf/dolur_axebeard/dolur_axebeard022.mp3", "", "", 4152966005, 2385582175, Spawn)
 	AddConversationOption(conversation, "Now you're on even footing with the Ry'Gorr!", "Quest3Chat_1")
@@ -324,7 +324,7 @@ end
 
 function Quest3Chat_1(NPC, Spawn)
     FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	PlayFlavor(NPC, "dolur_axebeard/halas/great_shelf/dolur_axebeard/dolur_axebeard023.mp3", "", "", 3394689570, 853009244, Spawn)
 	AddConversationOption(conversation, "That is unfortunate, but you have to balance your priorities.", "Quest3Chat_2")
@@ -335,7 +335,7 @@ end
 
 function Quest3Chat_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "dolur_axebeard/halas/great_shelf/dolur_axebeard/dolur_axebeard024.mp3", "", "", 888604358, 2919686664, Spawn)
 	AddConversationOption(conversation, "I don't understand.  What do you mean by 'spirits'?", "Quest3Chat_3")
@@ -345,7 +345,7 @@ end
 
 function Quest3Chat_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "dolur_axebeard/halas/great_shelf/dolur_axebeard/dolur_axebeard026.mp3", "", "", 3211985278, 3808356977, Spawn)
 	AddConversationOption(conversation, "You want me to honor the dead?", "Quest3Chat_5")
@@ -365,7 +365,7 @@ end
 
 function Quest3Chat_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "dolur_axebeard/halas/great_shelf/dolur_axebeard/dolur_axebeard027.mp3", "", "", 1974991098, 1800835214, Spawn)
 	AddConversationOption(conversation, "I'd be honored to scatter their ashes.", "Quest3Chat_6")
@@ -375,7 +375,7 @@ end
 
 function Quest3Chat_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "dolur_axebeard/halas/great_shelf/dolur_axebeard/dolur_axebeard029.mp3", "", "", 1909973600, 750947925, Spawn)
 	AddConversationOption(conversation, "I will do as you ask.", "OfferScatteringAshes")
@@ -385,7 +385,7 @@ end
 
 function Quest3Chat_7(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "dolur_axebeard/halas/great_shelf/dolur_axebeard/dolur_axebeard028.mp3", "", "", 564515719, 107243017, Spawn)
 	AddConversationOption(conversation, "Thank you.  I'd be happy to help.", "Quest3Chat_6")
@@ -396,7 +396,7 @@ end
 
 function Quest3Chat_8(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	AddConversationOption(conversation, "Fair enough.", "Quest3Chat_9")
 	AddConversationOption(conversation, "Whatever. If you say so.", "Quest3Chat_9")
@@ -406,7 +406,7 @@ end
 function Quest3Chat_9(NPC, Spawn)
 	SetStepComplete(Spawn, ScatteringAshes, 2)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "dolur_axebeard/halas/great_shelf/dolur_axebeard/dolur_axebeard033.mp3", "", "", 935575101, 1863151637, Spawn)
 	AddConversationOption(conversation, "You can deduce a lot about a people by how they revere their dead.", "Quest4Chat_1")
@@ -416,7 +416,7 @@ end
 
 function Quest4Chat_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	PlayFlavor(NPC, "dolur_axebeard/halas/great_shelf/dolur_axebeard/dolur_axebeard034.mp3", "", "", 4183445940, 2191855130, Spawn)
 	AddConversationOption(conversation, "If you need to kill skeletons, I'm in.", "Quest4Chat_2")
@@ -426,7 +426,7 @@ end
 
 function Quest4Chat_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "dolur_axebeard/halas/great_shelf/dolur_axebeard/dolur_axebeard036.mp3", "", "", 183860181, 4160128753, Spawn)
 	AddConversationOption(conversation, "Since when did Ry'Gorr orcs practice necromancy? ", "Quest4Chat_6")
@@ -438,7 +438,7 @@ end
 
 function Quest4Chat_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "dolur_axebeard/halas/great_shelf/dolur_axebeard/dolur_axebeard035.mp3", "", "", 3130799113, 3083892992, Spawn)
 	AddConversationOption(conversation, "Since when did Ry'Gorr orcs practice necromancy?", "Quest4Chat_6")
@@ -449,7 +449,7 @@ end
 
 function Quest4Chat_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "dolur_axebeard/halas/great_shelf/dolur_axebeard/dolur_axebeard038.mp3", "", "", 407410462, 3645301818, Spawn)
 	AddConversationOption(conversation, "How do the totems affect the piles of bones?", "Quest4Chat_10")
@@ -460,7 +460,7 @@ end
 
 function Quest4Chat_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "dolur_axebeard/halas/great_shelf/dolur_axebeard/dolur_axebeard042.mp3", "", "", 4130815346, 134791613, Spawn)
 	AddConversationOption(conversation, "Please, no more details!")
@@ -471,7 +471,7 @@ end
 
 function Quest4Chat_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "dolur_axebeard/halas/great_shelf/dolur_axebeard/dolur_axebeard037.mp3", "", "", 3050869770, 2588737006, Spawn)
 	AddConversationOption(conversation, "I'd never heard of it, either.", "Quest4Chat_7")
@@ -482,7 +482,7 @@ end
 
 function Quest4Chat_7(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "dolur_axebeard/halas/great_shelf/dolur_axebeard/dolur_axebeard039.mp3", "", "", 655322932, 2844698799, Spawn)
 	AddConversationOption(conversation, "What do you think?", "Quest4Chat_8")
@@ -493,7 +493,7 @@ end
 
 function Quest4Chat_8(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "dolur_axebeard/halas/great_shelf/dolur_axebeard/dolur_axebeard040.mp3", "", "", 951980673, 4228422662, Spawn)
 	AddConversationOption(conversation, "They are more resourceful than I had imagined.", "Quest4Chat_9")
@@ -504,7 +504,7 @@ end
 
 function Quest4Chat_9(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "dolur_axebeard/halas/great_shelf/dolur_axebeard/dolur_axebeard043.mp3", "", "", 845201538, 1152092745, Spawn)
 	AddConversationOption(conversation, "How do you propose we 'deal' with them?", "Quest4Chat_4")
@@ -514,7 +514,7 @@ end
 
 function Quest4Chat_10(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "dolur_axebeard/halas/great_shelf/dolur_axebeard/dolur_axebeard041.mp3", "", "", 2628510482, 3371068278, Spawn)
 	AddConversationOption(conversation, "I can do that.", "OfferTotemAnnihilation")
@@ -526,7 +526,7 @@ end
 function Quest4Chat_11(NPC, Spawn)
 	SetStepComplete(Spawn, TotemAnnihilation, 2)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "dolur_axebeard/halas/great_shelf/dolur_axebeard/dolur_axebeard046.mp3", "", "", 1320158668, 3505958307, Spawn)
 	AddConversationOption(conversation, "Very funny.")
@@ -537,7 +537,7 @@ end
 
 function Quest5Chat_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "dolur_axebeard/halas/great_shelf/dolur_axebeard/dolur_axebeard048.mp3", "", "", 1791567214, 1786988911, Spawn)
 	AddConversationOption(conversation, "That sounds very similar to the Ry'Gorr's necromantic totems.", "Quest5Chat_2")
@@ -548,7 +548,7 @@ end
 
 function Quest5Chat_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "dolur_axebeard/halas/great_shelf/dolur_axebeard/dolur_axebeard049.mp3", "", "", 2886126619, 111361298, Spawn)
 	AddConversationOption(conversation, "Tell me more.", "Quest5Chat_3")
@@ -558,7 +558,7 @@ end
 
 function Quest5Chat_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "dolur_axebeard/halas/great_shelf/dolur_axebeard/dolur_axebeard051.mp3", "", "", 3697109059, 807407603, Spawn)
 	AddConversationOption(conversation, "It doesn't sound like abandoning their surviving allies is a choice at all.", "Quest5Chat_4")
@@ -570,7 +570,7 @@ end
 
 function Quest5Chat_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "dolur_axebeard/halas/great_shelf/dolur_axebeard/dolur_axebeard052.mp3", "", "", 2567924057, 453022525, Spawn)
 	AddConversationOption(conversation, "You know I wish to help.", "Quest5Chat_5")
@@ -581,7 +581,7 @@ end
 
 function Quest5Chat_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "dolur_axebeard/halas/great_shelf/dolur_axebeard/dolur_axebeard056.mp3", "", "", 721262634, 1165992998, Spawn)
 	AddConversationOption(conversation, "How will I know where this barrier between worlds is 'thin'?", "Quest5Chat_6")
@@ -592,7 +592,7 @@ end
 
 function Quest5Chat_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "dolur_axebeard/halas/great_shelf/dolur_axebeard/dolur_axebeard057.mp3", "", "", 3375420535, 3459651835, Spawn)
 	AddConversationOption(conversation, "The sooner I begin, the better.", "OfferCallingBack")
@@ -602,7 +602,7 @@ end
 
 function Quest5Chat_7(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "dolur_axebeard/halas/great_shelf/dolur_axebeard/dolur_axebeard050.mp3", "", "", 1997222652, 757650652, Spawn)
 	AddConversationOption(conversation, "Tell me more.", "Quest5Chat_3")
@@ -612,7 +612,7 @@ end
 
 function Quest5Chat_8(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "dolur_axebeard/halas/great_shelf/dolur_axebeard/dolur_axebeard053.mp3", "", "", 61355934, 928420648, Spawn)
 	AddConversationOption(conversation, "Tell me how I can help.", "Quest5Chat_5")
@@ -622,7 +622,7 @@ end
 
 function Quest5Chat_9(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "dolur_axebeard/halas/great_shelf/dolur_axebeard/dolur_axebeard058.mp3", "", "", 865813729, 1073348208, Spawn)
 	AddConversationOption(conversation, "I see.  And how will I know where this barrier between worlds is 'thin'?", "Quest5Chat_6")
@@ -633,7 +633,7 @@ end
 
 function Quest5Chat_10(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "dolur_axebeard/halas/great_shelf/dolur_axebeard/dolur_axebeard054.mp3", "", "", 3731109771, 1471852014, Spawn)
 	AddConversationOption(conversation, "Fine.  I'll be leaving.")
@@ -643,7 +643,7 @@ end
 
 function Quest5Chat_11(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	AddConversationOption(conversation, "Of course not. How can I help?", "Quest5Chat_5")
 	AddConversationOption(conversation, "The jury is still out on that, but I'm willing to help today.", "Quest5Chat_5")
@@ -654,7 +654,7 @@ end
 function Quest5Chat_12(NPC, Spawn)
 	SetStepComplete(Spawn, CallingBack, 6)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	AddConversationOption(conversation, "I hope we can tip the scales even futher.", "Quest5Chat_13")
 	AddConversationOption(conversation, "Is there anything else I can do to help, Dolur?", "Quest6Chat_1")
@@ -664,7 +664,7 @@ end
 
 function Quest5Chat_13(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "dolur_axebeard/halas/great_shelf/dolur_axebeard/dolur_axebeard062.mp3", "", "", 1933886797, 2300926566, Spawn)
 	AddConversationOption(conversation, "Tell me more.", "Quest6Chat_1")
@@ -674,7 +674,7 @@ end
 
 function Quest6Chat_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "dolur_axebeard/halas/great_shelf/dolur_axebeard/dolur_axebeard063.mp3", "", "", 3479422497, 420666487, Spawn)
 	AddConversationOption(conversation, "Ah, that would be frightful.", "Quest6Chat_2")
@@ -685,7 +685,7 @@ end
 
 function Quest6Chat_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "dolur_axebeard/halas/great_shelf/dolur_axebeard/dolur_axebeard064.mp3", "", "", 884503499, 3365458147, Spawn)
 	AddConversationOption(conversation, "What else do you see in your dreams?", "Quest6Chat_3")
@@ -696,7 +696,7 @@ end
 
 function Quest6Chat_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "dolur_axebeard/halas/great_shelf/dolur_axebeard/dolur_axebeard065.mp3", "", "", 1112528692, 1589230613, Spawn)
 	AddConversationOption(conversation, "That's not far from what's actually happening.", "Quest6Chat_6")
@@ -707,7 +707,7 @@ end
 
 function Quest6Chat_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "dolur_axebeard/halas/great_shelf/dolur_axebeard/dolur_axebeard066.mp3", "", "", 2614901969, 1124964549, Spawn)
 	AddConversationOption(conversation, "How would I go about doing that? ", "Quest6Chat_5")
@@ -718,7 +718,7 @@ end
 
 function Quest6Chat_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "dolur_axebeard/halas/great_shelf/dolur_axebeard/dolur_axebeard068.mp3", "", "", 3330795351, 440398686, Spawn)
 	AddConversationOption(conversation, "You don't have to worry anymore.", "OfferTheGauntlet")
@@ -729,7 +729,7 @@ end
 
 function Quest6Chat_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "dolur_axebeard/halas/great_shelf/dolur_axebeard/dolur_axebeard067.mp3", "", "", 3225906480, 630261154, Spawn)
 	AddConversationOption(conversation, "Someone should destroy those bone piles.", "Quest6Chat_4")
@@ -740,7 +740,7 @@ end
 function Quest7Chat_1(NPC, Spawn)
 	SetStepComplete(Spawn, TheGauntlet, 2)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
     PlayFlavor(NPC, "dolur_axebeard/halas/great_shelf/dolur_axebeard/dolur_axebeard072.mp3", "", "", 1784529, 3849185180, Spawn)
 	AddConversationOption(conversation, "What about disabling the totems?","Quest7Chat_2")
@@ -752,7 +752,7 @@ end
 
 function Quest7Chat_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "dolur_axebeard/halas/great_shelf/dolur_axebeard/dolur_axebeard073.mp3", "", "", 2943845017, 2205345789, Spawn)
 	AddConversationOption(conversation, "Oh, I see.", "Quest7Chat_3")
@@ -762,7 +762,7 @@ end
 
 function Quest7Chat_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "dolur_axebeard/halas/great_shelf/dolur_axebeard/dolur_axebeard076.mp3", "", "", 3845015927, 2518600901, Spawn)
 	AddConversationOption(conversation, "What did you have in mind?", "Quest7Chat_4")
@@ -773,7 +773,7 @@ end
 
 function Quest7Chat_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "dolur_axebeard/halas/great_shelf/dolur_axebeard/dolur_axebeard077.mp3", "", "", 3800804769, 3084250948, Spawn)
 	AddConversationOption(conversation, "Makes sense.", "Quest7Chat_5")
@@ -784,7 +784,7 @@ end
 
 function Quest7Chat_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "dolur_axebeard/halas/great_shelf/dolur_axebeard/dolur_axebeard079.mp3", "", "", 4093864666, 2060412696, Spawn)
 	AddConversationOption(conversation, "Any other reports?", "Quest7Chat_6")
@@ -794,7 +794,7 @@ end
 
 function Quest7Chat_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "dolur_axebeard/halas/great_shelf/dolur_axebeard/dolur_axebeard080.mp3", "", "", 1837622160, 4089784009, Spawn)
 	AddConversationOption(conversation, "Ugh.  So which is it?", "Quest7Chat_7")
@@ -805,7 +805,7 @@ end
 
 function Quest7Chat_7(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "dolur_axebeard/halas/great_shelf/dolur_axebeard/dolur_axebeard082.mp3", "", "", 4103645790, 7293030, Spawn)
 	AddConversationOption(conversation, "That sounds more plausible.", "Quest7Chat_8")
@@ -816,7 +816,7 @@ end
 
 function Quest7Chat_8(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "dolur_axebeard/halas/great_shelf/dolur_axebeard/dolur_axebeard083.mp3", "", "", 2366031645, 641653492, Spawn)
 	AddConversationOption(conversation, "These orcs are wily.  Their behavior defies expectations.", "Quest7Chat_9")
@@ -828,7 +828,7 @@ end
 
 function Quest7Chat_9(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "dolur_axebeard/halas/great_shelf/dolur_axebeard/dolur_axebeard084.mp3", "", "", 4243043314, 1523140445, Spawn)
 	AddConversationOption(conversation, "Of course.", "OfferOffOssuary")
@@ -840,7 +840,7 @@ end
 
 function Quest7Chat_10(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "dolur_axebeard/halas/great_shelf/dolur_axebeard/dolur_axebeard074.mp3", "", "", 3668194887, 51910928, Spawn)
 	AddConversationOption(conversation, "Oh, I see.", "Quest7Chat_3")
@@ -850,7 +850,7 @@ end
 
 function Quest7Chat_11(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "dolur_axebeard/halas/great_shelf/dolur_axebeard/dolur_axebeard078.mp3", "", "", 571602465, 4229451174, Spawn)
 	AddConversationOption(conversation, "As always, we're on the same page.", "Quest7Chat_5")
@@ -861,7 +861,7 @@ end
 
 function Quest7Chat_12(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "dolur_axebeard/halas/great_shelf/dolur_axebeard/dolur_axebeard081.mp3", "", "", 3792358161, 1911808576, Spawn)
 	AddConversationOption(conversation, "Sounds like he's what you'd call a drunkard.", "Quest7Chat_7")
@@ -872,7 +872,7 @@ end
 
 function Quest7Chat_13(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "dolur_axebeard/halas/great_shelf/dolur_axebeard/dolur_axebeard075.mp3", "", "", 2950142669, 2951966236, Spawn)
 	AddConversationOption(conversation, "Oh, I see.", "Quest7Chat_3")
@@ -882,7 +882,7 @@ end
 
 function Quest7Chat_14(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "dolur_axebeard/halas/great_shelf/dolur_axebeard/dolur_axebeard087.mp3", "", "", 2455437379, 1149838635, Spawn)
 	AddConversationOption(conversation, "I did, but there will be more of them.", "Quest7Chat_15")
@@ -893,7 +893,7 @@ end
 function Quest7Chat_15(NPC, Spawn)
 	SetStepComplete(Spawn, OffOssuary, 3)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "dolur_axebeard/halas/great_shelf/dolur_axebeard/dolur_axebeard088.mp3", "", "", 191733965, 1473786520, Spawn)
 	AddConversationOption(conversation, "Figuratively speaking, of course.", "Quest8Chat_1")
@@ -903,7 +903,7 @@ end
 
 function Quest8Chat_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "dolur_axebeard/halas/great_shelf/dolur_axebeard/dolur_axebeard089.mp3", "", "", 1399173958, 925064684, Spawn)
 	AddConversationOption(conversation, "We need to sever the head of this frost wurm.", "Quest8Chat_2")
@@ -914,7 +914,7 @@ end
 
 function Quest8Chat_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "dolur_axebeard/halas/great_shelf/dolur_axebeard/dolur_axebeard090.mp3", "", "", 3782002158, 339970398, Spawn)
 	AddConversationOption(conversation, "What should I look for?", "Quest8Chat_3")
@@ -925,7 +925,7 @@ end
 
 function Quest8Chat_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "dolur_axebeard/halas/great_shelf/dolur_axebeard/dolur_axebeard091.mp3", "", "", 1275705451, 1277532421, Spawn)
 	AddConversationOption(conversation, "What are they doing?", "Quest8Chat_4")
@@ -936,7 +936,7 @@ end
 
 function Quest8Chat_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "dolur_axebeard/halas/great_shelf/dolur_axebeard/dolur_axebeard092.mp3", "", "", 420466205, 1714342326, Spawn)
 	AddConversationOption(conversation, "And you think their leader can be found near the crystal?", "Quest8Chat_5")
@@ -946,7 +946,7 @@ end
 
 function Quest8Chat_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "dolur_axebeard/halas/great_shelf/dolur_axebeard/dolur_axebeard093.mp3", "", "", 4158777866, 37202239, Spawn)
 	AddConversationOption(conversation, "He must be driven.", "Quest8Chat_6")
@@ -957,7 +957,7 @@ end
 
 function Quest8Chat_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "dolur_axebeard/halas/great_shelf/dolur_axebeard/dolur_axebeard094.mp3", "", "", 4080806581, 1372886220, Spawn)
 	AddConversationOption(conversation, "While I'm there, I may as well destroy that crystal.", "Quest8Chat_7")
@@ -968,7 +968,7 @@ end
 
 function Quest8Chat_7(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "dolur_axebeard/halas/great_shelf/dolur_axebeard/dolur_axebeard095.mp3", "", "", 4108326370, 3849804225, Spawn)
 	AddConversationOption(conversation, "What do you think the crystal is made of?", "Quest8Chat_8")
@@ -979,7 +979,7 @@ end
 
 function Quest8Chat_8(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "dolur_axebeard/halas/great_shelf/dolur_axebeard/dolur_axebeard096.mp3", "", "", 568891414, 964093809, Spawn)
 	AddConversationOption(conversation, "That's terrifying.", "Quest8Chat_9")
@@ -990,7 +990,7 @@ end
 
 function Quest8Chat_9(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "dolur_axebeard/halas/great_shelf/dolur_axebeard/dolur_axebeard097.mp3", "", "", 1964889828, 3937802389, Spawn)
 	AddConversationOption(conversation, "I'll put an end to your nightmares.", "OfferSeveringHead")
@@ -1002,7 +1002,7 @@ end
 function Quest8Chat_10(NPC, Spawn)
 	SetStepComplete(Spawn, SeveringHead, 3)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	AddConversationOption(conversation, "I'm glad to have helped.", "Quest9Chat_1")
 	AddConversationOption(conversation, "So, do you need any more help?", "Quest9Chat_1")
@@ -1011,7 +1011,7 @@ end
 
 function Quest9Chat_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	AddConversationOption(conversation, "I'm fairly sure.", "Quest9Chat_2")
 	AddConversationOption(conversation, "Your flattery will be the death of me, Dolur.", "Quest9Chat_2")
@@ -1020,7 +1020,7 @@ end
 
 function Quest9Chat_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	AddConversationOption(conversation, "I'm just glad it's over.", "Quest9Chat_3")
 	AddConversationOption(conversation, "A few missteps are to be expected.", "Quest9Chat_3")
@@ -1031,7 +1031,7 @@ end
 
 function Quest9Chat_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	AddConversationOption(conversation, "I'd be happy to help.", "OfferNightmareOver")
 	AddConversationOption(conversation, "I will head over right away.", "OfferNightmareOver")

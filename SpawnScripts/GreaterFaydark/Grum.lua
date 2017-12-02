@@ -22,7 +22,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 		PlayFlavor(NPC, "grum/_exp03/exp03_rgn_greater_faydark/grum/grum_001.mp3", "", "", 2456014343, 373150177, Spawn)
 	AddConversationOption(conversation, "Well what do you want?", "dlg_17_1")
@@ -32,7 +32,7 @@ end
 
 function dlg_17_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "grum/_exp03/exp03_rgn_greater_faydark/grum/grum_002.mp3", "", "", 2366675475, 910741448, Spawn)
 	AddConversationOption(conversation, "Sure.", "dlg_17_2")
@@ -42,7 +42,7 @@ end
 
 function dlg_17_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "grum/_exp03/exp03_rgn_greater_faydark/grum/grum_003.mp3", "", "", 2187487488, 316668200, Spawn)
 	AddConversationOption(conversation, "Yeah, I am going to get you some.", "dlg_17_3")

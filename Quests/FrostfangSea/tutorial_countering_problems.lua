@@ -21,7 +21,7 @@ function Accepted(Quest, QuestGiver, Player)
 	SummonItem(Player, 31373, 1)
 	SummonItem(Player, 4142, 1)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "I'll do my best!")
 	StartConversation(conversation, QuestGiver, Player, "No, that was a particularly easy recipe.  In most other cases though, you have the chance of these warnings appearing.  They're random, but will always occur at the beginning of a new crafting round.  You have until the end of that 4 second round to counter the event.  I'd like you to go to the jeweler's workbench now and create a lead bracelet.  You'll find the recipe in this book.  Take care this time to watch out for warnings and counter them correctly.  And don't forget you can also use your arts to help out even when there's no warning showing.")

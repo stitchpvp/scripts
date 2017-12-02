@@ -29,7 +29,7 @@ function hailed(NPC, Spawn)
 end
 
 function PalChat1(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	FaceTarget(NPC, Spawn)
 
 	AddConversationOption(conversation, "That's useful to know!", "PalChat2")
@@ -37,7 +37,7 @@ function PalChat1(NPC, Spawn)
 end
 
 function PalChat2(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	FaceTarget(NPC, Spawn)
 	
 	AddConversationOption(conversation, "That's reassuring.", "PalChat3")
@@ -45,7 +45,7 @@ function PalChat2(NPC, Spawn)
 end
 
 function PalChat3(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	FaceTarget(NPC, Spawn)
 
 	AddConversationOption(conversation, "That will be useful!", "PalChat4")
@@ -53,7 +53,7 @@ function PalChat3(NPC, Spawn)
 end
 
 function PalChat4(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	FaceTarget(NPC, Spawn)
 
 	AddConversationOption(conversation, "That's interesting.", "PalChat5")
@@ -61,7 +61,7 @@ function PalChat4(NPC, Spawn)
 end
 
 function PalChat5(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	FaceTarget(NPC, Spawn)
 
 	AddConversationOption(conversation, "Thank you for the advice.")

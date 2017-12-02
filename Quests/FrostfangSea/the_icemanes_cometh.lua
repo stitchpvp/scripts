@@ -15,7 +15,7 @@ function Accepted(Quest, QuestGiver, Player)
         SummonItem(Player, 46664, 1)
 	end
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(QuestGiver, "verien_skysigh/halas/gwenevyns_cove/verien_skysigh_030.mp3", "", "", 2735698585, 1703243228, Player)
 	AddConversationOption(conversation, "I understand.")

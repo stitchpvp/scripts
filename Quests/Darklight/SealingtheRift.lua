@@ -39,7 +39,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(QuestGiver, "pellandra_d_xatyl/darklight_wood/hates_envy/pellandra_revamp/pellandra005.mp3", "", "", 2498536389, 3964718754, Player)
 	AddConversationOption(conversation, "I will return victorious!")

@@ -41,7 +41,7 @@ end
 
 function hailed(NPC, Spawn)
     FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	if HasQuest(Spawn, BeetsAlternative) == false and HasCompletedQuest(Spawn, BeetsAlternative) == false then
         Quest1Chat_1(NPC, Spawn)
 	elseif GetQuestStep(Spawn, RideGwenevyn) == 1 then
@@ -56,7 +56,7 @@ function Quest1Chat_1(NPC, Spawn)
 	    SetStepComplete(Spawn, RideGwenevyn, 1)
 	end
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
     PlayFlavor(NPC, "wregan_firebeard/halas/gwenevyns_cove/wregan_firebeard_001.mp3", "", "", 1553579040, 3434703804, Spawn)
     AddConversationOption(conversation, "Yes.", "Quest1Chat_2")
@@ -66,7 +66,7 @@ end
 
 function Quest1Chat_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "wregan_firebeard/halas/gwenevyns_cove/wregan_firebeard_002.mp3", "", "", 1986724829, 1256857659, Spawn)
 	AddConversationOption(conversation, "Why's that?", "Quest1Chat_3")
@@ -75,7 +75,7 @@ end
 
 function Quest1Chat_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "wregan_firebeard/halas/gwenevyns_cove/wregan_firebeard_003.mp3", "", "", 931801191, 1464668700, Spawn)
 	AddConversationOption(conversation, "You were going to leave without enough provisions?", "Quest1Chat_4")
@@ -85,7 +85,7 @@ end
 
 function Quest1Chat_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "wregan_firebeard/halas/gwenevyns_cove/wregan_firebeard_005.mp3", "", "", 3666066743, 675613480, Spawn)
 	AddConversationOption(conversation, "Oh, so I'll be gathering the stuff I need for this trip?", "OfferBeetsAlternative")
@@ -95,7 +95,7 @@ end
 
 function Quest1Chat_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "wregan_firebeard/halas/gwenevyns_cove/wregan_firebeard_006.mp3", "", "", 3776727269, 3608373686, Spawn)
 	AddConversationOption(conversation, "Oh, so I'll be gathering the stuff I need for this trip?", "OfferBeetsAlternative")
@@ -105,7 +105,7 @@ end
 
 function Quest1Chat_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "wregan_firebeard/halas/gwenevyns_cove/wregan_firebeard_004.mp3", "", "", 2820759679, 594607724, Spawn)
 	AddConversationOption(conversation, "Oh, so I'll be gathering the stuff I need for this trip?", "OfferBeetsAlternative")

@@ -18,7 +18,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	if not HasCompletedQuest(Spawn, KestrelPie) and not HasQuest(Spawn, KestrelPie) then
 		PlayFlavor(NPC, "alice_swamprunner/halas/new_halas/alice_swamprunner/alice_swamprunner_001.mp3", "", "", 3199488336, 2249135127, Spawn)
@@ -39,7 +39,7 @@ end
 
 function Quest1Chat_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "alice_swamprunner/halas/new_halas/alice_swamprunner/alice_swamprunner_003.mp3", "", "", 1636835603, 1296919818, Spawn)
 	AddConversationOption(conversation, "I can always find time to help if help is needed.", "Quest1Chat_2")
@@ -48,7 +48,7 @@ end
 
 function Quest1Chat_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "alice_swamprunner/halas/new_halas/alice_swamprunner/alice_swamprunner_004.mp3", "", "", 3609415990, 2721638648, Spawn)
 	AddConversationOption(conversation, "Kestrels are no problem for me.", "Quest1Chat_3")
@@ -57,7 +57,7 @@ end
 
 function Quest1Chat_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "alice_swamprunner/halas/new_halas/alice_swamprunner/alice_swamprunner_005.mp3", "", "", 3894141515, 2250215460, Spawn)
 	AddConversationOption(conversation, "Sure, I don't mind the exercise.", "OfferKestrelPie")
@@ -67,7 +67,7 @@ end
 
 function Quest1Chat_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	AddConversationOption(converstion, "I shall return once I have collected the ingredients.")
 	StartConversation(conversation, NPC, Spawn, "You can find the ice shrooms in the cave leading to the Erollis Dock, and the kestrels are at the south entrance to New Halas.")
@@ -75,7 +75,7 @@ end
 
 function Quest1Chat_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "It sounds yummy.", "Quest1Chat_6")
 	StartConversation(conversation, NPC, Spawn, "I have already prepared the pie and crust and the rest of the gravy filling. Now to grill up the meat and ice shrooms and add them.")
@@ -83,7 +83,7 @@ end
 
 function Quest1Chat_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	AddConversationOption(conversation, "I can't wait.", "Quest1Chat_7")
 	StartConversation(conversation, NPC, Spawn, "It is indeed. Now to cook it and it will be ready to eat.")
@@ -93,7 +93,7 @@ function Quest1Chat_7(NPC, Spawn)
 	AddSpawnAccess(GetSpawn(NPC, 4701845), Spawn)
 	SetStepComplete(Spawn, KestrelPie, 3)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	AddConversationOption(conversation, "I will! Thanks, Alice.")
 	StartConversation(conversation, NPC, Spawn, "There, finished! Go ahead, take a slice!")

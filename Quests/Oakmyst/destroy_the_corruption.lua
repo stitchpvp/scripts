@@ -18,7 +18,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	PlayFlavor(QuestGiver, "voiceover/english/empress_anassa/qey_adv01_oakmyst/empressanassa002.mp3", "", "", 3988531876, 1061259431, Player)
 	AddConversationOption(conversation, "What is Rotweed?", "WhatIsRotweed")

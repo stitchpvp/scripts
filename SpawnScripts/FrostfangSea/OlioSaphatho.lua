@@ -29,7 +29,7 @@ function hailed(NPC, Spawn)
 end
 
 function CoecChat1(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	FaceTarget(NPC, Spawn)
 
 	AddConversationOption(conversation, "That's useful to know!", "CoecChat2")
@@ -37,7 +37,7 @@ function CoecChat1(NPC, Spawn)
 end
 
 function CoecChat2(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	FaceTarget(NPC, Spawn)
 	
 	AddConversationOption(conversation, "That's interesting.", "CoecChat3")
@@ -45,7 +45,7 @@ function CoecChat2(NPC, Spawn)
 end
 
 function CoecChat3(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	FaceTarget(NPC, Spawn)
 
 	AddConversationOption(conversation, "Thank you for the advice.")

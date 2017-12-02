@@ -17,7 +17,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	if HasQuest(Spawn, QUEST_FROM_NEOLA) and GetQuestStep(Spawn, QUEST_FROM_NEOLA) == 2 then
 		AddConversationOption(conversation, "Sprinkle Smitelin's Excel-a-gro onto the sapling.", "Again")
@@ -34,7 +34,7 @@ function Again(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_FROM_NEOLA, 2)
 	
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	AddConversationOption(conversation, "Farewell little shrub.")
 	StartConversation(conversation, NPC, Spawn, "...")

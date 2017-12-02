@@ -19,7 +19,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	if HasCompletedQuest(Spawn, QUEST_1) then
 		Say(NPC, "May you complete your task without leaving this realm.", Spawn)
@@ -39,7 +39,7 @@ end
 
 function dlg_3_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "an_ethernere_guard/fprt_adv02_graveyard/ethernere_keeper002.mp3", "", "", 3556340892, 124958826, Spawn)
 	AddConversationOption(conversation, "Of course!", "dlg_3_2")
@@ -49,7 +49,7 @@ end
 
 function dlg_3_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "an_ethernere_guard/fprt_adv02_graveyard/ethernere_keeper003.mp3", "", "", 2377701112, 1112213409, Spawn)
 	AddConversationOption(conversation, "What do you need me to do?", "OfferQuest1")
@@ -76,7 +76,7 @@ function Successful(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_1, 3)
 	
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "Thank you.")
 	StartConversation(conversation, NPC, Spawn, "Excellent. Thank you for your service to Freeport and the Keepers of Ethernere. Please, take this for your trouble.")

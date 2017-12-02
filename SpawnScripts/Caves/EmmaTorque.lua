@@ -23,7 +23,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	-- her quests require QUEST1_FROM_CONSULBREE to be completed first
 	
@@ -68,7 +68,7 @@ end
 
 function dlg_17_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/emma_torque/qey_adv03_caves/quests/emma/emma_bree_000.mp3", "", "", 1968235016, 878780365, Spawn)
 	AddConversationOption(conversation, "May I have one?", "dlg_17_2")
@@ -79,7 +79,7 @@ function dlg_17_2(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST3_FROM_CONSULBREE, 1)
 	
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	-- Drawing Ray
 	if not HasItem(Spawn, 140946) then
@@ -105,7 +105,7 @@ end
 
 function dlg_12_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/emma_torque/qey_adv03_caves/quests/emma/emma_001.mp3", "", "", 961712587, 2002405652, Spawn)
 	AddConversationOption(conversation, "To demolish?", "dlg_12_2")
@@ -114,7 +114,7 @@ end
 
 function dlg_12_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/emma_torque/qey_adv03_caves/quests/emma/emma_002.mp3", "", "", 3590999842, 100037735, Spawn)
 	AddConversationOption(conversation, "What kind of machines?", "dlg_12_3")
@@ -123,7 +123,7 @@ end
 
 function dlg_12_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/emma_torque/qey_adv03_caves/quests/emma/emma_003.mp3", "", "", 3625869581, 925115546, Spawn)
 	AddConversationOption(conversation, "When will you be ready?", "dlg_12_4")
@@ -132,7 +132,7 @@ end
 
 function dlg_12_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/emma_torque/qey_adv03_caves/quests/emma/emma_004.mp3", "", "", 1144754177, 2806670128, Spawn)
 	AddConversationOption(conversation, "How can I help?", "dlg_12_5")
@@ -141,7 +141,7 @@ end
 
 function dlg_12_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/emma_torque/qey_adv03_caves/quests/emma/emma_005.mp3", "", "", 2949726626, 4278022809, Spawn)
 	AddConversationOption(conversation, "All right.", "OfferQuest1")
@@ -168,7 +168,7 @@ function dlg_20_1(NPC, Spawn)
 		SetStepComplete(Spawn, QUEST_1, 2)
 	end
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/emma_torque/qey_adv03_caves/quests/emma/emma_007.mp3", "", "", 4075800183, 229387878, Spawn)
 	AddConversationOption(conversation, "I am ready.", "dlg_20_2")
@@ -181,7 +181,7 @@ end
 
 function dlg_20_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/emma_torque/qey_adv03_caves/quests/emma/emma_008.mp3", "", "", 3584996398, 1510863126, Spawn)
 	AddConversationOption(conversation, "I can.", "OfferQuest2")
@@ -204,7 +204,7 @@ end
 
 function dlg_26_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/emma_torque/qey_adv03_caves/quests/emma/emma_011.mp3", "", "", 3844748719, 1801822798, Spawn)
 	AddConversationOption(conversation, "Yes, the machines are destroyed and Fulkoir is dead.", "dlg_26_2")
@@ -215,7 +215,7 @@ function dlg_26_2(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_2, 4)
 	
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/emma_torque/qey_adv03_caves/quests/emma/emma_012.mp3", "", "", 514277359, 3372853210, Spawn)
 	AddConversationOption(conversation, "You are welcome.")

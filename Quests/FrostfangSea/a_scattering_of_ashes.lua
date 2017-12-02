@@ -21,7 +21,7 @@ function Accepted(Quest, QuestGiver, Player)
         SummonItem(Player, 49022, 1)
     end
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(QuestGiver, "dolur_axebeard/halas/great_shelf/dolur_axebeard/dolur_axebeard028.mp3", "", "", 564515719, 107243017, Player)
 	AddConversationOption(conversation, "Thank you.  I'd be happy to help.")

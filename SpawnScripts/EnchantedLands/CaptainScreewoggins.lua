@@ -22,7 +22,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	StartConversation(conversation, NPC, Spawn, "Hail yerself, landlubber.  If'n ye don't mind, I have things dat be needin' me attention.")
 end

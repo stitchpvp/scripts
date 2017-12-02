@@ -17,7 +17,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	if HasQuest(Spawn, TrustIssues) and not QuestStepIsComplete(Spawn, TrustIssues, 2) then
 		PlayFlavor(NPC, "dandi_mccarren/halas/new_halas_guard_house/dandi_mccarren001.mp3", "", "", 4065222914, 2283262367, Spawn)
 		AddConversationOption(conversation, "I have a few questions.", "Quest1Chat_1")
@@ -33,7 +33,7 @@ end
 
 function Quest1Chat_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "dandi_mccarren/halas/new_halas_guard_house/dandi_mccarren002.mp3", "", "", 2997702054, 4169410593, Spawn)
 	AddConversationOption(conversation, "Why did you come to Erollis? ", "Quest1Chat_2")
@@ -44,7 +44,7 @@ end
 
 function Quest1Chat_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "dandi_mccarren/halas/new_halas_guard_house/dandi_mccarren004.mp3", "", "", 2246027108, 3016893607, Spawn)
 	AddConversationOption(conversation, "I do know what that's like.", "Quest1Chat_3")
@@ -55,7 +55,7 @@ end
 
 function Quest1Chat_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "dandi_mccarren/halas/new_halas_guard_house/dandi_mccarren006.mp3", "", "", 234929252, 3290173917, Spawn)
 	AddConversationOption(conversation, "True, there's no city quite like New Halas.", "Quest1Chat_4")
@@ -66,7 +66,7 @@ end
 
 function Quest1Chat_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "dandi_mccarren/halas/new_halas_guard_house/dandi_mccarren007.mp3", "", "", 2015097155, 2674343560, Spawn)
 	AddConversationOption(conversation, "What do you like about Erollis?", "Quest1Chat_5")
@@ -78,7 +78,7 @@ end
 function Quest1Chat_5(NPC, Spawn)
 	SetStepComplete(Spawn, TrustIssues, 2)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "dandi_mccarren/halas/new_halas_guard_house/dandi_mccarren009.mp3", "", "", 2546556899, 2243252862, Spawn)
 	AddConversationOption(conversation, "Yes, thank you.")
@@ -88,7 +88,7 @@ end
 
 function Quest1Chat_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	AddConversationOption(conversation, "Um...I'm taking a poll.", "Quest1Chat_1")
 	AddConversationOption(conversation, "There's no need to get upset!", "Quest1Chat_1")
@@ -98,7 +98,7 @@ end
 
 function Quest1Chat_7(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	AddConversationOption(conversation, "What do you like about Erollis?", "Quest1Chat_5")
 	AddConversationOption(conversation, "Whatever, I don't have time for this.")
@@ -107,7 +107,7 @@ end
 
 function Quest1Chat_8(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	AddConversationOption(conversation, "I was just leaving.")
 	StartConversation(conversation, NPC, Spawn, "Bah.  Get out of my sight!")

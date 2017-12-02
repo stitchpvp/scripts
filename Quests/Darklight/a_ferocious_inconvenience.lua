@@ -23,7 +23,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(QuestGiver, "voiceover/english/neriak/jhana_do_zyth/darklight_wood/hates_envy/jhana/jhana004.mp3", "", "", 3733651177, 3084298647, Player)
 	AddConversationOption(conversation, "All right, I will return once it is slain.", "dlg_3_4")

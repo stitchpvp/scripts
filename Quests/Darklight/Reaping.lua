@@ -43,7 +43,7 @@ function Accepted(Quest, QuestGiver, Player)
         SummonItem(Player, 48173, 1)
 	end
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	Say(QuestGiver, "Return to me when you've trapped them.")
 end

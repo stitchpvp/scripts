@@ -21,7 +21,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	AddConversationOption(conversation, "I'll get this to her, right away!")
 	StartConversation(conversation, QuestGiver, Player, "She's as reluctant to trust others, too, but I'll write you my recommendation. And if she doesn't have any work, I bet she'll know who there does.")

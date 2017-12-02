@@ -28,7 +28,7 @@ function casted_on(NPC, Spawn, SpellName)
 end
 
 function GrizChat_2(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	AddConversationOption(conversation, "Where to next, Griz?", "GrizChat3")
 	StartDialogConversation(conversation, 3, NPC, Spawn, "It has moved on.  But we are on its trail.")
 end
@@ -36,7 +36,7 @@ end
 function GrizChat3(NPC, Spawn)
 	SetStepComplete(Spawn, SometimesKnut, 1)
 	RemoveSpawnAccess(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	AddConversationOption(conversation, "How insightful.")
 	StartDialogConversation(conversation, 3, NPC, Spawn, "Deeper.")
 end

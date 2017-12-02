@@ -22,7 +22,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 		PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_valtteri_yliveri/_exp03/exp03_cty_kelethin/tutorials/qst_valtteri/qst_valtteri001.mp3", "", "", 936350332, 90364249, Spawn)
 	AddConversationOption(conversation, "Let us begin.", "dlg_55_1")
@@ -32,7 +32,7 @@ end
 
 function dlg_55_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_valtteri_yliveri/_exp03/exp03_cty_kelethin/tutorials/qst_valtteri/qst_valtteri002.mp3", "", "", 2453379956, 3310442892, Spawn)
 	AddConversationOption(conversation, "Tell me about Spells.", "dlg_55_2")
@@ -46,7 +46,7 @@ end
 
 function dlg_55_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_valtteri_yliveri/_exp03/exp03_cty_kelethin/tutorials/qst_valtteri/qst_valtteri003.mp3", "", "", 19488271, 366896859, Spawn)
 	AddConversationOption(conversation, "Who uses Spells?", "dlg_55_3")
@@ -56,7 +56,7 @@ end
 
 function dlg_55_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_valtteri_yliveri/_exp03/exp03_cty_kelethin/tutorials/qst_valtteri/qst_valtteri004.mp3", "", "", 2334805237, 1906671194, Spawn)
 	AddConversationOption(conversation, "I have more questions.", "dlg_55_4")
@@ -66,7 +66,7 @@ end
 
 function dlg_55_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_valtteri_yliveri/_exp03/exp03_cty_kelethin/tutorials/qst_valtteri/qst_valtteri002.mp3", "", "", 2453379956, 3310442892, Spawn)
 	AddConversationOption(conversation, "Tell me about Spells.", "dlg_55_5")
@@ -80,7 +80,7 @@ end
 
 function dlg_55_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_valtteri_yliveri/_exp03/exp03_cty_kelethin/tutorials/qst_valtteri/qst_valtteri005.mp3", "", "", 3424416600, 3943456320, Spawn)
 	AddConversationOption(conversation, "Who uses Combat Arts?")
@@ -90,7 +90,7 @@ end
 
 function dlg_55_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_valtteri_yliveri/_exp03/exp03_cty_kelethin/tutorials/qst_valtteri/qst_valtteri006.mp3", "", "", 1083934086, 2427192984, Spawn)
 	AddConversationOption(conversation, "I have more questions.", "dlg_55_7")
@@ -100,7 +100,7 @@ end
 
 function dlg_55_7(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_valtteri_yliveri/_exp03/exp03_cty_kelethin/tutorials/qst_valtteri/qst_valtteri002.mp3", "", "", 2453379956, 3310442892, Spawn)
 	AddConversationOption(conversation, "Tell me about Spells.", "dlg_55_8")
@@ -114,7 +114,7 @@ end
 
 function dlg_55_8(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_valtteri_yliveri/_exp03/exp03_cty_kelethin/tutorials/qst_valtteri/qst_valtteri007.mp3", "", "", 2389866686, 2371365661, Spawn)
 	AddConversationOption(conversation, "How are Abilities different from Spells and Combat Arts?")
@@ -124,7 +124,7 @@ end
 
 function dlg_55_9(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_valtteri_yliveri/_exp03/exp03_cty_kelethin/tutorials/qst_valtteri/qst_valtteri008.mp3", "", "", 2279765563, 3684024592, Spawn)
 	AddConversationOption(conversation, "I have more questions.", "dlg_55_10")
@@ -134,7 +134,7 @@ end
 
 function dlg_55_10(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_valtteri_yliveri/_exp03/exp03_cty_kelethin/tutorials/qst_valtteri/qst_valtteri002.mp3", "", "", 2453379956, 3310442892, Spawn)
 	AddConversationOption(conversation, "Tell me about Spells.", "dlg_55_11")
@@ -148,7 +148,7 @@ end
 
 function dlg_55_11(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_valtteri_yliveri/_exp03/exp03_cty_kelethin/tutorials/qst_valtteri/qst_valtteri009.mp3", "", "", 1987652975, 3025156912, Spawn)
 	AddConversationOption(conversation, "How do I use my Spells, Combat Arts, and Abilities?")
@@ -158,7 +158,7 @@ end
 
 function dlg_55_12(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_valtteri_yliveri/_exp03/exp03_cty_kelethin/tutorials/qst_valtteri/qst_valtteri010.mp3", "", "", 1721125392, 1598552634, Spawn)
 	AddConversationOption(conversation, "I have more questions.", "dlg_55_13")
@@ -168,7 +168,7 @@ end
 
 function dlg_55_13(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_valtteri_yliveri/_exp03/exp03_cty_kelethin/tutorials/qst_valtteri/qst_valtteri002.mp3", "", "", 2453379956, 3310442892, Spawn)
 	AddConversationOption(conversation, "Tell me about Spells.", "dlg_55_14")
@@ -182,7 +182,7 @@ end
 
 function dlg_55_14(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_valtteri_yliveri/_exp03/exp03_cty_kelethin/tutorials/qst_valtteri/qst_valtteri011.mp3", "", "", 2108757362, 940715089, Spawn)
 	AddConversationOption(conversation, "How can I judge the effectiveness of my Spells and Combat Arts?")
@@ -192,7 +192,7 @@ end
 
 function dlg_55_15(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_valtteri_yliveri/_exp03/exp03_cty_kelethin/tutorials/qst_valtteri/qst_valtteri012.mp3", "", "", 2145626237, 3819170760, Spawn)
 	AddConversationOption(conversation, "How can I improve my Spells and Combat Arts?", "dlg_55_16")
@@ -202,7 +202,7 @@ end
 
 function dlg_55_16(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_valtteri_yliveri/_exp03/exp03_cty_kelethin/tutorials/qst_valtteri/qst_valtteri013.mp3", "", "", 272235720, 2321960215, Spawn)
 	AddConversationOption(conversation, "What about other ranks of Spells and Arts?", "dlg_55_17")
@@ -212,7 +212,7 @@ end
 
 function dlg_55_17(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_valtteri_yliveri/_exp03/exp03_cty_kelethin/tutorials/qst_valtteri/qst_valtteri017.mp3", "", "", 1752657986, 2894689158, Spawn)
 	AddConversationOption(conversation, "Are there other ways to improve my Spells and Combat Arts?", "dlg_55_18")
@@ -222,7 +222,7 @@ end
 
 function dlg_55_18(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_valtteri_yliveri/_exp03/exp03_cty_kelethin/tutorials/qst_valtteri/qst_valtteri014.mp3", "", "", 986284660, 3435757183, Spawn)
 	AddConversationOption(conversation, "Are all my Spells and Combat Arts unique?", "dlg_55_19")
@@ -232,7 +232,7 @@ end
 
 function dlg_55_19(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_valtteri_yliveri/_exp03/exp03_cty_kelethin/tutorials/qst_valtteri/qst_valtteri015.mp3", "", "", 1198165250, 2103504074, Spawn)
 	AddConversationOption(conversation, "How can I keep all these Spells and Arts straight in my Knowledge Book?", "dlg_55_20")
@@ -242,7 +242,7 @@ end
 
 function dlg_55_20(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_valtteri_yliveri/_exp03/exp03_cty_kelethin/tutorials/qst_valtteri/qst_valtteri016.mp3", "", "", 2671971735, 2047415775, Spawn)
 	AddConversationOption(conversation, "I have more questions.", "dlg_55_21")
@@ -252,7 +252,7 @@ end
 
 function dlg_55_21(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_valtteri_yliveri/_exp03/exp03_cty_kelethin/tutorials/qst_valtteri/qst_valtteri002.mp3", "", "", 2453379956, 3310442892, Spawn)
 	AddConversationOption(conversation, "Tell me about Spells.", "dlg_55_22")

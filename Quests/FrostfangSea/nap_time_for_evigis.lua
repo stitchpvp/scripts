@@ -22,7 +22,7 @@ function Accepted(Quest, QuestGiver, Player)
 		SummonItem(Player, 46463)
 	end
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(QuestGiver, "torli_blackbow/halas/new_halas_guard_house/torli_blackaxe_013.mp3", "", "", 280356547, 1472834780, Player)
 	AddConversationOption(conversation, "I will not fail.")

@@ -23,7 +23,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(QuestGiver, "voiceover/english/tutorial_revamp/lieutenant_imperidus/fprt_adv04_ruins/revamp/lieutenant_imperidus009.mp3", "", "", 3046376303, 2999823619, Player)
 	AddConversationOption(conversation, "Do you really think wrecking statues and ruining food is going to ensure victory?", "dlg_3_8")

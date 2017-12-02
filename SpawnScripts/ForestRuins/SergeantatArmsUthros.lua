@@ -12,7 +12,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	choice = math.random(1,2)
 
@@ -44,7 +44,7 @@ end
 
 function dlg_0_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "Sounds good.", "dlg_0_2")
 	StartConversation(conversation, NPC, Spawn, "Well, then, make yourself useful and kill some of the nasty vermin who live in this area.   And if you need something to do later, come on back, I always need help!")
@@ -52,7 +52,7 @@ end
 
 function dlg_14_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "Sure.", "dlg_14_2")
 	AddConversationOption(conversation, "Not right now. ")
@@ -61,7 +61,7 @@ end
 
 function dlg_14_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "You bet.", "dlg_14_3")
 	StartConversation(conversation, NPC, Spawn, "Great! Then go and kill more vermin.")

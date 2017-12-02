@@ -24,7 +24,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(Player, "voiceover/english/rok_questvo/primary_conzuk_zum_ha/_exp04/exp04_rgn_timorous_deep/chrykori_tie/zumha/zumha005.mp3", "", "", 3636164534, 195709571, Player)
 	AddConversationOption(conversation, "I will be as swift as I can.")

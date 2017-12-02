@@ -30,7 +30,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	if HasQuest(Spawn, QUEST_FROM_JOHFRIT) then
 		SetStepComplete(Spawn, QUEST_FROM_JOHFRIT, 1)
@@ -91,7 +91,7 @@ end
 
 function dlg_0_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/lieutenant_dawson/qey_adv04_bog/quests/dawson/dawson001.mp3", "", "", 1614058358, 1618385129, Spawn)
 	AddConversationOption(conversation, "How do you plan on doing that?", "dlg_0_2")
@@ -100,7 +100,7 @@ end
 
 function dlg_0_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/lieutenant_dawson/qey_adv04_bog/quests/dawson/dawson002.mp3", "", "", 3230267563, 3912489115, Spawn)
 	AddConversationOption(conversation, "Sure, what can I do?", "dlg_0_3")
@@ -109,7 +109,7 @@ end
 
 function dlg_0_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/lieutenant_dawson/qey_adv04_bog/quests/dawson/dawson003.mp3", "", "", 1827785196, 3415599407, Spawn)
 	AddConversationOption(conversation, "Sure, I can do it.", "dlg_0_4")
@@ -119,7 +119,7 @@ end
 
 function dlg_0_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/lieutenant_dawson/qey_adv04_bog/quests/dawson/dawson004.mp3", "", "", 146673171, 1820291654, Spawn)
 	AddConversationOption(conversation, "All right.", "OfferQuest1")
@@ -153,7 +153,7 @@ function dlg_1_1(NPC, Spawn)
 	end
 	
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/lieutenant_dawson/qey_adv04_bog/quests/dawson/dawson006.mp3", "", "", 74693624, 878787652, Spawn)
 	AddConversationOption(conversation, "Sure, what can I do?", "dlg_1_2")
@@ -163,7 +163,7 @@ end
 
 function dlg_1_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/lieutenant_dawson/qey_adv04_bog/quests/dawson/dawson007.mp3", "", "", 3523318297, 3580020244, Spawn)
 	AddConversationOption(conversation, "Ok, I'll attach the beacon.", "OfferQuest2")
@@ -193,7 +193,7 @@ function dlg_6_1(NPC, Spawn)
 	end
 	
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/lieutenant_dawson/qey_adv04_bog/quests/dawson/dawson009.mp3", "", "", 416950362, 1150655784, Spawn)
 	AddConversationOption(conversation, "Yes. I will help.", "dlg_6_2")
@@ -207,7 +207,7 @@ end
 
 function dlg_6_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/lieutenant_dawson/qey_adv04_bog/quests/dawson/dawson010.mp3", "", "", 2108767843, 3888763580, Spawn)
 	AddConversationOption(conversation, "Where are the ambush sites?", "dlg_6_3")
@@ -216,7 +216,7 @@ end
 
 function dlg_6_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/lieutenant_dawson/qey_adv04_bog/quests/dawson/dawson011.mp3", "", "", 3580800965, 1143356388, Spawn)
 	AddConversationOption(conversation, "I will return.", "OfferQuest3")
@@ -245,7 +245,7 @@ function dlg_12_1(NPC, Spawn)
 	end
 	
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/lieutenant_dawson/qey_adv04_bog/quests/dawson/dawson013.mp3", "", "", 459920710, 2550974214, Spawn)
 	AddConversationOption(conversation, "Yes, I can help.", "dlg_12_2")
@@ -259,7 +259,7 @@ end
 
 function dlg_12_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/lieutenant_dawson/qey_adv04_bog/quests/dawson/dawson014.mp3", "", "", 3721129561, 3085892436, Spawn)
 	AddConversationOption(conversation, "I'll be back when this is done.", "OfferQuest4")
@@ -289,7 +289,7 @@ function dlg_14_1(NPC, Spawn)
 	end
 	
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/lieutenant_dawson/qey_adv04_bog/quests/dawson/dawson017.mp3", "", "", 3063961189, 3632961186, Spawn)
 	AddConversationOption(conversation, "What loose end?", "dlg_14_2")
@@ -302,7 +302,7 @@ end
 
 function dlg_14_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/lieutenant_dawson/qey_adv04_bog/quests/dawson/dawson018.mp3", "", "", 1491634247, 1091662891, Spawn)
 	AddConversationOption(conversation, "I can do this.", "dlg_14_3")
@@ -312,7 +312,7 @@ end
 
 function dlg_14_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/lieutenant_dawson/qey_adv04_bog/quests/dawson/dawson019.mp3", "", "", 726337004, 1780065710, Spawn)
 	AddConversationOption(conversation, "Is he dangerous?", "OfferQuest5")
@@ -340,7 +340,7 @@ function Quest5Done(NPC, Spawn)
 	end
 	
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "You are welcome.", "WordHasCome")
 	StartConversation(conversation, NPC, Spawn, "Good. With him gone the gnoll presence here will not be able to regain strength. They will flee or be killed. You've done a great thing for us, " .. GetName(Spawn) .. ". I appreciate it more than you know. And Qeynos, appreciates it too.")
@@ -352,7 +352,7 @@ end
 
 function WordHasCome(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "bow", 0, 0, Spawn)
 	AddConversationOption(conversation, "I can do this.", "OfferQuest6")

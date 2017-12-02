@@ -21,7 +21,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(QuestGiver, "rakan_rockbreaker/halas/great_shelf/rakan_rockbreaker/rakan_rockbreaker005.mp3", "", "", 2645967514, 1229482070, Player)
 	AddConversationOption(conversation, "Don't worry.")

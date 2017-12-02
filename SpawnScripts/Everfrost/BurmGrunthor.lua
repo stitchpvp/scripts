@@ -57,7 +57,7 @@ end
 
 function Quest1Chat_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "Perhaps I could fish some for you?", "Offer_Fish_For_Grunther")
         AddConversationOption(conversation, "Sounds like you should work on your fishing skills.")
@@ -67,7 +67,7 @@ end
 
 function Quest1Chat_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "I do not.")
 	StartConversation(conversation, NPC, Spawn, "Have ye the fish?")
@@ -75,7 +75,7 @@ end
 
 function Quest1Chat_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "I most certainly would.", "Offer_Fish_For_Grunther")
 	AddConversationOption(conversation, "Nah, I've got better things to do with my time.")
@@ -85,7 +85,7 @@ end
 function Quest1Chat_5(NPC, Spawn)
         SetStepComplete(Spawn, Fish_For_Grunther, 2)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "Yes, here's all your fish." , "Quest1Chat_6")
 	StartConversation(conversation, NPC, Spawn, "Is that the smell of fish on ye?")
@@ -93,7 +93,7 @@ end
 
 function Quest1Chat_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "I am glad to have helped.")
 	StartConversation(conversation, NPC, Spawn, "Ahh, a fine batch if I've ever seen it. Thank ye.")
@@ -102,7 +102,7 @@ end
 
 function Quest1Chat_7(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "No, must just be all the adventuring I've been doing...")
 	StartConversation(conversation, NPC, Spawn, "Is that the smell of fish on ye?")
@@ -111,7 +111,7 @@ end
 function Quest1Chat_8(NPC, Spawn)
         SetStepComplete(Spawn, Fish_For_Grunther, 2)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "I do." , "Quest1Chat_9")
 	StartConversation(conversation, NPC, Spawn, "Have ye the fish?")
@@ -119,7 +119,7 @@ end
 
 function Quest1Chat_9(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "You are most welcome.")
 	StartConversation(conversation, NPC, Spawn, "A blessing! Aye, I can call ye nay but a blessing.")

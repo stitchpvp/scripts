@@ -26,7 +26,7 @@ function hailed(NPC, Spawn)
 	SpawnSet(NPC, "visual_state", "0")	-- Stop crouch_idle
 
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	-- when done with Queen, this is his standard response.
 	-- PlayFlavor(NPC, "voiceover/english/exp03_questvo2/scout_spelunkle/_exp03/exp03_rgn_greater_faydark/quest/scout_spelunkle_completed_a127dc51.mp3", "Good work with that shrumbler queen!  You sure squashed her good!", "", 1471734703, 3961292565, Spawn)
@@ -47,7 +47,7 @@ end
 
 function dlg_4_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/scout_spelunkle/_exp03/exp03_rgn_greater_faydark/scout_spelunkle/scout_spelunkle002.mp3", "", "", 846928893, 15725150, Spawn)
 	AddConversationOption(conversation, "Have you discovered anything while you were down here?", "dlg_4_2")
@@ -57,7 +57,7 @@ end
 
 function dlg_4_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/scout_spelunkle/_exp03/exp03_rgn_greater_faydark/scout_spelunkle/scout_spelunkle003.mp3", "", "", 4168182811, 2184104853, Spawn)
 	AddConversationOption(conversation, "They need to be stopped.  What do you have planned?", "dlg_4_3")
@@ -66,7 +66,7 @@ end
 
 function dlg_4_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/scout_spelunkle/_exp03/exp03_rgn_greater_faydark/scout_spelunkle/scout_spelunkle004.mp3", "", "", 4233413026, 410396832, Spawn)
 	AddConversationOption(conversation, "I'll do it.", "dlg_4_4")
@@ -76,7 +76,7 @@ end
 
 function dlg_4_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/scout_spelunkle/_exp03/exp03_rgn_greater_faydark/scout_spelunkle/scout_spelunkle005.mp3", "", "", 3135812044, 2119680514, Spawn)
 	AddConversationOption(conversation, "I understand.")
@@ -85,7 +85,7 @@ end
 
 function dlg_29_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/scout_spelunkle/_exp03/exp03_rgn_greater_faydark/scout_spelunkle/scout_spelunkle002.mp3", "", "", 846928893, 15725150, Spawn)
 	AddConversationOption(conversation, "Have you discovered anything while you were down here?", "dlg_29_2")
@@ -95,7 +95,7 @@ end
 
 function dlg_29_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/scout_spelunkle/_exp03/exp03_rgn_greater_faydark/scout_spelunkle/scout_spelunkle003.mp3", "", "", 4168182811, 2184104853, Spawn)
 	AddConversationOption(conversation, "They need to be stopped.  What do you have planned?", "dlg_29_3")
@@ -104,7 +104,7 @@ end
 
 function dlg_29_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/scout_spelunkle/_exp03/exp03_rgn_greater_faydark/scout_spelunkle/scout_spelunkle004.mp3", "", "", 4233413026, 410396832, Spawn)
 	AddConversationOption(conversation, "I'll do it.", "dlg_29_4")
@@ -114,7 +114,7 @@ end
 
 function dlg_29_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/scout_spelunkle/_exp03/exp03_rgn_greater_faydark/scout_spelunkle/scout_spelunkle005.mp3", "", "", 3135812044, 2119680514, Spawn)
 	AddConversationOption(conversation, "I understand.", "dlg_29_5")

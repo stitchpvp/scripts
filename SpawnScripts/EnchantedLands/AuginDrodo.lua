@@ -18,7 +18,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	if GetQuestStep(Spawn, DrodosGoodies) == 5 then
 		SetStepComplete(Spawn, DrodosGoodies, 5)
@@ -43,7 +43,7 @@ end
 
 function dlg_0_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "augin_drodo/enchanted/augin_drodo002.mp3", "", "", 3561207017, 3513321017, Spawn)
 	AddConversationOption(conversation, "I can look for your goodies. ", "dlg_0_2")

@@ -19,7 +19,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	PlayFlavor(QuestGiver, "an_ethernere_guard/fprt_adv02_graveyard/ethernere_keeper004.mp3", "", "", 2575556836, 1434752042, Player)
 	AddConversationOption(conversation, "I will fulfill my duty to the Overlord.")

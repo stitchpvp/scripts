@@ -29,7 +29,7 @@ function hailed(NPC, Spawn)
 end
 
 function GuardChat1(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	FaceTarget(NPC, Spawn)
 
 	AddConversationOption(conversation, "That's interesting.", "GuardChat2")
@@ -37,7 +37,7 @@ function GuardChat1(NPC, Spawn)
 end
 
 function GuardChat2(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	FaceTarget(NPC, Spawn)
 	
 	AddConversationOption(conversation, "That will be useful!", "GuardChat3")
@@ -45,7 +45,7 @@ function GuardChat2(NPC, Spawn)
 end
 
 function GuardChat3(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	FaceTarget(NPC, Spawn)
 
 	AddConversationOption(conversation, "That's good.", "GuardChat4")
@@ -53,7 +53,7 @@ function GuardChat3(NPC, Spawn)
 end
 
 function GuardChat4(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	FaceTarget(NPC, Spawn)
 
 	AddConversationOption(conversation, "That's useful to know!", "GuardChat5")
@@ -61,7 +61,7 @@ function GuardChat4(NPC, Spawn)
 end
 
 function GuardChat5(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	FaceTarget(NPC, Spawn)
 
 	AddConversationOption(conversation, "Thank you for the advice.")

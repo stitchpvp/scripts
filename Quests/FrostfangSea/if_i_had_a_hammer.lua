@@ -49,7 +49,7 @@ end
 function Accepted(Quest, QuestGiver, Player)
     SendPopUpMessage(Player, "This quest cannot be fully completed yet. Do not report as bug.", 255, 0, 0)
     FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(QuestGiver, "", "", "", 0, 0, Player)
 	AddConversationOption(conversation, "I'll get those items now.")

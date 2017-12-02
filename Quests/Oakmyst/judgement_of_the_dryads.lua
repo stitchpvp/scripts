@@ -18,7 +18,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	PlayFlavor(QuestGiver, "voiceover/english/judge_eunomia/qey_adv01_oakmyst/judgeeunomia002.mp3", "", "", 2678200574, 3115032598, Player)
 	AddConversationOption(conversation, "I shall do my best to lower their numbers.")

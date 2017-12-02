@@ -22,7 +22,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	if HasQuest(Spawn, LousyFairies) and GetQuestStep(Spawn, LousyFairies) == 1 then
 		PlayFlavor(NPC, "voiceover/english/gubbo_chaley/enchanted/gubbo_chaley/gubbo_chaley003.mp3", "", "", 2620521649, 511313166, Spawn)
@@ -46,7 +46,7 @@ end
 
 function dlg_0_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	SetStepComplete(Spawn, LousyFairies, 2)
 	PlayFlavor(NPC, "voiceover/english/gubbo_chaley/enchanted/gubbo_chaley/gubbo_chaley005.mp3", "", "", 2881662034, 1373874040, Spawn)
 	AddConversationOption(conversation, "Right.")

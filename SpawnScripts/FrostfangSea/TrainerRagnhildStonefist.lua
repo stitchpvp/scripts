@@ -22,7 +22,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	if HasQuest(Spawn, StoneCombat) and GetQuestStep(Spawn, StoneCombat) == 1 then
 	    first_chat(NPC, Spawn)
         SetStepComplete(Spawn, StoneCombat, 1)
@@ -41,7 +41,7 @@ end
 function complete_step3(NPC, Spawn)
     SetStepComplete(Spawn, StoneCombat, 3)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	AddConversationOption(conversation, "I'll report back to Yasha Redblade.")
 	StartConversation(conversation, NPC, Spawn, "Great work! You've Proven your worth and are ready for greater challenges. If you want futher instruction later, just come see me. But right now you must report back to Yasha so that you can defend Pilgrims' Landing.")
 end
@@ -57,7 +57,7 @@ end
 
 function adv_chat(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Tell me about selecting the right opponent.", "adv_1_1")
@@ -70,7 +70,7 @@ end
 
 function adv_1_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "How do I tell if an opponent is too weak or too strong for me?", "adv_1_2")
@@ -79,7 +79,7 @@ end
 
 function adv_1_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "What resources should I be keeping an eye on?", "adv_1_3")
@@ -88,7 +88,7 @@ end
 
 function adv_1_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Teach me about knowing my surroundings.", "adv_1_3_1")
@@ -100,7 +100,7 @@ end
 
 function adv_1_3_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Anything else I should watch out for?", "adv_1_3_1_2")
@@ -109,7 +109,7 @@ end
 
 function adv_1_3_1_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Any other tips?", "adv_1_3_1_3")
@@ -118,7 +118,7 @@ end
 
 function adv_1_3_1_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Tell me about selecting the right opponent.", "adv_1_1")
@@ -130,7 +130,7 @@ end
 
 function adv_2_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "What do you mean?", "adv_2_2")
@@ -139,7 +139,7 @@ end
 
 function adv_2_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "What about during battle?", "adv_2_3")
@@ -148,7 +148,7 @@ end
 
 function adv_2_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "What else should I know about spells and arts?", "adv_2_4")
@@ -157,7 +157,7 @@ end
 
 function adv_2_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Tell me about selecting the right opponent.", "adv_1_1")
@@ -169,7 +169,7 @@ end
 
 function basic_chat(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Tell me how to begin a fight.", "bsc_1_1")
@@ -183,7 +183,7 @@ end
 
 function bsc_1_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "How do I begin the battle?", "bsc_1_2")
@@ -192,7 +192,7 @@ end
 
 function bsc_1_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "So I can fight anyone or anything I want?", "bsc_1_3")
@@ -201,7 +201,7 @@ end
 
 function bsc_1_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Tell me about melee combat.", "bsc_2_1")
@@ -214,7 +214,7 @@ end
 
 function bsc_2_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "What classes specialize in melee combat?", "bsc_2_2")
@@ -223,7 +223,7 @@ end
 
 function bsc_2_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Tell me how to begin a fight.", "bsc_1_1")
@@ -236,7 +236,7 @@ end
 
 function bsc_3_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "How do I launch a ranged attack?", "bsc_3_2")
@@ -245,7 +245,7 @@ end
 
 function bsc_3_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "What classes specialize in ranged combat?", "bsc_3_3")
@@ -254,7 +254,7 @@ end
 
 function bsc_3_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "How do I tell if I can use spells or arts from a distance?", "bsc_3_4")
@@ -263,7 +263,7 @@ end
 
 function bsc_3_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Tell me how to begin a fight.", "bsc_1_1")
@@ -276,7 +276,7 @@ end
 
 function bsc_4_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "What do you mean by 'a worthy opponent'?", "bsc_4_2")
@@ -285,7 +285,7 @@ end
 
 function bsc_4_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Are certain types of targets more rewarding than others?")
@@ -294,7 +294,7 @@ end
 
 function bsc_4_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Tell me how to begin a fight.", "bsc_1_1")

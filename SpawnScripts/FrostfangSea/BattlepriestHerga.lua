@@ -30,7 +30,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	if not HasCompletedQuest(Spawn, LooseningGrip) and not HasQuest(Spawn, LooseningGrip) then
 	    PlayFlavor(NPC, "battlepriest_herga/halas/great_shelf/battlepriest_herga/battlepriest_herga001.mp3", "", "", 2876924371, 439822818, Spawn)
@@ -89,7 +89,7 @@ end
 
 function Quest1Chat_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "battlepriest_herga/halas/great_shelf/battlepriest_herga/battlepriest_herga002.mp3", "", "", 3498579726, 1445907675, Spawn)
 	AddConversationOption(conversation, "Ah, the choke is named after you.", "Quest1Chat_2")
@@ -101,7 +101,7 @@ end
 
 function Quest1Chat_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "battlepriest_herga/halas/great_shelf/battlepriest_herga/battlepriest_herga004.mp3", "", "", 446943, 1149478700, Spawn)
 	AddConversationOption(conversation, "What do you mean?", "Quest1Chat_3")
@@ -112,7 +112,7 @@ end
 
 function Quest1Chat_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "battlepriest_herga/halas/great_shelf/battlepriest_herga/battlepriest_herga006.mp3", "", "", 2461956836, 4011637342, Spawn)
 	AddConversationOption(conversation, "I see...", "Quest1Chat_4")
@@ -123,7 +123,7 @@ end
 
 function Quest1Chat_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "battlepriest_herga/halas/great_shelf/battlepriest_herga/battlepriest_herga008.mp3", "", "", 3901524477, 2476733850, Spawn)
 	AddConversationOption(conversation, "I could deal with the Ry'Gorr for you.", "OfferLooseningGrip")
@@ -134,7 +134,7 @@ end
 
 function Quest1Chat_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "battlepriest_herga/halas/great_shelf/battlepriest_herga/battlepriest_herga005.mp3", "", "", 3500318705, 1278765426, Spawn)
 	AddConversationOption(conversation, "Where did you get all of these names?", "Quest1Chat_3")
@@ -144,7 +144,7 @@ end
 
 function Quest1Chat_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "battlepriest_herga/halas/great_shelf/battlepriest_herga/battlepriest_herga009.mp3", "", "", 806621839, 625277708, Spawn)
 	AddConversationOption(conversation, "Ah, you're barely here.  Well, I could deal with the Ry'Gorr.", "OfferLooseningGrip")
@@ -155,7 +155,7 @@ end
 
 function Quest1Chat_7(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "battlepriest_herga/halas/great_shelf/battlepriest_herga/battlepriest_herga007.mp3", "", "", 563806533, 3464673073, Spawn)
 	AddConversationOption(conversation, "And what consideration would that be?", "Quest1Chat_3")
@@ -166,7 +166,7 @@ end
 function Quest1Chat_8(NPC, Spawn)
 	SetStepComplete(Spawn, LooseningGrip, 2)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "battlepriest_herga/halas/great_shelf/battlepriest_herga/battlepriest_herga012.mp3", "", "", 2283183763, 3194399424, Spawn)
 	AddConversationOption(conversation, "What else must be done? ", "Quest2Chat_1")
@@ -176,7 +176,7 @@ end
 
 function Quest2Chat_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
     PlayFlavor(NPC, "battlepriest_herga/halas/great_shelf/battlepriest_herga/battlepriest_herga013.mp3", "", "", 2592535922, 910199991, Spawn)
 	AddConversationOption(conversation, "Oh, I'm a Clawrender now?", "Quest2Chat_2")
@@ -187,7 +187,7 @@ end
 
 function Quest2Chat_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "battlepriest_herga/halas/great_shelf/battlepriest_herga/battlepriest_herga014.mp3", "", "", 1089936534, 3828755008, Spawn)
 	AddConversationOption(conversation, "What's the difference?", "Quest2Chat_3")
@@ -198,7 +198,7 @@ end
 
 function Quest2Chat_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "battlepriest_herga/halas/great_shelf/battlepriest_herga/battlepriest_herga016.mp3", "", "", 364121145, 3220691624, Spawn)
 	AddConversationOption(conversation, "I look forward to it.", "Quest2Chat_4")
@@ -209,7 +209,7 @@ end
 
 function Quest2Chat_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "battlepriest_herga/halas/great_shelf/battlepriest_herga/battlepriest_herga015.mp3", "", "", 706935519, 853655924, Spawn)
 	AddConversationOption(conversation, "What happened next?", "Quest2Chat_5")
@@ -220,7 +220,7 @@ end
 
 function Quest2Chat_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "battlepriest_herga/halas/great_shelf/battlepriest_herga/battlepriest_herga017.mp3", "", "", 4269378925, 1349634261, Spawn)
 	AddConversationOption(conversation, "What do you mean?", "OfferTheCharge")
@@ -232,7 +232,7 @@ end
 
 function Quest2Chat_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "battlepriest_herga/halas/great_shelf/battlepriest_herga/battlepriest_herga020.mp3", "", "", 2112568660, 3269874473, Spawn)
 	AddConversationOption(conversation, "Hardly a fair fight.", "Quest2Chat_7")
@@ -243,7 +243,7 @@ end
 
 function Quest2Chat_7(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "battlepriest_herga/halas/great_shelf/battlepriest_herga/battlepriest_herga021.mp3", "", "", 1415485990, 2536139437, Spawn)
 	AddConversationOption(conversation, "Ah, that's when you were killed in the battle of the choke.", "Quest2Chat_8")
@@ -254,7 +254,7 @@ end
 
 function Quest2Chat_8(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "battlepriest_herga/halas/great_shelf/battlepriest_herga/battlepriest_herga022.mp3", "", "", 3973009160, 332773140, Spawn)
 	AddConversationOption(conversation, "Is this a description of the afterlife?", "Quest2Chat_9")
@@ -265,7 +265,7 @@ end
 
 function Quest2Chat_9(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "battlepriest_herga/halas/great_shelf/battlepriest_herga/battlepriest_herga023.mp3", "", "", 478728406, 1497661248, Spawn)
 	AddConversationOption(conversation, "The orcs had forgotten about you?", "Quest2Chat_10")
@@ -275,7 +275,7 @@ end
 
 function Quest2Chat_10(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "battlepriest_herga/halas/great_shelf/battlepriest_herga/battlepriest_herga024.mp3", "", "", 2297746531, 802741759, Spawn)
 	AddConversationOption(conversation, "You were not yet slain?", "Quest2Chat_11")
@@ -287,7 +287,7 @@ end
 function Quest2Chat_11(NPC, Spawn)
 	SetStepComplete(Spawn, TheCharge, 4)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "battlepriest_herga/halas/great_shelf/battlepriest_herga/battlepriest_herga025.mp3", "", "", 509339797, 2341366756, Spawn)
 	AddConversationOption(conversation, "I hope you healed yourself before heading back into battle.", "Quest3Chat_1")
@@ -298,7 +298,7 @@ end
 
 function Quest3Chat_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
     PlayFlavor(NPC, "battlepriest_herga/halas/great_shelf/battlepriest_herga/battlepriest_herga026.mp3", "", "", 3996082713, 3335501764, Spawn)
 	AddConversationOption(conversation, "What do you mean?", "Quest3Chat_2")
@@ -309,7 +309,7 @@ end
 
 function Quest3Chat_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "battlepriest_herga/halas/great_shelf/battlepriest_herga/battlepriest_herga027.mp3", "", "", 1946406976, 651799863, Spawn)
 	AddConversationOption(conversation, "What happened next?", "Quest3Chat_3")
@@ -320,7 +320,7 @@ end
 
 function Quest3Chat_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "battlepriest_herga/halas/great_shelf/battlepriest_herga/battlepriest_herga028.mp3", "", "", 1067012984, 342549842, Spawn)
 	AddConversationOption(conversation, "I will take care of their siege weaponry.", "OfferSiegeOver")
@@ -331,7 +331,7 @@ end
 
 function Quest3Chat_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "battlepriest_herga/halas/great_shelf/battlepriest_herga/battlepriest_herga031.mp3", "", "", 154139562, 114017871, Spawn)
 	AddConversationOption(conversation, "Is this when you intervened?", "Quest3Chat_5")
@@ -342,7 +342,7 @@ end
 
 function Quest3Chat_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "battlepriest_herga/halas/great_shelf/battlepriest_herga/battlepriest_herga032.mp3", "", "", 2869284176, 4042655876, Spawn)
 	AddConversationOption(conversation, "Please continue.", "Quest3Chat_6")
@@ -353,7 +353,7 @@ end
 
 function Quest3Chat_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "battlepriest_herga/halas/great_shelf/battlepriest_herga/battlepriest_herga033.mp3", "", "", 4141123345, 649777350, Spawn)
 	AddConversationOption(conversation, "I bet they were surprised.", "Quest3Chat_7")
@@ -363,7 +363,7 @@ end
 
 function Quest3Chat_7(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "battlepriest_herga/halas/great_shelf/battlepriest_herga/battlepriest_herga034.mp3", "", "", 1128320376, 3066771275, Spawn)
 	AddConversationOption(conversation, "What happened next?", "Quest3Chat_8")
@@ -374,7 +374,7 @@ end
 
 function Quest3Chat_8(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "battlepriest_herga/halas/great_shelf/battlepriest_herga/battlepriest_herga035.mp3", "", "", 679495906, 2871959311, Spawn)
 	AddConversationOption(conversation, "Go on.", "Quest3Chat_9")
@@ -385,7 +385,7 @@ end
 
 function Quest3Chat_9(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "battlepriest_herga/halas/great_shelf/battlepriest_herga/battlepriest_herga036.mp3", "", "", 1193017737, 3953773315, Spawn)
 	AddConversationOption(conversation, "You drove them off the choke?", "Quest3Chat_10")
@@ -396,7 +396,7 @@ end
 
 function Quest3Chat_10(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "battlepriest_herga/halas/great_shelf/battlepriest_herga/battlepriest_herga037.mp3", "", "", 2443596305, 594093488, Spawn)
 	AddConversationOption(conversation, "So you were victorious?", "Quest3Chat_11")
@@ -408,7 +408,7 @@ end
 function Quest3Chat_11(NPC, Spawn)
 	SetStepComplete(Spawn, SiegeOver, 2)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "battlepriest_herga/halas/great_shelf/battlepriest_herga/battlepriest_herga038.mp3", "", "", 873707687, 1731330082, Spawn)
 	AddConversationOption(conversation, "How were you thrice-slain?", "Quest3Chat_12")
@@ -419,7 +419,7 @@ end
 
 function Quest3Chat_12(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "battlepriest_herga/halas/great_shelf/battlepriest_herga/battlepriest_herga039.mp3", "", "", 1915210781, 188105745, Spawn)
 	AddConversationOption(conversation, "I hope that time comes soon.", "Quest4Chat_1")
@@ -429,7 +429,7 @@ end
 
 function Quest4Chat_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	PlayFlavor(NPC, "battlepriest_herga/halas/great_shelf/battlepriest_herga/battlepriest_herga040.mp3", "", "", 3946585485, 2195203670, Spawn)
 	AddConversationOption(conversation, "Is this when you came back as a ghost?", "Quest4Chat_2")
@@ -441,7 +441,7 @@ end
 
 function Quest4Chat_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "battlepriest_herga/halas/great_shelf/battlepriest_herga/battlepriest_herga041.mp3", "", "", 1296890403, 1990586167, Spawn)
 	AddConversationOption(conversation, "You have continued to help them, as demonstrated by our arrangement.", "Quest4Chat_3")
@@ -452,7 +452,7 @@ end
 
 function Quest4Chat_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "battlepriest_herga/halas/great_shelf/battlepriest_herga/battlepriest_herga042.mp3", "", "", 3151113147, 3002768829, Spawn)
 	AddConversationOption(conversation, "What do you mean?", "Quest4Chat_4")
@@ -463,7 +463,7 @@ end
 
 function Quest4Chat_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "battlepriest_herga/halas/great_shelf/battlepriest_herga/battlepriest_herga043.mp3", "", "", 268915202, 3145348272, Spawn)
 	AddConversationOption(conversation, "I will destroy the Ry'Gorr skeletons for you.", "OfferForsakingGrave")
@@ -474,7 +474,7 @@ end
 
 function Quest4Chat_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "battlepriest_herga/halas/great_shelf/battlepriest_herga/battlepriest_herga046.mp3", "", "", 607398885, 1472725438, Spawn)
 	AddConversationOption(conversation, "What was it?", "Quest4Chat_6")
@@ -485,7 +485,7 @@ end
 
 function Quest4Chat_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "battlepriest_herga/halas/great_shelf/battlepriest_herga/battlepriest_herga047.mp3", "", "", 3570519032, 1449010576, Spawn)
 	AddConversationOption(conversation, "So you were able to lead them into battle once again?", "Quest4Chat_7")
@@ -496,7 +496,7 @@ end
 
 function Quest4Chat_7(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "battlepriest_herga/halas/great_shelf/battlepriest_herga/battlepriest_herga048.mp3", "", "", 1091068909, 2556774809, Spawn)
 	AddConversationOption(conversation, "The orcs must never have expected your return.", "Quest4Chat_8")
@@ -507,7 +507,7 @@ end
 
 function Quest4Chat_8(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "battlepriest_herga/halas/great_shelf/battlepriest_herga/battlepriest_herga049.mp3", "", "", 2856349899, 3435957027, Spawn)
 	AddConversationOption(conversation, "How was he able to stop you?", "Quest4Chat_9")
@@ -518,7 +518,7 @@ end
 
 function Quest4Chat_9(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "battlepriest_herga/halas/great_shelf/battlepriest_herga/battlepriest_herga050.mp3", "", "", 863524022, 660387417, Spawn)
 	AddConversationOption(conversation, "I can understand why that would concern them.", "Quest4Chat_10")
@@ -529,7 +529,7 @@ end
 
 function Quest4Chat_10(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "battlepriest_herga/halas/great_shelf/battlepriest_herga/battlepriest_herga051.mp3", "", "", 3393923414, 4073776454, Spawn)
 	AddConversationOption(conversation, "I see.  And thus you were thrice slain.", "Quest4Chat_11")
@@ -541,7 +541,7 @@ end
 function Quest4Chat_11(NPC, Spawn)
 	SetStepComplete(Spawn, ForsakingGrave, 2)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "battlepriest_herga/halas/great_shelf/battlepriest_herga/battlepriest_herga052.mp3", "", "", 1152246518, 887448784, Spawn)
 	AddConversationOption(conversation, "I will happily help you in your endeavors.", "Quest5Chat_1")
@@ -551,7 +551,7 @@ end
 
 function Quest5Chat_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "battlepriest_herga/halas/great_shelf/battlepriest_herga/battlepriest_herga053.mp3", "", "", 3620088043, 2212562054, Spawn)
 	AddConversationOption(conversation, "Of course, Herga.", "Quest5Chat_2")
@@ -562,7 +562,7 @@ end
 
 function Quest5Chat_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "battlepriest_herga/halas/great_shelf/battlepriest_herga/battlepriest_herga054.mp3", "", "", 817762038, 3762145835, Spawn)
 	AddConversationOption(conversation, "It would be my honor.", "Quest5Chat_3")
@@ -573,7 +573,7 @@ end
 
 function Quest5Chat_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "battlepriest_herga/halas/great_shelf/battlepriest_herga/battlepriest_herga055.mp3", "", "", 2651064333, 3864508293, Spawn)
 	AddConversationOption(conversation, "Should I give this helm to your family?", "OfferAllRemains")
@@ -584,7 +584,7 @@ end
 
 function Quest5Chat_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "battlepriest_herga/halas/great_shelf/battlepriest_herga/battlepriest_herga058.mp3", "", "", 2433653764, 1582075535, Spawn)
 	AddConversationOption(conversation, "It's been a pleasure. ", "Quest5Chat_5")
@@ -596,7 +596,7 @@ end
 function Quest5Chat_5(NPC, Spawn)
 	SetStepComplete(Spawn, AllRemains, 4)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "battlepriest_herga/halas/great_shelf/battlepriest_herga/battlepriest_herga059.mp3", "", "", 584614622, 2543315634, Spawn)
 	AddConversationOption(conversation, "I'd wish you good rest, but I know you'll never rest so long as your people need you.")

@@ -36,7 +36,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	if HasCompletedQuest(Spawn, QUEST_1_FROM_KURDEK) or (HasQuest(Spawn, QUEST_1_FROM_KURDEK) and GetQuestStep(Spawn, QUEST_1_FROM_KURDEK) > 1) then
 		if HasCompletedQuest(Spawn, QUEST_3_FROM_KURDEK) then
@@ -140,7 +140,7 @@ end
 
 function dlg_18_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/trainer_durbok/fprt_adv03_sprawl/quests/trainer_durbok002.mp3", "", "", 3758292268, 2300851073, Spawn)
 	AddConversationOption(conversation, "So how goes the training?", "dlg_18_2")
@@ -150,7 +150,7 @@ end
 
 function dlg_18_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/trainer_durbok/fprt_adv03_sprawl/quests/trainer_durbok003.mp3", "", "", 641451677, 496874931, Spawn)
 	AddConversationOption(conversation, "What do you mean?", "dlg_18_3")
@@ -160,7 +160,7 @@ end
 
 function dlg_18_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/trainer_durbok/fprt_adv03_sprawl/quests/trainer_durbok004.mp3", "", "", 321268147, 2623146346, Spawn)
 	AddConversationOption(conversation, "What do you think should be done about it?", "dlg_18_4")
@@ -172,7 +172,7 @@ function dlg_18_4(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_1_FROM_KURDEK, 1)
 	
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/trainer_durbok/fprt_adv03_sprawl/quests/trainer_durbok005.mp3", "", "", 768810452, 746067812, Spawn)
 	AddConversationOption(conversation, "I'll let him know.")
@@ -185,7 +185,7 @@ end
 
 function dlg_0_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/trainer_durbok/fprt_adv03_sprawl/quests/trainer_durbok007.mp3", "", "", 3620375691, 3328248556, Spawn)
 	AddConversationOption(conversation, "You've got a deal.", "OfferQuest1")
@@ -211,7 +211,7 @@ function dlg_2_1(NPC, Spawn)
 	SetStepComlete(Spawn, QUEST_1, 2)
 	
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/trainer_durbok/fprt_adv03_sprawl/quests/trainer_durbok010.mp3", "", "", 1104739099, 151745645, Spawn)
 	AddConversationOption(conversation, "I'll check back.", "dlg_2_2")
@@ -221,7 +221,7 @@ end
 --[[
 function dlg_5_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/trainer_durbok/fprt_adv03_sprawl/quests/trainer_durbok008.mp3", "", "", 2693497223, 3993753671, Spawn)
 	AddConversationOption(conversation, "Will do.", "dlg_5_2")

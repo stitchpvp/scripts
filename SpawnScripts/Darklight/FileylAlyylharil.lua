@@ -25,7 +25,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	if HasCompletedQuest(Spawn, QUEST_1) then
 		if HasCompletedQuest(Spawn, QUEST_2) then
@@ -107,7 +107,7 @@ end
 
 function dlg_3_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/neriak/fileyl_alyylharil/darklight_wood/hates_envy/fileyl/fileyl001.mp3", "", "", 3801739584, 171673650, Spawn)
 	AddConversationOption(conversation, "What work do you have?", "dlg_3_2")
@@ -116,7 +116,7 @@ end
 
 function dlg_3_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/neriak/fileyl_alyylharil/darklight_wood/hates_envy/fileyl/fileyl002.mp3", "", "", 648997851, 4053921867, Spawn)
 	AddConversationOption(conversation, "All right.", "OfferQuest1")
@@ -132,7 +132,7 @@ end
 
 function dlg_2_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/neriak/fileyl_alyylharil/darklight_wood/hates_envy/fileyl/fileyl001_arasai.mp3", "", "", 1120312592, 2814949135, Spawn)
 	AddConversationOption(conversation, "Distaste?", "dlg_2_2")
@@ -141,7 +141,7 @@ end
 
 function dlg_2_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/neriak/fileyl_alyylharil/darklight_wood/hates_envy/fileyl/fileyl002_arasai.mp3", "", "", 69953400, 3339174619, Spawn)
 	AddConversationOption(conversation, "Very well.", "dlg_2_3")
@@ -151,7 +151,7 @@ end
 
 function dlg_2_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/neriak/fileyl_alyylharil/darklight_wood/hates_envy/fileyl/fileyl003_arasai.mp3", "", "", 2450188832, 1514540923, Spawn)
 	AddConversationOption(conversation, "What work?", "OfferQuest1")
@@ -181,7 +181,7 @@ function dlg_7_1(NPC, Spawn)
 	end
 	
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/neriak/fileyl_alyylharil/darklight_wood/hates_envy/fileyl/fileyl005.mp3", "", "", 2096271371, 3465768991, Spawn)
 	AddConversationOption(conversation, "What work?", "dlg_7_2")
@@ -194,7 +194,7 @@ end
 
 function dlg_7_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/neriak/fileyl_alyylharil/darklight_wood/hates_envy/fileyl/fileyl006.mp3", "", "", 3456710239, 1509006332, Spawn)
 	AddConversationOption(conversation, "I can do that.", "OfferQuest2")
@@ -225,7 +225,7 @@ function dlg_9_1(NPC, Spawn)
 	end
 	
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/neriak/fileyl_alyylharil/darklight_wood/hates_envy/fileyl/fileyl009.mp3", "", "", 3832374147, 290832441, Spawn)
 	AddConversationOption(conversation, "I can bring it to her.", "OfferQuest3")
@@ -259,7 +259,7 @@ end
 
 function dlg_11_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/neriak/fileyl_alyylharil/darklight_wood/hates_envy/fileyl/fileyl012.mp3", "", "", 245191252, 630199436, Spawn)
 	AddConversationOption(conversation, "I'd be interested.", "dlg_11_2")
@@ -268,7 +268,7 @@ end
 
 function dlg_11_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/neriak/fileyl_alyylharil/darklight_wood/hates_envy/fileyl/fileyl013.mp3", "", "", 240477682, 62641979, Spawn)
 	AddConversationOption(conversation, "I understand.", "OfferQuest4")

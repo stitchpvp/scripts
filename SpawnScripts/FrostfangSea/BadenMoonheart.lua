@@ -29,7 +29,7 @@ function hailed(NPC, Spawn)
 end
 
 function MonkChat1(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	FaceTarget(NPC, Spawn)
 
 	AddConversationOption(conversation, "That's useful to know!", "MonkChat2")
@@ -37,7 +37,7 @@ function MonkChat1(NPC, Spawn)
 end
 
 function MonkChat2(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	FaceTarget(NPC, Spawn)
 	
 	AddConversationOption(conversation, "That's good to know.", "MonkChat3")
@@ -45,7 +45,7 @@ function MonkChat2(NPC, Spawn)
 end
 
 function MonkChat3(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	FaceTarget(NPC, Spawn)
 
 	AddConversationOption(conversation, "That will be useful!", "MonkChat4")
@@ -53,7 +53,7 @@ function MonkChat3(NPC, Spawn)
 end
 
 function MonkChat4(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	FaceTarget(NPC, Spawn)
 
 	AddConversationOption(conversation, "That's interesting.", "MonkChat5")
@@ -61,7 +61,7 @@ function MonkChat4(NPC, Spawn)
 end
 
 function MonkChat5(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	FaceTarget(NPC, Spawn)
 
 	AddConversationOption(conversation, "Thank you for the advice.")

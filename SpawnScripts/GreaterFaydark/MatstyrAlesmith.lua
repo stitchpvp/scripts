@@ -22,7 +22,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 		PlayFlavor(NPC, "matstyr_alesmith/_exp03/exp03_rgn_greater_faydark/matstyr_alesmith/matstyr_001.mp3", "", "", 1937953293, 2767488861, Spawn)
 	AddConversationOption(conversation, "I was wondering if I could do anything for you.", "dlg_23_1")
@@ -32,7 +32,7 @@ end
 
 function dlg_23_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "matstyr_alesmith/_exp03/exp03_rgn_greater_faydark/matstyr_alesmith/matstyr_002.mp3", "", "", 2958360418, 2661137078, Spawn)
 	AddConversationOption(conversation, "Sounds good, where can I start.", "dlg_23_2")
@@ -42,7 +42,7 @@ end
 
 function dlg_23_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "matstyr_alesmith/_exp03/exp03_rgn_greater_faydark/matstyr_alesmith/matstyr_003.mp3", "", "", 1881646035, 610210479, Spawn)
 	AddConversationOption(conversation, "I will return with the pelts.", "dlg_23_3")

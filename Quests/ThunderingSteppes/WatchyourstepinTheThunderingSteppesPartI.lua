@@ -36,7 +36,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	AddConversationOption(conversation, "Okay.")
 	StartConversation(conversation, QuestGiver, Player, "For your first delivery, please take this letter to a halfling named Blerton Blumble. He can usually be found at the docks. It's from his cousin, Matsy. Now that you work for me, feel free to read any letters you deliver. I always do. It's just about the only fun to be found out here. After you've delivered it, bring me back any mail he has to send.")

@@ -25,7 +25,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	if not HasCompletedQuest(Spawn, ThexianTaint) and GetQuestStep(Spawn, ThexianTaint) < 3 then
 		StartConversation(conversation, NPC, Spawn, "You need speak with Sselnyl Do'Zyth in Hate's Envy, then come back and see me.")
@@ -89,7 +89,7 @@ end
 
 function ThexianTaint_Finish(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	SetStepComplete(Spawn, ThexianTaint, 3)
 	
@@ -103,7 +103,7 @@ end
 --------------------------------------------------------------------------------------
 function Quest_RottingScum(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	PlayFlavor(NPC, "ginwyss_d_arkenett/darklight_wood/tvatar_post/ginwyss_revamp/ginwyss004.mp3", "", "", 2620151660, 2492067079, Spawn)
 	AddConversationOption(conversation, "I am.", "Quest_RottingScum_01")
@@ -113,7 +113,7 @@ end
 
 function Quest_RottingScum_B(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	PlayFlavor(NPC, "ginwyss_d_arkenett/darklight_wood/tvatar_post/ginwyss_revamp/ginwyss003.mp3", "", "", 3004928751, 1497818906, Spawn)
 	AddConversationOption(conversation, "Oh?", "Quest_RottingScum")
@@ -122,7 +122,7 @@ end
 
 function Quest_RottingScum_01(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	PlayFlavor(NPC, "", "", "agree", 0, 0, Spawn)
 	AddConversationOption(conversation, "Where have they come from?", "Quest_RottingScum_02")
@@ -131,7 +131,7 @@ end
 
 function Quest_RottingScum_02(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	PlayFlavor(NPC, "ginwyss_d_arkenett/darklight_wood/tvatar_post/ginwyss_revamp/ginwyss006.mp3", "", "", 1721704244, 1661413444, Spawn)
 	AddConversationOption(conversation, "These corpses... Who were they?", "Quest_RottingScum_03")
@@ -140,7 +140,7 @@ end
 
 function Quest_RottingScum_03(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	PlayFlavor(NPC, "ginwyss_d_arkenett/darklight_wood/tvatar_post/ginwyss_revamp/ginwyss007.mp3", "", "", 1606040300, 1401696355, Spawn)
 	AddConversationOption(conversation, "Very well.", "QuestOffer_RottingScum")
@@ -154,7 +154,7 @@ end
 
 function RottingScum_No(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	PlayFlavor(NPC, "ginwyss_d_arkenett/darklight_wood/tvatar_post/ginwyss_revamp/ginwyss011.mp3", "", "", 465595230, 4113153338, Spawn)
 	AddConversationOption(conversation, "I will return.")
@@ -163,7 +163,7 @@ end
 
 function RottingScum_Yes(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	SetStepComplete(Spawn, RottingScum, 3)
 	
 	PlayFlavor(NPC, "ginwyss_d_arkenett/darklight_wood/tvatar_post/ginwyss_revamp/ginwyss010.mp3", "", "agree", 1734208636, 3841795105, Spawn)
@@ -177,7 +177,7 @@ end
 
 function PickingUpSlack_A(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	PlayFlavor(NPC, "ginwyss_d_arkenett/darklight_wood/tvatar_post/ginwyss_revamp/ginwyss012.mp3", "", "agree", 1734208636, 3841795105, Spawn)
 	AddConversationOption(conversation, "What do you mean?", "PickingUpSlack_B")
@@ -186,7 +186,7 @@ end
 
 function PickingUpSlack_B(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_1_1047.mp3", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "I could help again.", "PickingUpSlack_01")
@@ -196,7 +196,7 @@ end
 
 function PickingUpSlack_01(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	PlayFlavor(NPC, "ginwyss_d_arkenett/darklight_wood/tvatar_post/ginwyss_revamp/ginwyss014.mp3", "", "", 3763405805, 3752416036, Spawn)
 	AddConversationOption(conversation, "All right.", "QuestOffer_PickingUpSlack")
@@ -210,7 +210,7 @@ end
 
 function PickingUpSlack_No(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	PlayFlavor(NPC, "ginwyss_d_arkenett/darklight_wood/tvatar_post/ginwyss_revamp/ginwyss018.mp3", "", "", 3110804349, 157804660, Spawn)
 	AddConversationOption(conversation, "I will return.")
@@ -219,7 +219,7 @@ end
 
 function PickingUpSlack_Yes(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	SetStepComplete(Spawn, PickingUpSlack, 2)
 		
@@ -234,7 +234,7 @@ end
 
 function PickingUpSlack_02(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	if HasQuest(Spawn, AGuardInsignia) then
 		AddConversationOption(conversation, "I found this while hunting undead.", "Quest_MissingRecruit")
 		StartConversation(conversation, NPC, Spawn, "Good work, young one. You're turning out to be a much harder worker than that no good deserter, Soltrin. Curious... I wonder what became of him.")
@@ -246,7 +246,7 @@ end
 
 function PickingUpSlack_03(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	AddConversationOption(conversation, "I'll see what I can do.")
 	StartConversation(conversation, NPC, Spawn, "That is much appreciated, " .. GetName(Spawn) .. ". Now, in the meantime I suggest you speak with some of the others found here at this post. There is much work to be done.")
@@ -258,7 +258,7 @@ end
 
 function Quest_MissingRecruit(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	SetStepComplete(Spawn, MissingRecruit, 1)
 	
 	PlayFlavor(NPC, "ginwyss_d_arkenett/darklight_wood/tvatar_post/ginwyss_revamp/ginwyss021.mp3", "", "", 4046947438, 1960374270, Spawn)
@@ -268,7 +268,7 @@ end
 
 function Quest_MissingRecruit_01(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	SetStepComplete(Spawn, AGuardInsignia, 1)
 	
 	PlayFlavor(NPC, "ginwyss_d_arkenett/darklight_wood/tvatar_post/ginwyss_revamp/ginwyss022.mp3", "", "", 2283622719, 1945338688, Spawn)
@@ -282,7 +282,7 @@ end
 
 function MissingRecruit_No(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	PlayFlavor(NPC, "ginwyss_d_arkenett/darklight_wood/tvatar_post/ginwyss_revamp/ginwyss026.mp3", "", "", 3389215806, 2500269282, Spawn)
 	AddConversationOption(conversation, "Alright, alright!")
@@ -291,7 +291,7 @@ end
 
 function MissingRecruit_Yes(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	SetStepComplete(Spawn, MissingRecruit, 2)
 	
 	PlayFlavor(NPC, "ginwyss_d_arkenett/darklight_wood/tvatar_post/ginwyss_revamp/ginwyss025.mp3", "", "", 3122094664, 4174660668, Spawn)

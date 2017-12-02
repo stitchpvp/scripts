@@ -17,7 +17,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/saydith_yarr/fprt_adv01_sunken/saydith_yarr000.mp3", "", "", 1548752498, 2730978939, Spawn)
 	AddConversationOption(conversation, "Where am I?", "dlg_1_2")
@@ -29,7 +29,7 @@ end
 
 function dlg_1_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/saydith_yarr/fprt_adv01_sunken/saydith_yarr001.mp3", "", "", 2390191821, 3206926055, Spawn)
 	AddConversationOption(conversation, "What do you mean by 'dark and light'?", "dlg_1_3")
@@ -44,7 +44,7 @@ function dlg_1_3(NPC, Spawn)
 	end
 	
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/saydith_yarr/fprt_adv01_sunken/saydith_yarr003.mp3", "", "", 3245604695, 2963905971, Spawn)
 	AddConversationOption(conversation, "Where am I?", "dlg_1_2")
@@ -55,7 +55,7 @@ end
 
 function dlg_1_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/saydith_yarr/fprt_adv01_sunken/saydith_yarr002.mp3", "", "", 2458221458, 1657163845, Spawn)
 	AddConversationOption(conversation, "Where am I?", "dlg_1_2")

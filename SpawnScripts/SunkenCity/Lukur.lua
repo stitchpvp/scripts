@@ -18,7 +18,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	if not HasCompletedQuest(Spawn, QUEST_1) then
 		if HasQuest(Spawn, QUEST_1) then
@@ -38,7 +38,7 @@ end
 
 function dlg_4_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/optional1/lukur/fprt_adv01_sunken/lukur001.mp3", "", "", 3143062912, 3824299878, Spawn)
 	AddConversationOption(conversation, "I think I can help you.", "OfferQuest1")
@@ -55,7 +55,7 @@ function dlg_12_1(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_1, 4)
 	
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/optional1/lukur/fprt_adv01_sunken/lukur003.mp3", "", "", 1196217033, 2873878783, Spawn)
 	AddConversationOption(conversation, "Thank you.")

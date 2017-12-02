@@ -33,7 +33,7 @@ function Accepted(Quest, QuestGiver, Player)
 	end
 	
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(QuestGiver, "voiceover/english/rok_questvo/gerwen_di_ki/_exp04/exp04_rgn_timorous_deep/chrykori_tie/diki/diki001.mp3", "", "", 2073303618, 4008999322, Player)
 	AddConversationOption(conversation, "I will be swift.")

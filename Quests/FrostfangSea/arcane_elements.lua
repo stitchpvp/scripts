@@ -12,7 +12,7 @@
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(QuestGiver, "blorpisa_bogchild/halas/gwenevyns_cove/blorpisa_bogchild/blorpisa_bogchild_017.mp3", "", "", 4004735863, 2962223721, Player)
 	AddConversationOption(conversation, "I'll be back once I have collected the ore you need.")

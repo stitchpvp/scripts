@@ -28,7 +28,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	if HasQuest(Spawn, QUEST_FROM_CONZUK) and GetQuestStep(Spawn, QUEST_FROM_CONZUK) == 1 then
 		AddConversationOption(conversation, "Primary Zum'Ha directed me to report to you.", "dlg_42_1")
@@ -79,7 +79,7 @@ function dlg_42_1(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_FROM_CONZUK, 1)
 	
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/rok_questvo/arozik_sky_ki/_exp04/exp04_rgn_timorous_deep/chrykori_tie/skyki/skyki001.mp3", "", "", 2731024115, 325818484, Spawn)
 	
@@ -99,7 +99,7 @@ function dlg_33_1(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_FROM_MAKKI, 1)
 	
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/rok_questvo/arozik_sky_ki/_exp04/exp04_rgn_timorous_deep/chrykori_tie/skyki/skyki004.mp3", "", "", 2310635873, 1729195062, Spawn)
 	
@@ -124,7 +124,7 @@ end
 
 function dlg_33_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/rok_questvo/arozik_sky_ki/_exp04/exp04_rgn_timorous_deep/chrykori_tie/skyki/skyki002.mp3", "", "", 2992171556, 1387787250, Spawn)
 	AddConversationOption(conversation, "All right.", "OfferQuest1")
@@ -154,7 +154,7 @@ function dlg_37_1(NPC, Spawn)
 	end
 	
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/rok_questvo/arozik_sky_ki/_exp04/exp04_rgn_timorous_deep/chrykori_tie/skyki/skyki007.mp3", "", "", 3008546705, 626017614, Spawn)
 	AddConversationOption(conversation, "Is there anything else I can do?", "dlg_37_2")
@@ -167,7 +167,7 @@ end
 
 function dlg_37_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/rok_questvo/arozik_sky_ki/_exp04/exp04_rgn_timorous_deep/chrykori_tie/skyki/skyki008.mp3", "", "", 2472992114, 554256464, Spawn)
 	AddConversationOption(conversation, "I will go look for him.", "OfferQuest2")
@@ -197,7 +197,7 @@ function dlg_43_1(NPC, Spawn)
 	end
 	
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/rok_questvo/arozik_sky_ki/_exp04/exp04_rgn_timorous_deep/chrykori_tie/skyki/skyki011.mp3", "", "", 2921045796, 192965595, Spawn)
 	AddConversationOption(conversation, "I will wait.", "dlg_42_2")
@@ -210,7 +210,7 @@ end
 
 function dlg_42_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/rok_questvo/arozik_sky_ki/_exp04/exp04_rgn_timorous_deep/chrykori_tie/skyki/skyki012.mp3", "", "", 3273605735, 2364983222, Spawn)
 	AddConversationOption(conversation, "Yes.", "OfferQuest3")
@@ -240,7 +240,7 @@ function GotOrders(NPC, Spawn)
 	end
 	
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	PlayFlavor(NPC, "voiceover/english/rok_questvo/arozik_sky_ki/_exp04/exp04_rgn_timorous_deep/chrykori_tie/skyki/skyki015.mp3", "", "", 1539951072, 947658939, Spawn)
 	AddConversationOption(conversation, "Ok.", "dlg_0_2")
@@ -253,7 +253,7 @@ end
 
 function dlg_0_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/rok_questvo/arozik_sky_ki/_exp04/exp04_rgn_timorous_deep/chrykori_tie/skyki/skyki016.mp3", "", "", 741363640, 1740435446, Spawn)
 	AddConversationOption(conversation, "I can do that.", "OfferQuest4")
@@ -283,7 +283,7 @@ function dlg_2_1(NPC, Spawn)
 	end
 	
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/rok_questvo/arozik_sky_ki/_exp04/exp04_rgn_timorous_deep/chrykori_tie/skyki/skyki019.mp3", "", "", 1167277602, 213920823, Spawn)
 	AddConversationOption(conversation, "All right.", "dlg_2_2")
@@ -296,7 +296,7 @@ end
 
 function dlg_2_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/rok_questvo/arozik_sky_ki/_exp04/exp04_rgn_timorous_deep/chrykori_tie/skyki/skyki020.mp3", "", "", 2912129697, 3874774240, Spawn)
 	AddConversationOption(conversation, "I will go find him.", "OfferQuest5")

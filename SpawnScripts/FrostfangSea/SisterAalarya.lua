@@ -17,7 +17,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	if HasQuest(Spawn, TrustIssues) and not QuestStepIsComplete(Spawn, TrustIssues, 3) then
 		PlayFlavor(NPC, "sister_aalarya/halas/new_halas_guard_house/sister_aalarya001.mp3", "", "", 2119732267, 2070285157, Spawn)
@@ -35,7 +35,7 @@ end
 
 function Quest1Chat_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "sister_aalarya/halas/new_halas_guard_house/sister_aalarya002.mp3", "", "", 778240445, 1265640341, Spawn)
 	AddConversationOption(conversation, "Perfect.", "Quest1Chat_7")
@@ -45,7 +45,7 @@ end
 
 function Quest1Chat_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "sister_aalarya/halas/new_halas_guard_house/sister_aalarya005.mp3", "", "", 2831123605, 2891513253, Spawn)
 	AddConversationOption(conversation, "What did he do?", "Quest1Chat_3")
@@ -55,7 +55,7 @@ end
 
 function Quest1Chat_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "sister_aalarya/halas/new_halas_guard_house/sister_aalarya006.mp3", "", "", 839696070, 368595826, Spawn)
 	AddConversationOption(conversation, "So how does Erollisi fit in?", "Quest1Chat_4")
@@ -66,7 +66,7 @@ end
 
 function Quest1Chat_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "sister_aalarya/halas/new_halas_guard_house/sister_aalarya009.mp3", "", "", 3023080955, 3940179989, Spawn)
 	AddConversationOption(conversation, "And you are followers of Erollisi Marr.", "Quest1Chat_5")
@@ -78,7 +78,7 @@ end
 function Quest1Chat_5(NPC, Spawn)
 	SetStepComplete(Spawn, TrustIssues, 3)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "sister_aalarya/halas/new_halas_guard_house/sister_aalarya010.mp3", "", "", 2543843692, 2274240039, Spawn)
 	AddConversationOption(conversation, "Thank you, Sister Aalarya.")
@@ -88,7 +88,7 @@ end
 
 function Quest1Chat_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "sister_aalarya/halas/new_halas_guard_house/sister_aalarya004.mp3", "", "", 2080247973, 2428888366, Spawn)
 	AddConversationOption(conversation, "Okay, okay, I'm leaving!")
@@ -97,7 +97,7 @@ end
 
 function Quest1Chat_7(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "sister_aalarya/halas/new_halas_guard_house/sister_aalarya003.mp3", "", "", 3370074263, 1372386631, Spawn)
 	AddConversationOption(conversation, "Why did you come to Erollis?", "Quest1Chat_2")
@@ -109,7 +109,7 @@ end
 
 function Quest1Chat_8(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "sister_aalarya/halas/new_halas_guard_house/sister_aalarya011.mp3", "", "", 735077916, 1256331838, Spawn)
 	AddConversationOption(conversation, "So how does Erollisi fit in?", "Quest1Chat_4")
@@ -119,7 +119,7 @@ end
 
 function Quest1Chat_9(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	AddConversationOption(conversation, "I see what you mean.", "Quest1Chat_3")
 	AddConversationOption(conversation, "Tell me about your arrival.", "Quest1Chat_3")
@@ -128,7 +128,7 @@ end
 
 function Quest1Chat_10(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	AddConversationOption(conversation, "Sorry to offend.  Tell me about your arrival.", "Quest1Chat_3")
 	AddConversationOption(conversation, "You wouldn't be so defensive if you weren't hiding something!")

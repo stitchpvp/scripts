@@ -27,7 +27,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	PlayFlavor(QuestGiver, "voiceover/english/rok_questvo/bio-parser_zo_dok/_exp04/exp04_rgn_timorous_deep/chrykori_tie/zodok/zodok005.mp3", "", "", 631994301, 82902587, Player)
 	AddConversationOption(conversation, "I will return with the roots.")

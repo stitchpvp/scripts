@@ -26,7 +26,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	if not HasQuest(Spawn, DrawUponWellsprings) and not HasCompletedQuest(Spawn, DrawUponWellsprings) and GetQuestStep(Spawn, DrawUponWellsprings) < 1 then
 		PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_1_1048.mp3", "", "", 0, 0, Spawn)
@@ -57,7 +57,7 @@ end
 
 function Quest_DrawUponWellsprings_01A(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	AddConversationOption(conversation, "Throw in some coin and we have a deal.", "Quest_DrawUponWellsprings_02")
 	AddConversationOption(conversation, "I would like to hear more.", "Quest_DrawUponWellsprings_02")
@@ -66,7 +66,7 @@ end
 
 function Quest_DrawUponWellsprings_01B(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	AddConversationOption(conversation, "Throw in some coin and we have a deal.", "Quest_DrawUponWellsprings_02")
 	AddConversationOption(conversation, "I would like to hear more.", "Quest_DrawUponWellsprings_02")
@@ -75,7 +75,7 @@ end
 
 function Quest_DrawUponWellsprings_02(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	PlayFlavor(NPC, "", "", "agree", 0, 0, Spawn)
 	AddConversationOption(conversation, "Where do I come in?", "Quest_DrawUponWellsprings_03")
@@ -84,7 +84,7 @@ end
 
 function Quest_DrawUponWellsprings_03(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	PlayFlavor(NPC, "", "", "agree", 0, 0, Spawn)
 	AddConversationOption(conversation, "That would be impressive.", "Quest_DrawUponWellsprings_04")
@@ -93,7 +93,7 @@ end
 
 function Quest_DrawUponWellsprings_04(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	AddConversationOption(conversation, "All right, I can do this.", "QuestOffer_DrawUponWellsprings")
 	AddConversationOption(conversation, "I don't think so.")
@@ -106,7 +106,7 @@ end
 
 function Quest_DrawUponWellsprings_05(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	GetTempVariable(Spawn, "cub")
 	Say(NPC, cub)
@@ -131,7 +131,7 @@ end
 
 function Quest_StunningRevelation(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	SetStepComplete(Spawn, DrawUponWellsprings, 2)
 
 	PlayFlavor(NPC, "voiceover/english/neriak/calnozz_j_melvirr/darklight_wood/tvatar_post/calnozz/calnozz010.mp3", "", "", 3144240243, 3441965982, Spawn)
@@ -142,7 +142,7 @@ end
 
 function Quest_StunningRevelation_01(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "What's that?", "Quest_StunningRevelation_02")
 	StartConversation(conversation, NPC, Spawn, "As an opportunist I am always seeking new methods for disposing of our enemies. In recent months I believe I've discovered a new way to address the constant threat of undead corpses who stalk these woods.")
@@ -150,7 +150,7 @@ end
 
 function Quest_StunningRevelation_02(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/neriak/calnozz_j_melvirr/darklight_wood/tvatar_post/calnozz/calnozz004.mp3", "", "", 1724396442, 329779287, Spawn)
 	AddConversationOption(conversation, "Where should I look for these mushrooms?", "dlg_4_4")
@@ -160,7 +160,7 @@ end
 
 function dlg_4_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/neriak/calnozz_j_melvirr/darklight_wood/tvatar_post/calnozz/calnozz005.mp3", "", "", 833398241, 239346045, Spawn)
 	AddConversationOption(conversation, "What do you mean?", "dlg_4_5")
@@ -169,7 +169,7 @@ end
 
 function dlg_4_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/neriak/calnozz_j_melvirr/darklight_wood/tvatar_post/calnozz/calnozz006.mp3", "", "", 37698119, 695494273, Spawn)
 	AddConversationOption(conversation, "All right, I can do this.", "dlg_4_6")
@@ -179,7 +179,7 @@ end
 
 function dlg_4_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/neriak/calnozz_j_melvirr/darklight_wood/tvatar_post/calnozz/calnozz007.mp3", "", "", 1447659069, 1085130442, Spawn)
 	AddConversationOption(conversation, "All right.", "dlg_4_7")
@@ -188,7 +188,7 @@ end
 
 function dlg_12_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/neriak/calnozz_j_melvirr/darklight_wood/tvatar_post/calnozz/calnozz020.mp3", "", "", 3550554639, 273920671, Spawn)
 	AddConversationOption(conversation, "Thank you.", "dlg_12_2")
@@ -197,7 +197,7 @@ end
 
 function dlg_12_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/neriak/calnozz_j_melvirr/darklight_wood/tvatar_post/calnozz/calnozz021.mp3", "", "", 1698965568, 399908880, Spawn)
 	AddConversationOption(conversation, "Oh?", "dlg_12_3")
@@ -207,7 +207,7 @@ end
 
 function dlg_12_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/neriak/calnozz_j_melvirr/darklight_wood/tvatar_post/calnozz/calnozz022.mp3", "", "", 1513724159, 2767202576, Spawn)
 	AddConversationOption(conversation, "Funny for YOU to say that to me.", "dlg_12_4")
@@ -216,7 +216,7 @@ end
 
 function dlg_12_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/neriak/calnozz_j_melvirr/darklight_wood/tvatar_post/calnozz/calnozz023.mp3", "", "", 2872411134, 1698258241, Spawn)
 	AddConversationOption(conversation, "I see. Well, thank you for the advice. Do you have any more work?", "dlg_12_5")
@@ -225,7 +225,7 @@ end
 
 function dlg_12_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/neriak/calnozz_j_melvirr/darklight_wood/tvatar_post/calnozz/calnozz025.mp3", "", "", 3007549595, 1246810731, Spawn)
 	AddConversationOption(conversation, "I'm sure I can figure it out.", "dlg_12_6")
@@ -237,7 +237,7 @@ end
 
 function dlg_12_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/neriak/calnozz_j_melvirr/darklight_wood/tvatar_post/calnozz/calnozz026.mp3", "", "", 466576522, 3228815072, Spawn)
 	AddConversationOption(conversation, "I'll return with them.")
@@ -246,7 +246,7 @@ end
 
 function dlg_13_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/neriak/calnozz_j_melvirr/darklight_wood/tvatar_post/calnozz/calnozz001.mp3", "", "", 1345648558, 587665125, Spawn)
 	AddConversationOption(conversation, "Well, nice to meet you.", "dlg_13_2")
@@ -255,7 +255,7 @@ end
 
 function dlg_13_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/neriak/calnozz_j_melvirr/darklight_wood/tvatar_post/calnozz/calnozz003.mp3", "", "", 1237619057, 3188401533, Spawn)
 	AddConversationOption(conversation, "What did you have in mind?", "dlg_13_3")
@@ -264,7 +264,7 @@ end
 
 function dlg_13_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/neriak/calnozz_j_melvirr/darklight_wood/tvatar_post/calnozz/calnozz004.mp3", "", "", 1724396442, 329779287, Spawn)
 	AddConversationOption(conversation, "I'm listening.", "dlg_13_4")
@@ -273,7 +273,7 @@ end
 
 function dlg_13_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/neriak/calnozz_j_melvirr/darklight_wood/tvatar_post/calnozz/calnozz005.mp3", "", "", 833398241, 239346045, Spawn)
 	AddConversationOption(conversation, "What do you mean?", "dlg_13_5")
@@ -282,7 +282,7 @@ end
 
 function dlg_13_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/neriak/calnozz_j_melvirr/darklight_wood/tvatar_post/calnozz/calnozz006.mp3", "", "", 37698119, 695494273, Spawn)
 	AddConversationOption(conversation, "All right, I can do this.", "dlg_13_6")
@@ -292,7 +292,7 @@ end
 
 function dlg_13_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/neriak/calnozz_j_melvirr/darklight_wood/tvatar_post/calnozz/calnozz007.mp3", "", "", 1447659069, 1085130442, Spawn)
 	AddConversationOption(conversation, "All right.", "dlg_13_7")
@@ -301,7 +301,7 @@ end
 
 function dlg_14_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/neriak/calnozz_j_melvirr/darklight_wood/tvatar_post/calnozz/calnozz009.mp3", "", "", 1819294557, 1460011625, Spawn)
 	AddConversationOption(conversation, "That's three cubs.", "dlg_14_2")
@@ -311,7 +311,7 @@ end
 
 function dlg_14_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/neriak/calnozz_j_melvirr/darklight_wood/tvatar_post/calnozz/calnozz010.mp3", "", "", 3144240243, 3441965982, Spawn)
 	AddConversationOption(conversation, "Yes.", "dlg_14_3")
@@ -320,7 +320,7 @@ end
 
 function dlg_14_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/neriak/calnozz_j_melvirr/darklight_wood/tvatar_post/calnozz/calnozz011.mp3", "", "", 2621978220, 49747204, Spawn)
 	AddConversationOption(conversation, "What's that?", "dlg_14_4")
@@ -329,7 +329,7 @@ end
 
 function dlg_14_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/neriak/calnozz_j_melvirr/darklight_wood/tvatar_post/calnozz/calnozz012.mp3", "", "", 514050601, 1202589149, Spawn)
 	AddConversationOption(conversation, "All right, I'll collect some.", "dlg_14_5")
@@ -339,7 +339,7 @@ end
 
 function dlg_14_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/neriak/calnozz_j_melvirr/darklight_wood/tvatar_post/calnozz/calnozz013.mp3", "", "", 2963845770, 48104833, Spawn)
 	AddConversationOption(conversation, "Yeah, yeah. I'll be back.", "dlg_14_6")
@@ -348,7 +348,7 @@ end
 
 function dlg_15_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/neriak/calnozz_j_melvirr/darklight_wood/tvatar_post/calnozz/calnozz015.mp3", "", "", 1272266981, 2604142858, Spawn)
 	AddConversationOption(conversation, "Interesting.", "dlg_15_2")
@@ -357,7 +357,7 @@ end
 
 function dlg_15_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/neriak/calnozz_j_melvirr/darklight_wood/tvatar_post/calnozz/calnozz016.mp3", "", "", 636649601, 977260067, Spawn)
 	AddConversationOption(conversation, "What task?", "dlg_15_3")
@@ -366,7 +366,7 @@ end
 
 function dlg_15_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/neriak/calnozz_j_melvirr/darklight_wood/tvatar_post/calnozz/calnozz017.mp3", "", "", 1678813904, 3793532984, Spawn)
 	AddConversationOption(conversation, "I can collect them.", "dlg_15_4")
@@ -376,7 +376,7 @@ end
 
 function dlg_15_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/neriak/calnozz_j_melvirr/darklight_wood/tvatar_post/calnozz/calnozz018.mp3", "", "", 3304982869, 1880170968, Spawn)
 	AddConversationOption(conversation, "I'll try to remember.", "dlg_15_5")
@@ -385,7 +385,7 @@ end
 
 function dlg_25_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/neriak/calnozz_j_melvirr/darklight_wood/tvatar_post/calnozz/calnozz009.mp3", "", "", 1819294557, 1460011625, Spawn)
 	AddConversationOption(conversation, "All right.", "dlg_25_2")
@@ -394,7 +394,7 @@ end
 
 function dlg_26_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/neriak/calnozz_j_melvirr/darklight_wood/tvatar_post/calnozz/calnozz009.mp3", "", "", 1819294557, 1460011625, Spawn)
 	AddConversationOption(conversation, "All right.", "dlg_26_2")
@@ -403,7 +403,7 @@ end
 
 function dlg_27_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/neriak/calnozz_j_melvirr/darklight_wood/tvatar_post/calnozz/calnozz009.mp3", "", "", 1819294557, 1460011625, Spawn)
 	AddConversationOption(conversation, "That's three cubs.", "dlg_27_2")
@@ -413,7 +413,7 @@ end
 
 function dlg_27_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/neriak/calnozz_j_melvirr/darklight_wood/tvatar_post/calnozz/calnozz010.mp3", "", "", 3144240243, 3441965982, Spawn)
 	AddConversationOption(conversation, "Yes.", "dlg_27_3")
@@ -422,7 +422,7 @@ end
 
 function dlg_27_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/neriak/calnozz_j_melvirr/darklight_wood/tvatar_post/calnozz/calnozz011.mp3", "", "", 2621978220, 49747204, Spawn)
 	AddConversationOption(conversation, "What's that?", "dlg_27_4")
@@ -431,7 +431,7 @@ end
 
 function dlg_27_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/neriak/calnozz_j_melvirr/darklight_wood/tvatar_post/calnozz/calnozz012.mp3", "", "", 514050601, 1202589149, Spawn)
 	AddConversationOption(conversation, "All right, I'll collect some.", "dlg_27_5")
@@ -441,7 +441,7 @@ end
 
 function dlg_27_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/neriak/calnozz_j_melvirr/darklight_wood/tvatar_post/calnozz/calnozz013.mp3", "", "", 2963845770, 48104833, Spawn)
 	AddConversationOption(conversation, "Yeah, yeah. I'll be back.", "dlg_27_6")
@@ -450,7 +450,7 @@ end
 
 function dlg_29_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/neriak/calnozz_j_melvirr/darklight_wood/tvatar_post/calnozz/calnozz015.mp3", "", "", 1272266981, 2604142858, Spawn)
 	AddConversationOption(conversation, "Interesting.", "dlg_29_2")
@@ -459,7 +459,7 @@ end
 
 function dlg_29_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/neriak/calnozz_j_melvirr/darklight_wood/tvatar_post/calnozz/calnozz016.mp3", "", "", 636649601, 977260067, Spawn)
 	AddConversationOption(conversation, "What task?", "dlg_29_3")
@@ -468,7 +468,7 @@ end
 
 function dlg_29_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/neriak/calnozz_j_melvirr/darklight_wood/tvatar_post/calnozz/calnozz017.mp3", "", "", 1678813904, 3793532984, Spawn)
 	AddConversationOption(conversation, "I can collect them.", "dlg_29_4")
@@ -478,7 +478,7 @@ end
 
 function dlg_29_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/neriak/calnozz_j_melvirr/darklight_wood/tvatar_post/calnozz/calnozz018.mp3", "", "", 3304982869, 1880170968, Spawn)
 	AddConversationOption(conversation, "I'll try to remember.", "dlg_29_5")

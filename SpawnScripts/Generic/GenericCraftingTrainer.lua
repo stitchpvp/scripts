@@ -35,7 +35,7 @@ end
 
 function CraftingTrainerHail(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	if GetTradeskillLevel(Spawn) < 9 then
 		if not HasBooks(Spawn) or GetTradeskillLevel(Spawn) < 2 then
@@ -96,7 +96,7 @@ end
 
 function Chat3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "I will start on that now.")
 	StartConversation(conversation, NPC, Spawn, "There, you now have knowledge required to begin crafting.  Speak to the Tradeskill Tutor for more detailed guidance on learning to craft, if you are interested in more information.  Return to me when you are ready to select a crafting specialty.")
@@ -104,7 +104,7 @@ end
 
 function Chat4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "My name is " .. GetName(Spawn) ..".", "SendSecondaryChoice")
 	AddConversationOption(conversation, "No thank you, I'll come back later.")
@@ -113,7 +113,7 @@ end
 
 function Chat5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "My name is " .. GetName(Spawn) .. ".", "Send" .. GetTradeskillClassName(Spawn) .. "Choice")
 	StartConversation(conversation, NPC, Spawn, "I'm glad that you continued on as a " .. GetTradeskillClassName(Spawn) .. " and came back to advance your skills.  I can certify you in your chosen trade specialty. I need your name before I can start your paperwork.")

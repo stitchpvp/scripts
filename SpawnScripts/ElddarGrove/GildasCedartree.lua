@@ -15,7 +15,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	choice = math.random(1,2)
 
@@ -32,7 +32,7 @@ end
 
 function dlg_4_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/gildas_cedartree/qey_elddar/quests/gildas_cedartree/gildascedartree017.mp3", "", "", 3941972709, 1584350411, Spawn)
 	StartConversation(conversation, NPC, Spawn, "Sorry, friend. I can't offer you help at this time. Good day!")

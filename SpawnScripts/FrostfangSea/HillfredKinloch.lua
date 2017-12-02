@@ -34,7 +34,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	if not HasCompletedQuest(Spawn, NothingWaste) then
 		PlayFlavor(NPC, "", "There are some coldain that could use your help.  Speak with Dolur Axebeard or Belka Thunderheart at the Great Shelf.", "nod", 0, 0, Spawn)
@@ -103,7 +103,7 @@ end
 
 function Quest1Chat_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "hillfred_kinloch/halas/cragged_spine/hillfred_kinloch_003.mp3", "", "", 1836808537, 1939269005, Spawn)
 	AddConversationOption(conversation, "They are fierce warriors.", "Quest1Chat_2")
@@ -114,7 +114,7 @@ end
 
 function Quest1Chat_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "hillfred_kinloch/halas/cragged_spine/hillfred_kinloch_004.mp3", "", "", 4172435129, 252044078, Spawn)
 	AddConversationOption(conversation, "Of course!", "OfferBloodMaiden")
@@ -124,7 +124,7 @@ end
 
 function Quest2Chat_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "hillfred_kinloch/halas/cragged_spine/hillfred_kinloch_008.mp3", "", "", 686837885, 933223065, Spawn)
 	AddConversationOption(conversation, "What should I do?", "OfferSkullsTaking")
@@ -135,7 +135,7 @@ end
 
 function Quest2Chat_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	AddConversationOption(conversation, "What should I do?", "OfferSkullsTaking")
 	AddConversationOption(conversation, "I am not going over there. No way!")
@@ -145,7 +145,7 @@ end
 function Quest2Chat_3(NPC, Spawn)
 	SetStepComplete(Spawn, SkullsTaking, 2)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "hillfred_kinloch/halas/cragged_spine/hillfred_kinloch_012.mp3", "", "", 2537405314, 3097234688, Spawn)
 	AddConversationOption(conversation, "Thank you.")
@@ -154,7 +154,7 @@ end
 
 function Quest3Chat_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "hillfred_kinloch/halas/cragged_spine/hillfred_kinloch_014.mp3", "", "", 1060176880, 2753171084, Spawn)
 	AddConversationOption(conversation, "You could be right.", "Quest3Chat_3")
@@ -164,7 +164,7 @@ end
 
 function Quest3Chat_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	AddConversationOption(conversation, "It is hard to imagine.", "Quest3Chat_3")
 	StartConversation(conversation, NPC, Spawn, "For years?!  Ha! I hightly doubt that. Although, I was raised to believe that anything is possible, I cannot fathom these brutes being tempered by strategy or reined in by tactics.")
@@ -172,7 +172,7 @@ end
 
 function Quest3Chat_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "hillfred_kinloch/halas/cragged_spine/hillfred_kinloch_016.mp3", "", "", 1973360658, 494365104, Spawn)
 	AddConversationOption(conversation, "Let's make it defeat.", "Quest3Chat_4")
@@ -181,7 +181,7 @@ end
 
 function Quest3Chat_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "hillfred_kinloch/halas/cragged_spine/hillfred_kinloch_017.mp3", "", "", 327573520, 4196024208, Spawn)
 	AddConversationOption(conversation, "What is it?", "Quest3Chat_5")
@@ -190,7 +190,7 @@ end
 
 function Quest3Chat_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "hillfred_kinloch/halas/cragged_spine/hillfred_kinloch_028.mp3", "", "", 1572217488, 1295272933, Spawn)
 	AddConversationOption(conversation, "You mean when it was released against the Rallosian Army?", "Quest3Chat_6")
@@ -199,7 +199,7 @@ end
 
 function Quest3Chat_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "hillfred_kinloch/halas/cragged_spine/hillfred_kinloch_029.mp3", "", "", 382556049, 477983016, Spawn)
 	AddConversationOption(conversation, "Why haven't you used it against them, yet?", "Quest3Chat_7")
@@ -208,7 +208,7 @@ end
 
 function Quest3Chat_7(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "hillfred_kinloch/halas/cragged_spine/hillfred_kinloch_030.mp3", "", "", 590799696, 3171732865, Spawn)
 	AddConversationOption(conversation, "What makes you think it will work now? ", "Quest3Chat_8")
@@ -217,7 +217,7 @@ end
 
 function Quest3Chat_8(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "hillfred_kinloch/halas/cragged_spine/hillfred_kinloch_018.mp3", "", "", 3216543246, 3646127145, Spawn)
 	AddConversationOption(conversation, "Interesting.  All right, I'll do it.", "OfferGreenMystery")
@@ -228,7 +228,7 @@ end
 function Quest3Chat_9(NPC, Spawn)
 	SetStepComplete(Spawn, GreenMystery, 2)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "hillfred_kinloch/halas/cragged_spine/hillfred_kinloch_020.mp3", "", "", 2833457168, 2782353327, Spawn)
 	AddConversationOption(conversation, "Thank you.", "Quest4Chat_1")
@@ -237,7 +237,7 @@ end
 
 function Quest4Chat_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "hillfred_kinloch/halas/cragged_spine/hillfred_kinloch_021.mp3", "", "", 4017927645, 3597873709, Spawn)
 	AddConversationOption(conversation, "Really?", "Quest4Chat_2")
@@ -247,7 +247,7 @@ end
 
 function Quest4Chat_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "hillfred_kinloch/halas/cragged_spine/hillfred_kinloch_022.mp3", "", "", 3881980508, 521109392, Spawn)
 	AddConversationOption(conversation, "They should be easier to slay now.", "Quest4Chat_4")
@@ -257,7 +257,7 @@ end
 
 function Quest4Chat_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "hillfred_kinloch/halas/cragged_spine/hillfred_kinloch_023.mp3", "", "", 400683653, 2257596783, Spawn)
 	AddConversationOption(conversation, "They should be easier to slay now.", "Quest4Chat_4")
@@ -267,7 +267,7 @@ end
 
 function Quest4Chat_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "hillfred_kinloch/halas/cragged_spine/hillfred_kinloch_025.mp3", "", "", 2971334867, 3323208561, Spawn)
 	AddConversationOption(conversation, "They don't stand a chance!", "OfferFewerAbout")
@@ -277,7 +277,7 @@ end
 
 function Quest4Chat_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "hillfred_kinloch/halas/cragged_spine/hillfred_kinloch_024.mp3", "", "", 3939745267, 718274633, Spawn)
 	AddConversationOption(conversation, "They don't stand a chance!", "OfferFewerAbout")
@@ -288,7 +288,7 @@ end
 function Quest4Chat_6(NPC, Spawn)
 	SetStepComplete(Spawn, FewerAbout, 2)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "hillfred_kinloch/halas/cragged_spine/hillfred_kinloch_027.mp3", "", "", 2051809382, 3817733818, Spawn)
 	AddConversationOption(conversation, "I'll take that as a compliment.")
@@ -297,7 +297,7 @@ end
 
 function Quest5Chat_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "hillfred_kinloch/halas/cragged_spine/hillfred_kinloch_032.mp3", "", "", 807004537, 2920327554, Spawn)
 	AddConversationOption(conversation, "That's true.", "Quest5Chat_2")
@@ -308,7 +308,7 @@ end
 
 function Quest5Chat_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "hillfred_kinloch/halas/cragged_spine/hillfred_kinloch_033.mp3", "", "", 3188649398, 1640607312, Spawn)
 	AddConversationOption(conversation, "Cerise velium crystal?", "Quest5Chat_3")
@@ -317,7 +317,7 @@ end
 
 function Quest5Chat_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "hillfred_kinloch/halas/cragged_spine/hillfred_kinloch_034.mp3", "", "", 2043015378, 2840803966, Spawn)
 	AddConversationOption(conversation, "Yeah, I'll do it.", "OfferGeodeCaching")

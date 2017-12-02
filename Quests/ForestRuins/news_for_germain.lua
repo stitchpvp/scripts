@@ -22,7 +22,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "All right.")
 	StartConversation(conversation, QuestGiver, Player, "Don't be foolish. Don't get yourself hurt, but if you notice anything that might lead us to him, please let me know.")

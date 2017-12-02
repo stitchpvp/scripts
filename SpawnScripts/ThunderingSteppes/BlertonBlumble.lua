@@ -25,7 +25,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	if not HasQuest(Spawn, WatchYourStepInTheTSPartI) and not HasCompletedQuest(Spawn, WatchYourStepInTheTSPartI) then
 		PlayFlavor(NPC, "", "Oh, hey. Uh, could you maybe just run along and go bother someone else? Thanks a bunch...", "", 1689589577, 4560189, Spawn)
@@ -52,7 +52,7 @@ end
 
 function dlg_0_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "What?", "dlg_0_2")
 	AddConversationOption(conversation, "Foot breath? I don't think I want to hear any more of this...")
@@ -61,7 +61,7 @@ end
 
 function dlg_0_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "Sure.", "dlg_0_3")
 	AddConversationOption(conversation, "I think I'd rather not.")
@@ -77,7 +77,7 @@ function dlg_1_1(NPC, Spawn)
 	SetStepComplete(Spawn, WatchYourStepInTheTSPartI, 2)
 	
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	AddConversationOption(conversation, "Sure thing.")
 	StartConversation(conversation, NPC, Spawn, "Thank you so much for finding old Grandpa Blumble. I was beginning to worry. Hah! He really did find pirates? Wow, maybe he isn't quite as crazy as we thought... No, nevermind. There was still that incident with the badgers. He's a loony alright. Please take this reply for Matsy back to Jacques for me.")

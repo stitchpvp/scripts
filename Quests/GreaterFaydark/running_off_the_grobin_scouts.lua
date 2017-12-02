@@ -22,7 +22,7 @@ function Init(Quest)
 end
 
 function Accepted(Quest, QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	if QuestGiver ~= nil then
 	if GetDistance(Player, QuestGiver) < 30 then
 	FaceTarget(QuestGiver, Player)

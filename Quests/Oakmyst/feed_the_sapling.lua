@@ -18,7 +18,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	PlayFlavor(QuestGiver, "voiceover/english/scholar_neola/qey_adv01_oakmyst/scholarneola002.mp3", "", "", 4033827219, 3906200141, Player)
 	AddConversationOption(conversation, "I will go and find this arcane nutrient.")

@@ -29,7 +29,7 @@ function hailed(NPC, Spawn)
 end
 
 function WizChat1(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	FaceTarget(NPC, Spawn)
 
 	AddConversationOption(conversation, "That's useful to know!", "WizChat2")
@@ -37,7 +37,7 @@ function WizChat1(NPC, Spawn)
 end
 
 function WizChat2(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	FaceTarget(NPC, Spawn)
 	
 	AddConversationOption(conversation, "That's interesting.", "WizChat3")
@@ -45,7 +45,7 @@ function WizChat2(NPC, Spawn)
 end
 
 function WizChat3(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	FaceTarget(NPC, Spawn)
 
 	AddConversationOption(conversation, "Thank you for the advice.")

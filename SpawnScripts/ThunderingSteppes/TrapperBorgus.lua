@@ -29,7 +29,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	if HasQuest(Spawn, HuntingForTrapperBorgus) then
 		-- Has the quest

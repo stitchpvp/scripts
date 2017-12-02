@@ -29,7 +29,7 @@ function hailed(NPC, Spawn)
 end
 
 function MysticChat1(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	FaceTarget(NPC, Spawn)
 
 	AddConversationOption(conversation, "That's useful to know!", "MysticChat2")
@@ -37,7 +37,7 @@ function MysticChat1(NPC, Spawn)
 end
 
 function MysticChat2(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	FaceTarget(NPC, Spawn)
 
 	AddConversationOption(conversation, "That's interesting.", "MysticChat3")
@@ -45,7 +45,7 @@ function MysticChat2(NPC, Spawn)
 end
 
 function MysticChat3(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	FaceTarget(NPC, Spawn)
 	
 	AddConversationOption(conversation, "That will be useful!", "MysticChat4")
@@ -53,7 +53,7 @@ function MysticChat3(NPC, Spawn)
 end
 
 function MysticChat4(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	FaceTarget(NPC, Spawn)
 
 	AddConversationOption(conversation, "Thank you for the advice.")

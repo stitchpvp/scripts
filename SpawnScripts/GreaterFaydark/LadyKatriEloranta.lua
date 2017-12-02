@@ -22,7 +22,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 		PlayFlavor(NPC, "voiceover/english/exp03_questvo/lady_katri_eloranta/_exp03/exp03_cty_kelethin/tutorials/qst_katri/qst_katri043.mp3", "", "", 1735617296, 447259139, Spawn)
 	AddConversationOption(conversation, "Apparently, it really does exist -- and it's using one of Kelethin's tree stumps as its lair!", "dlg_1_1")
@@ -95,7 +95,7 @@ end
 
 function dlg_1_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/lady_katri_eloranta/_exp03/exp03_cty_kelethin/tutorials/qst_katri/qst_katri044.mp3", "", "", 1161697637, 3743302883, Spawn)
 	AddConversationOption(conversation, "I want to help!", "dlg_1_2")
@@ -105,7 +105,7 @@ end
 
 function dlg_1_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/lady_katri_eloranta/_exp03/exp03_cty_kelethin/tutorials/qst_katri/qst_katri045.mp3", "", "", 3409419602, 4220390351, Spawn)
 	AddConversationOption(conversation, "Kelethin must be saved at all costs.", "dlg_1_3")
@@ -114,7 +114,7 @@ end
 
 function dlg_1_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/lady_katri_eloranta/_exp03/exp03_cty_kelethin/tutorials/qst_katri/qst_katri046.mp3", "", "", 3666385411, 3496691954, Spawn)
 	AddConversationOption(conversation, "Yes.  My spirit will renew someday, whether in me or in someone else.", "dlg_1_4")
@@ -124,7 +124,7 @@ end
 
 function dlg_1_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/lady_katri_eloranta/_exp03/exp03_cty_kelethin/tutorials/qst_katri/qst_katri047.mp3", "", "", 455754558, 1919269008, Spawn)
 	AddConversationOption(conversation, "You did?", "dlg_1_5")
@@ -133,7 +133,7 @@ end
 
 function dlg_1_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/lady_katri_eloranta/_exp03/exp03_cty_kelethin/tutorials/qst_katri/qst_katri050.mp3", "", "", 3603309443, 2534399133, Spawn)
 	AddConversationOption(conversation, "I'll speak with her now.", "dlg_1_6")
@@ -142,7 +142,7 @@ end
 
 function dlg_18_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/lady_katri_eloranta/_exp03/exp03_cty_kelethin/tutorials/qst_katri/qst_katri001.mp3", "", "", 1049447300, 1949649811, Spawn)
 	AddConversationOption(conversation, "Yes! I can't wait!", "dlg_18_2")
@@ -153,7 +153,7 @@ end
 
 function dlg_18_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/lady_katri_eloranta/_exp03/exp03_cty_kelethin/tutorials/qst_katri/qst_katri002.mp3", "", "", 3689194229, 1343885891, Spawn)
 	AddConversationOption(conversation, "My spirit remembers quite a lot, but it forgot about the Rite of Passage.")
@@ -162,7 +162,7 @@ end
 
 function dlg_18_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/lady_katri_eloranta/_exp03/exp03_cty_kelethin/tutorials/qst_katri/qst_katri003.mp3", "", "", 4152347739, 1411384376, Spawn)
 	AddConversationOption(conversation, "I am ready.", "dlg_18_4")
@@ -172,7 +172,7 @@ end
 
 function dlg_18_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/lady_katri_eloranta/_exp03/exp03_cty_kelethin/tutorials/qst_katri/qst_katri004.mp3", "", "", 861135728, 126889941, Spawn)
 	AddConversationOption(conversation, "There are several tests, aren't there?", "dlg_18_5")
@@ -181,7 +181,7 @@ end
 
 function dlg_18_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/lady_katri_eloranta/_exp03/exp03_cty_kelethin/tutorials/qst_katri/qst_katri005.mp3", "", "", 1325478030, 3761794570, Spawn)
 	AddConversationOption(conversation, "I understand.", "dlg_18_6")
@@ -190,7 +190,7 @@ end
 
 function dlg_18_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/lady_katri_eloranta/_exp03/exp03_cty_kelethin/tutorials/qst_katri/qst_katri006.mp3", "", "", 3359362369, 2718053972, Spawn)
 	AddConversationOption(conversation, "What should I study first?", "dlg_18_7")
@@ -200,7 +200,7 @@ end
 
 function dlg_18_7(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/lady_katri_eloranta/_exp03/exp03_cty_kelethin/tutorials/qst_katri/qst_katri007.mp3", "", "", 2759194756, 1812971858, Spawn)
 	AddConversationOption(conversation, "I know!", "dlg_18_8")
@@ -209,7 +209,7 @@ end
 
 function dlg_18_8(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/lady_katri_eloranta/_exp03/exp03_cty_kelethin/tutorials/qst_katri/qst_katri008.mp3", "", "", 1488353085, 2480151876, Spawn)
 	AddConversationOption(conversation, "I will come back when I've completed this task.", "dlg_18_9")
@@ -218,7 +218,7 @@ end
 
 function dlg_36_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/lady_katri_eloranta/_exp03/exp03_cty_kelethin/tutorials/qst_katri/qst_katri010.mp3", "", "", 2141344293, 2858138315, Spawn)
 	AddConversationOption(conversation, "I guess I'm so excited about the Rite of Passage that I forgot.", "dlg_36_2")
@@ -228,7 +228,7 @@ end
 
 function dlg_36_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/lady_katri_eloranta/_exp03/exp03_cty_kelethin/tutorials/qst_katri/qst_katri011.mp3", "", "", 2174466602, 3932055913, Spawn)
 	AddConversationOption(conversation, "Should I study more about history now?")
@@ -238,7 +238,7 @@ end
 
 function dlg_37_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/lady_katri_eloranta/_exp03/exp03_cty_kelethin/tutorials/qst_katri/qst_katri010.mp3", "", "", 2141344293, 2858138315, Spawn)
 	AddConversationOption(conversation, "I guess I'm so excited about the Rite of Passage that I forgot.", "dlg_37_2")
@@ -248,7 +248,7 @@ end
 
 function dlg_37_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/lady_katri_eloranta/_exp03/exp03_cty_kelethin/tutorials/qst_katri/qst_katri011.mp3", "", "", 2174466602, 3932055913, Spawn)
 	AddConversationOption(conversation, "Should I study more about history now?", "dlg_37_3")
@@ -258,7 +258,7 @@ end
 
 function dlg_37_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/lady_katri_eloranta/_exp03/exp03_cty_kelethin/tutorials/qst_katri/qst_katri012.mp3", "", "", 1082992118, 2058500337, Spawn)
 	AddConversationOption(conversation, "She is a history teacher?", "dlg_37_4")
@@ -267,7 +267,7 @@ end
 
 function dlg_37_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/lady_katri_eloranta/_exp03/exp03_cty_kelethin/tutorials/qst_katri/qst_katri013.mp3", "", "", 1032451909, 2210988260, Spawn)
 	AddConversationOption(conversation, "I'll get started on my history lessons.", "dlg_37_5")
@@ -276,7 +276,7 @@ end
 
 function dlg_37_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/lady_katri_eloranta/_exp03/exp03_cty_kelethin/tutorials/qst_katri/qst_katri014.mp3", "", "", 895440625, 99177481, Spawn)
 	AddConversationOption(conversation, "Thank you!", "dlg_37_6")
@@ -285,7 +285,7 @@ end
 
 function dlg_89_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/lady_katri_eloranta/_exp03/exp03_cty_kelethin/tutorials/qst_katri/qst_katri016.mp3", "", "", 3658860826, 2912932568, Spawn)
 	AddConversationOption(conversation, "I spoke with Raimo...he blames Outsiders for bringing disease to the Faydarks.", "dlg_89_2")
@@ -294,7 +294,7 @@ end
 
 function dlg_89_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/lady_katri_eloranta/_exp03/exp03_cty_kelethin/tutorials/qst_katri/qst_katri017.mp3", "", "", 4042847648, 718902311, Spawn)
 	AddConversationOption(conversation, "There is something to what he said.  Look at those diseased treants so close to Kelethin.", "dlg_89_3")
@@ -304,7 +304,7 @@ end
 
 function dlg_89_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/lady_katri_eloranta/_exp03/exp03_cty_kelethin/tutorials/qst_katri/qst_katri018.mp3", "", "", 3342872278, 3547383900, Spawn)
 	AddConversationOption(conversation, "Are all the treants of the Faydark at risk?")
@@ -314,7 +314,7 @@ end
 
 function dlg_90_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/lady_katri_eloranta/_exp03/exp03_cty_kelethin/tutorials/qst_katri/qst_katri016.mp3", "", "", 3658860826, 2912932568, Spawn)
 	AddConversationOption(conversation, "I spoke with Raimo...he blames Outsiders for bringing disease to the Faydarks.", "dlg_90_2")
@@ -323,7 +323,7 @@ end
 
 function dlg_90_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/lady_katri_eloranta/_exp03/exp03_cty_kelethin/tutorials/qst_katri/qst_katri017.mp3", "", "", 4042847648, 718902311, Spawn)
 	AddConversationOption(conversation, "There is something to what he said.  Look at those diseased treants so close to Kelethin.", "dlg_90_3")
@@ -333,7 +333,7 @@ end
 
 function dlg_90_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/lady_katri_eloranta/_exp03/exp03_cty_kelethin/tutorials/qst_katri/qst_katri018.mp3", "", "", 3342872278, 3547383900, Spawn)
 	AddConversationOption(conversation, "Are all the treants of the Faydark at risk?", "dlg_90_4")
@@ -343,7 +343,7 @@ end
 
 function dlg_90_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/lady_katri_eloranta/_exp03/exp03_cty_kelethin/tutorials/qst_katri/qst_katri025.mp3", "", "", 3597144400, 4127372896, Spawn)
 	AddConversationOption(conversation, "I don't need to explain it, I just know that it is so.")
@@ -352,7 +352,7 @@ end
 
 function dlg_91_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/lady_katri_eloranta/_exp03/exp03_cty_kelethin/tutorials/qst_katri/qst_katri016.mp3", "", "", 3658860826, 2912932568, Spawn)
 	AddConversationOption(conversation, "I spoke with Raimo...he blames Outsiders for bringing disease to the Faydarks.", "dlg_91_2")
@@ -361,7 +361,7 @@ end
 
 function dlg_91_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/lady_katri_eloranta/_exp03/exp03_cty_kelethin/tutorials/qst_katri/qst_katri017.mp3", "", "", 4042847648, 718902311, Spawn)
 	AddConversationOption(conversation, "There is something to what he said.  Look at those diseased treants so close to Kelethin.", "dlg_91_3")
@@ -371,7 +371,7 @@ end
 
 function dlg_91_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/lady_katri_eloranta/_exp03/exp03_cty_kelethin/tutorials/qst_katri/qst_katri018.mp3", "", "", 3342872278, 3547383900, Spawn)
 	AddConversationOption(conversation, "Are all the treants of the Faydark at risk?", "dlg_91_4")
@@ -381,7 +381,7 @@ end
 
 function dlg_91_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/lady_katri_eloranta/_exp03/exp03_cty_kelethin/tutorials/qst_katri/qst_katri019.mp3", "", "", 272244520, 663798395, Spawn)
 	AddConversationOption(conversation, "What can we do about it?", "dlg_91_5")
@@ -390,7 +390,7 @@ end
 
 function dlg_91_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/lady_katri_eloranta/_exp03/exp03_cty_kelethin/tutorials/qst_katri/qst_katri020.mp3", "", "", 1734937732, 3669646106, Spawn)
 	AddConversationOption(conversation, "We must cull those that are diseased.", "dlg_91_6")
@@ -400,7 +400,7 @@ end
 
 function dlg_91_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/lady_katri_eloranta/_exp03/exp03_cty_kelethin/tutorials/qst_katri/qst_katri022.mp3", "", "", 2209003630, 1705635007, Spawn)
 	AddConversationOption(conversation, "We...must cull the diseased creatures.")
@@ -410,7 +410,7 @@ end
 
 function dlg_92_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/lady_katri_eloranta/_exp03/exp03_cty_kelethin/tutorials/qst_katri/qst_katri023.mp3", "", "", 521100683, 3157912145, Spawn)
 	AddConversationOption(conversation, "I will remove the diseased creatures.", "dlg_92_2")
@@ -419,7 +419,7 @@ end
 
 function dlg_93_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/lady_katri_eloranta/_exp03/exp03_cty_kelethin/tutorials/qst_katri/qst_katri022.mp3", "", "", 2209003630, 1705635007, Spawn)
 	AddConversationOption(conversation, "We...must cull the diseased creatures.")
@@ -429,7 +429,7 @@ end
 
 function dlg_93_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/lady_katri_eloranta/_exp03/exp03_cty_kelethin/tutorials/qst_katri/qst_katri023.mp3", "", "", 521100683, 3157912145, Spawn)
 	AddConversationOption(conversation, "I will remove the diseased creatures.", "dlg_93_3")
@@ -438,7 +438,7 @@ end
 
 function dlg_93_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/lady_katri_eloranta/_exp03/exp03_cty_kelethin/tutorials/qst_katri/qst_katri024.mp3", "", "", 2967863976, 831925805, Spawn)
 	AddConversationOption(conversation, "I will.", "dlg_93_4")
@@ -447,7 +447,7 @@ end
 
 function dlg_97_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/lady_katri_eloranta/_exp03/exp03_cty_kelethin/tutorials/qst_katri/qst_katri031.mp3", "", "", 180224809, 481643814, Spawn)
 	AddConversationOption(conversation, "It just didn't seem right, hunting things that were so obviously sick.", "dlg_97_2")
@@ -456,7 +456,7 @@ end
 
 function dlg_97_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/lady_katri_eloranta/_exp03/exp03_cty_kelethin/tutorials/qst_katri/qst_katri032.mp3", "", "", 3434670788, 645022829, Spawn)
 	AddConversationOption(conversation, "What would make them so diseased they could not be healed?", "dlg_97_3")
@@ -465,7 +465,7 @@ end
 
 function dlg_97_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/lady_katri_eloranta/_exp03/exp03_cty_kelethin/tutorials/qst_katri/qst_katri033.mp3", "", "", 67685926, 1701511155, Spawn)
 	AddConversationOption(conversation, "Something trying to stir up trouble between the Fae and the Outsiders?", "dlg_97_4")
@@ -474,7 +474,7 @@ end
 
 function dlg_97_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/lady_katri_eloranta/_exp03/exp03_cty_kelethin/tutorials/qst_katri/qst_katri034.mp3", "", "", 2195860271, 1512858419, Spawn)
 	AddConversationOption(conversation, "There must be something we can do to find out.", "dlg_97_5")
@@ -483,7 +483,7 @@ end
 
 function dlg_97_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/lady_katri_eloranta/_exp03/exp03_cty_kelethin/tutorials/qst_katri/qst_katri035.mp3", "", "", 188163743, 2258694829, Spawn)
 	AddConversationOption(conversation, "What sort of rumors?", "dlg_97_6")
@@ -492,7 +492,7 @@ end
 
 function dlg_97_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/lady_katri_eloranta/_exp03/exp03_cty_kelethin/tutorials/qst_katri/qst_katri037.mp3", "", "", 2609946533, 3375103241, Spawn)
 	AddConversationOption(conversation, "No.  What's that?", "dlg_97_7")
@@ -501,7 +501,7 @@ end
 
 function dlg_97_7(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/lady_katri_eloranta/_exp03/exp03_cty_kelethin/tutorials/qst_katri/qst_katri038.mp3", "", "", 907147106, 801087342, Spawn)
 	AddConversationOption(conversation, "Has the Grender's involvement been proven?", "dlg_97_8")
@@ -510,7 +510,7 @@ end
 
 function dlg_97_8(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/lady_katri_eloranta/_exp03/exp03_cty_kelethin/tutorials/qst_katri/qst_katri039.mp3", "", "", 491933054, 4035179845, Spawn)
 	AddConversationOption(conversation, "I'll locate the Grender!", "dlg_97_9")
@@ -520,7 +520,7 @@ end
 
 function dlg_97_9(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/lady_katri_eloranta/_exp03/exp03_cty_kelethin/tutorials/qst_katri/qst_katri040.mp3", "", "", 1144328884, 1034744188, Spawn)
 	AddConversationOption(conversation, "Where will I find the Fae Royal Messenger?", "dlg_97_10")
@@ -529,7 +529,7 @@ end
 
 function dlg_97_10(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/lady_katri_eloranta/_exp03/exp03_cty_kelethin/tutorials/qst_katri/qst_katri042.mp3", "", "", 1497033190, 2749193313, Spawn)
 	AddConversationOption(conversation, "I'll let you know what I find out.", "dlg_97_11")

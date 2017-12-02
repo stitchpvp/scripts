@@ -39,7 +39,7 @@ end
 
 function collections_chat_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "What happens next?", "collections_chat_2")
@@ -48,7 +48,7 @@ end
 
 function collections_chat_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "How do I complete the collection?", "collections_chat_3")
@@ -57,7 +57,7 @@ end
 
 function collections_chat_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "I'd like to learn about harvesting and gathering now.", "harvests_chat_1")
@@ -67,7 +67,7 @@ end
 
 function harvests_chat_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "What are harvestables used for?", "harvests_chat_2")
@@ -76,7 +76,7 @@ end
 
 function harvests_chat_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Why do I need to increase my harvesting skills?", "OfferHarvesttutorial")
@@ -85,7 +85,7 @@ end
 
 function harvests_chat_3(NPC, Spawn)
     FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "I'd like to learn about collections now.", "collections_chat_1")
@@ -95,7 +95,7 @@ end
 
 function elemental_chat_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Oh... Well you were talking about collections?", "BaseChat")
@@ -104,7 +104,7 @@ end
 
 function BaseChat(NPC, Spawn)
     FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_2_1004.mp3", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "I'd like to learn about collections.", "collections_chat_1")

@@ -15,7 +15,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 		PlayFlavor(NPC, "gilp_jadefist/qey_elddar/quests/gilp_jadefist001.mp3", "", "", 561219982, 2924439692, Spawn)
 	AddConversationOption(conversation, "Thanks.", "dlg_5_1")

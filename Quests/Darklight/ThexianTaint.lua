@@ -49,7 +49,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	PlayFlavor(QuestGiver, "sselnyl_do_zyth/darklight_wood/hates_envy/sselnyl_revamp/sselnyl016.mp3", "", "", 2505986128, 2745231406, Player)
 	AddConversationOption(conversation, "For Neriak!")

@@ -22,7 +22,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 		PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_vantan_perikato/_exp03/exp03_cty_kelethin/tutorials/qst_vantan/qst_vantan001.mp3", "", "", 1775741681, 796680136, Spawn)
 	AddConversationOption(conversation, "What are Heroic Opportunities?", "dlg_54_1")
@@ -32,7 +32,7 @@ end
 
 function dlg_54_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_vantan_perikato/_exp03/exp03_cty_kelethin/tutorials/qst_vantan/qst_vantan002.mp3", "", "", 42663805, 3000263371, Spawn)
 	AddConversationOption(conversation, "Are Heroic Opportunities complicated?", "dlg_54_2")
@@ -42,7 +42,7 @@ end
 
 function dlg_54_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_vantan_perikato/_exp03/exp03_cty_kelethin/tutorials/qst_vantan/qst_vantan003.mp3", "", "", 3602737112, 1910313531, Spawn)
 	AddConversationOption(conversation, "So how does a Heroic Opportunity arise?", "dlg_54_3")
@@ -51,7 +51,7 @@ end
 
 function dlg_54_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_vantan_perikato/_exp03/exp03_cty_kelethin/tutorials/qst_vantan/qst_vantan004.mp3", "", "", 810984177, 2791021896, Spawn)
 	AddConversationOption(conversation, "Okay, that does sound easy. How do I begin a Heroic Opportunity?", "dlg_54_4")
@@ -61,7 +61,7 @@ end
 
 function dlg_54_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_vantan_perikato/_exp03/exp03_cty_kelethin/tutorials/qst_vantan/qst_vantan005.mp3", "", "", 3484157799, 4148998383, Spawn)
 	AddConversationOption(conversation, "Can I trigger a Starter Chain whenever I want?", "dlg_54_5")
@@ -71,7 +71,7 @@ end
 
 function dlg_54_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_vantan_perikato/_exp03/exp03_cty_kelethin/tutorials/qst_vantan/qst_vantan006.mp3", "", "", 2038098568, 3233011247, Spawn)
 	AddConversationOption(conversation, "What happens when I trigger a Starter Chain?", "dlg_54_6")
@@ -80,7 +80,7 @@ end
 
 function dlg_54_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_vantan_perikato/_exp03/exp03_cty_kelethin/tutorials/qst_vantan/qst_vantan007.mp3", "", "", 4289723720, 1132527077, Spawn)
 	AddConversationOption(conversation, "Are Heroic Opportunities only usable in groups?", "dlg_54_7")
@@ -90,7 +90,7 @@ end
 
 function dlg_54_7(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_vantan_perikato/_exp03/exp03_cty_kelethin/tutorials/qst_vantan/qst_vantan008.mp3", "", "", 411831633, 722981254, Spawn)
 	AddConversationOption(conversation, "How do I know what I should do to advance the Starter Chain?", "dlg_54_8")
@@ -100,7 +100,7 @@ end
 
 function dlg_54_8(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_vantan_perikato/_exp03/exp03_cty_kelethin/tutorials/qst_vantan/qst_vantan009.mp3", "", "", 4143425822, 1952224436, Spawn)
 	AddConversationOption(conversation, "Use the spell or art that is blinking. That's all there is to it?", "dlg_54_9")
@@ -110,7 +110,7 @@ end
 
 function dlg_54_9(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_vantan_perikato/_exp03/exp03_cty_kelethin/tutorials/qst_vantan/qst_vantan010.mp3", "", "", 3052449410, 2146152555, Spawn)
 	AddConversationOption(conversation, "Why does it trigger one of three?", "dlg_54_10")
@@ -119,7 +119,7 @@ end
 
 function dlg_54_10(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_vantan_perikato/_exp03/exp03_cty_kelethin/tutorials/qst_vantan/qst_vantan011.mp3", "", "", 2898004073, 2013528750, Spawn)
 	AddConversationOption(conversation, "What does the Combat Wheel tell me?", "dlg_54_11")
@@ -129,7 +129,7 @@ end
 
 function dlg_54_11(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_vantan_perikato/_exp03/exp03_cty_kelethin/tutorials/qst_vantan/qst_vantan012.mp3", "", "", 3594960522, 2732369829, Spawn)
 	AddConversationOption(conversation, "How can I tell the difference?", "dlg_54_12")
@@ -138,7 +138,7 @@ end
 
 function dlg_54_12(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_vantan_perikato/_exp03/exp03_cty_kelethin/tutorials/qst_vantan/qst_vantan013.mp3", "", "", 3798550664, 498535596, Spawn)
 	AddConversationOption(conversation, "How long do I have to complete the Heroic Opportunity?", "dlg_54_13")
@@ -148,7 +148,7 @@ end
 
 function dlg_54_13(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_vantan_perikato/_exp03/exp03_cty_kelethin/tutorials/qst_vantan/qst_vantan015.mp3", "", "", 1045091019, 199555181, Spawn)
 	AddConversationOption(conversation, "Any other tricks I should know?", "dlg_54_14")
@@ -158,7 +158,7 @@ end
 
 function dlg_54_14(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_vantan_perikato/_exp03/exp03_cty_kelethin/tutorials/qst_vantan/qst_vantan016.mp3", "", "", 1785885434, 1190045579, Spawn)
 	AddConversationOption(conversation, "Thank you for the information. I'll try Heroic Opportunities as soon as I can!", "dlg_54_15")

@@ -25,7 +25,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	PlayFlavor(QuestGiver, "voiceover/english/tutorial_revamp/lieutenant_dawson/qey_adv04_bog/quests/dawson/dawson011a.mp3", "", "", 3239354610, 1196418998, Player)
 	AddConversationOption(conversation, "You're welcome, and thank you.")

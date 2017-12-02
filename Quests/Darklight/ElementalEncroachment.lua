@@ -39,7 +39,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(QuestGiver, "udiyitas_x_kilrae/darklight_wood/hates_envy/udiyitas_revamp/udiyitas003.mp3", "", "", 3716611968, 2933459424, Player)
 	AddConversationOption(conversation, "For Hate's Envy!")

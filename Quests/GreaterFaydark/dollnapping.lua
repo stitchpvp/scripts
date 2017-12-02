@@ -26,7 +26,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	PlayFlavor(QuestGiver, "voiceover/english/exp03_questvo2/sua_augren/_exp03/exp03_rgn_greater_faydark/sua_augren/sua_augren006.mp3", "", "", 2584537319, 806721000, Player)
 	AddConversationOption(conversation, "No problem.  I'll get the doll for Ami.")

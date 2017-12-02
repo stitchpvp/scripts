@@ -15,7 +15,7 @@ end
 --[[
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	local choice = math.random(1,2)
 
@@ -34,7 +34,7 @@ end
 
 function dlg_30_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "How can I show you? ", "dlg_30_2")
@@ -44,7 +44,7 @@ end
 
 function dlg_30_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Let us begin!  ", "dlg_30_3")
@@ -54,7 +54,7 @@ end
 
 function dlg_30_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	StartConversation(conversation, NPC, Spawn, "Discord be with you!")

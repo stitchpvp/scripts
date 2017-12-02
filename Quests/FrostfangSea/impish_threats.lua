@@ -19,7 +19,7 @@ end
 
 function Accepted(Quest, QuestGiver, Spawn)
 	FaceTarget(QuestGiver, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(QuestGiver, "knut_orcbane/halas/cragged_spine/knut_orcbane_015.mp3", "", "", 2593056094, 2652573993, Spawn)
 	AddConversationOption(conversation, "Will do!")

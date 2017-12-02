@@ -18,7 +18,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(QuestGiver, "blorpisa_bogchild/halas/great_shelf/blorpisa_bogchild/blorpisa_bogchild_030.mp3", "", "", 1741611934, 1901038615, Player)
 	AddConversationOption(conversation, "I shall return as soon as I find the perfect core.")

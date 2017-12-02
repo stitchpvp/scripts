@@ -18,7 +18,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	RandomVoiceOver(NPC, Spawn)
 	
 	if HasCompletedQuest(Spawn, QUEST_1) then
@@ -53,7 +53,7 @@ end
 
 function dlg_4_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "Oh.", "dlg_4_2")
 	StartConversation(conversation, NPC, Spawn, "If enemies strong, respect them!")
@@ -61,7 +61,7 @@ end
 
 function dlg_4_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "How can I help?", "dlg_4_3")
 	StartConversation(conversation, NPC, Spawn, "Orc strong! Not THAT strong, but strong enough for respect! Mardyp talk to friend in Big Bend. Friend tell Mardyp that something in orc tusks make orcs more fierce, more strong! Mardyp killing orcs fine, but crushing fangs to eat takes time. You help Mardyp?")
@@ -69,7 +69,7 @@ end
 
 function dlg_4_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "Ok, I'll collect some fangs.", "dlg_4_4")
 	StartConversation(conversation, NPC, Spawn, "Get more fangs while Mardyp crush ones I already have. All orcs have fangs. Mardyp need 20!")
@@ -77,7 +77,7 @@ end
 
 function dlg_4_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "I'll go get your fangs.", "OfferQuest1")
 	StartConversation(conversation, NPC, Spawn, "Good! Mardyp go back to crushing.")
@@ -101,7 +101,7 @@ function dlg_6_1(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_1, 2)
 	
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "Well, good luck with that.")
 	StartConversation(conversation, NPC, Spawn, "Good! Mardyp very happy! Soon Mardyp make these into soup or drink or something! Unless that too much work, then Mardyp just eat it.")
@@ -113,7 +113,7 @@ end
 --[[
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 		PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_3_1056.mp3", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "What?", "dlg_4_1")
@@ -136,7 +136,7 @@ end
 
 function dlg_4_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Oh.", "dlg_4_2")
@@ -145,7 +145,7 @@ end
 
 function dlg_4_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "How can I help?", "dlg_4_3")
@@ -154,7 +154,7 @@ end
 
 function dlg_4_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Ok, I'll collect some fangs.", "dlg_4_4")
@@ -163,7 +163,7 @@ end
 
 function dlg_4_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "I'll go get your fangs.", "dlg_4_5")
@@ -172,7 +172,7 @@ end
 
 function dlg_5_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Oh.", "dlg_5_2")
@@ -181,7 +181,7 @@ end
 
 function dlg_5_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "How can I help?", "dlg_5_3")
@@ -190,7 +190,7 @@ end
 
 function dlg_5_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Ok, I'll collect some fangs.", "dlg_5_4")
@@ -199,7 +199,7 @@ end
 
 function dlg_5_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "I'll go get your fangs.", "dlg_5_5")
@@ -208,7 +208,7 @@ end
 
 function dlg_6_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Well, good luck with that.", "dlg_6_2")

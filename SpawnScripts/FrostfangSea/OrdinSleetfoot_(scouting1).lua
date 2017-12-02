@@ -35,7 +35,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	if GetQuestStep(Spawn, GoodDistraction) == 2 then
 		PlayFlavor(NPC, "", "Help me, please!", "", 0, 0, Spawn)
 	elseif GetQuestStep(Spawn, GoodDistraction) == 3 then

@@ -20,7 +20,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	if HasCompletedQuest(Spawn, QUEST_1) then
 		if HasCompletedQuest(Spawn, QUEST_2) then
@@ -49,7 +49,7 @@ end
 
 function dlg_35_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/rok_questvo/craewen_ku_vi/_exp04/exp04_rgn_timorous_deep/chrykori_tie/kuvi/kuvi001.mp3", "", "", 4081585464, 1720216201, Spawn)
 	AddConversationOption(conversation, "An excellent plan.", "OfferQuest1")
@@ -79,7 +79,7 @@ function dlg_36_1(NPC, Spawn)
 	end
 	
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/rok_questvo/craewen_ku_vi/_exp04/exp04_rgn_timorous_deep/chrykori_tie/kuvi/kuvi004.mp3", "", "", 1541155744, 479902070, Spawn)
 	AddConversationOption(conversation, "They will be a bloody mass in your hand.", "OfferQuest2")
@@ -111,7 +111,7 @@ function dlg_41_1(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_2, 2)
 	
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/rok_questvo/craewen_ku_vi/_exp04/exp04_rgn_timorous_deep/chrykori_tie/kuvi/kuvi007.mp3", "", "", 421487037, 477036489, Spawn)
 	AddConversationOption(conversation, "You are welcome.", "dlg_41_2")

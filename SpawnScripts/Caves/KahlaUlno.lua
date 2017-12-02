@@ -19,7 +19,7 @@ end
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	RandomVoice(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	if HasCompletedQuest(Spawn, QUEST_1) then
 		PlayFlavor(NPC, "", "Still no conclusions.", "", 1689589577, 4560189, Spawn)
@@ -54,7 +54,7 @@ end
 
 function dlg_1_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "What's that?", "dlg_1_2")
 	StartConversation(conversation, NPC, Spawn, "Well, I'm very interested in the creatures that inhabit these caves. I am trying to catalog these creatures so I can better compare them with their cousins found elsewhere. But I've run into a problem.")
@@ -62,7 +62,7 @@ end
 
 function dlg_1_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "I can get them for you.", "dlg_2_3")
 	AddConversationOption(conversation, "I'm not interested.")
@@ -71,7 +71,7 @@ end
 
 function dlg_2_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "I can do that.", "OfferQuest1")
 	StartConversation(conversation, NPC, Spawn, "You can? That would be great. I think four of the spiders, four of the bats, and four of the flying serpents would be enough for me to get most of my research done.")
@@ -95,7 +95,7 @@ function dlg_13_1(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_1, 4)
 	
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "Glad to hear it.")
 	StartConversation(conversation, NPC, Spawn, "Perfect! Thank you so much! This will help me a great deal.")

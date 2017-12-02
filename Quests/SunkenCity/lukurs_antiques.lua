@@ -21,7 +21,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(QuestGiver, "voiceover/english/optional1/lukur/fprt_adv01_sunken/lukur002.mp3", "", "", 2636400793, 1337735741, Player)
 	AddConversationOption(conversation, "Thanks, I'll start searching the area.")

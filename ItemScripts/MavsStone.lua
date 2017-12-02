@@ -9,7 +9,7 @@
 local DWARF_MENTOR_QUEST_4 = 297
 
 function examined(Item, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	if HasQuest(Player, DWARF_MENTOR_QUEST_4) then
 		local x1 = GetX(Player)
 		local y1 = GetY(Player)
@@ -34,7 +34,7 @@ function HoldStone(Item, Player)
 		SetStepComplete(Player, DWARF_MENTOR_QUEST_4, 1)
 	end
 	
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	AddConversationOption(conversation, "Put the stone away.")
 	StartDialogConversation(conversation, 2, Item, Player, "When you focus on the stone there is an almost audible sense of hammers and chisels working at stone, carts moving back and forth, and a low hum of an ancient dwarven work song.")
 end

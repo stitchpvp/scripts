@@ -16,7 +16,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/biddy_bobick/enchanted/biddy_bobick000.mp3", "", "cry", 1953488725, 856940273, Spawn)
 	AddConversationOption(conversation, "At ease halfling! I am no pirate! ", "dlg_0_1")
@@ -26,7 +26,7 @@ end
 
 function dlg_0_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/biddy_bobick/enchanted/biddy_bobick001.mp3", "", "", 2271087281, 754687626, Spawn)
 	AddConversationOption(conversation, "Save you from what? ", "dlg_0_2")
@@ -36,7 +36,7 @@ end
 
 function dlg_0_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/biddy_bobick/enchanted/biddy_bobick002.mp3", "", "", 2563393725, 4253211022, Spawn)
 	AddConversationOption(conversation, "I shall heed your warning and explore this land. Be safe. ", "dlg_7_3")
@@ -45,7 +45,7 @@ end
 		
 function dlg_1_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	PlayFlavor(NPC, "voiceover/english/biddy_bobick/enchanted/biddy_bobick003.mp3", "", "", 1607211097, 1962573681, Spawn)
 	AddConversationOption(conversation, "Glad to see you doing well Biddy. ", "dlg_22_1")

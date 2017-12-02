@@ -45,7 +45,7 @@ end
 
 function Chat1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	AddConversationOption(conversation, "Thank you, Flibbit.")
 	AddConversationOption(conversation, "Can I help you further?", "Chat2")
@@ -54,7 +54,7 @@ end
 
 function Chat2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	AddConversationOption(conversation, "It was no problem. I did not mind it one bit")
 	StartConversation(conversation, NPC, Spawn, "I cannot accept any further aid from you, mighty one. I have appreciated it, but you have also shown me that there are some challenges that we must overcome on our own. And for that too, I must thank you! I am sure that we have slowed you from completing your own quest.")

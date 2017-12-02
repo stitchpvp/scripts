@@ -34,7 +34,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	AddConversationOption(conversation, "Okay.")
 	StartConversation(conversation, QuestGiver, Player, "Great! Thank you! Here, take these five scrying stones and see if you can get me my ancient silver coins. If you run out of stones, you might need to shop around and see if some of the local merchants have some. Please be fast. I don't want to get a visit from the clockworks...")

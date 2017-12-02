@@ -33,7 +33,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	if GetQuestStep(Spawn, GoodDistraction) == 1 then
 		PlayFlavor(NPC, "ordin_sleetfoot/halas/cragged_spine/ordin_sleetfoot001.mp3", "", "", 346156027, 2620260101, Spawn)
 		AddConversationOption(conversation, "I am.  Slip into the shadows.  I'll ensure no one realizes you're there.", "Quest1Chat_1")
@@ -47,7 +47,7 @@ end
 function Quest1Chat_1(NPC, Spawn)
 	AddTimer(NPC, 2000, "Step1", 1, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "ordin_sleetfoot/halas/cragged_spine/ordin_sleetfoot002.mp3", "", "", 4202537039, 1639978352, Spawn)
 	AddConversationOption(conversation, "Be safe.")

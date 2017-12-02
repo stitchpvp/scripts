@@ -22,7 +22,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 		PlayFlavor(NPC, "glavarius_marud/_exp03/exp03_rgn_greater_faydark/glavarius_marud/glavarius_marud000.mp3", "", "", 4001683736, 773203562, Spawn)
 	AddConversationOption(conversation, "A little pretentious, aren't we?  Goodbye.", "dlg_44_1")

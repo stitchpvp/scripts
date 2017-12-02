@@ -18,7 +18,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	if HasCompletedQuest(Spawn, QUEST_1) then
 		Say(NPC, "Everything counts in all amounts.", Spawn)
@@ -60,7 +60,7 @@ function dlg_14_1(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_1, 2)
 	
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/rok_questvo/bezok_myli_ki/_exp04/exp04_rgn_timorous_deep/chrykori_tie/myliki/myliki003.mp3", "", "", 344889731, 1839794732, Spawn)
 	AddConversationOption(conversation, "You're welcome.")

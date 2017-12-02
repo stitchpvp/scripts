@@ -28,7 +28,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	AddConversationOption(conversation, "Thank you for being so generous.")
 	StartConversation(conversation, NPC, Spawn, "Well here it looks like 5 Forged Tin Long Swords were damaged. I am going to need you either to buy me some new ones or make them for me. Why don't I keep this delivery receipt until you bring them to me, so I know you will return.")

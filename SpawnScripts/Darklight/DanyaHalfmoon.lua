@@ -20,7 +20,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	if not HasCompletedQuest(Spawn, SealingTheRift) then
 		PlayFlavor(NPC, "voiceover/english/neriak/danya_halfmoon/darklight_wood/quest/hates_envy/qst_danya_toolow_d63cbe27.mp3", "", "", 1007828063, 3522254640, Spawn)
@@ -46,7 +46,7 @@ end
 
 function QuestChat_0_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/neriak/danya_halfmoon/darklight_wood/hates_envy/danya/danya003.mp3", "", "", 470214479, 1083810129, Spawn)
 	AddConversationOption(conversation, "You want ore from the mine.", "QuestChat_0_2")
@@ -55,7 +55,7 @@ end
 
 function QuestChat_0_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/neriak/danya_halfmoon/darklight_wood/hates_envy/danya/danya004.mp3", "", "", 3325647670, 962149852, Spawn)
 	AddConversationOption(conversation, "I can get it.", "OfferQuest1")
@@ -72,7 +72,7 @@ function QuestChat_1_0(NPC, Spawn)
 	SetStepComplete(Spawn, SableveinRubble, 2)
 	
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/neriak/danya_halfmoon/darklight_wood/hates_envy/danya/danya007.mp3", "", "", 2771597308, 3920757098, Spawn)
 	AddConversationOption(conversation, "You're welcome.")

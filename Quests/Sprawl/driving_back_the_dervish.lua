@@ -17,7 +17,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "I will do so.")
 	StartConversation(conversation, QuestGiver, Player, "Glad to hear it. Defeat them and return to me for your payment.")

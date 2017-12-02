@@ -22,7 +22,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	choice = math.random(1,3)
 
@@ -43,7 +43,7 @@ end
 
 function dlg_87_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/raimo_heinila/_exp03/exp03_cty_kelethin/quest/qst_raimo_heinila/qst_raimo_heinila002.mp3", "", "", 3640055551, 3826016721, Spawn)
 	AddConversationOption(conversation, "But Lyyti said to speak with you!", "dlg_87_2")
@@ -52,7 +52,7 @@ end
 
 function dlg_87_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/raimo_heinila/_exp03/exp03_cty_kelethin/quest/qst_raimo_heinila/qst_raimo_heinila003.mp3", "", "", 1326667193, 2814659187, Spawn)
 	AddConversationOption(conversation, "What kind of mistakes?", "dlg_87_3")
@@ -61,7 +61,7 @@ end
 
 function dlg_87_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/raimo_heinila/_exp03/exp03_cty_kelethin/quest/qst_raimo_heinila/qst_raimo_heinila004.mp3", "", "", 2298966137, 2453405549, Spawn)
 	AddConversationOption(conversation, "We could heal the treants...or cull them.", "dlg_87_4")
@@ -70,7 +70,7 @@ end
 
 function dlg_87_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/raimo_heinila/_exp03/exp03_cty_kelethin/quest/qst_raimo_heinila/qst_raimo_heinila005.mp3", "", "", 3829827816, 2730687571, Spawn)
 	AddConversationOption(conversation, "Queen Amree says...", "dlg_87_5")
@@ -79,7 +79,7 @@ end
 
 function dlg_87_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/raimo_heinila/_exp03/exp03_cty_kelethin/quest/qst_raimo_heinila/qst_raimo_heinila006.mp3", "", "", 875120539, 3120603699, Spawn)
 	AddConversationOption(conversation, "I'm sorry to have bothered you.", "dlg_87_6")

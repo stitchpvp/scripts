@@ -35,7 +35,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	if GetTempVariable(Player, "RepeatHuntingForTrapperBorgus") == "true" then
 		-- agree to do it again after turn in

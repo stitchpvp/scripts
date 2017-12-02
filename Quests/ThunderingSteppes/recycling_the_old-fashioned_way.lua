@@ -38,7 +38,7 @@ function Step3Complete(Quest, QuestGiver, Player)
 end
 
 function Accepted(Quest, QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "All right, I'll be back")
 	StartConversation(conversation, QuestGiver, Player, "Oh, the price is right, my friend! It's free! And I'll even pay you for your work! I need a variety of bones: some antelope, huntress and siren bones for a sort of 'surf and turf' fertilizer. The Steppes abound with these creatures. Think of this as recycling. We're helping the environment, eh?")

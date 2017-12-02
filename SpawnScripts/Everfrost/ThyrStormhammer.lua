@@ -74,7 +74,7 @@ end
 function Under_Level_Quest1Chat_2(NPC, Spawn)
         SetStepComplete(Spawn, SuppliesForThePioneers, 1)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "Yes, he had me clear out a number of sharks from the water around to make it safer for pioneers to pass through.", "Under_Level_Quest1Chat_3")
 	StartConversation(conversation, NPC, Spawn, "Ahh, Brahnagan. He is always taking care of us...")
@@ -100,7 +100,7 @@ end
 function Quest1Chat_2(NPC, Spawn)
         SetStepComplete(Spawn, SuppliesForThePioneers, 1)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "Yes, he had me clear out a number of sharks from the water around to make it safer for pioneers to pass through.", "Quest1Chat_3")
 	StartConversation(conversation, NPC, Spawn, "Ahh, Brahnagan. He is always taking care of us...")

@@ -36,7 +36,7 @@ end
 
 function Quest1Chat_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "sigbrith_macinnes/halas/gwenevyns_cove/sigbrith_macinnes/sigbrith_macinnes_003.mp3", "", "", 4092947662, 401427635, Spawn)
 	AddConversationOption(conversation, "That's where the grizzlies are!", "Quest1Chat_3")
@@ -46,7 +46,7 @@ end
 function Quest1Chat_3(NPC, Spawn)
     SetStepComplete(Spawn, LostFroglok, 1)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "sigbrith_macinnes/halas/gwenevyns_cove/sigbrith_macinnes/sigbrith_macinnes_004.mp3", "", "", 3124673910, 3802002199, Spawn)
 	AddConversationOption(conversation, "Thank you for the information. I must now go and search for Splorpy.")

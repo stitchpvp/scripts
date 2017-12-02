@@ -53,7 +53,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "Okay.")
 	StartConversation(conversation, QuestGiver, Player, "Great! The gnolls have taken my equipment to a cave near here, but they have used some of my own magic to seal the entrance. I'll need you to gather a few key components for me so that we can break in.  Here is a list of items I will need in order to prepare a spell to counter their lock. Come see me once you've finished.")

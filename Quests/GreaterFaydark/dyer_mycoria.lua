@@ -21,7 +21,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	PlayFlavor(QuestGiver, "voiceover/english/exp03_questvo2/morganellus/_exp03/exp03_rgn_greater_faydark/shroomba/morganellus/morganellus004.mp3", "", "", 2956711105, 2602303407, Player)
 	AddConversationOption(conversation, "All right, I'll just find him.")

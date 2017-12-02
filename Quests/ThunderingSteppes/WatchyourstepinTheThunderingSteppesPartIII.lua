@@ -57,7 +57,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	AddConversationOption(conversation, "Okay.")
 	StartConversation(conversation, QuestGiver, Player, "This delivery is for Brianna in Thundermist Village. Since we're delivering a package this time, you'll need to get her to sign a receipt for it before you come back.")

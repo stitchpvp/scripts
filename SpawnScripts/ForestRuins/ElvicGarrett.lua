@@ -19,7 +19,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	
 	if HasQuest(Spawn, HALFELF_MENTOR_QUEST_4) then
 		HalfElfMentorQuest(NPC, Spawn, conversation)
@@ -51,7 +51,7 @@ function dlg_0_1(NPC, Spawn)
 	SetStepComplete(Spawn, HALFELF_MENTOR_QUEST_4, 1)
 	
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	if not HasCompletedQuest(Spawn, QUEST_1) then
 		PlayFlavor(NPC, "voiceover/english/tutorial_revamp/elvic_garrett/qey_adv02_ruins/quests/elvic/elvic_daelyn001.mp3", "", "", 361439431, 2027311841, Spawn)
@@ -74,7 +74,7 @@ end
 
 function dlg_0_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/elvic_garrett/qey_adv02_ruins/quests/elvic/elvic_daelyn003.mp3", "", "", 3059918187, 1161029478, Spawn)
 	AddConversationOption(conversation, "I will see what I can find.", "OfferQuest1")
@@ -90,7 +90,7 @@ end
 
 function dlg_1_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/elvic_garrett/qey_adv02_ruins/quests/elvic/elvic_daelyn003.mp3", "", "", 3059918187, 1161029478, Spawn)
 	AddConversationOption(conversation, "I will see what I can find.", "dlg_1_2")

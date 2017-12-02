@@ -22,7 +22,7 @@ function Accepted(Quest, QuestGiver, Player)
 		SummonItem(Player, 6556)
 	end
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(QuestGiver, "odon_scourgeson/halas/cragged_spine/odon_scourgeson_011.mp3", "", "", 57352685, 126930630, Player)
 	AddConversationOption(conversation, "I will, Odon.")

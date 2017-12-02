@@ -23,7 +23,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	if HasCompletedQuest(Spawn, QUEST_3) then
 		if HasCompletedQuest(Spawn, QUEST_4) then
@@ -75,7 +75,7 @@ function dlg_10_1(NPC, Spawn)
 	end
 	
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/rok_questvo/primary_conzuk_zum_ha/_exp04/exp04_rgn_timorous_deep/chrykori_tie/zumha/zumha001.mp3", "", "", 3446548455, 1963577533, Spawn)
 	AddConversationOption(conversation, "It's worthless. They can't mean to make anything from it.", "dlg_10_2")
@@ -88,7 +88,7 @@ end
 
 function dlg_10_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/rok_questvo/primary_conzuk_zum_ha/_exp04/exp04_rgn_timorous_deep/chrykori_tie/zumha/zumha001a.mp3", "", "", 3902061993, 4258824425, Spawn)
 	AddConversationOption(conversation, "I am up to it.", "OfferQuest4")
@@ -118,7 +118,7 @@ function dlg_28_1(NPC, Spawn)
 	end
 	
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/rok_questvo/primary_conzuk_zum_ha/_exp04/exp04_rgn_timorous_deep/chrykori_tie/zumha/zumha004.mp3", "", "", 1131517784, 3963290452, Spawn)
 	AddConversationOption(conversation, "I can do that.", "OfferQuest5")
@@ -152,7 +152,7 @@ function dlg_39_1(NPC, Spawn)
 	end
 	
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/rok_questvo/primary_conzuk_zum_ha/_exp04/exp04_rgn_timorous_deep/chrykori_tie/zumha/zumha007.mp3", "", "", 1084426819, 682279159, Spawn)
 	AddConversationOption(conversation, "I will seek him out.", "OfferQuest6")
