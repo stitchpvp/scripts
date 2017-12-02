@@ -3,7 +3,7 @@ function cast(Caster, Target, MinDmg, MaxDmg)
 end
 
 function proc(Caster, Target, ProcType, MinDmg, MaxDmg)
-  grp = GetGroup(Target)
+  local grp = GetGroup(Target)
 
   if grp == nil then
     ProcDamage(Caster, Target, "Thornstorm", 2, MinDmg, MaxDmg)

@@ -1,4 +1,6 @@
-unused = false
+max_line_length = false
+unused_args = false
+
 std = {
   globals = {
     "cast",
@@ -48,6 +50,7 @@ std = {
     "HasItem",
     "LastSpellAttackHit",
     "Interrupt",
+    "ipairs",
     "IsBehind",
     "IsEpic",
     "IsFlanking",
