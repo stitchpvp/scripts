@@ -50,7 +50,7 @@ end
 function RepelledFood(Quest, QuestGiver, Player)
     UpdateQuestTaskGroupDescription(Quest, 3, "The crustose were sent running away from the barrles of provisions!")
     AddQuestStepChat(Quest, 4, "Return to Arrin Clelland", 1, "I am to return to Arrin Clelland in Pilgrims' Landing.", 0, 4700000)
-    AddQuestStepCompleteAction(Quest, 4, "CompleteQuest")	
+    AddQuestStepCompleteAction(Quest, 4, "CompleteQuest")
 end
 
 function CompleteQuest(Quest, QuestGiver, Player)

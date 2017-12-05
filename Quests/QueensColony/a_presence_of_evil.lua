@@ -33,8 +33,8 @@ end
 function step1_complete_talkToHaggus(Quest, QuestGiver, Player)
     UpdateQuestStepDescription(Quest, 1, "I reported to Sergeant Haggus and have been assigned my first duty.")
     UpdateQuestTaskGroupDescription(Quest, 1, "I reported to Sergeant Haggus and have been assigned my first duty.")
-	
-    AddQuestStepKill(Quest, 2, "Kill tainted Sapswill invaders. They are attacking the barricades.", 3, 100, "Sergeant Haggus and the other defenders need help defending the colony. I should help fend off the attacking goblin horder.", 611, 2530080) 
+
+    AddQuestStepKill(Quest, 2, "Kill tainted Sapswill invaders. They are attacking the barricades.", 3, 100, "Sergeant Haggus and the other defenders need help defending the colony. I should help fend off the attacking goblin horder.", 611, 2530080)
     AddQuestStepCompleteAction(Quest, 2, "step2_complete_killedInvaders")
 end
 
@@ -69,7 +69,7 @@ end
 
 function quest_complete(Quest, QuestGiver, Player)
     UpdateQuestDescription(Quest, "I reported to Sergeant Haggus and helped out at the barricades. The goblins were relentless, but I was able to help fend them off. It was a sad sight to see the soldier that had been killed, but the information I collected should prove useful to the colony.")
-    GiveQuestReward(Quest, Player)  
+    GiveQuestReward(Quest, Player)
 end
 
 function Reload(Quest, QuestGiver, Player, Step)

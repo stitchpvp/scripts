@@ -14,6 +14,5 @@ function remove(Caster, Target)
 end
 
 function tick(Caster, Target, MinDmg, MaxDmg)
-   dmgAmount = math.random(MinDmg, MaxDmg)
-   SpellDamage(Target, 8, dmgAmount)
+  SpellDamage(Target, 8, MinDmg, MaxDmg)
 end

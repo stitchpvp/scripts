@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "So Hot You Catch Them Cooked"
 	Script Author	: Scatman
 	Script Date	: 2009.02.04
-	
+
 	Zone       : Darklight Wood
 	Quest Giver: Dirzdia T'Zauvirr
 	Preceded by: Reaping the Benefits of a Monopoly (reaping_the_benefits_of_a_monopoly.lua)
@@ -22,7 +22,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(QuestGiver, "voiceover/english/neriak/dirzdia_t_zauvirr/darklight_wood/tvatar_post/dirzdia/dirzdia016.mp3", "", "", 3096333821, 2080368744, Player)
 	AddConversationOption(conversation, "I'll be back.")
@@ -34,7 +34,7 @@ end
 
 function step1_complete_caughtFish(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 1, "I have caught the seared char.")
-	
+
 	AddQuestStepChat(Quest, 2, "I need to bring these fish back to Dirzdia.", 1, ".", 2541, 340139)
 	AddQuestStepCompleteAction(Quest, 2, "quest_complete")
 end

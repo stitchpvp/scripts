@@ -2,12 +2,12 @@
     Script Name    : Quests/ThunderingSteppes/WatchyourstepinTheThunderingSteppesPartIV.lua
     Script Author  : Jabantiz
     Script Date    : 2014.07.05 10:07:48
-    Script Purpose : 
+    Script Purpose :
 
         Zone       : ThunderingSteppes
         Quest Giver: Jacques (2490212)
         Preceded by: Watch your step in The Thundering Steppes Part IV
-        Followed by: 
+        Followed by:
 --]]
 
 function Init(Quest)
@@ -20,11 +20,11 @@ function Step1Complete(Quest, QuestGiver, Player)
 end
 
 function Accepted(Quest, QuestGiver, Player)
-	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
-	
+	FaceTarget(QuestGiver, Player)
+	local conversation = CreateConversation()
+
 	AddConversationOption(conversation, "Ok, I will do it for you then.")
-	StartConversation(conversation, NPC, Spawn, "This letter needs to go out to Deputy Nettlebrine in The Enchanted Lands. I would take it myself, but after my last trip on a boat I think its best that I don't.")
+	StartConversation(conversation, QuestGiver, Player, "This letter needs to go out to Deputy Nettlebrine in The Enchanted Lands. I would take it myself, but after my last trip on a boat I think its best that I don't.")
 end
 
 function Deleted(Quest, QuestGiver, Player)

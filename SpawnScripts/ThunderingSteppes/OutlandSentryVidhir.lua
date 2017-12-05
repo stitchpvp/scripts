@@ -2,8 +2,8 @@
     Script Name    : SpawnScripts/ThunderingSteppes/OutlandSentryVidhir.lua
     Script Author  : Jabantiz
     Script Date    : 2015.07.12 06:07:47
-    Script Purpose : 
-                   : 
+    Script Purpose :
+                   :
 --]]
 
 function spawn(NPC)
@@ -35,6 +35,6 @@ function hailed(NPC, Spawn)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 

@@ -3,17 +3,17 @@
 	Script Purpose	:	Handles the quest, "Patchwork Rugs"
 	Script Author	:	QuestParser (Replace this)
 	Script Date		:	7/8/2017
-	Script Notes	:	
+	Script Notes	:
 
 	Zone			:	Antonica
-	Quest Giver		:	
+	Quest Giver		:
 	Preceded by		:	None
 	Followed by		:	None
 --]]
 
 
 function Init(Quest)
-	AddQuestStepKill(Quest, 1, "I must kill some bears.", 10, 100, "I must kill some bears for their pelts.", 93, --[[ ID's --]])
+	AddQuestStepKill(Quest, 1, "I must kill some bears.", 10, 100, "I must kill some bears for their pelts.", 93, nil)
 	AddQuestStepCompleteAction(Quest, 1, "Step1Complete")
 end
 
@@ -21,7 +21,7 @@ function Step1Complete(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 1, "I have killed enough bears.")
 	UpdateQuestTaskGroupDescription(Quest, 1, "I have gathered several bear pelts.")
 
-	AddQuestStepChat(Quest, 2, "Speak to Hartok.", 1, "I must deliver these pelts to Hartok.", 11, --[[ ID's --]])
+	AddQuestStepChat(Quest, 2, "Speak to Hartok.", 1, "I must deliver these pelts to Hartok.", 11, nil)
 	AddQuestStepCompleteAction(Quest, 2, "QuestComplete")
 end
 

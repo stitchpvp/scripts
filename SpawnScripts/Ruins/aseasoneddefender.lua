@@ -3,14 +3,14 @@
 	Script Purpose	: a seasoned defender <Freeport Militia>
 	Script Author	: Scatman
 	Script Date	: 2009.08.29
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 dofile("SpawnScripts/Generic/RuinsDefendersVoiceOvers.lua")
 
 function spawn(NPC)
 	local sli = GetSpawnLocationID(NPC)
-	
+
 	if sli == 159684 then
 		StartPath1(NPC)
 	elseif sli == 159683 then
@@ -21,7 +21,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)

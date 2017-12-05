@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "Decoder Glyph"
 	Script Author	: Scatman
 	Script Date	: 2009.02.27
-	
+
 	Zone       : Timorous Deep
 	Quest Giver: Arozik Sky'Ki
 	Preceded by: Haoaeran Orders (haoaeran_orders.lua)
@@ -25,8 +25,8 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
-	
+	local conversation = CreateConversation()
+
 	PlayFlavor(QuestGiver, "voiceover/english/rok_questvo/arozik_sky_ki/_exp04/exp04_rgn_timorous_deep/chrykori_tie/skyki/skyki017.mp3", "", "", 709686282, 1141832013, Player)
 	AddConversationOption(conversation, "I will be swift.")
 	StartConversation(conversation, QuestGiver, Player, "I await your return.")
@@ -37,7 +37,7 @@ end
 
 function step1_complete_gotGlyph(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 1, "I have the decoder glyph.")
-	
+
 	AddQuestStepChat(Quest, 2, "I need to bring the glyph to Secondary Arozik Sky'Ki.", 1, ".", 373, 2630081)
 	AddQuestStepCompleteAction(Quest, 2, "quest_complete")
 end

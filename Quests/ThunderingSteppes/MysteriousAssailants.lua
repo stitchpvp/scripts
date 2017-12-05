@@ -2,7 +2,7 @@
     Script Name    : Quests/ThunderingSteppes/MysteriousAssailants.lua
     Script Author  : Jabantiz
     Script Date    : 2014.09.26 06:09:17
-    Script Purpose : 
+    Script Purpose :
 
         Zone       : ThunderingSteppes
         Quest Giver: Reinkor McCollin (2490027)

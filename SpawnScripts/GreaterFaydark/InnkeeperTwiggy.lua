@@ -11,7 +11,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)
@@ -22,7 +22,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	choice = math.random(1,2)
 
@@ -37,21 +37,21 @@ function hailed(NPC, Spawn)
 	AddConversationOption(conversation, "Please.", "dlg_85_1")
 	AddConversationOption(conversation, "Not right now.")
 	StartConversation(conversation, NPC, Spawn, "Hello, .. GetName(Spawn) .. . I am the Innkeeper for Kelethin.  My name is Twiggy!  We received word of your arrival and have a room prepared for you.  Is there anything you'd like to know about housing before you move in?")
-	if convo==86 then
-		PlayFlavor(NPC, "voiceover/english/exp03_questvo/innkeeper_twiggy/_exp03/exp03_cty_kelethin/quest/qst_twiggy/qst_twiggy010.mp3", "", "", 232672131, 2109387803, Spawn)
-		AddConversationOption(conversation, "How can I place an item in my house?", "dlg_86_1")
-		AddConversationOption(conversation, "What kind of housing is available to me?")
-		AddConversationOption(conversation, "What is the marketboard for?")
-		AddConversationOption(conversation, "What is my house for?")
-		AddConversationOption(conversation, "Nothing right now.")
-		StartConversation(conversation, NPC, Spawn, "Hello again, .. GetName(Spawn) .. . What can I help you with?")
-	end
+	--if convo==86 then
+	--	PlayFlavor(NPC, "voiceover/english/exp03_questvo/innkeeper_twiggy/_exp03/exp03_cty_kelethin/quest/qst_twiggy/qst_twiggy010.mp3", "", "", 232672131, 2109387803, Spawn)
+	--	AddConversationOption(conversation, "How can I place an item in my house?", "dlg_86_1")
+	--	AddConversationOption(conversation, "What kind of housing is available to me?")
+	--	AddConversationOption(conversation, "What is the marketboard for?")
+	--	AddConversationOption(conversation, "What is my house for?")
+	--	AddConversationOption(conversation, "Nothing right now.")
+	--	StartConversation(conversation, NPC, Spawn, "Hello again, .. GetName(Spawn) .. . What can I help you with?")
+	--end
 
 end
 
 function dlg_85_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/innkeeper_twiggy/_exp03/exp03_cty_kelethin/quest/qst_twiggy/qst_twiggy002.mp3", "", "", 1017061939, 1561607192, Spawn)
 	AddConversationOption(conversation, "How can I place an item in my house?", "dlg_85_2")
@@ -64,7 +64,7 @@ end
 
 function dlg_85_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/innkeeper_twiggy/_exp03/exp03_cty_kelethin/quest/qst_twiggy/qst_twiggy003.mp3", "", "", 943030445, 831464053, Spawn)
 	AddConversationOption(conversation, "What kind of housing is available to me?", "dlg_85_3")
@@ -76,7 +76,7 @@ end
 
 function dlg_85_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/innkeeper_twiggy/_exp03/exp03_cty_kelethin/quest/qst_twiggy/qst_twiggy004.mp3", "", "", 2005553615, 4066801615, Spawn)
 	AddConversationOption(conversation, "Is any other housing available?", "dlg_85_4")
@@ -89,7 +89,7 @@ end
 
 function dlg_85_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/innkeeper_twiggy/_exp03/exp03_cty_kelethin/quest/qst_twiggy/qst_twiggy005.mp3", "", "", 2629356152, 4258694039, Spawn)
 	AddConversationOption(conversation, "How can I place an item in my house?", "dlg_85_5")
@@ -101,7 +101,7 @@ end
 
 function dlg_85_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/innkeeper_twiggy/_exp03/exp03_cty_kelethin/quest/qst_twiggy/qst_twiggy003.mp3", "", "", 943030445, 831464053, Spawn)
 	AddConversationOption(conversation, "What kind of housing is available to me?", "dlg_85_6")
@@ -113,7 +113,7 @@ end
 
 function dlg_85_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/innkeeper_twiggy/_exp03/exp03_cty_kelethin/quest/qst_twiggy/qst_twiggy004.mp3", "", "", 2005553615, 4066801615, Spawn)
 	AddConversationOption(conversation, "Is any other housing available?", "dlg_85_7")
@@ -126,7 +126,7 @@ end
 
 function dlg_85_7(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/innkeeper_twiggy/_exp03/exp03_cty_kelethin/quest/qst_twiggy/qst_twiggy006.mp3", "", "", 3891426709, 2870580979, Spawn)
 	AddConversationOption(conversation, "How do I sell items using my marketboard?")
@@ -139,7 +139,7 @@ end
 
 function dlg_85_8(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/innkeeper_twiggy/_exp03/exp03_cty_kelethin/quest/qst_twiggy/qst_twiggy007.mp3", "", "", 3004508275, 2782950123, Spawn)
 	AddConversationOption(conversation, "I can sell things through a broker?", "dlg_85_9")
@@ -152,7 +152,7 @@ end
 
 function dlg_85_9(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "How can I place an item in my house?", "dlg_85_10")
@@ -164,7 +164,7 @@ end
 
 function dlg_86_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/innkeeper_twiggy/_exp03/exp03_cty_kelethin/quest/qst_twiggy/qst_twiggy008.mp3", "", "", 572451551, 3490877103, Spawn)
 	AddConversationOption(conversation, "Anything else?")
@@ -177,7 +177,7 @@ end
 
 function dlg_86_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/innkeeper_twiggy/_exp03/exp03_cty_kelethin/quest/qst_twiggy/qst_twiggy009.mp3", "", "", 277136482, 2220542103, Spawn)
 	AddConversationOption(conversation, "How can I place an item in my house?", "dlg_86_3")
@@ -189,7 +189,7 @@ end
 
 function dlg_86_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/innkeeper_twiggy/_exp03/exp03_cty_kelethin/quest/qst_twiggy/qst_twiggy004.mp3", "", "", 2005553615, 4066801615, Spawn)
 	AddConversationOption(conversation, "Is any other housing available?")
@@ -202,7 +202,7 @@ end
 
 function dlg_86_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/innkeeper_twiggy/_exp03/exp03_cty_kelethin/quest/qst_twiggy/qst_twiggy005.mp3", "", "", 2629356152, 4258694039, Spawn)
 	AddConversationOption(conversation, "How can I place an item in my house?", "dlg_86_5")

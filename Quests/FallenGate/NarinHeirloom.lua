@@ -3,17 +3,17 @@
 	Script Purpose	:	Handles the quest, "Narin Heirloom"
 	Script Author	:	QuestParser (Replace this)
 	Script Date		:	7/8/2017
-	Script Notes	:	
+	Script Notes	:
 
 	Zone			:	Commonlands
-	Quest Giver		:	
+	Quest Giver		:
 	Preceded by		:	None
 	Followed by		:	None
 --]]
 
 
 function Init(Quest)
-	AddQuestStepLocation(Quest, 1, "I am looking for V'tal's brother and the heirloom", 1, "I am looking for V'tal's brother and the heirloom.  Her brother may have gone down to help the Thexians excavate the Hall of the Fallen.", 1046, --[[ ID's --]])
+	AddQuestStepLocation(Quest, 1, "I am looking for V'tal's brother and the heirloom", 1, "I am looking for V'tal's brother and the heirloom.  Her brother may have gone down to help the Thexians excavate the Hall of the Fallen.", 1046, nil)
 	AddQuestStepCompleteAction(Quest, 1, "Step1Complete")
 end
 
@@ -21,7 +21,7 @@ function Step1Complete(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 1, "I found her brother and the heirloom.")
 	UpdateQuestTaskGroupDescription(Quest, 1, "I found her brother and the heirloom.")
 
-	AddQuestStepChat(Quest, 2, "I need to return to V'tal", 1, "I need to return to V'tal and tell her what I have found.", 11, --[[ ID's --]])
+	AddQuestStepChat(Quest, 2, "I need to return to V'tal", 1, "I need to return to V'tal and tell her what I have found.", 11, nil)
 	AddQuestStepCompleteAction(Quest, 2, "QuestComplete")
 end
 

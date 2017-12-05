@@ -3,7 +3,7 @@
 	Script Purpose	:	for the spawn "a strange ice crystal"
 	Script Author	:	theFoof
 	Script Date		:	2013.5.30
-	Script Notes	:	
+	Script Notes	:
 --]]
 
 local BarteringCrystals = 28
@@ -14,7 +14,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)

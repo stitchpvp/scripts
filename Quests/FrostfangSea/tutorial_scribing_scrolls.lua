@@ -3,7 +3,7 @@
 	Script Purpose	:	Tutorial: Scribing Scrolls
 	Script Author	:	theFoof
 	Script Date		:	2013.10.20
-	Script Notes	:	
+	Script Notes	:
 
 	Zone			:	Frostfang Sea
 	Quest Giver		:	Glin Hammerhelm

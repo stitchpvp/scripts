@@ -2,8 +2,8 @@
     Script Name    : SpawnScripts/ThunderingSteppes/TrapperBorgus.lua
     Script Author  : Jabantiz
     Script Date    : 2014.07.03 06:07:51
-    Script Purpose : 
-                   : 
+    Script Purpose :
+                   :
 --]]
 
 local HuntingForTrapperBorgus = 98
@@ -14,7 +14,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)
@@ -29,7 +29,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	if HasQuest(Spawn, HuntingForTrapperBorgus) then
 		-- Has the quest
@@ -49,7 +49,7 @@ function hailed(NPC, Spawn)
 	else
 		PlayFlavor(NPC, "voiceover/english/trapper_borgus/steppes/trapper_borgus001.mp3", "", "", 2091451215, 1918648250, Spawn)
 		AddConversationOption(conversation, "Yes, I'll help you.", "dlg_1_1")
-		AddConversationOption(conversation, "Sorry, I must get going.")	
+		AddConversationOption(conversation, "Sorry, I must get going.")
 		StartConversation(conversation, NPC, Spawn, "Me family sent me out for provisions, and I hurt me back lifting me pack!  I come from a family o' miners n' boulder bashers, I would never hear the end of it!  Can you help me kill enough beasts to get the provisions I need?")
 	end
 end

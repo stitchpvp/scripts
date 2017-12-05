@@ -1,6 +1,6 @@
 --[[
 	Script Name	: SpawnScripts/GreaterFaydark/ZephyreViolethair.lua
-	Script Purpose	: Zephyre Violethair 
+	Script Purpose	: Zephyre Violethair
 	Script Author	: John Adams
 	Script Date	: 2009.03.01
 	Script Notes	: Auto-Generated Conversation from PacketParser Data
@@ -11,7 +11,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)
@@ -22,34 +22,34 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 		PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_2_1005.mp3", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "I might.", "dlg_21_1")
 	AddConversationOption(conversation, "Actually, I was hoping you could tell me a bit about Kelethin.")
 	AddConversationOption(conversation, "No, sorry.")
 	StartConversation(conversation, NPC, Spawn, "Hi! Do you have a moment to help me out?")
-	if convo==22 then
-		PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_3_1005.mp3", "", "", 0, 0, Spawn)
-		AddConversationOption(conversation, "I might.", "dlg_22_1")
-		AddConversationOption(conversation, "Actually, I was hoping you could tell me a bit about Kelethin.")
-		AddConversationOption(conversation, "No, sorry.")
-		StartConversation(conversation, NPC, Spawn, "Hi! Do you have a moment to help me out?")
-	end
+	--if convo==22 then
+	--	PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_3_1005.mp3", "", "", 0, 0, Spawn)
+	--	AddConversationOption(conversation, "I might.", "dlg_22_1")
+	--	AddConversationOption(conversation, "Actually, I was hoping you could tell me a bit about Kelethin.")
+	--	AddConversationOption(conversation, "No, sorry.")
+	--	StartConversation(conversation, NPC, Spawn, "Hi! Do you have a moment to help me out?")
+	--end
 
-	if convo==23 then
-		PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_3_1005.mp3", "", "", 0, 0, Spawn)
-		AddConversationOption(conversation, "I might.", "dlg_23_1")
-		AddConversationOption(conversation, "Actually, I was hoping you could tell me a bit about Kelethin.")
-		AddConversationOption(conversation, "No, sorry.")
-		StartConversation(conversation, NPC, Spawn, "Hi! Do you have a moment to help me out?")
-	end
+	--if convo==23 then
+	--	PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_3_1005.mp3", "", "", 0, 0, Spawn)
+	--	AddConversationOption(conversation, "I might.", "dlg_23_1")
+	--	AddConversationOption(conversation, "Actually, I was hoping you could tell me a bit about Kelethin.")
+	--	AddConversationOption(conversation, "No, sorry.")
+	--	StartConversation(conversation, NPC, Spawn, "Hi! Do you have a moment to help me out?")
+	--end
 
 end
 
 function dlg_21_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "How did the Fae come to take over the city?")
@@ -59,7 +59,7 @@ end
 
 function dlg_21_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "I'd be glad to help.")
@@ -69,7 +69,7 @@ end
 
 function dlg_22_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "How did the Fae come to take over the city?")
@@ -79,7 +79,7 @@ end
 
 function dlg_22_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "What happened to your family?", "dlg_22_3")
@@ -88,7 +88,7 @@ end
 
 function dlg_22_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "There are very few wood elves in Kelethin now.", "dlg_22_4")
@@ -97,7 +97,7 @@ end
 
 function dlg_22_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Have the orcs ever attacked Kelethin directly?", "dlg_22_5")
@@ -107,7 +107,7 @@ end
 
 function dlg_22_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "How long did that last?", "dlg_22_6")
@@ -116,7 +116,7 @@ end
 
 function dlg_22_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "How did Kelethin survive?", "dlg_22_7")
@@ -125,7 +125,7 @@ end
 
 function dlg_22_7(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "What was it you needed help with again?", "dlg_22_8")
@@ -135,7 +135,7 @@ end
 
 function dlg_22_8(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "I'd be glad to help.", "dlg_22_9")
@@ -145,7 +145,7 @@ end
 
 function dlg_23_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "I'd be glad to help.", "dlg_23_2")
@@ -155,7 +155,7 @@ end
 
 function dlg_23_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "I'll do my best.", "dlg_23_3")

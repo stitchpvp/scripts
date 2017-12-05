@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "Knock the Fight Out of 'Em"
 	Script Author	: Scatman
 	Script Date	: 2009.08.18
-	
+
 	Zone       : The Ruins
 	Quest Giver: Captain Arellius
 	Preceded by: Stepping Up the Offense (stepping_up_the_offense.lua)
@@ -23,7 +23,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(QuestGiver, "voiceover/english/tutorial_revamp/lieutenant_imperidus/fprt_adv04_ruins/revamp/lieutenant_imperidus009.mp3", "", "", 3046376303, 2999823619, Player)
 	AddConversationOption(conversation, "Do you really think wrecking statues and ruining food is going to ensure victory?", "dlg_3_8")
@@ -37,7 +37,7 @@ end
 function Step1_Complete_ThrewDirt(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 1, "I threw dirt in the orcs' dinner pot. Take that, orcs!")
 	SendMessage(Player, "You throw some dirt in the orc cooking pot.")
-	
+
 	if QuestIsComplete(Player, 286) then
 		Multiple_Steps_Complete(Player, QuestGiver, Player)
 	end
@@ -46,7 +46,7 @@ end
 function Step2_Complete_DefacedStatue(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 2, "I have defaced the statue of an orc knight.")
 	SendMessage(Player, "You draw a mustace on the face of the orc statue.")
-	
+
 	if QuestIsComplete(Player, 286) then
 		Multiple_Steps_Complete(Player, QuestGiver, Player)
 	end
@@ -55,7 +55,7 @@ end
 function Step3_Complete_DefacedIdols(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 3, "I have defaced an idol that the Lonetusk seem to worship.")
 	SendMessage(Player, "You draw crazy eyes and a beard on the orc idol.")
-	
+
 	if QuestIsComplete(Player, 286) then
 		Multiple_Steps_Complete(Player, QuestGiver, Player)
 	end
@@ -64,7 +64,7 @@ end
 function Step4_Complete_PokedHole(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 4, "I poked a hole in the orcs' wine cask. Now they'll be thirsty!")
 	SendMessage(Player, "You have poked a hole in the cask and watched the wine drain out.")
-	
+
 	if QuestIsComplete(Player, 286) then
 		Multiple_Steps_Complete(Player, QuestGiver, Player)
 	end
@@ -72,7 +72,7 @@ end
 
 function Multiple_Steps_Complete(Quest, QuestGiver, Player)
 	UpdateQuestTaskGroupDescription(Quest, 1, "I found and defaced many objects the orcs hold dear. Hopefully this takes the fight out of them.")
-	
+
 	AddQuestStep(Quest, 5, "I should report back to Lieutenant Imperidus.", 1, "Having defaced the orc artifacts, I should return to Lieutenant Imperidus at the second outpost.", 0, 1270070)
 	AddQuestStepCompleteAction(Quest, 5, "Quest_Complete")
 end

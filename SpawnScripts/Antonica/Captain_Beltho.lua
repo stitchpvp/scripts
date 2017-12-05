@@ -1,5 +1,5 @@
-function hailed(NPC, Spawn) 
-  FaceTarget(NPC, Spawn) 
+function hailed(NPC, Spawn)
+  FaceTarget(NPC, Spawn)
   local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "I'm not on official business.")

@@ -3,17 +3,17 @@
 	Script Purpose	:	Handles the quest, "Lucky Lure"
 	Script Author	:	QuestParser (Replace this)
 	Script Date		:	7/8/2017
-	Script Notes	:	
+	Script Notes	:
 
 	Zone			:	Antonica
-	Quest Giver		:	
+	Quest Giver		:
 	Preceded by		:	None
 	Followed by		:	None
 --]]
 
 
 function Init(Quest)
-	AddQuestStepObtainItem(Quest, 1, "Find Blarton's fishing lure.", 1, 100, "I should search for Blarton's lost lure along the beach north of Windstalker Village in Antonica.", 1037, --[[ ID's --]])
+	AddQuestStepObtainItem(Quest, 1, "Find Blarton's fishing lure.", 1, 100, "I should search for Blarton's lost lure along the beach north of Windstalker Village in Antonica.", 1037, nil)
 	AddQuestStepCompleteAction(Quest, 1, "Step1Complete")
 end
 
@@ -21,7 +21,7 @@ function Step1Complete(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 1, "I have found Blarton's fishing lure.")
 	UpdateQuestTaskGroupDescription(Quest, 1, "I have found the lost fishing lure.")
 
-	AddQuestStepChat(Quest, 2, "Return Blarton's lost fishing lure.", 1, "I have found the missing lure and must return it to Blarton in Windstalker Village.", 1037, --[[ ID's --]])
+	AddQuestStepChat(Quest, 2, "Return Blarton's lost fishing lure.", 1, "I have found the missing lure and must return it to Blarton in Windstalker Village.", 1037, nil)
 	AddQuestStepCompleteAction(Quest, 2, "QuestComplete")
 end
 

@@ -3,7 +3,7 @@
 	Script Purpose	:	for the spawn "a cude piton cannon"
 	Script Author	:	theFoof
 	Script Date		:   2013.6.5
-	Script Notes	:	
+	Script Notes	:
 --]]
 
 local SiegeOver = 53
@@ -14,7 +14,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function LoadCannon(NPC) -- sets the cannon to load the harpooon and start a timer

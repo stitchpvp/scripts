@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "Stuffed Gorger Claws"
 	Script Author	: Scatman
 	Script Date	: 2009.02.06
-	
+
 	Zone       : Timorous Deep
 	Quest Giver: Taroche Dry'Zok
 	Preceded by: None
@@ -21,7 +21,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(QuestGiver, "voiceover/english/rok_questvo/taroche_dry_zok/_exp04/exp04_rgn_timorous_deep/chrykori_tie/dryzok/dryzok001.mp3", "", "", 3402230050, 3099804897, Player)
 	AddConversationOption(conversation, "I will.")
@@ -33,7 +33,7 @@ end
 
 function step1_complete_gotClaws(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 1, "I have the claws.")
-	
+
 	AddQuestStepChat(Quest, 2, "I need to bring these claws to Taroche Dry'Zok", 1, ".", 77, 2630014)
 	AddQuestStepCompleteAction(Quest, 2, "quest_complete")
 end

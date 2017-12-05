@@ -3,7 +3,7 @@
 	Script Purpose	:	for the spawn "a rusty piton"
 	Script Author	:	theFoof
 	Script Date		:	2013.6.4
-	Script Notes	:	
+	Script Notes	:
 --]]
 
 local LooseningGrip = 51
@@ -13,7 +13,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function casted_on(NPC, Spawn, SpellName)

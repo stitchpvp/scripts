@@ -2,8 +2,8 @@
     Script Name    : SpawnScripts/ThunderingSteppes/SentryCaptainGarland.lua
     Script Author  : Jabantiz
     Script Date    : 2015.07.12 06:07:59
-    Script Purpose : 
-                   : 
+    Script Purpose :
+                   :
 --]]
 
 function spawn(NPC)
@@ -33,7 +33,7 @@ function spawn(NPC)
 	MovementLoopAddLocation(NPC, 285.54, -1.21, -547.06, 2)
 	MovementLoopAddLocation(NPC, 338.42, 10.54, -535.79, 2)
 	MovementLoopAddLocation(NPC, 360.09, 11.65, -514.59, 2)
-	
+
 	MovementLoopAddLocation(NPC, 338.42, 10.54, -535.79, 2)
 	MovementLoopAddLocation(NPC, 285.54, -1.21, -547.06, 2)
 	MovementLoopAddLocation(NPC, 208.07, -1.82, -557.98, 2)
@@ -65,6 +65,6 @@ function hailed(NPC, Spawn)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 

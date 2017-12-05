@@ -3,7 +3,7 @@
 	Script Purpose	:	for the spawn "velium shard"
 	Script Author	:	theFoof
 	Script Date		:	2013.5.31
-	Script Notes	:	
+	Script Notes	:
 --]]
 
 local NoWork = 41
@@ -14,13 +14,13 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function casted_on(NPC, Spawn, SpellName)
     if SpellName == 'collect the shard' then
        AddStepProgress(Spawn, NoWork, 1, 1)
-       Despawn(NPC) 
+       Despawn(NPC)
     end
 end
 

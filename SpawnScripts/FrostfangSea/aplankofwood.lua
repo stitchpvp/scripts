@@ -3,7 +3,7 @@
    Script Purpose  : for the spawn "a plank of wood"
    Script Author   : theFoof
    Script Date     : 2013.5.6
-   Script Notes    : 
+   Script Notes    :
 --]]
 
 local BoatloadWork = 4
@@ -21,13 +21,13 @@ function casted_on(Target, Caster, SpellName)
 end
 
 function respawn(NPC)
-    spawn(NPC)
+SpawnMob(NPC)
 end
 
 function CheckQuest(NPC, Player)
     if GetQuestStep(Player, BoatloadWork) == 1 then
         AddSpawnAccess(NPC, Player)
-    else 
+    else
         RemoveSpawnAccess(NPC, Player)
     end
 end

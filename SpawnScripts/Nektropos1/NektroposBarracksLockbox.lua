@@ -1,16 +1,16 @@
 --[[
 	Script Name		:	SpawnScripts/Nektropos1/NektroposBarracksLockbox.lua
-	Script Purpose	:	
+	Script Purpose	:
 	Script Author	:	smash
 	Script Date		:	1/26/2016
-	Script Notes	:	
+	Script Notes	:
 --]]
 
 function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function casted_on(NPC, Spawn, Message)

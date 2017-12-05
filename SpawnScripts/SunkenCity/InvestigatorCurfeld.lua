@@ -3,7 +3,7 @@
 	Script Purpose	: Investigator Curfeld <Dismal Rage>
 	Script Author	: Scatman
 	Script Date	: 2009.07.28
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 local QUEST_4_FROM_THORSON = 269
@@ -19,14 +19,14 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
-	
+	local conversation = CreateConversation()
+
 	if HasCompletedQuest(Spawn, QUEST_1) then
 		if HasCompletedQuest(Spawn, QUEST_2) then
 			if HasCompletedQuest(Spawn, QUEST_3) then
@@ -73,9 +73,9 @@ end
 
 function dlg_12_1(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_4_FROM_THORSON, 1)
-	
+
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/investigator_curfeld/fprt_adv01_sunken/investigator_curfeld002.mp3", "", "", 2776959402, 3983139293, Spawn)
 	AddConversationOption(conversation, "The inquisitor did some research on spectral essences, and he asked me to give it to you.", "dlg_12_2")
@@ -95,7 +95,7 @@ end
 
 function dlg_12_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/investigator_curfeld/fprt_adv01_sunken/investigator_curfeld003.mp3", "", "", 1468838299, 855905444, Spawn)
 	AddConversationOption(conversation, "He mentioned you might need my assistance.", "dlg_12_3")
@@ -105,7 +105,7 @@ end
 
 function dlg_12_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/investigator_curfeld/fprt_adv01_sunken/investigator_curfeld004.mp3", "", "", 984029368, 2280448766, Spawn)
 	AddConversationOption(conversation, "I am willing to do whatever is required to serve Freeport.", "dlg_12_4")
@@ -115,7 +115,7 @@ end
 
 function dlg_12_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/investigator_curfeld/fprt_adv01_sunken/investigator_curfeld005.mp3", "", "", 1117786309, 2475990866, Spawn)
 	AddConversationOption(conversation, "Looking into the increase in undead activity, correct?", "dlg_12_5")
@@ -125,7 +125,7 @@ end
 
 function dlg_12_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/investigator_curfeld/fprt_adv01_sunken/investigator_curfeld006.mp3", "", "", 3352004340, 1089685047, Spawn)
 	AddConversationOption(conversation, "Who do you suspect has stolen it?", "dlg_12_6")
@@ -135,7 +135,7 @@ end
 
 function dlg_12_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/investigator_curfeld/fprt_adv01_sunken/investigator_curfeld007.mp3", "", "", 753008127, 4149258442, Spawn)
 	AddConversationOption(conversation, "Where should I look for your research papers?", "OfferQuest1")
@@ -159,9 +159,9 @@ end
 
 function dlg_19_1(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_1, 2)
-	
+
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/investigator_curfeld/fprt_adv01_sunken/investigator_curfeld010.mp3", "", "", 1290071481, 14179397, Spawn)
 	AddConversationOption(conversation, "I'm ready for anything.", "dlg_19_2")
@@ -181,7 +181,7 @@ end
 
 function dlg_19_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/investigator_curfeld/fprt_adv01_sunken/investigator_curfeld011.mp3", "", "", 2158708484, 291273731, Spawn)
 	AddConversationOption(conversation, "What do you mean by 'usable'?", "dlg_19_3")
@@ -191,7 +191,7 @@ end
 
 function dlg_19_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/investigator_curfeld/fprt_adv01_sunken/investigator_curfeld012.mp3", "", "", 3900893827, 953702832, Spawn)
 	AddConversationOption(conversation, "No need to be so testy! I will do it.", "dlg_19_4")
@@ -201,7 +201,7 @@ end
 
 function dlg_19_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/investigator_curfeld/fprt_adv01_sunken/investigator_curfeld013.mp3", "", "", 279847227, 949322829, Spawn)
 	AddConversationOption(conversation, "I will be careful.", "OfferQuest2")
@@ -225,9 +225,9 @@ end
 
 function dlg_20_1(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_2, 2)
-	
+
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/investigator_curfeld/fprt_adv01_sunken/investigator_curfeld016.mp3", "", "", 2893810330, 4143475866, Spawn)
 	AddConversationOption(conversation, "What may still be possible?", "dlg_20_2")
@@ -247,7 +247,7 @@ end
 
 function dlg_20_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/investigator_curfeld/fprt_adv01_sunken/investigator_curfeld017.mp3", "", "", 3975555869, 3311883027, Spawn)
 	AddConversationOption(conversation, "Inquisitor Thorson said he needed information from you to complete his report.", "OfferQuest3")
@@ -275,7 +275,7 @@ end
 
 function dlg_23_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/investigator_curfeld/fprt_adv01_sunken/investigator_curfeld020.mp3", "", "", 1297570306, 1157170727, Spawn)
 	AddConversationOption(conversation, "Indeed we did. You have some explaining to do.", "dlg_23_2")
@@ -285,7 +285,7 @@ end
 
 function dlg_23_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/investigator_curfeld/fprt_adv01_sunken/investigator_curfeld021.mp3", "", "", 2210460542, 3190306576, Spawn)
 	AddConversationOption(conversation, "You're a madman!", "dlg_23_3")
@@ -295,7 +295,7 @@ end
 
 function dlg_23_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/investigator_curfeld/fprt_adv01_sunken/investigator_curfeld022.mp3", "", "", 2667398233, 1390342428, Spawn)
 	AddConversationOption(conversation, "Oh no you won't, Curfeld!", "dlg_23_4")

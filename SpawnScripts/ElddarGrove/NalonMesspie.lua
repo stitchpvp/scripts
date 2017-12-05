@@ -1,6 +1,6 @@
 --[[
 	Script Name	: SpawnScripts/ElddarGrove/NalonMesspie.lua
-	Script Purpose	: Nalon Messpie 
+	Script Purpose	: Nalon Messpie
 	Script Author	: John Adams
 	Script Date	: 2008.09.28
 	Script Notes	: Auto-Generated Conversation from PacketParser Data

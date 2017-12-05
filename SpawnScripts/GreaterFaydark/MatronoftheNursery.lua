@@ -1,6 +1,6 @@
 --[[
     Script Name	   : SpawnScripts/GreaterFaydark/MatronoftheNursery.lua
-    Script Purpose : Matron of the Nursery 
+    Script Purpose : Matron of the Nursery
     Script Author  : John Adams
     Script Date    : 2009.02.05
     Script Notes   : Auto-Generated Conversation from PacketParser Data
@@ -26,7 +26,7 @@ end
 
 function hailed(NPC, Spawn)
     GenericHail(NPC, Spawn)
-    
+
     if HasCompletedQuest(Spawn, QUEST_1) then
     elseif HasQuest(Spawn, QUEST_1) then
         onQuest1(NPC, Spawn)
@@ -39,7 +39,7 @@ end
 
 function beforeQuest1_1(NPC, Spawn)
     local conversation = CreateConversation()
-    
+
     FaceTarget(NPC, Spawn)
     AddConversationOption(conversation, "Let me help take care of this. Where are the shrumblers?", "beforeQuest1_2")
     AddConversationOption(conversation, "What is this place?", "beforeQuest1_3")
@@ -49,7 +49,7 @@ end
 
 function beforeQuest1_2(NPC, Spawn)
     local conversation = CreateConversation()
-    
+
     FaceTarget(NPC, Spawn)
     AddConversationOption(conversation, "I will see it done", "offerQuest1")
     AddConversationOption(conversation, "Perhaps another time. Farewell!")
@@ -58,7 +58,7 @@ end
 
 function beforeQuest1_3(NPC, Spawn)
     local conversation = CreateConversation()
-    
+
     FaceTarget(NPC, Spawn)
     AddConversationOption(conversation, "So these are all unborn fae? If the flowers die, what becomes of them?", "beforeQuest1_4")
     AddConversationOption(conversation, "I see. Then it is crucial I take care of these shrumblers.", "beforeQuest1_2")
@@ -68,7 +68,7 @@ end
 
 function beforeQuest1_4(NPC, Spawn)
     local conversation = CreateConversation()
-    
+
     FaceTarget(NPC, Spawn)
     AddConversationOption(conversation, "I will. Where can I find the shrumblers?", "beforeQuest1_2")
     AddConversationOption(conversation, "It seems like too big of a job for me. Farewell.")
@@ -81,7 +81,7 @@ end
 
 function onQuest1(NPC, Spawn)
     local conversation = CreateConversation()
-    
+
     FaceTarget(NPC, Spawn)
     if (GetQuestStep(Spawn, QUEST_1) == 2) then
     else
@@ -101,7 +101,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-    spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)
@@ -144,7 +144,7 @@ function hailed(NPC, Spawn)
                               -- quest not complete yet
                               FaceTarget(NPC, Spawn)
                               conversation = CreateConversation()
-                              
+
                               AddConversationOption(conversation, "No, I have not gathered them yet.")
                               StartConversation(conversation, NPC, Spawn, "Welcome back, " .. GetName(Spawn) .. ". Were you able to gather the healing herbs I need?")
                          elseif GetQuestStep(Spawn, 136) == 2 then
@@ -201,7 +201,7 @@ function hailed(NPC, Spawn)
           -- does not have quest
           Infestation(NPC, Spawn)
        end
-end 
+end
 
 -------------------------------------------------------------------------------
 ----------                  Quest Dialogs                            ----------
@@ -209,7 +209,7 @@ end
 function Infestation(NPC, Spawn)
     PlayFlavor(NPC, "voiceover/english/exp03_questvo2/matron_of_the_nursery/_exp03/exp03_rgn_greater_faydark/matron_of_the_nursery/matron_of_the_nursery001.mp3", "", "", 3995853929, 1976845236, Spawn)
     AddConversationOption(conversation, "Yes, I'll get rid of the shrumblers.", "Infestation_dlg2")
-    AddConversationOption(conversation, "It's not my problem.")	
+    AddConversationOption(conversation, "It's not my problem.")
     StartConversation(conversation, NPC, Spawn, "Thank Tunare you're here!  There's little time to explain.  An infestation of shrumblers has appeared in the nursery and they're eating the spirit blooms!  Can you help us?")
 end
 

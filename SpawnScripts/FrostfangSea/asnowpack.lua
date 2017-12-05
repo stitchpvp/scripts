@@ -1,9 +1,9 @@
 --[[
 	Script Name	: SpawnScripts/FrostfangSea/asnowpack.lua
-	Script Purpose	: for the spawns "a snowpack" and "an iceflow" 
+	Script Purpose	: for the spawns "a snowpack" and "an iceflow"
 	Script Author	: theFoof
 	Script Date	: 2013.05.20
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 require"SpawnScripts/Generic/MovementCircleSmall"
@@ -15,7 +15,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-    spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
@@ -25,7 +25,7 @@ end
 function casted_on(NPC, Caster, SpellName)
     if SpellName == "Bogchild's Iced Trap" then
 	    if GetName(NPC) == "a snowpack" then
-		    if QuestStepIsComplete(Caster, EssentialIngredient, 2) == false then 
+		    if QuestStepIsComplete(Caster, EssentialIngredient, 2) == false then
 			    AddStepProgress(Caster, EssentialIngredient, 2, 1)
 			    Despawn(NPC)
 			end

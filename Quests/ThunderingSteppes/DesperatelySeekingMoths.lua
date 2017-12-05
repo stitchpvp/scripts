@@ -1,9 +1,9 @@
 --[[
 	Script Name		:	DesperatelySeekingMoths!.lua
-	Script Purpose		:	
+	Script Purpose		:
 	Script Author		:	XionnaeEQ
 	Script Date		:	6/11/2016
-	Script Notes		:	
+	Script Notes		:
 
 	Zone			:	Thundering Steppes
 	Quest Giver		:	Elowys Laceleaf (2490013)

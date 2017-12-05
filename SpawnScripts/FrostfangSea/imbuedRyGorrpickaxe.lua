@@ -3,7 +3,7 @@
 	Script Purpose	:	for the imbued RyGorr pickaxe spawns
 	Script Author	:	theFoof
 	Script Date		:	2013.7.10
-	Script Notes	:	
+	Script Notes	:
 --]]
 
 local RyGorrTaking = 76
@@ -15,7 +15,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function casted_on(NPC, Spawn, SpellName)

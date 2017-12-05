@@ -3,7 +3,7 @@
 	Script Purpose	:	warden trainer in Halas
 	Script Author	:	theFoof
 	Script Date		:	2013.9.24
-	Script Notes	:	
+	Script Notes	:
 --]]
 
 local WARDEN = 16
@@ -12,7 +12,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
@@ -29,7 +29,7 @@ function hailed(NPC, Spawn)
 end
 
 function WardChat1(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	FaceTarget(NPC, Spawn)
 
 	AddConversationOption(conversation, "That's useful to know!", "WardChat2")
@@ -37,7 +37,7 @@ function WardChat1(NPC, Spawn)
 end
 
 function WardChat2(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	FaceTarget(NPC, Spawn)
 
 	AddConversationOption(conversation, "That's interesting.", "WardChat3")
@@ -45,7 +45,7 @@ function WardChat2(NPC, Spawn)
 end
 
 function WardChat3(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	FaceTarget(NPC, Spawn)
 
 	AddConversationOption(conversation, "That will be useful!", "WardChat4")
@@ -53,7 +53,7 @@ function WardChat3(NPC, Spawn)
 end
 
 function WardChat4(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	FaceTarget(NPC, Spawn)
 
 	AddConversationOption(conversation, "Thank you for the advice.")

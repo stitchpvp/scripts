@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "Finding the Investigator"
 	Script Author	: Scatman
 	Script Date	    : 2009.07.28
-	
+
 	Zone       : Sunken City
 	Quest Giver: Inquisitor Thorson
 	Preceded by: Cataloging Local Critters (cataloging_local_critters.lua)
@@ -17,7 +17,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "I will do so.")
 	StartConversation(conversation, QuestGiver, Player, "You can find Investigator Curfeld by going north through the archway, then west and south. He stands past the scorpions you discovered near the gateway to the Graveyard. He knows that additional help is coming, so tell him that I sent you.")

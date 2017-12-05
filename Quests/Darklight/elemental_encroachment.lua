@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "Elemental Encroachment"
 	Script Author	: Scatman
 	Script Date	: 2009.01.31
-	
+
 	Zone       : Darklight Wood
 	Quest Giver: Verex N'Za
 	Preceded by: None
@@ -12,10 +12,10 @@
 
 
 function Init(Quest)
-	
+
 	-- Focused Prayer Band
 	-- Sullied Marsh Bracers
-	-- Soiled Thexian Sleeves 
+	-- Soiled Thexian Sleeves
 	-- Bracelet of the Bold
 
 
@@ -30,7 +30,7 @@ function Accepted(Quest, QuestGiver, Player)
 		if GetDistance(Player, QuestGiver) < 30 then
 			FaceTarget(QuestGiver, Player)
 			conversation = CreateConversation()
-			
+
 			PlayFlavor(QuestGiver, "voiceover/english/neriak/verex_n_za/darklight_wood/hates_envy/verex/verex002.mp3", "", "", 2793599050, 2740987353, Player)
 			AddConversationOption(conversation, "All right.")
 			StartConversation(conversation, QuestGiver, Player, "Good. Return to me once you're done.")
@@ -44,7 +44,7 @@ end
 function step1_complete_killedCrumblers(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 1, "I have destroyed the Sablevein crumblers.")
 	UpdateQuestTaskGroupDescription(Quest, 1, "I have destroyed the Sablevein crumblers.")
-	
+
 	AddQuestStepChat(Quest, 2, "I need to return to Verex N'Za.", 1, ".", 0, 340043)
 	AddQuestStepCompleteAction(Quest, 2, "quest_complete")
 end

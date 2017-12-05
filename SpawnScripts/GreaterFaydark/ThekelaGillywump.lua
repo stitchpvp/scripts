@@ -1,6 +1,6 @@
 --[[
 	Script Name	: SpawnScripts/GreaterFaydark/ThekelaGillywump.lua
-	Script Purpose	: Thekela Gillywump 
+	Script Purpose	: Thekela Gillywump
 	Script Author	: John Adams
 	Script Date	: 2009.03.01
 	Script Notes	: Auto-Generated Conversation from PacketParser Data
@@ -11,7 +11,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)
@@ -22,7 +22,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 		PlayFlavor(NPC, "voiceover/english/exp03_questvo2/thekela_gillywump/_exp03/exp03_rgn_greater_faydark/scp/thekela/thekela000.mp3", "", "", 1458913689, 1852168109, Spawn)
 	AddConversationOption(conversation, "XXXXXXXX.", "dlg_33_1")
@@ -31,7 +31,7 @@ end
 
 function dlg_33_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/thekela_gillywump/_exp03/exp03_rgn_greater_faydark/scp/thekela/thekela001.mp3", "", "", 2313264132, 2462849563, Spawn)
 	AddConversationOption(conversation, "What do you need?", "dlg_33_2")
@@ -40,7 +40,7 @@ end
 
 function dlg_33_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/thekela_gillywump/_exp03/exp03_rgn_greater_faydark/scp/thekela/thekela002.mp3", "", "", 3411928341, 3381720539, Spawn)
 	AddConversationOption(conversation, "Sure, I'll fetch some honey.", "dlg_33_3")
@@ -49,7 +49,7 @@ end
 
 function dlg_33_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/thekela_gillywump/_exp03/exp03_rgn_greater_faydark/scp/thekela/thekela003.mp3", "", "", 4020219974, 1441799321, Spawn)
 	AddConversationOption(conversation, "I'll be back.", "dlg_33_4")

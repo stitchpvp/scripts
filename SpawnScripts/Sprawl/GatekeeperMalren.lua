@@ -3,7 +3,7 @@
 	Script Purpose	: Gatekeeper Malren <Freeport Militia>
 	Script Author	: Scatman
 	Script Date	: 2009.07.26
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 function spawn(NPC)
@@ -11,7 +11,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)
@@ -28,8 +28,8 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
-	
+	local conversation = CreateConversation()
+
 	if GetLevel(Spawn) < 12 then
 		AddConversationOption(conversation, "What do you mean?", "WhatDoYouMean")
 		AddConversationOption(conversation, "Thanks for the warning.")
@@ -43,8 +43,8 @@ end
 
 function WhatDoYouMean(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
-	
+	local conversation = CreateConversation()
+
 	AddConversationOption(conversation, "Where should I go once I get to a district?", "OnceGetDestrict")
 	AddConversationOption(conversation, "I will do so.")
 	StartConversation(conversation, NPC, Spawn, "This gate leads to the Freeport Ruins which is currently under attack. If you seek to travel there, I highly recommend you go back through Big Bend or Scale Yard instead.")
@@ -52,8 +52,8 @@ end
 
 function OnceGetDestrict(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
-	
+	local conversation = CreateConversation()
+
 	AddConversationOption(conversation, "Why is travel beyond this gate so dangerous?", "WhySoDangerous")
 	AddConversationOption(conversation, "Thank you.")
 	StartConversation(conversation, NPC, Spawn, "Make your way to the docks in either district, then use the bell to summon transport outside of freeport. You can select the Ruins as your destination.")
@@ -61,8 +61,8 @@ end
 
 function WhySoDangerous(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
-	
+	local conversation = CreateConversation()
+
 	AddConversationOption(conversation, "Thanks for the advice, Malren.")
 	StartConversation(conversation, NPC, Spawn, "Traveling through this gate isn't very safe unless you bring a group of friends with you. Some very powerful orcs are clashing with the Freeport Militia just beyond it. Entering the Ruins by way of the docks is a much wiser approach.")
 end

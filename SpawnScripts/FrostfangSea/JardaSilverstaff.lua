@@ -3,7 +3,7 @@
 	Script Purpose	:	conjuror trainer
 	Script Author	:	theFoof
 	Script Date		:	2013.9.24
-	Script Notes	:	
+	Script Notes	:
 --]]
 
 local CONJUROR = 29
@@ -12,7 +12,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
@@ -29,7 +29,7 @@ function hailed(NPC, Spawn)
 end
 
 function ConjChat1(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	FaceTarget(NPC, Spawn)
 
 	AddConversationOption(conversation, "That's useful to know!", "ConjChat2")
@@ -37,15 +37,15 @@ function ConjChat1(NPC, Spawn)
 end
 
 function ConjChat2(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	FaceTarget(NPC, Spawn)
-	
+
 	AddConversationOption(conversation, "That's interesting.", "ConjChat3")
 	StartConversation(conversation, NPC, Spawn, "We possess many potent abilities, considering that we can control the arcane powers of fire, but the greatest weapons in our arsenal are the powerful elemental minions summoned forth to do our bidding.")
 end
 
 function ConjChat3(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	FaceTarget(NPC, Spawn)
 
 	AddConversationOption(conversation, "Thank you for the advice.")

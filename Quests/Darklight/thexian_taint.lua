@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "Thexian Taint"
 	Script Author	: Scatman
 	Script Date	: 2009.02.01
-	
+
 	Zone       : Darklight Wood
 	Quest Giver: Sselnyl Do'Zyth
 	Preceded by: None
@@ -23,7 +23,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(QuestGiver, "voiceover/english/neriak/sselnyl_do_zyth/darklight_wood/hates_envy/sselnyl/sselnyl008.mp3", "", "", 2647473511, 1776002890, Player)
 	AddConversationOption(conversation, "Goodbye.")

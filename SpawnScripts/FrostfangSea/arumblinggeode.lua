@@ -3,7 +3,7 @@
 	Script Purpose	:	for the spawn "a rumbling geode"
 	Script Author	:	theFoof
 	Script Date		:	2013.6.15
-	Script Notes	:	
+	Script Notes	:
 --]]
 
 local GeodeCaching = 69
@@ -12,7 +12,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function death(NPC, Spawn)

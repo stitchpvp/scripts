@@ -1,6 +1,6 @@
 --[[
 	Script Name	: SpawnScripts/Caves/aMudpawguard.lua
-	Script Purpose	: a Mudpaw guard 
+	Script Purpose	: a Mudpaw guard
 	Script Author	: John Adams
 	Script Date	: 2008.09.21
 	Script Notes	: Auto-Generated Conversation from PacketParser Data

@@ -4,9 +4,9 @@ require('/SpawnScripts/Generic/GenericSkeletonVoiceOvers');
 function spawn(NPC)
 end
 
-function hailed(NPC, Spawn) 
-  FaceTarget(NPC, Spawn) 
-end 
+function hailed(NPC, Spawn)
+  FaceTarget(NPC, Spawn)
+end
 
 function aggro(NPC, Spawn)
   generic_aggro(NPC, Spawn)

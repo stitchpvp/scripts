@@ -2,8 +2,8 @@
     Script Name    : SpawnScripts/Darklight/Maelixia.lua
     Script Author  : Cynnar
     Script Date    : 2016.08.12 02:08:44
-    Script Purpose : 
-                   : 
+    Script Purpose :
+                   :
 --]]
 
 function spawn(NPC)

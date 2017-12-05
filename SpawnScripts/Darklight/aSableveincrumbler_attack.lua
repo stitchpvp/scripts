@@ -3,7 +3,7 @@
 	Script Purpose	: a Sablevein crumbler
 	Script Author	: Scatman
 	Script Date	: 2009.12.15
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 dofile("SpawnScripts/Generic/MovementCircleSmall.lua")
@@ -24,7 +24,7 @@ function hailed(NPC, Spawn)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function MakeAttack(NPC)

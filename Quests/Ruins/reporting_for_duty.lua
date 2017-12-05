@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "Driving Back the Dervish"
 	Script Author	: Scatman
 	Script Date	    : 2009.07.28
-	
+
 	Zone       : The Ruins
 	Quest Giver: Captain Arellius
 	Preceded by: None
@@ -17,7 +17,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "Thank you for the advice.", "dlg_2_14")
 	StartConversation(conversation, QuestGiver, Player, "Good. Oh, be sure to pay homage to the statue of our beloved Overlord. It would prove most beneficial for you to bask in the wisdom of his visage.")
@@ -28,7 +28,7 @@ end
 
 function dlg_2_14(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/captain_arellius/fprt_adv04_ruins/revamp/captain_arellius018.mp3", "", "", 377300022, 2983031406, Spawn)
 	AddConversationOption(conversation, "I'll go see him.")

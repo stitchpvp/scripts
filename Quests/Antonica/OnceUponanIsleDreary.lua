@@ -3,17 +3,17 @@
 	Script Purpose	:	Handles the quest, "Once Upon an Isle Dreary"
 	Script Author	:	QuestParser (Replace this)
 	Script Date		:	7/8/2017
-	Script Notes	:	
+	Script Notes	:
 
 	Zone			:	Antonica
-	Quest Giver		:	
+	Quest Giver		:
 	Preceded by		:	None
 	Followed by		:	None
 --]]
 
 
 function Init(Quest)
-	AddQuestStepKill(Quest, 1, "Slay dankfur gnolls.", 4, 100, "I must swim to the isles off the southwest coast of Antonica. There I will slay dankfur gnolls.", 75, --[[ ID's --]])
+	AddQuestStepKill(Quest, 1, "Slay dankfur gnolls.", 4, 100, "I must swim to the isles off the southwest coast of Antonica. There I will slay dankfur gnolls.", 75, nil)
 	AddQuestStepCompleteAction(Quest, 1, "Step1Complete")
 end
 
@@ -21,7 +21,7 @@ function Step1Complete(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 1, "Got four poems.")
 	UpdateQuestTaskGroupDescription(Quest, 1, "I swam to the isles off the southwest coast of Antonica. There I slew dankfur gnolls to gain the four poems.")
 
-	AddQuestStepChat(Quest, 2, "Speak to Quallium.", 1, "I must return the poems to Quallium in southwest Antonica.", 11, --[[ ID's --]])
+	AddQuestStepChat(Quest, 2, "Speak to Quallium.", 1, "I must return the poems to Quallium in southwest Antonica.", 11, nil)
 	AddQuestStepCompleteAction(Quest, 2, "QuestComplete")
 end
 

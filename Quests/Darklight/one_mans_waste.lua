@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "One Man's Waste..."
 	Script Author	: Scatman
 	Script Date	: 2009.02.02
-	
+
 	Zone       : Darklight Wood
 	Quest Giver: Ilmtar D'Viervs
 	Preceded by: What's in Demand? (whats_in_demand.lua)
@@ -23,7 +23,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(QuestGiver, "voiceover/english/neriak/ilmtar_d_viervs/darklight_wood/tvatar_post/ilmtar/ilmtar007.mp3", "", "", 1159271523, 3598851329, Player)
 	AddConversationOption(conversation, "We'll see what I dig up.")
@@ -35,7 +35,7 @@ end
 
 function step1_complete_gotWeapons(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 1, "I have collected the old weapons.")
-	
+
 	AddQuestStepChat(Quest, 2, "I need to bring these weapons to Ilmtar D'Viervs.", 1, ".", 5, 340123)
 	AddQuestStepCompleteAction(Quest, 2, "quest_complete")
 end

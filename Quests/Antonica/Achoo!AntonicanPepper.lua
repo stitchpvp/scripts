@@ -3,17 +3,17 @@
 	Script Purpose	:	Handles the quest, "Achoo! Antonican Pepper"
 	Script Author	:	QuestParser (Replace this)
 	Script Date		:	7/8/2017
-	Script Notes	:	
+	Script Notes	:
 
 	Zone			:	Antonica
-	Quest Giver		:	
+	Quest Giver		:
 	Preceded by		:	None
 	Followed by		:	None
 --]]
 
 
 function Init(Quest)
-	AddQuestStepChat(Quest, 1, "I need to find Merchant Novak.", 1, "Matsy needs pepper for her chowder from Merchant Novak.", 797, --[[ ID's --]])
+	AddQuestStepChat(Quest, 1, "I need to find Merchant Novak.", 1, "Matsy needs pepper for her chowder from Merchant Novak.", 797, nil)
 	AddQuestStepCompleteAction(Quest, 1, "Step1Complete")
 end
 
@@ -21,7 +21,7 @@ function Step1Complete(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 1, "I have the pepper.")
 	UpdateQuestTaskGroupDescription(Quest, 1, "I acquired the pepper from Merchant Novak.")
 
-	AddQuestStepChat(Quest, 2, "I must return to Matsy.", 1, "I have the pepper and should now return to Matsy.", 797, --[[ ID's --]])
+	AddQuestStepChat(Quest, 2, "I must return to Matsy.", 1, "I have the pepper and should now return to Matsy.", 797, nil)
 	AddQuestStepCompleteAction(Quest, 2, "QuestComplete")
 end
 

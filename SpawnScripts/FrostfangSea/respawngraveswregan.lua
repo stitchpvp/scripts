@@ -6,7 +6,7 @@
 	Script Notes	:
 --]]
 local SiftingGarbage = 14
-	
+
 function spawn(NPC)
     AddSpawnAccess(NPC, NPC)
 	SetPlayerProximityFunction(NPC, 50, "SpawnAccess", "SpawnAccess")

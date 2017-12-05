@@ -3,7 +3,7 @@
 	Script Purpose	: a Brokentusk overseer
 	Script Author	: Scatman
 	Script Date	: 2009.08.21
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 dofile("SpawnScripts/Generic/BrokentuskVoiceOvers.lua")
@@ -11,14 +11,14 @@ local spoke = false
 
 function spawn(NPC)
 	spoke = false
-	AddVisualStateLoop(NPC, 1000, math.random(0, 2000), 10783, 450) -- attack
-	AddVisualStateLoop(NPC, 1000, math.random(0, 2000), 12028, 450) -- point
-	AddVisualStateLoop(NPC, 1000, math.random(0, 2000), 10912, 450) -- brandish
-	AddVisualStateLoop(NPC, 1000, math.random(0, 2000), 1646, 450) -- pugilist attack 2
+	-- AddVisualStateLoop(NPC, 1000, math.random(0, 2000), 10783, 450) -- attack
+	-- AddVisualStateLoop(NPC, 1000, math.random(0, 2000), 12028, 450) -- point
+	-- AddVisualStateLoop(NPC, 1000, math.random(0, 2000), 10912, 450) -- brandish
+	-- AddVisualStateLoop(NPC, 1000, math.random(0, 2000), 1646, 450) -- pugilist attack 2
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)

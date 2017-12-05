@@ -11,7 +11,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)
@@ -22,7 +22,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 		PlayFlavor(NPC, "turgo_bargedown/_exp03/exp03_rgn_greater_faydark/turgo_bargedown/turgo_bargedown001.mp3", "", "", 1152177657, 3698837613, Spawn)
 	AddConversationOption(conversation, "Good luck against the orcs.", "dlg_0_1")

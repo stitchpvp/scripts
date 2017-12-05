@@ -3,7 +3,7 @@
 	Script Purpose	: Rakan Rockbreaker <Coldain Quartermaster>
 	Script Author	: theFoof
 	Script Date	: 2013.06.01
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 
@@ -19,7 +19,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
@@ -51,7 +51,7 @@ end
 
 function Quest1Chat_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "rakan_rockbreaker/halas/great_shelf/rakan_rockbreaker/rakan_rockbreaker002.mp3", "", "", 2334563481, 118587127, Spawn)
 	AddConversationOption(conversation, "What are glimmer visors?", "Quest1Chat_2")
@@ -62,7 +62,7 @@ end
 
 function Quest1Chat_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "rakan_rockbreaker/halas/great_shelf/rakan_rockbreaker/rakan_rockbreaker003.mp3", "", "", 2462675267, 3917758225, Spawn)
 	AddConversationOption(conversation, "I'll deliver the supplies for you.", "Quest1Chat_3")
@@ -72,7 +72,7 @@ end
 
 function Quest1Chat_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "rakan_rockbreaker/halas/great_shelf/rakan_rockbreaker/rakan_rockbreaker004.mp3", "", "", 3607684996, 3048983099, Spawn)
 	AddConversationOption(conversation, "I'll do just that.", "OfferDemandSupplies")
@@ -83,7 +83,7 @@ end
 function Quest1Chat_4(NPC, Spawn)
 	SetStepComplete(Spawn, DemandSupplies, 3)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "rakan_rockbreaker/halas/great_shelf/rakan_rockbreaker/rakan_rockbreaker007.mp3", "", "", 84500025, 397416081, Spawn)
 	AddConversationOption(conversation, "Was there something else you needed?", "Quest2Chat_1")
@@ -93,7 +93,7 @@ end
 
 function Quest2Chat_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "rakan_rockbreaker/halas/great_shelf/rakan_rockbreaker/rakan_rockbreaker008.mp3", "", "", 3124701734, 1733764756, Spawn)
 	AddConversationOption(conversation, "So you need me to deal with them?", "Quest2Chat_3")
@@ -103,8 +103,8 @@ end
 
 function Quest2Chat_2(NPC, Spawn)
     FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
-	
+	local conversation = CreateConversation()
+
 	PlayFlavor(NPC, "rakan_rockbreaker/halas/great_shelf/rakan_rockbreaker/rakan_rockbreaker010.mp3", "", "", 3359211699, 295105343, Spawn)
 	AddConversationOption(conversation, "Was there something else you needed?", "Quest2Chat_1")
 	AddConversationOption(conversation, "I'm afraid I must be going.  Goodbye.")
@@ -113,7 +113,7 @@ end
 
 function Quest2Chat_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "rakan_rockbreaker/halas/great_shelf/rakan_rockbreaker/rakan_rockbreaker011.mp3", "", "", 268182012, 816884804, Spawn)
 	AddConversationOption(conversation, "I'd be happy to try.", "OfferFoilingFlank")
@@ -124,7 +124,7 @@ end
 function Quest2Chat_4(NPC, Spawn)
 	SetStepComplete(Spawn, FoilingFlank, 3)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "rakan_rockbreaker/halas/great_shelf/rakan_rockbreaker/rakan_rockbreaker017.mp3", "", "", 101832850, 1600602204, Spawn)
 	AddConversationOption(conversation, "Victory is certain.")

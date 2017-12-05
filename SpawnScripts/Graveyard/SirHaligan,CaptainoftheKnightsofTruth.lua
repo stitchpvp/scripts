@@ -1,9 +1,9 @@
 --[[
-	Script Name	: SpawnScripts/Graveyard/SirHaligan,CaptainoftheKnightsofTruth.lua 
+	Script Name	: SpawnScripts/Graveyard/SirHaligan,CaptainoftheKnightsofTruth.lua
 	Script Purpose	: Sir Haligan, Captain of the Knights of Truth
 	Script Author	: Scatman
 	Script Date	: 2009.07.10
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 function spawn(NPC)
@@ -15,5 +15,5 @@ function hailed(NPC, Spawn)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end

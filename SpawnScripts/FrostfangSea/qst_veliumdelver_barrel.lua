@@ -3,7 +3,7 @@
 	Script Purpose	:	for the qst_veliumdelver_barrel spawns
 	Script Author	:   theFoof
 	Script Date		:	2013.6.11
-	Script Notes	:	
+	Script Notes	:
 --]]
 
 local RyGorrOperations = 60
@@ -13,7 +13,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function casted_on(NPC, Spawn, SpellName)

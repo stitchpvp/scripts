@@ -2,7 +2,7 @@
     Script Name    : Quests/Everfrost/marta_terrilons_fur_hunt.lua
     Script Author  : Flunklesnarkin
     Script Date    : 2015.09.04 11:09:29
-    Script Purpose : 
+    Script Purpose :
 
         Zone       : Everfrost
         Quest Giver: Marta Terrilon
@@ -20,7 +20,7 @@ function Init(Quest)
         else
 	     AddQuestStepKill(Quest, 1, "Hunt northern stags in Everfrost.", math.random(8,12), 100, "I'm suppose to help Marta Terrilon get the furs that she needs. I should return to her with the furs as soon as I've gathered enough.", 122, 410041, 410079)
              AddQuestStepCompleteAction(Quest, 1, "KilledBeasts")
-	
+
 	end
 end
 

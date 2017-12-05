@@ -3,7 +3,7 @@
 	Script Purpose	: Trainer Nhilzyne B'Myar <Combat Trainer>
 	Script Author	: Scatman
 	Script Date	: 2009.09.05
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 dofile("SpawnScripts/Generic/GenericVoiceOvers.lua")
@@ -12,13 +12,13 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
-	
+	local conversation = CreateConversation()
+
 	GenericHail(NPC, Spawn)
 
 	AddConversationOption(conversation, "Teach me the basics of combat.", "dlg_2_1")
@@ -29,7 +29,7 @@ end
 
 function dlg_2_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "Tell me how to begin a fight.", "dlg_2_2")
 	AddConversationOption(conversation, "Tell me about melee combat.", "dlg_2_5")
@@ -42,7 +42,7 @@ end
 
 function dlg_2_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "How do I begin the battle?", "dlg_2_3")
 	StartConversation(conversation, NPC, Spawn, "Starting combat is easy. Just use your mouse pointer to left-click on an opponent. Its name will appear in the Target window in the upper left of your screen. You can also use the Tab key to cycle through nearby targets or the F8 key to select your closest enemy.")
@@ -50,7 +50,7 @@ end
 
 function dlg_2_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "So I can fight anyone or anything I want?", "dlg_2_4")
 	StartConversation(conversation, NPC, Spawn, "If you're close enough to your foe and want to start hitting it with your weapon, either click your Melee Attack button on your hotbar or press the ~ key. Or you can begin by using one of your spells or combat arts to get the enemy's attention. Remember, you must be close enough to actually hit them.")
@@ -58,7 +58,7 @@ end
 
 function dlg_2_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "Tell me about melee combat.", "dlg_2_5")
 	AddConversationOption(conversation, "Tell me about ranged combat.", "dlg_2_7")
@@ -70,7 +70,7 @@ end
 
 function dlg_2_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "What classes specialize in melee combat?", "dlg_2_6")
 	StartConversation(conversation, NPC, Spawn, "Melee combat means a toe-to-toe, physical confrontation. It is a combination of auto-attack damage that happens automatically when you press the Melee Attack button on your hotbar or the ~ key and spells or combat arts that you use in close proximity to your foe.")
@@ -78,7 +78,7 @@ end
 
 function dlg_2_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "Tell me how to begin a fight.", "dlg_2_2")
 	AddConversationOption(conversation, "Tell me about ranged combat.", "dlg_2_7")
@@ -90,7 +90,7 @@ end
 
 function dlg_2_7(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "How do I launch a ranged attack?", "dlg_2_8")
 	StartConversation(conversation, NPC, Spawn, "Ranged combat means that you put some distance between yourself and the enemy. This can be done with weapons such as bows or throwing daggers, or with spells and arts that can be cast from a distance.")
@@ -98,7 +98,7 @@ end
 
 function dlg_2_8(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "What classes specialize in ranged combat?", "dlg_2_9")
 	StartConversation(conversation, NPC, Spawn, "If you have a ranged weapon and ammunition, you can initiate ranged combat by using the Ranged Attack button on the Abilities tab of your Knowledge Book. You can drag this key to your hotbar if you like. Remember, you must have a ranged weapon in the Ranged slot of your inventory window and the correct type of ammunition in the Ammo slot.")
@@ -106,7 +106,7 @@ end
 
 function dlg_2_9(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "How do I tell if I can use spells or arts from a distance?", "dlg_2_10")
 	StartConversation(conversation, NPC, Spawn, "While most classes have the ability to attack from a distance, scout classes such as Brigands, Troubadors, Dirges, and Assassins specialize in ranged physical attacks. Mages, priests, and Shadowknights have spells that do damage to their foes from a distance.")
@@ -114,7 +114,7 @@ end
 
 function dlg_2_10(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "Tell me how to begin a fight.", "dlg_2_2")
 	AddConversationOption(conversation, "Tell me about melee combat.", "dlg_2_5")
@@ -126,7 +126,7 @@ end
 
 function dlg_2_14(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "What do you mean by 'a worthy opponent'?", "dlg_2_15")
 	StartConversation(conversation, NPC, Spawn, "Victory in battle can be very rewarding. Successful combat against a worthy opponent awards you experience (XP) to help you advance your level, as well as the chance at coin, usable items, and other valuables.")
@@ -134,7 +134,7 @@ end
 
 function dlg_2_15(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "Are certain types of targets more rewarding than others?", "dlg_2_16")
 	StartConversation(conversation, NPC, Spawn, "You don't earn rewards for defeating foes that are too far below your level. If your target has a grey name, it means it is very weak and won't provide any benefit for beating it.")
@@ -142,7 +142,7 @@ end
 
 function dlg_2_16(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Tell me how to begin a fight.", "dlg_2_17")
@@ -155,7 +155,7 @@ end
 
 function dlg_2_17(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "Tell me about selecting the right opponent.", "dlg_2_18")
 	AddConversationOption(conversation, "Teach me about knowing my surroundings.", "dlg_6_21")
@@ -167,7 +167,7 @@ end
 
 function dlg_2_18(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "How do I tell if an opponent is too weak or too strong for me?", "dlg_2_19")
 	StartConversation(conversation, NPC, Spawn, "Picking the right fight is crucial to victory. A weak opponent won't provide worthwhile rewards, while an overly powerful foe will result in your defeat. You need to keep your resources in mind as well as choosing the right target.")
@@ -175,7 +175,7 @@ end
 
 function dlg_2_19(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "What resources should I be keeping an eye on?", "dlg_2_20")
 	StartConversation(conversation, NPC, Spawn, "Targeting an opponent will show you detailed information on its overall potency. Generally speaking, you'll find the best results from fighting opponents with blue, white, or yellow names.")
@@ -183,7 +183,7 @@ end
 
 function dlg_2_20(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "Teach me about knowing my surroundings.", "dlg_6_21")
 	AddConversationOption(conversation, "Tell me about using my abilities.", "dlg_6_23")
@@ -194,7 +194,7 @@ end
 
 function dlg_6_21(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "Anything else I should watch out for?", "dlg_6_22")
 	StartConversation(conversation, NPC, Spawn, "Keeping your surroundings in mind is crucial to victory. Fighting in areas with lots of aggressive creatures is a bad idea, because they won't hesitate to gang up on you.")
@@ -202,7 +202,7 @@ end
 
 function dlg_6_22(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Tell me about selecting the right opponent.", "dlg_2_18")
@@ -214,7 +214,7 @@ end
 
 function dlg_6_23(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "What do you mean?", "dlg_6_24")
 	StartConversation(conversation, NPC, Spawn, "Successful fighting isn't about turning on your auto-attack and walking away from battle. Your odds of victory are much better if you are well-prepared and are active during combat. You should use every spell or combat art that has a positive effect on your chances to win.")
@@ -222,7 +222,7 @@ end
 
 function dlg_6_24(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "What about during battle?", "dlg_6_25")
 	StartConversation(conversation, NPC, Spawn, "Before you begin fighting, make sure you and your allies have activated all beneficial spells, also known as 'buffs,' so that you're operating at peak efficiency. Buffs can add health or power, increase your rate of regeneration, enhance your physical attributes, make you attack faster or do more damage, and more.")
@@ -230,7 +230,7 @@ end
 
 function dlg_6_25(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "What else should I know about spells and arts?", "dlg_6_26")
 	StartConversation(conversation, NPC, Spawn, "Whether you're a front-lines melee type or someone attacking from a distance with weapons or spells, you should be using abilities that damage your foes effectively and efficiently. Right click on your spells and arts and select 'Examine' to see details on their effects.")
@@ -238,7 +238,7 @@ end
 
 function dlg_6_26(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "Tell me about selecting the right opponent.", "dlg_2_18")
 	AddConversationOption(conversation, "Teach me about knowing my surroundings.", "dlg_6_21")

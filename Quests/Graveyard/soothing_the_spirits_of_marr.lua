@@ -19,8 +19,8 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
-	
+	local conversation = CreateConversation()
+
 	PlayFlavor(QuestGiver, "an_ethernere_guard/fprt_adv02_graveyard/ethernere_keeper004.mp3", "", "", 2575556836, 1434752042, Player)
 	AddConversationOption(conversation, "I will fulfill my duty to the Overlord.")
 	StartConversation(conversation, QuestGiver, Player, "You must recover these holy relics and return them to the graves of the awakened spirits for them to find rest again.")
@@ -32,7 +32,7 @@ end
 function Step1_Complete_KilledGraverobbers(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 1, "I was able to gather the stolen relics of Marr from the graverobbers in the Graveyard.")
 	UpdateQuestTaskGroupDescription(Quest, 1, "I have recovered the four stolen relics of Marr.")
-	
+
 	AddQuestStep(Quest, 2, "I must take these relics to the tomb of Sir Ackmin.", 1, 100, "I should return to an Ethernere guard and let them know of my success.", 0)
 	AddQuestStepCompleteAction(Quest, 2, "Step2_Complete_BroughRelics")
 end
@@ -40,7 +40,7 @@ end
 function Step2_Complete_BroughRelics(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 2, "I have returned the relics to the tomb of Sir Ackmin.")
 	UpdateQuestTaskGroupDescription(Quest, 2, "It would seem that the return of the relics has put Sir Ackmin's soul to rest.")
-	
+
 	AddQuestStepChat(Quest, 3, "I should let an Ethernere guard know of my success.", 1, "I must return the relics to the tomb of Sir Ackmin.", 0, 1250074, 1250032, 1250084, 1250044)
 	AddQuestStepCompleteAction(Quest, 3, "Step2_Complete_BroughRelics")
 end

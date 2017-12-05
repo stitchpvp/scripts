@@ -3,7 +3,7 @@
 	Script Purpose	:	Handles the quest, "Sablevein Rubble"
 	Script Author	:	QuestParser Cynnar
 	Script Date		:	8/30/2015
-	Script Notes	:	
+	Script Notes	:
 
 	Zone			:	Darklight Wood
 	Quest Giver		:	Danya Halfmoon 340018
@@ -43,7 +43,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(QuestGiver, "voiceover/english/neriak/danya_halfmoon/darklight_wood/hates_envy/danya/danya005.mp3", "", "", 2830883681, 1931267037, Player)
 	AddConversationOption(conversation, "I'll be back.")

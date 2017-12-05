@@ -3,7 +3,7 @@
 	Script Purpose	:	for the quest Roughing Up the Reinforcements
 	Script Author	:	theFoof
 	Script Date		:	2013.6.10
-	Script Notes	:	
+	Script Notes	:
 
 	Zone			:	Frostfang Sea
 	Quest Giver		:	Thirin Veliumdelver
@@ -24,7 +24,7 @@ end
 function Accepted(Quest, QuestGiver, Player)
 	local thirin = GetSpawnByLocationID(GetZone(QuestGiver), 14520)
 	FaceTarget(thirin, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(thirin, "thirin_veliumdelver/halas/thirin_veliumdelver/thirin_veliumdelver012.mp3", "", "", 830312044, 2813539587, Player)
 	AddConversationOption(conversation, "And you, Thirin.")
@@ -97,5 +97,5 @@ function Reload(Quest, QuestGiver, Player, Step)
 		KilledShaman(Quest, QuestGiver, Player)
 	elseif Step == 5 then
 		GotEye(Quest, QuestGiver, Player)
-	end		
+	end
 end

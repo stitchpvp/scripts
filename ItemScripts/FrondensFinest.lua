@@ -3,12 +3,12 @@
 	Script Purpose	:	for the item "Fronden's Finest"
 	Script Author	:	theFoof
 	Script Date		:	2013.5.31
-	Script Notes	:	
+	Script Notes	:
 --]]
 local PouringSkellies = 40
 
 function used(Item, Player)
-    target = GetTarget(Player)
+    local target = GetTarget(Player)
     if GetName(target) == "pile of Ry'Gorr bones" then
         if GetQuestStep(Player, PouringSkellies) == 1 then
             if not IsInCombat(Player) then
@@ -19,5 +19,5 @@ function used(Item, Player)
         end
     else
         SendMessage(Player, "You must find a pile of Ry'Gorr bones to use this on.", "yellow")
-    end 
+    end
 end

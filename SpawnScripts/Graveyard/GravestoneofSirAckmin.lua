@@ -3,7 +3,7 @@
 	Script Purpose	: Gravestone of Sir Ackmin
 	Script Author	: Scatman
 	Script Date	: 2009.07.25
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 local QUEST_FROM_GUARD = 252
@@ -16,7 +16,7 @@ function hailed(NPC, Spawn)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function casted_on(Target, Caster)

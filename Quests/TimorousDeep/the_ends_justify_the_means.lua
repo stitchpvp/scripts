@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "The Ends Justify the Means"
 	Script Author	: Scatman
 	Script Date	: 2009.02.07
-	
+
 	Zone       : Timorous Deep
 	Quest Giver: Civ-Parser Di'Xin
 	Preceded by: Chrykori Relics (chrykori_relics.lua)
@@ -26,7 +26,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(QuestGiver, "voiceover/english/rok_questvo/civ-parser_di_xin/_exp04/exp04_rgn_timorous_deep/chrykori_tie/dixin/dixin008.mp3", "", "", 76732508, 856374115, Player)
 	AddConversationOption(conversation, "I will return.")
@@ -38,7 +38,7 @@ end
 
 function step1_complete_gotRelics(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 1, "I have collected the scavenged relics.")
-	
+
 	AddQuestStepChat(Quest, 2, "I need to bring these relics back to Civ-Parser Di'Xin.", 1, ".", 368, 2630045)
 	AddQuestStepCompleteAction(Quest, 2, "quest_complete")
 end

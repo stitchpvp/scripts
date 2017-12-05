@@ -3,7 +3,7 @@
 	Script Purpose	:	for the spawn "Ordin Sleetfoot's Corpse"
 	Script Author	:	theFoof
 	Script Date		:	2013.6.13
-	Script Notes	:	
+	Script Notes	:
 --]]
 
 local SleetfootParty = 62

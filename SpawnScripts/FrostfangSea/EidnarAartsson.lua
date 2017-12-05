@@ -3,7 +3,7 @@
 	Script Purpose	:	troubador trainer
 	Script Author	:	theFoof
 	Script Date		:	2013.9.24
-	Script Notes	:	
+	Script Notes	:
 --]]
 
 local TROUBADOR = 36
@@ -12,7 +12,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
@@ -29,7 +29,7 @@ function hailed(NPC, Spawn)
 end
 
 function TroubChat1(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	FaceTarget(NPC, Spawn)
 
 	AddConversationOption(conversation, "That's useful to know!", "TroubChat2")
@@ -37,15 +37,15 @@ function TroubChat1(NPC, Spawn)
 end
 
 function TroubChat2(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	FaceTarget(NPC, Spawn)
-	
+
 	AddConversationOption(conversation, "That's interesting.", "TroubChat3")
 	StartConversation(conversation, NPC, Spawn, "Our songs of cheer are incredibly valuable to others.  They can embolden mages and anyone else wielding magical spells, increasing their offense and granting them the power to perform outstanding feats.")
 end
 
 function TroubChat3(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	FaceTarget(NPC, Spawn)
 
 	AddConversationOption(conversation, "Thank you for the advice.")

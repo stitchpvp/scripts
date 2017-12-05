@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "Vengeance for Shoreside"
 	Script Author	: Scatman
 	Script Date	: 2009.08.20
-	
+
 	Zone       : The Ruins
 	Quest Giver: Captain Arellius
 	Preceded by: Knock the Fight Out of 'Em (knock_the_fight_out_of_em.lua)
@@ -27,7 +27,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(QuestGiver, "voiceover/english/tutorial_revamp/lieutenant_imperidus/fprt_adv04_ruins/revamp/lieutenant_imperidus013.mp3", "", "", 1435258692, 228785667, Player)
 	AddConversationOption(conversation, "I like the sound of this plan.", "dlg_6_3")
@@ -39,7 +39,7 @@ end
 
 function Step1_Complete_KilledSentries(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 1, "I have slain five Lonetusk sentries.")
-	
+
 	if QuestIsComplete(Player, 287) then
 		Multiple_Steps_Complete(Player, QuestGiver, Player)
 	end
@@ -47,7 +47,7 @@ end
 
 function Step2_Complete_KilledWarriors(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 2, "I have slain five Lonetusk warriors.")
-	
+
 	if QuestIsComplete(Player, 287) then
 		Multiple_Steps_Complete(Player, QuestGiver, Player)
 	end
@@ -55,7 +55,7 @@ end
 
 function Step3_Complete_KilledCrushers(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 3, "I have slain five Lonetusk crushers.")
-	
+
 	if QuestIsComplete(Player, 287) then
 		Multiple_Steps_Complete(Player, QuestGiver, Player)
 	end
@@ -63,7 +63,7 @@ end
 
 function Step4_Complete_KilledPounders(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 4, "I have slain five Lonetusk pounders.")
-	
+
 	if QuestIsComplete(Player, 287) then
 		Multiple_Steps_Complete(Player, QuestGiver, Player)
 	end
@@ -71,7 +71,7 @@ end
 
 function Step5_Complete_KilledShaman(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 5, "I have slain five Lonetusk shamans.")
-	
+
 	if QuestIsComplete(Player, 287) then
 		Multiple_Steps_Complete(Player, QuestGiver, Player)
 	end
@@ -79,7 +79,7 @@ end
 
 function Step6_Complete_KilledProphets(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 6, "I have slain five Lonetusk prophets.")
-	
+
 	if QuestIsComplete(Player, 287) then
 		Multiple_Steps_Complete(Player, QuestGiver, Player)
 	end
@@ -87,7 +87,7 @@ end
 
 function Multiple_Steps_Complete(Quest, QuestGiver, Player)
 	UpdateQuestTaskGroupDescription(Quest, 1, "I have honored the memory of Freeport's fallen by taking revenge on the Lonetusk.")
-	
+
 	AddQuestStepChat(Quest, 7, "I should report back to the lieutenant.", 1, "Having wiped out a considerable number of Lonetusk, I should report back to Lieutenant Imperidus.", 0, 1270070)
 	AddQuestStepCompleteAction(Quest, 7, "Quest_Complete")
 end

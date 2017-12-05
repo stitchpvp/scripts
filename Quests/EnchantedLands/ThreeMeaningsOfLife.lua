@@ -18,8 +18,8 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
-	
+	local conversation = CreateConversation()
+
 	AddConversationOption(conversation, "I have seven fear feeders and eighteen shoal serpents.", "QuestChat_0_4")
 	AddConversationOption(conversation, "I have fifteen fear feeders and ten shoal serpents.", "QuestChat_0_2")
 	AddConversationOption(conversation, "I have five fear feeders and twenty shoal serpents.", "QuestChat_0_2")

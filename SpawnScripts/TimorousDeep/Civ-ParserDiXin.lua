@@ -1,6 +1,6 @@
 --[[
 	Script Name	: SpawnScripts/TimorousDeep/Civ-ParserDiXin.lua
-	Script Purpose	: Civ-Parser Di'Xin 
+	Script Purpose	: Civ-Parser Di'Xin
 	Script Author	: John Adams
 	Script Date	: 2009.02.07
 	Script Notes	: Auto-Generated Conversation from PacketParser Data
@@ -15,13 +15,13 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
-	
+	local conversation = CreateConversation()
+
 	if HasCompletedQuest(Spawn, QUEST_1) then
 		if HasCompletedQuest(Spawn, QUEST_2) then
 			CivParserAtYourService(NPC, Spawn, conversation)
@@ -43,18 +43,18 @@ end
 
 function CivParserAtYourService(NPC, Spawn, conversation)
 	PlayFlavor(NPC, "voiceover/english/rok_questvo/civ-parser_di_xin/_exp04/exp04_rgn_timorous_deep/chrykori_tie/dixin/dixin000.mp3", "", "", 3169361985, 1904654479, Spawn)
-	
+
 	if not HasCompletedQuest(Spawn, QUEST_1) and not HasCompletedQuest(Spawn, QUEST_2) then
 		AddConversationOption(conversation, "What do you do here?", "dlg_11_1")
 	end
-	
+
 	AddConversationOption(conversation, "It is nice to meet you, Di'Xin, but I must go.")
 	StartConversation(conversation, NPC, Spawn, "Civ-Parser Di'Xin, at your service.")
 end
 
 function dlg_11_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/rok_questvo/civ-parser_di_xin/_exp04/exp04_rgn_timorous_deep/chrykori_tie/dixin/dixin003.mp3", "", "", 3327582495, 1668849620, Spawn)
 	AddConversationOption(conversation, "Sure.", "OfferQuest1")
@@ -68,13 +68,13 @@ end
 
 function DidYouFindTheRelics(NPC, Spawn, conversation)
 	PlayFlavor(NPC, "voiceover/english/rok_questvo/civ-parser_di_xin/_exp04/exp04_rgn_timorous_deep/chrykori_tie/dixin/dixin005.mp3", "", "", 3292289491, 239494895, Spawn)
-	
+
 	if (HasCompletedQuest(Spawn, QUEST_1) and not HasCompletedQuest(Spawn, QUEST_2)) or (HasQuest(Spawn, QUEST_1) and GetQuestStep(Spawn, QUEST_1) == 2) then
 		AddConversationOption(conversation, "Yes, here you are.", "dlg_26_1")
 	else
 		AddConversationOption(conversation, "Not yet.")
 	end
-	
+
 	StartConversation(conversation, NPC, Spawn, "Did you find the relics?")
 end
 
@@ -82,9 +82,9 @@ function dlg_26_1(NPC, Spawn)
 	if HasQuest(Spawn, QUEST_1) then
 		SetStepComplete(Spawn, QUEST_1, 2)
 	end
-	
+
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/rok_questvo/civ-parser_di_xin/_exp04/exp04_rgn_timorous_deep/chrykori_tie/dixin/dixin006.mp3", "", "", 1898035325, 1748406413, Spawn)
 	AddConversationOption(conversation, "What do you mean?", "dlg_26_2")
@@ -97,7 +97,7 @@ end
 
 function dlg_26_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/rok_questvo/civ-parser_di_xin/_exp04/exp04_rgn_timorous_deep/chrykori_tie/dixin/dixin007.mp3", "", "", 3848712834, 1158441901, Spawn)
 	AddConversationOption(conversation, "Perhaps I could retrieve the artifacts from them.", "OfferQuest2")
@@ -111,21 +111,21 @@ end
 
 function DidYouRetrieveRelics(NPC, Spawn, conversation)
 	PlayFlavor(NPC, "voiceover/english/rok_questvo/civ-parser_di_xin/_exp04/exp04_rgn_timorous_deep/chrykori_tie/dixin/dixin009.mp3", "", "", 6013376, 3504675397, Spawn)
-	
+
 	if HasQuest(Spawn, QUEST_2) and GetQuestStep(Spawn, QUEST_2) == 2 then
 		AddConversationOption(conversation, "Yes, I did.", "dlg_33_1")
 	else
 		AddConversationOption(conversation, "No.")
 	end
-	
+
 	StartConversation(conversation, NPC, Spawn, "Did you retrieve the relics?")
 end
 
 function dlg_33_1(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_2, 2)
-	
+
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/rok_questvo/civ-parser_di_xin/_exp04/exp04_rgn_timorous_deep/chrykori_tie/dixin/dixin010.mp3", "", "", 1056036231, 2932471518, Spawn)
 	AddConversationOption(conversation, "You're welcome.", "dlg_33_2")

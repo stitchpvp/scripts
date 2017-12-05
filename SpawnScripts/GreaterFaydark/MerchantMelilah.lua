@@ -1,6 +1,6 @@
 --[[
 	Script Name	: SpawnScripts/GreaterFaydark/MerchantMelilah.lua
-	Script Purpose	: Merchant Melilah 
+	Script Purpose	: Merchant Melilah
 	Script Author	: John Adams
 	Script Date	: 2009.03.01
 	Script Notes	: Auto-Generated Conversation from PacketParser Data
@@ -11,7 +11,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)
@@ -22,47 +22,47 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 		PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "That depends.", "dlg_17_1")
 	AddConversationOption(conversation, "No, thanks.")
 	StartConversation(conversation, NPC, Spawn, "Did you want to earn a little commission on a job for me?")
-	if convo==45 then
-		PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
-		AddConversationOption(conversation, "Yes.  She asked me to tell you...", "dlg_45_1")
-		AddConversationOption(conversation, "Um...I think I've lost the note you gave me earlier.")
-		AddConversationOption(conversation, "Not yet.")
-		StartConversation(conversation, NPC, Spawn, "Have you spoken with HER yet?")
-	end
+	--if convo==45 then
+	--	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
+	--	AddConversationOption(conversation, "Yes.  She asked me to tell you...", "dlg_45_1")
+	--	AddConversationOption(conversation, "Um...I think I've lost the note you gave me earlier.")
+	--	AddConversationOption(conversation, "Not yet.")
+	--	StartConversation(conversation, NPC, Spawn, "Have you spoken with HER yet?")
+	--end
 
-	if convo==46 then
-		PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_3_1005.mp3", "", "", 0, 0, Spawn)
-		AddConversationOption(conversation, "Yes.  She asked me to tell you...", "dlg_46_1")
-		AddConversationOption(conversation, "Um...I think I've lost the note you gave me earlier.")
-		AddConversationOption(conversation, "Not yet.")
-		StartConversation(conversation, NPC, Spawn, "Have you spoken with HER yet?")
-	end
+	--if convo==46 then
+	--	PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_3_1005.mp3", "", "", 0, 0, Spawn)
+	--	AddConversationOption(conversation, "Yes.  She asked me to tell you...", "dlg_46_1")
+	--	AddConversationOption(conversation, "Um...I think I've lost the note you gave me earlier.")
+	--	AddConversationOption(conversation, "Not yet.")
+	--	StartConversation(conversation, NPC, Spawn, "Have you spoken with HER yet?")
+	--end
 
-	if convo==48 then
-		PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_2_1005.mp3", "", "", 0, 0, Spawn)
-		AddConversationOption(conversation, "You two are fighting over your father's estate?", "dlg_48_1")
-		AddConversationOption(conversation, "Relax! I just said 'hello' to you.")
-		StartConversation(conversation, NPC, Spawn, "Well?")
-	end
+	--if convo==48 then
+	--	PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_2_1005.mp3", "", "", 0, 0, Spawn)
+	--	AddConversationOption(conversation, "You two are fighting over your father's estate?", "dlg_48_1")
+	--	AddConversationOption(conversation, "Relax! I just said 'hello' to you.")
+	--	StartConversation(conversation, NPC, Spawn, "Well?")
+	--end
 
-	if convo==49 then
-		PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_1_1005.mp3", "", "", 0, 0, Spawn)
-		AddConversationOption(conversation, "You two are fighting over your father's estate?", "dlg_49_1")
-		AddConversationOption(conversation, "Relax! I just said 'hello' to you.")
-		StartConversation(conversation, NPC, Spawn, "Well?")
-	end
+	--if convo==49 then
+	--	PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_1_1005.mp3", "", "", 0, 0, Spawn)
+	--	AddConversationOption(conversation, "You two are fighting over your father's estate?", "dlg_49_1")
+	--	AddConversationOption(conversation, "Relax! I just said 'hello' to you.")
+	--	StartConversation(conversation, NPC, Spawn, "Well?")
+	--end
 
 end
 
 function dlg_17_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Then why don't you go yourself?", "dlg_17_2")
@@ -71,7 +71,7 @@ end
 
 function dlg_17_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "You want me to take a note to her so you don't have to speak to her yourself?", "dlg_17_3")
@@ -80,7 +80,7 @@ end
 
 function dlg_17_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Well.  Okay.", "dlg_17_4")
@@ -89,7 +89,7 @@ end
 
 function dlg_45_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "I won't.")
@@ -98,7 +98,7 @@ end
 
 function dlg_46_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "She said to tell you that she 'wants the clock' and that you'll know what that means.", "dlg_46_2")
@@ -107,7 +107,7 @@ end
 
 function dlg_46_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Er, can I ask you what's going on between the two of you?", "dlg_46_3")
@@ -116,7 +116,7 @@ end
 
 function dlg_46_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Um, okay.", "dlg_46_4")
@@ -125,7 +125,7 @@ end
 
 function dlg_49_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Did you tell her how you felt?", "dlg_49_2")
@@ -134,7 +134,7 @@ end
 
 function dlg_49_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Maybe.  But folks show sadness in different ways.  Maybe her way is different than yours.", "dlg_49_3")
@@ -143,7 +143,7 @@ end
 
 function dlg_49_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "She needs you.", "dlg_49_4")
@@ -152,7 +152,7 @@ end
 
 function dlg_49_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Sure.", "dlg_49_5")
@@ -161,7 +161,7 @@ end
 
 function dlg_49_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "merchant_melilah/_exp03/exp03_cty_kelethin/quest/qst_sisters/qst_melilah014.mp3", "", "", 3364592352, 3085055338, Spawn)
 	AddConversationOption(conversation, "Glad I could help.", "dlg_49_6")

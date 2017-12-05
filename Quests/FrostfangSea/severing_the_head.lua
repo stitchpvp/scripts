@@ -3,7 +3,7 @@
 	Script Purpose	:	the quest "Severing the Head"
 	Script Author	:	theFoof
 	Script Date		:	2013.6.17
-	Script Notes	:	
+	Script Notes	:
 
 	Zone			:	Frostfang Sea
 	Quest Giver		:	Dolur Axebeard
@@ -20,7 +20,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(QuestGiver, "dolur_axebeard/halas/great_shelf/dolur_axebeard/dolur_axebeard098.mp3", "", "", 2381129063, 239921883, Player)
 	AddConversationOption(conversation, "I will return.")

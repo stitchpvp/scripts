@@ -2,7 +2,7 @@
     Script Name    : Quests/ThunderingSteppes/SuppliesForBrianna.lua
     Script Author  : Jabantiz
     Script Date    : 2014.07.11 02:07:46
-    Script Purpose : 
+    Script Purpose :
 
         Zone       : ThunderingSteppes
         Quest Giver: Brianna (2490170)
@@ -27,11 +27,11 @@ function Step2Complete(Quest, QuestGiver, Player)
 end
 
 function Accepted(Quest, QuestGiver, Player)
-	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
-	
+	FaceTarget(QuestGiver, Player)
+	local conversation = CreateConversation()
+
 	AddConversationOption(conversation, "Thank you for being so generous.")
-	StartConversation(conversation, NPC, Spawn, "Well here it looks like 5 Forged Tin Long Swords were damaged. I am going to need you either to buy me some new ones or make them for me. Why don't I keep this delivery receipt until you bring them to me, so I know you will return.")
+	StartConversation(conversation, QuestGiver, Player, "Well here it looks like 5 Forged Tin Long Swords were damaged. I am going to need you either to buy me some new ones or make them for me. Why don't I keep this delivery receipt until you bring them to me, so I know you will return.")
 end
 
 function Deleted(Quest, QuestGiver, Player)

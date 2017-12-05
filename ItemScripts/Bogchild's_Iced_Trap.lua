@@ -3,10 +3,10 @@
 	Script Purpose	: Handles the item "Bogchild's Iced Trap"
 	Script Author	: theFoof
 	Script Date	: 2013.5.20
-	Script Notes	: 
+	Script Notes	:
 --]]
 function used(Item, Player)
-    target = GetTarget(Player)
+    local target = GetTarget(Player)
     if GetName(target) == 'a snowpack' or GetName(target) == 'an iceflow' then
 	    if IsInCombat(target) then
 		    SendMessage(Player, "You can only use this on an iceflow or snowpack that is not currently engaged in combat.", "yellow")

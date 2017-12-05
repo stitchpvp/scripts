@@ -1,6 +1,6 @@
 --[[
 	Script Name		:	SpawnScripts/Darklight/widgetriftboulder.lua
-	Script Purpose	: Sealing the Rift 
+	Script Purpose	: Sealing the Rift
 	Script Author	: Cynnar
 	Script Date	: 2015.07.01
 	Script Notes	: Auto-Generated Conversation from PacketParser Data
@@ -14,7 +14,7 @@ function spawn(NPC, Player)
 end
 
 function respawn(NPC)
-    spawn(NPC)
+SpawnMob(NPC)
 end
 
 function CheckQuest(NPC, Player)

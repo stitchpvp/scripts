@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "The Door Knocker"
 	Script Author	: Scatman
 	Script Date	: 2009.07.09
-	
+
 	Zone       : The Graveyard
 	Quest Giver: Custodian Zaddar Sullissia
 	Preceded by: None
@@ -29,7 +29,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(QuestGiver, "voiceover/english/tutorial_revamp/custodian_zaddar_sullissia/fprt_adv02_graveyard/custodian_zaddar030.mp3", "", "", 3091175973, 1298049191, Player)
 	AddConversationOption(conversation, "The things I do for fame and fortune...")
@@ -41,7 +41,7 @@ end
 
 function Step1_Complete_FoundTomb1(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 1, "I found the secure tomb of Sir Penan.")
-	
+
 	if QuestIsComplete(Player, 231) then
 		FoundAllTombs(Quest, QuestGiver, Player)
 	end
@@ -49,7 +49,7 @@ end
 
 function Step2_Complete_FoundTomb2(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 2, "I found the secure tomb of Sir Breel.")
-	
+
 	if QuestIsComplete(Player, 231) then
 		FoundAllTombs(Quest, QuestGiver, Player)
 	end
@@ -57,7 +57,7 @@ end
 
 function Step3_Complete_FoundTomb3(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 3, "The tomb of Sir Haligan appears to have been disturbed.")
-	
+
 	if QuestIsComplete(Player, 231) then
 		FoundAllTombs(Quest, QuestGiver, Player)
 	end
@@ -65,7 +65,7 @@ end
 
 function Step4_Complete_FoundTomb4(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 4, "I found the secure tomb of Sir Arlin.")
-	
+
 	if QuestIsComplete(Player, 231) then
 		FoundAllTombs(Quest, QuestGiver, Player)
 	end
@@ -73,7 +73,7 @@ end
 
 function Step5_Complete_FoundTomb5(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 5, "I found the secure tomb of Sir Xantille.")
-	
+
 	if QuestIsComplete(Player, 231) then
 		FoundAllTombs(Quest, QuestGiver, Player)
 	end
@@ -81,7 +81,7 @@ end
 
 function FoundAllTombs(Quest, QuestGiver, Player)
 	UpdateQuestTaskGroupDescription(Quest, 1, "I found the tombs that Zaddar asked of me and reported my findings.")
-	
+
 	AddQuestStepChat(Quest, 6, "Return to Zaddar in the Graveyard.", 1, "I must return to Zaddar and let him know of my findings.", 0, 1250014)
 	AddQuestStepCompleteAction(Quest, 6, "QuestComplete")
 end

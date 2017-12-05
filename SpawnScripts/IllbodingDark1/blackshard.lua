@@ -3,7 +3,7 @@
 	Script Purpose	:	for the black shard spawns in zone 516 and 517
 	Script Author	:	theFoof
 	Script Date		:	2013.6.19
-	Script Notes	:	
+	Script Notes	:
 --]]
 
 local SeveringHead = 72
@@ -15,7 +15,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function casted_on(NPC, Spawn, SpellName)

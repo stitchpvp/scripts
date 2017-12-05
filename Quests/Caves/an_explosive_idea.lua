@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "An Explosive Idea"
 	Script Author	: Scatman
 	Script Date	: 2009.10.18
-	
+
 	Zone       : The Caves
 	Quest Giver: Emma Torque
 	Preceded by: None
@@ -19,8 +19,8 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
-	
+	local conversation = CreateConversation()
+
 	PlayFlavor(QuestGiver, "voiceover/english/tutorial_revamp/emma_torque/qey_adv03_caves/quests/emma/emma_005a.mp3", "", "", 3292345907, 870183962, Player)
 	AddConversationOption(conversation, "I'll be back.")
 	StartConversation(conversation, QuestGiver, Player, "The explosive potential is... amazing! I can't wait!")

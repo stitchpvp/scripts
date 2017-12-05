@@ -2,7 +2,7 @@
     Script Name    : Quests/ThunderingSteppes/GriffinEggForTheSteppesTowerStations.lua
     Script Author  : Jabantiz
     Script Date    : 2014.07.14 10:07:24
-    Script Purpose : 
+    Script Purpose :
 
         Zone       : ThunderingSteppes
         Quest Giver: a griffin tamer (2490000)

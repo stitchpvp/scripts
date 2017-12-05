@@ -15,7 +15,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
@@ -37,7 +37,7 @@ end
 
 function GetRandomGnollID()
 	choice = math.random(1, 2)
-	
+
 	-- 1 of 2 'a gnoll machinist'
 	if choice == 1 then
 		return 1980103

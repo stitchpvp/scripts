@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "A Flowing Conversation"
 	Script Author	: Scatman
 	Script Date	    : 2009.07.28
-	
+
 	Zone       : Sunken City
 	Quest Giver: Inquisitor Thorson
 	Preceded by: None
@@ -17,7 +17,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "I'll return shortly.")
 	StartConversation(conversation, QuestGiver, Player, "Excellent. Return to me after you have spoken to him.")
@@ -29,7 +29,7 @@ end
 function Step1_Complete_SpokeWithSaydith(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 1, "I have spoken to Saydith Yarr and learned a bit about the Sunken City.")
 	UpdateQuestTaskGroupDescription(Quest, 1, "I have spoken to Saydith Yarr.")
-	
+
 	AddQuestStepChat(Quest, 2, "I should return to Inquisitor Thorson.", 1, "I should let Thorson know that I talked to Yarr.", 0, 1240007)
 	AddQuestStepCompleteAction(Quest, 2, "Quest_Complete")
 end

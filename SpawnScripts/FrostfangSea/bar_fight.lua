@@ -3,7 +3,7 @@
 	Script Purpose	:	makes an npc emote for a bar fight
 	Script Author	:	theFoof
 	Script Date		:	2013.9.26
-	Script Notes	:	
+	Script Notes	:
 --]]
 
 require"SpawnScripts/Generic/hello_emote"
@@ -13,7 +13,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
@@ -37,4 +37,4 @@ function EmoteLoop(NPC)
 	elseif choice == 6 then
 		PlayFlavor(NPC, "", "", "sigh", 0, 0)
 	end
-end 
+end

@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "Public Service"
 	Script Author	: Scatman
 	Script Date	: 2009.02.03
-	
+
 	Zone       : Darklight Wood
 	Quest Giver: Laexyra Y'Barriath
 	Preceded by: Purposeful Trinkets (purposeful_trinkets.lua)
@@ -26,7 +26,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(QuestGiver, "voiceover/english/neriak/laexyra_y_barriath/darklight_wood/tvatar_post/laexyra/laexyra011.mp3", "", "", 370299149, 331491163, Player)
 	AddConversationOption(conversation, "Ok.")
@@ -38,7 +38,7 @@ end
 
 function step1_complete_killedDefenders(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 1, "I have slain the purulent defenders.")
-	
+
 	if QuestIsComplete(Player, 98) then
 		multiple_steps_complete(Quest, QuestGiver, Player)
 	end
@@ -46,7 +46,7 @@ end
 
 function step2_complete_killedSoldiers(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 2, "I have slain the moldering soldiers.")
-	
+
 	if QuestIsComplete(Player, 98) then
 		multiple_steps_complete(Quest, QuestGiver, Player)
 	end
@@ -54,7 +54,7 @@ end
 
 function multiple_steps_complete(Quest, QuestGiver, Player)
 	UpdateQuestTaskGroupDescription(Quest, 1, "I have killed the undead soldiers for Laexyra.")
-	
+
 	AddQuestStepChat(Quest, 3, "I need to speak with Laexyra Y'Barriath.", 1, "I should return to Laexyra Y'Barriath now that I have thinned out the undead.", 0, 340109)
 	AddQuestStepCompleteAction(Quest, 3, "quest_complete")
 end

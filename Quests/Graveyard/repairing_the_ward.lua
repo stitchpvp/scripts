@@ -19,8 +19,8 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
-	
+	local conversation = CreateConversation()
+
 	PlayFlavor(QuestGiver, "voiceover/english/tutorial_revamp/custodian_zaddar_sullissia/fprt_adv02_graveyard/custodian_zaddar100.mp3", "", "", 1431969198, 4289355071, Player)
 	AddConversationOption(conversation, "Very well, I'll let you prepare.")
 	StartConversation(conversation, QuestGiver, Player, "I must read the words from the pages of parchment that are now within the Book of the Dead. They are difficult to decipher, even with my skills. Give me a moment to study them.")
@@ -32,7 +32,7 @@ end
 function Step1_Complete_SpokeWithZaddar(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 1, "Zaddar and I were not able to repair the ward. Now I must determine why.")
 	UpdateQuestTaskGroupDescription(Quest, 1, "I've attempted to reseal the ward by reciting the incantations with Custodian Zaddar but something was wrong.")
-	
+
 	AddQuestStepChat(Quest, 2, "I must check the tombs of the Knights of Truth to see which one is not sealed.", 1, "Determine what is preventing the ward from being resealed.", 0, 1250014)
 	AddQuestStepCompleteAction(Quest, 2, "Step2_Complete_SealedTomb")
 end
@@ -40,7 +40,7 @@ end
 function Step2_Complete_SealedTomb(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 2, "Sir Haligan's tomb is sealed so the ritual can now be completed.")
 	UpdateQuestTaskGroupDescription(Quest, 2, "I've found the tomb of Sir Haligan and resealed it.")
-	
+
 	AddQuestStepChat(Quest, 3, "I should go back to Zaddar and attempt the ritual once more.", 1, "Seek out Zaddar once again and make another attempt at resealing the ward.", 0, 1250014)
 	AddQuestStepCompleteAction(Quest, 3, "QuestComplete")
 end

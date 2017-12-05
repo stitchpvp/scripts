@@ -3,7 +3,7 @@
 	Script Purpose	: a miner <Hate's Envy Miner>
 	Script Author	: John Adams
 	Script Date	: 2009.02.01
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 function spawn(NPC)
@@ -13,7 +13,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)

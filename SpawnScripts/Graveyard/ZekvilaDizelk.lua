@@ -1,6 +1,6 @@
 --[[
 	Script Name	: SpawnScripts/Graveyard/ZekvilaDizelk.lua
-	Script Purpose	: Zekvila Dizelk 
+	Script Purpose	: Zekvila Dizelk
 	Script Author	: scatman
 	Script Date	: 2009.07.12
 	Script Notes	: Auto-Generated Conversation from PacketParser Data
@@ -13,15 +13,15 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
-	
+	local conversation = CreateConversation()
+
 	RandomVoice(NPC, Spawn)
-	
+
 	if HasCompletedQuest(Spawn, QUEST_1) then
 		Say(NPC, "You must not let that fool Ithelz rule the Scale Yard. I need the help of a diligent soldier... what do you need, peasant?", Spawn)
 	elseif HasQuest(Spawn, QUEST_2) then
@@ -54,7 +54,7 @@ end
 
 function dlg_9_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "What task do you need done?", "OfferQuest1")
 	AddConversationOption(conversation, "Actually, you're wrong. It's not in my interests to do so. Bye.")
@@ -78,9 +78,9 @@ end
 
 function dlg_1_1(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_1, 2)
-	
+
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "Servant?! Don't ever refer to me... whatever. Bye.")
 	StartConversation(conversation, NPC, Spawn, "Give me the crystal. Ah, yes, it's filled.  With these souls, Ithelz's puppet barbarians cannot prevent me from ruling over the district. You served me well, servant. Take this coin as a token of my gratitude.")

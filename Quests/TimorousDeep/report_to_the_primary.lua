@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "Report to the Primary"
 	Script Author	: Scatman
 	Script Date	: 2009.02.06
-	
+
 	Zone       : Timorous Deep
 	Quest Giver: Tykor Gi'Lok
 	Preceded by: Curious Ore (curious_ore.lua)
@@ -26,7 +26,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(QuestGiver, "voiceover/english/rok_questvo/tykor_gi_lok/_exp04/exp04_rgn_timorous_deep/chrykori_tie/gilok/gilok007.mp3", "", "", 4113737431, 1405861806, Player)
 	AddConversationOption(conversation, "Hopefully it will be revealed then.")

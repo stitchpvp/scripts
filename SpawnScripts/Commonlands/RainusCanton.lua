@@ -1,21 +1,27 @@
+QUEST_1_FROM_RAINUS = nil
+QUEST_2_FROM_RAINUS = nil
+QUEST_3_FROM_RAINUS = nil
+
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 
-	AddConversationOption(conversation,  .. GetName(Spawn) .. ", my loyalties remain private.", "Option1")
-	AddConversationOption(conversation,  .. GetName(Spawn) .. ", bound in service to none.", "Option2")
-	AddConversationOption(conversation,  .. GetName(Spawn) .. ", proudly enacting the will of the Overlord.", "Option3")
-	StartConversation(conversation, NPC, Spawn, "Rainus Canton, a once wandering sword now bound in service to the Overlord. And yourself?")
-  if HasQuest(Spawn, QUEST_1_FROM_Rainus) then
-	AddConversationOption(conversation, "I have, here are the root samples.", "Option4")
-	StartConversation(conversation, NPC, Spawn, "Have you done as I asked?")
-  if HasQuest(Spawn, QUEST_2_FROM_Rainus) then
-	AddConversationOption(conversation, "I did. Here you go.", "Option5")
-	StartConversation(conversation, NPC, Spawn, "Did you slay the orcs and get the orders?")
-  if HasQuest(Spawn, QUEST_3_FROM_Rainus) then
-	AddConversationOption(conversation, "I'll return when it's done.")
-	AddConversationOption(conversation, "Taken care of.", "Option6")
-	StartConversation(conversation, NPC, Spawn, "The orcs?")
+  if HasQuest(Spawn, QUEST_1_FROM_RAINUS) then
+		AddConversationOption(conversation, "I have, here are the root samples.", "Option4")
+		StartConversation(conversation, NPC, Spawn, "Have you done as I asked?")
+	elseif HasQuest(Spawn, QUEST_2_FROM_RAINUS) then
+		AddConversationOption(conversation, "I did. Here you go.", "Option5")
+		StartConversation(conversation, NPC, Spawn, "Did you slay the orcs and get the orders?")
+  elseif HasQuest(Spawn, QUEST_3_FROM_RAINUS) then
+		AddConversationOption(conversation, "I'll return when it's done.")
+		AddConversationOption(conversation, "Taken care of.", "Option6")
+		StartConversation(conversation, NPC, Spawn, "The orcs?")
+	else
+		AddConversationOption(conversation, GetName(Spawn) .. ", my loyalties remain private.", "Option1")
+		AddConversationOption(conversation, GetName(Spawn) .. ", bound in service to none.", "Option2")
+		AddConversationOption(conversation, GetName(Spawn) .. ", proudly enacting the will of the Overlord.", "Option3")
+		StartConversation(conversation, NPC, Spawn, "Rainus Canton, a once wandering sword now bound in service to the Overlord. And yourself?")
+	end
 end
 
 function Option1(NPC, Spawn)
@@ -25,7 +31,7 @@ function Option1(NPC, Spawn)
 	AddConversationOption(conversation, "My business is my own.", "Option7")
 	AddConversationOption(conversation, "No, I am not.", "Option8")
 	AddConversationOption(conversation, "I am.", "Option9")
-	StartConversation(conversation, NPC, Spawn,  .. GetName(Spawn) .. ", indeed. Your name has graced the lips of many I have had the fortune--or misfortune--to listen to. It is a, ehm--a pleasure to meet you. Are you out here in the service of the Overlord as well?")
+	StartConversation(conversation, NPC, Spawn, GetName(Spawn) .. ", indeed. Your name has graced the lips of many I have had the fortune--or misfortune--to listen to. It is a, ehm--a pleasure to meet you. Are you out here in the service of the Overlord as well?")
 end
 
 function Option7(NPC, Spawn)
@@ -104,7 +110,7 @@ function Option2(NPC, Spawn)
 
 	AddConversationOption(conversation, "My business is my own.", "Option16")
 	AddConversationOption(conversation, "I am.", "Option17")
-	StartConversation(conversation, NPC, Spawn,  .. GetName(Spawn) .. ", indeed. Your name has graced the lips of many I have had the fortune--or misfortune--to listen to. It is a, ehm--a pleasure to meet you. Are you out here in the service of the Overlord as well?")
+	StartConversation(conversation, NPC, Spawn, GetName(Spawn) .. ", indeed. Your name has graced the lips of many I have had the fortune--or misfortune--to listen to. It is a, ehm--a pleasure to meet you. Are you out here in the service of the Overlord as well?")
 end
 
 function Option16(NPC, Spawn)
@@ -128,7 +134,7 @@ function Option3(NPC, Spawn)
 	AddConversationOption(conversation, "My business is my own.", "Option18")
 	AddConversationOption(conversation, "No, I am not.", "Option19")
 	AddConversationOption(conversation, "I am.", "Option20")
-	StartConversation(conversation, NPC, Spawn,  .. GetName(Spawn) .. ", indeed. Your name has graced the lips of many I have had the fortune--or misfortune--to listen to. It is a, ehm--a pleasure to meet you. Are you out here in the service of the Overlord as well?")
+	StartConversation(conversation, NPC, Spawn, GetName(Spawn) .. ", indeed. Your name has graced the lips of many I have had the fortune--or misfortune--to listen to. It is a, ehm--a pleasure to meet you. Are you out here in the service of the Overlord as well?")
 end
 
 function Option18(NPC, Spawn)
@@ -231,7 +237,7 @@ function Option28(NPC, Spawn)
 	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "What for?", "Option29")
-	StartConversation(conversation, NPC, Spawn, "It looks like these are orders to build up a "cha nu durk." Which is--I think--the minimum size of a orc fighting unit.")
+	StartConversation(conversation, NPC, Spawn, "It looks like these are orders to build up a \"cha nu durk.\" Which is--I think--the minimum size of a orc fighting unit.")
 end
 
 function Option29(NPC, Spawn)

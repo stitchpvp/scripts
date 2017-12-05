@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "The Patchwork Tapestry"
 	Script Author	: Scatman
 	Script Date	: 2009.10.08
-	
+
 	Zone       : Unknown
 	Quest Giver: None
 	Preceded by: None
@@ -26,9 +26,9 @@ end
 function QuestComplete(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 1, "I have a studied a fay fabric patch.")
 	UpdateQuestTaskGroupDescription(Quest, 1, "I have learned Fayfolk, language of the fairies.")
-	
+
 	-- Learn language (fayfolk)
-	
+
 	UpdateQuestDescription(Quest, "I pieced together patches of fay fabric to discover the foundation of two languages, Norrathian and Fay. I have used the fabric patches to learn the language of the fairies, Fayfolk.")
 	GiveQuestReward(Quest, Player)
 end

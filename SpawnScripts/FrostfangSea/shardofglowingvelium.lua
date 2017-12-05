@@ -3,7 +3,7 @@
 	Script Purpose	:	for the spawn "shard of glowing velium"
 	Script Author	:	theFoof
 	Script Date		:	2013.7.18
-	Script Notes	:	
+	Script Notes	:
 --]]
 
 local WatchBelow = 77

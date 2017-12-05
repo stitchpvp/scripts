@@ -3,17 +3,17 @@
 	Script Purpose	:	Handles the quest, "Rhino-rific"
 	Script Author	:	QuestParser (Replace this)
 	Script Date		:	7/8/2017
-	Script Notes	:	
+	Script Notes	:
 
 	Zone			:	Commonlands
-	Quest Giver		:	
+	Quest Giver		:
 	Preceded by		:	None
 	Followed by		:	None
 --]]
 
 
 function Init(Quest)
-	AddQuestStepKill(Quest, 1, "I need to kill rhinos for Mooshga", 10, 100, "I need to get a bunch of three-toed rhino feet for Mooshga.", 108, --[[ ID's --]])
+	AddQuestStepKill(Quest, 1, "I need to kill rhinos for Mooshga", 10, 100, "I need to get a bunch of three-toed rhino feet for Mooshga.", 108, nil)
 	AddQuestStepCompleteAction(Quest, 1, "Step1Complete")
 end
 
@@ -21,7 +21,7 @@ function Step1Complete(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 1, "I have collected ten three-toed rhino hooves.")
 	UpdateQuestTaskGroupDescription(Quest, 1, "I have collected ten three-toed rhino hooves.")
 
-	AddQuestStepChat(Quest, 2, "I should return to Mooshga", 1, "I have the ten hooves for Mooshga.", 11, --[[ ID's --]])
+	AddQuestStepChat(Quest, 2, "I should return to Mooshga", 1, "I have the ten hooves for Mooshga.", 11, nil)
 	AddQuestStepCompleteAction(Quest, 2, "QuestComplete")
 end
 

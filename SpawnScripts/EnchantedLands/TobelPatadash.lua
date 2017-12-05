@@ -11,7 +11,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)
@@ -22,7 +22,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "tobel_patadash/_exp03/deity/bristlebane/tobel/tobel_patadash001.mp3", "", "", 1450539429, 1133241398, Spawn)
 	AddConversationOption(conversation, "You know I couldn't agree more. I love the thrill of pulling off a good prank.", "dlg_0_1")
@@ -32,7 +32,7 @@ end
 
 function dlg_0_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	AddConversationOption(conversation, "I have indeed!", "dlg_0_2")
 	AddConversationOption(conversation, "No thank you!")
 	StartConversation(conversation, NPC, Spawn, "Well then, it seems we're both on the same proverbial page now, aren't we? If that's the case, have you come to devote yourself to the King of Thieves, the Master of Mischief, the Prince of Prank himself, Fizzlethorpe Bristlebane?")
@@ -40,16 +40,16 @@ end
 
 function dlg_0_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	-- there is a pop up box saying "Would you like to accept Bristlebane as your deity?" with yes and no
 	AddConversationOption(conversation, "OK then. Bye.")
-	-- This is the start conversation that comes next in the dialog "Excellent then, let us begin the initiation!" 
+	-- This is the start conversation that comes next in the dialog "Excellent then, let us begin the initiation!"
 	StartConversation(conversation, NPC, Spawn, "Great! Come back another time to accept Bristlebane as you deity.")
 end
 
 function dlg_0_3(NPC, Spawn) -- the dialog for no in dlg_0_2
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	AddConversationOption(conversation, "Nevermind. I'm not really interested.")
 	StartConversation(conversation, NPC, Spawn, "Well, yes, of course there's an initiation process. I hope you didn't think I just wave a magic wand over your head, hand you a squirting flower and suddenly you're a true believer in Bristlebane. There's work to be done first.")
 end

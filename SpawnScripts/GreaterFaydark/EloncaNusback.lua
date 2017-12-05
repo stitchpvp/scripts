@@ -11,7 +11,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)
@@ -22,7 +22,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 		PlayFlavor(NPC, "elonca_nusback/_exp03/exp03_rgn_greater_faydark/elonca_nusback/elonca001.mp3", "", "", 1353203304, 503876671, Spawn)
 	AddConversationOption(conversation, "Sorry. What are you doing here?", "dlg_1_1")
@@ -32,7 +32,7 @@ end
 
 function dlg_1_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "elonca_nusback/_exp03/exp03_rgn_greater_faydark/elonca_nusback/elonca002.mp3", "", "", 981351697, 2920342348, Spawn)
 	AddConversationOption(conversation, "That sounds like a lot of work for just a handful of you.", "dlg_1_2")
@@ -42,7 +42,7 @@ end
 
 function dlg_1_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "elonca_nusback/_exp03/exp03_rgn_greater_faydark/elonca_nusback/elonca003.mp3", "", "", 2424859748, 3864182443, Spawn)
 	AddConversationOption(conversation, "How could I help you?", "dlg_1_3")
@@ -52,7 +52,7 @@ end
 
 function dlg_1_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "elonca_nusback/_exp03/exp03_rgn_greater_faydark/elonca_nusback/elonca004.mp3", "", "", 3150714366, 582904965, Spawn)
 	AddConversationOption(conversation, "What kind of trophies?", "dlg_1_4")
@@ -62,7 +62,7 @@ end
 
 function dlg_1_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "elonca_nusback/_exp03/exp03_rgn_greater_faydark/elonca_nusback/elonca005.mp3", "", "", 3498749910, 2147058017, Spawn)
 	AddConversationOption(conversation, "I'll do it.", "dlg_1_5")

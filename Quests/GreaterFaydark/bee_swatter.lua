@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "Bee Swatter"
 	Script Author	: Scatman
 	Script Date	: 2009.03.29
-	
+
 	Zone       : Greater Faydark
 	Quest Giver: Ami Augren
 	Preceded by: None
@@ -21,8 +21,8 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
-	
+	local conversation = CreateConversation()
+
 	PlayFlavor(QuestGiver, "voiceover/english/exp03_questvo2/ami_augren/_exp03/exp03_rgn_greater_faydark/ami_augren/ami_augren003.mp3", "", "", 240117721, 1491988690, Player)
 	AddConversationOption(conversation, "I'll take care of them.")
 	StartConversation(conversation, QuestGiver, Player, "They make owies!  Don't let them pinch you!")
@@ -34,7 +34,7 @@ end
 function Step1_Complete_KilledBees(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 1, "I swatted a few of the stingswarm buzzers. Hopefully that will make Ami stop crying.")
 	UpdateQuestTaskGroupDescription(Quest, 1, "I swatted a few of the stingswarm buzzers. Hopefully that will make Ami stop crying.")
-	
+
 	AddQuestStepChat(Quest, 2, "I should tell Ami I chased away the buzzers.", 1, "I should go back to Ami Augren and tell her I chased away the stingswarm buzzers.", 110, 1140019)
 	AddQuestStepCompleteAction(Quest, 2, "Quest_Complete")
 end

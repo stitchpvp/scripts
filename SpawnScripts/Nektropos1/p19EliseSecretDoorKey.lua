@@ -3,7 +3,7 @@
     Script Author  : smash
     Script Date    : 2016.01.28 04:01:06
     Script Purpose : the spawns that allow access to secret doors in the castle
-                   : 
+                   :
 --]]
 
 function spawn(NPC)
@@ -11,7 +11,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function casted_on(NPC, Spawn, Message)

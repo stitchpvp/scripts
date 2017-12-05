@@ -1,6 +1,6 @@
 --[[
 	Script Name	: SpawnScripts/GreaterFaydark/Morganellus.lua
-	Script Purpose	: Morganellus 
+	Script Purpose	: Morganellus
 	Script Author	: John Adams
 	Script Date	: 2009.02.05
 	Script Notes	: Auto-Generated Conversation from PacketParser Data
@@ -10,12 +10,12 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/morganellus/_exp03/exp03_rgn_greater_faydark/shroomba/morganellus/morganellus000.mp3", "", "", 1586930709, 170726345, Spawn)
 	AddConversationOption(conversation, "Hello, Morganellus. I am " .. GetName(Spawn) .. ".", "dlg_10_1")
@@ -26,7 +26,7 @@ end
 
 function dlg_10_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/morganellus/_exp03/exp03_rgn_greater_faydark/shroomba/morganellus/morganellus001.mp3", "", "", 3125158687, 308390783, Spawn)
 	AddConversationOption(conversation, "Your friend?", "dlg_10_2")
@@ -35,7 +35,7 @@ end
 
 function dlg_10_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/morganellus/_exp03/exp03_rgn_greater_faydark/shroomba/morganellus/morganellus002.mp3", "", "", 3545587475, 669880313, Spawn)
 	AddConversationOption(conversation, "I will visit Agarighus.", "dlg_10_3")
@@ -44,7 +44,7 @@ end
 
 function dlg_10_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/morganellus/_exp03/exp03_rgn_greater_faydark/shroomba/morganellus/morganellus003.mp3", "", "", 2602618474, 1319117149, Spawn)
 	AddConversationOption(conversation, "Do you want me to tell Agarighus that you say hello?", "dlg_10_4")
@@ -53,7 +53,7 @@ end
 
 function dlg_10_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/morganellus/_exp03/exp03_rgn_greater_faydark/shroomba/morganellus/morganellus004.mp3", "", "", 2956711105, 2602303407, Spawn)
 	AddConversationOption(conversation, "All right, I'll just find him.")

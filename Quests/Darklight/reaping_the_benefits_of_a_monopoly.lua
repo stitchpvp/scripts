@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "Reaping the Benefits of a Monopoly"
 	Script Author	: Scatman
 	Script Date	: 2009.02.04
-	
+
 	Zone       : Darklight Wood
 	Quest Giver: Dirzdia T'Zauvirr
 	Preceded by: Smoking the Competition (smoking_the_competition.lua)
@@ -22,7 +22,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(QuestGiver, "voiceover/english/neriak/dirzdia_t_zauvirr/darklight_wood/tvatar_post/dirzdia/dirzdia012.mp3", "", "", 2680874987, 3116118568, Player)
 	AddConversationOption(conversation, "All right.")
@@ -34,7 +34,7 @@ end
 
 function step1_complete_caughtFish(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 1, "I have caught the trout.")
-	
+
 	AddQuestStepChat(Quest, 2, "I need to bring these trout back to Dirzdia.", 1, ".", 2542, 340139)
 	AddQuestStepCompleteAction(Quest, 2, "quest_complete")
 end

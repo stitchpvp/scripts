@@ -3,7 +3,7 @@
 	Script Purpose	: qst_haligan_tomb
 	Script Author	: Scatman
 	Script Date	: 2009.07.22
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 local QUEST_7_FROM_CUSTODIAN = 238
@@ -16,7 +16,7 @@ function hailed(NPC, Spawn)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function casted_on(Target, Caster)

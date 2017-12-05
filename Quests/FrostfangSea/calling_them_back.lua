@@ -3,7 +3,7 @@
 	Script Purpose	:	the quest Calling Them Back
 	Script Author	:	theFoof
 	Script Date		:	2013.5.28
-	Script Notes	:	
+	Script Notes	:
 
 	Zone			:	Frostfang Sea
 	Quest Giver		:	Dolur Axebeard
@@ -30,7 +30,7 @@ function Accepted(Quest, QuestGiver, Player)
 		SummonItem(Player, 45448, 1)
     end
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(QuestGiver, "dolur_axebeard/halas/great_shelf/dolur_axebeard/dolur_axebeard059.mp3", "", "", 118933813, 3206945922, Player)
 	AddConversationOption(conversation, "I understand.")

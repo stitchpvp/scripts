@@ -3,7 +3,7 @@
 	Script Purpose	: Roaming guards
 	Script Author	: Scatman
 	Script Date		: 2008-09-01
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 function spawn(NPC)
@@ -13,7 +13,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	
+
 	choice = math.random(1, 2)
 	if choice == 1 then
 		PlayFlavor(NPC, "voiceover/english/rok_questvo/a_chrykori_lookout/_exp04/exp04_rgn_timorous_deep/sarnak/sarnak_lookout_hail_a639754.mp3", "We can converse later if you like.", "", 2866606885, 2815871155, Spawn)

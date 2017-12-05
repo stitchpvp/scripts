@@ -1,6 +1,6 @@
 --[[
 	Script Name	: SpawnScripts/GreaterFaydark/HamnalTeolofin.lua
-	Script Purpose	: Hamnal Teolofin 
+	Script Purpose	: Hamnal Teolofin
 	Script Author	: John Adams
 	Script Date	: 2009.03.01
 	Script Notes	: Auto-Generated Conversation from PacketParser Data
@@ -11,7 +11,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)
@@ -22,7 +22,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	choice = math.random(1,2)
 
@@ -38,19 +38,19 @@ function hailed(NPC, Spawn)
 	AddConversationOption(conversation, "Jalmari sent me to speak with you about the Grender.")
 	AddConversationOption(conversation, "Nothing, thanks.")
 	StartConversation(conversation, NPC, Spawn, "Yes? What can I do for you?")
-	if convo==4 then
-		PlayFlavor(NPC, "voiceover/english/exp03_questvo2/hamnal_teolofin/_exp03/exp03_cty_kelethin/tutorials/qst_hamnal/qst_hamnal001.mp3", "", "", 2895828066, 2742672495, Spawn)
-		AddConversationOption(conversation, "I've been learning the history of the Fae.", "dlg_4_1")
-		AddConversationOption(conversation, "Jalmari sent me to speak with you about the Grender.")
-		AddConversationOption(conversation, "Nothing, thanks.")
-		StartConversation(conversation, NPC, Spawn, "Yes? What can I do for you?")
-	end
+	--if convo==4 then
+	--	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/hamnal_teolofin/_exp03/exp03_cty_kelethin/tutorials/qst_hamnal/qst_hamnal001.mp3", "", "", 2895828066, 2742672495, Spawn)
+	--	AddConversationOption(conversation, "I've been learning the history of the Fae.", "dlg_4_1")
+	--	AddConversationOption(conversation, "Jalmari sent me to speak with you about the Grender.")
+	--	AddConversationOption(conversation, "Nothing, thanks.")
+	--	StartConversation(conversation, NPC, Spawn, "Yes? What can I do for you?")
+	--end
 
 end
 
 function dlg_3_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/hamnal_teolofin/_exp03/exp03_cty_kelethin/tutorials/qst_hamnal/qst_hamnal002.mp3", "", "", 3893730348, 46248323, Spawn)
 	AddConversationOption(conversation, "Not yet.  At least, I don't think so.", "dlg_3_2")
@@ -59,7 +59,7 @@ end
 
 function dlg_3_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/hamnal_teolofin/_exp03/exp03_cty_kelethin/tutorials/qst_hamnal/qst_hamnal003.mp3", "", "", 3572378326, 3165862508, Spawn)
 	AddConversationOption(conversation, "He seemed rather angry.", "dlg_3_3")
@@ -68,7 +68,7 @@ end
 
 function dlg_3_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/hamnal_teolofin/_exp03/exp03_cty_kelethin/tutorials/qst_hamnal/qst_hamnal004.mp3", "", "", 3972764887, 2023370376, Spawn)
 	AddConversationOption(conversation, "Raimo mentioned Princess Saphronia...", "dlg_3_4")
@@ -77,7 +77,7 @@ end
 
 function dlg_3_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/hamnal_teolofin/_exp03/exp03_cty_kelethin/tutorials/qst_hamnal/qst_hamnal005.mp3", "", "", 1909837591, 112454132, Spawn)
 	AddConversationOption(conversation, "How do I know which Outsiders are good and which are evil?", "dlg_3_5")
@@ -86,7 +86,7 @@ end
 
 function dlg_3_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/hamnal_teolofin/_exp03/exp03_cty_kelethin/tutorials/qst_hamnal/qst_hamnal006.mp3", "", "", 1030007137, 1974015787, Spawn)
 	AddConversationOption(conversation, "I see.  Well, thank you for your time.", "dlg_3_6")
@@ -95,7 +95,7 @@ end
 
 function dlg_4_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/hamnal_teolofin/_exp03/exp03_cty_kelethin/tutorials/qst_hamnal/qst_hamnal012.mp3", "", "", 2850757242, 2097247143, Spawn)
 	AddConversationOption(conversation, "In working with Kalamar Vesinger, I've located the Grender's lair -- beneath Kelethin!")
@@ -104,7 +104,7 @@ end
 
 function dlg_4_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/hamnal_teolofin/_exp03/exp03_cty_kelethin/tutorials/qst_hamnal/qst_hamnal013.mp3", "", "", 1457571777, 1576417874, Spawn)
 	AddConversationOption(conversation, "Jalmari wants your advice on the matter.", "dlg_4_3")
@@ -113,7 +113,7 @@ end
 
 function dlg_4_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/hamnal_teolofin/_exp03/exp03_cty_kelethin/tutorials/qst_hamnal/qst_hamnal014.mp3", "", "", 2206859761, 150584229, Spawn)
 	AddConversationOption(conversation, "Thank you!", "dlg_4_4")

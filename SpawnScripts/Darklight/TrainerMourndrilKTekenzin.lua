@@ -11,7 +11,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)
@@ -22,22 +22,22 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 		PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_1_1008.mp3", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "What can cause my death? ", "dlg_5_1")
 	StartConversation(conversation, NPC, Spawn, "In time, all must fall. Allow me to teach you the consequences of death and how you can recover properly.")
-	if convo==11 then
-		PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_2_1008.mp3", "", "", 0, 0, Spawn)
-		AddConversationOption(conversation, "What can cause my death? ", "dlg_11_1")
-		StartConversation(conversation, NPC, Spawn, "In time, all must fall. Allow me to teach you the consequences of death and how you can recover properly.")
-	end
+	--if convo==11 then
+	--	PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_2_1008.mp3", "", "", 0, 0, Spawn)
+	--	AddConversationOption(conversation, "What can cause my death? ", "dlg_11_1")
+	--	StartConversation(conversation, NPC, Spawn, "In time, all must fall. Allow me to teach you the consequences of death and how you can recover properly.")
+	--end
 
 end
 
 function dlg_5_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "How will I know when I'm going to die?", "dlg_5_2")
@@ -46,7 +46,7 @@ end
 
 function dlg_5_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Why green?", "dlg_5_3")
@@ -55,7 +55,7 @@ end
 
 function dlg_5_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "What happens then?", "dlg_5_4")
@@ -65,7 +65,7 @@ end
 
 function dlg_5_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "So death is not the end?", "dlg_5_5")
@@ -74,7 +74,7 @@ end
 
 function dlg_5_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "What are the consequences?", "dlg_5_6")
@@ -83,7 +83,7 @@ end
 
 function dlg_5_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "What is experience debt?", "dlg_5_7")
@@ -93,7 +93,7 @@ end
 
 function dlg_5_7(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "What is revive sickness like?", "dlg_5_8")
@@ -102,7 +102,7 @@ end
 
 function dlg_5_8(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "What are the results of item damage?", "dlg_5_9")
@@ -111,7 +111,7 @@ end
 
 function dlg_5_9(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "What can I do about item damage?", "dlg_5_10")
@@ -120,7 +120,7 @@ end
 
 function dlg_5_10(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Thank you for your advice.", "dlg_5_11")
@@ -129,7 +129,7 @@ end
 
 function dlg_11_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "How will I know when I'm going to die?", "dlg_11_2")
@@ -138,7 +138,7 @@ end
 
 function dlg_11_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Why green?", "dlg_11_3")
@@ -147,7 +147,7 @@ end
 
 function dlg_11_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "What happens then?", "dlg_11_4")
@@ -157,7 +157,7 @@ end
 
 function dlg_11_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "So death is not the end?", "dlg_11_5")
@@ -166,7 +166,7 @@ end
 
 function dlg_11_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "What are the consequences?", "dlg_11_6")
@@ -175,7 +175,7 @@ end
 
 function dlg_11_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "What is experience debt?", "dlg_11_7")
@@ -185,7 +185,7 @@ end
 
 function dlg_11_7(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "What is revive sickness like?", "dlg_11_8")
@@ -194,7 +194,7 @@ end
 
 function dlg_11_8(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "What are the results of item damage?", "dlg_11_9")
@@ -203,7 +203,7 @@ end
 
 function dlg_11_9(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "What can I do about item damage?", "dlg_11_10")
@@ -212,7 +212,7 @@ end
 
 function dlg_11_10(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Thank you for your advice.", "dlg_11_11")

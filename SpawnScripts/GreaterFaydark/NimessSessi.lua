@@ -11,7 +11,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)
@@ -22,37 +22,37 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 		PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_3_1006.mp3", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Nothing, thanks.", "dlg_3_1")
 	StartConversation(conversation, NPC, Spawn, "Greetings! Is there something I can do for you?")
-	if convo==67 then
-		PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_2_1006.mp3", "", "", 0, 0, Spawn)
-		AddConversationOption(conversation, "I was told to speak with you about becoming a citizen of Kelethin.", "dlg_67_1")
-		AddConversationOption(conversation, "Nothing, thanks.")
-		StartConversation(conversation, NPC, Spawn, "Greetings! Is there something I can do for you?")
-	end
+	--if convo==67 then
+	--	PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_2_1006.mp3", "", "", 0, 0, Spawn)
+	--	AddConversationOption(conversation, "I was told to speak with you about becoming a citizen of Kelethin.", "dlg_67_1")
+	--	AddConversationOption(conversation, "Nothing, thanks.")
+	--	StartConversation(conversation, NPC, Spawn, "Greetings! Is there something I can do for you?")
+	--end
 
-	if convo==68 then
-		PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_3_1006.mp3", "", "", 0, 0, Spawn)
-		AddConversationOption(conversation, "I want to know more about becoming a citizen of Kelethin.", "dlg_68_1")
-		AddConversationOption(conversation, "Nothing, thanks.")
-		StartConversation(conversation, NPC, Spawn, "Greetings! Is there something I can do for you?")
-	end
+	--if convo==68 then
+	--	PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_3_1006.mp3", "", "", 0, 0, Spawn)
+	--	AddConversationOption(conversation, "I want to know more about becoming a citizen of Kelethin.", "dlg_68_1")
+	--	AddConversationOption(conversation, "Nothing, thanks.")
+	--	StartConversation(conversation, NPC, Spawn, "Greetings! Is there something I can do for you?")
+	--end
 
-	if convo==69 then
-		PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_2_1006.mp3", "", "", 0, 0, Spawn)
-		AddConversationOption(conversation, "I want to know more about becoming a citizen of Kelethin.", "dlg_69_1")
-		AddConversationOption(conversation, "Nothing, thanks.")
-		StartConversation(conversation, NPC, Spawn, "Greetings! Is there something I can do for you?")
-	end
+	--if convo==69 then
+	--	PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_2_1006.mp3", "", "", 0, 0, Spawn)
+	--	AddConversationOption(conversation, "I want to know more about becoming a citizen of Kelethin.", "dlg_69_1")
+	--	AddConversationOption(conversation, "Nothing, thanks.")
+	--	StartConversation(conversation, NPC, Spawn, "Greetings! Is there something I can do for you?")
+	--end
 
 end
 
 function dlg_67_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "But I'm Fae! Why must I go through this process, too?", "dlg_67_2")
@@ -62,7 +62,7 @@ end
 
 function dlg_67_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Not me!")
@@ -74,7 +74,7 @@ end
 
 function dlg_68_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "But I'm Fae! Why must I go through this process, too?", "dlg_68_2")
@@ -84,7 +84,7 @@ end
 
 function dlg_68_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "I'm definitely staying!", "dlg_68_3")
@@ -94,7 +94,7 @@ end
 
 function dlg_68_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Not me!", "dlg_68_4")
@@ -106,7 +106,7 @@ end
 
 function dlg_68_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Oh, all right.  No, I'm not afraid of heights.")
@@ -115,7 +115,7 @@ end
 
 function dlg_69_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "But I'm Fae! Why must I go through this process, too?", "dlg_69_2")
@@ -125,7 +125,7 @@ end
 
 function dlg_69_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "I'm definitely staying!", "dlg_69_3")
@@ -135,7 +135,7 @@ end
 
 function dlg_69_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Not me!", "dlg_69_4")
@@ -147,7 +147,7 @@ end
 
 function dlg_69_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "That's a little comforting.")
@@ -156,7 +156,7 @@ end
 
 function dlg_69_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "That's very comforting.", "dlg_69_6")
@@ -165,7 +165,7 @@ end
 
 function dlg_69_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Oh, come on! Now you ARE pulling my wings!", "dlg_69_7")
@@ -177,7 +177,7 @@ end
 
 function dlg_69_7(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Thanks!", "dlg_69_8")

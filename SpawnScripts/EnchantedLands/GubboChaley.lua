@@ -1,6 +1,6 @@
 --[[
 	Script Name	: SpawnScripts/EnchantedLands/GubboChaley.lua
-	Script Purpose	: Gubbo Chaley 
+	Script Purpose	: Gubbo Chaley
 	Script Author	: Cynnar
 	Script Date	: 2015.04.01
 	Script Notes	: Auto-Generated Conversation from PacketParser Data
@@ -13,7 +13,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)
@@ -22,8 +22,8 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
-	
+	local conversation = CreateConversation()
+
 	if HasQuest(Spawn, LousyFairies) and GetQuestStep(Spawn, LousyFairies) == 1 then
 		PlayFlavor(NPC, "voiceover/english/gubbo_chaley/enchanted/gubbo_chaley/gubbo_chaley003.mp3", "", "", 2620521649, 511313166, Spawn)
 		AddConversationOption(conversation, "Settle down.")
@@ -31,7 +31,7 @@ function hailed(NPC, Spawn)
 	elseif HasQuest(Spawn, LousyFairies) and GetQuestStep(Spawn, LousyFairies) == 2 then
 		SetStepComplete(Spawn, LousyFairies, 2)
 		AddConversationOption(conversation, "Yes.", "dlg_0_1")
-		StartConversation(conversation, QuestGiver, Player, "Uh ... so you killed them fairies, yeah?")
+		StartConversation(conversation, NPC, Spawn, "Uh ... so you killed them fairies, yeah?")
 	elseif not HasCompletedQuest(Spawn, LousyFairies) and not HasQuest(Spawn, LousyFairies) then
 		PlayFlavor(NPC, "voiceover/english/gubbo_chaley/enchanted/gubbo_chaley/gubbo_chaley001.mp3", "", "", 1577103216, 3792943385, Spawn)
 		AddConversationOption(conversation, "Sure.", "dlg_0_2")
@@ -46,7 +46,7 @@ end
 
 function dlg_0_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	SetStepComplete(Spawn, LousyFairies, 2)
 	PlayFlavor(NPC, "voiceover/english/gubbo_chaley/enchanted/gubbo_chaley/gubbo_chaley005.mp3", "", "", 2881662034, 1373874040, Spawn)
 	AddConversationOption(conversation, "Right.")

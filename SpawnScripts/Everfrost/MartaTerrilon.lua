@@ -2,8 +2,8 @@
     Script Name    : SpawnScripts/Everfrost/MartaTerrilon.lua
     Script Author  : Flunklesnarkin
     Script Date    : 2015.09.04 10:09:19
-    Script Purpose : 
-                   : 
+    Script Purpose :
+                   :
 --]]
 
 local Marta_Terrilons_Fur_Hunt = 161
@@ -14,7 +14,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-         spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)
@@ -25,12 +25,12 @@ end
 
 function hailed(NPC, Spawn)
     FaceTarget(NPC, Spawn)
-    
+
 	if HasQuest(Spawn, Marta_Terrilons_Fur_Hunt) == false and HasCompletedQuest(Spawn, Marta_Terrilons_Fur_Hunt) == false then
              Quest1Chat_1(NPC, Spawn)
-	elseif GetQuestStep(Spawn, Marta_Terrilons_Fur_Hunt) == 1 then 
+	elseif GetQuestStep(Spawn, Marta_Terrilons_Fur_Hunt) == 1 then
              Quest1Chat_2(NPC, Spawn)
-	elseif GetQuestStep(Spawn, Marta_Terrilons_Fur_Hunt) == 2 then 
+	elseif GetQuestStep(Spawn, Marta_Terrilons_Fur_Hunt) == 2 then
              Quest1Chat_3(NPC, Spawn)
 	elseif HasQuest(Spawn, Marta_Terrilons_Fur_Hunt) == false and HasCompletedQuest(Spawn, Marta_Terrilons_Fur_Hunt) == true then
 	     local count = GetQuestCompleteCount(Spawn, Marta_Terrilons_Fur_Hunt)
@@ -40,7 +40,7 @@ function hailed(NPC, Spawn)
                   Quest1Chat_5(NPC, Spawn)
              end
 	end
-end	
+end
 
 
 function Quest1Chat_1(NPC, Spawn)
@@ -54,7 +54,7 @@ end
 
 function Quest1Chat_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "You got it.")
 	StartConversation(conversation, NPC, Spawn, "I'm going to require more furs than that!  Please come back when you have some more!")
@@ -63,7 +63,7 @@ end
 function Quest1Chat_3(NPC, Spawn)
         SetStepComplete(Spawn, Marta_Terrilons_Fur_Hunt, 2)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "Thanks.")
 	StartConversation(conversation, NPC, Spawn, "These furs will do quite nicely!  Well done, please take this in compensation for your efforts.")
@@ -72,7 +72,7 @@ end
 
 function Quest1Chat_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "Sure!", "Offer_Marta_Terrilons_Fur_Hunt")
 	AddConversationOption(conversation, "Not right now.")
@@ -105,7 +105,7 @@ function Offer_Marta_Terrilons_Fur_Hunt(NPC, Spawn)
 
 	    AddConversationOption(conversation, "I'll be back with the furs.")
 	    StartConversation(conversation, NPC, Spawn, "Great! Here's a list of what I need now.  Bring me the most pristine furs that you can and you'll be well-rewarded.")
-	    
+
 	end
 
 end

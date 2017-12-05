@@ -3,7 +3,7 @@
 	Script Purpose	:	for the quest "Seeking Elemental Education"
 	Script Author	:	theFoof
 	Script Date		:	2013.6.13
-	Script Notes	:	
+	Script Notes	:
 
 	Zone			:	Frostfang Sea
 	Quest Giver		:	Thirin Veliumdelver
@@ -19,7 +19,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(QuestGiver, "thirin_veliumdelver/halas/cragged_spine/thirin_veliumdelver_cave018.mp3", "", "", 706555413, 2480131387, Player)
 	AddConversationOption(conversation, "I will do this, for Ordin.", "ExtraChat")
@@ -29,7 +29,7 @@ end
 
 function ExtraChat(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(QuestGiver, "thirin_veliumdelver/halas/cragged_spine/thirin_veliumdelver_cave019.mp3", "", "", 1580967348, 3299722606, Player)
 	AddConversationOption(conversation, "You too, Thirin.  You too.")

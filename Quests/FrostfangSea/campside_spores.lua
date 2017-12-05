@@ -3,7 +3,7 @@
 	Script Purpose	:	the quest Campside Spores
 	Script Author	:	theFoof
 	Script Date		:	2013.6.24
-	Script Notes	:	
+	Script Notes	:
 
 	Zone			:	Frostfang Sea
 	Quest Giver		:   Odon Scourgeson
@@ -18,9 +18,9 @@ function Init(Quest)
 end
 
 function Accepted(Quest, QuestGiver, Player)
-	SummonItem(Player, 45807) 
+	SummonItem(Player, 45807)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(QuestGiver, "odon_scourgeson/halas/cragged_spine/odon_scourgeson_028.mp3", "", "", 2284024418, 845774504, Player)
 	AddConversationOption(conversation, "I will.")

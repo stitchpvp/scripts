@@ -3,9 +3,9 @@ function spawn(NPC)
  waypoints(NPC)
 end
 
-function hailed(NPC, Spawn) 
-  FaceTarget(NPC, Spawn) 
-end 
+function hailed(NPC, Spawn)
+  FaceTarget(NPC, Spawn)
+end
 
 function aggro(NPC, Spawn)
  generic_aggro(NPC, Spawn)
@@ -24,7 +24,7 @@ function death(NPC, Spawn)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function waypoints(NPC)

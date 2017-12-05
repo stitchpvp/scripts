@@ -3,14 +3,14 @@
 	Script Purpose	: Nariel Aldaeme <Portals Trainer>
 	Script Author	: theFoof
 	Script Date	: 2013.09.24
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)

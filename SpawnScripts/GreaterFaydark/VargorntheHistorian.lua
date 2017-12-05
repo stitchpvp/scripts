@@ -1,6 +1,6 @@
 --[[
 	Script Name	: SpawnScripts/GreaterFaydark/VargorntheHistorian.lua
-	Script Purpose	: Vargorn the Historian 
+	Script Purpose	: Vargorn the Historian
 	Script Author	: John Adams
 	Script Date	: 2009.03.01
 	Script Notes	: Auto-Generated Conversation from PacketParser Data
@@ -11,7 +11,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)
@@ -22,7 +22,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 		PlayFlavor(NPC, "vargorn_the_historian/_exp03/exp03_rgn_greater_faydark/vargorn_the_historian/vargorn001.mp3", "", "", 308911171, 691504057, Spawn)
 	AddConversationOption(conversation, "I'm not going to hit you. I didn't think orcs had scholars.", "dlg_3_1")
@@ -32,7 +32,7 @@ end
 
 function dlg_3_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "vargorn_the_historian/_exp03/exp03_rgn_greater_faydark/vargorn_the_historian/vargorn002.mp3", "", "", 3408288477, 2844321717, Spawn)
 	AddConversationOption(conversation, "What use is history to a people bent on conquest?", "dlg_3_2")
@@ -42,7 +42,7 @@ end
 
 function dlg_3_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "vargorn_the_historian/_exp03/exp03_rgn_greater_faydark/vargorn_the_historian/vargorn003.mp3", "", "", 4079716341, 594828245, Spawn)
 	AddConversationOption(conversation, "What do you mean?", "dlg_3_3")
@@ -52,7 +52,7 @@ end
 
 function dlg_3_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "vargorn_the_historian/_exp03/exp03_rgn_greater_faydark/vargorn_the_historian/vargorn004.mp3", "", "", 2082002835, 357817721, Spawn)
 	AddConversationOption(conversation, "What kind of conflicts?", "dlg_3_4")
@@ -62,7 +62,7 @@ end
 
 function dlg_3_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "vargorn_the_historian/_exp03/exp03_rgn_greater_faydark/vargorn_the_historian/vargorn005.mp3", "", "", 3599587592, 3365249265, Spawn)
 	AddConversationOption(conversation, "What sort of papers?", "dlg_3_5")
@@ -72,7 +72,7 @@ end
 
 function dlg_3_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "vargorn_the_historian/_exp03/exp03_rgn_greater_faydark/vargorn_the_historian/vargorn006.mp3", "", "", 776831458, 368161193, Spawn)
 	AddConversationOption(conversation, "I will go talk to him.", "dlg_3_6")

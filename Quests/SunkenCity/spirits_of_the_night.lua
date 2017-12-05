@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "Spirits of the Night"
 	Script Author	: Scatman
 	Script Date	    : 2009.07.28
-	
+
 	Zone       : Sunken City
 	Quest Giver: Inquisitor Thorson
 	Preceded by: A Flowing Conversation (a_flowing_conversation.lua)
@@ -17,7 +17,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "I will return.")
 	StartConversation(conversation, QuestGiver, Player, "The undead walk just ahead, though some lurk a bit farther in. Remember, more of these ghastly creatures can be found after night falls. Return to me when you have their essences.")
@@ -29,7 +29,7 @@ end
 function Step1_Complete_KilledSkeletons(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 1, "I have obtained four spectral essences from the undead.")
 	UpdateQuestTaskGroupDescription(Quest, 1, "I have defeated undead creatures and collected their spectral essences.")
-	
+
 	AddQuestStepChat(Quest, 2, "I should take the spectral essences to Inquisitor Thorson.", 1, "I need to return to Inquisitor Thorson and give him the essences.", 0, 1240007)
 	AddQuestStepCompleteAction(Quest, 2, "Quest_Complete")
 end

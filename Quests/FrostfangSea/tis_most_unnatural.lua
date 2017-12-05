@@ -3,7 +3,7 @@
 	Script Purpose	:	for the quest "'Tis Most Unnatural"
 	Script Author	:	theFoof
 	Script Date		:	2013.5.31
-	Script Notes	:	
+	Script Notes	:
 
 	Zone			:	Frostfang Sea
 	Quest Giver		:	Belka Thunderheart
@@ -19,7 +19,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(QuestGiver, "", "", "", 0, 0, Player)
 	AddConversationOption(conversation, "I will return.")

@@ -3,7 +3,7 @@
 	Script Purpose	:	for the crystal geodes in the quest "Geode Caching"
 	Script Author	:	theFoof
 	Script Date		:	2013.6.15
-	Script Notes	:	
+	Script Notes	:
 --]]
 
 local GeodeCaching = 69
@@ -14,7 +14,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function casted_on(NPC, Spawn, SpellName)

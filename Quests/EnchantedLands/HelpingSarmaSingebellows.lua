@@ -23,23 +23,23 @@ function Init(Quest)
 end
 
 function Accepted(Quest, QuestGiver, Player)
-	
+
 	if GetTempVariable(Player, "HelpingSarmaSingebellows") == "true" then
-		PlayFlavor(NPC, "voiceover/english/sarma_singebellows/enchanted/sarma_singebellows002.mp3", "", "", 2943069626, 2445316031, Spawn)
+		PlayFlavor(QuestGiver, "voiceover/english/sarma_singebellows/enchanted/sarma_singebellows002.mp3", "", "", 2943069626, 2445316031, Player)
 		AddConversationOption(conversation, "I shall return when they are destroyed.")
-		StartConversation(conversation, NPC, Spawn, "Excellent!  You worked hard to kill all of those goblins, but we need to make sure they don't regain their foothold.")
+		StartConversation(conversation, QuestGiver, Player, "Excellent!  You worked hard to kill all of those goblins, but we need to make sure they don't regain their foothold.")
 	else
-		PlayFlavor(NPC, "voiceover/english/sarma_singebellows/enchanted/sarma_singebellows002.mp3", "", "", 2943069626, 2445316031, Spawn)
+		PlayFlavor(QuestGiver, "voiceover/english/sarma_singebellows/enchanted/sarma_singebellows002.mp3", "", "", 2943069626, 2445316031, Player)
 		AddConversationOption(conversation, "As you wish.")
-		StartConversation(conversation, NPC, Spawn, "Excellent! Goblins are tainting the water and withering the trees at a watermill by a nearby lake.  I want you to destroy as many of them as you can!")
+		StartConversation(conversation, QuestGiver, Player, "Excellent! Goblins are tainting the water and withering the trees at a watermill by a nearby lake.  I want you to destroy as many of them as you can!")
 	end
-	
+
 	SetTempVariable(Player, "HelpingSarmaSingebellows", nil)
-	
+
 	if GetQuestFlags(Quest) == 0 then
 		local quantity = math.random(8, 12)
 		local flags = 0
-		
+
 		if quantity == 8 then
 			flags = flags + kill8
 		elseif quantity == 9 then
@@ -51,10 +51,10 @@ function Accepted(Quest, QuestGiver, Player)
 		elseif quantity == 12 then
 			flags = flags + kill12
 		end
-		
+
 		SetQuestFlags(Quest, flags)
 		SetStep(Quest, Player, quantity)
-		
+
 	else -- need the else for /reload quest
 		CheckBitMask(Quest, Player, GetQuestFlags(Quest))
 	end
@@ -66,7 +66,7 @@ end
 
 function CheckBitMask(Quest, Player, Flags)
 	local quantity = 0
-	
+
 	if hasflag(Flags, kill8) then
 		quantity = 8
 	elseif hasflag(Flags, kill9) then
@@ -78,7 +78,7 @@ function CheckBitMask(Quest, Player, Flags)
 	elseif hasflag(Flags, kill12) then
 		quantity = 12
 	end
-	
+
 	SetStep(Quest, Player, quantity)
 end
 
@@ -94,7 +94,7 @@ function SetStep(Quest, Player, quantity)
 	elseif quantity == 12 then
 		AddQuestStepKill(Quest, 1, "Hunt some goblins in the Enchanted Lands", quantity, 100, "I need to kill as many goblins as I am able to prevent them from tainting this land further. I need to slay more goblins!", 159, 390028, 390018, 390002, 390006, 390151, 390154, 390003, 390029)
 	end
-	
+
 	AddQuestStepCompleteAction(Quest, 1, "Step1Complete")
 end
 
@@ -102,7 +102,7 @@ function Step1Complete(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 1, "I have killed quite a few goblins, I should report back to Sarma Singebellows now.")
 	AddQuestStepChat(Quest, 2, "I need to speak to Sarma Singebellows in the Enchanted Lands.", 1, "I need to kill as many goblins as I am able to prevent them from tainting this land further. I need to slay more goblins!", 0, 390181)
 	AddQuestStepCompleteAction(Quest, 2, "QuestReward")
-	
+
 end
 
 function Deleted(Quest, QuestGiver, Player)

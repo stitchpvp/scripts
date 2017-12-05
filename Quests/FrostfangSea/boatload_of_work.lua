@@ -63,4 +63,4 @@ function Reload(Quest, QuestGiver, Player, Step)
 	    SetBarricade(Quest, QuestGiver, Player)
 	end
 end
-		
+

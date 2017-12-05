@@ -13,13 +13,13 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
-	
+	local conversation = CreateConversation()
+
 	if HasCompletedQuest(Spawn, QUEST_1) then
 		Say(NPC, "Everything counts in all amounts.", Spawn)
 	elseif HasQuest(Spawn, QUEST_1) then
@@ -46,21 +46,21 @@ end
 
 function HaveYouFreedThem(NPC, Spawn, conversation)
 	PlayFlavor(NPC, "voiceover/english/rok_questvo/bezok_myli_ki/_exp04/exp04_rgn_timorous_deep/chrykori_tie/myliki/myliki002.mp3", "", "", 2957815254, 2149733637, Spawn)
-	
+
 	if HasQuest(Spawn, QUEST_1) and GetQuestStep(Spawn, QUEST_1) == 2 then
 		AddConversationOption(conversation, "Yes, they have fled to Chrykori Village.", "dlg_14_1")
 	else
 		AddConversationOption(conversation, "Not yet.")
 	end
-	
+
 	StartConversation(conversation, NPC, Spawn, "Have you freed them?")
 end
 
 function dlg_14_1(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_1, 2)
-	
+
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/rok_questvo/bezok_myli_ki/_exp04/exp04_rgn_timorous_deep/chrykori_tie/myliki/myliki003.mp3", "", "", 344889731, 1839794732, Spawn)
 	AddConversationOption(conversation, "You're welcome.")

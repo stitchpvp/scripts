@@ -2,12 +2,12 @@
     Script Name    : Quests/ThunderingSteppes/DesperatelySeekingAnts.lua
     Script Author  : XionnaeEQ
     Script Date    : 2016.07.17 06:07:19
-    Script Purpose : 
+    Script Purpose :
 
         Zone       : ThunderingSteppes
-        Quest Giver: 
+        Quest Giver:
         Preceded by: None
-        Followed by: 
+        Followed by:
 --]]
 
 function Init(Quest)

@@ -1,9 +1,9 @@
 --[[
 	Script Name	: SpawnScripts/SunkenCity/GerbardtheSnitch.lua
-	Script Purpose	: Gerbard the Snitch 
+	Script Purpose	: Gerbard the Snitch
 	Script Author	: scatman
 	Script Date	: 2009.08.01
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 local QUEST_1 = 275
@@ -13,12 +13,12 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	if not HasCompletedQuest(Spawn, QUEST_1) then
 		if HasQuest(Spawn, QUEST_1) then
@@ -37,7 +37,7 @@ end
 
 function dlg_3_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/gerbard_the_snitch/fprt_adv01_sunken/gerbard_the_snitch001.mp3", "", "", 2460257667, 2197101465, Spawn)
 	AddConversationOption(conversation, "I'll do it, whats involved?", "OfferQuest1")
@@ -52,9 +52,9 @@ end
 
 function dlg_8_1(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_1, 2)
-	
+
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/gerbard_the_snitch/fprt_adv01_sunken/gerbard_the_snitch003.mp3", "", "", 1766615640, 492599183, Spawn)
 	AddConversationOption(conversation, "Good luck.")

@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "Requesting Further Orders"
 	Script Author	: Scatman
 	Script Date	    : 2009.08.02
-	
+
 	Zone       : The Ruins
 	Quest Giver: Lieutenant Argosian
 	Preceded by: Prophet and Loss (prophet_and_loss.lua)
@@ -17,7 +17,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(QuestGiver, "voiceover/english/tutorial_revamp/lieutenant_argosian/fprt_adv04_ruins/revamp/lieutenant_argosian027b.mp3", "", "", 3190269915, 3618413640, Player)
 	AddConversationOption(conversation, "I will.")

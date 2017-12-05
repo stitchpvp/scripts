@@ -1,6 +1,6 @@
 --[[
 	Script Name	: SpawnScripts/Oakmyst/TrackerGalera.lua
-	Script Purpose	: Tracker Galera 
+	Script Purpose	: Tracker Galera
 	Script Author	: scatman
 	Script Date	: 2009.05.08
 	Script Notes	: Auto-Generated Conversation from PacketParser Data
@@ -21,12 +21,12 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tracker_galera/qey_adv01_oakmyst/trackergalera000.mp3", "", "", 3127596944, 436493991, Spawn)
 	AddConversationOption(conversation, "Who or what is a Ferith'Anar?  ", "dlg_1_1")
@@ -43,9 +43,9 @@ end
 
 function dlg_17_1(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_FROM_STEWARD_TREDO, 2)
-	
+
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tracker_galera/qey_adv01_oakmyst/trackergalera002.mp3", "", "", 155245446, 3356947108, Spawn)
 	AddConversationOption(conversation, "May the creatures of Oakmyst roam safely.")
@@ -58,7 +58,7 @@ end
 
 function dlg_1_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tracker_galera/qey_adv01_oakmyst/trackergalera001.mp3", "", "", 2151056607, 2801091083, Spawn)
 	AddConversationOption(conversation, "I shall respect this unicorn. Farewell.")

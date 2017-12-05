@@ -5,7 +5,7 @@
     Script Purpose : Handles the quest "Into the Tainted Forest"
 
         Zone       : Queen's Colony
-        Quest Giver: 
+        Quest Giver:
         Preceded by: A Presence of Evil (a_presence_of_evil.lua)
         Followed by: Joining the Forward Ranks (joining_the_forward_ranks.lua)
 --]]
@@ -33,14 +33,14 @@ end
 function step1_completed_talkedToPredator(Quest, QuestGiver, Player)
     UpdateQuestStepDescription(Quest, 1, "I found Predator Sha'dur. He was distraught about losing his bow and arrows.")
     UpdateQuestTaskGroupDescription(Quest, 1, "I found Predator Sha'dur. He was distraught about losing his bow and arrows.")
-    AddQuestStepKill(Quest, 2, "One of the nearby Sapswill tappers should have Sha'dur's bow.", 1, 25, "Predator Sha'dur is down on his luck and has lost his bow and arrows. I am to find the goblins that took his bow and get it back through any means necessary.", 629, 2530094, 2530104) 
+    AddQuestStepKill(Quest, 2, "One of the nearby Sapswill tappers should have Sha'dur's bow.", 1, 25, "Predator Sha'dur is down on his luck and has lost his bow and arrows. I am to find the goblins that took his bow and get it back through any means necessary.", 629, 2530094, 2530104)
     AddQuestStepCompleteAction(Quest, 2, "step2_complete_killedTapper")
 end
 
 function step2_complete_killedTapper(Quest, QuestGiver, Player)
     UpdateQuestStepDescription(Quest, 2, "I was able to reclaim Sha'dur's Bow from a group of goblins in the Tainted Forest.")
     UpdateQuestTaskGroupDescription(Quest, 2, "I was able to reclaim Sha'dur's Bow from a group of goblins in the Tainted Forest.")
-    AddQuestStepChat(Quest, 3, "Return the bow to Predator Sha'dur.", 1, "I found Sha'dur's bow off a nearby Sapswill tapper. I should return the bow to him.", 0, 2530091) 
+    AddQuestStepChat(Quest, 3, "Return the bow to Predator Sha'dur.", 1, "I found Sha'dur's bow off a nearby Sapswill tapper. I should return the bow to him.", 0, 2530091)
     AddQuestStepCompleteAction(Quest, 3, "step3_completed_talkedToPredator")
 end
 
@@ -54,14 +54,14 @@ end
 function step4_complete_gotSticks(Quest, QuestGiver, Player)
     UpdateQuestStepDescription(Quest, 4, "I gathered enough piles of sticks to provide enough wood for Sha'dur to make new arrows.")
     UpdateQuestTaskGroupDescription(Quest, 4, "I gathered enough piles of sticks to provide enough wood for Sha'dur to make new arrows.")
-    AddQuestStepChat(Quest, 5, "Take the wood back to Predator Sha'dur.", 1, "I need to take the wood back to Predator Sha'dur.", 0, 2530091) 
+    AddQuestStepChat(Quest, 5, "Take the wood back to Predator Sha'dur.", 1, "I need to take the wood back to Predator Sha'dur.", 0, 2530091)
     AddQuestStepCompleteAction(Quest, 5, "step5_complete_talkedToPredator")
 end
 
 function step5_complete_talkedToPredator(Quest, QuestGiver, Player)
     UpdateQuestStepDescription(Quest, 5, "I gathered enough piles of sticks to provide enough wood for Sha'dur to make new arrows.")
     UpdateQuestTaskGroupDescription(Quest, 5, "I gathered enough piles of sticks to provide enough wood for Sha'dur to make new arrows.")
-    AddQuestStepChat(Quest, 6, "Take the samples back to Murrar Shar.", 1, "Predator Sha'dur was able to collect a few samples before he lost his gear. I need to take these samples back to Murrar Shar.", 0, 2530010) 
+    AddQuestStepChat(Quest, 6, "Take the samples back to Murrar Shar.", 1, "Predator Sha'dur was able to collect a few samples before he lost his gear. I need to take these samples back to Murrar Shar.", 0, 2530010)
     AddQuestStepCompleteAction(Quest, 6, "step6_complete_talkedToMurrar")
 end
 

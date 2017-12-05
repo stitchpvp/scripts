@@ -3,7 +3,7 @@
 	Script Purpose	:	Spirit Reaper
 	Script Author	:	FeaRFx
 	Script Date		:	2016.6.15
-	Script Notes	:	
+	Script Notes	:
 --]]
 
 local Reaping = 152

@@ -3,7 +3,7 @@
 	Script Purpose	:	for the quest "The Gauntlet"
 	Script Author	:	theFoof
 	Script Date		:	2013.5.29
-	Script Notes	:	
+	Script Notes	:
 
 	Zone			:	Frostfang Sea
 	Quest Giver		:	Dolur Axebeard
@@ -19,7 +19,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(QuestGiver, "dolur_axebeard/halas/great_shelf/dolur_axebeard/dolur_axebeard069.mp3", "", "", 269705072, 2630405776, Player)
 	AddConversationOption(conversation, "Of course.")

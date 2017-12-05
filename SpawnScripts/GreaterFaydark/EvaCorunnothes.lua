@@ -11,7 +11,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)
@@ -22,24 +22,24 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 		PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_2_1053.mp3", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "You're Tunare's prophet.", "dlg_19_1")
 	AddConversationOption(conversation, "I'm sorry to bother you.  Excuse me.")
 	StartConversation(conversation, NPC, Spawn, "Tunare's blessings be with you.  How may I assist you?")
-	if convo==20 then
-		PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_3_1053.mp3", "", "", 0, 0, Spawn)
-		AddConversationOption(conversation, "You're Tunare's prophet.", "dlg_20_1")
-		AddConversationOption(conversation, "I'm sorry to bother you.  Excuse me.")
-		StartConversation(conversation, NPC, Spawn, "Tunare's blessings be with you.  How may I assist you?")
-	end
+	--if convo==20 then
+	--	PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_3_1053.mp3", "", "", 0, 0, Spawn)
+	--	AddConversationOption(conversation, "You're Tunare's prophet.", "dlg_20_1")
+	--	AddConversationOption(conversation, "I'm sorry to bother you.  Excuse me.")
+	--	StartConversation(conversation, NPC, Spawn, "Tunare's blessings be with you.  How may I assist you?")
+	--end
 
 end
 
 function dlg_19_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Yes.", "dlg_19_2")
@@ -50,7 +50,7 @@ end
 
 function dlg_19_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "How can I follow Tunare?")
@@ -60,7 +60,7 @@ end
 
 function dlg_19_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "May I learn more about the Mother of All and Growth?", "dlg_19_4")
@@ -70,7 +70,7 @@ end
 
 function dlg_19_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "She is deserving of our faith.", "dlg_19_5")
@@ -81,7 +81,7 @@ end
 
 function dlg_19_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "And now she will return?")
@@ -91,7 +91,7 @@ end
 
 function dlg_19_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "I'll be on my way now.", "dlg_19_7")
@@ -100,7 +100,7 @@ end
 
 function dlg_20_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Yes.", "dlg_20_2")
@@ -111,7 +111,7 @@ end
 
 function dlg_20_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "How can I follow Tunare?", "dlg_20_3")
@@ -121,7 +121,7 @@ end
 
 function dlg_20_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "May I learn more about the Mother of All and Growth?", "dlg_20_4")
@@ -131,7 +131,7 @@ end
 
 function dlg_20_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "She is deserving of our faith.", "dlg_20_5")
@@ -142,7 +142,7 @@ end
 
 function dlg_20_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "I'll be on my way now.", "dlg_20_6")

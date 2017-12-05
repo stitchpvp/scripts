@@ -3,7 +3,7 @@
 	Script Purpose	:	the quest "Becoming Another Orcbane"
 	Script Author	:	theFoof
 	Script Date		:	2013.7.24
-	Script Notes	:	
+	Script Notes	:
 
 	Zone			:	Frostfang Sea
 	Quest Giver		:	Knut Orcbane
@@ -20,7 +20,7 @@ end
 function Accepted(Quest, QuestGiver, Player)
 	SummonItem(Player, 45453, 1)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(QuestGiver, "knut_orcbane/halas/cragged_spine/knut_orcbane_042.mp3", "", "", 3041202396, 3394706601, Player)
 	AddConversationOption(conversation, "Hurt them and then use the cadaver's dram.  Got it!")

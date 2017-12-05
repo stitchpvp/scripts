@@ -3,7 +3,7 @@
 	Script Purpose	:	wizard trainer in Halas
 	Script Author	:	theFoof
 	Script Date		:	2013.9.24
-	Script Notes	:	
+	Script Notes	:
 --]]
 
 local WIZARD = 23
@@ -12,7 +12,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
@@ -29,7 +29,7 @@ function hailed(NPC, Spawn)
 end
 
 function WizChat1(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	FaceTarget(NPC, Spawn)
 
 	AddConversationOption(conversation, "That's useful to know!", "WizChat2")
@@ -37,15 +37,15 @@ function WizChat1(NPC, Spawn)
 end
 
 function WizChat2(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	FaceTarget(NPC, Spawn)
-	
+
 	AddConversationOption(conversation, "That's interesting.", "WizChat3")
 	StartConversation(conversation, NPC, Spawn, "Know your strengths and hone them!  We can unleash the purest forms of destruction upon our foes by harnessing the arcane powers of fire and ice.  This is true whether you are battling a single opponent or a group.")
 end
 
 function WizChat3(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	FaceTarget(NPC, Spawn)
 
 	AddConversationOption(conversation, "Thank you for the advice.")

@@ -3,7 +3,7 @@
 	Script Purpose	:	makes valorian blooms ghostly
 	Script Author	:	theFoof
 	Script Date		:	2013.9.16
-	Script Notes	:	
+	Script Notes	:
 --]]
 
 function spawn(NPC)
@@ -12,5 +12,5 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end

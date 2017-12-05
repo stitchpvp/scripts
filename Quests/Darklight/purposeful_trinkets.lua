@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "Purposeful Trinkets"
 	Script Author	: Scatman
 	Script Date	: 2009.02.03
-	
+
 	Zone       : Darklight Wood
 	Quest Giver: Laexyra Y'Barriath
 	Preceded by: None
@@ -27,7 +27,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(QuestGiver, "voiceover/english/neriak/laexyra_y_barriath/darklight_wood/tvatar_post/laexyra/laexyra007.mp3", "", "", 2780056941, 3072789247, Player)
 	AddConversationOption(conversation, "I'll be back.")
@@ -39,7 +39,7 @@ end
 
 function step1_complete_gotTinkets(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 1, "I have collected the trinkets.")
-	
+
 	AddQuestStepChat(Quest, 2, "I need to return to Laexyra Y'Barriath.", 1, ".", 0, 340109)
 	AddQuestStepCompleteAction(Quest, 2, "quest_complete")
 end

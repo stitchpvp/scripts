@@ -3,17 +3,17 @@
 	Script Purpose	:	Handles the quest, "Under a Shady Tree"
 	Script Author	:	QuestParser (Replace this)
 	Script Date		:	7/8/2017
-	Script Notes	:	
+	Script Notes	:
 
 	Zone			:	Antonica
-	Quest Giver		:	
+	Quest Giver		:
 	Preceded by		:	None
 	Followed by		:	None
 --]]
 
 
 function Init(Quest)
-	AddQuestStepObtainItem(Quest, 1, "I am looking for some flowers under a shady tree.", 1, 100, "I need to gather flowers for Landwyn. He mentioned they were under a shady tree nearby.", 1943, --[[ ID's --]])
+	AddQuestStepObtainItem(Quest, 1, "I am looking for some flowers under a shady tree.", 1, 100, "I need to gather flowers for Landwyn. He mentioned they were under a shady tree nearby.", 1943, nil)
 	AddQuestStepCompleteAction(Quest, 1, "Step1Complete")
 end
 
@@ -21,7 +21,7 @@ function Step1Complete(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 1, "I found the flowers.")
 	UpdateQuestTaskGroupDescription(Quest, 1, "I found the flowers for Landwyn.")
 
-	AddQuestStepChat(Quest, 2, "I should return these flowers to Landwyn.", 1, "I should return these flowers to Landwyn before they are wilted.", 1943, --[[ ID's --]])
+	AddQuestStepChat(Quest, 2, "I should return these flowers to Landwyn.", 1, "I should return these flowers to Landwyn before they are wilted.", 1943, nil)
 	AddQuestStepCompleteAction(Quest, 2, "QuestComplete")
 end
 

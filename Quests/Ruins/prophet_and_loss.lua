@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "prophet_and_loss.lua"
 	Script Author	: Scatman
 	Script Date	    : 2009.08.02
-	
+
 	Zone       : The Ruins
 	Quest Giver: Lieutenant Argosian
 	Preceded by: Pounding the Enemy (pounding_the_enemy.lua)
@@ -21,7 +21,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(QuestGiver, "voiceover/english/tutorial_revamp/lieutenant_argosian/fprt_adv04_ruins/revamp/lieutenant_argosian022b.mp3", "", "", 3696168160, 1150705872, Player)
 	AddConversationOption(conversation, "Yes, sir.")
@@ -33,7 +33,7 @@ end
 
 function Step1_Complete_ExaminedShrine(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 1, "I found the old shrine, which seems to be a relic of Shoreside.")
-	
+
 	if QuestIsComplete(Player, 264) then
 		KilledAllOrcs(Quest, QuestGiver, Player)
 	end
@@ -41,7 +41,7 @@ end
 
 function Step2_Complete_KilledWarriors(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 2, "I have defeated four Brokentusk warriors guarding the old shrine.")
-	
+
 	if QuestIsComplete(Player, 264) then
 		KilledAllOrcs(Quest, QuestGiver, Player)
 	end
@@ -49,7 +49,7 @@ end
 
 function Step3_Complete_KilledProphets(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 3, "I have defeated four Brokentusk prophets, but they don't seem to gain any strength from this shrine.")
-	
+
 	if QuestIsComplete(Player, 264) then
 		KilledAllOrcs(Quest, QuestGiver, Player)
 	end
@@ -57,7 +57,7 @@ end
 
 function KilledAllOrcs(Quest, QuestGiver, Player)
 	UpdateQuestTaskGroupDescription(Quest, 1, "I found the shrine and defeated the orcs guarding it.")
-	
+
 	AddQuestStepChat(Quest, 4, "I must report back to Lieutenant Argosian with news on the shrine.", 1, "I should report back to the lieutenant.", 0, 1270031)
 	AddQuestStepCompleteAction(Quest, 4, "Quest_Complete")
 end

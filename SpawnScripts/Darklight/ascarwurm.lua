@@ -2,7 +2,7 @@
     Script Name    : SpawnScripts/Darklight/ascarwurm.lua
     Script Author  : Foof
     Script Date    : 2013.11.17
-    Script Purpose : 
+    Script Purpose :
 --]]
 
 require"SpawnScripts/Generic/generic_fish_movement"
@@ -15,7 +15,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)

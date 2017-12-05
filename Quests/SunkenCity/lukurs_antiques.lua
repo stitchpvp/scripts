@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "Lukur's Antiques"
 	Script Author	: Scatman
 	Script Date	    : 2009.08.01
-	
+
 	Zone       : Sunken City
 	Quest Giver: Lukur
 	Preceded by: None
@@ -21,7 +21,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(QuestGiver, "voiceover/english/optional1/lukur/fprt_adv01_sunken/lukur002.mp3", "", "", 2636400793, 1337735741, Player)
 	AddConversationOption(conversation, "Thanks, I'll start searching the area.")
@@ -33,7 +33,7 @@ end
 
 function Step1_Complete_FoundCoins(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 1, "I found the Blood Mask.")
-	
+
 	if QuestIsComplete(Player, 276) then
 		FoundAllMasks(Quest, QuestGiver, Player)
 	end
@@ -41,7 +41,7 @@ end
 
 function Step2_Complete_FoundMask2(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 2, "I found the Shadowed Mask.")
-	
+
 	if QuestIsComplete(Player, 276) then
 		FoundAllMasks(Quest, QuestGiver, Player)
 	end
@@ -49,7 +49,7 @@ end
 
 function Step3_Complete_FoundMask3(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 3, "I found the Dawn Mask.")
-	
+
 	if QuestIsComplete(Player, 276) then
 		FoundAllMasks(Quest, QuestGiver, Player)
 	end

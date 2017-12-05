@@ -3,7 +3,7 @@
 	Script Purpose	: a mysterious machine
 	Script Author	: Scatman
 	Script Date	: 2009.10.07
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 local OAKMYST_CHARLIN_QUEST_3 = 206
@@ -17,7 +17,7 @@ function hailed(NPC, Spawn)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)

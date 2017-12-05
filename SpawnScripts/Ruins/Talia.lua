@@ -3,19 +3,19 @@
 	Script Purpose	: Talia <Armorsmith>
 	Script Author	: Scatman
 	Script Date	: 2009.08.18
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/merchant_talia_of_the_coalition/fprt_adv04_ruins/merchanttalia000.mp3", "", "", 1965549585, 3553254734, Spawn)
 	AddConversationOption(conversation, "Give me a moment.")

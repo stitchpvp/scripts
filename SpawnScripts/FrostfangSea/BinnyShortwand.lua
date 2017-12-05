@@ -3,7 +3,7 @@
 	Script Purpose	:	illusionist trainer in Halas
 	Script Author	:	theFoof
 	Script Date		:	2013.9.24
-	Script Notes	:	
+	Script Notes	:
 --]]
 
 local ILLUSIONIST = 26
@@ -12,7 +12,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
@@ -29,7 +29,7 @@ function hailed(NPC, Spawn)
 end
 
 function IlluChat1(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	FaceTarget(NPC, Spawn)
 
 	AddConversationOption(conversation, "That's useful to know!", "IlluChat2")
@@ -37,7 +37,7 @@ function IlluChat1(NPC, Spawn)
 end
 
 function IlluChat2(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	FaceTarget(NPC, Spawn)
 
 	AddConversationOption(conversation, "That's interesting.", "IlluChat3")
@@ -45,7 +45,7 @@ function IlluChat2(NPC, Spawn)
 end
 
 function IlluChat3(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	FaceTarget(NPC, Spawn)
 
 	AddConversationOption(conversation, "Thank you for the advice.")

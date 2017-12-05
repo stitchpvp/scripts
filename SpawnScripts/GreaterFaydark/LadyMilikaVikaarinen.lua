@@ -11,7 +11,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)
@@ -22,23 +22,23 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 		PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_1_1005.mp3", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "I have news of the Grender!", "dlg_6_1")
 	AddConversationOption(conversation, "Nothing in particular.  Just looking around.")
 	StartConversation(conversation, NPC, Spawn, "Greetings! What brings you into the Fae Royal Hall this day?")
-	if convo==70 then
-		PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_1_1005.mp3", "", "", 0, 0, Spawn)
-		AddConversationOption(conversation, "Nothing in particular.  Just looking around.", "dlg_70_1")
-		StartConversation(conversation, NPC, Spawn, "Greetings! What brings you into the Fae Royal Hall this day?")
-	end
+	--if convo==70 then
+	--	PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_1_1005.mp3", "", "", 0, 0, Spawn)
+	--	AddConversationOption(conversation, "Nothing in particular.  Just looking around.", "dlg_70_1")
+	--	StartConversation(conversation, NPC, Spawn, "Greetings! What brings you into the Fae Royal Hall this day?")
+	--end
 
 end
 
 function dlg_6_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Er...I don't think that's the same one.", "dlg_6_2")
@@ -47,7 +47,7 @@ end
 
 function dlg_6_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "The one that's brought disease to Greater Faydark's creatures. Its lair is directly beneath Kelethin!", "dlg_6_3")
@@ -56,7 +56,7 @@ end
 
 function dlg_6_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "I know where it is.  I'll go!", "dlg_6_4")
@@ -65,7 +65,7 @@ end
 
 function dlg_6_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "I will.", "dlg_6_5")

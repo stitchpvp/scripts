@@ -3,7 +3,7 @@
 	Script Purpose	:	the quest Geode Caching
 	Script Author	:	theFoof
 	Script Date		:	2013.6.15
-	Script Notes	:	
+	Script Notes	:
 
 	Zone			:	Frostfang Sea
 	Quest Giver		:   Hillfred Kinloch

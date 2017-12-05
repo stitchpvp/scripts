@@ -3,7 +3,7 @@
 	Script Purpose	: Brutemaster Tarden <Dreadnaught>
 	Script Author	: Scatman
 	Script Date	: 2008.09.29
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 local QUEST_2_FROM_KURDEK = 254
@@ -14,7 +14,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)
@@ -34,8 +34,8 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
-	
+	local conversation = CreateConversation()
+
 	if HasCompletedQuest(Spawn, QUEST_2_FROM_KURDEK) or (HasQuest(Spawn, QUEST_2_FROM_KURDEK) and GetQuestStep(Spawn, QUEST_2_FROM_KURDEK) > 1) then
 		PlayFlavor(NPC, "voiceover/english/tutorial_revamp/brutemaster_tarden/fprt_adv03_sprawl/quests/brutemaster_tarden010.mp3", "", "", 47575538, 2815062318, Spawn)
 		AddConversationOption(conversation, "I better, or else there will be another beating coming your way.")
@@ -52,7 +52,7 @@ end
 
 function dlg_26_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/brutemaster_tarden/fprt_adv03_sprawl/quests/brutemaster_tarden002.mp3", "", "", 3459020028, 2777845153, Spawn)
 	AddConversationOption(conversation, "You're lazy and your thugs do sloppy work. And yes, I am a Dreadnaught.", "dlg_26_2")
@@ -62,7 +62,7 @@ end
 
 function dlg_26_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/brutemaster_tarden/fprt_adv03_sprawl/quests/brutemaster_tarden003.mp3", "", "", 2261902331, 3878598451, Spawn)
 	AddConversationOption(conversation, "As a matter of fact, here's some trouble for you!", "dlg_26_3")
@@ -77,7 +77,7 @@ function dlg_26_3(NPC, Spawn)
 	AddTimer(NPC, 2000, "ResetVisualState", 1, Spawn)
 
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/brutemaster_tarden/fprt_adv03_sprawl/quests/brutemaster_tarden004.mp3", "", "", 3349447803, 1486216725, Spawn)
 	AddConversationOption(conversation, "Too bad! You won't be ready for this, either!", "dlg_26_4")
@@ -92,7 +92,7 @@ function dlg_26_4(NPC, Spawn)
 	AddTimer(NPC, 2000, "ResetVisualState", 1, Spawn)
 
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/brutemaster_tarden/fprt_adv03_sprawl/quests/brutemaster_tarden005.mp3", "", "", 187758376, 1637440927, Spawn)
 	AddConversationOption(conversation, "Tough luck, Tarden. Have some more!", "dlg_26_5")
@@ -107,7 +107,7 @@ function dlg_26_5(NPC, Spawn)
 	AddTimer(NPC, 2000, "ResetVisualState", 1, Spawn)
 
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/brutemaster_tarden/fprt_adv03_sprawl/quests/brutemaster_tarden006.mp3", "", "", 1054842300, 2763956088, Spawn)
 	AddConversationOption(conversation, "Yeah, I really am. You want more proof?", "dlg_26_6")
@@ -119,7 +119,7 @@ function dlg_26_6(NPC, Spawn)
 --make npc flinch
 --make spawn act buff
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/brutemaster_tarden/fprt_adv03_sprawl/quests/brutemaster_tarden007.mp3", "", "", 3338897580, 3124247652, Spawn)
 	AddConversationOption(conversation, "You better, or I'll have to pay you another visit.", "dlg_26_7")
@@ -129,9 +129,9 @@ end
 
 function dlg_26_7(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_2_FROM_KURDEK, 1)
-	
+
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/brutemaster_tarden/fprt_adv03_sprawl/quests/brutemaster_tarden008.mp3", "", "", 2489119910, 4279989097, Spawn)
 	AddConversationOption(conversation, "Oh, and what was that you said about the Giantslayers being the toughest gang in Freeport?", "dlg_26_8")
@@ -141,7 +141,7 @@ end
 
 function dlg_26_8(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/brutemaster_tarden/fprt_adv03_sprawl/quests/brutemaster_tarden009.mp3", "", "", 2146655303, 2356834417, Spawn)
 	AddConversationOption(conversation, "That's more like it. I'll be keeping an eye on you, Tarden.")

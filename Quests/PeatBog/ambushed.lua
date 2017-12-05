@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "Ambushed"
 	Script Author	: Scatman
 	Script Date	: 2009.05.10
-	
+
 	Zone       : The Peat Bog
 	Quest Giver: Lieutenant Dawson
 	Preceded by: Mysterious Machine (mysterious_machine.lua)
@@ -25,8 +25,8 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
-	
+	local conversation = CreateConversation()
+
 	PlayFlavor(QuestGiver, "voiceover/english/tutorial_revamp/lieutenant_dawson/qey_adv04_bog/quests/dawson/dawson011a.mp3", "", "", 3239354610, 1196418998, Player)
 	AddConversationOption(conversation, "You're welcome, and thank you.")
 	StartConversation(conversation, QuestGiver, Player, "Thank you for your help, be safe.")
@@ -53,7 +53,7 @@ end
 
 function Step3_Complete_Site3(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 3, "I have investigated the ambush site in the southern end of the area east of Two Logs Pond.")
-	
+
 	if QuestIsComplete(Player, 217) then
 		Multiple_Steps_Complete(Quest, QuestGiver, Player)
 	end
@@ -61,14 +61,14 @@ end
 
 function Multiple_Steps_Complete(Quest, QuestGiver, Player)
 	UpdateQuestTaskGroupDescription(Quest, 1, "I have investigated all three ambush sites.")
-	
+
 	-- a gnoll paw
 	if not HasItem(Player, 1711) then
 		SummonItem(Player, 1711)
 		SendMessage(Player, "You receieve [a gnoll paw].", "yellow")
 	end
 
-	AddQuestStepChat(Quest, 4, "I need to return to Lieutenant Dawson.", 1, "I need to tell Lieutenant Dawson of what I found at one of the ambush sites.", 0, 1980022) 
+	AddQuestStepChat(Quest, 4, "I need to return to Lieutenant Dawson.", 1, "I need to tell Lieutenant Dawson of what I found at one of the ambush sites.", 0, 1980022)
 	AddQuestStepCompleteAction(Quest, 4, "QuestComplete")
 end
 
@@ -77,7 +77,7 @@ function QuestComplete(Quest, QuestGiver, Player)
 	while HasItem(Player, 1711) do
 		RemoveItem(Player, 1711)
 	end
-	
+
 	UpdateQuestDescription(Quest, "I found evidence of gnolls at one of the ambush sites.")
 	GiveQuestReward(Quest, Player)
 end

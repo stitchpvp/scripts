@@ -1,6 +1,6 @@
 --[[
 	Script Name	: SpawnScripts/EnchantedLands/AuginDrodo.lua
-	Script Purpose	: Augin Drodo 
+	Script Purpose	: Augin Drodo
 	Script Author	: Cynnar
 	Script Date	: 2015.02.17
 	Script Notes	: Auto-Generated Conversation from PacketParser Data
@@ -13,13 +13,13 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
-	
+	local conversation = CreateConversation()
+
 	if GetQuestStep(Spawn, DrodosGoodies) == 5 then
 		SetStepComplete(Spawn, DrodosGoodies, 5)
 		PlayFlavor(NPC, "augin_drodo/enchanted/augin_drodo005.mp3", "", "", 3737453066, 827504034, Spawn)
@@ -43,7 +43,7 @@ end
 
 function dlg_0_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "augin_drodo/enchanted/augin_drodo002.mp3", "", "", 3561207017, 3513321017, Spawn)
 	AddConversationOption(conversation, "I can look for your goodies. ", "dlg_0_2")

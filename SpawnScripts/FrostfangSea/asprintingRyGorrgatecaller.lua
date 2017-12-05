@@ -3,7 +3,7 @@
 	Script Purpose	:	for the sprinting gatecallers near the Great Shelf
 	Script Author	:	theFoof
 	Script Date		:	2013.6.2
-	Script Notes	:	
+	Script Notes	:
 --]]
 
 function spawn(NPC)
@@ -17,15 +17,15 @@ function spawn(NPC)
 	MovementLoopAddLocation(NPC, 644.30 + math.random(-7,7), 52.16, -344.42 + math.random(-7,7), 5, 0)
 	MovementLoopAddLocation(NPC, 661.05 + math.random(-7,7), 74.74, -399.58 + math.random(-7,7), 5, 0)
 	MovementLoopAddLocation(NPC, 668.04 + math.random(-7,7), 85.46, -435.57 + math.random(-7,7), 5, 0)
-	
+
 end
 
 function hailed(NPC, Spawn)
-	FacetTarget(NPC, Spawn)
+	FaceTarget(NPC, Spawn)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function death_timer(NPC)

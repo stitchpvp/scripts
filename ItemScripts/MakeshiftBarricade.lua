@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the item "makeshift barricade"
 	Script Author	: theFoof
 	Script Date	: 2013.5.7
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 local Barricade = 46842

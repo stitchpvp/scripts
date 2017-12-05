@@ -3,7 +3,7 @@
 	Script Purpose	:	Alexa in the Chapel
 	Script Author	:	smash
 	Script Date		:	1/28/2016
-	Script Notes	:	
+	Script Notes	:
 --]]
 
 function spawn(NPC)

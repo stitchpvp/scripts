@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "Wanted: Ithari K'Xyrae"
 	Script Author	: Scatman
 	Script Date	: 2009.02.01
-	
+
 	Zone       : Darklight Wood
 	Quest Giver: Wanted: Ithari K'Xyrae poster
 	Preceded by: None
@@ -35,7 +35,7 @@ end
 function step1_complete_killedIthari(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 1, "I have Ithari K'Xyrae's head.")
 	UpdateQuestTaskGroupDescription(Quest, 1, "I have Ithari K'Xyrae's head.")
-	
+
 	AddQuestStepChat(Quest, 2, "I need to bring Ithari K'Xyrae's head to Sselnyl Do'Zylth.", 1, ".", 0, 340087)
 	AddQuestStepCompleteAction(Quest, 2, "quest_complete")
 end

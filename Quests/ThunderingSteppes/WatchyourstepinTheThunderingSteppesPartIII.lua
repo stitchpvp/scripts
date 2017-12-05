@@ -2,7 +2,7 @@
     Script Name    : Quests/ThunderingSteppes/WatchyourstepinTheThunderingSteppesPartIII.lua
     Script Author  : Jabantiz
     Script Date    : 2014.07.05 10:07:29
-    Script Purpose : 
+    Script Purpose :
 
         Zone       : ThunderingSteppes
         Quest Giver: Jacques (2490212)
@@ -18,15 +18,15 @@ end
 function Step1Complete(Quest, QuestGiver, Player)
 	local wolf1 = SpawnMob(GetZone(Player), 2490679,  0, 586.24, 1.23, -158.22, 88.04)
 	local wolf2 = SpawnMob(GetZone(Player), 2490679,  0, 585.60, 1.43, -163.06, 117.90)
-	
+
 	if wolf1 ~= nil then
 		Attack(wolf1, Player)
 	end
-	
+
 	if wolf2 ~= nil then
 		Attack(wolf2, Player)
 	end
-	
+
 	Step1CompleteUpdate(Quest, QuestGiver, Player)
 end
 
@@ -57,8 +57,8 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
-	
+	local conversation = CreateConversation()
+
 	AddConversationOption(conversation, "Okay.")
 	StartConversation(conversation, QuestGiver, Player, "This delivery is for Brianna in Thundermist Village. Since we're delivering a package this time, you'll need to get her to sign a receipt for it before you come back.")
 end

@@ -1,9 +1,9 @@
 --[[
 	Script Name	: SpawnScripts/FrostfangSea/OlgaMacleod.lua
-	Script Purpose	: Olga Macleod 
+	Script Purpose	: Olga Macleod
 	Script Author	: theFoof
 	Script Date	: 2013.09.01
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 local FrozenChowder = 88
@@ -13,13 +13,13 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
-	
+	local conversation = CreateConversation()
+
 	if not HasCompletedQuest(Spawn, FrozenChowder) and not HasQuest(Spawn, FrozenChowder) then
 		PlayFlavor(NPC, "olga_macleod/halas/new_halas/olga_macleod/olga_macleod_001.mp3", "", "", 183975505, 4113739209, Spawn)
 		AddConversationOption(conversation, "I'm " .. GetName(Spawn) .. ", pleased to meet you.", "Quest1Chat_1")
@@ -37,7 +37,7 @@ end
 
 function Quest1Chat_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "olga_macleod/halas/new_halas/olga_macleod/olga_macleod_003.mp3", "", "", 2540192341, 2605234909, Spawn)
 	AddConversationOption(conversation, "Can I get you something.", "Quest1Chat_2")
@@ -46,7 +46,7 @@ end
 
 function Quest1Chat_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "olga_macleod/halas/new_halas/olga_macleod/olga_macleod_004.mp3", "", "", 902632382, 378214084, Spawn)
 	AddConversationOption(conversation, "Really?", "Quest1Chat_3")
@@ -55,7 +55,7 @@ end
 
 function Quest1Chat_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "olga_macleod/halas/new_halas/olga_macleod/olga_macleod_005.mp3", "", "", 2856769449, 2240854922, Spawn)
 	AddConversationOption(conversation, "I could gather them for you.", "OfferFrozenChowder")
@@ -65,24 +65,24 @@ end
 
 function Quest1Chat_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
-	
+	local conversation = CreateConversation()
+
 	AddConversationOption(conversation, "Thanks again, sometimes I forget these things!")
 	StartConversation(conversation, NPC, Spawn, "The halasian reeds and the frozen pincers are down near the water's edge at the Erollis Dock, east of New Halas.")
 end
 
 function Quest1Chat_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
-	
+	local conversation = CreateConversation()
+
 	AddConversationOption(conversation, "Here you go.", "Quest1Chat_6")
 	StartConversation(conversation, NPC, Spawn, "Great, hand them over and I'll get to cooking!")
 end
 
 function Quest1Chat_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
-	
+	local conversation = CreateConversation()
+
 	AddConversationOption(conversation, "It smells delicious", "Quest1Chat_7")
 	StartConversation(conversation, NPC, Spawn, "Thank Marr this cooks up fast. I'll be able to have a bowl before I must get back to work.")
 end
@@ -91,8 +91,8 @@ function Quest1Chat_7(NPC, Spawn)
 	SetStepComplete(Spawn, FrozenChowder, 3)
 	AddSpawnAccess(GetSpawn(NPC, 4701842), Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
-	
+	local conversation = CreateConversation()
+
 	AddConversationOption(conversation, NPC, Spawn, "Thanks Olga!")
 	StartConversation(conversation, NPC, Spawn, "There! Go ahead, ladle yourself some chowder.")
 end

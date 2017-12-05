@@ -3,17 +3,17 @@
 	Script Purpose	:	Handles the quest, "Rainus"
 	Script Author	:	QuestParser (Replace this)
 	Script Date		:	7/8/2017
-	Script Notes	:	
+	Script Notes	:
 
 	Zone			:	Commonlands
-	Quest Giver		:	
+	Quest Giver		:
 	Preceded by		:	None
 	Followed by		:	None
 --]]
 
 
 function Init(Quest)
-	AddQuestStepChat(Quest, 1, "I need to find Rainus Canton", 1, "I need to speak with Rainus Canton.", 11, --[[ ID's --]])
+	AddQuestStepChat(Quest, 1, "I need to find Rainus Canton", 1, "I need to speak with Rainus Canton.", 11, nil)
 	AddQuestStepCompleteAction(Quest, 1, "QuestComplete")
 end
 

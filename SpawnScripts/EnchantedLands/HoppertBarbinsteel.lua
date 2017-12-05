@@ -11,7 +11,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)
@@ -22,7 +22,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	StartConversation(conversation, NPC, Spawn, "Do not confuse me as some simple mountebank, selling whatever sort of quack medicine the local alchemist claims to cure your sniffles. I assure you, our paths are never meant to cross. Good day.")
 end

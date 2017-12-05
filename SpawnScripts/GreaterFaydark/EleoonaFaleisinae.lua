@@ -1,6 +1,6 @@
 --[[
 	Script Name	: SpawnScripts/GreaterFaydark/EleoonaFaleisinae.lua
-	Script Purpose	: Eleoona Faleisinae 
+	Script Purpose	: Eleoona Faleisinae
 	Script Author	: John Adams
 	Script Date	: 2009.03.01
 	Script Notes	: Auto-Generated Conversation from PacketParser Data
@@ -11,7 +11,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)
@@ -32,7 +32,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/eleoona_faleisinae/_exp03/exp03_cty_kelethin/tutorials/qst_eleoona/qst_eleoona001.mp3", "", "", 2570228484, 695828840, Spawn)
 	AddConversationOption(conversation, "Jalmari Keletana sent me to ask your advice about the Grender.", "dlg_5_1")
@@ -42,7 +42,7 @@ end
 
 function dlg_5_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/eleoona_faleisinae/_exp03/exp03_cty_kelethin/tutorials/qst_eleoona/qst_eleoona002.mp3", "", "", 3929358033, 309978465, Spawn)
 	AddConversationOption(conversation, "They say that?", "dlg_5_2")
@@ -51,7 +51,7 @@ end
 
 function dlg_5_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/eleoona_faleisinae/_exp03/exp03_cty_kelethin/tutorials/qst_eleoona/qst_eleoona003.mp3", "", "", 2961784962, 1653403158, Spawn)
 	AddConversationOption(conversation, "Working with Kalamar Vesinger, I've located the Grender's lair beneath Kelethin.  Jalmari wants to know what you recommend we do.", "dlg_5_3")
@@ -60,7 +60,7 @@ end
 
 function dlg_5_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/eleoona_faleisinae/_exp03/exp03_cty_kelethin/tutorials/qst_eleoona/qst_eleoona004.mp3", "", "", 3699665352, 534069949, Spawn)
 	AddConversationOption(conversation, "But I...oh, nevermind.", "dlg_5_4")

@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "Muck Slim"
 	Script Author	: Scatman
 	Script Date	: 2009.05.10
-	
+
 	Zone       : The Peat Bog
 	Quest Giver: Ferius Mentus
 	Preceded by: None
@@ -21,8 +21,8 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
-	
+	local conversation = CreateConversation()
+
 	AddConversationOption(conversation, "All right.")
 	StartConversation(conversation, QuestGiver, Player, "I should hope so; it isn't hard work. Come back quick!")
 end
@@ -33,7 +33,7 @@ end
 function Step1_Complete_KilledFrogs(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 1, "I have collected some muck toad sludge.")
 
-	AddQuestStepChat(Quest, 2, "I need to return to Ferius.", 1, "Ferius would like me to collect some muck toad sludge.", 355, 1980023) 
+	AddQuestStepChat(Quest, 2, "I need to return to Ferius.", 1, "Ferius would like me to collect some muck toad sludge.", 355, 1980023)
 	AddQuestStepCompleteAction(Quest, 2, "QuestComplete")
 end
 

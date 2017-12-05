@@ -2,7 +2,7 @@
     Script Name    : Quests/Everfrost/supplies_for_the_pioneers.lua
     Script Author  : Flunklesnarkin
     Script Date    : 2015.11.29 01:11:25
-    Script Purpose : 
+    Script Purpose :
 
         Zone       : Everfrost
         Quest Giver: Brahnagan MacLahnan

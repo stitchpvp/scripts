@@ -3,24 +3,24 @@
 	Script Purpose	:	Handles the quest, "Armadillo Hides"
 	Script Author	:	QuestParser (Replace this)
 	Script Date		:	7/8/2017
-	Script Notes	:	
+	Script Notes	:
 
 	Zone			:	Commonlands
-	Quest Giver		:	
+	Quest Giver		:
 	Preceded by		:	None
 	Followed by		:	None
 --]]
 
 
 function Init(Quest)
-	AddQuestStepKill(Quest, 1, "I need to collect ten armadillo hides for Gerun", 10, 100, "I need to collect the armadillo hides for Gerun.", 2047, --[[ ID's --]])
+	AddQuestStepKill(Quest, 1, "I need to collect ten armadillo hides for Gerun", 10, 100, "I need to collect the armadillo hides for Gerun.", 2047, nil)
 	AddQuestStepCompleteAction(Quest, 1, "Step1Complete")
 end
 
 function Step1Complete(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 1, "I have collected the armadillo hides.")
 
-	AddQuestStepChat(Quest, 2, "I need to bring these hides to Gerun", 1, "I need to collect the armadillo hides for Gerun.", 11, --[[ ID's --]])
+	AddQuestStepChat(Quest, 2, "I need to bring these hides to Gerun", 1, "I need to collect the armadillo hides for Gerun.", 11, nil)
 	AddQuestStepCompleteAction(Quest, 2, "QuestComplete")
 end
 

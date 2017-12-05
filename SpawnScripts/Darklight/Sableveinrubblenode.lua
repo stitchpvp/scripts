@@ -3,7 +3,7 @@
 	Script Purpose	:	Sablevein Rubble
 	Script Author	:	Cynnar
 	Script Date		:	10/13/2015
-	Script Notes	:	
+	Script Notes	:
 --]]
 
 local SableveinRubble = 137
@@ -15,7 +15,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-    spawn(NPC)
+SpawnMob(NPC)
 end
 
 function SpawnAccess(NPC, Spawn)
@@ -26,9 +26,9 @@ end
 
 function casted_on(Target, Caster, SpellName)
     if SpellName == "harvest " then
-	    if HasQuest(Spawn, SableveinRubble) and HasItem(Spawn, 11836) <= 6 then
-			Despawn(NPC)
-			SummonItem(Spawn, 11836)
+	    if HasQuest(Caster, SableveinRubble) and HasItem(Caster, 11836) <= 6 then
+			Despawn(Target)
+			SummonItem(Caster, 11836)
 		end
 	end
 end

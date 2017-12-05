@@ -2,8 +2,8 @@
     Script Name    : SpawnScripts/Nektropos1/elisewallscotnz.lua
     Script Author  : smash
     Script Date    : 2016.01.28 03:01:00
-    Script Purpose : 
-                   : 
+    Script Purpose :
+                   :
 --]]
 
 function spawn(NPC)

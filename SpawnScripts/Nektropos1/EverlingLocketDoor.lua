@@ -2,8 +2,8 @@
     Script Name    : SpawnScripts/Nektropos1/EverlingLocketDoor.lua
     Script Author  : smash
     Script Date    : 2016.02.06 12:02:35
-    Script Purpose : 
-                   : 
+    Script Purpose :
+                   :
 --]]
 
 function spawn(NPC)

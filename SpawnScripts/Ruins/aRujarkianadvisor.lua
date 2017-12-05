@@ -1,6 +1,6 @@
 --[[
 	Script Name	: SpawnScripts/Ruins/aRujarkianadvisor.lua
-	Script Purpose	: a Rujarkian advisor 
+	Script Purpose	: a Rujarkian advisor
 	Script Author	: John Adams
 	Script Date	: 2009.08.10
 	Script Notes	: Auto-Generated Conversation from PacketParser Data
@@ -11,7 +11,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)

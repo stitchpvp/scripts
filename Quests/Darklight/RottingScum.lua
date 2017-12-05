@@ -62,11 +62,9 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
 
 	PlayFlavor(QuestGiver, "ginwyss_d_arkenett/darklight_wood/tvatar_post/ginwyss_revamp/ginwyss008.mp3", "", "", 2741628345, 486208170, Player)
 	Say(QuestGiver, "Return to me after you've " .. '"killed" ' .. "them.")
-	-- StartConversation(conversation, QuestGiver, Player, "Return to me after you've /"killed/" them.")
 end
 
 function Declined(Quest, QuestGiver, Player)

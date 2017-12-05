@@ -3,7 +3,7 @@
 	Script Purpose	: Lukur <General Goods>
 	Script Author	: scatman
 	Script Date	: 2009.08.01
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 local QUEST_1 = 276
@@ -13,13 +13,13 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
-	
+	local conversation = CreateConversation()
+
 	if not HasCompletedQuest(Spawn, QUEST_1) then
 		if HasQuest(Spawn, QUEST_1) then
 			if GetQuestStep(Spawn, QUEST_1) == 4 then
@@ -31,14 +31,14 @@ function hailed(NPC, Spawn)
 	end
 
 	PlayFlavor(NPC, "voiceover/english/optional1/lukur/fprt_adv01_sunken/lukur000.mp3", "", "", 1584752461, 2942049134, Spawn)
-	
+
 	AddConversationOption(conversation, "I'm not one to be sifting through other people's things.")
 	StartConversation(conversation, NPC, Spawn, "This place is a wellspring for me.  Look around!  Crates and barrels full of abandoned goods just waiting to be uncovered.  There are far too many for me to search alone.")
 end
 
 function dlg_4_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/optional1/lukur/fprt_adv01_sunken/lukur001.mp3", "", "", 3143062912, 3824299878, Spawn)
 	AddConversationOption(conversation, "I think I can help you.", "OfferQuest1")
@@ -53,9 +53,9 @@ end
 
 function dlg_12_1(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_1, 4)
-	
+
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/optional1/lukur/fprt_adv01_sunken/lukur003.mp3", "", "", 1196217033, 2873878783, Spawn)
 	AddConversationOption(conversation, "Thank you.")

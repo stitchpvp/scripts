@@ -7,4 +7,4 @@ function hailed(NPC, Spawn)
 	elseif choice == 2 then
 	  Say(NPC, "It may not seem effective, but trust me it is!", Spawn)
   end
-end    
+end

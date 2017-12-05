@@ -11,7 +11,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)
@@ -22,26 +22,26 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 		PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_1_1047.mp3", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Tell me about banking.", "dlg_3_1")
 	AddConversationOption(conversation, "Tell me about mending items.")
 	AddConversationOption(conversation, "I'll return for training later.")
 	StartConversation(conversation, NPC, Spawn, "I can explain the finer points of banking and mending to you if you like. Would you care to hear about either?")
-	if convo==8 then
-		PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_3_1047.mp3", "", "", 0, 0, Spawn)
-		AddConversationOption(conversation, "Tell me about banking.", "dlg_8_1")
-		AddConversationOption(conversation, "Tell me about mending items.")
-		AddConversationOption(conversation, "I'll return for training later.")
-		StartConversation(conversation, NPC, Spawn, "I can explain the finer points of banking and mending to you if you like. Would you care to hear about either?")
-	end
+	--if convo==8 then
+	--	PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_3_1047.mp3", "", "", 0, 0, Spawn)
+	--	AddConversationOption(conversation, "Tell me about banking.", "dlg_8_1")
+	--	AddConversationOption(conversation, "Tell me about mending items.")
+	--	AddConversationOption(conversation, "I'll return for training later.")
+	--	StartConversation(conversation, NPC, Spawn, "I can explain the finer points of banking and mending to you if you like. Would you care to hear about either?")
+	--end
 
 end
 
 function dlg_3_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "How do I open my bank?", "dlg_3_2")
@@ -50,7 +50,7 @@ end
 
 function dlg_3_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "How do I make deposits and withdrawals?", "dlg_3_3")
@@ -60,7 +60,7 @@ end
 
 function dlg_3_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "What are 'shared' bank slots?", "dlg_3_4")
@@ -69,7 +69,7 @@ end
 
 function dlg_3_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Any other banking facts I should know?", "dlg_3_5")
@@ -78,7 +78,7 @@ end
 
 function dlg_3_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "I want to learn about mending items.", "dlg_3_6")
@@ -88,7 +88,7 @@ end
 
 function dlg_3_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Tell me about banking.", "dlg_3_7")
@@ -98,7 +98,7 @@ end
 
 function dlg_8_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "How do I open my bank?", "dlg_8_2")
@@ -107,7 +107,7 @@ end
 
 function dlg_8_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "How do I make deposits and withdrawals?", "dlg_8_3")
@@ -117,7 +117,7 @@ end
 
 function dlg_8_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "What are 'shared' bank slots?", "dlg_8_4")
@@ -126,7 +126,7 @@ end
 
 function dlg_8_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Any other banking facts I should know?", "dlg_8_5")
@@ -135,7 +135,7 @@ end
 
 function dlg_8_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "I want to learn about mending items.", "dlg_8_6")
@@ -145,7 +145,7 @@ end
 
 function dlg_8_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Tell me about banking.", "dlg_8_7")

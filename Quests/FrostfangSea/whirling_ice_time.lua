@@ -3,7 +3,7 @@
 	Script Purpose	:	for the quest Whirling Ice Time
 	Script Author	:	theFoof
 	Script Date		:	2013.6.16
-	Script Notes	:	
+	Script Notes	:
 
 	Zone			:	Frostfang Sea
 	Quest Giver		:	Odon Scourgeson
@@ -22,7 +22,7 @@ function Accepted(Quest, QuestGiver, Player)
 		SummonItem(Player, 6556)
 	end
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(QuestGiver, "odon_scourgeson/halas/cragged_spine/odon_scourgeson_011.mp3", "", "", 57352685, 126930630, Player)
 	AddConversationOption(conversation, "I will, Odon.")

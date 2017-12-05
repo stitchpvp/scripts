@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "More Luxuries"
 	Script Author	: Scatman
 	Script Date	: 2009.02.02
-	
+
 	Zone       : Darklight Wood
 	Quest Giver: Ilmtar D'Viervs
 	Preceded by: Luxuries for the Rich (luxuries_for_the_rich.lua)
@@ -23,7 +23,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(QuestGiver, "voiceover/english/neriak/ilmtar_d_viervs/darklight_wood/tvatar_post/ilmtar/ilmtar024.mp3", "", "", 3218544480, 2129552018, Player)
 	AddConversationOption(conversation, "I'll return.", "dlg_11_6")
@@ -35,7 +35,7 @@ end
 
 function step1_complete_gotScales(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 1, "I have collected the scales.")
-	
+
 	if QuestIsComplete(Player, 95) then
 		multiple_steps_complete(Quest, QuestGiver, Player)
 	end
@@ -43,7 +43,7 @@ end
 
 function step2_complete_gotSacs(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 2, "I have collected the pheromone.")
-	
+
 	if QuestIsComplete(Player, 95) then
 		multiple_steps_complete(Quest, QuestGiver, Player)
 	end
@@ -51,7 +51,7 @@ end
 
 function multiple_steps_complete(Quest, QuestGiver, Player)
 	UpdateQuestTaskGroupDescription(Quest, 1, "I need to give Ilmtar the scar wurm scales and pheromone sacs.")
-	
+
 	AddQuestStepChat(Quest, 3, "I need to bring these scales and sacs back to Ilmtar D'Viervs.", 1, "I need to bring these items back to Ilmtar D'Viervs", 172, 340123)
 	AddQuestStepCompleteAction(Quest, 3, "quest_complete")
 end

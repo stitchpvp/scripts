@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "File a Final Report"
 	Script Author	: Scatman
 	Script Date	: 2009.08.20
-	
+
 	Zone       : The Ruins
 	Quest Giver: Captain Arellius
 	Preceded by: Identifying the Lonetusk Ally (identifying_the_lonetusk_ally.lua)
@@ -17,7 +17,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(QuestGiver, "voiceover/english/tutorial_revamp/lieutenant_imperidus/fprt_adv04_ruins/revamp/lieutenant_imperidus022.mp3", "", "", 3956036992, 4003496180, Player)
 	AddConversationOption(conversation, "Thank you, lieutenant. You have earned mine as well.")

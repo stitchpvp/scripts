@@ -3,7 +3,7 @@
 	Script Purpose	:	Tobias Granville (2490178)
 	Script Author	:	Jabantiz
 	Script Date		:	8/10/2016
-	Script Notes	:	
+	Script Notes	:
 --]]
 local GranvillesRestaurantAntonica = 182
 
@@ -24,13 +24,13 @@ function LeaveRange(NPC, Spawn)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	if HasCompletedQuest(Spawn, GranvillesRestaurantAntonica) then
 		Say(NPC, "I appreciate your help.", Spawn)
 	elseif HasQuest(Spawn, GranvillesRestaurantAntonica) then
@@ -96,7 +96,7 @@ end
 function Option5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	SetStepComplete(Spawn, GranvillesRestaurantAntonica, 4)
 
 	AddConversationOption(conversation, "I'll investigate and report back.")

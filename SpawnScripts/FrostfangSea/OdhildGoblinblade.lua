@@ -3,7 +3,7 @@
 	Script Purpose	:	swashbuckler trainer
 	Script Author	:	theFoof
 	Script Date		:	2013.9.24
-	Script Notes	:	
+	Script Notes	:
 --]]
 
 local SWASHBUCKLER = 33
@@ -12,7 +12,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
@@ -29,7 +29,7 @@ function hailed(NPC, Spawn)
 end
 
 function SwashChat1(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	FaceTarget(NPC, Spawn)
 
 	AddConversationOption(conversation, "That's useful to know!", "SwashChat2")
@@ -37,15 +37,15 @@ function SwashChat1(NPC, Spawn)
 end
 
 function SwashChat2(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	FaceTarget(NPC, Spawn)
-	
+
 	AddConversationOption(conversation, "That's interesting.", "SwashChat3")
 	StartConversation(conversation, NPC, Spawn, "We have talents in dealing with damage but we are particularly skilled at weakening our opponent's attacks.")
 end
 
 function SwashChat3(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	FaceTarget(NPC, Spawn)
 
 	AddConversationOption(conversation, "I bet it is!", "SwashChat4")
@@ -53,7 +53,7 @@ function SwashChat3(NPC, Spawn)
 end
 
 function SwashChat4(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	FaceTarget(NPC, Spawn)
 
 	AddConversationOption(conversation, "Thank you for the advice.")

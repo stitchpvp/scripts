@@ -3,7 +3,7 @@
 	Script Purpose	:	the quest "Trust Issues"
 	Script Author	:	theFoof
 	Script Date		:	2013.8.19
-	Script Notes	:	
+	Script Notes	:
 
 	Zone			:	Frostfang Sea
 	Quest Giver		:	Brogan MacLellan
@@ -25,7 +25,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(QuestGiver, "brogan_maclellan/halas/new_halas_guard_house/brogan_maclellan010.mp3", "", "", 1533537529, 2198675230, Player)
 	AddConversationOption(conversation, "I'll be back.")

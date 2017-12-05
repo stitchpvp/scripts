@@ -3,7 +3,7 @@
 	Script Purpose	:	Handles the quest, "Dust to Dust"
 	Script Author	:	Cynnar
 	Script Date		:	9/2/2015
-	Script Notes	:	
+	Script Notes	:
 
 	Zone			:	Darklight Wood
 	Quest Giver		:	Calnozz J'Melvirr

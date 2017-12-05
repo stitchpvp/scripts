@@ -2,12 +2,12 @@
     Script Name    : Quests/ThunderingSteppes/recycling_the_old-fashioned_way.lua
     Script Author  : Zcoretri
     Script Date    : 2014.07.14 07:07:41
-    Script Purpose : 
+    Script Purpose :
 
         Zone       : ThunderingSteppes
-        Quest Giver: 
+        Quest Giver:
         Preceded by: None
-        Followed by: 
+        Followed by:
 --]]
 
 function Init(Quest)
@@ -38,7 +38,7 @@ function Step3Complete(Quest, QuestGiver, Player)
 end
 
 function Accepted(Quest, QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "All right, I'll be back")
 	StartConversation(conversation, QuestGiver, Player, "Oh, the price is right, my friend! It's free! And I'll even pay you for your work! I need a variety of bones: some antelope, huntress and siren bones for a sort of 'surf and turf' fertilizer. The Steppes abound with these creatures. Think of this as recycling. We're helping the environment, eh?")

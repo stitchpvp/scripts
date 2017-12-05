@@ -7,7 +7,7 @@
 	Script Notes	:	Location is in Hate's Envy
 --]]
 
-local SealingTheRift = 122
+--local SealingTheRift = 122
 local ReclaimingTheSableveinTear = 124
 
 function spawn(NPC, Player)
@@ -16,7 +16,7 @@ function spawn(NPC, Player)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function QuestCheck(NPC, Player)
@@ -32,7 +32,7 @@ function QuestCheck(NPC, Player)
 			MovementLoopAddLocation(NPC, -403.93, -62.87, 225.40, 4, 1)
 			MovementLoopAddLocation(NPC, -411.33, -62.87, 229.45, 4, 1)
 			MovementLoopAddLocation(NPC, -412.62, -62.87, 235.85, 4, 1)
-			MovementLoopAddLocation(NPC, -401.91, -62.87, 232.67, 4, 1)	
+			MovementLoopAddLocation(NPC, -401.91, -62.87, 232.67, 4, 1)
 		else
 			RemoveSpawnAccess(NPC, Player)
     end

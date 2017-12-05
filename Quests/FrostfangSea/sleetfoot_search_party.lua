@@ -3,7 +3,7 @@
 	Script Purpose	:	for the quest "Sleetfoot Search Party"
 	Script Author	:	theFoof
 	Script Date		:	2013.6.13
-	Script Notes	:	
+	Script Notes	:
 
 	Zone			:	Frostfang Sea
 	Quest Giver		:	Thirin Veliumdelver
@@ -19,7 +19,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(QuestGiver, "thirin_veliumdelver/halas/cragged_spine/thirin_veliumdelver_cave014.mp3", "", "", 2567826241, 991797781, Player)
 	AddConversationOption(conversation, "We will.  I will return shortly when I've found him.")

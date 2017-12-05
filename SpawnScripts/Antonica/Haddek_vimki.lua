@@ -4,7 +4,7 @@ function hailed(NPC, Spawn)
 
 	AddConversationOption(conversation, "Sure, what do you need from me?", "Option1")
 	AddConversationOption(conversation, "Why don't you make yourself useful?!")
-	StartConversation(conversation, NPC, Spawn, "So, then I said, "That's what the Gnome is for!"  Wraahaahaa! Huh? What? If you're goin' to come over here and badger me, why don't you make yourself useful?")
+	StartConversation(conversation, NPC, Spawn, "So, then I said, \"That's what the Gnome is for!\"  Wraahaahaa! Huh? What? If you're goin' to come over here and badger me, why don't you make yourself useful?")
 end
 
 function Option1(NPC, Spawn)

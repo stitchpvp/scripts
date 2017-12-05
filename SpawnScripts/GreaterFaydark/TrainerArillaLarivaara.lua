@@ -11,7 +11,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)
@@ -22,26 +22,26 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 		PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_arilla_larivaara/_exp03/exp03_cty_kelethin/tutorials/qst_larivaara/qst_laarivaara007.mp3", "", "", 3148880847, 947148371, Spawn)
 	AddConversationOption(conversation, "Teach me the basics of combat.", "dlg_4_1")
 	AddConversationOption(conversation, "Teach me more advanced aspects of combat.")
 	AddConversationOption(conversation, "I'll come back later.")
 	StartConversation(conversation, NPC, Spawn, "Hello there, " .. GetName(Spawn) .. ". I'm here to teach folks the finer points of combat. I don't like to get into a fight, but if I do, I prefer to win.  Know what I mean?")
-	if convo==5 then
-		PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_arilla_larivaara/_exp03/exp03_cty_kelethin/tutorials/qst_larivaara/qst_laarivaara007.mp3", "", "", 3148880847, 947148371, Spawn)
-		AddConversationOption(conversation, "Teach me the basics of combat.", "dlg_5_1")
-		AddConversationOption(conversation, "Teach me more advanced aspects of combat.")
-		AddConversationOption(conversation, "I'll come back later.")
-		StartConversation(conversation, NPC, Spawn, "Hello there, " .. GetName(Spawn) .. ". I'm here to teach folks the finer points of combat. I don't like to get into a fight, but if I do, I prefer to win.  Know what I mean?")
-	end
+	--if convo==5 then
+	--	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_arilla_larivaara/_exp03/exp03_cty_kelethin/tutorials/qst_larivaara/qst_laarivaara007.mp3", "", "", 3148880847, 947148371, Spawn)
+	--	AddConversationOption(conversation, "Teach me the basics of combat.", "dlg_5_1")
+	--	AddConversationOption(conversation, "Teach me more advanced aspects of combat.")
+	--	AddConversationOption(conversation, "I'll come back later.")
+	--	StartConversation(conversation, NPC, Spawn, "Hello there, " .. GetName(Spawn) .. ". I'm here to teach folks the finer points of combat. I don't like to get into a fight, but if I do, I prefer to win.  Know what I mean?")
+	--end
 
 end
 
 function dlg_4_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_arilla_larivaara/_exp03/exp03_cty_kelethin/tutorials/qst_larivaara/qst_laarivaara008.mp3", "", "", 2898686401, 1752530734, Spawn)
 	AddConversationOption(conversation, "Tell me how to begin a fight.", "dlg_4_2")
@@ -55,7 +55,7 @@ end
 
 function dlg_4_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_arilla_larivaara/_exp03/exp03_cty_kelethin/tutorials/qst_larivaara/qst_laarivaara009.mp3", "", "", 1613933242, 1197148922, Spawn)
 	AddConversationOption(conversation, "How do I begin the battle?", "dlg_4_3")
@@ -64,7 +64,7 @@ end
 
 function dlg_4_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_arilla_larivaara/_exp03/exp03_cty_kelethin/tutorials/qst_larivaara/qst_laarivaara010.mp3", "", "", 1755891240, 3796028834, Spawn)
 	AddConversationOption(conversation, "So I can fight anyone or anything I want?", "dlg_4_4")
@@ -73,7 +73,7 @@ end
 
 function dlg_4_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_arilla_larivaara/_exp03/exp03_cty_kelethin/tutorials/qst_larivaara/qst_laarivaara011.mp3", "", "", 3723859553, 908527971, Spawn)
 	AddConversationOption(conversation, "Tell me about melee combat.", "dlg_4_5")
@@ -86,7 +86,7 @@ end
 
 function dlg_4_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_arilla_larivaara/_exp03/exp03_cty_kelethin/tutorials/qst_larivaara/qst_laarivaara012.mp3", "", "", 3752439035, 2733336647, Spawn)
 	AddConversationOption(conversation, "What classes specialize in melee combat?", "dlg_4_6")
@@ -95,7 +95,7 @@ end
 
 function dlg_4_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_arilla_larivaara/_exp03/exp03_cty_kelethin/tutorials/qst_larivaara/qst_laarivaara013.mp3", "", "", 1434116742, 4225387141, Spawn)
 	AddConversationOption(conversation, "Tell me how to begin a fight.", "dlg_4_7")
@@ -108,7 +108,7 @@ end
 
 function dlg_4_7(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_arilla_larivaara/_exp03/exp03_cty_kelethin/tutorials/qst_larivaara/qst_laarivaara014.mp3", "", "", 3046408427, 2592738256, Spawn)
 	AddConversationOption(conversation, "How do I launch a ranged attack?")
@@ -117,7 +117,7 @@ end
 
 function dlg_4_8(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_arilla_larivaara/_exp03/exp03_cty_kelethin/tutorials/qst_larivaara/qst_laarivaara015.mp3", "", "", 3151700367, 2431538473, Spawn)
 	AddConversationOption(conversation, "What classes specialize in ranged combat?", "dlg_4_9")
@@ -126,7 +126,7 @@ end
 
 function dlg_4_9(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_arilla_larivaara/_exp03/exp03_cty_kelethin/tutorials/qst_larivaara/qst_laarivaara016.mp3", "", "", 1497976155, 2895560497, Spawn)
 	AddConversationOption(conversation, "How do I tell if I can use spells or arts from a distance?", "dlg_4_10")
@@ -135,7 +135,7 @@ end
 
 function dlg_4_10(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_arilla_larivaara/_exp03/exp03_cty_kelethin/tutorials/qst_larivaara/qst_laarivaara017.mp3", "", "", 893336149, 277723094, Spawn)
 	AddConversationOption(conversation, "Tell me how to begin a fight.", "dlg_4_11")
@@ -148,7 +148,7 @@ end
 
 function dlg_4_11(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_arilla_larivaara/_exp03/exp03_cty_kelethin/tutorials/qst_larivaara/qst_laarivaara012.mp3", "", "", 3752439035, 2733336647, Spawn)
 	AddConversationOption(conversation, "What classes specialize in melee combat?")
@@ -157,7 +157,7 @@ end
 
 function dlg_4_12(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_arilla_larivaara/_exp03/exp03_cty_kelethin/tutorials/qst_larivaara/qst_laarivaara013.mp3", "", "", 1434116742, 4225387141, Spawn)
 	AddConversationOption(conversation, "Tell me how to begin a fight.", "dlg_4_13")
@@ -170,7 +170,7 @@ end
 
 function dlg_4_13(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_arilla_larivaara/_exp03/exp03_cty_kelethin/tutorials/qst_larivaara/qst_laarivaara018.mp3", "", "", 2556228609, 3589317469, Spawn)
 	AddConversationOption(conversation, "What do you mean by 'a worthy opponent'?")
@@ -179,7 +179,7 @@ end
 
 function dlg_4_14(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_arilla_larivaara/_exp03/exp03_cty_kelethin/tutorials/qst_larivaara/qst_laarivaara019.mp3", "", "", 4159604095, 2208350646, Spawn)
 	AddConversationOption(conversation, "Are certain types of targets more rewarding than others?", "dlg_4_15")
@@ -188,7 +188,7 @@ end
 
 function dlg_4_15(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_arilla_larivaara/_exp03/exp03_cty_kelethin/tutorials/qst_larivaara/qst_laarivaara020.mp3", "", "", 3722520538, 550116332, Spawn)
 	AddConversationOption(conversation, "Tell me how to begin a fight.", "dlg_4_16")
@@ -201,7 +201,7 @@ end
 
 function dlg_4_16(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_arilla_larivaara/_exp03/exp03_cty_kelethin/tutorials/qst_larivaara/qst_laarivaara021.mp3", "", "", 801103527, 2875309924, Spawn)
 	AddConversationOption(conversation, "Tell me about selecting the right opponent.")
@@ -214,7 +214,7 @@ end
 
 function dlg_4_17(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_arilla_larivaara/_exp03/exp03_cty_kelethin/tutorials/qst_larivaara/qst_laarivaara022.mp3", "", "", 187572586, 450509917, Spawn)
 	AddConversationOption(conversation, "How do I tell if an opponent is too weak or too strong for me?", "dlg_4_18")
@@ -223,7 +223,7 @@ end
 
 function dlg_4_18(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_arilla_larivaara/_exp03/exp03_cty_kelethin/tutorials/qst_larivaara/qst_laarivaara023.mp3", "", "", 4040652289, 1699138117, Spawn)
 	AddConversationOption(conversation, "What resources should I be keeping an eye on?", "dlg_4_19")
@@ -232,7 +232,7 @@ end
 
 function dlg_4_19(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_arilla_larivaara/_exp03/exp03_cty_kelethin/tutorials/qst_larivaara/qst_laarivaara024.mp3", "", "", 3598297774, 910017607, Spawn)
 	AddConversationOption(conversation, "Teach me about knowing my surroundings.", "dlg_4_20")
@@ -244,7 +244,7 @@ end
 
 function dlg_4_20(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_arilla_larivaara/_exp03/exp03_cty_kelethin/tutorials/qst_larivaara/qst_laarivaara025.mp3", "", "", 302868023, 1058230652, Spawn)
 	AddConversationOption(conversation, "Anything else I should watch out for?", "dlg_4_21")
@@ -253,7 +253,7 @@ end
 
 function dlg_4_21(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_arilla_larivaara/_exp03/exp03_cty_kelethin/tutorials/qst_larivaara/qst_laarivaara026.mp3", "", "", 2395836258, 4167880022, Spawn)
 	AddConversationOption(conversation, "Any other tips?", "dlg_4_22")
@@ -262,7 +262,7 @@ end
 
 function dlg_4_22(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_arilla_larivaara/_exp03/exp03_cty_kelethin/tutorials/qst_larivaara/qst_laarivaara027.mp3", "", "", 3335927389, 418360840, Spawn)
 	AddConversationOption(conversation, "Tell me about selecting the right opponent.", "dlg_4_23")
@@ -274,7 +274,7 @@ end
 
 function dlg_4_23(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_arilla_larivaara/_exp03/exp03_cty_kelethin/tutorials/qst_larivaara/qst_laarivaara028.mp3", "", "", 3915273076, 3111917162, Spawn)
 	AddConversationOption(conversation, "What do you mean?")
@@ -283,7 +283,7 @@ end
 
 function dlg_4_24(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_arilla_larivaara/_exp03/exp03_cty_kelethin/tutorials/qst_larivaara/qst_laarivaara029.mp3", "", "", 2179864552, 3125288554, Spawn)
 	AddConversationOption(conversation, "What about during battle?", "dlg_4_25")
@@ -292,7 +292,7 @@ end
 
 function dlg_4_25(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_arilla_larivaara/_exp03/exp03_cty_kelethin/tutorials/qst_larivaara/qst_laarivaara030.mp3", "", "", 2306274826, 3024519845, Spawn)
 	AddConversationOption(conversation, "What else should I know about spells and arts?", "dlg_4_26")
@@ -301,7 +301,7 @@ end
 
 function dlg_4_26(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_arilla_larivaara/_exp03/exp03_cty_kelethin/tutorials/qst_larivaara/qst_laarivaara031.mp3", "", "", 2411688474, 2950057017, Spawn)
 	AddConversationOption(conversation, "Tell me about selecting the right opponent.", "dlg_4_27")
@@ -313,7 +313,7 @@ end
 
 function dlg_5_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_arilla_larivaara/_exp03/exp03_cty_kelethin/tutorials/qst_larivaara/qst_laarivaara008.mp3", "", "", 2898686401, 1752530734, Spawn)
 	AddConversationOption(conversation, "Tell me how to begin a fight.", "dlg_5_2")
@@ -327,7 +327,7 @@ end
 
 function dlg_5_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_arilla_larivaara/_exp03/exp03_cty_kelethin/tutorials/qst_larivaara/qst_laarivaara009.mp3", "", "", 1613933242, 1197148922, Spawn)
 	AddConversationOption(conversation, "How do I begin the battle?", "dlg_5_3")
@@ -336,7 +336,7 @@ end
 
 function dlg_5_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_arilla_larivaara/_exp03/exp03_cty_kelethin/tutorials/qst_larivaara/qst_laarivaara010.mp3", "", "", 1755891240, 3796028834, Spawn)
 	AddConversationOption(conversation, "So I can fight anyone or anything I want?", "dlg_5_4")
@@ -345,7 +345,7 @@ end
 
 function dlg_5_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_arilla_larivaara/_exp03/exp03_cty_kelethin/tutorials/qst_larivaara/qst_laarivaara011.mp3", "", "", 3723859553, 908527971, Spawn)
 	AddConversationOption(conversation, "Tell me about melee combat.", "dlg_5_5")
@@ -358,7 +358,7 @@ end
 
 function dlg_5_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_arilla_larivaara/_exp03/exp03_cty_kelethin/tutorials/qst_larivaara/qst_laarivaara012.mp3", "", "", 3752439035, 2733336647, Spawn)
 	AddConversationOption(conversation, "What classes specialize in melee combat?", "dlg_5_6")
@@ -367,7 +367,7 @@ end
 
 function dlg_5_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_arilla_larivaara/_exp03/exp03_cty_kelethin/tutorials/qst_larivaara/qst_laarivaara013.mp3", "", "", 1434116742, 4225387141, Spawn)
 	AddConversationOption(conversation, "Tell me how to begin a fight.", "dlg_5_7")
@@ -380,7 +380,7 @@ end
 
 function dlg_5_7(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_arilla_larivaara/_exp03/exp03_cty_kelethin/tutorials/qst_larivaara/qst_laarivaara014.mp3", "", "", 3046408427, 2592738256, Spawn)
 	AddConversationOption(conversation, "How do I launch a ranged attack?")
@@ -389,7 +389,7 @@ end
 
 function dlg_5_8(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_arilla_larivaara/_exp03/exp03_cty_kelethin/tutorials/qst_larivaara/qst_laarivaara015.mp3", "", "", 3151700367, 2431538473, Spawn)
 	AddConversationOption(conversation, "What classes specialize in ranged combat?", "dlg_5_9")
@@ -398,7 +398,7 @@ end
 
 function dlg_5_9(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_arilla_larivaara/_exp03/exp03_cty_kelethin/tutorials/qst_larivaara/qst_laarivaara016.mp3", "", "", 1497976155, 2895560497, Spawn)
 	AddConversationOption(conversation, "How do I tell if I can use spells or arts from a distance?", "dlg_5_10")
@@ -407,7 +407,7 @@ end
 
 function dlg_5_10(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_arilla_larivaara/_exp03/exp03_cty_kelethin/tutorials/qst_larivaara/qst_laarivaara017.mp3", "", "", 893336149, 277723094, Spawn)
 	AddConversationOption(conversation, "Tell me how to begin a fight.", "dlg_5_11")
@@ -420,7 +420,7 @@ end
 
 function dlg_5_11(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_arilla_larivaara/_exp03/exp03_cty_kelethin/tutorials/qst_larivaara/qst_laarivaara018.mp3", "", "", 2556228609, 3589317469, Spawn)
 	AddConversationOption(conversation, "What do you mean by 'a worthy opponent'?")
@@ -429,7 +429,7 @@ end
 
 function dlg_5_12(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_arilla_larivaara/_exp03/exp03_cty_kelethin/tutorials/qst_larivaara/qst_laarivaara019.mp3", "", "", 4159604095, 2208350646, Spawn)
 	AddConversationOption(conversation, "Are certain types of targets more rewarding than others?", "dlg_5_13")
@@ -438,7 +438,7 @@ end
 
 function dlg_5_13(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_arilla_larivaara/_exp03/exp03_cty_kelethin/tutorials/qst_larivaara/qst_laarivaara020.mp3", "", "", 3722520538, 550116332, Spawn)
 	AddConversationOption(conversation, "Tell me how to begin a fight.", "dlg_5_14")
@@ -451,7 +451,7 @@ end
 
 function dlg_5_14(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_arilla_larivaara/_exp03/exp03_cty_kelethin/tutorials/qst_larivaara/qst_laarivaara021.mp3", "", "", 801103527, 2875309924, Spawn)
 	AddConversationOption(conversation, "Tell me about selecting the right opponent.")
@@ -464,7 +464,7 @@ end
 
 function dlg_5_15(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_arilla_larivaara/_exp03/exp03_cty_kelethin/tutorials/qst_larivaara/qst_laarivaara022.mp3", "", "", 187572586, 450509917, Spawn)
 	AddConversationOption(conversation, "How do I tell if an opponent is too weak or too strong for me?", "dlg_5_16")
@@ -473,7 +473,7 @@ end
 
 function dlg_5_16(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_arilla_larivaara/_exp03/exp03_cty_kelethin/tutorials/qst_larivaara/qst_laarivaara023.mp3", "", "", 4040652289, 1699138117, Spawn)
 	AddConversationOption(conversation, "What resources should I be keeping an eye on?", "dlg_5_17")
@@ -482,7 +482,7 @@ end
 
 function dlg_5_17(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_arilla_larivaara/_exp03/exp03_cty_kelethin/tutorials/qst_larivaara/qst_laarivaara024.mp3", "", "", 3598297774, 910017607, Spawn)
 	AddConversationOption(conversation, "Teach me about knowing my surroundings.", "dlg_5_18")
@@ -494,7 +494,7 @@ end
 
 function dlg_5_18(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_arilla_larivaara/_exp03/exp03_cty_kelethin/tutorials/qst_larivaara/qst_laarivaara025.mp3", "", "", 302868023, 1058230652, Spawn)
 	AddConversationOption(conversation, "Anything else I should watch out for?", "dlg_5_19")
@@ -503,7 +503,7 @@ end
 
 function dlg_5_19(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_arilla_larivaara/_exp03/exp03_cty_kelethin/tutorials/qst_larivaara/qst_laarivaara026.mp3", "", "", 2395836258, 4167880022, Spawn)
 	AddConversationOption(conversation, "Any other tips?", "dlg_5_20")
@@ -512,7 +512,7 @@ end
 
 function dlg_5_20(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_arilla_larivaara/_exp03/exp03_cty_kelethin/tutorials/qst_larivaara/qst_laarivaara027.mp3", "", "", 3335927389, 418360840, Spawn)
 	AddConversationOption(conversation, "Tell me about selecting the right opponent.", "dlg_5_21")
@@ -524,7 +524,7 @@ end
 
 function dlg_5_21(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_arilla_larivaara/_exp03/exp03_cty_kelethin/tutorials/qst_larivaara/qst_laarivaara028.mp3", "", "", 3915273076, 3111917162, Spawn)
 	AddConversationOption(conversation, "What do you mean?")
@@ -533,7 +533,7 @@ end
 
 function dlg_5_22(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_arilla_larivaara/_exp03/exp03_cty_kelethin/tutorials/qst_larivaara/qst_laarivaara029.mp3", "", "", 2179864552, 3125288554, Spawn)
 	AddConversationOption(conversation, "What about during battle?", "dlg_5_23")
@@ -542,7 +542,7 @@ end
 
 function dlg_5_23(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_arilla_larivaara/_exp03/exp03_cty_kelethin/tutorials/qst_larivaara/qst_laarivaara030.mp3", "", "", 2306274826, 3024519845, Spawn)
 	AddConversationOption(conversation, "What else should I know about spells and arts?", "dlg_5_24")
@@ -551,7 +551,7 @@ end
 
 function dlg_5_24(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_arilla_larivaara/_exp03/exp03_cty_kelethin/tutorials/qst_larivaara/qst_laarivaara031.mp3", "", "", 2411688474, 2950057017, Spawn)
 	AddConversationOption(conversation, "Tell me about selecting the right opponent.", "dlg_5_25")
@@ -563,7 +563,7 @@ end
 
 function dlg_5_25(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_arilla_larivaara/_exp03/exp03_cty_kelethin/tutorials/qst_larivaara/qst_laarivaara008.mp3", "", "", 2898686401, 1752530734, Spawn)
 	AddConversationOption(conversation, "Tell me how to begin a fight.")

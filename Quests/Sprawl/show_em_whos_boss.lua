@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "Show 'Em Who's Boss"
 	Script Author	: Scatman
 	Script Date	    : 2009.07.26
-	
+
 	Zone       : The Sprawl
 	Quest Giver: Trainer Durbok
 	Preceded by: None
@@ -12,6 +12,8 @@
 
 function Init(Quest)
 	local choice = math.random(1, 6)
+	local ID = nil
+
 	if choice == 1 then
 		AddQuestStepKill(Quest, 1, "I should deliver a beating to six Dervish crooks.", 6, 100, "I need to defeat some rival gang members to show them the Dreadnaughts cannot be trifled with.", 611, ID)
 		AddQuestStepCompleteAction(Quest, 1, "Step1_Complete_KilledCrooks")
@@ -35,7 +37,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(QuestGiver, "voiceover/english/tutorial_revamp/trainer_durbok/fprt_adv03_sprawl/quests/trainer_durbok008.mp3", "", "", 2693497223, 3993753671, Player)
 	AddConversationOption(conversation, "Will do.")
@@ -77,7 +79,7 @@ end
 
 function Step1_Complete_NextStep(Quest, QuestGiver, Player)
 	UpdateQuestTaskGroupDescription(Quest, 1, "I taught the Dreadnaughts' rivals a valuable lesson in pain.")
-	
+
 	AddQuestStepChat(Quest, 2, "I should return to Trainer Durbok near the Giantslayers for my reward.", 1, "Having taught those thugs a lesson, I should return to Trainer Durbok.", 0, 1260027)
 	AddQuestStepCompleteAction(Quest, 2, "Quest_Complete")
 end
@@ -89,7 +91,7 @@ function Quest_Complete(Quest, QuestGiver, Player)
 	UpdateQuestDescription(Quest, "I have defeated the enemies of the Dreadnaughts and taught those rival gangs a lesson. The Sprawl should be a bit more orderly thanks to my efforts.")
 end
 
-function Reload(Quest, QuestGiver, Player)
+function Reload(Quest, QuestGiver, Player, Step)
 	if Step == 1 then
 		local choice = math.random(1, 6)
 		if choice == 1 then

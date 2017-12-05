@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "Bigger Fish to Fry"
 	Script Author	: Scatman
 	Script Date	: 2009.02.06
-	
+
 	Zone       : Timorous Deep
 	Quest Giver: Citizen Niba'Ouz
 	Preceded by: Fish of the Chrykori Island (fish_of_the_chrykori_island.lua)
@@ -29,8 +29,8 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
-	
+	local conversation = CreateConversation()
+
 	PlayFlavor(QuestGiver, "voiceover/english/rok_questvo/citizen_niba_ouz/_exp04/exp04_rgn_timorous_deep/chrykori_tie/nibaouz/nibaouz006.mp3", "", "", 3393303954, 1028332139, Player)
 	AddConversationOption(conversation, "I will be back.")
 	StartConversation(conversation, QuestGiver, Player, "I appreciate it! Return to me when you find one.")
@@ -41,7 +41,7 @@ end
 
 function step1_complete_gotSaltfin(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 1, "I have fished up a bull saltfin.")
-	
+
 	AddQuestStepChat(Quest, 2, "I need to return to Citizen Niba'Ouz.", 1, ".", 2540, 2630024)
 	AddQuestStepCompleteAction(Quest, 2, "quest_complete")
 end

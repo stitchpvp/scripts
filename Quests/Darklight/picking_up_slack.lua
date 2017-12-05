@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "Picking up Slack"
 	Script Author	: Scatman
 	Script Date	: 2009.02.02
-	
+
 	Zone       : Darklight Wood
 	Quest Giver: Ginwyss D'Arkenett
 	Preceded by: Rotting Scum (rotting_scum.lua)
@@ -26,7 +26,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(QuestGiver, "voiceover/english/neriak/ginwyss_d_arkenett/darklight_wood/tvatar_post/ginwyss/ginwyss012.mp3", "", "", 264010058, 2837526220, Player)
 	AddConversationOption(conversation, "Ok.")
@@ -38,7 +38,7 @@ end
 
 function step1_complete_killCubs(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 1, "I have killed the cubs.")
-	
+
 	AddQuestStepChat(Quest, 2, "I need to return to Ginwyss.", 1, ".", 0, 340110)
 	AddQuestStepCompleteAction(Quest, 2, "quest_complete")
 end

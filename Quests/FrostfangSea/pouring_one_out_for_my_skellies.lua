@@ -3,7 +3,7 @@
 	Script Purpose	:	for the quest "Pouring One Out for My Skellies"
 	Script Author	:	theFoof
 	Script Date		:	2013.5.31
-	Script Notes	:	
+	Script Notes	:
 
 	Zone			:	Frostfang Sea
 	Quest Giver		:	Belka Thunderheart
@@ -22,7 +22,7 @@ function Accepted(Quest, QuestGiver, Player)
         SummonItem(Player, 46438, 1)
     end
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(QuestGiver, "", "", "", 0, 0, Player)
 	AddConversationOption(conversation, "We'll find out.  Wish me luck.")

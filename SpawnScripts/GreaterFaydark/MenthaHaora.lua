@@ -1,6 +1,6 @@
 --[[
 	Script Name	: SpawnScripts/GreaterFaydark/MenthaHaora.lua
-	Script Purpose	: Mentha Haora 
+	Script Purpose	: Mentha Haora
 	Script Author	: John Adams
 	Script Date	: 2009.03.01
 	Script Notes	: Auto-Generated Conversation from PacketParser Data
@@ -11,7 +11,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)
@@ -22,7 +22,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 		PlayFlavor(NPC, "voiceover/english/exp03_questvo2/mentha_haora/_exp03/exp03_rgn_greater_faydark/scp/part_two/mentha/mentha000.mp3", "", "", 2060469955, 1753572931, Spawn)
 	AddConversationOption(conversation, "I am XXXXXXXX. What do you mean formerly?", "dlg_22_1")
@@ -31,7 +31,7 @@ end
 
 function dlg_22_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/mentha_haora/_exp03/exp03_rgn_greater_faydark/scp/part_two/mentha/mentha001.mp3", "", "", 926564266, 1509556740, Spawn)
 	AddConversationOption(conversation, "Well if the orcs are taken care of is there anything else I can help with?", "dlg_22_2")
@@ -40,7 +40,7 @@ end
 
 function dlg_22_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/mentha_haora/_exp03/exp03_rgn_greater_faydark/scp/part_two/mentha/mentha002.mp3", "", "", 160244099, 3171785528, Spawn)
 	AddConversationOption(conversation, "What do you have that I can do?", "dlg_22_3")
@@ -49,7 +49,7 @@ end
 
 function dlg_22_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/mentha_haora/_exp03/exp03_rgn_greater_faydark/scp/part_two/mentha/mentha003.mp3", "", "", 1953644767, 2401370761, Spawn)
 	AddConversationOption(conversation, "Sure, I can get the samples.", "dlg_22_4")
@@ -58,7 +58,7 @@ end
 
 function dlg_22_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/mentha_haora/_exp03/exp03_rgn_greater_faydark/scp/part_two/mentha/mentha004.mp3", "", "", 558577322, 2672691340, Spawn)
 	AddConversationOption(conversation, "All right.", "dlg_22_5")

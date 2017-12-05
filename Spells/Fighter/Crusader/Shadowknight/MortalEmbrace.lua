@@ -1,6 +1,6 @@
 function cast(Caster, Target, Chance)
   SetServerControlFlag(Target, 5, 1, 1);
-  
+
   local roll = math.random(1, 100);
   if roll <= Chance then
     ClearHate(Target)

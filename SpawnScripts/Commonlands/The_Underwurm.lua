@@ -24,18 +24,18 @@ function spawn(npc)
   }
 
   for _, location in ipairs(locations) do
-    MovementLoopAddLocation(npc, location[1], location[2], location[3], location[4], location[5], location[6], location[7], location[8], location[9], location[10], location[11], location[12], location[13], location[14], location[15], location[16], location[17], location[18], location[19], location[20], location[21])
+    MovementLoopAddLocation(npc, location[1], location[2], location[3], location[4], location[5])
   end
 
   for i = #locations - 1, 1, -1 do
-    MovementLoopAddLocation(npc, location[i][1], location[i][2], location[i][3], location[i][4], location[i][5], location[i][6], location[i][7], location[i][8], location[i][9], location[i][10], location[i][11], location[i][12], location[i][13], location[i][14], location[i][15], location[i][16], location[i][17], location[i][18], location[i][19], location[i][20], location[i][21])
+    MovementLoopAddLocation(npc, locations[i][1], locations[i][2], locations[i][3], locations[i][4], locations[i][5])
   end
 end
 
 function respawn(NPC)
-    spawn(NPC)
+  SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
-    FaceTarget(NPC, Spawn)
+  FaceTarget(NPC, Spawn)
 end

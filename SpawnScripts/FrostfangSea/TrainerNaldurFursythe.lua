@@ -3,7 +3,7 @@
 	Script Purpose	: Trainer Naldur Fursythe <Expert in Physical Attributes>
 	Script Author	: theFoof
 	Script Date	: 2013.05.21
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 function spawn(NPC)
@@ -11,7 +11,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)
@@ -26,7 +26,7 @@ end
 
 function first_chat(NPC, Spawn)
     FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_3_1062.mp3", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Tell me what my physical attributes do.", "what_chat_1")
@@ -38,7 +38,7 @@ end
 
 function what_chat_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Tell me about Agility.", "what_chat_2")
@@ -50,7 +50,7 @@ end
 
 function what_chat_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Tell me about Stamina.", "what_chat_3")
@@ -62,7 +62,7 @@ end
 
 function what_chat_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Tell me about Intelligence.", "what_chat_4")
@@ -70,11 +70,11 @@ function what_chat_3(NPC, Spawn)
 	AddConversationOption(conversation, "How do I improve my physical attributes?", "impr_chat_1")
 	AddConversationOption(conversation, "Thank you for the information.")
 	StartConversation(conversation, NPC, Spawn, "Stamina gives you more Health points. The more Health you have, the longer you can survive in battle. Stamina is a useful attribute for every class.")
-end 
+end
 
 function what_chat_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Tell me about Wisdom.", "dlg_43_5")
@@ -86,7 +86,7 @@ end
 
 function what_chat_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "How do I view my physical attributes?", "view_chat_1", "view_chat_1")
@@ -97,7 +97,7 @@ end
 
 function view_chat_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Tell me what my physical attributes do.", "what_chat_1")
@@ -108,7 +108,7 @@ end
 
 function impr_chat_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Are there other ways?", "impr_chat_2")
@@ -118,7 +118,7 @@ end
 
 function impr_chat_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Tell me what my physical attributes do.", "what_chat_1")

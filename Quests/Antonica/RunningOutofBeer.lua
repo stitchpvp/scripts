@@ -3,17 +3,17 @@
 	Script Purpose	:	Handles the quest, "Running Out of Beer"
 	Script Author	:	QuestParser (Replace this)
 	Script Date		:	7/8/2017
-	Script Notes	:	
+	Script Notes	:
 
 	Zone			:	Antonica
-	Quest Giver		:	
+	Quest Giver		:
 	Preceded by		:	None
 	Followed by		:	None
 --]]
 
 
 function Init(Quest)
-	AddQuestStepObtainItem(Quest, 1, "I must get an ale from upstairs.", 1, 100, "I need to go upstairs and get an ale for Haddek from the keg.", 308, --[[ ID's --]])
+	AddQuestStepObtainItem(Quest, 1, "I must get an ale from upstairs.", 1, 100, "I need to go upstairs and get an ale for Haddek from the keg.", 308, nil)
 	AddQuestStepCompleteAction(Quest, 1, "Step1Complete")
 end
 
@@ -21,7 +21,7 @@ function Step1Complete(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 1, "I have gotten an ale from upstairs.")
 	UpdateQuestTaskGroupDescription(Quest, 1, "I have gone upstairs and acquired an ale for Haddek.")
 
-	AddQuestStepChat(Quest, 2, "Deliver the ale to Haddek.", 1, "I must give this ale to Haddek.", 308, --[[ ID's --]])
+	AddQuestStepChat(Quest, 2, "Deliver the ale to Haddek.", 1, "I must give this ale to Haddek.", 308, nil)
 	AddQuestStepCompleteAction(Quest, 2, "QuestComplete")
 end
 

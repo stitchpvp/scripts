@@ -3,7 +3,7 @@
 	Script Purpose	: a griffon tamer (2490000)
 	Script Author	: Jabantiz
 	Script Date	: 2014.07.14
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 local GriffonEggs = 112
@@ -13,12 +13,12 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	if CanReceiveQuest(Spawn, GriffonEggs) then
 		-- Start Quest
@@ -44,15 +44,15 @@ end
 
 function dlg_0_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
-		
+	local conversation = CreateConversation()
+
 	AddConversationOption(conversation, "They certainly have. These look very sturdy, but I don't see many griffins about.", "dlg_0_2")
 	StartConversation(conversation, NPC, Spawn, "It's been a real treat watching this tower be built by all the artisans. They've done a marvelous job getting it ready for our flying friends.")
 end
 
 function dlg_0_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "So if you had some more griffons, the scheduling would be better?", "dlg_0_3")
 	AddConversationOption(conversation, "This sounds like a scheduling problem I don't want anything to do with.")
@@ -61,7 +61,7 @@ end
 
 function dlg_0_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "Sure, sounds like a deal.", "dlg_0_4")
 	StartConversation(conversation, NPC, Spawn, "Oh, certainly. But they've got to be trained properly from birth, really. I'll tell you what, if you grab an unhatched griffin egg and return it to any of us tamers, you will be rewarded handsomely. How's that sound?")
@@ -74,7 +74,7 @@ end
 function dlg_1_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
     local con = CreateConversation()
-    
+
 	if GetSpawnLocationID(NPC) == 214217 then
 		AddConversationOption(con, "To Antonica Gates.", "DocksToAnt")
 		AddConversationOption(con, "To South East Station.", "DocksToSE")

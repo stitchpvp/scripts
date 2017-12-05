@@ -3,14 +3,14 @@
 	Script Purpose	: Wolfom Bonetooth <Coldwind Hall Taskmaster>
 	Script Author	: theFoof
 	Script Date	: 2013.09.16
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)

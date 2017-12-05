@@ -3,7 +3,7 @@
 	Script Purpose	:	Handles the quest, "Sealing the Rift"
 	Script Author	:	Cynnar
 	Script Date		:	7/5/2015
-	Script Notes	:	
+	Script Notes	:
 
 	Zone			:	Darklight Wood
 	Quest Giver		:	Pellandra D'Xatyl
@@ -39,7 +39,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(QuestGiver, "pellandra_d_xatyl/darklight_wood/hates_envy/pellandra_revamp/pellandra005.mp3", "", "", 2498536389, 3964718754, Player)
 	AddConversationOption(conversation, "I will return victorious!")
@@ -51,12 +51,12 @@ function Declined(Quest, QuestGiver, Player)
 end
 
 function Deleted(Quest, QuestGiver, Player)
-	private_spawn_pebble = GetSpawn(Spawn, 340760)
-	private_spawn_boulder = GetSpawn(Spawn, 340761)
-	private_spawn_particle1 = GetSpawn(Spawn, 340747)
-	private_spawn_particle2 = GetSpawn(Spawn, 341218)
-	AddSpawnAccess(private_spawn_pebble, Spawn)
-	RemoveSpawnAccess(private_spawn_boulder, Spawn)
-	RemoveSpawnAccess(private_spawn_particle1, Spawn)
-	RemoveSpawnAccess(private_spawn_particle2, Spawn)
+	private_spawn_pebble = GetSpawn(Player, 340760)
+	private_spawn_boulder = GetSpawn(Player, 340761)
+	private_spawn_particle1 = GetSpawn(Player, 340747)
+	private_spawn_particle2 = GetSpawn(Player, 341218)
+	AddSpawnAccess(private_spawn_pebble, Player)
+	RemoveSpawnAccess(private_spawn_boulder, Player)
+	RemoveSpawnAccess(private_spawn_particle1, Player)
+	RemoveSpawnAccess(private_spawn_particle2, Player)
 end

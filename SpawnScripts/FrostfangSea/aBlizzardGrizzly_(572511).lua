@@ -8,7 +8,7 @@ function spawn(NPC)
     X = GetX(NPC)
 	Y = GetY(NPC)
 	Z = GetZ(NPC)
-    
+
 	MovementLoopAddLocation(NPC, 87.5, 35.93, -497.63, 2, 0)
 	MovementLoopAddLocation(NPC, 83.06, 36.29, -503.23, 2, 0)
 	MovementLoopAddLocation(NPC, 81.31, 40.11, -522.55, 2, 0)
@@ -20,7 +20,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-    spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)

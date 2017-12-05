@@ -3,7 +3,7 @@
 	Script Purpose	:	for the quest "Bartering Crystals"
 	Script Author	:	theFoof
 	Script Date		:	2013.5.30
-	Script Notes	:	
+	Script Notes	:
 
 	Zone			:	Frostfang Sea
 	Quest Giver		:	Flibbit Quagmarr
@@ -19,7 +19,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(QuestGiver, "flibbit_quagmarr/halas/gwenevyns_cove/flibbit_quagmarr/flibbit_quagmarr_044.mp3", "", "", 86681713, 2082517769, Player)
 	AddConversationOption(conversation, "I shall return with the crystals.")

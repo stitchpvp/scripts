@@ -1,6 +1,6 @@
 --[[
 	Script Name	: SpawnScripts/FrostfangSea/TadIronstein.lua
-	Script Purpose	: Tad Ironstein 
+	Script Purpose	: Tad Ironstein
 	Script Author	: theFoof
 	Script Date	: 2013.06.09
 	Script Notes	:
@@ -14,13 +14,13 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
-	
+	local conversation = CreateConversation()
+
 	if GetQuestStep(Spawn, ReportSpine) == 1 or GetQuestStep(Spawn, NightmareOver) == 1 then
 	    PlayFlavor(NPC, "tad_ironstein/halas/cragged_spine/tad_ironstein_001.mp3", "", "", 159212760, 893738328, Spawn)
 	    AddConversationOption(conversation, GetName(Spawn) .. ", reporting for duty!", "Quest1Chat_1")
@@ -35,7 +35,7 @@ end
 
 function Quest1Chat_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "tad_ironstein/halas/cragged_spine/tad_ironstein_002.mp3", "", "", 767750494, 124592983, Spawn)
 	AddConversationOption(conversation, "I prefer to stand.  What's going on?", "Quest1Chat_2")
@@ -52,7 +52,7 @@ function Quest1Chat_2(NPC, Spawn)
 	    SetStepComplete(Spawn, ReportSpine, 1)
 	end
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "tad_ironstein/halas/cragged_spine/tad_ironstein_003.mp3", "", "", 4232630025, 1474295833, Spawn)
 	AddConversationOption(conversation, "Alright.  Anything else?", "Quest1Chat_3")
@@ -62,7 +62,7 @@ end
 
 function Quest1Chat_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "tad_ironstein/halas/cragged_spine/tad_ironstein_004.mp3", "", "", 2381720580, 2582728568, Spawn)
 	AddConversationOption(conversation, "Alright.  Anything else?", "Quest1Chat_4")
@@ -72,7 +72,7 @@ end
 
 function Quest1Chat_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "tad_ironstein/halas/cragged_spine/tad_ironstein_005.mp3", "", "", 520233498, 1846378100, Spawn)
 	AddConversationOption(conversation, "Alright.  Anything else?", "Quest1Chat_5")
@@ -82,7 +82,7 @@ end
 
 function Quest1Chat_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "tad_ironstein/halas/cragged_spine/tad_ironstein_006.mp3", "", "", 678304878, 2445816043, Spawn)
 	AddConversationOption(conversation, "Alright.  Anything else?", "Quest1Chat_6")
@@ -92,7 +92,7 @@ end
 
 function Quest1Chat_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "tad_ironstein/halas/cragged_spine/tad_ironstein_007.mp3", "", "", 3904075644, 3425628781, Spawn)
 	AddConversationOption(conversation, "Glad to be here.")

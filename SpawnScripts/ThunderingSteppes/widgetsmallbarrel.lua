@@ -2,8 +2,8 @@
     Script Name    : SpawnScripts/ThunderingSteppes/widgetsmallbarrel.lua
     Script Author  : Jabantiz
     Script Date    : 2015.05.09 07:05:53
-    Script Purpose : 
-                   : 
+    Script Purpose :
+                   :
 --]]
 
 local HuntingTheHuntresses = 118
@@ -13,14 +13,14 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function casted_on(NPC, Spawn, Message)
 	if not HasQuest(Spawn, HuntingTheHuntresses) and not HasCompletedQuest(Spawn, HuntingTheHuntresses) then
 		if Message == "Examine Barrel" then
 			local con = CreateConversation()
-		    
+
 			AddConversationOption(con, "Look in barrel.", "LookInBarrel")
 			AddConversationOption(con, "Leave it alone.", "Close")
 			StartDialogConversation(con, 1, NPC, Spawn, "You find a small barrel with its top slightly ajar.")

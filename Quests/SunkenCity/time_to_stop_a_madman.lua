@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "Time to Stop a Madman"
 	Script Author	: Scatman
 	Script Date	    : 2009.07.28
-	
+
 	Zone       : Sunken City
 	Quest Giver: Inquisitor Thorson
 	Preceded by: Back to the Inquisitor (back_to_the_inquisitor.lua)
@@ -17,7 +17,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(QuestGiver, "voiceover/english/tutorial_revamp/inquisitor_thorson/fprt_adv01_sunken/inquisitor_thorson045.mp3", "", "", 1129031439, 214486034, Player)
 	AddConversationOption(conversation, "I will return... I hope.")

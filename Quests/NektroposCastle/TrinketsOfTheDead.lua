@@ -35,7 +35,7 @@ end
 
 function AcceptedDialog(QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(QuestGiver, "voiceover/english/master_eldin_necrosis_/nektropos/eldin006.mp3", "", "", 2450617503, 1834362480, Player)
 	AddConversationOption(conversation, "No problem at all!")
@@ -153,7 +153,7 @@ function ShouldAddStep11(Quest, Player)
 		end
 		i = i + 1
 	end
-	
+
 	if should_add then
 		AddStep11(Quest)
 	end

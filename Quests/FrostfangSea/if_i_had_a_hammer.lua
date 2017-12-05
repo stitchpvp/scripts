@@ -7,7 +7,7 @@
         Zone            : Frostfang Sea
         Quest Giver     : Bull the Craft
         Preceded by     : Tutorial: Learning to Harvest
-        Followed by     : 
+        Followed by     :
 --]]
 -- reward is "Handbook of the Ravens of the North", 722 tradeskill xp, +250 Ravens of the North faction and 6-8 silver
 
@@ -49,7 +49,7 @@ end
 function Accepted(Quest, QuestGiver, Player)
     SendPopUpMessage(Player, "This quest cannot be fully completed yet. Do not report as bug.", 255, 0, 0)
     FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(QuestGiver, "", "", "", 0, 0, Player)
 	AddConversationOption(conversation, "I'll get those items now.")

@@ -1,9 +1,9 @@
 --[[
 	Script Name	: SpawnScripts/SunkenCity/aspectralresident.lua
-	Script Purpose	: a spectral resident 
+	Script Purpose	: a spectral resident
 	Script Author	: Scatman
 	Script Date	: 2009.08.01
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 local MALE = 1
@@ -15,7 +15,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)

@@ -1,9 +1,9 @@
 --[[
 	Script Name	: SpawnScripts/FrostfangSea/PretchonIronstein.lua
-	Script Purpose	: Pretchon Ironstein 
+	Script Purpose	: Pretchon Ironstein
 	Script Author	: theFoof
 	Script Date	: 2013.08.19
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 local TrustIssues = 85
@@ -12,12 +12,12 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	if HasQuest(Spawn, TrustIssues) and not QuestStepIsComplete(Spawn, TrustIssues, 4) then
 		PlayFlavor(NPC, "pretchon_ironstein/halas/new_halas_guard_house/pretchon_ironstein001.mp3", "", "", 1138921900, 154999598, Spawn)
 		AddConversationOption(conversation, "I have a few questions.", "Quest1Chat_1")
@@ -34,7 +34,7 @@ end
 
 function Quest1Chat_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "pretchon_ironstein/halas/new_halas_guard_house/pretchon_ironstein003.mp3", "", "", 3031154636, 3454544430, Spawn)
 	AddConversationOption(conversation, "Why did you come to Erollis?", "Quest1Chat_2")
@@ -45,7 +45,7 @@ end
 
 function Quest1Chat_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "pretchon_ironstein/halas/new_halas_guard_house/pretchon_ironstein004.mp3", "", "", 2078038730, 2967258030, Spawn)
 	AddConversationOption(conversation, "Ah, I see.  Well, why don't you leave?", "Quest1Chat_3")
@@ -55,7 +55,7 @@ end
 
 function Quest1Chat_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "pretchon_ironstein/halas/new_halas_guard_house/pretchon_ironstein005.mp3", "", "", 2277034168, 2486010941, Spawn)
 	AddConversationOption(conversation, "Can you explain that further?", "Quest1Chat_4")
@@ -66,7 +66,7 @@ end
 function Quest1Chat_4(NPC, Spawn)
 	SetStepComplete(Spawn, TrustIssues, 4)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "pretchon_ironstein/halas/new_halas_guard_house/pretchon_ironstein006.mp3", "", "", 28333391, 3841310148, Spawn)
 	AddConversationOption(conversation, "Good day and goodbye.")
@@ -75,7 +75,7 @@ end
 
 function Quest1Chat_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "pretchon_ironstein/halas/new_halas_guard_house/pretchon_ironstein002.mp3", "", "", 524764574, 2567502776, Spawn)
 	AddConversationOption(conversation, "I have a few questions.", "Quest1Chat_1")

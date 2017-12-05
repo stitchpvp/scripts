@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "Danya's Order"
 	Script Author	: Scatman
 	Script Date	: 2009.01.31
-	
+
 	Zone       : Darklight Wood
 	Quest Giver: Fileyl Alyylharil
 	Preceded by: Malkaen Weed (malkaen_weed.lua)
@@ -12,7 +12,7 @@
 
 
 function Init(Quest)
-	
+
 
 
 	AddQuestStepChat(Quest, 1, "I need to give Danya Halfmoon her order.", 1, ".", 0, 340073)
@@ -25,7 +25,7 @@ function Accepted(Quest, QuestGiver, Player)
 		if GetDistance(Player, QuestGiver) < 30 then
 			FaceTarget(QuestGiver, Player)
 			conversation = CreateConversation()
-			
+
 			PlayFlavor(QuestGiver, "voiceover/english/neriak/fileyl_alyylharil/darklight_wood/hates_envy/fileyl/fileyl010.mp3", "", "", 4262099714, 926127362, Player)
 			AddConversationOption(conversation, "You're welcome.")
 			AddConversationOption(conversation, "Just earning my way.")

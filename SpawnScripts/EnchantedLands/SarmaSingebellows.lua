@@ -1,6 +1,6 @@
 --[[
 	Script Name	: SpawnScripts/EnchantedLands/SarmaSingebellows.lua
-	Script Purpose	: Sarma Singebellows 
+	Script Purpose	: Sarma Singebellows
 	Script Author	: Cynnar
 	Script Date	: 2015.02.24
 	Script Notes	: Auto-Generated Conversation from PacketParser Data
@@ -15,7 +15,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)
@@ -27,7 +27,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	if HasQuest(Spawn, ThreeMeaningsOfLife) and GetQuestStep(Spawn, ThreeMeaningsOfLife) == 5 then
           SetStepComplete(Spawn, ThreeMeaningsOfLife, 5)

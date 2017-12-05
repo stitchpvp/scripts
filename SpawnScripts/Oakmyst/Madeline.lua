@@ -3,7 +3,7 @@
 	Script Purpose	: Madeline  <Guard>
 	Script Author	: Scatman
 	Script Date	: 2009.10.08
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 dofile("SpawnScripts/Generic/GenericGuardVoiceOvers.lua")
@@ -12,7 +12,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)

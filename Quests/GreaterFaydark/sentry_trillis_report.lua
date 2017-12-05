@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest "Sentry Trillis Report"
 	Script Author	: Zcoretri
 	Script Date	: 2009.03.01
-	
+
 	Zone       : Greater Faydark
 	Quest Giver: Matron of the Nursery
 	Preceded by: none

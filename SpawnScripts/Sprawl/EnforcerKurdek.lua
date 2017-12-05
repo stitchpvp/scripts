@@ -3,7 +3,7 @@
 	Script Purpose	: Enforcer Kurdek <Dreadnaught>
 	Script Author	: Scatman
 	Script Date	: 2008.09.29
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 local QUEST_FROM_BIGBEND_KROOTA = 169
@@ -26,7 +26,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)
@@ -50,8 +50,8 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
-	
+	local conversation = CreateConversation()
+
 	if HasQuest(Spawn, QUEST_FROM_BIGBEND_KROOTA) then
 		SetStepComplete(Spawn, QUEST_FROM_BIGBEND_KROOTA, 1)
 	end
@@ -105,7 +105,7 @@ end
 
 function dlg_10_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/enforcer_kurdek/fprt_adv03_sprawl/quests/enforcer_kurdek003.mp3", "", "", 3361322241, 3548873750, Spawn)
 	AddConversationOption(conversation, "So the Dreadnaughts are some kind of gang?", "dlg_10_2")
@@ -115,7 +115,7 @@ end
 
 function dlg_10_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/enforcer_kurdek/fprt_adv03_sprawl/quests/enforcer_kurdek004.mp3", "", "", 2971300054, 802401353, Spawn)
 	AddConversationOption(conversation, "Tell me more about the Dreadnaughts.", "dlg_11_3")
@@ -126,7 +126,7 @@ end
 
 function dlg_11_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/enforcer_kurdek/fprt_adv03_sprawl/quests/enforcer_kurdek005.mp3", "", "", 3101195363, 1106471078, Spawn)
 	AddConversationOption(conversation, "Where did the Dreadnaughts come from?", "dlg_11_4")
@@ -136,7 +136,7 @@ end
 
 function dlg_11_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/enforcer_kurdek/fprt_adv03_sprawl/quests/enforcer_kurdek006.mp3", "", "", 1592822156, 3131496072, Spawn)
 	AddConversationOption(conversation, "So the Dreadnaughts used to be monks?", "dlg_11_5")
@@ -146,7 +146,7 @@ end
 
 function dlg_11_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/enforcer_kurdek/fprt_adv03_sprawl/quests/enforcer_kurdek007.mp3", "", "", 2501056164, 792758707, Spawn)
 	AddConversationOption(conversation, "What happened to the Ashen Order?", "dlg_12_6")
@@ -156,7 +156,7 @@ end
 
 function dlg_12_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/enforcer_kurdek/fprt_adv03_sprawl/quests/enforcer_kurdek008.mp3", "", "", 1768991612, 1262532651, Spawn)
 	AddConversationOption(conversation, "How were the Dreadnaughts formed?", "dlg_12_7")
@@ -166,7 +166,7 @@ end
 
 function dlg_12_7(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/enforcer_kurdek/fprt_adv03_sprawl/quests/enforcer_kurdek009.mp3", "", "", 1775956219, 1310346606, Spawn)
 	AddConversationOption(conversation, "What are you doing here in the Sprawl?", "dlg_12_8")
@@ -176,7 +176,7 @@ end
 
 function dlg_12_8(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/enforcer_kurdek/fprt_adv03_sprawl/quests/enforcer_kurdek011.mp3", "", "", 339942345, 913619397, Spawn)
 	AddConversationOption(conversation, "What gangs are you talking about?", "dlg_12_9")
@@ -186,7 +186,7 @@ end
 
 function dlg_12_9(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/enforcer_kurdek/fprt_adv03_sprawl/quests/enforcer_kurdek012.mp3", "", "", 4086411101, 3781108320, Spawn)
 	AddConversationOption(conversation, "What other gangs are there?", "dlg_12_10")
@@ -196,7 +196,7 @@ end
 
 function dlg_12_10(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/enforcer_kurdek/fprt_adv03_sprawl/quests/enforcer_kurdek013.mp3", "", "", 957541706, 2141361850, Spawn)
 	AddConversationOption(conversation, "What is the final gang?", "dlg_12_11")
@@ -206,7 +206,7 @@ end
 
 function dlg_12_11(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/enforcer_kurdek/fprt_adv03_sprawl/quests/enforcer_kurdek014.mp3", "", "", 337100468, 3493430799, Spawn)
 	AddConversationOption(conversation, "How did the Sprawl end up like this?", "dlg_12_12")
@@ -217,7 +217,7 @@ end
 
 function dlg_12_12(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/enforcer_kurdek/fprt_adv03_sprawl/quests/enforcer_kurdek015.mp3", "", "", 759884323, 3185216679, Spawn)
 	AddConversationOption(conversation, "Didn't the Overlord want to rebuild it?", "dlg_12_13")
@@ -227,7 +227,7 @@ end
 
 function dlg_12_13(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/enforcer_kurdek/fprt_adv03_sprawl/quests/enforcer_kurdek016.mp3", "", "", 2641573329, 4171213682, Spawn)
 	AddConversationOption(conversation, "Is there no law and order here?", "dlg_12_14")
@@ -237,7 +237,7 @@ end
 
 function dlg_12_14(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/enforcer_kurdek/fprt_adv03_sprawl/quests/enforcer_kurdek017.mp3", "", "", 2753020980, 1722099722, Spawn)
 	AddConversationOption(conversation, "What can I do to aid the Dreadnaughts?", "dlg_12_15")
@@ -247,7 +247,7 @@ end
 
 function dlg_12_15(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/enforcer_kurdek/fprt_adv03_sprawl/quests/enforcer_kurdek018.mp3", "", "", 1172539182, 759080499, Spawn)
 	AddConversationOption(conversation, "I'm up for it. What's the first task?", "dlg_12_16")
@@ -257,7 +257,7 @@ end
 
 function dlg_12_16(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/enforcer_kurdek/fprt_adv03_sprawl/quests/enforcer_kurdek019.mp3", "", "", 2830815918, 3015653280, Spawn)
 	AddConversationOption(conversation, "Where can I find Durbok?", "OfferQuest1")
@@ -281,9 +281,9 @@ end
 
 function dlg_25_1(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_1, 2)
-	
+
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/enforcer_kurdek/fprt_adv03_sprawl/quests/enforcer_kurdek022.mp3", "", "", 1909175152, 30886164, Spawn)
 	AddConversationOption(conversation, "He said their leader, Brutemaster Tarden, was more interested in lining his own pockets than training his forces.", "dlg_25_2")
@@ -304,7 +304,7 @@ end
 
 function dlg_25_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/enforcer_kurdek/fprt_adv03_sprawl/quests/enforcer_kurdek023.mp3", "", "", 3282987047, 3481980081, Spawn)
 	AddConversationOption(conversation, "I'll give it a shot.", "dlg_25_3")
@@ -314,7 +314,7 @@ end
 
 function dlg_25_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/enforcer_kurdek/fprt_adv03_sprawl/quests/enforcer_kurdek024.mp3", "", "", 820911238, 205246432, Spawn)
 	AddConversationOption(conversation, "What if he refuses to cooperate?", "OfferQuest2")
@@ -337,9 +337,9 @@ end
 
 function dlg_27_1(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_2, 2)
-	
+
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/enforcer_kurdek/fprt_adv03_sprawl/quests/enforcer_kurdek027.mp3", "", "", 3293144589, 323622543, Spawn)
 	AddConversationOption(conversation, "What else would you like me to do?", "dlg_27_2")
@@ -353,7 +353,6 @@ end
 
 function GreetingsAdventurer(NPC, Spawn, conversation)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
 
 	AddConversationOption(conversation, "Can I lend you a hand?", "dlg_27_2")
 	AddConversationOption(conversation, "Sounds like you have work to do.")
@@ -362,7 +361,7 @@ end
 
 function dlg_27_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/enforcer_kurdek/fprt_adv03_sprawl/quests/enforcer_kurdek028.mp3", "", "", 200650494, 3868034746, Spawn)
 	AddConversationOption(conversation, "Sure, if this job is as rewarding as the last.", "dlg_27_3")
@@ -372,7 +371,7 @@ end
 
 function dlg_27_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/enforcer_kurdek/fprt_adv03_sprawl/quests/enforcer_kurdek029.mp3", "", "", 229557980, 3056293527, Spawn)
 	AddConversationOption(conversation, "What do you want me to do there?", "OfferQuest3")
@@ -396,7 +395,7 @@ end
 
 function dlg_27_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/enforcer_kurdek/fprt_adv03_sprawl/quests/enforcer_kurdek031.mp3", "", "", 2755416123, 3102178981, Spawn)
 	AddConversationOption(conversation, "What 'wheel' are you talking about?", "dlg_27_6")
@@ -406,7 +405,7 @@ end
 
 function dlg_27_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/enforcer_kurdek/fprt_adv03_sprawl/quests/enforcer_kurdek032.mp3", "", "", 1619463323, 6558456, Spawn)
 	AddConversationOption(conversation, "I'll give it a try.", "dlg_27_7")
@@ -415,7 +414,7 @@ end
 
 function dlg_27_7(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/enforcer_kurdek/fprt_adv03_sprawl/quests/enforcer_kurdek033.mp3", "", "", 4228654183, 2166067053, Spawn)
 	AddConversationOption(conversation, "Thanks for the advice. I'll be back.")
@@ -424,7 +423,7 @@ end
 
 function dlg_30_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/enforcer_kurdek/fprt_adv03_sprawl/quests/enforcer_kurdek035.mp3", "", "", 4223119481, 1134215352, Spawn)
 	AddConversationOption(conversation, "She mentioned that 'the Marked' would be rising to power, and we'd hear more of them soon.", "dlg_30_2")
@@ -434,9 +433,9 @@ end
 
 function dlg_30_2(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_3, 2)
-	
+
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/enforcer_kurdek/fprt_adv03_sprawl/quests/enforcer_kurdek036.mp3", "", "", 4111858897, 274557539, Spawn)
 	AddConversationOption(conversation, "Thank you. Anything else I can help you with?", "dlg_30_3")
@@ -450,7 +449,6 @@ end
 
 function NiceWork(NPC, Spawn, conversation)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
 
 	AddConversationOption(conversation, "What did you have in mind?", "dlg_30_3")
 	AddConversationOption(conversation, "No thanks.")
@@ -459,7 +457,7 @@ end
 
 function dlg_30_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/enforcer_kurdek/fprt_adv03_sprawl/quests/enforcer_kurdek037.mp3", "", "", 2350612963, 4036765011, Spawn)
 	AddConversationOption(conversation, "I'm up for the challenge.", "dlg_30_4")
@@ -469,7 +467,7 @@ end
 
 function dlg_30_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/enforcer_kurdek/fprt_adv03_sprawl/quests/enforcer_kurdek038.mp3", "", "", 2271152458, 1644298749, Spawn)
 	AddConversationOption(conversation, "How should I proceed?", "OfferQuest4")
@@ -492,9 +490,9 @@ end
 
 function dlg_32_1(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_4, 4)
-	
+
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/enforcer_kurdek/fprt_adv03_sprawl/quests/enforcer_kurdek041.mp3", "", "", 459171566, 399692655, Spawn)
 	AddConversationOption(conversation, "Thanks. Do you have any further jobs for me?", "dlg_32_2")
@@ -508,7 +506,6 @@ end
 
 function WelcomeBack(NPC, Spawn, conversation)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/enforcer_kurdek/fprt_adv03_sprawl/quests/enforcer_kurdek042.mp3", "", "", 3199383126, 2868778481, Spawn)
 	AddConversationOption(conversation, "DDo you have anything else for me?", "dlg_32_2")
@@ -518,7 +515,7 @@ end
 
 function dlg_32_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/enforcer_kurdek/fprt_adv03_sprawl/quests/enforcer_kurdek042.mp3", "", "", 3199383126, 2868778481, Spawn)
 	AddConversationOption(conversation, "Duly noted. Anything else?", "OfferQuest5")
@@ -538,7 +535,7 @@ end
 
 function dlg_32_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/enforcer_kurdek/fprt_adv03_sprawl/quests/enforcer_kurdek044.mp3", "", "", 3653537758, 3291895928, Spawn)
 	AddConversationOption(conversation, "Are there any other locations for adventure that you could suggest?", "dlg_32_5")
@@ -547,7 +544,7 @@ end
 
 function dlg_32_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/enforcer_kurdek/fprt_adv03_sprawl/quests/enforcer_kurdek044b.mp3", "", "", 1076595806, 3802376604, Spawn)
 	AddConversationOption(conversation, "Please tell me more about Custodian Zaddar.", "dlg_32_6")
@@ -558,7 +555,7 @@ end
 
 function dlg_32_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/enforcer_kurdek/fprt_adv03_sprawl/quests/enforcer_kurdek056.mp3", "", "", 407333436, 4264887300, Spawn)
 	AddConversationOption(conversation, "Please tell me more about Inquisitor Thorson.", "dlg_32_7")
@@ -568,7 +565,7 @@ end
 
 function dlg_32_7(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/enforcer_kurdek/fprt_adv03_sprawl/quests/enforcer_kurdek057.mp3", "", "", 1278127784, 3972904747, Spawn)
 	AddConversationOption(conversation, "Please tell me more about Custodian Zaddar.", "dlg_32_6")

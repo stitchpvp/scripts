@@ -3,7 +3,7 @@
 	Script Purpose	:	Handles the quest, "A Snake Made Serum"
 	Script Author	:	Cynnar
 	Script Date		:	9/1/2015
-	Script Notes	:	
+	Script Notes	:
 
 	Zone			:	Darklight Wood
 	Quest Giver		:	Ilmtar D'Viervs

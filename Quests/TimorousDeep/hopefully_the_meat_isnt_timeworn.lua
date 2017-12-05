@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "Hopefully the Meat Isn't Timeworn"
 	Script Author	: Scatman
 	Script Date	: 2009.02.10
-	
+
 	Zone       : Timorous Deep
 	Quest Giver: Varkori Riz'Lul
 	Preceded by: None
@@ -21,7 +21,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(QuestGiver, "voiceover/english/rok_questvo/varkori_riz_lul/_exp04/exp04_rgn_timorous_deep/chrykori_tie/rizlul/rizlul001.mp3", "", "", 1972473001, 1216175625, Player)
 	AddConversationOption(conversation, "I will get the lizard meat.")
@@ -33,7 +33,7 @@ end
 
 function step1_complete_killedLizards(Quest, QuestGiver, Player)
 	SetStepComplete(Quest, 1, "I have the lizard meat.")
-	
+
 	AddQuestStepChat(Quest, 2, "I need to bring this meat back to Varkori Riz'Lul in Chrykori Village.", 1, ".", 139, 2630043)
 	AddQuestStepCompleteAction(Quest, 2, "quest_complete")
 end

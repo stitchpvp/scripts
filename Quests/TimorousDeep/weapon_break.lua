@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "Weapon Break"
 	Script Author	: Scatman
 	Script Date	: 2009.03.10
-	
+
 	Zone       : Timorous Deep
 	Quest Giver: Gerwen Di'Ki
 	Preceded by: None
@@ -31,9 +31,9 @@ function Accepted(Quest, QuestGiver, Player)
 	if not HasItem(Player, 2931) then
 		SummonItem(Player, 2931)
 	end
-	
+
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(QuestGiver, "voiceover/english/rok_questvo/gerwen_di_ki/_exp04/exp04_rgn_timorous_deep/chrykori_tie/diki/diki001.mp3", "", "", 2073303618, 4008999322, Player)
 	AddConversationOption(conversation, "I will be swift.")
@@ -45,7 +45,7 @@ end
 
 function Step1_Complete_SprayedAcid(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 1, "I have sprayed acid on the weapons in Pyrrin Roost.")
-	
+
 	AddQuestStepChat(Quest, 2, "I need to return to Gerwen Di'Ki.", 1, ".", 0, 2630593)
 	AddQuestStepCompleteAction(Quest, 2, "Quest_Complete")
 end

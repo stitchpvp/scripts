@@ -14,13 +14,13 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-    spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
     FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
-	
+	local conversation = CreateConversation()
+
     if GetQuestStep(Spawn, LostFroglok) == 2 then
         PlayFlavor(NPC, "splorpy_quagmarr/halas/gwenevyns_cove/splorpy_quagmarr/splorpy_quagmarr_001.mp3", "", "", 3711049527, 3895860763, Spawn)
 	    AddConversationOption(conversation, "Splorpy! It's me, " .. GetName(Spawn) .. ". I'm a friend of your dad's.", "Quest1Chat_1")
@@ -30,7 +30,7 @@ end
 
 function Quest1Chat_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "splorpy_quagmarr/halas/gwenevyns_cove/splorpy_quagmarr/splorpy_quagmarr_002.mp3", "", "", 4266619341, 398836584, Spawn)
 	AddConversationOption(conversation, "That I did. How did you get out here?", "Quest1Chat_2")
@@ -39,7 +39,7 @@ end
 
 function Quest1Chat_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "splorpy_quagmarr/halas/gwenevyns_cove/splorpy_quagmarr/splorpy_quagmarr_003.mp3", "", "", 3146179411, 3806044983, Spawn)
 	AddConversationOption(conversation, "You were frightened by a barbarian?", "Quest1Chat_3")
@@ -48,7 +48,7 @@ end
 
 function Quest1Chat_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "splorpy_quagmarr/halas/gwenevyns_cove/splorpy_quagmarr/splorpy_quagmarr_004.mp3", "", "", 2435575866, 3227047552, Spawn)
 	AddConversationOption(conversation, "Well, I'm here to take you back to your dad. I think we should get going before you get any colder.", "Quest1Chat_4")
@@ -57,7 +57,7 @@ end
 
 function Quest1Chat_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "splorpy_quagmarr/halas/gwenevyns_cove/splorpy_quagmarr/splorpy_quagmarr_005.mp3", "", "", 3060792386, 2313305125, Spawn)
 	AddConversationOption(conversation, "Maybe.", "FollowPlayer")

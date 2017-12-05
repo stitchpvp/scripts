@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "Delivery to a Veteran"
 	Script Author	: Scatman
 	Script Date	: 2009.02.06
-	
+
 	Zone       : Timorous Deep
 	Quest Giver: Taroche Dry'Zok
 	Preceded by: Stuffed Gorger Claws (stuffed_gorger_claws.lua)
@@ -21,7 +21,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(QuestGiver, "voiceover/english/rok_questvo/taroche_dry_zok/_exp04/exp04_rgn_timorous_deep/chrykori_tie/dryzok/dryzok004.mp3", "", "", 3720573202, 68445257, Player)
 	AddConversationOption(conversation, "You're welcome.")

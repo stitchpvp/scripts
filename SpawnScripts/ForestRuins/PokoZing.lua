@@ -1,9 +1,9 @@
 --[[
 	Script Name	: SpawnScripts/ForestRuins/PokoZing.lua
-	Script Purpose	: Poko Zing 
+	Script Purpose	: Poko Zing
 	Script Author	: Scatman
 	Script Date	: 2009.09.27
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 local GNOME = 5
@@ -15,17 +15,17 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
-	
+	local conversation = CreateConversation()
+
 	if HasQuest(Spawn, QUEST_FROM_NEEZER) then
 		AddConversationOption(conversation, "I have a delivery from Neezer Grund.", "dlg_0_1")
 	end
-	
+
 	if HasCompletedQuest(Spawn, QUEST_1) then
 		PlayFlavor(NPC, "voiceover/english/tutorial_revamp/poko_zing/qey_adv02_ruins_revamp/qst_gnome_poko_zing_done_2d84e55b.mp3", "Go on now, I don't need yer help and you don't need mine.", "", 16598543, 2700760297, Spawn)
 	elseif HasQuest(Spawn, QUEST_1) then
@@ -37,12 +37,12 @@ function hailed(NPC, Spawn)
 			PlayFlavor(NPC, "voiceover/english/tutorial_revamp/poko_zing/qey_adv02_ruins_revamp/qst_gnome_poko_zing_notonquest_f698071.mp3", "I am very, very busy. Please respect that.", "", 2080673395, 1843361681, Spawn)
 		end
 	end
-	
+
 	--[[
 	if HasQuest(Spawn, QUEST_FROM_NEEZER) then
 		AddConversationOption(conversation, "I have a delivery from Neezer Grund.", "dlg_0_1")
 	end
-	
+
 	if HasCompletedQuest(Spawn, QUEST_1) then
 		Say(NPC, "Go on now, I don't need yer help and you don't need mine.", Spawn)
 	elseif HasQuest(Spawn, QUEST_1) then
@@ -85,10 +85,10 @@ end
 
 function dlg_0_1(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_FROM_NEEZER, 1)
-	
+
 	FaceTarget(NPC, Spawn)
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/poko_zing/qey_adv02_ruins/quests/poko/poko_neezer001.mp3", "", "", 910537276, 2473499967, Spawn)
-	
+
 	if not HasQuest(Spawn, QUEST_1) and not HasCompletedQuest(Spawn, QUEST_1) then
 		conversation = CreateConversation()
 		AddConversationOption(conversation, "Neezer said you might have work for me.", "dlg_0_2")
@@ -100,7 +100,7 @@ end
 
 function dlg_0_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/poko_zing/qey_adv02_ruins/quests/poko/poko_neezer002.mp3", "", "", 204260728, 3356745328, Spawn)
 	AddConversationOption(conversation, "Why are things hectic?", "dlg_0_3")
@@ -109,7 +109,7 @@ end
 
 function dlg_0_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/poko_zing/qey_adv02_ruins/quests/poko/poko_neezer003.mp3", "", "", 1892489912, 2005975591, Spawn)
 	AddConversationOption(conversation, "Maybe I can help with that then, help figure out what is going on.", "dlg_0_4")
@@ -118,7 +118,7 @@ end
 
 function dlg_0_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/poko_zing/qey_adv02_ruins/quests/poko/poko_neezer004.mp3", "", "", 233334797, 3276971465, Spawn)
 	AddConversationOption(conversation, "Well, all right.", "ICanHelp")
@@ -137,7 +137,7 @@ end
 
 function OnlyEverything(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "What kinds of reports?", "WhatKindsOfReports")
 	StartConversation(conversation, NPC, Spawn, "Only everything! Things are happening here and nobody knows what, precisely. We only have random reports, nothing concrete.")
@@ -145,7 +145,7 @@ end
 
 function WhatKindsOfReports(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "But they didn't send the guard?", "DidntSendGuard")
 	StartConversation(conversation, NPC, Spawn, "Strange plants, pirates, missing people, dead animals, enough bad things to send the Qeynos Guard--you would think.")
@@ -153,7 +153,7 @@ end
 
 function DidntSendGuard(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "I can help.", "ICanHelp")
 	StartConversation(conversation, NPC, Spawn, "They sent Germain here. He's nice, I suppose. He doesn't much care for expediency, though. With all this investigation going on I can't get any of the work done that I came here for originally!")
@@ -161,7 +161,7 @@ end
 
 function ICanHelp(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/poko_zing/qey_adv02_ruins/quests/poko/poko004.mp3", "", "", 82829705, 492738311, Spawn)
 	AddConversationOption(conversation, "All right.", "OfferQuest1")
@@ -189,7 +189,7 @@ end
 
 function MostPrecise(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/poko_zing/qey_adv02_ruins/quests/poko/poko006.mp3", "", "", 2355186524, 2969032857, Spawn)
 	AddConversationOption(conversation, "Yes, I did.", "AllPartsFromHere")
@@ -198,9 +198,9 @@ end
 
 function AllPartsFromHere(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_1, 2)
-	
+
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "I will bring this to his attention.")
 	StartConversation(conversation, NPC, Spawn, "This particular piece looks to be Freeportian in design--don't ask how I know that. It seems pretty damaged, almost useless to me, but it looks new enough to have been brought here recently. This is prety... strange. Go speak with Lieutenant Germain, tell him of this. Perhaps now Qeynos will involve herself a bit more eh? We shall see.")
@@ -215,7 +215,7 @@ end
 
 function dlg_9_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/poko_zing/qey_adv02_ruins/quests/poko/poko011.mp3", "", "", 3922758270, 2259936446, Spawn)
 	AddConversationOption(conversation, "It was off of a plant that had a strange glow surrounding it.", "dlg_9_2")
@@ -224,7 +224,7 @@ end
 
 function dlg_9_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/poko_zing/qey_adv02_ruins/quests/poko/poko012.mp3", "", "", 2929679035, 2604586682, Spawn)
 	AddConversationOption(conversation, "What do you need me to do?", "dlg_9_3")
@@ -234,7 +234,7 @@ end
 
 function dlg_9_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/poko_zing/qey_adv02_ruins/quests/poko/poko013.mp3", "", "", 2558023332, 1244993646, Spawn)
 	AddConversationOption(conversation, "I will get what you need.", "dlg_9_4")
@@ -242,6 +242,6 @@ function dlg_9_3(NPC, Spawn)
 end
 
 --[[ raw_conversations
-	
+
 --]]
 

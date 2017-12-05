@@ -11,7 +11,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)
@@ -22,33 +22,33 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 		PlayFlavor(NPC, "captain_r.k._irontoe/_exp03/exp03_rgn_greater_faydark/captain_rk_irontoe/rk_irontoe001.mp3", "", "", 770633161, 1780911252, Spawn)
 	AddConversationOption(conversation, "Who are you?", "dlg_24_1")
 	AddConversationOption(conversation, "I do not know.  Farewell.")
 	StartConversation(conversation, NPC, Spawn, "Bah! How does a dwarf feel at home with a canopy of leaves and not one of stone? ")
-	if convo==25 then
-		PlayFlavor(NPC, "captain_r.k._irontoe/_exp03/exp03_rgn_greater_faydark/captain_rk_irontoe/rk_irontoe057.mp3", "", "", 770633161, 1780911252, Spawn)
-		AddConversationOption(conversation, "I would like to hear about Kaladim.", "dlg_25_1")
-		AddConversationOption(conversation, "My interest in serving the dwarven kingdom has risen.")
-		AddConversationOption(conversation, "I just wanted to say hello. Farewell now. ")
-		StartConversation(conversation, NPC, Spawn, "Ah! You again. Has your interest in dwarven history risen?")
-	end
+	--if convo==25 then
+	--	PlayFlavor(NPC, "captain_r.k._irontoe/_exp03/exp03_rgn_greater_faydark/captain_rk_irontoe/rk_irontoe057.mp3", "", "", 770633161, 1780911252, Spawn)
+	--	AddConversationOption(conversation, "I would like to hear about Kaladim.", "dlg_25_1")
+	--	AddConversationOption(conversation, "My interest in serving the dwarven kingdom has risen.")
+	--	AddConversationOption(conversation, "I just wanted to say hello. Farewell now. ")
+	--	StartConversation(conversation, NPC, Spawn, "Ah! You again. Has your interest in dwarven history risen?")
+	--end
 
-	if convo==26 then
-		PlayFlavor(NPC, "captain_r.k._irontoe/_exp03/exp03_rgn_greater_faydark/captain_rk_irontoe/rk_irontoe057.mp3", "", "", 770633161, 1780911252, Spawn)
-		AddConversationOption(conversation, "I would like to hear about Kaladim.", "dlg_26_1")
-		AddConversationOption(conversation, "My interest in serving the dwarven kingdom has risen.")
-		AddConversationOption(conversation, "I just wanted to say hello. Farewell now. ")
-		StartConversation(conversation, NPC, Spawn, "Ah! You again. Has your interest in dwarven history risen?")
-	end
+	--if convo==26 then
+	--	PlayFlavor(NPC, "captain_r.k._irontoe/_exp03/exp03_rgn_greater_faydark/captain_rk_irontoe/rk_irontoe057.mp3", "", "", 770633161, 1780911252, Spawn)
+	--	AddConversationOption(conversation, "I would like to hear about Kaladim.", "dlg_26_1")
+	--	AddConversationOption(conversation, "My interest in serving the dwarven kingdom has risen.")
+	--	AddConversationOption(conversation, "I just wanted to say hello. Farewell now. ")
+	--	StartConversation(conversation, NPC, Spawn, "Ah! You again. Has your interest in dwarven history risen?")
+	--end
 
 end
 
 function dlg_24_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "captain_r.k._irontoe/_exp03/exp03_rgn_greater_faydark/captain_rk_irontoe/rk_irontoe002.mp3", "", "", 770633161, 1780911252, Spawn)
 	AddConversationOption(conversation, "I would like to hear about Kaladim.", "dlg_24_2")
@@ -59,7 +59,7 @@ end
 
 function dlg_24_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "captain_r.k._irontoe/_exp03/exp03_rgn_greater_faydark/captain_rk_irontoe/rk_irontoe003.mp3", "", "", 770633161, 1780911252, Spawn)
 	AddConversationOption(conversation, "What did Kaladim do during the War of the Fay?", "dlg_24_3")
@@ -72,7 +72,7 @@ end
 
 function dlg_24_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "captain_r.k._irontoe/_exp03/exp03_rgn_greater_faydark/captain_rk_irontoe/rk_irontoe004.mp3", "", "", 770633161, 1780911252, Spawn)
 	AddConversationOption(conversation, "What were trolls and ogres doing in Lesser Faydark?", "dlg_24_4")
@@ -82,7 +82,7 @@ end
 
 function dlg_24_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "captain_r.k._irontoe/_exp03/exp03_rgn_greater_faydark/captain_rk_irontoe/rk_irontoe005.mp3", "", "", 770633161, 1780911252, Spawn)
 	AddConversationOption(conversation, "Did the trolls and ogres stop the dwarven brigades?", "dlg_24_5")
@@ -92,7 +92,7 @@ end
 
 function dlg_24_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "captain_r.k._irontoe/_exp03/exp03_rgn_greater_faydark/captain_rk_irontoe/rk_irontoe006.mp3", "", "", 770633161, 1780911252, Spawn)
 	AddConversationOption(conversation, "What happened at the Battle of Brute Hill?", "dlg_24_6")
@@ -102,7 +102,7 @@ end
 
 function dlg_24_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "captain_r.k._irontoe/_exp03/exp03_rgn_greater_faydark/captain_rk_irontoe/rk_irontoe007.mp3", "", "", 770633161, 1780911252, Spawn)
 	AddConversationOption(conversation, "So they managed to reach Kelethin and rescue the city?", "dlg_24_7")
@@ -112,7 +112,7 @@ end
 
 function dlg_24_7(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "captain_r.k._irontoe/_exp03/exp03_rgn_greater_faydark/captain_rk_irontoe/rk_irontoe008.mp3", "", "", 770633161, 1780911252, Spawn)
 	AddConversationOption(conversation, "The dark elves burned the forest?", "dlg_24_8")
@@ -122,7 +122,7 @@ end
 
 function dlg_24_8(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "captain_r.k._irontoe/_exp03/exp03_rgn_greater_faydark/captain_rk_irontoe/rk_irontoe009.mp3", "", "", 770633161, 1780911252, Spawn)
 	AddConversationOption(conversation, "What about Felwithe, home of the high elves?", "dlg_24_9")
@@ -132,7 +132,7 @@ end
 
 function dlg_24_9(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "captain_r.k._irontoe/_exp03/exp03_rgn_greater_faydark/captain_rk_irontoe/rk_irontoe010.mp3", "", "", 770633161, 1780911252, Spawn)
 	AddConversationOption(conversation, "So the gnomes and their machines freed Felwithe.", "dlg_24_10")
@@ -142,7 +142,7 @@ end
 
 function dlg_24_10(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "captain_r.k._irontoe/_exp03/exp03_rgn_greater_faydark/captain_rk_irontoe/rk_irontoe011.mp3", "", "", 770633161, 1780911252, Spawn)
 	AddConversationOption(conversation, "What else occurred in the Siege of Felwithe?", "dlg_24_11")
@@ -152,7 +152,7 @@ end
 
 function dlg_24_11(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "captain_r.k._irontoe/_exp03/exp03_rgn_greater_faydark/captain_rk_irontoe/rk_irontoe012.mp3", "", "", 770633161, 1780911252, Spawn)
 	AddConversationOption(conversation, "I would like to hear more about Kaladim.", "dlg_24_12")
@@ -163,7 +163,7 @@ end
 
 function dlg_25_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "captain_r.k._irontoe/_exp03/exp03_rgn_greater_faydark/captain_rk_irontoe/rk_irontoe003.mp3", "", "", 770633161, 1780911252, Spawn)
 	AddConversationOption(conversation, "What did Kaladim do during the War of the Fay?", "dlg_25_2")
@@ -176,7 +176,7 @@ end
 
 function dlg_25_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "captain_r.k._irontoe/_exp03/exp03_rgn_greater_faydark/captain_rk_irontoe/rk_irontoe013.mp3", "", "", 770633161, 1780911252, Spawn)
 	AddConversationOption(conversation, "Are you saying that everyone left Kaladim?")
@@ -186,7 +186,7 @@ end
 
 function dlg_25_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "captain_r.k._irontoe/_exp03/exp03_rgn_greater_faydark/captain_rk_irontoe/rk_irontoe014.mp3", "", "", 770633161, 1780911252, Spawn)
 	AddConversationOption(conversation, "Why would most of the dwarves abandon their grand kingdom of Kaladim?", "dlg_25_4")
@@ -196,7 +196,7 @@ end
 
 function dlg_25_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "captain_r.k._irontoe/_exp03/exp03_rgn_greater_faydark/captain_rk_irontoe/rk_irontoe015.mp3", "", "", 770633161, 1780911252, Spawn)
 	AddConversationOption(conversation, "They found out where this place is?", "dlg_25_5")
@@ -206,7 +206,7 @@ end
 
 function dlg_25_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "captain_r.k._irontoe/_exp03/exp03_rgn_greater_faydark/captain_rk_irontoe/rk_irontoe016.mp3", "", "", 770633161, 1780911252, Spawn)
 	AddConversationOption(conversation, "Tell me more of the Vaults of Serilis and what this riddle was.", "dlg_25_6")
@@ -216,7 +216,7 @@ end
 
 function dlg_25_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "captain_r.k._irontoe/_exp03/exp03_rgn_greater_faydark/captain_rk_irontoe/rk_irontoe017.mp3", "", "", 770633161, 1780911252, Spawn)
 	AddConversationOption(conversation, "I would like to hear more about Kaladim.", "dlg_25_7")
@@ -226,7 +226,7 @@ end
 
 function dlg_25_7(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "captain_r.k._irontoe/_exp03/exp03_rgn_greater_faydark/captain_rk_irontoe/rk_irontoe003.mp3", "", "", 770633161, 1780911252, Spawn)
 	AddConversationOption(conversation, "What did Kaladim do during the War of the Fay?", "dlg_25_8")
@@ -239,7 +239,7 @@ end
 
 function dlg_25_8(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "captain_r.k._irontoe/_exp03/exp03_rgn_greater_faydark/captain_rk_irontoe/rk_irontoe018.mp3", "", "", 770633161, 1780911252, Spawn)
 	AddConversationOption(conversation, "Did Kaladim take much damage during this time?")
@@ -249,7 +249,7 @@ end
 
 function dlg_25_9(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "captain_r.k._irontoe/_exp03/exp03_rgn_greater_faydark/captain_rk_irontoe/rk_irontoe019.mp3", "", "", 770633161, 1780911252, Spawn)
 	AddConversationOption(conversation, "What happened inside?", "dlg_25_10")
@@ -259,7 +259,7 @@ end
 
 function dlg_25_10(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "captain_r.k._irontoe/_exp03/exp03_rgn_greater_faydark/captain_rk_irontoe/rk_irontoe020.mp3", "", "", 770633161, 1780911252, Spawn)
 	AddConversationOption(conversation, "But they were freed, were they not?", "dlg_25_11")
@@ -269,7 +269,7 @@ end
 
 function dlg_25_11(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "captain_r.k._irontoe/_exp03/exp03_rgn_greater_faydark/captain_rk_irontoe/rk_irontoe021.mp3", "", "", 770633161, 1780911252, Spawn)
 	AddConversationOption(conversation, "How did the dwarves inside manage to survive, or did they?", "dlg_25_12")
@@ -279,7 +279,7 @@ end
 
 function dlg_25_12(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "captain_r.k._irontoe/_exp03/exp03_rgn_greater_faydark/captain_rk_irontoe/rk_irontoe022.mp3", "", "", 770633161, 1780911252, Spawn)
 	AddConversationOption(conversation, "An invasion from somewhere else? Where from?", "dlg_25_13")
@@ -289,7 +289,7 @@ end
 
 function dlg_25_13(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "captain_r.k._irontoe/_exp03/exp03_rgn_greater_faydark/captain_rk_irontoe/rk_irontoe023.mp3", "", "", 770633161, 1780911252, Spawn)
 	AddConversationOption(conversation, "But now you can retake the city!", "dlg_25_14")
@@ -299,7 +299,7 @@ end
 
 function dlg_25_14(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "captain_r.k._irontoe/_exp03/exp03_rgn_greater_faydark/captain_rk_irontoe/rk_irontoe024.mp3", "", "", 770633161, 1780911252, Spawn)
 	AddConversationOption(conversation, "I would like to hear more about Kaladim.", "dlg_25_15")
@@ -309,7 +309,7 @@ end
 
 function dlg_25_15(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "captain_r.k._irontoe/_exp03/exp03_rgn_greater_faydark/captain_rk_irontoe/rk_irontoe003.mp3", "", "", 770633161, 1780911252, Spawn)
 	AddConversationOption(conversation, "What did Kaladim do during the War of the Fay?", "dlg_25_16")
@@ -322,7 +322,7 @@ end
 
 function dlg_25_16(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "captain_r.k._irontoe/_exp03/exp03_rgn_greater_faydark/captain_rk_irontoe/rk_irontoe032.mp3", "", "", 770633161, 1780911252, Spawn)
 	AddConversationOption(conversation, "What is the Stormguard?")
@@ -332,7 +332,7 @@ end
 
 function dlg_25_17(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "captain_r.k._irontoe/_exp03/exp03_rgn_greater_faydark/captain_rk_irontoe/rk_irontoe033.mp3", "", "", 770633161, 1780911252, Spawn)
 	AddConversationOption(conversation, "Why did they disband?", "dlg_25_18")
@@ -342,7 +342,7 @@ end
 
 function dlg_25_18(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "captain_r.k._irontoe/_exp03/exp03_rgn_greater_faydark/captain_rk_irontoe/rk_irontoe034.mp3", "", "", 770633161, 1780911252, Spawn)
 	AddConversationOption(conversation, "What happend between the orcs and the brigade?", "dlg_25_19")
@@ -352,7 +352,7 @@ end
 
 function dlg_25_19(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "captain_r.k._irontoe/_exp03/exp03_rgn_greater_faydark/captain_rk_irontoe/rk_irontoe035.mp3", "", "", 770633161, 1780911252, Spawn)
 	AddConversationOption(conversation, "What were they sent to get from the ruins?", "dlg_25_20")
@@ -362,7 +362,7 @@ end
 
 function dlg_25_20(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "captain_r.k._irontoe/_exp03/exp03_rgn_greater_faydark/captain_rk_irontoe/rk_irontoe036.mp3", "", "", 770633161, 1780911252, Spawn)
 	AddConversationOption(conversation, "But you are an Irontoe Brigade officer. You must know what it was they brought back?", "dlg_25_21")
@@ -372,7 +372,7 @@ end
 
 function dlg_25_21(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "captain_r.k._irontoe/_exp03/exp03_rgn_greater_faydark/captain_rk_irontoe/rk_irontoe037.mp3", "", "", 770633161, 1780911252, Spawn)
 	AddConversationOption(conversation, "Where did they go?", "dlg_25_22")
@@ -382,7 +382,7 @@ end
 
 function dlg_25_22(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "captain_r.k._irontoe/_exp03/exp03_rgn_greater_faydark/captain_rk_irontoe/rk_irontoe038.mp3", "", "", 770633161, 1780911252, Spawn)
 	AddConversationOption(conversation, "So, you are not the same Irontoe Brigade?", "dlg_25_23")
@@ -392,7 +392,7 @@ end
 
 function dlg_25_23(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "captain_r.k._irontoe/_exp03/exp03_rgn_greater_faydark/captain_rk_irontoe/rk_irontoe039.mp3", "", "", 770633161, 1780911252, Spawn)
 	AddConversationOption(conversation, "You came back to Kaladim, but why?", "dlg_25_24")
@@ -402,7 +402,7 @@ end
 
 function dlg_25_24(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "captain_r.k._irontoe/_exp03/exp03_rgn_greater_faydark/captain_rk_irontoe/rk_irontoe040.mp3", "", "", 770633161, 1780911252, Spawn)
 	AddConversationOption(conversation, "Could I hear more about Kaladim?", "dlg_25_25")
@@ -412,7 +412,7 @@ end
 
 function dlg_25_25(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "captain_r.k._irontoe/_exp03/exp03_rgn_greater_faydark/captain_rk_irontoe/rk_irontoe003.mp3", "", "", 770633161, 1780911252, Spawn)
 	AddConversationOption(conversation, "What did Kaladim do during the War of the Fay?", "dlg_25_26")
@@ -425,7 +425,7 @@ end
 
 function dlg_25_26(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "captain_r.k._irontoe/_exp03/exp03_rgn_greater_faydark/captain_rk_irontoe/rk_irontoe004.mp3", "", "", 770633161, 1780911252, Spawn)
 	AddConversationOption(conversation, "What were trolls and ogres doing in Lesser Faydark?", "dlg_25_27")
@@ -435,7 +435,7 @@ end
 
 function dlg_26_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "captain_r.k._irontoe/_exp03/exp03_rgn_greater_faydark/captain_rk_irontoe/rk_irontoe042.mp3", "", "", 770633161, 1780911252, Spawn)
 	AddConversationOption(conversation, "Farewell.")

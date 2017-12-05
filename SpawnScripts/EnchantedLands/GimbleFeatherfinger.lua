@@ -2,8 +2,8 @@
     Script Name    : SpawnScripts/EnchantedLands/GimbleFeatherfinger.lua
     Script Author  : Cynnar
     Script Date    : 2015.05.09 12:05:50
-    Script Purpose : 
-                   : 
+    Script Purpose :
+                   :
 --]]
 
 function spawn(NPC)

@@ -2,8 +2,8 @@
     Script Name    : SpawnScripts/Nektropos1/AlexaRamparts.lua
     Script Author  : smash
     Script Date    : 2016.02.02 01:02:43
-    Script Purpose : 
-                   : 
+    Script Purpose :
+                   :
 --]]
 
 function spawn(NPC)
@@ -44,7 +44,7 @@ end
 function Dialog6(NPC, Spawn)
     Say(NPC, "Please hurry.")
     AddTimer(NPC, 3000, "Despawn")
-    
+
     --Offer The Everling Lockets to the whole group
     local player_group = GetGroup(Spawn)
     if player_group ~= nil then

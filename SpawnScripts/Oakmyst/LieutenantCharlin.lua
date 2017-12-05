@@ -3,7 +3,7 @@
 	Script Purpose	: Lieutenant Charlin <Qeynos Guard>
 	Script Author	: Scatman
 	Script Date	: 2009.10.02
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 local MIN_LEVEL = 5
@@ -27,25 +27,25 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
-	
+	local conversation = CreateConversation()
+
 	if HasQuest(Spawn, QUEST_FROM_JORN) and GetQuestStep(Spawn, QUEST_FROM_JORN) == 3 then
 		AddConversationOption(conversation, "I have news for you.", "FoundBookOnGnome")
 	end
-	
+
 	if HasQuest(Spawn, QUEST_FROM_ADALIN) and GetQuestStep(Spawn, QUEST_FROM_ADALIN) == 5 then
 		AddConversationOption(conversation, "I have news for you.", "GnollAttackedWhileCleansing")
 	end
-	
+
 	if HasQuest(Spawn, QUEST_FROM_MARV) and GetQuestStep(Spawn, QUEST_FROM_MARV) == 3 then
 		AddConversationOption(conversation, "I have news for you.", "FoundBlackburrowStout")
 	end
-	
+
 	if HasCompletedQuest(Spawn, QUEST_1) then
 		if HasCompletedQuest(Spawn, QUEST_2) then
 			if HasCompletedQuest(Spawn, QUEST_3) then
@@ -91,7 +91,7 @@ end
 
 function FoundBookOnGnome(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/lieutenant_charlin/qey_adv01_oakmyst/quests/charlin/charlin_jorn000.mp3", "", "", 3699115243, 1071346940, Spawn)
 	AddConversationOption(conversation, "I found this book on a gnome. It's written in Lucanic.", "InterestingWheredYouGetThis")
@@ -100,7 +100,7 @@ end
 
 function InterestingWheredYouGetThis(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "From a gnome here in Oakmyst Forest.", "ThisIsVeryConcerning")
 	StartConversation(conversation, NPC, Spawn, "Interesting. Where'd you get this?")
@@ -108,16 +108,16 @@ end
 
 function ThisIsVeryConcerning(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_FROM_JORN, 3)
-	
+
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	if (GetLevel(Spawn) < MIN_LEVEL) or (HasQuest(Spawn, QUEST_1) or HasCompletedQuest(Spawn, QUEST_1)) then
 		AddConversationOption(conversation, "Thank you.")
 	else
 		AddConversationOption(conversation, "Is there anything else I can do?", "dlg_1_4")
 	end
-	
+
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/lieutenant_charlin/qey_adv01_oakmyst/quests/charlin/charlin_jorn002.mp3", "", "", 1267137268, 405925681, Spawn)
 	StartConversation(conversation, NPC, Spawn, "This is very concerning. I'm going to send this book in to be studied, this is a good find. Maybe it will lead to something bigger. Knowing my luck it will just be a joke book. Good work on this.")
 end
@@ -128,7 +128,7 @@ end
 
 function GnollAttackedWhileCleansing(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "I was cleansing some trees in the forest when a gnoll attacked.", "SecondPersonToClaim")
 	StartConversation(conversation, NPC, Spawn, "What news is that?")
@@ -136,7 +136,7 @@ end
 
 function SecondPersonToClaim(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "I have his paw.", "HavePaw")
 	StartConversation(conversation, NPC, Spawn, "You're the second person to claim as much. Listen, I'm sure you saw something, but a gnoll is Oakmyst Forest?")
@@ -144,7 +144,7 @@ end
 
 function HavePaw(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	if (GetLevel(Spawn) < MIN_LEVEL) or (HasQuest(Spawn, QUEST_1) or HasCompletedQuest(Spawn, QUEST_1)) then
 		AddConversationOption(conversation, "Thank you.")
@@ -160,7 +160,7 @@ end
 
 function FoundBlackburrowStout(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "I was helping someone pull their lost shipment from the water and we found some Blackburrow Stout.", "FoundBlackBurrowStout2")
 	StartConversation(conversation, NPC, Spawn, "What news have you brought me?")
@@ -168,9 +168,9 @@ end
 
 function FoundBlackBurrowStout2(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_FROM_MARV, 3)
-	
+
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	if (GetLevel(Spawn) < MIN_LEVEL) or (HasQuest(Spawn, QUEST_1) or HasCompletedQuest(Spawn, QUEST_1)) then
 		AddConversationOption(conversation, "Sure sounds it.")
@@ -186,19 +186,19 @@ end
 
 function BeCareful(NPC, Spawn, conversation)
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/lieutenant_charlin/qey_adv01_oakmyst/quests/charlin/charlin000.mp3", "", "", 1924665099, 2767332789, Spawn)
-	
+
 	if GetLevel(Spawn) >= MIN_LEVEL then
 		AddConversationOption(conversation, "What do I need to look out for?", "dlg_1_1")
 	else
 		AddConversationOption(conversation, "I will be.")
 	end
-	
+
 	StartConversation(conversation, NPC, Spawn, "Be careful out there, citizen.")
 end
 
 function dlg_1_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/lieutenant_charlin/qey_adv01_oakmyst/quests/charlin/charlin001.mp3", "", "", 135128317, 2223244870, Spawn)
 	AddConversationOption(conversation, "So everything here is fine?", "dlg_1_2")
@@ -207,7 +207,7 @@ end
 
 function dlg_1_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/lieutenant_charlin/qey_adv01_oakmyst/quests/charlin/charlin001a.mp3", "", "", 3642173862, 3828556771, Spawn)
 	AddConversationOption(conversation, "Then there is a danger?", "dlg_1_3")
@@ -216,7 +216,7 @@ end
 
 function dlg_1_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/lieutenant_charlin/qey_adv01_oakmyst/quests/charlin/charlin002.mp3", "", "", 103240221, 3198070219, Spawn)
 	AddConversationOption(conversation, "Sure, I can help.", "dlg_1_4")
@@ -226,7 +226,7 @@ end
 
 function dlg_1_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/lieutenant_charlin/qey_adv01_oakmyst/quests/charlin/charlin003.mp3", "", "", 2962974855, 690833663, Spawn)
 	AddConversationOption(conversation, "What do you need me to do?", "dlg_1_5")
@@ -235,7 +235,7 @@ end
 
 function dlg_1_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/lieutenant_charlin/qey_adv01_oakmyst/quests/charlin/charlin004.mp3", "", "", 2819639943, 1318836680, Spawn)
 	AddConversationOption(conversation, "I can do it.", "dlg_1_6")
@@ -244,7 +244,7 @@ end
 
 function dlg_1_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/lieutenant_charlin/qey_adv01_oakmyst/quests/charlin/charlin005.mp3", "", "", 276846636, 4209539187, Spawn)
 	AddConversationOption(conversation, "All right.", "OfferQuest1")
@@ -258,13 +258,13 @@ end
 
 function OnQuest1(NPC, Spawn, conversation)
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/lieutenant_charlin/qey_adv01_oakmyst/quests/charlin/charlin006.mp3", "", "", 1152487104, 26326303, Spawn)
-	
+
 	if (HasQuest(Spawn, QUEST_1) and GetQuestStep(Spawn, QUEST_1) == 4) or (HasCompletedQuest(Spawn, QUEST_1) and not HasQuest(Spawn, QUEST_2)) then
 		AddConversationOption(conversation, "Yes, I have.", "dlg_3_1")
 	else
 		AddConversationOption(conversation, "Not yet.")
 	end
-	
+
 	StartConversation(conversation, NPC, Spawn, "Have you collected the poison samples yet?")
 end
 
@@ -272,9 +272,9 @@ function dlg_3_1(NPC, Spawn)
 	if HasQuest(Spawn, QUEST_1) then
 		SetStepComplete(Spawn, QUEST_1, 4)
 	end
-	
+
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/lieutenant_charlin/qey_adv01_oakmyst/quests/charlin/charlin007.mp3", "", "", 4118896483, 283789370, Spawn)
 	AddConversationOption(conversation, "Sure, what do you need?", "dlg_3_2")
@@ -288,7 +288,7 @@ end
 
 function dlg_3_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/lieutenant_charlin/qey_adv01_oakmyst/quests/charlin/charlin008.mp3", "", "", 1585958118, 144641390, Spawn)
 	AddConversationOption(conversation, "All right.", "OfferQuest2")
@@ -302,13 +302,13 @@ end
 
 function OnQuest2(NPC, Spawn, conversation)
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/lieutenant_charlin/qey_adv01_oakmyst/quests/charlin/charlin009.mp3", "", "", 197933186, 2286710260, Spawn)
-	
+
 	if (HasQuest(Spawn, QUEST_2) and GetQuestStep(Spawn, QUEST_2) == 2) or (HasCompletedQuest(Spawn, QUEST_2) and not HasQuest(Spawn, QUEST_3)) then
 		AddConversationOption(conversation, "Yes, here you go.", "dlg_0_1")
 	else
 		AddConversationOption(conversation, "No, not yet.")
 	end
-	
+
 	StartConversation(conversation, NPC, Spawn, "Have you collected the soil yet?")
 end
 
@@ -316,9 +316,9 @@ function dlg_0_1(NPC, Spawn)
 	if HasQuest(Spawn, QUEST_2) then
 		SetStepComplete(Spawn, QUEST_2, 2)
 	end
-	
+
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/lieutenant_charlin/qey_adv01_oakmyst/quests/charlin/charlin010.mp3", "", "", 2649903060, 3166046323, Spawn)
 	AddConversationOption(conversation, "Sure, I can do that.", "dlg_0_2")
@@ -332,7 +332,7 @@ end
 
 function dlg_0_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/lieutenant_charlin/qey_adv01_oakmyst/quests/charlin/charlin011.mp3", "", "", 2323725305, 107103300, Spawn)
 	AddConversationOption(conversation, "Ok.", "OfferQuest3")
@@ -366,7 +366,7 @@ end
 
 function dlg_7_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/lieutenant_charlin/qey_adv01_oakmyst/quests/charlin/charlin013.mp3", "", "", 1871272901, 810339026, Spawn)
 	AddConversationOption(conversation, "Bardrian says it was just on the docks one day, no post markings at all. He has no idea what the machine is meant to do, but based on its configuration he thinks it is some sort of variable speed and power controller.", "dlg_7_2")
@@ -375,7 +375,7 @@ end
 
 function dlg_7_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/lieutenant_charlin/qey_adv01_oakmyst/quests/charlin/charlin014.mp3", "", "", 4247692633, 3050935613, Spawn)
 	AddConversationOption(conversation, "There were no other machines.", "dlg_7_3")
@@ -384,7 +384,7 @@ end
 
 function dlg_7_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/lieutenant_charlin/qey_adv01_oakmyst/quests/charlin/charlin015.mp3", "", "", 4101124695, 4199131905, Spawn)
 	AddConversationOption(conversation, "Can you be certain?", "dlg_7_4")
@@ -393,7 +393,7 @@ end
 
 function dlg_7_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/lieutenant_charlin/qey_adv01_oakmyst/quests/charlin/charlin016a.mp3", "", "", 3187383592, 2219030963, Spawn)
 	AddConversationOption(conversation, "What about the other machine?", "dlg_7_5")
@@ -402,9 +402,9 @@ end
 
 function dlg_7_5(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_3, 2)
-	
+
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/lieutenant_charlin/qey_adv01_oakmyst/quests/charlin/charlin016.mp3", "", "", 3315274206, 1719893519, Spawn)
 	AddConversationOption(conversation, "I will return.")
@@ -415,9 +415,9 @@ function dlg_10_1(NPC, Spawn)
 	if HasQuest(Spawn, QUEST_3) then
 		SetStepComplete(Spawn, QUEST_3, 4)
 	end
-	
+
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/lieutenant_charlin/qey_adv01_oakmyst/quests/charlin/charlin018.mp3", "", "", 1856078636, 1149850938, Spawn)
 	AddConversationOption(conversation, "What is it?", "dlg_10_2")
@@ -431,7 +431,7 @@ end
 
 function dlg_10_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/lieutenant_charlin/qey_adv01_oakmyst/quests/charlin/charlin019.mp3", "", "", 1411954385, 415072002, Spawn)
 	AddConversationOption(conversation, "All right.", "OfferQuest4")
@@ -445,19 +445,19 @@ end
 
 function OnQuest4(NPC, Spawn, conversation)
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/lieutenant_charlin/qey_adv01_oakmyst/quests/charlin/charlin020.mp3", "", "", 2483977262, 3448158171, Spawn)
-	
+
 	if (HasQuest(Spawn, QUEST_4) and GetQuestStep(Spawn, QUEST_4) == 2) or (HasCompletedQuest(Spawn, QUEST_4)) then
 		AddConversationOption(conversation, "Yes, I did.", "dlg_13_5")
 	else
 		AddConversationOption(conversation, "No, not yet.")
 	end
-	
+
 	StartConversation(conversation, NPC, Spawn, "Did you interrupt the meeting?")
 end
 
 function dlg_13_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/lieutenant_charlin/qey_adv01_oakmyst/quests/charlin/charlin021.mp3", "", "", 2374633916, 1265137198, Spawn)
 	AddConversationOption(conversation, "It was a meeting between a gnome and some gnolls. The gnome fled, I slew the gnolls. I believe the leader was named Gilrix. He had this book.", "dlg_13_6")
@@ -468,9 +468,9 @@ function dlg_13_6(NPC, Spawn)
 	if HasQuest(Spawn, QUEST_4) then
 		SetStepComplete(Spawn, QUEST_4, 2)
 	end
-	
+
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/lieutenant_charlin/qey_adv01_oakmyst/quests/charlin/charlin022.mp3", "", "", 3210550300, 3185527572, Spawn)
 	AddConversationOption(conversation, "How so?", "dlg_13_7")
@@ -484,7 +484,7 @@ end
 
 function dlg_13_7(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/lieutenant_charlin/qey_adv01_oakmyst/quests/charlin/charlin023.mp3", "", "", 1812542762, 4174950812, Spawn)
 	AddConversationOption(conversation, "What must I do?", "dlg_13_8")
@@ -494,7 +494,7 @@ end
 
 function dlg_13_8(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/lieutenant_charlin/qey_adv01_oakmyst/quests/charlin/charlin024.mp3", "", "", 823446036, 800185291, Spawn)
 	AddConversationOption(conversation, "What about the others?", "dlg_13_9")
@@ -503,7 +503,7 @@ end
 
 function dlg_13_9(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/lieutenant_charlin/qey_adv01_oakmyst/quests/charlin/charlin024a.mp3", "", "", 1440777464, 2474739731, Spawn)
 	AddConversationOption(conversation, "All right.", "OfferQuest5")
@@ -517,13 +517,13 @@ end
 
 function OnQuest5(NPC, Spawn, conversation)
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/lieutenant_charlin/qey_adv01_oakmyst/quests/charlin/charlin025.mp3", "", "", 4104237922, 4156355427, Spawn)
-	
+
 	if (HasQuest(Spawn, QUEST_5) and GetQuestStep(Spawn, QUEST_5) == 4) or (HasCompletedQuest(Spawn, QUEST_5)) then
 		AddConversationOption(conversation, "Yes, they are all dead.", "dlg_18_1")
 	else
 		AddConversationOption(conversation, "Not yet.")
 	end
-	
+
 	StartConversation(conversation, NPC, Spawn, "Have you taken out the lieutenants?")
 end
 
@@ -531,9 +531,9 @@ function dlg_18_1(NPC, Spawn)
 	if HasQuest(Spawn, QUEST_5) then
 		SetStepComplete(Spawn, QUEST_5, 4)
 	end
-	
+
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/lieutenant_charlin/qey_adv01_oakmyst/quests/charlin/charlin026.mp3", "", "", 1438660086, 1610935766, Spawn)
 	AddConversationOption(conversation, "Is there anything else?", "dlg_18_2")
@@ -546,7 +546,7 @@ end
 
 function dlg_18_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/lieutenant_charlin/qey_adv01_oakmyst/quests/charlin/charlin027.mp3", "", "", 4018442535, 45795752, Spawn)
 	AddConversationOption(conversation, "I can face them.", "OfferQuest6")

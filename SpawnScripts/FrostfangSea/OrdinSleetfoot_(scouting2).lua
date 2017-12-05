@@ -1,9 +1,9 @@
 --[[
 	Script Name	: SpawnScripts/FrostfangSea/OrdinSleetfoot_(scouting2).lua
-	Script Purpose	: Ordin Sleetfoot 
+	Script Purpose	: Ordin Sleetfoot
 	Script Author	: theFoof
 	Script Date	: 2013.06.11
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 local GoodDistraction = 61
@@ -14,7 +14,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function Ambush(NPC, Spawn)
@@ -35,7 +35,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	if GetQuestStep(Spawn, GoodDistraction) == 4 then
 		PlayFlavor(NPC, "", "Help me, please!", "", 0, 0, Spawn)
 	elseif GetQuestStep(Spawn, GoodDistraction) == 5 then
@@ -46,9 +46,9 @@ function hailed(NPC, Spawn)
 end
 
 function Quest1Chat_1(NPC, Spawn)
-	AddTimer(NPC, 2000, "HideSpawn", 1, Spawn)	
+	AddTimer(NPC, 2000, "HideSpawn", 1, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "ordin_sleetfoot/halas/cragged_spine/ordin_sleetfoot_two002.mp3", "", "", 2823426244, 1105831845, Spawn)
 	AddConversationOption(conversation, "Very well.  Good luck.")

@@ -3,7 +3,7 @@
 	Script Purpose	:	the quest Watch Out Below!
 	Script Author	:	theFoof
 	Script Date		:	2013.7.18
-	Script Notes	:   
+	Script Notes	:
 
 	Zone			:	Frostfang Sea
 	Quest Giver		:	Odon Sourgeson
@@ -21,7 +21,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(QuestGiver, "odon_scourgeson/halas/cragged_spine/odon_scourgeson_042.mp3", "", "", 2099746411, 4081524190, Player)
 	AddConversationOption(conversation, "That will be good.")

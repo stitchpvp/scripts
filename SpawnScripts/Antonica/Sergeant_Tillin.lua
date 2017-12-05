@@ -5,7 +5,7 @@ function hailed(NPC, Spawn)
 	AddConversationOption(conversation, "Sure, why not?", "Option1")
 	AddConversationOption(conversation, "No thanks.")
 	StartConversation(conversation, NPC, Spawn, "Hah!  We've so many adventurers out these days that I think the gnolls decided to push back a bit.  We heard that they're plotting inside Blackburrow.  Think you could help us out?")
-  
+
 	AddConversationOption(conversation, "Sure, I could stand some.")
 	StartConversation(conversation, NPC, Spawn, "Ahh, well done!  Here's that coin I promised.  Looking for more work?")
 end

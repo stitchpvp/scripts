@@ -3,7 +3,7 @@
 	Script Purpose	:	Handles the quest, "Tipping the Scales of Power"
 	Script Author	:	Cynnar
 	Script Date		:	8/30/2015
-	Script Notes	:	
+	Script Notes	:
 
 	Zone			:	Darklight Wood
 	Quest Giver		:	Nemain

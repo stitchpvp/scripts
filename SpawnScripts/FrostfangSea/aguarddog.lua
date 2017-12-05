@@ -1,6 +1,6 @@
 --[[
 	Script Name	: SpawnScripts/FrostfangSea/aguarddog.lua
-	Script Purpose	: a guard dog 
+	Script Purpose	: a guard dog
 	Script Author	: John Adams
 	Script Date	: 2013.03.19
 	Script Notes	: Auto-Generated Conversation from PacketParser Data
@@ -11,7 +11,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)

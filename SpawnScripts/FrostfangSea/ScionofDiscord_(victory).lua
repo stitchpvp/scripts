@@ -10,12 +10,12 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 --[[
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 		PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_2_1026.mp3", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Victory! ", "dlg_31_1")
@@ -25,7 +25,7 @@ end
 
 function dlg_31_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "What is there for me to do? ", "dlg_31_2")
@@ -35,7 +35,7 @@ end
 
 function dlg_31_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Discord will be honored with a victory! ", "dlg_31_3")
@@ -45,7 +45,7 @@ end
 
 function dlg_31_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	StartConversation(conversation, NPC, Spawn, "Discord be with you!")

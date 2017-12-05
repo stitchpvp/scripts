@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "Prowler Pelts"
 	Script Author	: Scatman
 	Script Date	: 2009.01.31
-	
+
 	Zone       : Darklight Wood
 	Quest Giver: Fileyl Alyylharil
 	Preceded by: None
@@ -12,7 +12,7 @@
 
 
 function Init(Quest)
-	
+
 
 
 	AddQuestStepKill(Quest, 1, "I need to collect four superb prowler pelts from the dusk prowlers around Hate's Envy.", 4, 100, ".", 126, 340048, 340049)
@@ -25,7 +25,7 @@ function Accepted(Quest, QuestGiver, Player)
 		if GetDistance(Player, QuestGiver) < 30 then
 			FaceTarget(QuestGiver, Player)
 			conversation = CreateConversation()
-			
+
 			PlayFlavor(QuestGiver, "voiceover/english/neriak/fileyl_alyylharil/darklight_wood/hates_envy/fileyl/fileyl003.mp3", "", "", 627745117, 443565061, Player)
 			AddConversationOption(conversation, "I'll return.")
 			StartConversation(conversation, QuestGiver, Player, "I'll pay you when you give me the pelts.")
@@ -39,7 +39,7 @@ end
 function step1_complete_killedProwlers(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 1, "I've collected the prowler pelts.")
 	UpdateQuestTaskGroupDescription(Quest, 1, "I've collected the prowler pelts.")
-	
+
 	AddQuestStepChat(Quest, 2, "I need to bring these pelts back to Fileyl Alyylharil.", 1, ".", 0, 340050)
 	AddQuestStepCompleteAction(Quest, 2, "quest_complete")
 end

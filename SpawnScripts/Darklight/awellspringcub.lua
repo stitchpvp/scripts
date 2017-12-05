@@ -8,16 +8,13 @@
 
 local DrawUponWellsprings = 155
 
-function spawn(NPC)
-end
-
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function casted_on(NPC, Caster, SpellName)
-    if SpellName == "Leash" then
-	    if GetQuestStep(Caster, DrawUponWellsprings) == 1 then
+	if SpellName == "Leash" then
+		if GetQuestStep(Caster, DrawUponWellsprings) == 1 then
 			if GetTempVariable(Caster, "cub") == nil then
 				SetTempVariable(Caster, "cub", NPC)
 				SpawnSet(NPC, "attackable", "0")

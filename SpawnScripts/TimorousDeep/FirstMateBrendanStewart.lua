@@ -1,6 +1,6 @@
 --[[
 	Script Name	: SpawnScripts/TimorousDeep/FirstMateBrendanStewart.lua
-	Script Purpose	: First Mate Brendan Stewart 
+	Script Purpose	: First Mate Brendan Stewart
 	Script Author	: John Adams
 	Script Date	: 2009.03.01
 	Script Notes	: Auto-Generated Conversation from PacketParser Data
@@ -10,12 +10,12 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/rok_questvo/first_mate_brendan_stewart/_exp04/exp04_rgn_timorous_deep/chrykori_tie/brendan/brendan000.mp3", "", "sigh", 2683407164, 2894358494, Spawn)
 	AddConversationOption(conversation, "What's the hold up? ", "dlg_13_1")
@@ -25,7 +25,7 @@ end
 
 function dlg_13_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/rok_questvo/first_mate_brendan_stewart/_exp04/exp04_rgn_timorous_deep/chrykori_tie/brendan/brendan001.mp3", "", "", 939692857, 2041094553, Spawn)
 	AddConversationOption(conversation, "And you trust her judgment? ", "dlg_13_2")
@@ -34,7 +34,7 @@ end
 
 function dlg_13_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/rok_questvo/first_mate_brendan_stewart/_exp04/exp04_rgn_timorous_deep/chrykori_tie/brendan/brendan002.mp3", "", "", 4242714934, 1503091728, Spawn)
 	AddConversationOption(conversation, "So that's why you're here? ", "dlg_13_3")
@@ -43,7 +43,7 @@ end
 
 function dlg_13_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/rok_questvo/first_mate_brendan_stewart/_exp04/exp04_rgn_timorous_deep/chrykori_tie/brendan/brendan003.mp3", "", "", 1908359692, 855587357, Spawn)
 	AddConversationOption(conversation, "What was your reaction to Kunark opening up? ", "dlg_13_4")
@@ -52,7 +52,7 @@ end
 
 function dlg_13_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/rok_questvo/first_mate_brendan_stewart/_exp04/exp04_rgn_timorous_deep/chrykori_tie/brendan/brendan004.mp3", "", "frustrate", 1341886024, 4086437292, Spawn)
 	AddConversationOption(conversation, "But that didn't stop you from rushing out. ", "dlg_13_5")
@@ -61,7 +61,7 @@ end
 
 function dlg_13_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/rok_questvo/first_mate_brendan_stewart/_exp04/exp04_rgn_timorous_deep/chrykori_tie/brendan/brendan005.mp3", "", "", 4131302945, 2902922789, Spawn)
 	AddConversationOption(conversation, "A mistake anyone can make.", "dlg_13_6")

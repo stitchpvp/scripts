@@ -3,17 +3,17 @@
 	Script Purpose	:	Handles the quest, "Letter to Riason"
 	Script Author	:	QuestParser (Replace this)
 	Script Date		:	7/8/2017
-	Script Notes	:	
+	Script Notes	:
 
 	Zone			:	Antonica
-	Quest Giver		:	
+	Quest Giver		:
 	Preceded by		:	None
 	Followed by		:	None
 --]]
 
 
 function Init(Quest)
-	AddQuestStepChat(Quest, 1, "I must deliver a letter to Riason at Windstalker Village in Antonica.", 1, "I must deliver Merchant Cooper's letter to Riason Hanagom at Windstalker pond.", 75, --[[ ID's --]])
+	AddQuestStepChat(Quest, 1, "I must deliver a letter to Riason at Windstalker Village in Antonica.", 1, "I must deliver Merchant Cooper's letter to Riason Hanagom at Windstalker pond.", 75, nil)
 	AddQuestStepCompleteAction(Quest, 1, "QuestComplete")
 end
 

@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "Searching for the Ruins"
 	Script Author	: Scatman
 	Script Date	    : 2009.07.28
-	
+
 	Zone       : Sunken City
 	Quest Giver: Inquisitor Thorson
 	Preceded by: Time to Stop a Madman (time_to_stop_a_madman.lua)
@@ -17,7 +17,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "How do I get there?", "dlg_24_3")
 	AddConversationOption(conversation, "I'm leaving.")
@@ -26,7 +26,7 @@ end
 
 function dlg_24_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/inquisitor_thorson/fprt_adv01_sunken/inquisitor_thorson049.mp3", "", "", 3163252250, 288796806, Spawn)
 	AddConversationOption(conversation, "Are there any other places you could recommend where I can find adventures?", "dlg_24_4")
@@ -36,7 +36,7 @@ end
 
 function dlg_24_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/inquisitor_thorson/fprt_adv01_sunken/inquisitor_thorson061.mp3", "", "", 2845086086, 1715171802, Spawn)
 	AddConversationOption(conversation, "Tell me more about Custodian Zaddar.", "dlg_24_5")
@@ -47,7 +47,7 @@ end
 
 function dlg_24_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/inquisitor_thorson/fprt_adv01_sunken/inquisitor_thorson062.mp3", "", "", 4025975768, 1084751097, Spawn)
 	AddConversationOption(conversation, "Tell me more about Enforcer Kurdek.", "dlg_24_6")
@@ -57,7 +57,7 @@ end
 
 function dlg_24_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/inquisitor_thorson/fprt_adv01_sunken/inquisitor_thorson063.mp3", "", "", 3377387482, 1184471101, Spawn)
 	AddConversationOption(conversation, "Tell me more about Custodian Zaddar.", "dlg_24_5")

@@ -3,14 +3,14 @@
     Script Author  : Zcoretri
     Script Date    : 2015.07.27
     Script Purpose : Geredo dialog
-                   : 
+                   :
 --]]
 
 function spawn(NPC)
 end
 
 function respawn(NPC)
-    spawn(NPC)
+SpawnMob(NPC)
 end
 function hailed(NPC, Spawn)
     FaceTarget(NPC, Spawn)

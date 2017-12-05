@@ -2,8 +2,8 @@
     Script Name    : SpawnScripts/Nektropos1/BalconyDoor.lua
     Script Author  : smash
     Script Date    : 2016.02.06 02:02:31
-    Script Purpose : 
-                   : 
+    Script Purpose :
+                   :
 --]]
 
 function spawn(NPC)

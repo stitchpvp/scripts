@@ -2,8 +2,8 @@
     Script Name    : SpawnScripts/Lavastorm/woes_elevator.lua
     Script Author  : smash
     Script Date    : 2016.1.14
-    Script Purpose : 
-                   : 
+    Script Purpose :
+                   :
 --]]
 
 function spawn(NPC)

@@ -3,31 +3,31 @@
 	Script Purpose	:	Handles the quest, "The Frenzy of the Bloodskulls"
 	Script Author	:	QuestParser (Replace this)
 	Script Date		:	7/8/2017
-	Script Notes	:	
+	Script Notes	:
 
 	Zone			:	Commonlands
-	Quest Giver		:	
+	Quest Giver		:
 	Preceded by		:	None
 	Followed by		:	None
 --]]
 
 
 function Init(Quest)
-	AddQuestStepKill(Quest, 1, "I need to kill 7 Bloodskull warriors.", 7, 100, "I need to kill some Bloodskull orcs and collect some samples of the frenzy root.", 611, --[[ ID's --]])
+	AddQuestStepKill(Quest, 1, "I need to kill 7 Bloodskull warriors.", 7, 100, "I need to kill some Bloodskull orcs and collect some samples of the frenzy root.", 611, nil)
 	AddQuestStepCompleteAction(Quest, 1, "Step1Complete")
 end
 
 function Step1Complete(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 1, "I have slain 7 Bloodskull warriors.")
 
-	AddQuestStepKill(Quest, 2, "I need to kill 3 Bloodskull priests", 3, 100, "I need to kill some Bloodskull orcs and collect some samples of the frenzy root.", 611, --[[ ID's --]])
+	AddQuestStepKill(Quest, 2, "I need to kill 3 Bloodskull priests", 3, 100, "I need to kill some Bloodskull orcs and collect some samples of the frenzy root.", 611, nil)
 	AddQuestStepCompleteAction(Quest, 2, "Step2Complete")
 end
 
 function Step2Complete(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 2, "I have slain 3 Bloodskull priests.")
 
-	AddQuestStepHarvest(Quest, 3, "I need to collect five samples of Bloodskull Frenzy Root", 5, 100, "I need to kill some Bloodskull orcs and collect some samples of the frenzy root.", 197, --[[ ID's --]])
+	AddQuestStepHarvest(Quest, 3, "I need to collect five samples of Bloodskull Frenzy Root", 5, 100, "I need to kill some Bloodskull orcs and collect some samples of the frenzy root.", 197, nil)
 	AddQuestStepCompleteAction(Quest, 3, "Step3Complete")
 end
 
@@ -35,7 +35,7 @@ function Step3Complete(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 3, "I have collected five Bloodskull Frenzy Root samples.")
 	UpdateQuestTaskGroupDescription(Quest, 1, "I have slain the orcs and collected the root samples.")
 
-	AddQuestStepChat(Quest, 4, "I need to return to Rainus", 1, "Now that I have done as he asked, I should return to Rainus Canton.", 11, --[[ ID's --]])
+	AddQuestStepChat(Quest, 4, "I need to return to Rainus", 1, "Now that I have done as he asked, I should return to Rainus Canton.", 11, nil)
 	AddQuestStepCompleteAction(Quest, 4, "QuestComplete")
 end
 

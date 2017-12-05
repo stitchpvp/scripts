@@ -3,7 +3,7 @@
 	Script Purpose	:	a pie
 	Script Author	:	theFoof
 	Script Date		:	2013.9.3
-	Script Notes	:	
+	Script Notes	:
 --]]
 
 local KestrelPie = 90
@@ -14,7 +14,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function casted_on(NPC, Spawn, SpellName)

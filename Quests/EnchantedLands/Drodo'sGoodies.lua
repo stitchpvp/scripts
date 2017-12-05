@@ -60,9 +60,9 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
-	PlayFlavor(QuestGiver, "augin_drodo/enchanted/augin_drodo003.mp3", "", "", 3982874170, 1388125971, Spawn)
+	PlayFlavor(QuestGiver, "augin_drodo/enchanted/augin_drodo003.mp3", "", "", 3982874170, 1388125971, Player)
 	AddConversationOption(conversation, "I'll return with your goodies.")
 	StartConversation(conversation, QuestGiver, Player, "Excellent! That would be very neighborly of you! Wish I could help, but I got a bum knee ya know. Otherwise these critters would fear the name Drodo.")
 end

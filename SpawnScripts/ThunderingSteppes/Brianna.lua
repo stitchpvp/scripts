@@ -3,7 +3,7 @@
     Script Author  : Jabantiz
     Script Date    : 2014.07.11 02:07:39
     Script Purpose : Brianna (2490170)
-                   : 
+                   :
 --]]
 
 local WatchYourStepinTheTSPartIII = 101
@@ -15,12 +15,12 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	local choice = math.random(1,3)
 	if choice == 1 then
@@ -30,7 +30,7 @@ function hailed(NPC, Spawn)
 	else
 		PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_3_1009.mp3", "", "", 0, 0, Spawn)
 	end
-	
+
 	if HasQuest(Spawn, WatchYourStepinTheTSPartIII) and GetQuestStep(Spawn, WatchYourStepinTheTSPartIII) == 3 then
 		-- start SuppliesForBrianna
 		AddConversationOption(conversation, "No, I'm here to deliver a package to you.", "dlg_0_1")
@@ -63,7 +63,7 @@ end
 
 function dlg_0_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "No, I was chased by some dogs and accidentally dropped it.", "dlg_0_2")
 	StartConversation(conversation, NPC, Spawn, "Sure, let's see it... my it looks damaged, what happened here? Did you open it up?")
@@ -71,7 +71,7 @@ end
 
 function dlg_0_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "Um, okay.", "dlg_0_3")
 	AddConversationOption(conversation, "I am not going to do that.")
@@ -79,13 +79,13 @@ function dlg_0_2(NPC, Spawn)
 end
 
 function dlg_0_3(NPC, Spawn)
-	OfferQuest(NPC, Player, SuppliesForBrianna)
+	OfferQuest(NPC, Spawn, SuppliesForBrianna)
 end
 
 function dlg_1_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
-	
+	local conversation = CreateConversation()
+
 	SetStepComplete(Spawn, SuppliesForBrianna, 2)
 	SetStepComplete(Spawn, WatchYourStepinTheTSPartIII, 3)
 	AddConversationOption(conversation, "Thanks.")
@@ -94,21 +94,21 @@ end
 
 function dlg_2_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
-	
+	local conversation = CreateConversation()
+
 	AddConversationOption(conversation, "Sure thing.", "dlg_2_2")
 	AddConversationOption(conversation, "Not today.")
 	StartConversation(conversation, NPC, Spawn, "The job is mostly odd-jobs. It's what I do; fix things for people, patch up armor, repair broken fences, and occasionally help with party decorations. Do you think you could assist me with some odd jobs?")
 end
 
 function dlg_2_2(NPC, Spawn)
-	OfferQuest(NPC, Player, HidesForBrianna)
+	OfferQuest(NPC, Spawn, HidesForBrianna)
 end
 
 function dlg_3_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
-	
+	local conversation = CreateConversation()
+
 	SetStepComplete(Spawn, HidesForBrianna, 2)
 	AddConversationOption(conversation, "Thanks.")
 	StartConversation(conversation, NPC, Spawn, "Great, these look like it's the first time they have ever seen the sun. Thanks for your help. I don't have anything else for you today, but check back again.")

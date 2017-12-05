@@ -3,7 +3,7 @@
 	Script Purpose	: Battlemaster Golben <Guardians of Herga's Choke>
 	Script Author	: theFoof
 	Script Date	: 2013.06.01
-	Script Notes	: 
+	Script Notes	:
 --]]
 local DemandSupplies = 45
 
@@ -11,7 +11,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
@@ -29,7 +29,7 @@ end
 function Chat(NPC, Spawn)
 	SetStepComplete(Spawn, DemandSupplies, 2)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "battlemaster_golben/halas/great_shelf/battlemaster_golben/battlemaster_golben002.mp3", "", "", 2225057385, 3178461226, Spawn)
 	AddConversationOption(conversation, "Glad to help.")

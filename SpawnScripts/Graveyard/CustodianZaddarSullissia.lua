@@ -3,7 +3,7 @@
 	Script Purpose	: Custodian Zaddar Sullissia <Academy of Arcane Science>
 	Script Author	: Scatman
 	Script Date	: 2009.04.11
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 local DARKELF_MENTOR_QUEST_5 = 195
@@ -27,17 +27,17 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
-	
+	local conversation = CreateConversation()
+
 	if HasQuest(Spawn, DARKELF_MENTOR_QUEST_5) then
 		AddConversationOption(conversation, "My name is " .. GetName(Spawn) .. ". Aldera V'exxa in Longshadow Alley sent me to speak to you.", "dlg_0_1")
 	end
-	
+
 	if HasCompletedQuest(Spawn, QUEST_1) then
 		if HasCompletedQuest(Spawn, QUEST_2) then
 			if HasCompletedQuest(Spawn, QUEST_3) then
@@ -102,12 +102,12 @@ end
 
 function dlg_0_1(NPC, Spawn)
 	SetStepComplete(Spawn, DARKELF_MENTOR_QUEST_5, 1)
-	
+
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/custodian_zaddar_sullissia/fprt_adv02_graveyard/custodian_zaddar002.mp3", "", "", 2597518553, 302585905, Spawn)
-	
+
 	if not HasCompletedQuest(Spawn, QUEST_1) or not HasQuest(Spawn, QUEST_1) then
 		AddConversationOption(conversation, "I am honored that you know my name.", "dlg_1_1")
 	end
@@ -121,7 +121,7 @@ end
 
 function dlg_1_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/custodian_zaddar_sullissia/fprt_adv02_graveyard/custodian_zaddar004.mp3", "", "", 1305194429, 389290404, Spawn)
 	AddConversationOption(conversation, "Well, what is your name?", "dlg_1_2")
@@ -131,7 +131,7 @@ end
 
 function dlg_1_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/custodian_zaddar_sullissia/fprt_adv02_graveyard/custodian_zaddar005.mp3", "", "", 2116026310, 2780658398, Spawn)
 	AddConversationOption(conversation, "What would a library custodian be doing out here in a graveyard? You're a long way from the library.", "dlg_1_3")
@@ -141,7 +141,7 @@ end
 
 function dlg_1_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/custodian_zaddar_sullissia/fprt_adv02_graveyard/custodian_zaddar006.mp3", "", "", 2975294120, 669717653, Spawn)
 	AddConversationOption(conversation, "I was not. Please continue.", "dlg_1_4")
@@ -152,7 +152,7 @@ end
 
 function dlg_1_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/custodian_zaddar_sullissia/fprt_adv02_graveyard/custodian_zaddar007.mp3", "", "", 2814487874, 1269742926, Spawn)
 	AddConversationOption(conversation, "I'm ready to listen.", "dlg_1_5")
@@ -162,7 +162,7 @@ end
 
 function dlg_1_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/custodian_zaddar_sullissia/fprt_adv02_graveyard/custodian_zaddar008.mp3", "", "", 3184818985, 1210293925, Spawn)
 	AddConversationOption(conversation, "Please continue.", "dlg_1_6")
@@ -172,7 +172,7 @@ end
 
 function dlg_1_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/custodian_zaddar_sullissia/fprt_adv02_graveyard/custodian_zaddar009.mp3", "", "", 3546119779, 2241533519, Spawn)
 	AddConversationOption(conversation, "I am listening. I find your story intriguing.", "dlg_1_7")
@@ -183,7 +183,7 @@ end
 
 function dlg_1_7(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/custodian_zaddar_sullissia/fprt_adv02_graveyard/custodian_zaddar010.mp3", "", "", 2323334828, 1568404929, Spawn)
 	AddConversationOption(conversation, "Please continue.", "dlg_1_8")
@@ -193,7 +193,7 @@ end
 
 function dlg_1_8(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/custodian_zaddar_sullissia/fprt_adv02_graveyard/custodian_zaddar011.mp3", "", "", 1013381983, 2286424622, Spawn)
 	AddConversationOption(conversation, "So our Overlord is the savior of the people of Freeport!", "dlg_1_9")
@@ -203,7 +203,7 @@ end
 
 function dlg_1_9(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/custodian_zaddar_sullissia/fprt_adv02_graveyard/custodian_zaddar012.mp3", "", "", 2459406533, 4282970876, Spawn)
 	AddConversationOption(conversation, "Go on with the story.", "dlg_1_10")
@@ -214,7 +214,7 @@ end
 
 function dlg_1_10(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/custodian_zaddar_sullissia/fprt_adv02_graveyard/custodian_zaddar013.mp3", "", "", 1868138883, 1737796662, Spawn)
 	AddConversationOption(conversation, "Please go on.", "dlg_1_11")
@@ -224,7 +224,7 @@ end
 
 function dlg_1_11(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/custodian_zaddar_sullissia/fprt_adv02_graveyard/custodian_zaddar014.mp3", "", "", 2249548652, 1367659685, Spawn)
 	AddConversationOption(conversation, "Please continue.", "dlg_1_12")
@@ -234,7 +234,7 @@ end
 
 function dlg_1_12(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/custodian_zaddar_sullissia/fprt_adv02_graveyard/custodian_zaddar015.mp3", "", "", 2043193912, 3903718637, Spawn)
 	AddConversationOption(conversation, "A fascinating tale, please continue.", "dlg_1_13")
@@ -244,7 +244,7 @@ end
 
 function dlg_1_13(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/custodian_zaddar_sullissia/fprt_adv02_graveyard/custodian_zaddar016.mp3", "", "", 3050344406, 3484932649, Spawn)
 	AddConversationOption(conversation, "Go on.", "dlg_1_14")
@@ -255,7 +255,7 @@ end
 
 function dlg_1_14(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/custodian_zaddar_sullissia/fprt_adv02_graveyard/custodian_zaddar017.mp3", "", "", 820950367, 810980839, Spawn)
 	AddConversationOption(conversation, "I see, please continue.", "dlg_1_15")
@@ -265,7 +265,7 @@ end
 
 function dlg_1_15(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/custodian_zaddar_sullissia/fprt_adv02_graveyard/custodian_zaddar018.mp3", "", "", 975559135, 1801151698, Spawn)
 	AddConversationOption(conversation, "Interesting, please go on.", "dlg_1_16")
@@ -275,7 +275,7 @@ end
 
 function dlg_1_16(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/custodian_zaddar_sullissia/fprt_adv02_graveyard/custodian_zaddar019.mp3", "", "", 3729026359, 1609932090, Spawn)
 	AddConversationOption(conversation, "Do go on.", "dlg_1_17")
@@ -285,7 +285,7 @@ end
 
 function dlg_1_17(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/custodian_zaddar_sullissia/fprt_adv02_graveyard/custodian_zaddar020.mp3", "", "", 3451823684, 639969226, Spawn)
 	AddConversationOption(conversation, "Please go on with your tale.", "dlg_1_18")
@@ -296,7 +296,7 @@ end
 
 function dlg_1_18(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/custodian_zaddar_sullissia/fprt_adv02_graveyard/custodian_zaddar021.mp3", "", "", 2453176825, 385758533, Spawn)
 	AddConversationOption(conversation, "Well, I guess you really ARE more than just a custodian.", "dlg_1_19")
@@ -306,7 +306,7 @@ end
 
 function dlg_1_19(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/custodian_zaddar_sullissia/fprt_adv02_graveyard/custodian_zaddar022.mp3", "", "", 1193428244, 1371088261, Spawn)
 	AddConversationOption(conversation, "What sort of research?", "dlg_1_20")
@@ -316,7 +316,7 @@ end
 
 function dlg_1_20(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/custodian_zaddar_sullissia/fprt_adv02_graveyard/custodian_zaddar023.mp3", "", "", 3549973784, 3687441943, Spawn)
 	AddConversationOption(conversation, "Is that so?", "dlg_1_21")
@@ -326,7 +326,7 @@ end
 
 function dlg_1_21(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/custodian_zaddar_sullissia/fprt_adv02_graveyard/custodian_zaddar024.mp3", "", "", 2941976537, 386791284, Spawn)
 	AddConversationOption(conversation, "Tell me more.", "dlg_1_22")
@@ -337,7 +337,7 @@ end
 
 function dlg_1_22(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/custodian_zaddar_sullissia/fprt_adv02_graveyard/custodian_zaddar025.mp3", "", "", 3804418158, 1108808310, Spawn)
 	AddConversationOption(conversation, "What does this have to do with me?", "dlg_1_23")
@@ -347,7 +347,7 @@ end
 
 function dlg_1_23(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/custodian_zaddar_sullissia/fprt_adv02_graveyard/custodian_zaddar026.mp3", "", "", 3654413929, 837264650, Spawn)
 	AddConversationOption(conversation, "What are you asking of me?", "dlg_1_24")
@@ -357,7 +357,7 @@ end
 
 function dlg_1_24(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/custodian_zaddar_sullissia/fprt_adv02_graveyard/custodian_zaddar027.mp3", "", "", 2666723446, 2842007021, Spawn)
 	AddConversationOption(conversation, "So let's discuss this task.", "dlg_1_25")
@@ -367,7 +367,7 @@ end
 
 function dlg_1_25(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/custodian_zaddar_sullissia/fprt_adv02_graveyard/custodian_zaddar028.mp3", "", "", 2264278901, 2484625110, Spawn)
 	AddConversationOption(conversation, "I will help you.", "dlg_1_26")
@@ -377,7 +377,7 @@ end
 
 function dlg_1_26(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/custodian_zaddar_sullissia/fprt_adv02_graveyard/custodian_zaddar029.mp3", "", "", 1039120321, 2615840758, Spawn)
 	AddConversationOption(conversation, "Is this an important task?", "OfferQuest1")
@@ -392,11 +392,11 @@ end
 
 function OnQuest1(NPC, Spawn, conversation)
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/custodian_zaddar_sullissia/fprt_adv02_graveyard/custodian_zaddar031.mp3", "", "", 3448241542, 826932721, Spawn)
-	
+
 	if (GetQuestStep(Spawn, QUEST_1) == 6) then
 		AddConversationOption(conversation, "I checked the tombs as you asked.", "PleasedToHear")
 	end
-	
+
 	AddConversationOption(conversation, "I'm not finished yet, Zaddar.")
 	StartConversation(conversation, NPC, Spawn, "Back so soon? I certainly hope you didn't just sneak off somewhere and take a nap. The Overlord is not to be trifled with!")
 end
@@ -405,9 +405,9 @@ function PleasedToHear(NPC, Spawn)
 	if HasQuest(Spawn, QUEST_1) then
 		SetStepComplete(Spawn, QUEST_1, 6)
 	end
-	
+
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/custodian_zaddar_sullissia/fprt_adv02_graveyard/custodian_zaddar032.mp3", "", "", 2571525928, 4169654402, Spawn)
 	AddConversationOption(conversation, "I was attacked by a skeleton, but I managed to defend myself.", "dlg_7_2")
@@ -421,7 +421,7 @@ end
 
 function dlg_7_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/custodian_zaddar_sullissia/fprt_adv02_graveyard/custodian_zaddar033.mp3", "", "", 2569692294, 2342899886, Spawn)
 	AddConversationOption(conversation, "No, it was the remains of Sir Haligan, Captain of the Knights of Truth.", "dlg_7_3")
@@ -431,7 +431,7 @@ end
 
 function dlg_7_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/custodian_zaddar_sullissia/fprt_adv02_graveyard/custodian_zaddar034.mp3", "", "", 1688032152, 1661878378, Spawn)
 	AddConversationOption(conversation, "Who is Varacus?", "dlg_7_4")
@@ -441,7 +441,7 @@ end
 
 function dlg_7_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/custodian_zaddar_sullissia/fprt_adv02_graveyard/custodian_zaddar035.mp3", "", "", 2382394256, 2829986505, Spawn)
 	AddConversationOption(conversation, "I will seek him out.", "OfferQuest2")
@@ -466,11 +466,11 @@ end
 
 function OnQuest3(NPC, Spawn, conversation)
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/custodian_zaddar_sullissia/fprt_adv02_graveyard/custodian_zaddar037.mp3", "", "", 2173814710, 3365638930, Spawn)
-	
+
 	if GetQuestStep(Spawn, QUEST_3) == 5 then
 		AddConversationOption(conversation, "I spoke to Varacus and have returned with the pages you needed.", "dlg_4_1")
 	end
-	
+
 	AddConversationOption(conversation, "Not yet.")
 	StartConversation(conversation, NPC, Spawn, "Ah, " .. GetName(Spawn) .. ". I see you have returned. Have you brought back the pages you obtained from Varacus of the Keepers of Ethernere?")
 end
@@ -479,9 +479,9 @@ function dlg_4_1(NPC, Spawn)
 	if HasQuest(Spawn, QUEST_3) then
 		SetStepComplete(Spawn, QUEST_3, 5)
 	end
-	
+
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/custodian_zaddar_sullissia/fprt_adv02_graveyard/custodian_zaddar038.mp3", "", "", 3675166074, 228752459, Spawn)
 	AddConversationOption(conversation, "Why are these pages so important?", "HearingMore")
@@ -508,7 +508,7 @@ end
 
 function dlg_4_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/custodian_zaddar_sullissia/fprt_adv02_graveyard/custodian_zaddar040.mp3", "", "", 900290170, 3799291626, Spawn)
 	AddConversationOption(conversation, "That explains why the seal on Sir Haligan's tomb appeared to be disturbed.", "dlg_4_4")
@@ -518,7 +518,7 @@ end
 
 function dlg_4_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/custodian_zaddar_sullissia/fprt_adv02_graveyard/custodian_zaddar041.mp3", "", "", 3846878126, 1397586167, Spawn)
 	AddConversationOption(conversation, "What concern?", "dlg_4_5")
@@ -528,7 +528,7 @@ end
 
 function dlg_4_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/custodian_zaddar_sullissia/fprt_adv02_graveyard/custodian_zaddar042.mp3", "", "", 2741984581, 4167326944, Spawn)
 	AddConversationOption(conversation, "If the ward still works, why are you concerned?", "dlg_4_6")
@@ -539,7 +539,7 @@ end
 
 function dlg_4_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/custodian_zaddar_sullissia/fprt_adv02_graveyard/custodian_zaddar043.mp3", "", "", 1966519844, 1090032745, Spawn)
 	AddConversationOption(conversation, "Aren't the gods long gone?", "dlg_4_7")
@@ -549,7 +549,7 @@ end
 
 function dlg_4_7(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/custodian_zaddar_sullissia/fprt_adv02_graveyard/custodian_zaddar044.mp3", "", "", 277589330, 769361598, Spawn)
 	AddConversationOption(conversation, "Why would anyone from Qeynos want to unleash the undead?", "dlg_4_8")
@@ -559,7 +559,7 @@ end
 
 function dlg_4_8(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/custodian_zaddar_sullissia/fprt_adv02_graveyard/custodian_zaddar045.mp3", "", "", 1332836104, 335069467, Spawn)
 	AddConversationOption(conversation, "Surely the Overlord could defeat the knights again.", "dlg_4_9")
@@ -570,7 +570,7 @@ end
 
 function dlg_4_9(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/custodian_zaddar_sullissia/fprt_adv02_graveyard/custodian_zaddar046.mp3", "", "", 1569346274, 502297645, Spawn)
 	AddConversationOption(conversation, "Does Qeynos wish to go to war with us?", "dlg_4_10")
@@ -580,7 +580,7 @@ end
 
 function dlg_4_10(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/custodian_zaddar_sullissia/fprt_adv02_graveyard/custodian_zaddar047.mp3", "", "", 103040030, 1105730597, Spawn)
 	AddConversationOption(conversation, "Are you going to cast the binding ward again?", "dlg_4_11")
@@ -590,7 +590,7 @@ end
 
 function dlg_4_11(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/custodian_zaddar_sullissia/fprt_adv02_graveyard/custodian_zaddar048.mp3", "", "", 3216601317, 4107541552, Spawn)
 	AddConversationOption(conversation, "So what are we going to do?", "dlg_4_12")
@@ -601,7 +601,7 @@ end
 
 function dlg_4_12(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/custodian_zaddar_sullissia/fprt_adv02_graveyard/custodian_zaddar049.mp3", "", "", 3917748899, 1321078485, Spawn)
 	AddConversationOption(conversation, "How can you tell if the ward remains in effect?", "dlg_4_13")
@@ -611,7 +611,7 @@ end
 
 function dlg_4_13(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/custodian_zaddar_sullissia/fprt_adv02_graveyard/custodian_zaddar050.mp3", "", "", 1966326887, 1363957542, Spawn)
 	AddConversationOption(conversation, "Yes, I am ready to serve the Overlord again.", "dlg_4_14")
@@ -621,7 +621,7 @@ end
 
 function dlg_4_14(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/custodian_zaddar_sullissia/fprt_adv02_graveyard/custodian_zaddar051.mp3", "", "", 880187094, 917754563, Spawn)
 	if HasQuest(Spawn, QUEST_4) and GetQuestStep(Spawn, QUEST_4) == 1 then
@@ -639,7 +639,7 @@ end
 
 function dlg_4_15(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(QuestGiver, "voiceover/english/tutorial_revamp/custodian_zaddar_sullissia/fprt_adv02_graveyard/custodian_zaddar052.mp3", "", "", 3643355771, 3506584636, Player)
 	AddConversationOption(conversation, "Is something bad going to happen if I take it there?", "dlg_4_16")
@@ -649,15 +649,15 @@ end
 
 function dlg_4_16(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_4, 1)
-	
+
 	 -- Relic of Unholy Power
 	 -- TODO: Display quest reward popup
-	if not HasItem(Spawn, 7868) then 
+	if not HasItem(Spawn, 7868) then
 		SummonItem(Spawn, 7868)
 	end
-	
+
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/custodian_zaddar_sullissia/fprt_adv02_graveyard/custodian_zaddar053.mp3", "", "", 1936656377, 4165203130, Spawn)
 	AddConversationOption(conversation, "What happens if the ward doesn't hold?", "dlg_4_17")
@@ -667,7 +667,7 @@ end
 
 function dlg_4_17(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/custodian_zaddar_sullissia/fprt_adv02_graveyard/custodian_zaddar054.mp3", "", "", 2019714186, 114732111, Spawn)
 	AddConversationOption(conversation, "If I do this, what's in it for me?", "dlg_4_18")
@@ -677,7 +677,7 @@ end
 
 function dlg_4_18(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/custodian_zaddar_sullissia/fprt_adv02_graveyard/custodian_zaddar055.mp3", "", "", 3077792314, 2962776024, Spawn)
 	AddConversationOption(conversation, "Very well, I'll do it.", "dlg_4_19")
@@ -687,7 +687,7 @@ end
 
 function dlg_4_19(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/custodian_zaddar_sullissia/fprt_adv02_graveyard/custodian_zaddar056.mp3", "", "", 2313049921, 3908905294, Spawn)
 	AddConversationOption(conversation, "I will return when I've completed the test, Zaddar.", "dlg_4_20")
@@ -711,9 +711,9 @@ function dlg_5_1(NPC, Spawn)
 	if HasQuest(Spawn, QUEST_4) then
 		SetStepComplete(Spawn, QUEST_4, 4)
 	end
-	
+
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/custodian_zaddar_sullissia/fprt_adv02_graveyard/custodian_zaddar058.mp3", "", "", 3581287630, 1926785642, Spawn)
 	AddConversationOption(conversation, "You can have it. So what do we do now?", "FinishTranslation")
@@ -739,7 +739,7 @@ end
 
 function dlg_5_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/custodian_zaddar_sullissia/fprt_adv02_graveyard/custodian_zaddar060.mp3", "", "", 1617818175, 2696893636, Spawn)
 	AddConversationOption(conversation, "I thought you were only to report back to the Academy.", "dlg_5_4")
@@ -749,7 +749,7 @@ end
 
 function dlg_5_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/custodian_zaddar_sullissia/fprt_adv02_graveyard/custodian_zaddar061.mp3", "", "", 3722411193, 865336790, Spawn)
 	AddConversationOption(conversation, "What's in this for me? ", "dlg_5_5")
@@ -759,7 +759,7 @@ end
 
 function dlg_5_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/custodian_zaddar_sullissia/fprt_adv02_graveyard/custodian_zaddar062.mp3", "", "", 245159103, 2526379657, Spawn)
 	AddConversationOption(conversation, "Very well, let's do it!", "dlg_5_6")
@@ -769,7 +769,7 @@ end
 
 function dlg_5_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/custodian_zaddar_sullissia/fprt_adv02_graveyard/custodian_zaddar063.mp3", "", "", 4070301196, 2746257006, Spawn)
 	AddConversationOption(conversation, "I will do so. What is the Staff of Ethernere?", "OfferQuest5")
@@ -793,7 +793,7 @@ end
 
 function dlg_5_8(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/custodian_zaddar_sullissia/fprt_adv02_graveyard/custodian_zaddar065.mp3", "", "", 620236484, 108078282, Spawn)
 	AddConversationOption(conversation, "What is the Book of the Dead?", "dlg_5_9")
@@ -803,7 +803,7 @@ end
 
 function dlg_5_9(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/custodian_zaddar_sullissia/fprt_adv02_graveyard/custodian_zaddar066.mp3", "", "", 1359336798, 4034979334, Spawn)
 	AddConversationOption(conversation, "Okay, I'm going.")
@@ -814,9 +814,9 @@ function WellDone(NPC, Spawn)
 	if HasQuest(Spawn, QUEST_5) then
 		SetStepComplete(Spawn, QUEST_5, 2)
 	end
-	
+
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "How can you tell?", "HowCanYouTell")
 	AddConversationOption(conversation, "Maybe next time Zaddar.")
@@ -829,7 +829,7 @@ end
 
 function HowCanYouTell(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "Tell me more about it.", "OfferQuest6")
 	AddConversationOption(conversation, "Enough history lesson. What do we do next?", "OfferQuest6")
@@ -856,7 +856,7 @@ function ExcellentWork(NPC, Spawn, conversation)
 	if HasQuest(Spawn, QUEST_6) then
 		SetStepComplete(Spawn, QUEST_6, 2)
 	end
-	
+
 	if conversation == nil then
 		FaceTarget(NPC, Spawn)
 		conversation = CreateConversation()
@@ -874,7 +874,7 @@ end
 
 function dlg_15_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/custodian_zaddar_sullissia/fprt_adv02_graveyard/custodian_zaddar082.mp3", "", "", 2211835192, 2993459577, Spawn)
 	AddConversationOption(conversation, "I am ready when you are, Zaddar.", "dlg_15_3")
@@ -884,7 +884,7 @@ end
 
 function dlg_15_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/custodian_zaddar_sullissia/fprt_adv02_graveyard/custodian_zaddar083.mp3", "", "", 39778497, 4193105723, Spawn)
 	AddConversationOption(conversation, "I understand. What words do I say?", "OfferQuest7")
@@ -911,7 +911,7 @@ end
 
 function dlg_35_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/custodian_zaddar_sullissia/fprt_adv02_graveyard/custodian_zaddar085.mp3", "", "", 2303927158, 1226964823, Spawn)
 	AddConversationOption(conversation, "Ready!", "dlg_36_2")
@@ -921,7 +921,7 @@ end
 
 function dlg_36_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/custodian_zaddar_sullissia/fprt_adv02_graveyard/custodian_zaddar086.mp3", "", "", 316474953, 2692158252, Spawn)
 	AddConversationOption(conversation, "Graddah, Shollamak, Hakah!", "dlg_36_3")
@@ -932,7 +932,7 @@ end
 function dlg_36_3(NPC, Spawn)
 --make spawn do casting a ward spell here
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/custodian_zaddar_sullissia/fprt_adv02_graveyard/custodian_zaddar087.mp3", "", "", 2730725983, 3455327122, Spawn)
 	if GetQuestStep(Spawn, QUEST_7) == 1 then
@@ -946,9 +946,9 @@ end
 
 function dlg_36_4(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_7, 1)
-	
+
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/custodian_zaddar_sullissia/fprt_adv02_graveyard/custodian_zaddar096.mp3", "", "", 3456740440, 91910715, Spawn)
 	AddConversationOption(conversation, "What do we do?", "dlg_36_5")
@@ -958,7 +958,7 @@ end
 
 function dlg_36_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/custodian_zaddar_sullissia/fprt_adv02_graveyard/custodian_zaddar097.mp3", "", "", 1342700976, 2091537359, Spawn)
 	AddConversationOption(conversation, "Perhaps one tomb remains unsealed.", "dlg_36_6")
@@ -968,7 +968,7 @@ end
 
 function dlg_36_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/custodian_zaddar_sullissia/fprt_adv02_graveyard/custodian_zaddar098.mp3", "", "point", 302585592, 463867493, Spawn)
 	AddConversationOption(conversation, "I'll go at once!")
@@ -977,7 +977,7 @@ end
 
 function dlg_18_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/custodian_zaddar_sullissia/fprt_adv02_graveyard/custodian_zaddar088.mp3", "", "", 1317702534, 195221553, Spawn)
 	AddConversationOption(conversation, "Ready!", "dlg_18_5")
@@ -987,7 +987,7 @@ end
 
 function dlg_18_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/custodian_zaddar_sullissia/fprt_adv02_graveyard/custodian_zaddar089.mp3", "", "", 919106830, 2372549864, Spawn)
 	AddConversationOption(conversation, "Golotu, Quandar, Gunoo!", "dlg_18_6")
@@ -998,7 +998,7 @@ end
 function dlg_18_6(NPC, Spawn)
 --make spawn caster healing spell
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/custodian_zaddar_sullissia/fprt_adv02_graveyard/custodian_zaddar090.mp3", "", "", 467925549, 2283934078, Spawn)
 	AddConversationOption(conversation, "What are the next words?", "dlg_18_7")
@@ -1008,7 +1008,7 @@ end
 
 function dlg_18_7(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/custodian_zaddar_sullissia/fprt_adv02_graveyard/custodian_zaddar091.mp3", "", "", 3920739989, 998274807, Spawn)
 	AddConversationOption(conversation, "I'm ready!", "dlg_18_8")
@@ -1018,7 +1018,7 @@ end
 
 function dlg_18_8(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/custodian_zaddar_sullissia/fprt_adv02_graveyard/custodian_zaddar092.mp3", "", "", 877878005, 1602838402, Spawn)
 	AddConversationOption(conversation, "Waktana, Shollamak, Quandar, Hakah!", "dlg_18_9")
@@ -1028,7 +1028,7 @@ end
 function dlg_18_9(NPC, Spawn)
 --make spawn cast healing spell
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/custodian_zaddar_sullissia/fprt_adv02_graveyard/custodian_zaddar093.mp3", "", "", 799819884, 1120621815, Spawn)
 	AddConversationOption(conversation, "Whoa!", "dlg_18_10")
@@ -1038,7 +1038,7 @@ end
 
 function dlg_18_10(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/custodian_zaddar_sullissia/fprt_adv02_graveyard/custodian_zaddar094.mp3", "", "", 3038856904, 495454970, Spawn)
 	AddConversationOption(conversation, "It was a challenge, to be sure!", "dlg_18_11")
@@ -1047,7 +1047,7 @@ end
 
 function dlg_18_11(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/custodian_zaddar_sullissia/fprt_adv02_graveyard/custodian_zaddar095.mp3", "", "", 22655114, 4161320381, Spawn)
 	AddConversationOption(conversation, "I believe you said something about me being rewarded...", "dlg_18_12")
@@ -1056,9 +1056,9 @@ end
 
 function dlg_18_12(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_7, 3)
-	
+
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/custodian_zaddar_sullissia/fprt_adv02_graveyard/custodian_zaddar101.mp3", "", "", 833256944, 2859353569, Spawn)
 	AddConversationOption(conversation, "Thank you, Zaddar. Is there anything else I can do for you?", "YourAssistance")
@@ -1084,7 +1084,7 @@ end
 
 function dlg_18_14(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/custodian_zaddar_sullissia/fprt_adv02_graveyard/custodian_zaddar103.mp3", "", "", 1293287475, 951012464, Spawn)
 	AddConversationOption(conversation, "How do I get to the Ruins?", "dlg_18_15")
@@ -1093,7 +1093,7 @@ end
 
 function dlg_18_15(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/custodian_zaddar_sullissia/fprt_adv02_graveyard/custodian_zaddar104.mp3", "", "", 1699803915, 2037868440, Spawn)
 	AddConversationOption(conversation, "Are there any other places I could go to find adventure?", "dlg_18_16")
@@ -1107,7 +1107,7 @@ end
 
 function dlg_18_16(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/custodian_zaddar_sullissia/fprt_adv02_graveyard/custodian_zaddar111.mp3", "", "", 2203286849, 4034856641, Spawn)
 	AddConversationOption(conversation, "Tell me more about Enforcer Kurdek.", "dlg_18_17")
@@ -1118,7 +1118,7 @@ end
 
 function dlg_18_17(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/custodian_zaddar_sullissia/fprt_adv02_graveyard/custodian_zaddar112.mp3", "", "", 3842073321, 2379698803, Spawn)
 	AddConversationOption(conversation, "Tell me more about Inquisitor Thorson.", "dlg_18_18")
@@ -1128,7 +1128,7 @@ end
 
 function dlg_18_18(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/custodian_zaddar_sullissia/fprt_adv02_graveyard/custodian_zaddar113.mp3", "", "", 1469842786, 3647036314, Spawn)
 	AddConversationOption(conversation, "Tell me more about Enforcer Kurdek.", "dlg_18_17")
@@ -1149,7 +1149,7 @@ end
 
 function JourneySafely(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "Be well.")
 	StartConversation(conversation, NPC, Spawn, "Then safe journey to you, " .. GetName(Spawn) .. ".")

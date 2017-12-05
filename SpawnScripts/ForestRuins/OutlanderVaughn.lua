@@ -1,6 +1,6 @@
 --[[
 	Script Name	: SpawnScripts/ForestRuins/OutlanderVaughn.lua
-	Script Purpose	: Outlander Vaughn 
+	Script Purpose	: Outlander Vaughn
 	Script Author	: John Adams
 	Script Date	: 2008.09.19
 	Script Notes	: Auto-Generated Conversation from PacketParser Data
@@ -12,7 +12,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_2_1004.mp3", "", "", 0, 0)
 
@@ -27,7 +27,7 @@ end
 
 function dlg_4_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "I'll see what I can do.", "dlg_4_2")
 	StartConversation(conversation, NPC, Spawn, "Those wretched Blackfurl deckhands stole my satchel!  It had everything that was important to me. Please, recover my satchel!")

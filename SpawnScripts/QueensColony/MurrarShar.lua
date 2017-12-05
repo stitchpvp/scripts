@@ -3,7 +3,7 @@
 	Script Purpose	: Murrar Shar <Emissary of Queen Antonia Bayle>
 	Script Author	: Zcoretri
 	Script Date	: 2015.07.30
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 function spawn(NPC)
@@ -11,7 +11,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-    spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
@@ -56,7 +56,7 @@ end
 function WhoAreYou(NPC, Spawn)
     FaceTarget(NPC, Spawn)
     conversation = CreateConversation()
-   
+
     PlayFlavor(NPC, "voiceover/english/tutorial_revamp/murrar_shar/tutorial_island02_revamp/quests/citizenship/murrarshar/murrarshar001.mp3", "", "", 4276663740, 184288328, Spawn)
     AddConversationOption(conversation, "What is the purpose of this colony?", "PurposeColony")
     AddConversationOption(conversation, "We'll talk about this later.")
@@ -78,7 +78,7 @@ function MoreAboutQeynos(NPC, Spawn)
     FaceTarget(NPC, Spawn)
     conversation = CreateConversation()
 
-    PlayFlavor(NPC, "voiceover/english/tutorial_revamp/murrar_shar/tutorial_island02_revamp/quests/citizenship/murrarshar/murrarshar003.mp3", "", "", 490663804, 1186290249, Spawn)   
+    PlayFlavor(NPC, "voiceover/english/tutorial_revamp/murrar_shar/tutorial_island02_revamp/quests/citizenship/murrarshar/murrarshar003.mp3", "", "", 490663804, 1186290249, Spawn)
     AddConversationOption(conversation, "Tell me more about Freeport.", "MoreAboutFreeport")
     AddConversationOption(conversation, "I'd rather not get into it.")
     StartConversation(conversation, NPC, Spawn, "Qeynos is a grand city that stands on the western shores of the continent Karan. It is a place where truth and justice are valued above all else. It is ruled by the brave and noble Queen Antonia Bayle. Our kingdom is a bright light that stands against the dark empire of Freeport.")

@@ -10,12 +10,12 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 		PlayFlavor(NPC, "voiceover/english/tutorial_revamp/gatekeeper_malora/fprt_adv03_sprawl/quests/protector_malora004.mp3", "", "", 1115741315, 3103270743, Spawn)
 	AddConversationOption(conversation, "Be well, Malora.", "dlg_1_1")

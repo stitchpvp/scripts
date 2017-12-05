@@ -1,6 +1,6 @@
 --[[
 	Script Name	: SpawnScripts/QueensColony/Vim.lua
-	Script Purpose	: Vim 
+	Script Purpose	: Vim
 	Script Author	: John Adams
 	Script Date	: 2008.09.21
 	Script Notes	: Auto-Generated Conversation from PacketParser Data

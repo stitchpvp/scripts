@@ -3,7 +3,7 @@
 	Script Purpose	:	Handles the quest, "A Ferocious Inconvenience"
 	Script Author	:	Cynnar
 	Script Date		:	7/28/2015
-	Script Notes	:	
+	Script Notes	:
 
 	Zone			:	Darklight Wood
 	Quest Giver		:	Jhana Do'Zyth
@@ -39,8 +39,8 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
-	
+	local conversation = CreateConversation()
+
 	PlayFlavor(QuestGiver, "jhana_do_zyth/darklight_wood/hates_envy/jhana_revamp/jhana009.mp3", "", "", 1353883768, 3186153308, Player)
 	AddConversationOption(conversation, "I will return victorious!")
 	StartConversation(conversation, QuestGiver, Player, "I look forward to news of your victory.")

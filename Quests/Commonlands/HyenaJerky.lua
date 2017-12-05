@@ -3,17 +3,17 @@
 	Script Purpose	:	Handles the quest, "Hyena Jerky"
 	Script Author	:	QuestParser (Replace this)
 	Script Date		:	7/8/2017
-	Script Notes	:	
+	Script Notes	:
 
 	Zone			:	Commonlands
-	Quest Giver		:	
+	Quest Giver		:
 	Preceded by		:	None
 	Followed by		:	None
 --]]
 
 
 function Init(Quest)
-	AddQuestStepKill(Quest, 1, "I need to collect gnarled carrion hound ears", 15, 100, "Mooshga has asked me to collect fifteen gnarled carrion hound ears.", 94, --[[ ID's --]])
+	AddQuestStepKill(Quest, 1, "I need to collect gnarled carrion hound ears", 15, 100, "Mooshga has asked me to collect fifteen gnarled carrion hound ears.", 94, nil)
 	AddQuestStepCompleteAction(Quest, 1, "Step1Complete")
 end
 
@@ -21,7 +21,7 @@ function Step1Complete(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 1, "I have collected fifteen gnarled carrion hound ears.")
 	UpdateQuestTaskGroupDescription(Quest, 1, "I have the gnarled carrion hound ears that Mooshga requested.")
 
-	AddQuestStepChat(Quest, 2, "I should return to Mooshga", 1, "I have collected fifteen gnarled carrion hound ears.  I should return to Mooshga near the Freeport gates.", 11, --[[ ID's --]])
+	AddQuestStepChat(Quest, 2, "I should return to Mooshga", 1, "I have collected fifteen gnarled carrion hound ears.  I should return to Mooshga near the Freeport gates.", 11, nil)
 	AddQuestStepCompleteAction(Quest, 2, "QuestComplete")
 end
 

@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "Back to the Inquisitor"
 	Script Author	: Scatman
 	Script Date	    : 2009.07.28
-	
+
 	Zone       : Sunken City
 	Quest Giver: Investigator Curfield
 	Preceded by: Finding the Shrine (finding_the_shrine.lua)
@@ -17,7 +17,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(QuestGiver, "voiceover/english/tutorial_revamp/investigator_curfeld/fprt_adv01_sunken/investigator_curfeld018.mp3", "", "", 3880047652, 3528846773, Player)
 	AddConversationOption(conversation, "I'll take it to him.")

@@ -36,7 +36,7 @@ function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
   SpawnSet(NPC, "visual_state", 221)
-  
+
 	AddConversationOption(conversation, "What are you going on about?", "Option1")
 	AddConversationOption(conversation, "Perfect fit for what, little bit?", "Option2")
 	AddConversationOption(conversation, "I don't think so.")
@@ -153,7 +153,7 @@ function Option14(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
   AddTimer(NPC, 2000, "ResetVisualState", 1, NPC)
-  
+
 	AddConversationOption(conversation, "So what should I be looking for?")
 	StartConversation(conversation, NPC, Spawn, "But I need you to go into the smuggler's camp!  I'll reward you, naturally.  I promise!  Break my gears, and curse my mind!  It's just that I've been spotted by 'em several times snoopin' around 'n if I get snagged again they'll sure as Prexxus take my other hand, too!")
 end

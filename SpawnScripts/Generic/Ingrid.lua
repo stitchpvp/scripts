@@ -1,6 +1,6 @@
 --[[
 	Script Name	: SpawnScripts/QueensColony/Ingrid.lua
-	Script Purpose	: Ingrid 
+	Script Purpose	: Ingrid
 	Script Author	: John Adams
 	Script Date	: 2008.09.21
 	Script Notes	: Auto-Generated Conversation from PacketParser Data

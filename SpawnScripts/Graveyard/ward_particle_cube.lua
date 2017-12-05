@@ -3,7 +3,7 @@
 	Script Purpose	: ward_particle_cube
 	Script Author	: Scatman
 	Script Date	: 2009.07.12
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 local ZADDAR_QUEST_4 = 234
@@ -16,12 +16,12 @@ function hailed(NPC, Spawn)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function casted_on(Target, Caster)
-	if HasQuest(Spawn, ZADDAR_QUEST_4) and GetQuestStep(Spawn, ZADDAR_QUEST_4) == 2 then
-		SetStepComplete(Spawn, ZADDAR_QUEST_4, 2)
+	if HasQuest(Caster, ZADDAR_QUEST_4) and GetQuestStep(Caster, ZADDAR_QUEST_4) == 2 then
+		SetStepComplete(Caster, ZADDAR_QUEST_4, 2)
 		SendMessage(Caster, "You place the relic within the sphere of influence.")
 		Despawn(Target)
 	end

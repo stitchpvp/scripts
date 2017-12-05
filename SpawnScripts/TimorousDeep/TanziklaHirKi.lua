@@ -15,13 +15,13 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
-	
+	local conversation = CreateConversation()
+
 	if HasCompletedQuest(Spawn, QUEST_1) then
 		if HasCompletedQuest(Spawn, QUEST_2) then
 			Say(NPC, "Thank you again.", Spawn)
@@ -49,7 +49,7 @@ end
 
 function dlg_6_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/rok_questvo/tanzikla_hir_ki/_exp04/exp04_rgn_timorous_deep/chrykori_tie/hirki/hirki001.mp3", "", "", 279682638, 225264555, Spawn)
 	AddConversationOption(conversation, "All right.", "OfferQuest1")
@@ -63,13 +63,13 @@ end
 
 function DidYouTakeCareOfTheirSupplies(NPC, Spawn, conversation)
 	PlayFlavor(NPC, "voiceover/english/rok_questvo/tanzikla_hir_ki/_exp04/exp04_rgn_timorous_deep/chrykori_tie/hirki/hirki003.mp3", "", "", 500996465, 1037608249, Spawn)
-	
+
 	if (HasCompletedQuest(Spawn, QUEST_1) and not HasCompletedQuest(Spawn, QUEST_2)) or (HasQuest(Spawn, QUEST_1) and GetQuestStep(Spawn, QUEST_1) == 2) then
 		AddConversationOption(conversation, "Yes.", "dlg_17_1")
 	else
 		AddConversationOption(conversation, "Not yet.")
 	end
-	
+
 	StartConversation(conversation, NPC, Spawn, "Did you take care of their supplies?")
 end
 
@@ -77,9 +77,9 @@ function dlg_17_1(NPC, Spawn)
 	if HasQuest(Spawn, QUEST_1) then
 		SetStepComplete(Spawn, QUEST_1, 2)
 	end
-	
+
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/rok_questvo/tanzikla_hir_ki/_exp04/exp04_rgn_timorous_deep/chrykori_tie/hirki/hirki004.mp3", "", "", 565281593, 236720523, Spawn)
 	AddConversationOption(conversation, "All right.", "OfferQuest2")
@@ -97,21 +97,21 @@ end
 
 function DidYouRetrieveWeapons(NPC, Spawn, conversation)
 	PlayFlavor(NPC, "voiceover/english/rok_questvo/tanzikla_hir_ki/_exp04/exp04_rgn_timorous_deep/chrykori_tie/hirki/hirki006.mp3", "", "", 1514090690, 2956933303, Spawn)
-	
+
 	if GetQuestStep(Spawn, QUEST_2) == 2 then
 		AddConversationOption(conversation, "Yes, I did.", "dlg_19_1")
 	else
 		AddConversationOption(conversation, "Not yet.")
 	end
-	
+
 	StartConversation(conversation, NPC, Spawn, "Did you retrieve their weapons?")
 end
 
 function dlg_19_1(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_2, 2)
-	
+
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/rok_questvo/tanzikla_hir_ki/_exp04/exp04_rgn_timorous_deep/chrykori_tie/hirki/hirki007.mp3", "", "", 2564656544, 3314424538, Spawn)
 	AddConversationOption(conversation, "You're welcome.")

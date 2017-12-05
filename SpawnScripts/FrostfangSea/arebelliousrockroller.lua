@@ -1,9 +1,9 @@
 --[[
 	Script Name	: SpawnScripts/FrostfangSea/arebelliousrockroller.lua
-	Script Purpose	: a rebellious rock roller 
+	Script Purpose	: a rebellious rock roller
 	Script Author	: theFoof
 	Script Date	: 2013.11.15
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 function spawn(NPC)
@@ -11,7 +11,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)

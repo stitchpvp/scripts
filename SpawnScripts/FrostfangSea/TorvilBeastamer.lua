@@ -13,12 +13,12 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	
+
 	local choice = math.random(1,3)
 	if choice == 1 then
 		PlayFlavor(NPC, "", "Tail or beak, I got what ye seek!", "wink", 1689589577, 4560189, Spawn)

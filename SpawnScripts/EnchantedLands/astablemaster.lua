@@ -1,6 +1,6 @@
 --[[
 	Script Name	: SpawnScripts/EnchantedLands/astablemaster.lua
-	Script Purpose	: a stable master 
+	Script Purpose	: a stable master
 	Script Author	: Cynnar
 	Script Date	: 2015.02.17
 	Script Notes	: Auto-Generated Conversation from PacketParser Data
@@ -10,13 +10,13 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
-	
+	local conversation = CreateConversation()
+
 	if GetSpawnLocationID(NPC) == 106627 then
 		PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_3_1047.mp3", "", "", 0, 0, Spawn)
 		AddConversationOption(conversation, "I would like to travel.", "dlg_PlacesB")
@@ -53,12 +53,12 @@ function hailed(NPC, Spawn)
 		AddConversationOption(conversation, "I am fine staying here, thanks.")
 		StartConversation(conversation, NPC, Spawn, "Greetings traveler, how can I assist you today?")
 	end
-	
+
 end
 
 function dlg_0_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 		AddConversationOption(conversation, "Goodbye")
 		StartConversation(conversation, NPC, Spawn, "Some thieves have stolen all our horses, and unfortunately I cannot offer this service at this time.")
@@ -66,7 +66,7 @@ end
 
 function dlg_PlacesB(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	AddConversationOption(conversation, "Rivervale.", "move_Rivervale")
 	AddConversationOption(conversation, "Chomper's Pond.", "move_Chompers_Pond")
 	AddConversationOption(conversation, "Misty Grove.", "move_Misty_Grove")
@@ -79,7 +79,7 @@ end
 
 function dlg_PlacesR(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	AddConversationOption(conversation, "Bobick Village.", "move_Bobick_Village")
 	AddConversationOption(conversation, "Chomper's Pond.", "move_Chompers_Pond")
 	AddConversationOption(conversation, "Misty Grove.", "move_Misty_Grove")
@@ -92,7 +92,7 @@ end
 
 function dlg_PlacesC(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	AddConversationOption(conversation, "Bobick Village.", "move_Bobick_Village")
 	AddConversationOption(conversation, "Rivervale.", "move_Rivervale")
 	AddConversationOption(conversation, "Misty Grove.", "move_Misty_Grove")
@@ -105,7 +105,7 @@ end
 
 function dlg_PlacesM(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	AddConversationOption(conversation, "Bobick Village.", "move_Bobick_Village")
 	AddConversationOption(conversation, "Rivervale.", "move_Rivervale")
 	AddConversationOption(conversation, "Chomper's Pond.", "move_Chompers_Pond")
@@ -118,7 +118,7 @@ end
 
 function dlg_PlacesBB(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	AddConversationOption(conversation, "Bobick Village.", "move_Bobick_Village")
 	AddConversationOption(conversation, "Rivervale.", "move_Rivervale")
 	AddConversationOption(conversation, "Chomper's Pond.", "move_Chompers_Pond")
@@ -131,7 +131,7 @@ end
 
 function dlg_PlacesG(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	AddConversationOption(conversation, "Bobick Village.", "move_Bobick_Village")
 	AddConversationOption(conversation, "Rivervale.", "move_Rivervale")
 	AddConversationOption(conversation, "Chomper's Pond.", "move_Chompers_Pond")
@@ -144,7 +144,7 @@ end
 
 function dlg_PlacesGG(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	AddConversationOption(conversation, "Bobick Village.", "move_Bobick_Village")
 	AddConversationOption(conversation, "Rivervale.", "move_Rivervale")
 	AddConversationOption(conversation, "Chomper's Pond.", "move_Chompers_Pond")

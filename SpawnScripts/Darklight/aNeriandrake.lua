@@ -1,9 +1,9 @@
 --[[
     Script Name    : SpawnScripts/Darklight/aNeriandrake.lua
     Script Author  : theFoof
-    Script Date    : 2013.11.28 
+    Script Date    : 2013.11.28
     Script Purpose : this is only for the drakes that fly
-                   : 
+                   :
 --]]
 
 function spawn(NPC)
@@ -16,5 +16,5 @@ function hailed(NPC, Spawn)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end

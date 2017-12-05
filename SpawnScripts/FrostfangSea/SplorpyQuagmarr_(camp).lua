@@ -18,7 +18,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-    spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
@@ -33,14 +33,14 @@ end
 function SpawnAccess(NPC, Spawn)
     if HasQuest(Spawn, UnbearableProblem) then
 	    if GetQuestStep(Spawn, UnbearableProblem) == 2 then
-		
+
 		else
 		    AddSpawnAccess(NPC, Spawn)
 		end
 	elseif HasCompletedQuest(Spawn, UnbearableProblem) and HasCompletedQuest(Spawn, LostFroglok) == false then
-	   
+
 	elseif GetQuestStep(Spawn, GreatShelf) > 1 or HasCompletedQuest(Spawn, GreatShelf) then
-		
+
 	else
 	    AddSpawnAccess(NPC, Spawn)
 	end

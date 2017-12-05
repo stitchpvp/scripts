@@ -3,7 +3,7 @@
     Script Author  : Zcoretri
     Script Date    : 2015.07.30
     Script Purpose : Paula Marx dialog
-                   : 
+                   :
 --]]
 
 
@@ -29,7 +29,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-    spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
@@ -49,7 +49,7 @@ function Gather(NPC)
     AddTimer(NPC, 5000, "stop_gathering")		-- for 5 seconds, then stop
 end
 
-function stop_gathering(NPC) 
+function stop_gathering(NPC)
     GatherSpawn = GetSpawn(NPC, 2530009)		-- get Paula Marx
     SpawnSet(GatherSpawn, "visual_state", "0") 	-- Stop her from gathering
-end 
+end

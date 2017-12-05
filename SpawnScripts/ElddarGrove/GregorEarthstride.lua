@@ -1,6 +1,6 @@
 --[[
 	Script Name	: SpawnScripts/ElddarGrove/GregorEarthstride.lua
-	Script Purpose	: Gregor Earthstride 
+	Script Purpose	: Gregor Earthstride
 	Script Author	: John Adams
 	Script Date	: 2008.09.28
 	Script Notes	: Auto-Generated Conversation from PacketParser Data

@@ -1,6 +1,6 @@
 --[[
 	Script Name	: SpawnScripts/GreaterFaydark/aGigglegibberGoblinGamblinGameVendor.lua
-	Script Purpose	: a Gigglegibber Goblin Gamblin' Game Vendor 
+	Script Purpose	: a Gigglegibber Goblin Gamblin' Game Vendor
 	Script Author	: John Adams
 	Script Date	: 2009.03.01
 	Script Notes	: Auto-Generated Conversation from PacketParser Data
@@ -11,7 +11,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)
@@ -22,77 +22,77 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 		PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "How did a goblin get in here?  Don't you kill people?", "dlg_0_1")
 	AddConversationOption(conversation, "I think I'd rather keep my money, thanks.")
 	StartConversation(conversation, NPC, Spawn, "Buy ticket, you!  Only ten shiny coins! You give just ten shiny coins and maybe you get um... many shinier coins!")
-	if convo==1 then
-		PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
-		AddConversationOption(conversation, "How did a goblin get in here?  Don't you kill people?", "dlg_1_1")
-		AddConversationOption(conversation, "What do you know about the disappearance of Lord Bowsprite?")
-		AddConversationOption(conversation, "I think I'd rather keep my money, thanks.")
-		StartConversation(conversation, NPC, Spawn, "Buy ticket, you!  Only ten shiny coins! You give just ten shiny coins and maybe you get um... many shinier coins!")
-	end
+	--if convo==1 then
+	--	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
+	--	AddConversationOption(conversation, "How did a goblin get in here?  Don't you kill people?", "dlg_1_1")
+	--	AddConversationOption(conversation, "What do you know about the disappearance of Lord Bowsprite?")
+	--	AddConversationOption(conversation, "I think I'd rather keep my money, thanks.")
+	--	StartConversation(conversation, NPC, Spawn, "Buy ticket, you!  Only ten shiny coins! You give just ten shiny coins and maybe you get um... many shinier coins!")
+	--end
 
-	if convo==2 then
-		PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
-		AddConversationOption(conversation, "How did a goblin get in here?  Don't you kill people?", "dlg_2_1")
-		AddConversationOption(conversation, "What do you know about the disappearance of Lord Bowsprite?")
-		AddConversationOption(conversation, "I think I'd rather keep my money, thanks.")
-		StartConversation(conversation, NPC, Spawn, "Buy ticket, you!  Only ten shiny coins! You give just ten shiny coins and maybe you get um... many shinier coins!")
-	end
+	--if convo==2 then
+	--	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
+	--	AddConversationOption(conversation, "How did a goblin get in here?  Don't you kill people?", "dlg_2_1")
+	--	AddConversationOption(conversation, "What do you know about the disappearance of Lord Bowsprite?")
+	--	AddConversationOption(conversation, "I think I'd rather keep my money, thanks.")
+	--	StartConversation(conversation, NPC, Spawn, "Buy ticket, you!  Only ten shiny coins! You give just ten shiny coins and maybe you get um... many shinier coins!")
+	--end
 
-	if convo==3 then
-		PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
-		AddConversationOption(conversation, "How did a goblin get in here?  Don't you kill people?", "dlg_3_1")
-		AddConversationOption(conversation, "What do you know about the disappearance of Lord Bowsprite?")
-		AddConversationOption(conversation, "I think I'd rather keep my money, thanks.")
-		StartConversation(conversation, NPC, Spawn, "Buy ticket, you!  Only ten shiny coins! You give just ten shiny coins and maybe you get um... many shinier coins!")
-	end
+	--if convo==3 then
+	--	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
+	--	AddConversationOption(conversation, "How did a goblin get in here?  Don't you kill people?", "dlg_3_1")
+	--	AddConversationOption(conversation, "What do you know about the disappearance of Lord Bowsprite?")
+	--	AddConversationOption(conversation, "I think I'd rather keep my money, thanks.")
+	--	StartConversation(conversation, NPC, Spawn, "Buy ticket, you!  Only ten shiny coins! You give just ten shiny coins and maybe you get um... many shinier coins!")
+	--end
 
-	if convo==8 then
-		PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
-		AddConversationOption(conversation, "How did a goblin get in here?  Don't you kill people?", "dlg_8_1")
-		AddConversationOption(conversation, "I think I'd rather keep my money, thanks.")
-		StartConversation(conversation, NPC, Spawn, "Buy ticket, you!  Only ten shiny coins! You give just ten shiny coins and maybe you get um... many shinier coins!")
-	end
+	--if convo==8 then
+	--	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
+	--	AddConversationOption(conversation, "How did a goblin get in here?  Don't you kill people?", "dlg_8_1")
+	--	AddConversationOption(conversation, "I think I'd rather keep my money, thanks.")
+	--	StartConversation(conversation, NPC, Spawn, "Buy ticket, you!  Only ten shiny coins! You give just ten shiny coins and maybe you get um... many shinier coins!")
+	--end
 
-	if convo==9 then
-		PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
-		AddConversationOption(conversation, "How did a goblin get in here?  Don't you kill people?", "dlg_9_1")
-		AddConversationOption(conversation, "I think I'd rather keep my money, thanks.")
-		StartConversation(conversation, NPC, Spawn, "Buy ticket, you!  Only ten shiny coins! You give just ten shiny coins and maybe you get um... many shinier coins!")
-	end
+	--if convo==9 then
+	--	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
+	--	AddConversationOption(conversation, "How did a goblin get in here?  Don't you kill people?", "dlg_9_1")
+	--	AddConversationOption(conversation, "I think I'd rather keep my money, thanks.")
+	--	StartConversation(conversation, NPC, Spawn, "Buy ticket, you!  Only ten shiny coins! You give just ten shiny coins and maybe you get um... many shinier coins!")
+	--end
 
-	if convo==10 then
-		PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
-		AddConversationOption(conversation, "How did a goblin get in here?  Don't you kill people?", "dlg_10_1")
-		AddConversationOption(conversation, "I think I'd rather keep my money, thanks.")
-		StartConversation(conversation, NPC, Spawn, "Buy ticket, you!  Only ten shiny coins! You give just ten shiny coins and maybe you get um... many shinier coins!")
-	end
+	--if convo==10 then
+	--	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
+	--	AddConversationOption(conversation, "How did a goblin get in here?  Don't you kill people?", "dlg_10_1")
+	--	AddConversationOption(conversation, "I think I'd rather keep my money, thanks.")
+	--	StartConversation(conversation, NPC, Spawn, "Buy ticket, you!  Only ten shiny coins! You give just ten shiny coins and maybe you get um... many shinier coins!")
+	--end
 
-	if convo==16 then
-		PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
-		AddConversationOption(conversation, "How did a goblin get in here?  Don't you kill people?", "dlg_16_1")
-		AddConversationOption(conversation, "What do you know about the disappearance of Lord Bowsprite?")
-		AddConversationOption(conversation, "I think I'd rather keep my money, thanks.")
-		StartConversation(conversation, NPC, Spawn, "Buy ticket, you!  Only ten shiny coins! You give just ten shiny coins and maybe you get um... many shinier coins!")
-	end
+	--if convo==16 then
+	--	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
+	--	AddConversationOption(conversation, "How did a goblin get in here?  Don't you kill people?", "dlg_16_1")
+	--	AddConversationOption(conversation, "What do you know about the disappearance of Lord Bowsprite?")
+	--	AddConversationOption(conversation, "I think I'd rather keep my money, thanks.")
+	--	StartConversation(conversation, NPC, Spawn, "Buy ticket, you!  Only ten shiny coins! You give just ten shiny coins and maybe you get um... many shinier coins!")
+	--end
 
-	if convo==20 then
-		PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
-		AddConversationOption(conversation, "How did a goblin get in here?  Don't you kill people?", "dlg_20_1")
-		AddConversationOption(conversation, "I think I'd rather keep my money, thanks.")
-		StartConversation(conversation, NPC, Spawn, "Buy ticket, you!  Only ten shiny coins! You give just ten shiny coins and maybe you get um... many shinier coins!")
-	end
+	--if convo==20 then
+	--	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
+	--	AddConversationOption(conversation, "How did a goblin get in here?  Don't you kill people?", "dlg_20_1")
+	--	AddConversationOption(conversation, "I think I'd rather keep my money, thanks.")
+	--	StartConversation(conversation, NPC, Spawn, "Buy ticket, you!  Only ten shiny coins! You give just ten shiny coins and maybe you get um... many shinier coins!")
+	--end
 
 end
 
 function dlg_0_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Bowsprite... Not Bowspit.")
@@ -102,7 +102,7 @@ end
 
 function dlg_0_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Who said he was an elf? Fess up or I'll tell everyone the Gigglegibber gambling game is rigged!", "dlg_0_3")
@@ -112,7 +112,7 @@ end
 
 function dlg_0_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Tell me where it is. You don't want me to ruin your business do you?", "dlg_0_4")
@@ -122,7 +122,7 @@ end
 
 function dlg_0_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "You've been helpful, thanks.", "dlg_0_5")
@@ -131,7 +131,7 @@ end
 
 function dlg_1_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Bowsprite... Not Bowspit.")
@@ -141,7 +141,7 @@ end
 
 function dlg_2_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Why are potatoes funny?", "dlg_2_2")
@@ -151,7 +151,7 @@ end
 
 function dlg_2_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "I'll think about it.", "dlg_2_3")
@@ -160,7 +160,7 @@ end
 
 function dlg_9_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Why are potatoes funny?", "dlg_9_2")
@@ -170,7 +170,7 @@ end
 
 function dlg_9_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "I'll think about it.", "dlg_9_3")
@@ -179,7 +179,7 @@ end
 
 function dlg_10_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Why are potatoes funny?", "dlg_10_2")
@@ -189,7 +189,7 @@ end
 
 function dlg_10_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "I'll think about it.", "dlg_10_3")
@@ -198,7 +198,7 @@ end
 
 function dlg_16_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Bowsprite... Not Bowspit.")
@@ -208,7 +208,7 @@ end
 
 function dlg_16_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Who said he was an elf? Fess up or I'll tell everyone the gambling game is rigged!", "dlg_16_3")
@@ -218,7 +218,7 @@ end
 
 function dlg_16_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Tell me where it is. You don't want me to ruin your business do you?", "dlg_16_4")
@@ -228,7 +228,7 @@ end
 
 function dlg_16_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "You've been helpful, thanks.", "dlg_16_5")

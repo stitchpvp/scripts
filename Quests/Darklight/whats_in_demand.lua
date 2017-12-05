@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "What's in Demand?"
 	Script Author	: Scatman
 	Script Date	: 2009.02.02
-	
+
 	Zone       : Darklight Wood
 	Quest Giver: Ilmtar D'Viervs
 	Preceded by: None
@@ -22,7 +22,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(QuestGiver, "voiceover/english/neriak/ilmtar_d_viervs/darklight_wood/tvatar_post/ilmtar/ilmtar003.mp3", "", "", 2929478773, 1922139925, Player)
 	AddConversationOption(conversation, "I'll be back.")
@@ -34,7 +34,7 @@ end
 
 function step1_complete_gotBones(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 1, "Bone Fragment Found")
-	
+
 	AddQuestStepChat(Quest, 2, "I need to bring these bone fragments to Ilmtar.", 1, ".", 418, 340123)
 	AddQuestStepCompleteAction(Quest, 2, "quest_complete")
 end

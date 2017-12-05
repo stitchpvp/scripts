@@ -13,12 +13,12 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 --[[
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 		PlayFlavor(NPC, "brynhilde_maersdottr/halas/city_population/halas_betrayal_001.mp3", "", "", 97799044, 4230411082, Spawn)
 	AddConversationOption(conversation, "Maybe, tell me more.", "dlg_3_1")
@@ -49,7 +49,7 @@ end
 
 function dlg_3_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "brynhilde_maersdottr/halas/city_population/halas_betrayal_002.mp3", "", "", 1600213250, 4013876704, Spawn)
 	AddConversationOption(conversation, "Yes, can you help me to do that?", "dlg_3_2")
@@ -59,7 +59,7 @@ end
 
 function dlg_3_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "brynhilde_maersdottr/halas/city_population/halas_betrayal_003.mp3", "", "", 2358151408, 4270279466, Spawn)
 	AddConversationOption(conversation, "Qeynos, if you please.", "dlg_3_3")
@@ -70,7 +70,7 @@ end
 
 function dlg_8_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "brynhilde_maersdottr/halas/city_population/halas_betrayal_002.mp3", "", "", 1600213250, 4013876704, Spawn)
 	AddConversationOption(conversation, "Yes, can you help me to do that?", "dlg_8_2")
@@ -80,7 +80,7 @@ end
 
 function dlg_8_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "brynhilde_maersdottr/halas/city_population/halas_betrayal_003.mp3", "", "", 2358151408, 4270279466, Spawn)
 	AddConversationOption(conversation, "Qeynos, if you please.", "dlg_8_3")
@@ -91,7 +91,7 @@ end
 
 function dlg_9_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "brynhilde_maersdottr/halas/city_population/halas_betrayal_002.mp3", "", "", 1600213250, 4013876704, Spawn)
 	AddConversationOption(conversation, "Yes, can you help me to do that?", "dlg_9_2")
@@ -101,7 +101,7 @@ end
 
 function dlg_9_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "brynhilde_maersdottr/halas/city_population/halas_betrayal_003.mp3", "", "", 2358151408, 4270279466, Spawn)
 	AddConversationOption(conversation, "Qeynos, if you please.", "dlg_9_3")

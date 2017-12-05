@@ -3,7 +3,7 @@
 	Script Purpose	:	Handles the quest, "A Guard Insignia?"
 	Script Author	:	Cynnar
 	Script Date		:	9/1/2015
-	Script Notes	:	
+	Script Notes	:
 
 	Zone			:	Darklight Wood
 	Quest Giver		:	Examine a Neriak recruit badge

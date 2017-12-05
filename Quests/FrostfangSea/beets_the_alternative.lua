@@ -6,8 +6,8 @@
 
         Zone            : Frostfang Sea
         Quest Giver     : Wregan Firebeard
-        Preceded by     : 
-        Followed by     : 
+        Preceded by     :
+        Followed by     :
 --]]
 
 function Init(Quest)
@@ -21,10 +21,10 @@ end
 
 function Deleted(Quest, QuestGiver, Player)
 end
- 
+
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(QuestGiver, "wregan_firebeard/halas/gwenevyns_cove/wregan_firebeard_007.mp3", "", "", 2495625045, 3478965655, Player)
 	AddConversationOption(conversation, "I will, believe me.")
@@ -57,4 +57,4 @@ function Reload(Quest, QuestGiver, Player, Step)
 	    CompleteQuest(Quest, QuestGiver, Player)
 	end
 end
-    
+

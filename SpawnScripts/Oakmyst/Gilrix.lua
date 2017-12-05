@@ -1,9 +1,9 @@
 --[[
-	Script Name	: SpawnScripts/Oakmyst/Gilrix.lua 
+	Script Name	: SpawnScripts/Oakmyst/Gilrix.lua
 	Script Purpose	: Spawn script for GIlrix
 	Script Author	: Scatman
 	Script Date	: 2009.05.03
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 local QUEST_FROM_CHARLIN_4 = 207
@@ -16,7 +16,7 @@ function hailed(NPC, Spawn)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function aggro(NPC, Spawn)

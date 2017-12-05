@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "Don't Get It in Arozik's Eyes"
 	Script Author	: Scatman
 	Script Date	: 2009.02.22
-	
+
 	Zone       : Timorous Deep
 	Quest Giver: Tertiary Mak'Ki
 	Preceded by: Don't Get It in Arozik's Eyes (dont_get_it_in_aroziks_eyes.lua)
@@ -21,7 +21,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(QuestGiver, "voiceover/english/rok_questvo/tertiary_mak_ki/_exp04/exp04_rgn_timorous_deep/chrykori_tie/makki/makki004.mp3", "", "", 117800882, 151216823, Player)
 	AddConversationOption(conversation, "All right.")

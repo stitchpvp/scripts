@@ -1,6 +1,6 @@
 --[[
 	Script Name	: SpawnScripts/GreaterFaydark/BurgefSteelwright.lua
-	Script Purpose	: Burgef Steelwright 
+	Script Purpose	: Burgef Steelwright
 	Script Author	: John Adams
 	Script Date	: 2009.03.01
 	Script Notes	: Auto-Generated Conversation from PacketParser Data
@@ -11,7 +11,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)
@@ -22,7 +22,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 		PlayFlavor(NPC, "burgef_steelwright/_exp03/exp03_rgn_greater_faydark/burgef_steelwright/burgef001.mp3", "", "", 2532462337, 1199688824, Spawn)
 	AddConversationOption(conversation, "I'll leave you alone.", "dlg_4_1")

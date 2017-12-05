@@ -3,7 +3,7 @@
 	Script Purpose	:	for the quest "Foiling the Flank"
 	Script Author	:	theFoof
 	Script Date		:	2013.6.2
-	Script Notes	:	
+	Script Notes	:
 
 	Zone			:	Frostfang Sea
 	Quest Giver		:	Rakan RockBreaker
@@ -24,7 +24,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(QuestGiver, "rakan_rockbreaker/halas/great_shelf/rakan_rockbreaker/rakan_rockbreaker013.mp3", "", "", 3252337968, 480414167, Player)
 	AddConversationOption(conversation, "Thank you.")

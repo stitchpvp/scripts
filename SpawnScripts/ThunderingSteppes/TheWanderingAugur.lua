@@ -3,7 +3,7 @@
     Script Author  : Jabantiz
     Script Date    : 2014.07.13 12:07:13
     Script Purpose : The Wandering Augur (2490318)
-                   : 
+                   :
 --]]
 
 local TheWanderersThreeMeaningsOfLife = 110
@@ -13,12 +13,12 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	if not HasQuest(Spawn, TheWanderersThreeMeaningsOfLife) and not HasCompletedQuest(Spawn, TheWanderersThreeMeaningsOfLife) then
 		-- start the quest
@@ -63,13 +63,13 @@ function hailed(NPC, Spawn)
 		-- finished the quest
 		PlayFlavor(NPC, "voiceover/english/the_wandering_augur/steppes/quests/quest_wandering_augur/wandering_augur013.mp3", "", "", 1521418825, 1376165665, Spawn)
 		AddConversationOption(conversation, "I'll be on my way.")
-		StartConversation(conversation, NPC, Spawn, "I have given you the keys, my child.  How or if you ever use them is in your hands.  Other Augurs you meet in your travels may provide you with more wisdom.")	
+		StartConversation(conversation, NPC, Spawn, "I have given you the keys, my child.  How or if you ever use them is in your hands.  Other Augurs you meet in your travels may provide you with more wisdom.")
 	end
 end
 
 function dlg_0_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/the_wandering_augur/steppes/quests/quest_wandering_augur/wandering_augur002.mp3", "", "", 2562964464, 4217203499, Spawn)
 	AddConversationOption(conversation, "The meanings of life, eh? I'm listening.", "dlg_0_2")
@@ -83,7 +83,7 @@ end
 
 function dlg_1_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/the_wandering_augur/steppes/quests/quest_wandering_augur/wandering_augur005.mp3", "", "", 1955011218, 3592248483, Spawn)
 		AddConversationOption(conversation, "Inner strength?", "dlg_1_2")
@@ -93,7 +93,7 @@ end
 
 function dlg_1_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	SetStepComplete(Spawn, TheWanderersThreeMeaningsOfLife, 2)
 	PlayFlavor(NPC, "voiceover/english/the_wandering_augur/steppes/quests/quest_wandering_augur/wandering_augur006.mp3", "", "", 14505144, 1932942931, Spawn)
@@ -103,7 +103,7 @@ end
 
 function dlg_2_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/the_wandering_augur/steppes/quests/quest_wandering_augur/wandering_augur008.mp3", "", "", 915290527, 2753306989, Spawn)
 	AddConversationOption(conversation, "How do you know if it's the right direction?", "dlg_2_2")
@@ -113,7 +113,7 @@ end
 
 function dlg_2_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	SetStepComplete(Spawn, TheWanderersThreeMeaningsOfLife, 4)
 	PlayFlavor(NPC, "voiceover/english/the_wandering_augur/steppes/quests/quest_wandering_augur/wandering_augur009.mp3", "", "", 1926047857, 1251915059, Spawn)
@@ -123,8 +123,8 @@ end
 
 function dlg_3_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
-	
+	local conversation = CreateConversation()
+
 	PlayFlavor(NPC, "voiceover/english/the_wandering_augur/steppes/quests/quest_wandering_augur/wandering_augur011.mp3", "", "", 2965742070, 4163652707, Spawn)
 	AddConversationOption(conversation, "Not really.  Are all Augurs as obtuse as you?", "dlg_3_2")
 	StartConversation(conversation, NPC, Spawn, "As you see, sometimes many directions are correct.  We learn through trial and error which direction is correct at that moment.  The next time we set forth, we take what we have learned and apply it to our latest situation.  Do you understand now, my child?")
@@ -132,8 +132,8 @@ end
 
 function dlg_3_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
-	
+	local conversation = CreateConversation()
+
 	SetStepComplete(Spawn, TheWanderersThreeMeaningsOfLife, 6)
 	PlayFlavor(NPC, "voiceover/english/the_wandering_augur/steppes/quests/quest_wandering_augur/wandering_augur012.mp3", "", "", 1899808569, 4168257450, Spawn)
 	AddConversationOption(conversation, "Patience.  Hmm.")

@@ -3,7 +3,7 @@
     Script Author  : Zcoretri
     Script Date    : 2015.07.30
     Script Purpose : Captain Warrik dialog
-                   : 
+                   :
 --]]
 
 function spawn(NPC)
@@ -11,7 +11,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-    spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
@@ -26,7 +26,7 @@ end
 
 function dlg_6_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/captain_warrik/tutorial_island02_revamp/trainers/world_interaction/world_int002.mp3", "", "", 3266378152, 2419021702, Spawn)
 	AddConversationOption(conversation, "In what ways can I interact with other player characters?", "dlg_6_2")
@@ -39,7 +39,7 @@ end
 
 function dlg_6_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/captain_warrik/tutorial_island02_revamp/trainers/world_interaction/world_int003.mp3", "", "", 2351145322, 214243520, Spawn)
 	AddConversationOption(conversation, "How can I tell which actions I can take?", "dlg_6_3")
@@ -48,7 +48,7 @@ end
 
 function dlg_6_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/captain_warrik/tutorial_island02_revamp/trainers/world_interaction/world_int004.mp3", "", "", 217492850, 1476210113, Spawn)
 	AddConversationOption(conversation, "How do I talk to other players?", "dlg_6_4")
@@ -57,7 +57,7 @@ end
 
 function dlg_6_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/captain_warrik/tutorial_island02_revamp/trainers/world_interaction/world_int005.mp3", "", "", 499804299, 1158500700, Spawn)
 	AddConversationOption(conversation, "How do I interact with non-player characters?", "dlg_6_5")
@@ -69,7 +69,7 @@ end
 
 function dlg_6_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/captain_warrik/tutorial_island02_revamp/trainers/world_interaction/world_int006.mp3", "", "", 887410160, 3920006297, Spawn)
 	AddConversationOption(conversation, "How do I tell the difference?", "dlg_6_6")
@@ -78,7 +78,7 @@ end
 
 function dlg_6_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/captain_warrik/tutorial_island02_revamp/trainers/world_interaction/world_int007.mp3", "", "", 2117851027, 1566096416, Spawn)
 	AddConversationOption(conversation, "Are there different ways to interact with a single NPC?", "dlg_6_7")
@@ -87,7 +87,7 @@ end
 
 function dlg_6_7(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/captain_warrik/tutorial_island02_revamp/trainers/world_interaction/world_int008.mp3", "", "", 4204591829, 775598592, Spawn)
 	AddConversationOption(conversation, "Are there multiple ways to talk to an NPC?", "dlg_6_8")
@@ -96,7 +96,7 @@ end
 
 function dlg_6_8(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/captain_warrik/tutorial_island02_revamp/trainers/world_interaction/world_int009.mp3", "", "", 3050147178, 1058091559, Spawn)
 	AddConversationOption(conversation, "How do I go about attacking an NPC?", "dlg_6_9")
@@ -105,7 +105,7 @@ end
 
 function dlg_6_9(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/captain_warrik/tutorial_island02_revamp/trainers/world_interaction/world_int010.mp3", "", "", 3207862275, 1652184320, Spawn)
 	AddConversationOption(conversation, "In what ways can I interact with other player characters?", "dlg_6_2")
@@ -118,7 +118,7 @@ end
 
 function dlg_6_10(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/captain_warrik/tutorial_island02_revamp/trainers/world_interaction/world_int011.mp3", "", "", 986431613, 4262526566, Spawn)
 	AddConversationOption(conversation, "How do I tell what the glowing object will do?","dlg_6_11")
@@ -127,7 +127,7 @@ end
 
 function dlg_6_11(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/captain_warrik/tutorial_island02_revamp/trainers/world_interaction/world_int012.mp3", "", "", 281123238, 3770593908, Spawn)
 	AddConversationOption(conversation, "Can anything bad happen by clicking on an object?", "dlg_6_12")
@@ -136,7 +136,7 @@ end
 
 function dlg_6_12(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/captain_warrik/tutorial_island02_revamp/trainers/world_interaction/world_int013.mp3", "", "", 22184547, 714173495, Spawn)
 	AddConversationOption(conversation, "In what ways can I interact with other player characters?", "dlg_6_2")
@@ -148,7 +148,7 @@ end
 
 function dlg_6_13(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/captain_warrik/tutorial_island02_revamp/trainers/world_interaction/world_int014.mp3", "", "", 3003386223, 1374934830, Spawn)
 	AddConversationOption(conversation, "How do I know what I can do with an item?", "dlg_6_14")
@@ -157,7 +157,7 @@ end
 
 function dlg_6_14(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/captain_warrik/tutorial_island02_revamp/trainers/world_interaction/world_int015.mp3", "", "", 921421095, 934280804, Spawn)
 	AddConversationOption(conversation, "What are some common things I can do with items?", "dlg_6_15")
@@ -166,7 +166,7 @@ end
 
 function dlg_6_15(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/captain_warrik/tutorial_island02_revamp/trainers/world_interaction/world_int016.mp3", "", "", 3594960522, 2732369829, Spawn)
 	AddConversationOption(conversation, "What about other types of items?", "dlg_6_16")
@@ -175,7 +175,7 @@ end
 
 function dlg_6_16(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/captain_warrik/tutorial_island02_revamp/trainers/world_interaction/world_int017.mp3", "", "", 1124732255, 409658595, Spawn)
 	AddConversationOption(conversation, "In what ways can I interact with other player characters?", "dlg_6_2")

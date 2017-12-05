@@ -3,7 +3,7 @@
 	Script Purpose	:	the quest Impish Threats
 	Script Author	:	theFoof
 	Script Date		:	2013.7.19
-	Script Notes	:	
+	Script Notes	:
 
 	Zone			:	Frostfang Sea
 	Quest Giver		:	Knut Orcbane
@@ -19,7 +19,7 @@ end
 
 function Accepted(Quest, QuestGiver, Spawn)
 	FaceTarget(QuestGiver, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(QuestGiver, "knut_orcbane/halas/cragged_spine/knut_orcbane_015.mp3", "", "", 2593056094, 2652573993, Spawn)
 	AddConversationOption(conversation, "Will do!")

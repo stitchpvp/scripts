@@ -21,12 +21,12 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
-	
+	local conversation = CreateConversation()
+
 	PlayFlavor(QuestGiver, "voiceover/english/tutorial_revamp/consul_bree/qey_adv03_caves/quests/bree/bree_007a.mp3", "", "", 1177533650, 1696169122, Player)
 	AddConversationOption(conversation, "You're welcome.")
 	StartConversation(conversation, QuestGiver, Player, "Thank you. The gnolls may not recover from this.")
-	
+
 	-- 7 explosives
 	for i = 1, 6, 1 do
 		SummonItem(Player, 6052, 1)
@@ -38,7 +38,7 @@ end
 
 function Step1_Complete_DestroyedForge(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 1, "I have destroyed the forge.")
-	
+
 	if QuestIsComplete(Player, 224) then
 		MultipleStepsComplete(Quest, QuestGiver, Player)
 	end
@@ -46,7 +46,7 @@ end
 
 function Step2_Complete_DestroyedParts(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 2, "I have destroyed some of the mechanical parts stashed in the Caves.")
-	
+
 	if QuestIsComplete(Player, 224) then
 		MultipleStepsComplete(Quest, QuestGiver, Player)
 	end
@@ -55,7 +55,7 @@ end
 function MultipleStepsComplete(Quest, QuestGiver, Player)
 	UpdateQuestTaskGroupDescription(Quest, 1, "I have done as Consul Bree asked.")
 
-	AddQuestStepChat(Quest, 3, "I need to return to Consul Bree.", 1, "Now that I have helped Consul Bree I should return to her.", 0, 1970010) 
+	AddQuestStepChat(Quest, 3, "I need to return to Consul Bree.", 1, "Now that I have helped Consul Bree I should return to her.", 0, 1970010)
 	AddQuestStepCompleteAction(Quest, 3, "QuestComplete")
 end
 

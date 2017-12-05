@@ -11,7 +11,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)
@@ -22,7 +22,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	choice = math.random(1,3)
 
@@ -39,34 +39,34 @@ function hailed(NPC, Spawn)
 	AddConversationOption(conversation, "I located several magical devices and destroyed them.", "dlg_0_1")
 	AddConversationOption(conversation, "Not yet.")
 	StartConversation(conversation, NPC, Spawn, "Any news, XXXXXXXX?")
-	if convo==98 then
-		PlayFlavor(NPC, "voiceover/english/exp03_questvo/kalamar_vesinger/_exp03/exp03_cty_kelethin/quest/qst_kalamar_vesinger/qst_kalamar_vesinger001.mp3", "", "", 1370796179, 1768003050, Spawn)
-		AddConversationOption(conversation, "Lady Katri said you might be able to help me.", "dlg_98_1")
-		AddConversationOption(conversation, "Nothing, thanks.")
-		StartConversation(conversation, NPC, Spawn, "Yes? How can I help you?")
-	end
+	--if convo==98 then
+	--	PlayFlavor(NPC, "voiceover/english/exp03_questvo/kalamar_vesinger/_exp03/exp03_cty_kelethin/quest/qst_kalamar_vesinger/qst_kalamar_vesinger001.mp3", "", "", 1370796179, 1768003050, Spawn)
+	--	AddConversationOption(conversation, "Lady Katri said you might be able to help me.", "dlg_98_1")
+	--	AddConversationOption(conversation, "Nothing, thanks.")
+	--	StartConversation(conversation, NPC, Spawn, "Yes? How can I help you?")
+	--end
 
-	if convo==107 then
-		PlayFlavor(NPC, "voiceover/english/exp03_questvo/kalamar_vesinger/_exp03/exp03_cty_kelethin/quest/qst_kalamar_vesinger/qst_kalamar_vesinger008.mp3", "", "", 1634811844, 2197818091, Spawn)
-		AddConversationOption(conversation, "I've been everywhere on the list but haven't seen anything about the Grender.", "dlg_107_1")
-		AddConversationOption(conversation, "I've misplaced the scroll you gave me.")
-		AddConversationOption(conversation, "I'm still searching.")
-		StartConversation(conversation, NPC, Spawn, "How goes the hunt?")
-	end
+	--if convo==107 then
+	--	PlayFlavor(NPC, "voiceover/english/exp03_questvo/kalamar_vesinger/_exp03/exp03_cty_kelethin/quest/qst_kalamar_vesinger/qst_kalamar_vesinger008.mp3", "", "", 1634811844, 2197818091, Spawn)
+	--	AddConversationOption(conversation, "I've been everywhere on the list but haven't seen anything about the Grender.", "dlg_107_1")
+	--	AddConversationOption(conversation, "I've misplaced the scroll you gave me.")
+	--	AddConversationOption(conversation, "I'm still searching.")
+	--	StartConversation(conversation, NPC, Spawn, "How goes the hunt?")
+	--end
 
-	if convo==108 then
-		PlayFlavor(NPC, "voiceover/english/exp03_questvo/kalamar_vesinger/_exp03/exp03_cty_kelethin/quest/qst_kalamar_vesinger/qst_kalamar_vesinger008.mp3", "", "", 1634811844, 2197818091, Spawn)
-		AddConversationOption(conversation, "I've been everywhere on the list but haven't seen anything about the Grender.", "dlg_108_1")
-		AddConversationOption(conversation, "I've misplaced the scroll you gave me.")
-		AddConversationOption(conversation, "I'm still searching.")
-		StartConversation(conversation, NPC, Spawn, "How goes the hunt?")
-	end
+	--if convo==108 then
+	--	PlayFlavor(NPC, "voiceover/english/exp03_questvo/kalamar_vesinger/_exp03/exp03_cty_kelethin/quest/qst_kalamar_vesinger/qst_kalamar_vesinger008.mp3", "", "", 1634811844, 2197818091, Spawn)
+	--	AddConversationOption(conversation, "I've been everywhere on the list but haven't seen anything about the Grender.", "dlg_108_1")
+	--	AddConversationOption(conversation, "I've misplaced the scroll you gave me.")
+	--	AddConversationOption(conversation, "I'm still searching.")
+	--	StartConversation(conversation, NPC, Spawn, "How goes the hunt?")
+	--end
 
 end
 
 function dlg_0_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/kalamar_vesinger/_exp03/exp03_cty_kelethin/quest/qst_kalamar_vesinger/qst_kalamar_vesinger016.mp3", "", "", 820648021, 3003512637, Spawn)
 	AddConversationOption(conversation, "The central stump.", "dlg_0_2")
@@ -75,7 +75,7 @@ end
 
 function dlg_0_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/kalamar_vesinger/_exp03/exp03_cty_kelethin/quest/qst_kalamar_vesinger/qst_kalamar_vesinger019.mp3", "", "", 1833569894, 3935541730, Spawn)
 	AddConversationOption(conversation, "Thank you!  But what can I do to help now?", "dlg_0_3")
@@ -84,7 +84,7 @@ end
 
 function dlg_0_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/kalamar_vesinger/_exp03/exp03_cty_kelethin/quest/qst_kalamar_vesinger/qst_kalamar_vesinger018.mp3", "", "", 3857736542, 2958380917, Spawn)
 	AddConversationOption(conversation, "I'll do that.", "dlg_0_4")
@@ -93,7 +93,7 @@ end
 
 function dlg_98_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/kalamar_vesinger/_exp03/exp03_cty_kelethin/quest/qst_kalamar_vesinger/qst_kalamar_vesinger002.mp3", "", "", 3295585723, 2659074372, Spawn)
 	AddConversationOption(conversation, "It's about the Grender...I hear you're the first person who saw it.", "dlg_98_2")
@@ -102,7 +102,7 @@ end
 
 function dlg_98_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/kalamar_vesinger/_exp03/exp03_cty_kelethin/quest/qst_kalamar_vesinger/qst_kalamar_vesinger003.mp3", "", "", 3687515657, 2071313746, Spawn)
 	AddConversationOption(conversation, "Why is that?", "dlg_98_3")
@@ -111,7 +111,7 @@ end
 
 function dlg_98_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/kalamar_vesinger/_exp03/exp03_cty_kelethin/quest/qst_kalamar_vesinger/qst_kalamar_vesinger004.mp3", "", "", 738876397, 3999214733, Spawn)
 	AddConversationOption(conversation, "Have the scouts been able to learn anything?", "dlg_98_4")
@@ -120,7 +120,7 @@ end
 
 function dlg_98_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/kalamar_vesinger/_exp03/exp03_cty_kelethin/quest/qst_kalamar_vesinger/qst_kalamar_vesinger005.mp3", "", "", 3011438280, 2479522140, Spawn)
 	AddConversationOption(conversation, "Sounds reasonable.", "dlg_98_5")
@@ -129,7 +129,7 @@ end
 
 function dlg_98_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/kalamar_vesinger/_exp03/exp03_cty_kelethin/quest/qst_kalamar_vesinger/qst_kalamar_vesinger006.mp3", "", "", 370779524, 2237372107, Spawn)
 	AddConversationOption(conversation, "Of course!", "dlg_98_6")
@@ -139,7 +139,7 @@ end
 
 function dlg_98_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/kalamar_vesinger/_exp03/exp03_cty_kelethin/quest/qst_kalamar_vesinger/qst_kalamar_vesinger007.mp3", "", "", 1729927705, 3759911339, Spawn)
 	AddConversationOption(conversation, "I'll be back.", "dlg_98_7")
@@ -148,7 +148,7 @@ end
 
 function dlg_107_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/kalamar_vesinger/_exp03/exp03_cty_kelethin/quest/qst_kalamar_vesinger/qst_kalamar_vesinger014.mp3", "", "", 3537512118, 3683878271, Spawn)
 	AddConversationOption(conversation, "Thanks!")
@@ -157,7 +157,7 @@ end
 
 function dlg_108_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/kalamar_vesinger/_exp03/exp03_cty_kelethin/quest/qst_kalamar_vesinger/qst_kalamar_vesinger009.mp3", "", "", 3308883973, 1803706282, Spawn)
 	AddConversationOption(conversation, "Why's that?", "dlg_108_2")
@@ -166,7 +166,7 @@ end
 
 function dlg_108_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/kalamar_vesinger/_exp03/exp03_cty_kelethin/quest/qst_kalamar_vesinger/qst_kalamar_vesinger010.mp3", "", "", 2776180591, 2107105431, Spawn)
 	AddConversationOption(conversation, "If the Grender were inside the city, someone would sound the alarm.", "dlg_108_3")
@@ -175,7 +175,7 @@ end
 
 function dlg_108_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/kalamar_vesinger/_exp03/exp03_cty_kelethin/quest/qst_kalamar_vesinger/qst_kalamar_vesinger011.mp3", "", "", 2655458455, 91161091, Spawn)
 	AddConversationOption(conversation, "Well...there are some very large tree stumps.", "dlg_108_4")
@@ -184,7 +184,7 @@ end
 
 function dlg_108_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/kalamar_vesinger/_exp03/exp03_cty_kelethin/quest/qst_kalamar_vesinger/qst_kalamar_vesinger012.mp3", "", "", 3801940384, 3412413593, Spawn)
 	AddConversationOption(conversation, "I could check out these stumps for you.", "dlg_108_5")
@@ -193,7 +193,7 @@ end
 
 function dlg_108_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/kalamar_vesinger/_exp03/exp03_cty_kelethin/quest/qst_kalamar_vesinger/qst_kalamar_vesinger013.mp3", "", "", 4194593417, 1620249668, Spawn)
 	AddConversationOption(conversation, "I'll be thorough.", "dlg_108_6")

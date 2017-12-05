@@ -1,6 +1,6 @@
 --[[
 	Script Name	: SpawnScripts/FrostfangSea/YashaRedblade.lua
-	Script Purpose	: Yasha Redblade 
+	Script Purpose	: Yasha Redblade
 	Script Author	: theFoof
 	Script Date	: 2013.03.16
 	Script Notes	:
@@ -28,7 +28,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)
@@ -39,7 +39,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	if HasQuest(Spawn, HalasianWelcome) then
 	    PlayFlavor(NPC, "yasha_redblade/halas/pilgrims_landing/redblade_001.mp3", "", "", 1052109202, 2650157895, Spawn)
 	    AddConversationOption(conversation, "Yes, and my muscles are a bit stiff.", "CompleteHalasianWelcome1")
@@ -103,7 +103,7 @@ function hailed(NPC, Spawn)
     end
 end
 
-function CompleteHalasianWelcome1(NPC, Spawn) 
+function CompleteHalasianWelcome1(NPC, Spawn)
 	SetStepComplete(Spawn, HalasianWelcome, 1)
 	Quest2Chat_0_1(NPC, Spawn)
 end
@@ -120,7 +120,7 @@ end
 
 function Quest2Chat_0_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "yasha_redblade/halas/pilgrims_landing/redblade_002.mp3", "", "", 395241080, 1989878493, Spawn)
 	AddConversationOption(conversation, "That would be great!", "Quest2Chat_1_1")
@@ -130,7 +130,7 @@ end
 
 function Quest2Chat_1_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "yasha_redblade/halas/pilgrims_landing/redblade_005.mp3", "", "", 3031703897, 849787882, Spawn)
 	AddConversationOption(conversation, "I'll go speak with her, right now.", "OfferStoneCombat")
@@ -150,7 +150,7 @@ end
 
 function Quest3Chat_1_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "yasha_redblade/halas/pilgrims_landing/redblade_010.mp3", "", "", 1856638395, 3517818586, Spawn)
 	AddConversationOption(conversation, "Is it orcs?", "Quest3Chat_2_1")
@@ -160,7 +160,7 @@ end
 
 function Quest3Chat_2_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "yasha_redblade/halas/pilgrims_landing/redblade_012.mp3", "", "", 1278159585, 3525975110, Spawn)
 	AddConversationOption(conversation, "There are orcs attacking?!", "Quest3Chat_3_1")
@@ -171,7 +171,7 @@ end
 
 function Quest3Chat_2_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "yasha_redblade/halas/pilgrims_landing/redblade_011.mp3", "", "", 1164815048, 3310979023, Spawn)
 	AddConversationOption(conversation, "Then we must face them!", "Quest3Chat_3_1")
@@ -181,7 +181,7 @@ end
 
 function Quest3Chat_3_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "yasha_redblade/halas/pilgrims_landing/redblade_013.mp3", "", "", 4060266194, 2101228978, Spawn)
 	AddConversationOption(conversation, "Right away!", "OfferCallArms")
@@ -193,7 +193,7 @@ function FinishedCallArms(NPC, Spawn)
         SetStepComplete(Spawn, CallArms, 2)
     end
     FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "yasha_redblade/halas/pilgrims_landing/redblade_014.mp3", "", "", 2562189235, 2582498054, Spawn)
 	AddConversationOption(conversation, "I did.", "Quest4Chat_1")
@@ -202,7 +202,7 @@ end
 
 function Quest4Chat_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "yasha_redblade/halas/pilgrims_landing/redblade_014.mp3", "", "", 2562189235, 2582498054, Spawn)
 	AddConversationOption(conversation, "You want me to kill some more?", "Quest4Chat_2")
@@ -212,7 +212,7 @@ end
 
 function Quest4Chat_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "yasha_redblade/halas/pilgrims_landing/redblade_014.mp3", "", "", 2562189235, 2582498054, Spawn)
 	AddConversationOption(conversation, "I can do that.", "Quest4Chat_4")
@@ -222,7 +222,7 @@ end
 
 function Quest4Chat_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "yasha_redblade/halas/pilgrims_landing/redblade_014.mp3", "", "", 2562189235, 2582498054, Spawn)
 	AddConversationOption(conversation, "I can do that.", "Quest4Chat_4")
@@ -232,7 +232,7 @@ end
 
 function Quest4Chat_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "yasha_redblade/halas/pilgrims_landing/redblade_014.mp3", "", "", 2562189235, 2582498054, Spawn)
 	AddConversationOption(conversation, "Right away!", "OfferBoatloadWork")
@@ -242,7 +242,7 @@ end
 
 function Quest4Chat_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "yasha_redblade/halas/pilgrims_landing/redblade_014.mp3", "", "", 2562189235, 2582498054, Spawn)
 	AddConversationOption(conversation, "Right away!", "OfferBoatloadWork")
@@ -253,7 +253,7 @@ end
 function Quest4Chat_6(NPC, Spawn)
     SetStepComplete(Spawn, BoatloadWork, 2)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "yasha_redblade/halas/pilgrims_landing/redblade_014.mp3", "", "", 2562189235, 2582498054, Spawn)
 	AddConversationOption(conversation, "Will do!")
@@ -262,7 +262,7 @@ end
 
 function Quest5Chat_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "yasha_redblade/halas/pilgrims_landing/redblade_025.mp3", "", "", 1803586212, 1797757498, Spawn)
 	AddConversationOption(conversation, "What for?", "Quest5Chat_2")
@@ -273,7 +273,7 @@ end
 
 function Quest5Chat_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "yasha_redblade/halas/pilgrims_landing/redblade_026.mp3", "", "", 3324242342, 3751082906, Spawn)
 	AddConversationOption(conversation, "To warn them.", "Quest5Chat_3")
@@ -282,7 +282,7 @@ end
 
 function Quest5Chat_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "yasha_redblade/halas/pilgrims_landing/redblade_028.mp3", "", "", 3869056834, 2852458001, Spawn)
 	AddConversationOption(conversation, "I'll light it, Yasha.", "OfferFlameOn")
@@ -292,7 +292,7 @@ end
 
 function Quest5Chat_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "yasha_redblade/halas/pilgrims_landing/redblade_029.mp3", "", "", 476266339, 1999686318, Spawn)
 	AddConversationOption(conversation, "That's good to know.", "OfferFlameOn")
@@ -302,7 +302,7 @@ end
 function Quest5Chat_5(NPC, Spawn)
 	SetStepComplete(Spawn, FlameOn, 3)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "yasha_redblade/halas/pilgrims_landing/redblade_031.mp3", "", "", 517725875, 2427954496, Spawn)
 	AddConversationOption(conversation, "Thank you.", "Quest6Chat_1")
@@ -312,8 +312,8 @@ end
 
 function Quest6Chat_1(NPC, Spawn)
     FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
-	
+	local conversation = CreateConversation()
+
     PlayFlavor(NPC, "yasha_redblade/halas/pilgrims_landing/redblade_032.mp3", "", "", 4231067263, 531833046, Spawn)
 	AddConversationOption(conversation, "How do I get there?", "Quest6Chat_2")
 	AddConversationOption(conversation, "Thank you, again.", "OfferRidegwenevyn")
@@ -323,7 +323,7 @@ end
 
 function Quest6Chat_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "yasha_redblade/halas/pilgrims_landing/redblade_033.mp3", "", "", 1250945947, 234141592, Spawn)
 	AddConversationOption(conversation, "Thank you, again.", "OfferRidegwenevyn")
@@ -363,11 +363,11 @@ end
 
 function OfferRidegwenevynTwo(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	if HasCompletedQuest(Spawn, FlameOn) then
 	    OfferQuest(NPC, Spawn, RideGwenevyn)
 	end
-	
+
 	PlayFlavor(NPC, "yasha_redblade/halas/pilgrims_landing/redblade_034.mp3", "", "", 4096485687, 3591012782, Spawn)
 	AddConversationOption(conversation, "Oh, okay.")
 	StartConversation(conversation, NPC, Spawn, "You can, sure.  But I wouldn't suggest it.  The water is freezing.")

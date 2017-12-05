@@ -3,7 +3,7 @@
 	Script Purpose	:	monk trainer
 	Script Author	:	theFoof
 	Script Date		:	2013.9.24
-	Script Notes	:	
+	Script Notes	:
 --]]
 
 local MONK = 6
@@ -12,7 +12,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
@@ -29,7 +29,7 @@ function hailed(NPC, Spawn)
 end
 
 function MonkChat1(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	FaceTarget(NPC, Spawn)
 
 	AddConversationOption(conversation, "That's useful to know!", "MonkChat2")
@@ -37,15 +37,15 @@ function MonkChat1(NPC, Spawn)
 end
 
 function MonkChat2(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	FaceTarget(NPC, Spawn)
-	
+
 	AddConversationOption(conversation, "That's good to know.", "MonkChat3")
 	StartConversation(conversation, NPC, Spawn, "But first and foremost, you should know the power you wield.  We focus our minds and bodies through tranquility and subtleness in order to withstand attacks and reduce the amount of damage inflicted upon us.  We can also use it to purge our bodies of ailments, move invisibly past an enemy or even fool opponents into believing us dead.")
 end
 
 function MonkChat3(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	FaceTarget(NPC, Spawn)
 
 	AddConversationOption(conversation, "That will be useful!", "MonkChat4")
@@ -53,7 +53,7 @@ function MonkChat3(NPC, Spawn)
 end
 
 function MonkChat4(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	FaceTarget(NPC, Spawn)
 
 	AddConversationOption(conversation, "That's interesting.", "MonkChat5")
@@ -61,7 +61,7 @@ function MonkChat4(NPC, Spawn)
 end
 
 function MonkChat5(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	FaceTarget(NPC, Spawn)
 
 	AddConversationOption(conversation, "Thank you for the advice.")

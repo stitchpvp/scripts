@@ -7,12 +7,12 @@
         Zone            : Frostfang Sea
         Quest Giver     : Flibbit Quaqmarr
         Preceded by     : An Unbearable Problem
-        Followed by     : 
+        Followed by     :
 --]]
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(QuestGiver, "flibbit_quagmarr/halas/gwenevyns_cove/flibbit_quagmarr/flibbit_quagmarr_029.mp3", "", "", 1372379832, 3108068275, Player)
 	AddConversationOption(conversation, "I will return once I have news for you.")

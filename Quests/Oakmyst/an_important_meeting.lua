@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "An Important Meeting"
 	Script Author	: Scatman
 	Script Date	: 2009.05.03
-	
+
 	Zone       : Oakmyst Forest
 	Quest Giver: Lieutenant Charlin
 	Preceded by: A Citizen's Request (a_citizens_request.lua)
@@ -18,9 +18,9 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
-	PlayFlavor(QuestGiver, "voiceover/english/tutorial_revamp/lieutenant_charlin/qey_adv01_oakmyst/quests/charlin/charlin019a.mp3", "", "", 1345224197, 2287197630, Player)	
+	PlayFlavor(QuestGiver, "voiceover/english/tutorial_revamp/lieutenant_charlin/qey_adv01_oakmyst/quests/charlin/charlin019a.mp3", "", "", 1345224197, 2287197630, Player)
 	AddConversationOption(conversation, "Thanks.")
 	StartConversation(conversation, QuestGiver, Player, "Be safe. They won't appreciate this, heh.")
 end
@@ -30,11 +30,11 @@ end
 
 function Step1_Complete_KilledGilrix(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 1, "I have interrupted the meeting.")
-	
+
 	-- A Gnollish Contingency Book
 	SummonItem(Player, 210027, 1)
-	
-	AddQuestStepChat(Quest, 2, "I need to return to Lieutenant Charlin and tell him what happened.", 1, ".", 0, 1950015) 
+
+	AddQuestStepChat(Quest, 2, "I need to return to Lieutenant Charlin and tell him what happened.", 1, ".", 0, 1950015)
 	AddQuestStepCompleteAction(Quest, 2, "QuestComplete")
 end
 

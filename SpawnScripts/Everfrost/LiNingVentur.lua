@@ -2,18 +2,15 @@
     Script Name    : SpawnScripts/Everfrost/LiNingVentur.lua
     Script Author  : Flunklesnarkin
     Script Date    : 2015.09.04 09:09:39
-    Script Purpose : 
-                   : 
+    Script Purpose :
+                   :
 --]]
 
 local TheStoriesofEverfrost = 167
 local A_Pioneer_Without_A_Wagon = 168
 
-local 
-
 function spawn(NPC)
-     ProvidesQuest(NPC, A_Pioneer_Without_A_Wagon)
-
+    ProvidesQuest(NPC, A_Pioneer_Without_A_Wagon)
 end
 
 function hailed(NPC, Spawn)
@@ -32,7 +29,7 @@ function hailed(NPC, Spawn)
 end
 
 function respawn(NPC)
-     spawn(NPC)
+SpawnMob(NPC)
 end
 
 function Default_Chat(NPC, Spawn)

@@ -3,7 +3,7 @@
 	Script Purpose	:	for the ceiling crystal spawns in the velinoid caves
 	Script Author	:	theFoof
 	Script Date		:	2013.7.18
-	Script Notes	:	
+	Script Notes	:
 --]]
 
 local WatchBelow = 77
@@ -13,7 +13,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function casted_on(NPC, Spawn, SpellName)

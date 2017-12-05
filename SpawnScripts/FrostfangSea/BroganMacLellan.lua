@@ -1,6 +1,6 @@
 --[[
 	Script Name	: SpawnScripts/FrostfangSea/BroganMacLellan.lua
-	Script Purpose	: Brogan MacLellan 
+	Script Purpose	: Brogan MacLellan
 	Script Author	: theFoof
 	Script Date	: 2013.08.19
 	Script Notes	:
@@ -15,13 +15,13 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
-	
+	local conversation = CreateConversation()
+
 	if not HasCompletedQuest(Spawn, TrustIssues) and not HasQuest(Spawn, TrustIssues) then
 		PlayFlavor(NPC, "brogan_maclellan/halas/new_halas_guard_house/brogan_maclellan001.mp3", "", "", 2714538944, 2338955741, Spawn)
 		AddConversationOption(conversation, "It isn't for everyone.", "Quest1Chat_1")
@@ -43,7 +43,7 @@ end
 
 function Quest1Chat_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "brogan_maclellan/halas/new_halas_guard_house/brogan_maclellan003.mp3", "", "", 111727266, 1713011810, Spawn)
 	AddConversationOption(conversation, "Marr blessed this place.", "Quest1Chat_2")
@@ -55,7 +55,7 @@ end
 
 function Quest1Chat_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "brogan_maclellan/halas/new_halas_guard_house/brogan_maclellan006.mp3", "", "", 385456101, 752051368, Spawn)
 	AddConversationOption(conversation, "I wonder why the others are here.", "Quest1Chat_3")
@@ -65,7 +65,7 @@ end
 
 function Quest1Chat_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "brogan_maclellan/halas/new_halas_guard_house/brogan_maclellan005.mp3", "", "", 3080293935, 4050287444, Spawn)
 	AddConversationOption(conversation, "Sure. I wouldn't mind learning their motives as well.", "OfferTrustIssues")
@@ -77,7 +77,7 @@ end
 
 function Quest1Chat_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "brogan_maclellan/halas/new_halas_guard_house/brogan_maclellan002.mp3", "", "", 1097446882, 2575906543, Spawn)
 	AddConversationOption(conversation, "I wonder why the others are here.", "Quest1Chat_3")
@@ -87,7 +87,7 @@ end
 
 function Quest1Chat_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "brogan_maclellan/halas/new_halas_guard_house/brogan_maclellan004.mp3", "", "", 1786838303, 2147071004, Spawn)
 	AddConversationOption(conversation, "I wonder why the others are here.", "Quest1Chat_3")
@@ -97,7 +97,7 @@ end
 
 function Quest1Chat_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "brogan_maclellan/halas/new_halas_guard_house/brogan_maclellan007.mp3", "", "", 1338892240, 118117761, Spawn)
 	AddConversationOption(conversation, "It might be worth looking into people's motivations.", "Quest1Chat_3")
@@ -107,7 +107,7 @@ end
 
 function Quest1Chat_7(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "brogan_maclellan/halas/new_halas_guard_house/brogan_maclellan008.mp3", "", "", 618404562, 3809310014, Spawn)
 	AddConversationOption(conversation, "And it's comfortable, to boot!", "Quest1Chat_8")
@@ -118,8 +118,8 @@ end
 
 function Quest1Chat_8(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
-	
+	local conversation = CreateConversation()
+
 	AddConversationOption(conversation, "Glad you liked it.", "Quest1Chat_3")
 	AddConversationOption(conversation, "I'm too busy chuckling to go on.  Let me catch my breath.")
 	StartConversation(conversation, NPC, Spawn, "If words were weapons, that pun would have slain me where I stood.")
@@ -128,7 +128,7 @@ end
 function Quest1Chat_9(NPC, Spawn)
 	SetStepComplete(Spawn, TrustIssues, 5)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "I'm not sure that can be helped.", "Quest2Chat_1")
 	AddConversationOption(conversation, "You have real trust issues, MacLellan.", "Quest2Chat_1")
@@ -138,8 +138,8 @@ end
 
 function Quest2Chat_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
-	
+	local conversation = CreateConversation()
+
 	AddConversationOption(conversation, "Is there anything else I can do for you?", "Quest2Chat_2")
 	AddConversationOption(conversation, "I'm glad I could.  Good day, Brogan.")
 	StartConversation(conversation, NPC, Spawn, "I may be reluctant to trust the others here, but you've proven yourself to me.")
@@ -147,8 +147,8 @@ end
 
 function Quest2Chat_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
-	
+	local conversation = CreateConversation()
+
 	AddConversationOption(conversation, "Sure.", "Quest2Chat_5")
 	AddConversationOption(conversation, "I hadn't thought of it.", "Quest2Chat_4")
 	AddConversationOption(conversation, "No.  Not yet.", "Quest2Chat_3")
@@ -162,8 +162,8 @@ end
 
 function Quest2Chat_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
-	
+	local conversation = CreateConversation()
+
 	AddConversationOption(conversation, "More coin would be useful.", "Quest2Chat_5")
 	AddConversationOption(conversation, "That's true.", "Quest2Chat_3")
 	StartConversation(conversation, NPC, Spawn, "Well, when you need more coin you will.")
@@ -171,8 +171,8 @@ end
 
 function Quest2Chat_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
-	
+	local conversation = CreateConversation()
+
 	AddConversationOption(conversation, "I can do that.", "OfferTrustedReferral")
 	AddConversationOption(conversation, "Where's that?", "Quest2Chat_6")
 	AddConversationOption(conversation, "I have no plans to travel to Butcherblock.")
@@ -181,8 +181,8 @@ end
 
 function Quest2Chat_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
-	
+	local conversation = CreateConversation()
+
 	AddConversationOption(conversation, "I can do that.", "OfferTrustedReferral")
 	AddConversationOption(conversation, "I have no plans to travel to Butcherblock.")
 	StartConversation(conversation, NPC, Spawn, "Butcherblock Mountains is on the continent of Faydwer.  You can travel there by taking the griffon down at the Erollis docks.")

@@ -13,7 +13,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-    spawn(NPC)
+SpawnMob(NPC)
 end
 
 function casted_on(NPC, Spawn, SpellName)
@@ -21,9 +21,9 @@ function casted_on(NPC, Spawn, SpellName)
 	    if HasQuest(Spawn, NoUndeadGoesUnturned) and not HasItem(Spawn, 14386) then
 			SummonItem(Spawn, 14386)
 			if GetQuestStep(Spawn, NoUndeadGoesUnturned) == 1 then
-		    SetStepComplete(Caster, NoUndeadGoesUnturned, 1)
+		    SetStepComplete(Spawn, NoUndeadGoesUnturned, 1)
 			end
 		end
-		
+
 	end
 end

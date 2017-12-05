@@ -3,7 +3,7 @@
 	Script Purpose	: for the spawn "an ice lily"
 	Script Author	: theFoof
 	Script Date	: 2013.05.21
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 local FieldTesting = 23
@@ -15,7 +15,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-    spawn(NPC)
+SpawnMob(NPC)
 end
 
 function SpawnAccess(NPC, Spawn)

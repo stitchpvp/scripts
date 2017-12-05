@@ -3,7 +3,7 @@
 	Script Purpose	:	the quest Highly Flammable Materials
 	Script Author	:	theFoof
 	Script Date		:	2013.6.20
-	Script Notes	:	
+	Script Notes	:
 
 	Zone			:	Frostfang Sea
 	Quest Giver		:   Odon Scourgeson
@@ -19,7 +19,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(QuestGiver, "odon_scourgeson/halas/cragged_spine/odon_scourgeson_016.mp3", "", "", 1474162446, 1230111187, Player)
 	AddConversationOption(conversation, "Gladly!")

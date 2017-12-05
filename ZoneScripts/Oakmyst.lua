@@ -3,7 +3,7 @@
 	Script Purpose	: Zone script for Oakmyst Forest
 	Script Author	: Scatman
 	Script Date	: 2009.10.02
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 local QUEST_FROM_CHARLIN_4 = 207
@@ -15,7 +15,7 @@ function init_zone_script(Zone)
 	SetLocationProximityFunction(Zone, 906.62, 3.33, -209.46, 50, "InRangeAdalinTree1")
 	SetLocationProximityFunction(Zone, 934.61, 8.11, -195.52, 50, "InRangeAdalinTree2")
 	SetLocationProximityFunction(Zone, 921.71, 3.93, -357.12, 50, "InRangeAdalinTree3")
-	SetLocationProximityFunction(Zone, x, y, z, 20, "InRangeRotweed")
+	-- SetLocationProximityFunction(Zone, x, y, z, 20, "InRangeRotweed")
 end
 
 function InRange(Zone, Spawn)

@@ -18,7 +18,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(QuestGiver, "olga_macleod/halas/new_halas/olga_macleod/olga_macleod_006.mp3", "", "", 1415155134, 885074882, Player)
 	AddConversationOption(conversation, "I shall be back with the parsley and pincers!")

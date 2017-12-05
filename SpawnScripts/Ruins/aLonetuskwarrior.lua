@@ -3,7 +3,7 @@
 	Script Purpose	: a Lonetusk warrior
 	Script Author	: Scatman
 	Script Date	: 2009.08.21
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 dofile("SpawnScripts/Ruins/LonetuskVoiceOvers.lua")
@@ -12,7 +12,7 @@ local spoke = false
 function spawn(NPC)
 	spoke = false
 	local sli = GetSpawnLocationID(NPC)
-	
+
 	if sli == 159756 then
 		StartPath1(NPC)
 	elseif sli == 159757 then
@@ -21,7 +21,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)

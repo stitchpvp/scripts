@@ -1,6 +1,6 @@
 --[[
 	Script Name	: SpawnScripts/ForestRuins/Dockins.lua
-	Script Purpose	: Dockins 
+	Script Purpose	: Dockins
 	Script Author	: John Adams
 	Script Date	: 2008.09.19
 	Script Notes	: Auto-Generated Conversation from PacketParser Data

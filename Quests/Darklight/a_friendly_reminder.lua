@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "A Friendly Reminder"
 	Script Author	: Scatman
 	Script Date	: 2009.02.03
-	
+
 	Zone       : Darklight Wood
 	Quest Giver: Laexyra Y'Barriath
 	Preceded by: Public Service (public_service.lua)
@@ -21,7 +21,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(QuestGiver, "voiceover/english/neriak/laexyra_y_barriath/darklight_wood/tvatar_post/laexyra/laexyra014.mp3", "", "", 1254557945, 2860942006, Player)
 	AddConversationOption(conversation, "I'll see.")
@@ -33,14 +33,14 @@ end
 
 function step1_complete_talkedToHarnen(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 1, "Harnen Taptha has attacked me, I must kill him.")
-	
+
 	AddQuestStepKill(Quest, 2, "I must killed Hernen Taptha.", 1, 100, ".", 611, 340127)
 	AddQuestStepCompleteAction(Quest, 2, "step2_complete_killedHarnen")
 end
 
 function step2_complete_killedHarnen(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 2, "I have killed Harnen Taptha.")
-	
+
 	AddQuestStepChat(Quest, 3, "I need to return to Laexyra Y'Barriath.", 1, ".", 0, 340109)
 	AddQuestStepCompleteAction(Quest, 3, "quest_complete")
 end

@@ -3,7 +3,7 @@
 	Script Purpose	: Trainer Levka Foeblade <Recognizing Opportunities>
 	Script Author	: theFoof
 	Script Date	: 2013.05.21
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 function spawn(NPC)
@@ -11,7 +11,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)
@@ -26,17 +26,17 @@ end
 
 function first_chat(NPC, Spawn)
     FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_2_1001.mp3", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "What are Heroic Opportunities?", "opp_chat_1")
 	AddConversationOption(conversation, "I will seek your knowledge another time.")
 	StartConversation(conversation, NPC, Spawn, "I look at you and see someone eager to defend Neriak by facing fierce opponents in battle. Well, I can teach you about Heroic Opportunities, a way for you and your allies to accomplish great feats of combat prowess.")
-end	
+end
 
 function opp_chat_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Are Heroic Opportunities complicated?", "opp_chat_2")
@@ -46,7 +46,7 @@ end
 
 function opp_chat_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "So how does a Heroic Opportunity arise?", "opp_chat_3")
@@ -55,7 +55,7 @@ end
 
 function opp_chat_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Okay, that does sound easy. How do I begin a Heroic Opportunity?", "opp_chat_4")
@@ -65,7 +65,7 @@ end
 
 function opp_chat_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Can I trigger a Starter Chain whenever I want?", "opp_chat_5")
@@ -75,7 +75,7 @@ end
 
 function opp_chat_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "What happens when I trigger a Starter Chain?", "opp_chat_7")
@@ -84,7 +84,7 @@ end
 
 function opp_chat_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Are Heroic Opportunities only usable in groups?", "opp_chat_7")
@@ -94,7 +94,7 @@ end
 
 function opp_chat_7(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Use the spell or art that is blinking. That's all there is to it?", "opp_chat_8")
@@ -104,7 +104,7 @@ end
 
 function opp_chat_8(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Why does it trigger one of three?", "opp_chat_9")
@@ -113,7 +113,7 @@ end
 
 function opp_chat_9(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "What does the Combat Wheel tell me?", "opp_chat_10")
@@ -123,7 +123,7 @@ end
 
 function opp_chat_10(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "How can I tell the difference?", "opp_chat_11")
@@ -132,7 +132,7 @@ end
 
 function opp_chat_11(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "How long do I have to complete the Heroic Opportunity?", "opp_chat_12")
@@ -142,7 +142,7 @@ end
 
 function opp_chat_12(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "That sounds easy!", "opp_chat_13")
@@ -151,7 +151,7 @@ end
 
 function opp_chat_13(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Any other tricks I should know?", "opp_chat_14")
@@ -161,7 +161,7 @@ end
 
 function opp_chat_14(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Thank you for the information. I'll try Heroic Opportunities as soon as I can!")

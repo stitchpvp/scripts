@@ -7,7 +7,7 @@ end
 function Step1Complete(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 1, "I have collected the beetle shells.")
 
-	AddQuestStepKill(Quest, 2, "I need to bring these beetle shells to Gerun", 1, 100, "I need to collect the beetle shells for Gerun.", 11, --[[ ID's --]])
+	AddQuestStepKill(Quest, 2, "I need to bring these beetle shells to Gerun", 1, 100, "I need to collect the beetle shells for Gerun.", 11, nil)
 	AddQuestStepCompleteAction(Quest, 2, "QuestComplete")
 end
 

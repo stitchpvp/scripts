@@ -3,11 +3,11 @@
 	Script Purpose	: Handles the quest, "High Shaman of the Rockpaw"
 	Script Author	: Scatman
 	Script Date	: 2009.10.18
-	
+
 	Zone       : The Caves
 	Quest Giver: Consul Bree
 	Preceded by: Elements of a Ritual (elements_of_a_ritual.lua)
-	Followed by: 
+	Followed by:
 --]]
 
 
@@ -18,13 +18,13 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
-	
+	local conversation = CreateConversation()
+
 	-- summoning staff
 	if not HasItem(Player, 11850) then
 		SummonItem(Player, 11850, 1)
 	end
-	
+
 	PlayFlavor(QuestGiver, "voiceover/english/tutorial_revamp/consul_bree/qey_adv03_caves/quests/bree/bree_015a.mp3", "", "", 3288361383, 1793249646, Player)
 	AddConversationOption(conversation, "I understand.")
 	StartConversation(conversation, QuestGiver, Player, "And be careful. Zen'Durath will not be pleased to see you.")
@@ -48,7 +48,7 @@ function QuestComplete(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 2, "I have spoken with Consul Bree.")
 	UpdateQuestTaskGroupDescription(Quest, 1, "I have slain Zen'Durath.")
 	UpdateQuestDescription(Quest, "I have slain Zen'Durath.")
-	
+
 	local Emma = GetSpawn(Player, 1970012)
 	local Delsun = GetSpawn(Player, 1970011)
 	if Emma ~= nil then
@@ -57,7 +57,7 @@ function QuestComplete(Quest, QuestGiver, Player)
 	if Delsun ~= nil then
 		PlayFlavor(Delsun, "voiceover/english/tutorial_revamp/lieutenant_delsun/qey_adv03_caves/qst_delsun_quest_series_done_4827769e.mp3", "You make Qeynos proud, soldier.", "salute", 523058466, 3752111752, Player)
 	end
-	
+
 	GiveQuestReward(Quest, Player)
 end
 

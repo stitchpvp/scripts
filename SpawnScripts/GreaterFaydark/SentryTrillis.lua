@@ -1,6 +1,6 @@
 --[[
 	Script Name	: SpawnScripts/GreaterFaydark/SentryTrillis.lua
-	Script Purpose	: Sentry Trillis 
+	Script Purpose	: Sentry Trillis
 	Script Author	: John Adams
 	Script Date	: 2009.02.05
 	Script Notes	: Auto-Generated Conversation from PacketParser Data
@@ -12,7 +12,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-    Spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)

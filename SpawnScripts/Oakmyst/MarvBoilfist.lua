@@ -3,7 +3,7 @@
 	Script Purpose	: Marv Boilfist
 	Script Author	: Scatman
 	Script Date	: 2009.10.07
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 local DWARF = 2
@@ -17,13 +17,13 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
-	
+	local conversation = CreateConversation()
+
 	if HasQuest(Spawn, DWARF_MENTOR_QUEST_FROM_MAV) then
 		SetStepComplete(Spawn, DWARF_MENTOR_QUEST_FROM_MAV, 1)
 		AddConversationOption(conversation, "Mav sent me to check up on you.", "Mav")
 	end
- 
+
 	if HasCompletedQuest(Spawn, QUEST_1) then
 		if HasCompletedQuest(Spawn, QUEST_LAST_IN_OAKMYST) then
 			Say(NPC, "I heard ya created quite a stir, good job to you.", Spawn)
@@ -42,7 +42,7 @@ function hailed(NPC, Spawn)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function NotDwarf(NPC, Spawn)
@@ -62,7 +62,7 @@ end
 
 function Mav(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	if not HasQuest(Spawn, QUEST_1) and not HasCompletedQuest(Spawn, QUEST_1) then
 		AddConversationOption(conversation, "Sure I can help.", "ICanHelp")
@@ -85,7 +85,7 @@ end
 
 function WrongToday(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "Sure I can help.", "ICanHelp")
 	AddConversationOption(conversation, "Not right now.")
@@ -95,7 +95,7 @@ end
 
 function ICanHelp(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "What can I do to help?", "WhatCanIDo")
 	StartConversation(conversation, NPC, Spawn, "That's the first good news I've had all day. I've been waitin' here for word from the courier who dropped off these barrels. He first brought me the wonderful news that my shipment had been dumped in the water here in Oakmyst. So he brought me a partial shipment, a lotta good that does me. He takes off without a second thought, I told him to get someone to come help me but I don't think he remembered. So I'm sittin' here, can't move this shipment without the rest of it, unless I wanna waste a lot of moving fees. And I can't leave this shipment here unless I wanna risk it gettin' stolen.")
@@ -103,7 +103,7 @@ end
 
 function WhatCanIDo(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "I can do that.", "OfferQuest1")
 	StartConversation(conversation, NPC, Spawn, "You can get the rest of the shipment for me. It's in the drink right now. If you head west you'll get to the docks. Once you're there hop on in and start pulling up the shipment. Once you've collected it you can bring it back to me.")
@@ -129,7 +129,7 @@ end
 
 function YesIDid(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "I should take it back.", "ShouldTakeItBack")
 	StartConversation(conversation, NPC, Spawn, "Ah, great! Thank you so much- er, wait a minute. This is my shipment but looks like you snagged part of someone else's shipment too.")
@@ -137,14 +137,14 @@ end
 
 function ShouldTakeItBack(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_1, 2)
-	
+
 	-- blackburrow stout
 	if not HasItem(Spawn, 3774) then
 		SummonItem(Spawn, 3774, 1)
 	end
-	
+
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "Thanks and you're welcome.")
 	StartConversation(conversation, NPC, Spawn, "Not so fast. This is Blackburrow Stout, which is more than a little odd. You don't need to take this back to the docks, you should take it to the Qeynos Guard. Speak with Lieutenant Charlin, he'll let you know what to do next. Good find, " .. GetName(Spawn) .. "! And thanks for gettin' my shipment.")

@@ -1,9 +1,9 @@
 --[[
 	Script Name	: SpawnScripts/SunkenCity/ManiusGalla.lua
-	Script Purpose	: Manius Galla 
+	Script Purpose	: Manius Galla
 	Script Author	: scatman
 	Script Date	: 2009.08.01
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 local QUEST_1 = 278
@@ -13,14 +13,14 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	RandomVoiceOver(NPC, Spawn)
-	
+
 	if not HasCompletedQuest(Spawn, QUEST_1) then
 		if HasQuest(Spawn, QUEST_1) then
 			if GetQuestStep(Spawn, QUEST_1) == 6 then
@@ -47,7 +47,7 @@ end
 
 function dlg_9_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "Why don't you give me a test?", "dlg_9_2")
 	AddConversationOption(conversation, "I don't need to take this from you. Good bye.")
@@ -56,7 +56,7 @@ end
 
 function dlg_9_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "Okay, I'll be back when they're dead.", "dlg_9_3")
 	StartConversation(conversation, NPC, Spawn, "A test, huh? Yeah ... hey, boys ... let's give this runt a bit of a test. Okay, here's your test: Go deeper in this place and find some of the lackeys who hang around the raiders. Kill some of them and maybe you can work for us.")
@@ -64,7 +64,7 @@ end
 
 function dlg_9_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "Don't worry about it.", "dlg_9_4")
 	StartConversation(conversation, NPC, Spawn, "Don't even bother coming back if they ain't!")
@@ -72,9 +72,9 @@ end
 
 function dlg_17_1(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_1, 6)
-	
+
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "I'll check back.")
 	StartConversation(conversation, NPC, Spawn, "Crispin already heard. Hpmh ... You got lucky, I guess. Either way, those Raiders won't bother our clients in the Court anymore. I don't know if I should let you join our gang ... let me think about it.")

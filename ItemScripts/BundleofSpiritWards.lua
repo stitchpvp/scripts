@@ -3,7 +3,7 @@
 	Script Purpose	:	for the quest item "Bundle of Spirits"
 	Script Author	:	theFoof
 	Script Date		:	2013.5.28
-	Script Notes	:	
+	Script Notes	:
 --]]
 
 local CallingBack = 35
@@ -27,7 +27,7 @@ function used(Item, Player)
 				SetStepComplete(Player, CallingBack, 3)
 		    elseif X >= 576 and X <= 586 and Z >= -217 and Z <= -207 then
 				SetStepComplete(Player, CallingBack, 5)
-		    else 
+		    else
 				SendMessage(Player, "You cannot place a ward here.", "yellow")
 			end
 		end

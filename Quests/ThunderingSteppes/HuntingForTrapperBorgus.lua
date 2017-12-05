@@ -2,12 +2,12 @@
     Script Name    : Quests/ThunderingSteppes/HuntingForTrapperBorgus.lua
     Script Author  : Jabantiz
     Script Date    : 2014.07.03 08:07:38
-    Script Purpose : 
+    Script Purpose :
 
         Zone       : ThunderingSteppes
-        Quest Giver: 
+        Quest Giver:
         Preceded by: None
-        Followed by: 
+        Followed by:
 --]]
 
 local beetles = 1
@@ -35,7 +35,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	if GetTempVariable(Player, "RepeatHuntingForTrapperBorgus") == "true" then
 		-- agree to do it again after turn in
@@ -47,15 +47,15 @@ function Accepted(Quest, QuestGiver, Player)
 		AddConversationOption(conversation, "I'm ready to hunt.")
 		StartConversation(conversation, QuestGiver, Player, "I thank yeh, and me back thanks yeh!  I just need several of each kind o' Steppes beasts that wander in these parts, they should provide enough food for the coming months!  Slay them n' bring their bodies to me.")
 	end
-	
+
 	SetTempVariable(Player, "RepeatHuntingForTrapperBorgus", nil)
-	
+
 	if GetQuestFlags(Quest) == 0 then
 		-- needs to be in accept to make it random per person
 		local mob_type = math.random(1, 4) -- what to kill
 		local quantity = math.random(8, 12)
 		local flags = 0
-		
+
 		if mob_type == 1 then -- Beetles
 			flags = beetles
 		elseif mob_type == 2 then -- Crabs
@@ -65,7 +65,7 @@ function Accepted(Quest, QuestGiver, Player)
 		elseif mob_type == 4 then -- Snakes
 			flags = snakes
 		end
-		
+
 		if quantity == 8 then
 			flags = flags + kill8
 		elseif quantity == 9 then
@@ -77,7 +77,7 @@ function Accepted(Quest, QuestGiver, Player)
 		elseif quantity == 12 then
 			flags = flags + kill12
 		end
-		
+
 		SetQuestFlags(Quest, flags)
 		SetStep(Quest, Player, mob_type, quantity)
 	else -- need the else for /reload quest
@@ -92,7 +92,7 @@ end
 function CheckBitMask(Quest, Player, Flags)
 	local mob_type = 0
 	local quantity = 0
-	
+
 	if hasflag(Flags, beetles) then
 		mob_type = 1
 	elseif hasflag(Flags, crabs) then
@@ -102,7 +102,7 @@ function CheckBitMask(Quest, Player, Flags)
 	elseif hasflag(Flags, snakes) then
 		mob_type = 4
 	end
-	
+
 	if hasflag(Flags, kill8) then
 		quantity = 8
 	elseif hasflag(Flags, kill9) then
@@ -114,7 +114,7 @@ function CheckBitMask(Quest, Player, Flags)
 	elseif hasflag(Flags, kill12) then
 		quantity = 12
 	end
-	
+
 	SetStep(Quest, Player, mob_type, quantity)
 end
 
@@ -136,7 +136,7 @@ function SetStep(Quest, Player, mob, quantity)
 	else
 		AddQuestStepKill(Quest, 1, "Hunt snakes in the Thundering Steppes.", quantity, 100, "I'm supposed to help Trapper Borgus get the provisions his family requires, I should get them back to him as soon as I am done.", 0, 2490181, 2490110)
 	end
-	
+
 	AddQuestStepCompleteAction(Quest, 1, "FinishedKilling")
 end
 

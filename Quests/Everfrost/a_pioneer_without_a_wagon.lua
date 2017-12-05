@@ -2,7 +2,7 @@
     Script Name    : Quests/Everfrost/a_pioneer_without_a_wagon.lua
     Script Author  : Flunklesnarkin
     Script Date    : 2016.02.07 14:18:25
-    Script Purpose : 
+    Script Purpose :
 
         Zone       : Everfrost
         Quest Giver: Li Ning Ventur

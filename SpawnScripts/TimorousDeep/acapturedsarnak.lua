@@ -1,6 +1,6 @@
 --[[
 	Script Name	: SpawnScripts/TimorousDeep/acapturedsarnak.lua
-	Script Purpose	: a captured sarnak 
+	Script Purpose	: a captured sarnak
 	Script Author	: John Adams
 	Script Date	: 2009.03.07
 	Script Notes	: Auto-Generated Conversation from PacketParser Data
@@ -12,12 +12,12 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	
+
 	if HasQuest(Spawn, QUEST_PRISON_BREAK) and GetQuestStep(Spawn, QUEST_PRISON_BREAK) == 1 then
 		if NoSentriesAreClose(NPC) then
 			conversation = CreateConversation()

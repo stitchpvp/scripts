@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "On the Move"
 	Script Author	: Scatman
 	Script Date	: 2009.05.10
-	
+
 	Zone       : The Peat Bog
 	Quest Giver: Lieutenant Dawson
 	Preceded by: Ambushed (ambushed.lua)
@@ -25,8 +25,8 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
-	
+	local conversation = CreateConversation()
+
 	PlayFlavor(QuestGiver, "voiceover/english/tutorial_revamp/lieutenant_dawson/qey_adv04_bog/quests/dawson/dawson011a.mp3", "", "", 3239354610, 1196418998, Player)
 	AddConversationOption(conversation, "You're welcome, and thank you.")
 	StartConversation(conversation, QuestGiver, Player, "Thank you for your help, be safe.")
@@ -53,7 +53,7 @@ end
 
 function Step3_Complete_Machine3(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 3, "The third machine has been destroyed.")
-	
+
 	if QuestIsComplete(Player, 218) then
 		Multiple_Steps_Complete(Quest, QuestGiver, Player)
 	end
@@ -62,7 +62,7 @@ end
 function Multiple_Steps_Complete(Quest, QuestGiver, Player)
 	UpdateQuestTaskGroupDescription(Quest, 1, "I have killed the gnolls moving the machines.")
 
-	AddQuestStepChat(Quest, 4, "I need to return to Lieutenant Dawson.", 1, "Now that the gnolls guarding the machines have been killed I should return to Lieutenant Dawson.", 0, 1980022) 
+	AddQuestStepChat(Quest, 4, "I need to return to Lieutenant Dawson.", 1, "Now that the gnolls guarding the machines have been killed I should return to Lieutenant Dawson.", 0, 1980022)
 	AddQuestStepCompleteAction(Quest, 4, "QuestComplete")
 end
 

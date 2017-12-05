@@ -2,7 +2,7 @@
     Script Name    : Quests/ThunderingSteppes/TheWanderersThreeMeaningsOfLife.lua
     Script Author  : Jabantiz
     Script Date    : 2014.07.11 07:07:40
-    Script Purpose : 
+    Script Purpose :
 
         Zone       : ThunderingSteppes
         Quest Giver: The Wandering Augur (2490318)
@@ -22,7 +22,7 @@ local STEP5_LASTSTAND = 64
 local STEP5_DECAY = 128
 
 function Init(Quest)
-	
+
 end
 
 function Step1Complete(Quest, QuestGiver, Player)
@@ -34,7 +34,7 @@ function Step1Complete(Quest, QuestGiver, Player)
 	elseif hasflag(Flags, STEP1_GORGERS) then
 		UpdateQuestStepDescription(Quest, 1, "I've slain a carrion gorger.")
 	end
-	
+
 	AddQuestStepChat(Quest, 2, "I must speak with the Wandering Augur.", 1, "The Wandering Augur is teaching me three meanings of life.", 11, 2490318)
 	AddQuestStepCompleteAction(Quest, 2, "Step2Complete")
 end
@@ -47,7 +47,7 @@ function Step2Complete(Quest, QuestGiver, Player)
 	elseif step3 == 2 then
 		Flags = Flags + STEP3_SIRENS
 	end
-	
+
 	SetStep3Description(Quest, step3)
 	SetQuestFlags(Quest, Flags)
 end
@@ -70,7 +70,7 @@ function CheckStep3Bitmask(Quest)
 	elseif hasflag(Flags, STEP3_SIRENS) then
 		step3 = 2
 	end
-	
+
 	SetStep3Description(Quest, step3)
 end
 
@@ -81,7 +81,7 @@ function Step3Complete(Quest, QuestGiver, Player)
 	elseif hasflag(Flags, STEP3_SIRENS) then
 		UpdateQuestStepDescription(Quest, 3, "I've slain some irresistible sirens.")
 	end
-	
+
 	AddQuestStepChat(Quest, 4, "I must speak with the Wandering Augur.", 1, "The Wandering Augur is teaching me three meanings of life.", 11, 2490318)
 	AddQuestStepCompleteAction(Quest, 4, "Step4Complete")
 end
@@ -96,14 +96,14 @@ function Step4Complete(Quest, QuestGiver, Player)
 	elseif step5 == 3 then
 		Flags = Flags + STEP5_DECAY
 	end
-	
+
 	SetStep5Description(Quest, step5)
 	SetQuestFlags(Quest, Flags)
 end
 
 function SetStep5Description(Quest, step5)
 	UpdateQuestStepDescription(Quest, 4, "I've spoken with the Wandering Augur.")
-	
+
 	if step5 == 1 then
 		AddQuestStepLocation(Quest, 5, "I've seen the Coldwind Shores Cemetery.", 20, "The Wandering Augur is teaching me three meanings of life.", 11, 1317, -6, -80)
 	elseif step5 == 2 then
@@ -111,7 +111,7 @@ function SetStep5Description(Quest, step5)
 	elseif step5 == 3 then
 		AddQuestStepLocation(Quest, 5, "I've located the Shrine of Decay.", 20, "The Wandering Augur is teaching me three meanings of life.", 11, 357, 5, 1189)
 	end
-	
+
 	AddQuestStepCompleteAction(Quest, 5, "Step5Complete")
 end
 
@@ -125,7 +125,7 @@ function CheckStep5Bitmask(Quest)
 	elseif hasflag(Flags, STEP5_DECAY) then
 		step5 = 3
 	end
-	
+
 	SetStep5Description(Quest, step5)
 end
 
@@ -138,7 +138,7 @@ function Step5Complete(Quest, QuestGiver, Player)
 	elseif hasflag(Flags, STEP5_DECAY) then
 		UpdateQuestStepDescription(Quest, 5, "I've located the Shrine of Decay.")
 	end
-	
+
 	AddQuestStepChat(Quest, 6, "I must speak with the Wandering Augur.", 1, "The Wandering Augur is teaching me three meanings of life.", 11, 2490318)
 	AddQuestStepCompleteAction(Quest, 6, "Step6Complete")
 end
@@ -149,12 +149,12 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(QuestGiver, "voiceover/english/the_wandering_augur/steppes/quests/quest_wandering_augur/wandering_augur003.mp3", "", "", 430514653, 1419831869, Player)
 	AddConversationOption(conversation, "Well, okay.")
 	StartConversation(conversation, QuestGiver, Player, "Splendid!  There are three meanings to which I can lead you, my child.  What you take from them is your choice; I am but the augur.  The first meaning is physical.  Without a corporeal body, how can we experience life?  Go, then, and seek the physicality of life as I have written down for you.  Return to me when you are ready for the next meaning.")
-	
+
 	local Flags = GetQuestFlags(Quest)
 	if Flags == 0 then
 		local step1 = math.random(1, 3)
@@ -165,10 +165,10 @@ function Accepted(Quest, QuestGiver, Player)
 		elseif step1 == 3 then
 			Flags = Flags + STEP1_GORGERS
 		end
-		
+
 		SetStep1Description(Quest, step1)
 		SetQuestFlags(Quest, Flags)
-	else	
+	else
 		CheckStep1Bitmask(Quest)
 	end
 end
@@ -181,7 +181,7 @@ function SetStep1Description(Quest, step1)
 	elseif step1 == 3 then
 		AddQuestStepKill(Quest, 1, "Learn the physical meaning of life by hunting carrion gorgers in the Thundering Steppes.", 3, 100, "The Wandering Augur is teaching me three meanings of life.", 98, 2490118)
 	end
-	
+
 	AddQuestStepCompleteAction(Quest, 1, "Step1Complete")
 end
 
@@ -195,7 +195,7 @@ function CheckStep1Bitmask(Quest)
 	elseif hasflag(Flags, STEP1_GORGERS) then
 		step1 = 3
 	end
-	
+
 	SetStep1Description(Quest, step1)
 end
 

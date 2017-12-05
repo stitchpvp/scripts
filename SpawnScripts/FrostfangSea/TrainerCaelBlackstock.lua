@@ -3,7 +3,7 @@
 	Script Purpose	: Trainer Cael Blackstock <Know Your Inventory and Equipment>
 	Script Author	: theFoof
 	Script Date	: 2013.05.21
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 function spawn(NPC)
@@ -11,7 +11,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)
@@ -37,7 +37,7 @@ end
 
 function equip_chat_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "What can I do with the treasures I earn while adventuring?", "equip_chat_2")
@@ -46,7 +46,7 @@ end
 
 function equip_chat_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "What does the item information tell me?", "equip_chat_3")
@@ -56,7 +56,7 @@ end
 
 function equip_chat_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Are things like attribute bonuses important?", "equip_chat_4")
@@ -66,7 +66,7 @@ end
 
 function equip_chat_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "How can I tell which of two weapons is better?", "equip_chat_5")
@@ -76,7 +76,7 @@ end
 
 function equip_chat_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "How can I tell which of two pieces of armor is better?", "equip_chat_6")
@@ -86,7 +86,7 @@ end
 
 function equip_chat_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "What about scouts and priests?", "equip_chat_7")
@@ -96,7 +96,7 @@ end
 
 function equip_chat_7(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "What about scouts and priests?", "equip_chat_8")
@@ -106,7 +106,7 @@ end
 
 function equip_chat_8(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Why are some items marked 'No Value' or 'No Trade'?", "equip_chat_9")
@@ -116,8 +116,8 @@ end
 
 function equip_chat_9(NPC, Spawn)
     FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
-	
+	local conversation = CreateConversation()
+
 	AddConversationOption(conversation, 'What does it mean when an item says it is "Attuneable"?', "equip_chat_10")
 	AddConversationOption(conversation, "I will return to instruction later.")
 	StartConversation(conversation, NPC, Spawn, 'Some items are marked "No Value" because they are easy to obtain, such as harvested goods. You have to work to earn wealth,' .. GetName(Spawn) .. '! Items are marked "No Trade" in order to ensure that you earn them yourself, such as defeating a very tough monster or completing a long quest.')
@@ -125,7 +125,7 @@ end
 
 function equip_chat_10(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "How do I manage my inventory?", "inv_chat_1")
@@ -134,7 +134,7 @@ end
 
 function inv_chat_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Can I put bags inside of bags?", "inv_chat_2")
@@ -144,7 +144,7 @@ end
 
 function inv_chat_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "So one item takes up one bag slot?", "inv_chat_3")
@@ -154,7 +154,7 @@ end
 
 function inv_chat_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "So one item takes up one bag slot?", "inv_chat_4")
@@ -164,7 +164,7 @@ end
 
 function inv_chat_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "I'll be back if I need to refresh my memory on this.")

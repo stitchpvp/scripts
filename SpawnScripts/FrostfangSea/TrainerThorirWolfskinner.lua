@@ -3,7 +3,7 @@
 	Script Purpose	: Trainer Thorir Wolfskinner <Know Your Enemy>
 	Script Author	: theFoof
 	Script Date	: 2013.05.17
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 function spawn(NPC)
@@ -11,7 +11,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)
@@ -22,8 +22,8 @@ end
 
 function hailed(NPC, Spawn)
     FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
-	
+	local conversation = CreateConversation()
+
 	PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_3_1060.mp3", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "How do I judge my opponent?", "dlg_1_2")
 	AddConversationOption(conversation, "I'll return later.")
@@ -31,11 +31,8 @@ function hailed(NPC, Spawn)
 end
 
 function dlg_1_2(NPC, Spawn)
-    FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
-	
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "What does the creature's name tell me?", "dlg_1_3")
@@ -44,7 +41,7 @@ end
 
 function dlg_1_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "How do I target an opponent?", "dlg_1_4")
@@ -54,7 +51,7 @@ end
 
 function dlg_1_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Why are separate creatures sometimes linked?", "dlg_1_5")
@@ -64,7 +61,7 @@ end
 
 function dlg_1_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "What does the Target window tell me?", "dlg_1_6")
@@ -73,7 +70,7 @@ end
 
 function dlg_1_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "What does the level indicate?", "dlg_1_7")
@@ -83,7 +80,7 @@ end
 
 function dlg_1_7(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "How does my opponent's level affect my rewards for victory?", "dlg_1_8")
@@ -93,7 +90,7 @@ end
 
 function dlg_1_8(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "What does the color of my opponent's name tell me?", "dlg_1_9")
@@ -103,15 +100,15 @@ end
 
 function dlg_1_9(NPC, Spawn)
     FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
-	
+	local conversation = CreateConversation()
+
 	AddConversationOption(conversation, "What are the colors?", "dlg_1_10")
     StartConversation(conversation, NPC, Spawn, "The color of your opponent's name indicates how challenging the encounter is. It is very useful as a quick indicator of whether or not you should be fighting a target. The more danger it's color indicates, the greater the threat it represents.")
 end
 
 function dlg_1_10(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Will grey targets ever attack me?", "dlg_1_11")
@@ -121,7 +118,7 @@ end
 
 function dlg_1_11(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "What do down arrows tell me?", "dlg_1_12")
@@ -131,7 +128,7 @@ end
 
 function dlg_1_12(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "What do up arrows mean?", "dlg_1_13")
@@ -141,7 +138,7 @@ end
 
 function dlg_1_13(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "So how do I know whether I can face a challenge alone?", "dlg_1_14")
@@ -151,7 +148,7 @@ end
 
 function dlg_1_14(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "What is the difference between normal, heroic, and epic?", "dlg_1_15")
@@ -161,7 +158,7 @@ end
 
 function dlg_1_15(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "So how do all these elements work together to show an opponent's difficulty?", "dlg_1_16")
@@ -171,7 +168,7 @@ end
 
 function dlg_1_16(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Thank you, instructor.")

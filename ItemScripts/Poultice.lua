@@ -3,7 +3,7 @@
 	Script Purpose	:	for the item "Poultice"
 	Script Author	:	theFoof
 	Script Date		:	2013.6.3
-	Script Notes	:	
+	Script Notes	:
 --]]
 
 local DisarmingRyGorr = 48

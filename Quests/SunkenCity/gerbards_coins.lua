@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "Gerbard's Necklace
 	Script Author	: Scatman
 	Script Date	    : 2009.08.01
-	
+
 	Zone       : Sunken City
 	Quest Giver: Gerbard the Snitch
 	Preceded by: None
@@ -17,7 +17,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(QuestGiver, "voiceover/english/gerbard_the_snitch/fprt_adv01_sunken/gerbard_the_snitch002.mp3", "", "", 4172245160, 2238267271, Player)
 	AddConversationOption(conversation, "Thanks, I'll search out some pirate coins.")

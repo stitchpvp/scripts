@@ -1,6 +1,6 @@
 --[[
 	Script Name	: SpawnScripts/QueensColony/Waulon.lua
-	Script Purpose	: Waulon 
+	Script Purpose	: Waulon
 	Script Author	: John Adams
 	Script Date	: 2008.09.21
 	Script Notes	: Auto-Generated Conversation from PacketParser Data

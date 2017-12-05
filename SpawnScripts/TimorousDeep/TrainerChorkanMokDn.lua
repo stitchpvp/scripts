@@ -10,12 +10,12 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	choice = math.random(1, 3)
 	if choice == 1 then
@@ -25,7 +25,7 @@ function hailed(NPC, Spawn)
 	elseif choice == 3 then
 		PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_3_1004.mp3", "", "beckon", 0, 0, Spawn)
 	end
-	
+
 	AddConversationOption(conversation, "Tell me about items and equipment.", "dlg_15_1")
 	AddConversationOption(conversation, "Tell me about my inventory.", "dlg_15_11")
 	AddConversationOption(conversation, "I will return for instruction later.")
@@ -34,7 +34,7 @@ end
 
 function dlg_15_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "What can I do with the treasures I earn while adventuring?", "dlg_15_2")
 	StartConversation(conversation, NPC, Spawn, "Norrath is full of treasures for brave heroes like you. Sometimes the opponents you defeat in battle leave behind treasure chests with valuable loot. You can also buy items from other players, craft them as an artisan, or be awarded items for completing quests.")
@@ -42,7 +42,7 @@ end
 
 function dlg_15_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "What does the item information tell me?", "dlg_15_3")
 	AddConversationOption(conversation, "I will return for instruction later.")
@@ -51,7 +51,7 @@ end
 
 function dlg_15_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "Are things like attribute bonuses important?", "dlg_15_4")
 	AddConversationOption(conversation, "I will return for instruction later.")
@@ -60,7 +60,7 @@ end
 
 function dlg_15_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "How can I tell which of two weapons is better?", "dlg_15_5")
 	AddConversationOption(conversation, "I will return for instruction later.")
@@ -69,7 +69,7 @@ end
 
 function dlg_15_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "How can I tell which of two pieces of armor is better?", "dlg_15_6")
 	AddConversationOption(conversation, "I will return for instruction later.")
@@ -78,7 +78,7 @@ end
 
 function dlg_15_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "What about scouts and priests?", "dlg_15_7")
 	AddConversationOption(conversation, "I will return for instruction later.")
@@ -87,7 +87,7 @@ end
 
 function dlg_15_7(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "What do I do with equipment I can't use?", "dlg_15_8")
 	AddConversationOption(conversation, "I will return for instruction later.")
@@ -96,7 +96,7 @@ end
 
 function dlg_15_8(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "Why are some items marked 'No Value' or 'No Trade'?", "dlg_15_9")
 	AddConversationOption(conversation, "I will return for instruction later.")
@@ -105,7 +105,7 @@ end
 
 function dlg_15_9(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "What does it mean when an item says it is 'Attuneable'?", "dlg_15_10")
 	AddConversationOption(conversation, "I will return for instruction later.")
@@ -114,7 +114,7 @@ end
 
 function dlg_15_10(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "How do I manage my inventory?", "dlg_15_11")
 	StartConversation(conversation, NPC, Spawn, "If an item is marked 'Attuneable,' you must attune it to yourself before it provides any benefits. You'll notice a message on screen when you are wearing an item that must be attuned. To attune it, right-click on the item and select 'Attune.'  Once attuned, that item can no longer be traded or sold to another player.")
@@ -122,7 +122,7 @@ end
 
 function dlg_15_11(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "Can I put bags inside of bags?", "dlg_15_12")
 	AddConversationOption(conversation, "I will return for instruction later.")
@@ -131,7 +131,7 @@ end
 
 function dlg_15_12(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "So one item takes up one bag slot?", "dlg_15_13")
 	AddConversationOption(conversation, "I will return for instruction later.")
@@ -140,7 +140,7 @@ end
 
 function dlg_15_13(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "I'll be back if I need to refresh my memory on this.", "dlg_15_14")
 	StartConversation(conversation, NPC, Spawn, "Certain items, such as ammunition or harvested resources, can be stacked up to 200 at a time, depending on the item. Many goods, such as armor and clothing, cannot be stacked at all.")

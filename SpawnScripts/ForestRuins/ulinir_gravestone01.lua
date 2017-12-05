@@ -3,7 +3,7 @@
 	Script Purpose	: ulinir_gravestone01
 	Script Author	: Scatman
 	Script Date	: 2009.09.26
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 local WOODELF_MENTOR_QUEST_5 = 64
@@ -12,14 +12,14 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
 end
 
 function casted_on(NPC, Spawn, SpellName)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	if HasQuest(Spawn, WOODELF_MENTOR_QUEST_5) and SpellName == "Read Gravestone" then
 		AddConversationOption(conversation, "Place the Tribute.", "PlaceTribute")
 	end
@@ -43,12 +43,12 @@ end
 
 function PlaceTribute(NPC, Spawn)
 	SetStepComplete(Spawn, WOODELF_MENTOR_QUEST_5, 1)
-	
+
 	-- Tribute for Ulinir
 	while HasItem(Spawn, 12830) do
 		RemoveItem(Spawn, 12830)
 	end
-	
+
 	local tribute = GetSpawn(Spawn, 1960200)
 	if tribute == nil then
 		local flower1 = SpawnMob(GetZone(Spawn), 1960199, 0, 967.417, -17.0745, -820.883, 159.344)
@@ -62,6 +62,6 @@ function PlaceTribute(NPC, Spawn)
 		Despawn(flower3, 300000)
 		Despawn(flower4, 300000)
 	end
-	
+
 	MakeIlaenTalk(NPC, Spawn)
 end

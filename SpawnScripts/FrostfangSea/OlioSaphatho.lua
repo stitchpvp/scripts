@@ -3,7 +3,7 @@
 	Script Purpose	:	coercer trainer
 	Script Author	:	theFoof
 	Script Date		:	2013.9.24
-	Script Notes	:	
+	Script Notes	:
 --]]
 
 local COERCER = 27
@@ -12,7 +12,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
@@ -29,7 +29,7 @@ function hailed(NPC, Spawn)
 end
 
 function CoecChat1(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	FaceTarget(NPC, Spawn)
 
 	AddConversationOption(conversation, "That's useful to know!", "CoecChat2")
@@ -37,15 +37,15 @@ function CoecChat1(NPC, Spawn)
 end
 
 function CoecChat2(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	FaceTarget(NPC, Spawn)
-	
+
 	AddConversationOption(conversation, "That's interesting.", "CoecChat3")
 	StartConversation(conversation, NPC, Spawn, "Do not underestimate your ability to dominate the minds of your foes, charming them to carry out your will.  There is no need to conjure a pet, when you can force the enemy to fight amongst themselves!")
 end
 
 function CoecChat3(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	FaceTarget(NPC, Spawn)
 
 	AddConversationOption(conversation, "Thank you for the advice.")

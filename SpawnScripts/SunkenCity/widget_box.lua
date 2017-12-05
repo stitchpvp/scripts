@@ -3,7 +3,7 @@
 	Script Purpose	: widget_box_*
 	Script Author	: Scatman
 	Script Date	: 2009.08.01
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 local QUEST_FROM_LUKUR = 276
@@ -15,7 +15,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
@@ -24,7 +24,7 @@ end
 function casted_on(NPC, Spawn)
 	if HasQuest(Spawn, QUEST_FROM_LUKUR) and (not QuestStepIsComplete(Spawn, QUEST_FROM_LUKUR, 1) or not QuestStepIsComplete(Spawn, QUEST_FROM_LUKUR, 2) or not QuestStepIsComplete(Spawn, QUEST_FROM_LUKUR, 3)) then
 		local found = false
-		
+
 		-- Pick a random step is update and then update it if it's not already complete.  Do this until we find a step that has not been
 		-- completed yet.
 		while found == false do

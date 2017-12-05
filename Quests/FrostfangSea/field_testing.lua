@@ -12,7 +12,7 @@
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(QuestGiver, "blorpisa_bogchild/halas/gwenevyns_cove/blorpisa_bogchild/blorpisa_bogchild_049.mp3", "", "", 3167062203, 1810444442, Player)
 	AddConversationOption(conversation, "I shall return to you once I have gathered the ice lilies.")
@@ -43,7 +43,7 @@ end
 
 function Reload(Quest, QuestGiver, Player, Step)
     if Step == 1 then
-	    GotLillies(Quest, QuestGiver, Player)
+	    GotLilies(Quest, QuestGiver, Player)
 	elseif Step == 2 then
 	    CompleteQuest(Quest, QuestGiver, Player)
 	end

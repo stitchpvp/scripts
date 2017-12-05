@@ -1,13 +1,13 @@
 --[[
 	Script Name	: SpawnScripts/Darklight/OpalDarkbriar.lua
-	Script Purpose	: Opal Darkbriar 
+	Script Purpose	: Opal Darkbriar
 	Script Author	: John Adams
 	Script Date	: 2009.01.31
 	Script Notes	: Auto-Generated Locations from /loc log
 --]]
 
 function spawn(NPC)
-	-- she pops out of Nektulos 
+	-- she pops out of Nektulos
 	MovementLoopAddLocation(NPC, 731.51, -66.26, 92.23, 5, 5)
 	MovementLoopAddLocation(NPC, 730.81, -66.26, 84.87, 5, 0)
 
@@ -51,7 +51,7 @@ function hailed(NPC, Spawn)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function DespawnOpal(NPC)

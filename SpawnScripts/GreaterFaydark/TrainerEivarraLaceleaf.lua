@@ -11,7 +11,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)
@@ -22,7 +22,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	choice = math.random(1,2)
 
@@ -38,27 +38,27 @@ function hailed(NPC, Spawn)
 	AddConversationOption(conversation, "I'd like to learn about harvesting.")
 	AddConversationOption(conversation, "I've no time to chat right now.")
 	StartConversation(conversation, NPC, Spawn, "Don't be shy! Come closer, m'dear, and I'd be happy to answer any questions you have about collections or harvesting!")
-	if convo==74 then
-		PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_eivarra_laceleaf/_exp03/exp03_cty_kelethin/tutorials/qst_eivarra/qst_eivarra001.mp3", "", "", 1784643111, 2793677851, Spawn)
-		AddConversationOption(conversation, "I'd like to learn about collections.", "dlg_74_1")
-		AddConversationOption(conversation, "I'd like to learn about harvesting.")
-		AddConversationOption(conversation, "I've no time to chat right now.")
-		StartConversation(conversation, NPC, Spawn, "Don't be shy! Come closer, m'dear, and I'd be happy to answer any questions you have about collections or harvesting!")
-	end
+	--if convo==74 then
+	--	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_eivarra_laceleaf/_exp03/exp03_cty_kelethin/tutorials/qst_eivarra/qst_eivarra001.mp3", "", "", 1784643111, 2793677851, Spawn)
+	--	AddConversationOption(conversation, "I'd like to learn about collections.", "dlg_74_1")
+	--	AddConversationOption(conversation, "I'd like to learn about harvesting.")
+	--	AddConversationOption(conversation, "I've no time to chat right now.")
+	--	StartConversation(conversation, NPC, Spawn, "Don't be shy! Come closer, m'dear, and I'd be happy to answer any questions you have about collections or harvesting!")
+	--end
 
-	if convo==88 then
-		PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_eivarra_laceleaf/_exp03/exp03_cty_kelethin/tutorials/qst_eivarra/qst_eivarra001.mp3", "", "", 1784643111, 2793677851, Spawn)
-		AddConversationOption(conversation, "I'd like to learn about collections.", "dlg_88_1")
-		AddConversationOption(conversation, "I'd like to learn about harvesting.")
-		AddConversationOption(conversation, "I've no time to chat right now.")
-		StartConversation(conversation, NPC, Spawn, "Don't be shy! Come closer, m'dear, and I'd be happy to answer any questions you have about collections or harvesting!")
-	end
+	--if convo==88 then
+	--	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_eivarra_laceleaf/_exp03/exp03_cty_kelethin/tutorials/qst_eivarra/qst_eivarra001.mp3", "", "", 1784643111, 2793677851, Spawn)
+	--	AddConversationOption(conversation, "I'd like to learn about collections.", "dlg_88_1")
+	--	AddConversationOption(conversation, "I'd like to learn about harvesting.")
+	--	AddConversationOption(conversation, "I've no time to chat right now.")
+	--	StartConversation(conversation, NPC, Spawn, "Don't be shy! Come closer, m'dear, and I'd be happy to answer any questions you have about collections or harvesting!")
+	--end
 
 end
 
 function dlg_73_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_eivarra_laceleaf/_exp03/exp03_cty_kelethin/tutorials/qst_eivarra/qst_eivarra002.mp3", "", "", 1395864315, 2817792447, Spawn)
 	AddConversationOption(conversation, "What happens next?", "dlg_73_2")
@@ -67,7 +67,7 @@ end
 
 function dlg_73_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_eivarra_laceleaf/_exp03/exp03_cty_kelethin/tutorials/qst_eivarra/qst_eivarra003.mp3", "", "", 3674289603, 3031375930, Spawn)
 	AddConversationOption(conversation, "How do I complete the collection?", "dlg_73_3")
@@ -76,7 +76,7 @@ end
 
 function dlg_73_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_eivarra_laceleaf/_exp03/exp03_cty_kelethin/tutorials/qst_eivarra/qst_eivarra004.mp3", "", "", 863765125, 2737196345, Spawn)
 	AddConversationOption(conversation, "I'd like to learn about harvesting and gathering now.", "dlg_73_4")
@@ -86,7 +86,7 @@ end
 
 function dlg_73_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "What are harvestables used for?", "dlg_73_5")
@@ -95,7 +95,7 @@ end
 
 function dlg_73_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_eivarra_laceleaf/_exp03/exp03_cty_kelethin/tutorials/qst_eivarra/qst_eivarra006.mp3", "", "", 237784044, 654858074, Spawn)
 	AddConversationOption(conversation, "Why do I need to increase my harvesting skills?", "dlg_73_6")
@@ -104,7 +104,7 @@ end
 
 function dlg_73_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_eivarra_laceleaf/_exp03/exp03_cty_kelethin/tutorials/qst_eivarra/qst_eivarra007.mp3", "", "", 3552014978, 1436740562, Spawn)
 	AddConversationOption(conversation, "I'd like to learn about collections now.", "dlg_73_7")
@@ -114,7 +114,7 @@ end
 
 function dlg_74_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "What are harvestables used for?")
@@ -123,7 +123,7 @@ end
 
 function dlg_74_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_eivarra_laceleaf/_exp03/exp03_cty_kelethin/tutorials/qst_eivarra/qst_eivarra006.mp3", "", "", 237784044, 654858074, Spawn)
 	AddConversationOption(conversation, "Why do I need to increase my harvesting skills?", "dlg_74_3")
@@ -132,7 +132,7 @@ end
 
 function dlg_74_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_eivarra_laceleaf/_exp03/exp03_cty_kelethin/tutorials/qst_eivarra/qst_eivarra007.mp3", "", "", 3552014978, 1436740562, Spawn)
 	AddConversationOption(conversation, "I'd like to learn about collections now.", "dlg_74_4")
@@ -142,7 +142,7 @@ end
 
 function dlg_74_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_eivarra_laceleaf/_exp03/exp03_cty_kelethin/tutorials/qst_eivarra/qst_eivarra002.mp3", "", "", 1395864315, 2817792447, Spawn)
 	AddConversationOption(conversation, "What happens next?", "dlg_74_5")
@@ -151,7 +151,7 @@ end
 
 function dlg_74_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_eivarra_laceleaf/_exp03/exp03_cty_kelethin/tutorials/qst_eivarra/qst_eivarra003.mp3", "", "", 3674289603, 3031375930, Spawn)
 	AddConversationOption(conversation, "How do I complete the collection?", "dlg_74_6")
@@ -160,7 +160,7 @@ end
 
 function dlg_74_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_eivarra_laceleaf/_exp03/exp03_cty_kelethin/tutorials/qst_eivarra/qst_eivarra004.mp3", "", "", 863765125, 2737196345, Spawn)
 	AddConversationOption(conversation, "I'd like to learn about harvesting and gathering now.", "dlg_74_7")
@@ -170,7 +170,7 @@ end
 
 function dlg_88_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "What are harvestables used for?")
@@ -179,7 +179,7 @@ end
 
 function dlg_88_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_eivarra_laceleaf/_exp03/exp03_cty_kelethin/tutorials/qst_eivarra/qst_eivarra006.mp3", "", "", 237784044, 654858074, Spawn)
 	AddConversationOption(conversation, "Why do I need to increase my harvesting skills?", "dlg_88_3")
@@ -188,7 +188,7 @@ end
 
 function dlg_88_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_eivarra_laceleaf/_exp03/exp03_cty_kelethin/tutorials/qst_eivarra/qst_eivarra007.mp3", "", "", 3552014978, 1436740562, Spawn)
 	AddConversationOption(conversation, "I'd like to learn about collections now.", "dlg_88_4")
@@ -198,7 +198,7 @@ end
 
 function dlg_88_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_eivarra_laceleaf/_exp03/exp03_cty_kelethin/tutorials/qst_eivarra/qst_eivarra002.mp3", "", "", 1395864315, 2817792447, Spawn)
 	AddConversationOption(conversation, "What happens next?", "dlg_88_5")
@@ -207,7 +207,7 @@ end
 
 function dlg_88_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_eivarra_laceleaf/_exp03/exp03_cty_kelethin/tutorials/qst_eivarra/qst_eivarra003.mp3", "", "", 3674289603, 3031375930, Spawn)
 	AddConversationOption(conversation, "How do I complete the collection?", "dlg_88_6")
@@ -216,7 +216,7 @@ end
 
 function dlg_88_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_eivarra_laceleaf/_exp03/exp03_cty_kelethin/tutorials/qst_eivarra/qst_eivarra004.mp3", "", "", 863765125, 2737196345, Spawn)
 	AddConversationOption(conversation, "I'd like to learn about harvesting and gathering now.", "dlg_88_7")

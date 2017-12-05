@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest Grobin Trouble at the Pond
 	Script Author	: Zcoretri
 	Script Date	: 2009.03.04
-	
+
 	Zone       : Greater Faydark
 	Quest Giver: Matron of the Nursery
 	Preceded by: Running Off the Grobin Scouts
@@ -44,7 +44,7 @@ function QuestComplete(Quest, QuestGiver, Player)
 	GiveQuestReward(Quest, Player)
 end
 
-function Reload(Quest, QuestGiver, Player)
+function Reload(Quest, QuestGiver, Player, Step)
 	 if Step == 1 then
 	KilledAllPolluters(Quest, QuestGiver, Player)
 	 end

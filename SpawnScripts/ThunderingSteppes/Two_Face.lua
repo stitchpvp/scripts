@@ -14,7 +14,7 @@ end
 
 --always include this when npc dies.
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)
@@ -23,7 +23,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	AddConversationOption(conversation, "Yes I do.", "Yes1")
 	AddConversationOption(conversation, "No I don't.", "No1")
 	StartConversation(conversation, NPC, Spawn, "Do you want to play a game? It costs 50 silver to play.")
@@ -31,7 +31,7 @@ end
 
 function Yes1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	coins = 5000
 	local poolCoins = RemoveCoin(Spawn, coins)
 	--[[This little section will pool coins but will only last until player logs out =(
@@ -55,7 +55,7 @@ end
 --Heads/Tails outcome
 function Heads1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	if randpick == 1 then
 		AddCoin(Spawn, 10000)
 		StartConversation(conversation, NPC, Spawn, "Congratulations " .. GetName(Spawn) .. "! You win" .. GetCoinMessage(coins) .. "!")
@@ -68,7 +68,7 @@ function Heads1(NPC, Spawn)
 end
 function Tails1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	if randpick == 2 then
 		AddCoin(Spawn, 10000)
 		StartConversation(conversation, NPC, Spawn, "Congratulations " .. GetName(Spawn) .. "! You win" .. GetCoinMessage(coins) .. "!")

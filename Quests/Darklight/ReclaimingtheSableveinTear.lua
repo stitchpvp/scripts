@@ -3,7 +3,7 @@
 	Script Purpose	:	Handles the quest, "Reclaiming the Sablevein Tear"
 	Script Author	:	Cynnar
 	Script Date		:	7/24/2015
-	Script Notes	:	
+	Script Notes	:
 
 	Zone			:	Darklight Wood
 	Quest Giver		:	Pellandra D'Xatyl
@@ -39,7 +39,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(QuestGiver, "pellandra_d_xatyl/darklight_wood/hates_envy/pellandra_revamp/pellandra020.mp3", "", "", 2226921822, 2344985662, Player)
 	AddConversationOption(conversation, "I will return shortly.")

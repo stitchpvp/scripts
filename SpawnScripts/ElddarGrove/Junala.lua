@@ -1,6 +1,6 @@
 --[[
 	Script Name	: SpawnScripts/ElddarGrove/Junala.lua
-	Script Purpose	: Junala 
+	Script Purpose	: Junala
 	Script Author	: John Adams
 	Script Date	: 2008.09.28
 	Script Notes	: Auto-Generated Conversation from PacketParser Data

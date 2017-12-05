@@ -1,6 +1,6 @@
 --[[
 	Script Name	: SpawnScripts/FrostfangSea/GalindaGoodfaith.lua
-	Script Purpose	: Galinda Goodfaith 
+	Script Purpose	: Galinda Goodfaith
 	Script Author	: theFoof
 	Script Date	: 2013.03.16
 	Script Notes	: Auto-Generated Conversation from PacketParser Data
@@ -13,7 +13,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)
@@ -41,7 +41,7 @@ end
 
 function dlg_0_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "galinda_goodfaith/halas/pilgrims_landing/goodfaith_002.mp3", "", "", 2530966290, 131889308, Spawn)
 	AddConversationOption(conversation, "I did?", "dlg_0_2")
@@ -52,7 +52,7 @@ end
 
 function dlg_1_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "galinda_goodfaith/halas/pilgrims_landing/goodfaith_003.mp3", "", "", 2658425165, 4282904671, Spawn)
 	AddConversationOption(conversation, "Thank you for the help.", "dlg_0_4")
@@ -62,7 +62,7 @@ end
 
 function dlg_0_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "galinda_goodfaith/halas/pilgrims_landing/goodfaith_004.mp3", "", "", 3736336423, 4235698152, Spawn)
 	AddConversationOption(conversation, "I don't remember that.", "dlg_0_3")
@@ -71,7 +71,7 @@ end
 
 function dlg_0_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "galinda_goodfaith/halas/pilgrims_landing/goodfaith_004.mp3", "", "", 3736336423, 4235698152, Spawn)
 	AddConversationOption(conversation, "Thank you for the help.", "dlg_0_4")
@@ -82,7 +82,7 @@ end
 
 function dlg_0_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "galinda_goodfaith/halas/pilgrims_landing/goodfaith_005.mp3", "", "", 1055106469, 3750971957, Spawn)
 	AddConversationOption(conversation, "Not if we attack them back.", "dlg_0_5")
@@ -92,7 +92,7 @@ end
 
 function dlg_1_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "galinda_goodfaith/halas/pilgrims_landing/goodfaith_007.mp3", "", "", 2427981799, 3625665591, Spawn)
 	AddConversationOption(conversation, "I'll find her.", "OfferHalasianWelcome")
@@ -102,7 +102,7 @@ end
 
 function dlg_0_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "galinda_goodfaith/halas/pilgrims_landing/goodfaith_006.mp3", "", "", 1162130667, 1040606597, Spawn)
 	AddConversationOption(conversation, "That's great!", "OfferHalasianWelcome")

@@ -1,6 +1,6 @@
 --[[
 	Script Name	: SpawnScripts/ForestRuins/ThenatrenLightarrow.lua
-	Script Purpose	: Thenatren Lightarrow 
+	Script Purpose	: Thenatren Lightarrow
 	Script Author	: John Adams
 	Script Date	: 2008.09.19
 	Script Notes	: Auto-Generated Conversation from PacketParser Data

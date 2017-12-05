@@ -3,7 +3,7 @@
 	Script Purpose	: Lieutenant Delsun <Qeynos Guard>
 	Script Author	: Scatman
 	Script Date	: 2009.10.18
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 local QUEST4_FROM_CONSULBREE = 230
@@ -14,12 +14,12 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	if HasCompletedQuest(Spawn, QUEST_1) then
 		if HasCompletedQuest(Spawn, QUEST4_FROM_CONSULBREE) then
@@ -48,7 +48,7 @@ end
 
 function dlg_5_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/lieutenant_delsun/qey_adv03_caves/quests/delsun/delsun_003.mp3", "", "", 3979540292, 2231912258, Spawn)
 	AddConversationOption(conversation, "What are the gnolls planning?", "dlg_5_2")
@@ -57,7 +57,7 @@ end
 
 function dlg_5_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/lieutenant_delsun/qey_adv03_caves/quests/delsun/delsun_004.mp3", "", "", 2892187663, 805835825, Spawn)
 	AddConversationOption(conversation, "What can I do to help?", "dlg_6_3")
@@ -67,7 +67,7 @@ end
 
 function dlg_6_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/lieutenant_delsun/qey_adv03_caves/quests/delsun/delsun_001.mp3", "", "", 339232666, 1307734696, Spawn)
 	AddConversationOption(conversation, "I will help you.", "dlg_6_4")
@@ -77,7 +77,7 @@ end
 
 function dlg_6_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/lieutenant_delsun/qey_adv03_caves/quests/delsun/delsun_002.mp3", "", "", 455797705, 3616046354, Spawn)
 	AddConversationOption(conversation, "I will do this.", "OfferQuest1")
@@ -101,9 +101,9 @@ end
 
 function dlg_21_1(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_1, 5)
-	
+
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/lieutenant_delsun/qey_adv03_caves/quests/delsun/delsun_006.mp3", "", "", 718413957, 2288759319, Spawn)
 	AddConversationOption(conversation, "Thank you.")

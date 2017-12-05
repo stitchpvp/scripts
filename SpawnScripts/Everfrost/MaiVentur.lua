@@ -2,8 +2,8 @@
     Script Name    : SpawnScripts/Everfrost/MaiVentur.lua
     Script Author  : Flunklesnarkin
     Script Date    : 2015.09.04 09:09:21
-    Script Purpose : 
-                   : 
+    Script Purpose :
+                   :
 --]]
 
 function spawn(NPC)

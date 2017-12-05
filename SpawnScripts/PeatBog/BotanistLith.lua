@@ -1,6 +1,6 @@
 --[[
 	Script Name	: SpawnScripts/PeatBog/BotanistLith.lua
-	Script Purpose	: Botanist Lith 
+	Script Purpose	: Botanist Lith
 	Script Author	: scatman
 	Script Date	: 2009.05.10
 	Script Notes	: Auto-Generated Conversation from PacketParser Data
@@ -13,13 +13,13 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
-	
+	local conversation = CreateConversation()
+
 	if HasCompletedQuest(Spawn, QUEST_1) then
 	elseif HasQuest(Spawn, QUEST_1) then
 	else
@@ -36,7 +36,7 @@ end
 
 function dlg_0_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/botanist_lith/qey_adv04_bog/quests/nareh/nareh_lakosha001.mp3", "", "", 2621096962, 3551613449, Spawn)
 	AddConversationOption(conversation, "Unfortunate news. Someone in Nettleville attempted to perform a Pa'Rok ceremony with tainted dirt.", "dlg_0_2")
@@ -45,7 +45,7 @@ end
 
 function dlg_0_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/botanist_lith/qey_adv04_bog/quests/nareh/nareh_lakosha002.mp3", "", "", 619900214, 1453098884, Spawn)
 	AddConversationOption(conversation, "No, but the ceremony was for naught. Lakosha asked me to visit you because the dirt that corrupted the ceremony came from Peat Bog.", "dlg_0_3")
@@ -54,7 +54,7 @@ end
 
 function dlg_0_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/botanist_lith/qey_adv04_bog/quests/nareh/nareh_lakosha003.mp3", "", "", 418560600, 341427965, Spawn)
 	AddConversationOption(conversation, "How so?", "dlg_0_4")

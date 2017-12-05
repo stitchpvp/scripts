@@ -3,7 +3,7 @@
 	Script Purpose	:	the quest Clan of the Cave Imps
 	Script Author	:	theFoof
 	Script Date		:	2013.7.21
-	Script Notes	:	
+	Script Notes	:
 
 	Zone			:	Frostfang Sea
 	Quest Giver		:	Knut Orcbane

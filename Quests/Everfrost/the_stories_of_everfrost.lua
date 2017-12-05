@@ -2,7 +2,7 @@
     Script Name    : Quests/Everfrost/the_stories_of_everfrost.lua
     Script Author  : Flunklesnarkin
     Script Date    : 2015.10.14 12:10:29
-    Script Purpose : 
+    Script Purpose :
 
         Zone       : Everfrost
         Quest Giver: Brahnagan MacLahnan

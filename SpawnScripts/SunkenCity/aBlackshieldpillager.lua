@@ -1,9 +1,9 @@
 --[[
 	Script Name	: SpawnScripts/SunkenCity/aBlackshieldpillager.lua
-	Script Purpose	: a Blackshield pillager 
+	Script Purpose	: a Blackshield pillager
 	Script Author	: Scatman
 	Script Date	: 2009.08.01
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 local MALE = 1
@@ -18,7 +18,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)

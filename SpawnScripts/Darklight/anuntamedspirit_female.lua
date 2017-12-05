@@ -1,6 +1,6 @@
 --[[
 	Script Name	: SpawnScripts/Darklight/anuntamedspirit_female.lua
-	Script Purpose	: an untamed spirit 
+	Script Purpose	: an untamed spirit
 	Script Author	: John Adams
 	Script Date	: 2009.02.01
 	Script Notes	: Auto-Generated Conversation from PacketParser Data

@@ -3,7 +3,7 @@
 	Script Purpose	: a treant sapling
 	Script Author	: Scatman
 	Script Date	: 2009.05.07
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 local QUEST_FROM_NEOLA = 211
@@ -12,13 +12,13 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
-	
+	local conversation = CreateConversation()
+
 	if HasQuest(Spawn, QUEST_FROM_NEOLA) and GetQuestStep(Spawn, QUEST_FROM_NEOLA) == 2 then
 		AddConversationOption(conversation, "Sprinkle Smitelin's Excel-a-gro onto the sapling.", "Again")
 	end
@@ -32,10 +32,10 @@ end
 
 function Again(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_FROM_NEOLA, 2)
-	
+
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
-	
+	local conversation = CreateConversation()
+
 	AddConversationOption(conversation, "Farewell little shrub.")
 	StartConversation(conversation, NPC, Spawn, "...")
 end

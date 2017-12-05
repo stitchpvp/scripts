@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "Pounding the Enemy"
 	Script Author	: Scatman
 	Script Date	    : 2009.07.28
-	
+
 	Zone       : The Ruins
 	Quest Giver: Lieutenant Argosian
 	Preceded by: Pawns in the Game (pawns_in_the_game.lua)
@@ -21,7 +21,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(QuestGiver, "voiceover/english/tutorial_revamp/lieutenant_argosian/fprt_adv04_ruins/revamp/lieutenant_argosian015b.mp3", "", "", 102436079, 1387861460, Player)
 	AddConversationOption(conversation, "I will.")
@@ -33,7 +33,7 @@ end
 
 function Step1_Complete_KilledGuards(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 1, "I have defeated five Brokentusk guards")
-	
+
 	if QuestIsComplete(Player, 264) then
 		KilledAllOrcs(Quest, QuestGiver, Player)
 	end
@@ -41,7 +41,7 @@ end
 
 function Step2_Complete_KilledWarriors(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 2, "I have defeated five Brokentusk warriors.")
-	
+
 	if QuestIsComplete(Player, 264) then
 		KilledAllOrcs(Quest, QuestGiver, Player)
 	end
@@ -49,7 +49,7 @@ end
 
 function Step3_Complete_KilledOverseer(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 3, "I have slain the orc overseer.")
-	
+
 	if QuestIsComplete(Player, 264) then
 		KilledAllOrcs(Quest, QuestGiver, Player)
 	end
@@ -57,7 +57,7 @@ end
 
 function KilledAllOrcs(Quest, QuestGiver, Player)
 	UpdateQuestTaskGroupDescription(Quest, 1, "I have defeated the orcs, keeping the vagrants safe for now.")
-	
+
 	AddQuestStepChat(Quest, 4, "I must report back to Lieutenant Argosian.", 1, "I should return to the lieutenant and report that the vagrants are safe for now.", 0, 1270031)
 	AddQuestStepCompleteAction(Quest, 4, "Quest_Complete")
 end

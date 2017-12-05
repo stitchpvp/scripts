@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "Pluck Them of Their Pride"
 	Script Author	: Scatman
 	Script Date	: 2009.02.27
-	
+
 	Zone       : Timorous Deep
 	Quest Giver: Craewem Ku'Vi
 	Preceded by: None
@@ -21,8 +21,8 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
-	
+	local conversation = CreateConversation()
+
 	PlayFlavor(QuestGiver, "voiceover/english/rok_questvo/craewen_ku_vi/_exp04/exp04_rgn_timorous_deep/chrykori_tie/kuvi/kuvi002.mp3", "", "", 324579697, 4108613532, Player)
 	AddConversationOption(conversation, "Very well.")
 	StartConversation(conversation, QuestGiver, Player, "Bring me their pride feathers, " .. GetName(Player) .. ". and leave their corpses to rot.")
@@ -33,7 +33,7 @@ end
 
 function step1_complete_killedBirds(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 1, "I have collected the Haoaeran pride feathers.")
-	
+
 	AddQuestStepChat(Quest, 2, "I need to bring these feathers back to Craewen Ku'Vi.", 1, ".", 150, 2630073)
 	AddQuestStepCompleteAction(Quest, 2, "quest_complete")
 end

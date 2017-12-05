@@ -11,7 +11,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)
@@ -22,7 +22,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 		PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_2_1034.mp3", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Who are you?", "dlg_35_1")
@@ -33,7 +33,7 @@ end
 
 function dlg_35_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "You sound pretty enthusiastic.")
@@ -42,7 +42,7 @@ end
 
 function dlg_35_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "You were sent to Qeynos?", "dlg_35_3")
@@ -52,7 +52,7 @@ end
 
 function dlg_35_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "So what about your title?")
@@ -62,7 +62,7 @@ end
 
 function dlg_35_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "That's impressive.", "dlg_35_5")
@@ -72,7 +72,7 @@ end
 
 function dlg_35_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "It sounds like you were chosen for a reason.", "dlg_35_6")
@@ -82,7 +82,7 @@ end
 
 function dlg_35_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Can you tell me more of the Truthbringer?", "dlg_35_7")
@@ -92,7 +92,7 @@ end
 
 function dlg_35_7(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "You sound pretty enthusiastic.", "dlg_35_8")
@@ -101,7 +101,7 @@ end
 
 function dlg_35_8(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "You were sent to Qeynos?", "dlg_35_9")
@@ -111,7 +111,7 @@ end
 
 function dlg_35_9(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "sir_bayden_cauldthorn/liveevents/exp03/marr_bayden010.mp3", "", "", 1989160172, 3091398690, Spawn)
 	AddConversationOption(conversation, "So you are oathbound to Qeynos?", "dlg_35_10")
@@ -121,7 +121,7 @@ end
 
 function dlg_35_10(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "What do you mean?", "dlg_35_11")
@@ -131,7 +131,7 @@ end
 
 function dlg_35_11(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "That's impressive.", "dlg_35_12")
@@ -141,7 +141,7 @@ end
 
 function dlg_35_12(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "It sounds like you were chosen for a reason.", "dlg_35_13")
@@ -151,7 +151,7 @@ end
 
 function dlg_35_13(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Can you tell me more of the Truthbringer?", "dlg_35_14")

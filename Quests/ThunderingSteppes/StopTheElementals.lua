@@ -2,7 +2,7 @@
     Script Name    : Quests/ThunderingSteppes/StopTheElementals.lua
     Script Author  : Jabantiz
     Script Date    : 2014.07.09 01:07:13
-    Script Purpose : 
+    Script Purpose :
 
         Zone       : ThunderingSteppes
         Quest Giver: N/A

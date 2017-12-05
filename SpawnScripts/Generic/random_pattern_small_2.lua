@@ -31,7 +31,7 @@ function RouteOne(NPC)
     MovementLoopAddLocation(NPC, X + 4, Y, Z, 2, math.random(20,45))
 	MovementLoopAddLocation(NPC, X + 2, Y, Z - 5, 2, math.random(20,45))
 	MovementLoopAddLocation(NPC, X + 3, Y, Z - 2, 2, math.random(20,45))
-	MovementLoopAddLocation(NPC, X + -2, Y, Z + 3 4, 2, math.random(20,45))
+	MovementLoopAddLocation(NPC, X + -2, Y, Z + 3, 2, math.random(20,45))
 	MovementLoopAddLocation(NPC, X, Y, Z, 2, math.random(20,45))
 end
 
@@ -72,7 +72,7 @@ function RouteFour(NPC)
 end
 
 function respawn(NPC)
-    spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)

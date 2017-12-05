@@ -15,13 +15,13 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
-	
+	local conversation = CreateConversation()
+
 	if HasCompletedQuest(Spawn, QUEST_1) then
 		if HasCompletedQuest(Spawn, QUEST_2) then
 			Say(NPC, "Thank you.", Spawn)
@@ -49,7 +49,7 @@ end
 
 function dlg_35_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/rok_questvo/craewen_ku_vi/_exp04/exp04_rgn_timorous_deep/chrykori_tie/kuvi/kuvi001.mp3", "", "", 4081585464, 1720216201, Spawn)
 	AddConversationOption(conversation, "An excellent plan.", "OfferQuest1")
@@ -63,13 +63,13 @@ end
 
 function DidYouDoAsIOrdered(NPC, Spawn, conversation)
 	PlayFlavor(NPC, "voiceover/english/rok_questvo/craewen_ku_vi/_exp04/exp04_rgn_timorous_deep/chrykori_tie/kuvi/kuvi003.mp3", "", "", 1083166353, 2321357216, Spawn)
-	
+
 	if (HasCompletedQuest(Spawn, QUEST_1) and not HasCompletedQuest(Spawn, QUEST_2)) or (HasQuest(Spawn, QUEST_1) and GetQuestStep(Spawn, QUEST_1) == 2) then
 		AddConversationOption(conversation, "I have.", "dlg_36_1")
 	else
 		AddConversationOption(conversation, "Not yet.")
 	end
-	
+
 	StartConversation(conversation, NPC, Spawn, "Did you do as I ordered?")
 end
 
@@ -77,9 +77,9 @@ function dlg_36_1(NPC, Spawn)
 	if HasQuest(Spawn, QUEST_1) then
 		SetStepComplete(Spawn, QUEST_1, 2)
 	end
-	
+
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/rok_questvo/craewen_ku_vi/_exp04/exp04_rgn_timorous_deep/chrykori_tie/kuvi/kuvi004.mp3", "", "", 1541155744, 479902070, Spawn)
 	AddConversationOption(conversation, "They will be a bloody mass in your hand.", "OfferQuest2")
@@ -97,21 +97,21 @@ end
 
 function HaveYouSlainHim(NPC, Spawn, conversation)
 	PlayFlavor(NPC, "voiceover/english/rok_questvo/craewen_ku_vi/_exp04/exp04_rgn_timorous_deep/chrykori_tie/kuvi/kuvi006.mp3", "", "", 893812873, 507074747, Spawn)
-	
+
 	if HasQuest(Spawn, QUEST_2) and GetQuestStep(Spawn, QUEST_2) == 2 then
 		AddConversationOption(conversation, "Yes, he is dead.", "dlg_41_1")
 	else
 		AddConversationOption(conversation, "Not yet.")
 	end
-	
+
 	StartConversation(conversation, NPC, Spawn, "Have you slain him?")
 end
 
 function dlg_41_1(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_2, 2)
-	
+
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/rok_questvo/craewen_ku_vi/_exp04/exp04_rgn_timorous_deep/chrykori_tie/kuvi/kuvi007.mp3", "", "", 421487037, 477036489, Spawn)
 	AddConversationOption(conversation, "You are welcome.", "dlg_41_2")

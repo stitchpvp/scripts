@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "Elements of a Ritual"
 	Script Author	: Scatman
 	Script Date	: 2009.10.08
-	
+
 	Zone       : The Caves
 	Quest Giver: Consul Bree
 	Preceded by: Hit Them Where it Hurts (hit_them_where_it_hurts.lua)
@@ -18,8 +18,8 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
-	
+	local conversation = CreateConversation()
+
 	PlayFlavor(QuestGiver, "voiceover/english/tutorial_revamp/consul_bree/qey_adv03_caves/quests/bree/bree_012a.mp3", "", "", 2607411936, 2666860100, Player)
 	AddConversationOption(conversation, "All right.")
 	StartConversation(conversation, QuestGiver, Player, "Speak with Emma about the river stone. I believe she has been working on something.")

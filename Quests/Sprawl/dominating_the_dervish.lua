@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "Dominating the Dervish"
 	Script Author	: Scatman
 	Script Date	    : 2009.07.26
-	
+
 	Zone       : The Sprawl
 	Quest Giver: Enforcer Kurdek
 	Preceded by: Investigating the Black Magi (investigating_the_black_magi.lua)
@@ -21,7 +21,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(QuestGiver, "voiceover/english/tutorial_revamp/enforcer_kurdek/fprt_adv03_sprawl/quests/enforcer_kurdek039.mp3", "", "", 2511484682, 858916391, Player)
 	AddConversationOption(conversation, "I'll do my best.")
@@ -69,7 +69,7 @@ function Quest_Complete(Quest, QuestGiver, Player)
 	UpdateQuestDescription(Quest, "I defeated a lot of Dervish, but they seem to have established a strong foothold here in the Sprawl. Hopefully my efforts will help the Dreadnaughts maintain control and keep them out of Freeport proper.")
 end
 
-function Reload(Quest, QuestGiver, Player)
+function Reload(Quest, QuestGiver, Player, Step)
 	if Step == 1 then
 		Step1_Complete_KilledHooligans(Quest, QuestGiver, Player)
 	elseif Step == 2 then

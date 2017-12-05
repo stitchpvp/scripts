@@ -3,7 +3,7 @@
 	Script Purpose	:	Handles the quest, "An Authority on Hate"
 	Script Author	:	Cynnar
 	Script Date		:	7/27/2015
-	Script Notes	:	
+	Script Notes	:
 
 	Zone			:	Darklight Wood
 	Quest Giver		:	Pellandra D'Xatyl
@@ -30,8 +30,8 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
-	
+	local conversation = CreateConversation()
+
 	PlayFlavor(QuestGiver, "pellandra_d_xatyl/darklight_wood/hates_envy/pellandra_revamp/pellandra026.mp3", "", "bow", 3700065629, 2247447219, Player)
 	AddConversationOption(conversation, "Praise Innoruuk!")
 	StartConversation(conversation, QuestGiver, Player, "You fight well, " .. GetName(Player) .. ". May your enemies come to know your name and fear it. The Dark Father looks upon you favorably.")

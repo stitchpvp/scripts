@@ -1,9 +1,9 @@
 --[[
-   Script Name     : SpawnScripts/FrostfangSea/aRyGorrambusher.lua 
+   Script Name     : SpawnScripts/FrostfangSea/aRyGorrambusher.lua
    Script Purpose  : for the spawns "a RyGorr ambusher"
    Script Author   : theFoof
    Script Date     : 2013.5.10
-   Script Notes    : 
+   Script Notes    :
 --]]
 
 local FlameOn = 5

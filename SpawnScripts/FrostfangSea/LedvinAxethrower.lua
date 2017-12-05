@@ -3,7 +3,7 @@
 	Script Purpose	:	mystic trainer in Halas
 	Script Author	:	theFoof
 	Script Date		:	2013.9.24
-	Script Notes	:	
+	Script Notes	:
 --]]
 
 local MYSTIC = 19
@@ -12,7 +12,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
@@ -29,7 +29,7 @@ function hailed(NPC, Spawn)
 end
 
 function MysticChat1(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	FaceTarget(NPC, Spawn)
 
 	AddConversationOption(conversation, "That's useful to know!", "MysticChat2")
@@ -37,7 +37,7 @@ function MysticChat1(NPC, Spawn)
 end
 
 function MysticChat2(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	FaceTarget(NPC, Spawn)
 
 	AddConversationOption(conversation, "That's interesting.", "MysticChat3")
@@ -45,17 +45,17 @@ function MysticChat2(NPC, Spawn)
 end
 
 function MysticChat3(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	FaceTarget(NPC, Spawn)
-	
+
 	AddConversationOption(conversation, "That will be useful!", "MysticChat4")
 	StartConversation(conversation, NPC, Spawn, "But they can also empower us with the ability to inflict debilitating weakness upon the enemy!")
 end
 
 function MysticChat4(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	FaceTarget(NPC, Spawn)
 
 	AddConversationOption(conversation, "Thank you for the advice.")
-	StartConversation(conversatin, NPC, Spawn, "And protect yourself with a good set of chain mail, " .. GetName(Spawn) .. ".  The armor is not as cumbersome as plate, but its protective properties will be necessary when deep in battle.")
+	StartConversation(conversation, NPC, Spawn, "And protect yourself with a good set of chain mail, " .. GetName(Spawn) .. ".  The armor is not as cumbersome as plate, but its protective properties will be necessary when deep in battle.")
 end

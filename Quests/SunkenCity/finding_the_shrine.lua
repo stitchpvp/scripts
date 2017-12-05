@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "Finding the Shrine"
 	Script Author	: Scatman
 	Script Date	    : 2009.07.28
-	
+
 	Zone       : Sunken City
 	Quest Giver: Investigator Curfield
 	Preceded by: Taking Back from the Blackshields (taking_back_from_the_blackshields.lua)
@@ -17,7 +17,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(QuestGiver, "voiceover/english/tutorial_revamp/investigator_curfeld/fprt_adv01_sunken/investigator_curfeld014.mp3", "", "", 4099914097, 989172019, Player)
 	AddConversationOption(conversation, "I will do so. Hopefully I'll be in one piece.")

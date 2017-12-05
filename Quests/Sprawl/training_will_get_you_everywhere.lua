@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "Training Will Get You Everywhere"
 	Script Author	: Scatman
 	Script Date		: 2009.07.25
-	
+
 	Zone       : The Sprawl
 	Quest Giver: Enforcer Kurdek
 	Preceded by: None
@@ -17,7 +17,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(QuestGiver, "voiceover/english/tutorial_revamp/enforcer_kurdek/fprt_adv03_sprawl/quests/enforcer_kurdek020.mp3", "", "", 593639931, 1053980414, Player)
 	AddConversationOption(conversation, "I'll be back when I have your information.")
@@ -30,7 +30,7 @@ end
 function Step1_Complete_SpokeWithDurbok(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 1, "I have spoken to Trainer Durbok, who is displeased with the progress of the Giantslayers.")
 	UpdateQuestTaskGroupDescription(Quest, 1, "I have spoken to Trainer Durbok and must tell Enforcer Kurdek what I have learned.")
-	
+
 	AddQuestStepChat(Quest, 2, "I should return to Enforcer Kurdek near the gate to Big Bend.", 1, "I must return to Enforcer Kurdek with my report.", 0, 1260006)
 	AddQuestStepCompleteAction(Quest, 2, "Quest_Complete")
 end
@@ -42,7 +42,7 @@ function Quest_Complete(Quest, QuestGiver, Player)
 	UpdateQuestDescription(Quest, "I spoke with Trainer Durbok, who feels that the Giantslayers are not focused enough on their training. He feels that their leader, Brutemaster Tarden, is responsible for this failing. Enforcer Kurdek has been notified and is none too happy about it.")
 end
 
-function Reload(Quest, QuestGiver, Player)
+function Reload(Quest, QuestGiver, Player, Step)
 	if Step == 1 then
 		Step1_Complete_SpokeWithDurbok(Quest, QuestGiver, Player)
 	end

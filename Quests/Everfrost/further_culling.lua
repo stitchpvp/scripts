@@ -2,7 +2,7 @@
     Script Name    : Quests/Everfrost/further_culling.lua
     Script Author  : Flunklesnarkin
     Script Date    : 2015.11.29 12:11:13
-    Script Purpose : 
+    Script Purpose :
 
         Zone       : Everfrost
         Quest Giver: Brahnagan MacLahnan

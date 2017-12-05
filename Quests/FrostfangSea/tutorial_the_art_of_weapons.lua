@@ -3,7 +3,7 @@
 	Script Purpose	:	Tutorial: The Art of Weapons
 	Script Author	:	theFoof
 	Script Date		:	2013.10.19
-	Script Notes	:	
+	Script Notes	:
 
 	Zone			:	Frostfang Sea
 	Quest Giver		:	Glin Hammerhelm
@@ -62,4 +62,4 @@ function Reload(Quest, QuestGiver, Player)
 	if QuestStepIsComplete(Player, 93, 2) then
 		MadeAxe(Quest, QuestGiver, Player)
 	end
-end	
+end

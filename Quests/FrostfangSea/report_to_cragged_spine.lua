@@ -3,12 +3,12 @@
 	Script Purpose	:	for the quest "Report to Cragged Spine"
 	Script Author	:	theFoof
 	Script Date		:	2013.6.1
-	Script Notes	:	
+	Script Notes	:
 
 	Zone			:	Frostfang Sea
 	Quest Giver		:	Belka Thunderheart
 	Preceded by		:	Domestication is the New Survivalism
-	Followed by		:	
+	Followed by		:
 --]]
 
 function Init(Quest)
@@ -19,7 +19,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(QuestGiver, "", "", "", 0, 0, Player)
 	AddConversationOption(conversation, "And with you.  Farewell!")

@@ -10,12 +10,12 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	choice = math.random(1,2)
 
@@ -29,11 +29,11 @@ function hailed(NPC, Spawn)
 		PlayFlavor(NPC, "lieoonlioo_croosinian/qey_elddar/trainer_troubador001.mp3", "", "", 484417616, 3729027420, Spawn)
 	AddConversationOption(conversation, "Just looking around.", "dlg_11_1")
 	StartConversation(conversation, NPC, Spawn, "Well met, .. GetName(Spawn) .. .  What brings you to the Elddar Grove this fine day?")
-	if convo==12 then
-		PlayFlavor(NPC, "lieoonlioo_croosinian/qey_elddar/trainer_troubador001.mp3", "", "", 484417616, 3729027420, Spawn)
-		AddConversationOption(conversation, "Just looking around.", "dlg_12_1")
-		StartConversation(conversation, NPC, Spawn, "Well met, .. GetName(Spawn) .. .  What brings you to the Elddar Grove this fine day?")
-	end
+	--if convo==12 then
+	--	PlayFlavor(NPC, "lieoonlioo_croosinian/qey_elddar/trainer_troubador001.mp3", "", "", 484417616, 3729027420, Spawn)
+	--	AddConversationOption(conversation, "Just looking around.", "dlg_12_1")
+	--	StartConversation(conversation, NPC, Spawn, "Well met, .. GetName(Spawn) .. .  What brings you to the Elddar Grove this fine day?")
+	--end
 
 end
 

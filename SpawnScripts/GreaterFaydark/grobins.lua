@@ -1,6 +1,6 @@
 --[[
 	Script Name	: SpawnScripts/GreaterFaydark/generic_grobin.lua
-	Script Purpose	: a grobin (anything) 
+	Script Purpose	: a grobin (anything)
 	Script Author	: John Adams
 	Script Date	: 2009.02.06
 	Script Notes	: JA - the math.random upper value, I just made up. Tune to your liking.
@@ -21,9 +21,9 @@ function aggro(NPC, Spawn)
 
 end
 
-function healthchanged(NPC)
+function healthchanged(NPC, Spawn)
 
-	if GetCurrentHP(NPC) <= (GetMaxHP(NPC) / 2) then
+	if GetHP(NPC) <= (GetMaxHP(NPC) / 2) then
 		choice = math.random(1,4)
 		if choice == 1 then
 			PlayFlavor(NPC, "voiceover/english/exp03_combatvo/goblin_greater_faydark/ft/_exp03/goblin/goblin_greater_faydark_battle_25d9a433.mp3", "Grum! Grum! ", "", 1460066353, 1003945639, Spawn)

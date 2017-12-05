@@ -22,6 +22,6 @@ function remove(Caster, Target)
   RemoveImmunitySpell(4, Caster)
   RemoveImmunitySpell(5, Caster)
   RemoveImmunitySpell(6, Caster)
-  
+
   RemoveProc(Caster)
 end

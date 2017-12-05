@@ -11,7 +11,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)
@@ -22,7 +22,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 		PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_modji_vilivarinen/_exp03/exp03_cty_kelethin/tutorials/qst_modji/qst_modji001.mp3", "", "", 629194324, 2384115675, Spawn)
 	AddConversationOption(conversation, "Tell me about items and equipment.", "dlg_53_1")
@@ -33,7 +33,7 @@ end
 
 function dlg_53_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_modji_vilivarinen/_exp03/exp03_cty_kelethin/tutorials/qst_modji/qst_modji002.mp3", "", "", 4288682285, 68250990, Spawn)
 	AddConversationOption(conversation, "What can I do with the treasures I earn while adventuring?", "dlg_53_2")
@@ -42,7 +42,7 @@ end
 
 function dlg_53_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_modji_vilivarinen/_exp03/exp03_cty_kelethin/tutorials/qst_modji/qst_modji003.mp3", "", "", 198169293, 2421181305, Spawn)
 	AddConversationOption(conversation, "What does the item information tell me?", "dlg_53_3")
@@ -52,7 +52,7 @@ end
 
 function dlg_53_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_modji_vilivarinen/_exp03/exp03_cty_kelethin/tutorials/qst_modji/qst_modji004.mp3", "", "", 4004083620, 1433115076, Spawn)
 	AddConversationOption(conversation, "Are things like attribute bonuses important?", "dlg_53_4")
@@ -62,7 +62,7 @@ end
 
 function dlg_53_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_modji_vilivarinen/_exp03/exp03_cty_kelethin/tutorials/qst_modji/qst_modji005.mp3", "", "", 3148308825, 1768781135, Spawn)
 	AddConversationOption(conversation, "How can I tell which of two weapons is better?", "dlg_53_5")
@@ -72,7 +72,7 @@ end
 
 function dlg_53_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_modji_vilivarinen/_exp03/exp03_cty_kelethin/tutorials/qst_modji/qst_modji006.mp3", "", "", 4261563052, 2529314534, Spawn)
 	AddConversationOption(conversation, "How can I tell which of two pieces of armor is better?", "dlg_53_6")
@@ -82,7 +82,7 @@ end
 
 function dlg_53_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_modji_vilivarinen/_exp03/exp03_cty_kelethin/tutorials/qst_modji/qst_modji007.mp3", "", "", 3055447161, 740281223, Spawn)
 	AddConversationOption(conversation, "What about scouts and priests?", "dlg_53_7")
@@ -92,7 +92,7 @@ end
 
 function dlg_53_7(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_modji_vilivarinen/_exp03/exp03_cty_kelethin/tutorials/qst_modji/qst_modji008.mp3", "", "", 2976794585, 1667594161, Spawn)
 	AddConversationOption(conversation, "What do I do with equipment I can't use?", "dlg_53_8")
@@ -102,7 +102,7 @@ end
 
 function dlg_53_8(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_modji_vilivarinen/_exp03/exp03_cty_kelethin/tutorials/qst_modji/qst_modji009.mp3", "", "", 3026014011, 3128688235, Spawn)
 	AddConversationOption(conversation, "Why are some items marked 'No Value' or 'No Trade'?", "dlg_53_9")
@@ -112,7 +112,7 @@ end
 
 function dlg_53_9(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_modji_vilivarinen/_exp03/exp03_cty_kelethin/tutorials/qst_modji/qst_modji010.mp3", "", "", 3548366649, 3737415014, Spawn)
 	AddConversationOption(conversation, "What does it mean when an item says it is 'Attuneable'?", "dlg_53_10")
@@ -122,7 +122,7 @@ end
 
 function dlg_53_10(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_modji_vilivarinen/_exp03/exp03_cty_kelethin/tutorials/qst_modji/qst_modji011.mp3", "", "", 2574691428, 2245769529, Spawn)
 	AddConversationOption(conversation, "How do I manage my inventory?", "dlg_53_11")
@@ -131,7 +131,7 @@ end
 
 function dlg_53_11(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_modji_vilivarinen/_exp03/exp03_cty_kelethin/tutorials/qst_modji/qst_modji012.mp3", "", "", 2929542360, 815972363, Spawn)
 	AddConversationOption(conversation, "Can I put bags inside of bags?", "dlg_53_12")
@@ -141,7 +141,7 @@ end
 
 function dlg_53_12(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_modji_vilivarinen/_exp03/exp03_cty_kelethin/tutorials/qst_modji/qst_modji013.mp3", "", "", 1237588561, 2769256355, Spawn)
 	AddConversationOption(conversation, "So one item takes up one bag slot?", "dlg_53_13")
@@ -151,7 +151,7 @@ end
 
 function dlg_53_13(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "I'll be back if I need to refresh my memory on this.", "dlg_53_14")

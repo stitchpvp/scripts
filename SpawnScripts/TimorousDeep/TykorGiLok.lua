@@ -17,16 +17,16 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
-	
+	local conversation = CreateConversation()
+
 	if HasCompletedQuest(Spawn, QUEST_1) then
 		if HasCompletedQuest(Spawn, QUEST_2) then
-			if HasCompletedQuest(Spawn, QUSET_3) then
+			if HasCompletedQuest(Spawn, QUEST_3) then
 				Say(NPC, "Please do not waste time.", Spawn)
 			elseif HasQuest(Spawn, QUEST_3) then
 				Say(NPC, "Please do not waste time.", Spawn)
@@ -57,7 +57,7 @@ end
 
 function dlg_0_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/rok_questvo/tykor_gi_lok/_exp04/exp04_rgn_timorous_deep/chrykori_tie/gilok/gilok000a.mp3", "", "", 2545146439, 3743717142, Spawn)
 	AddConversationOption(conversation, "I will kill the poachers.", "OfferQuest1")
@@ -71,13 +71,13 @@ end
 
 function HaveYouSlitGizzards(NPC, Spawn, conversation)
 	PlayFlavor(NPC, "voiceover/english/rok_questvo/tykor_gi_lok/_exp04/exp04_rgn_timorous_deep/chrykori_tie/gilok/gilok002.mp3", "", "", 2250402818, 734088714, Spawn)
-	
+
 	if (HasCompletedQuest(Spawn, QUEST_1) and not HasCompletedQuest(Spawn, QUEST_2)) or (HasQuest(Spawn, QUEST_1) and GetQuestStep(Spawn, QUEST_1) == 2) then
 		AddConversationOption(conversation, "I've taken some of them out.", "dlg_1_1")
 	else
 		AddConversationOption(conversation, "Not yet. More need to fall to see this work done.")
 	end
-	
+
 	StartConversation(conversation, NPC, Spawn, "Have you slit their gizzards?")
 end
 
@@ -85,9 +85,9 @@ function dlg_1_1(NPC, Spawn)
 	if HasQuest(Spawn, QUEST_1) then
 		SetStepComplete(Spawn, QUEST_1, 2)
 	end
-	
+
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/rok_questvo/tykor_gi_lok/_exp04/exp04_rgn_timorous_deep/chrykori_tie/gilok/gilok003.mp3", "", "", 1572650022, 3969849806, Spawn)
 	AddConversationOption(conversation, "What do you think is so special about this beach?", "dlg_1_2")
@@ -100,7 +100,7 @@ end
 
 function dlg_1_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/rok_questvo/tykor_gi_lok/_exp04/exp04_rgn_timorous_deep/chrykori_tie/gilok/gilok003a.mp3", "", "", 1948098851, 1635799575, Spawn)
 	AddConversationOption(conversation, "I'll bring us back samples straight away.", "OfferQuest2")
@@ -114,13 +114,13 @@ end
 
 function DoYouHaveTheOre(NPC, Spawn, conversation)
 	PlayFlavor(NPC, "voiceover/english/rok_questvo/tykor_gi_lok/_exp04/exp04_rgn_timorous_deep/chrykori_tie/gilok/gilok005.mp3", "", "", 3931269326, 274875962, Spawn)
-	
+
 	if (HasCompletedQuest(Spawn, QUEST_2) and not HasCompletedQuest(Spawn, QUEST_3)) or (HasQuest(Spawn, QUEST_2) and GetQuestStep(Spawn, QUEST_2) == 2) then
 		AddConversationOption(conversation, "Yes, I do and no, they died too quickly for any of that.", "dlg_4_1")
 	else
 		AddConversationOption(conversation, "No, they will though.")
 	end
-	
+
 	StartConversation(conversation, NPC, Spawn, "Do you have the ore? Did they molt at seeing you interrupt their plans?")
 end
 
@@ -128,9 +128,9 @@ function dlg_4_1(NPC, Spawn)
 	if HasQuest(Spawn, QUEST_2) then
 		SetStepComplete(Spawn, QUEST_2, 2)
 	end
-	
+
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/rok_questvo/tykor_gi_lok/_exp04/exp04_rgn_timorous_deep/chrykori_tie/gilok/gilok006.mp3", "", "", 2948220406, 1046702347, Spawn)
 	AddConversationOption(conversation, "Very well. ", "OfferQuest3")

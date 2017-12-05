@@ -3,7 +3,7 @@
 	Script Purpose	:	for the quest All That Remains
 	Script Author	:	theFoof
 	Script Date		:	2013.6.5
-	Script Notes	:	
+	Script Notes	:
 
 	Zone			:	Frostfang Sea
 	Quest Giver		:	Battlepriest Herga
@@ -19,7 +19,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(QuestGiver, "battlepriest_herga/halas/great_shelf/battlepriest_herga/battlepriest_herga056.mp3", "", "", 1633477200, 3542606661, Player)
 	AddConversationOption(conversation, "I will recover your helmet.")

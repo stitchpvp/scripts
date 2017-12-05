@@ -3,7 +3,7 @@
 	Script Purpose	:	Handles the quest, "To Draw Upon Wellsprings"
 	Script Author	:	Cynnar
 	Script Date		:	8/30/2015
-	Script Notes	:	
+	Script Notes	:
 
 	Zone			:	Darklight Wood
 	Quest Giver		:	Calnozz J'Melvirr
@@ -42,12 +42,11 @@ function Accepted(Quest, QuestGiver, Player)
         SummonItem(Player, 45117, 1)
 	end
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
 
 	Say(QuestGiver, "Excellent. I will be here waiting for you to bring the cubs back. Here is the leash.")
 end
 
 function Deleted(Quest, QuestGiver, Player)
-	Despawn(cub)
+	-- Despawn(cub)
 	SetTempVariable(Player, "cub", nil)
 end

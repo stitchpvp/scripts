@@ -1,6 +1,6 @@
 --[[
    Script Name   : SpawnScripts/TheThunderingSteppes/OldenHighguard.lua
-   Script Purpose   : Olden Highguard 
+   Script Purpose   : Olden Highguard
    Script Author   : Jabantiz
    Script Date   : 2016.06.13
    Script Notes   : Auto-Generated Conversation from PacketParser Data
@@ -10,7 +10,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-   spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)

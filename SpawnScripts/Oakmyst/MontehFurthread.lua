@@ -1,9 +1,9 @@
 --[[
-	Script Name	: SpawnScripts/Oakmyst/MontehFurthread.lua 
+	Script Name	: SpawnScripts/Oakmyst/MontehFurthread.lua
 	Script Purpose	: Monteh Furthread
 	Script Author	: Scatman
 	Script Date	: 2009.05.10
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 function spawn(NPC)
@@ -32,7 +32,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)

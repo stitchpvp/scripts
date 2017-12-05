@@ -11,7 +11,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)
@@ -22,7 +22,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 		PlayFlavor(NPC, "preston_pepperpicker/_exp03/deity/bristlebane/preston/preston001.mp3", "", "", 3088335751, 4271045047, Spawn)
 	StartConversation(conversation, NPC, Spawn, "Preston Pepperpicker's the name. I'm poised to appeal to your particular penchant for powerful peppers! Go on, please peruse!")
@@ -30,7 +30,7 @@ end
 
 function dlg_75_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "preston_pepperpicker/_exp03/deity/bristlebane/preston/preston001.mp3", "", "", 3088335751, 4271045047, Spawn)
 	StartConversation(conversation, NPC, Spawn, "Preston Pepperpicker's the name. I'm poised to appeal to your particular penchant for powerful peppers! Go on, please peruse!")

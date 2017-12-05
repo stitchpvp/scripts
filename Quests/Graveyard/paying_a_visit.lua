@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "Paying a Visit"
 	Script Author	: Scatman
 	Script Date	: 2009.07.10
-	
+
 	Zone       : The Graveyard
 	Quest Giver: Custodian Zaddar Sullissia
 	Preceded by: The Door Knocker (the_door_knocker.lua)
@@ -21,7 +21,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(QuestGiver, "voiceover/english/tutorial_revamp/custodian_zaddar_sullissia/fprt_adv02_graveyard/custodian_zaddar036.mp3", "", "", 931872980, 59948626, Player)
 	AddConversationOption(conversation, "Very well, I'm off.")

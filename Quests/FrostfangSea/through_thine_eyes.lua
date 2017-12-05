@@ -3,7 +3,7 @@
 	Script Purpose	:	for the quest Through Thine Eyes
 	Script Author	:	theFoof
 	Script Date		:	2013.6.10
-	Script Notes	:	
+	Script Notes	:
 
 	Zone			:	Frostfang Sea
 	Quest Giver		:	Thirin Veliumdelver
@@ -20,7 +20,7 @@ end
 function Accepted(Quest, QuestGiver, Player)
 	local thirin = GetSpawnByLocationID(GetZone(QuestGiver), 14520)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(thirin, "thirin_veliumdelver/halas/thirin_veliumdelver/thirin_veliumdelver016.mp3", "", "", 2746219212, 3926805260, Player)
 	AddConversationOption(conversation, "I'll let you know what I learn.")

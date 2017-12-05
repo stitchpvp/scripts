@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "Stepping Up the Offense"
 	Script Author	: Scatman
 	Script Date	: 2009.08.18
-	
+
 	Zone       : The Ruins
 	Quest Giver: Captain Arellius
 	Preceded by: Request Further Orders (requesting_further_orders.lua)
@@ -11,13 +11,13 @@
 --]]
 
 function Init(Quest)
-	AddQuestStepChat(Quest, 1, "I should locate Lieutenant Imperidus at the second Militia outpost in the Ruins and speak to her.", 1, "I have been ordered by the captain to report to Lieutenant Imperidus.", 0, 1270070) 
+	AddQuestStepChat(Quest, 1, "I should locate Lieutenant Imperidus at the second Militia outpost in the Ruins and speak to her.", 1, "I have been ordered by the captain to report to Lieutenant Imperidus.", 0, 1270070)
 	AddQuestStepCompleteAction(Quest, 1, "Quest_Complete")
 end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(QuestGiver, "voiceover/english/tutorial_revamp/captain_arellius/fprt_adv04_ruins/revamp/captain_arellius028.mp3", "", "", 11330989, 3299447227, Player)
 	AddConversationOption(conversation, "I understand, Captain.")

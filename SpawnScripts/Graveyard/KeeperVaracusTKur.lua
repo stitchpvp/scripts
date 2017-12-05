@@ -3,7 +3,7 @@
 	Script Purpose	: Keeper Varacus T'Kur
 	Script Author	: Scatman
 	Script Date	: 2009.07.11
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 local QUEST_1 = 232
@@ -15,13 +15,13 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
-	
+	local conversation = CreateConversation()
+
 	if HasCompletedQuest(Spawn, QUEST_1) then
 		if HasCompletedQuest(Spawn, QUEST_2) then
 			if HasCompletedQuest(Spawn, QUEST_5) then
@@ -56,7 +56,7 @@ end
 
 function dlg_9_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/keeper_varacus_t_kur/fprt_adv02_graveyard/varacus_tkur002.mp3", "", "", 1358191858, 2542564847, Spawn)
 	AddConversationOption(conversation, "My name is " .. GetName(Spawn) .. ". Zaddar sent me on behalf of the Academy.", "dlg_9_2")
@@ -66,7 +66,7 @@ end
 
 function dlg_9_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/keeper_varacus_t_kur/fprt_adv02_graveyard/varacus_tkur003.mp3", "", "", 3292551343, 1126004800, Spawn)
 	AddConversationOption(conversation, "You don't sound very respectful toward your superior.", "dlg_9_3")
@@ -76,7 +76,7 @@ end
 
 function dlg_9_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/keeper_varacus_t_kur/fprt_adv02_graveyard/varacus_tkur004.mp3", "", "", 2946582431, 2561170377, Spawn)
 	AddConversationOption(conversation, "Where does your order's name come from?", "dlg_9_4")
@@ -86,7 +86,7 @@ end
 
 function dlg_9_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/keeper_varacus_t_kur/fprt_adv02_graveyard/varacus_tkur005.mp3", "", "", 668156763, 3742751823, Spawn)
 	AddConversationOption(conversation, "A fascinating tale, but Zaddar sent me to retrieve some tome pages.", "dlg_9_5")
@@ -96,7 +96,7 @@ end
 
 function dlg_9_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/keeper_varacus_t_kur/fprt_adv02_graveyard/varacus_tkur006.mp3", "", "", 1546096595, 964116993, Spawn)
 	AddConversationOption(conversation, "The Overlord will not be pleased. He commanded that Zaddar be given the pages.", "FindThePages")
@@ -108,7 +108,7 @@ function FindThePages(NPC, Spawn, conversation)
 	if HasQuest(Spawn, QUEST_1) then
 		SetStepComplete(Spawn, QUEST_1, 1)
 	end
-	
+
 	if conversation == nil then
 		FaceTarget(NPC, Spawn)
 		conversation = CreateConversation()
@@ -131,14 +131,14 @@ end
 
 function OnQuest2(NPC, Spawn, conversation)
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/keeper_varacus_t_kur/fprt_adv02_graveyard/varacus_tkur009.mp3", "", "", 3736503585, 3888829392, Spawn)
-	
+
 	if GetQuestStep(Spawn, QUEST_2) > 4 then
 		Say(NPC, "Please, don't tell anyone about our conversation!", Spawn)
 	else
 		if GetQuestStep(Spawn, QUEST_2) == 4 then
 			AddConversationOption(conversation, "I've found the missing pages.", "dlg_10_1")
 		end
-	
+
 		AddConversationOption(conversation, "Not yet, but I will keep looking.")
 		StartConversation(conversation, NPC, Spawn, "I hope your search for the missing pages has been fruitful. Neither of us can afford to disappoint the Overlord.")
 	end
@@ -146,7 +146,7 @@ end
 
 function dlg_10_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/keeper_varacus_t_kur/fprt_adv02_graveyard/varacus_tkur010.mp3", "", "", 3933639759, 3329980648, Spawn)
 	AddConversationOption(conversation, "By the Tower of Marr and near the graves of the fallen knights. Some were also in the possession of the undead.", "dlg_10_2")
@@ -156,7 +156,7 @@ end
 
 function dlg_10_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/keeper_varacus_t_kur/fprt_adv02_graveyard/varacus_tkur011.mp3", "", "", 3532304049, 948480083, Spawn)
 	AddConversationOption(conversation, "What could be causing this to happen?", "dlg_10_3")
@@ -166,7 +166,7 @@ end
 
 function dlg_10_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/keeper_varacus_t_kur/fprt_adv02_graveyard/varacus_tkur012.mp3", "", "", 422855190, 220610803, Spawn)
 	AddConversationOption(conversation, "I will take the pages to him.", "dlg_10_4")
@@ -176,9 +176,9 @@ end
 
 function dlg_10_4(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_2, 4)
-	
+
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/keeper_varacus_t_kur/fprt_adv02_graveyard/varacus_tkur013.mp3", "", "", 2923473609, 4294205867, Spawn)
 	AddConversationOption(conversation, "I will do so. I hope to work with you again, Varacus.")
@@ -203,7 +203,7 @@ end
 
 function dlg_13_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/keeper_varacus_t_kur/fprt_adv02_graveyard/varacus_tkur016.mp3", "", "", 2481073188, 86162182, Spawn)
 	AddConversationOption(conversation, "No, he needs the Staff of Ethernere.", "dlg_13_2")
@@ -213,7 +213,7 @@ end
 
 function dlg_13_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/keeper_varacus_t_kur/fprt_adv02_graveyard/varacus_tkur017.mp3", "", "", 722192907, 1883808749, Spawn)
 	AddConversationOption(conversation, "But Zaddar says it is critical that he use it.", "dlg_13_3")
@@ -223,7 +223,7 @@ end
 
 function dlg_13_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/keeper_varacus_t_kur/fprt_adv02_graveyard/varacus_tkur018.mp3", "", "", 821574395, 1723573145, Spawn)
 	AddConversationOption(conversation, "The ward keeping the undead inside the Graveyard is failing, and we need the staff to restore it.", "dlg_13_4")
@@ -233,7 +233,7 @@ end
 
 function dlg_13_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/keeper_varacus_t_kur/fprt_adv02_graveyard/varacus_tkur019.mp3", "", "", 3925056079, 4036271614, Spawn)
 	AddConversationOption(conversation, "There's no time, Varacus. We must do this ourselves.", "dlg_13_5")
@@ -243,7 +243,7 @@ end
 
 function dlg_13_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/keeper_varacus_t_kur/fprt_adv02_graveyard/varacus_tkur020.mp3", "", "", 2024157770, 1751672495, Spawn)
 	AddConversationOption(conversation, "I'll let him know.", "dlg_13_6")
@@ -253,10 +253,10 @@ end
 
 function dlg_13_6(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_5, 1)
-	
+
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
-	
+	local conversation = CreateConversation()
+
 	-- The Staff of Ethernere
 	-- TODO: Show quest reward popup.
 	if not HasItem(Spawn, 21591) then

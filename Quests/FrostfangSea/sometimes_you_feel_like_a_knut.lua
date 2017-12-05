@@ -3,7 +3,7 @@
 	Script Purpose	:	the quest "Sometimes You Feel Like A Knut"
 	Script Author	:	theFoof
 	Script Date		:	2013.8.11
-	Script Notes	:	
+	Script Notes	:
 
 	Zone			:	Frostfang Sea
 	Quest Giver		:	Knut Orcbane
@@ -20,10 +20,10 @@ end
 function Accepted(Quest, QuestGiver, Player)
 	SummonItem(Player, 157116)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
-	
+	local conversation = CreateConversation()
+
 	AddConversationOption(conversation, "Wonderful.")
-	StartConversation(conversation, NPC, Spawn, "You must wear him in order to hear him.  Now, promise to bring him back -safe and sound.  And do not be swayed by his bloodlust. He often forgets he no longer has claws.")
+	StartConversation(conversation, QuestGiver, Player, "You must wear him in order to hear him.  Now, promise to bring him back -safe and sound.  And do not be swayed by his bloodlust. He often forgets he no longer has claws.")
 end
 
 function Deleted(Quest, QuestGiver, Player)

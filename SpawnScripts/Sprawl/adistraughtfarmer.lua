@@ -1,16 +1,16 @@
 --[[
 	Script Name	: SpawnScripts/Sprawl/adistraughtfarmer.lua
-	Script Purpose	: a distraught farmer 
+	Script Purpose	: a distraught farmer
 	Script Author	: Scatman
 	Script Date	: 2009.07.26
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)

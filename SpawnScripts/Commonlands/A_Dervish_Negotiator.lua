@@ -6,10 +6,10 @@ function spawn(NPC)
   SetTimer(NPC)
 end
 
-function hailed(NPC, Spawn) 
+function hailed(NPC, Spawn)
   FaceTarget(NPC, Spawn)
   PlayAnimation(NPC, 11649, Spawn, 1)
-end 
+end
 
 function SetTimer(NPC)
   local choice = math.random(1,3)
@@ -18,7 +18,7 @@ function SetTimer(NPC)
   elseif choice == 2 then
     AddTimer(NPC, timerfast, "DoAnimation2")
   elseif choice == 3 then
-    AddTimer(NPC, timerslow, "DoAnimation3")  
+    AddTimer(NPC, timerslow, "DoAnimation3")
   end
 end
 

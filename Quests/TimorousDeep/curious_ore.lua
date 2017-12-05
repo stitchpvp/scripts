@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "Curious Ore"
 	Script Author	: Scatman
 	Script Date	: 2009.02.06
-	
+
 	Zone       : Timorous Deep
 	Quest Giver: Tykor Gi'Lok
 	Preceded by: Poaching the Poachers (poaching_the_poachers.lua)
@@ -24,7 +24,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(QuestGiver, "voiceover/english/rok_questvo/tykor_gi_lok/_exp04/exp04_rgn_timorous_deep/chrykori_tie/gilok/gilok004.mp3", "", "", 2401252534, 3431113694, Player)
 	AddConversationOption(conversation, "I will return with the ore.")
@@ -36,7 +36,7 @@ end
 
 function step1_complete_gotOre(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 1, "I have the ore samples.")
-	
+
 	AddQuestStepChat(Quest, 2, "I need to bring these ore samples back to Tykor Gi'Lok.", 1, ".", 1086, 2630018)
 	AddQuestStepCompleteAction(Quest, 2, "quest_complete")
 end

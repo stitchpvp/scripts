@@ -1,26 +1,24 @@
 --[[
 	Script Name	: SpawnScripts/Ruins/VisageoftheOverlord.lua
-	Script Purpose	: Visage of the Overlord 
+	Script Purpose	: Visage of the Overlord
 	Script Author	: Scatman
 	Script Date	: 2009.08.02
-	Script Notes	: 
+	Script Notes	:
 --]]
 
-local choice = 0
-
 function spawn(NPC)
-	AddTime(NPC, 300000, "Talk1")
+	AddTimer(NPC, 300000, "Talk1")
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 
-	local choice = math.random(1,14)
 --[[
+	local choice = math.random(1,14)
 	if choice == 1 then
 		PlayFlavor(NPC, "voiceover/english/overlord_lucan_d_lere/fprt_west/lucan_isle_speech_5.mp3", "Prove yourself, and I shall grant you shelter at the edge of my city, and the chance to earn your place as a proud citizen of Freeport.", "", 4115014723, 2723692261, Spawn)
 	elseif choice == 2 then
@@ -55,7 +53,7 @@ function hailed(NPC, Spawn)
 end
 
 function Talk1(NPC)
-	choice = math.random(1, 3)
+	local choice = math.random(1, 3)
 	if choice == 1 then
 		Say(NPC, "Teach my enemies of the price of challenging Freeport, and you shall have gold and glory beyond your imagining.")
 		AddTimer(NPC, 300000, "Talk1")

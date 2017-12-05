@@ -3,7 +3,7 @@
 	Script Purpose	: a Ry'Gorr shock trooper
 	Script Author	: theFoof
 	Script Date	: 2013.10.30
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 function spawn(NPC)
@@ -12,7 +12,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)

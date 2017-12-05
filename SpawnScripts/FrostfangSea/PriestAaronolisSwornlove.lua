@@ -1,9 +1,9 @@
 --[[
 	Script Name	: SpawnScripts/FrostfangSea/PriestAaronolisSwornlove.lua
-	Script Purpose	: Priest Aaronolis Swornlove 
+	Script Purpose	: Priest Aaronolis Swornlove
 	Script Author	: theFoof
 	Script Date	: 2013.09.16
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 function spawn(NPC)
@@ -11,7 +11,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)
@@ -31,7 +31,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_3_1054.mp3", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Is that a statue of her?", "Chat1")
@@ -40,7 +40,7 @@ end
 
 function Chat1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	AddConversationOption(conversation, "It is not what I would have expected her to look like.", "Chat2")
 	AddConversationOption(conversation, "It is pretty.", "Chat4")
 	StartConversation(conversation, NPC, Spawn, "It is!  It was sculpted by the Forge Lord, Varig Ro, and presented to Mithaniel Marr prior to Erollisi's self sacrifice.  Varig truly captured her loving presence while still honoring her skill for hunting.")
@@ -48,7 +48,7 @@ end
 
 function Chat2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "How did it end up here?", "Chat3")
 	AddConversationOption(conversation, "I see what you mean.  Good day.")
@@ -57,7 +57,7 @@ end
 
 function Chat3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "Thank you for sharing this with me.")
 	StartConversation(conversation, NPC, Spawn, "Mithaniel blessed us!  He placed it here to share it with the world to serve as a reminder and spiritual inspiration to all.  It reminds us of what she stood for and what there is to continue fighting for.")
@@ -65,7 +65,7 @@ end
 
 function Chat4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "Good day, Priest Swornlove.")
 	StartConversation(conversation, NPC, Spawn, "I am glad you think so, too.")

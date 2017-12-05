@@ -3,24 +3,24 @@
 	Script Purpose	:	Handles the quest, "Sparkly or Nothing"
 	Script Author	:	QuestParser (Replace this)
 	Script Date		:	7/8/2017
-	Script Notes	:	
+	Script Notes	:
 
 	Zone			:	Antonica
-	Quest Giver		:	
+	Quest Giver		:
 	Preceded by		:	None
 	Followed by		:	None
 --]]
 
 
 function Init(Quest)
-	AddQuestStepKill(Quest, 1, "I need to hunt granitescale basilisks.", 10, 100, "Licha has asked me to hunt granitescale basilisks to get the shiniest scales I can find.", 84, --[[ ID's --]])
+	AddQuestStepKill(Quest, 1, "I need to hunt granitescale basilisks.", 10, 100, "Licha has asked me to hunt granitescale basilisks to get the shiniest scales I can find.", 84, nil)
 	AddQuestStepCompleteAction(Quest, 1, "Step1Complete")
 end
 
 function Step1Complete(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 1, "I have found the scales.")
 
-	AddQuestStepKill(Quest, 2, "To make these scales even shinier, I could use the oils that come from darkclaw crabs.", 1, 100, "Licha has asked me to hunt granitescale basilisks to get the shiniest scales I can find.", 139, --[[ ID's --]])
+	AddQuestStepKill(Quest, 2, "To make these scales even shinier, I could use the oils that come from darkclaw crabs.", 1, 100, "Licha has asked me to hunt granitescale basilisks to get the shiniest scales I can find.", 139, nil)
 	AddQuestStepCompleteAction(Quest, 2, "Step2Complete")
 end
 
@@ -28,7 +28,7 @@ function Step2Complete(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 2, "I have made these scales very shiny.")
 	UpdateQuestTaskGroupDescription(Quest, 1, "I found some very shiny scales.")
 
-	AddQuestStepChat(Quest, 3, "I should take these scales to Licha.", 1, "I found the scales that Licha wanted. I should probably take them to her.", 84, --[[ ID's --]])
+	AddQuestStepChat(Quest, 3, "I should take these scales to Licha.", 1, "I found the scales that Licha wanted. I should probably take them to her.", 84, nil)
 	AddQuestStepCompleteAction(Quest, 3, "QuestComplete")
 end
 

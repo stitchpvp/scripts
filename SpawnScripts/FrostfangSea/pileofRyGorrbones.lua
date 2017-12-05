@@ -3,7 +3,7 @@
 	Script Purpose	:	for the spawn "pile of Ry'Gorr bones"
 	Script Author	:	theFoof
 	Script Date		:	2013.5.29
-	Script Notes	:	
+	Script Notes	:
 --]]
 local TheGauntlet = 36
 
@@ -14,7 +14,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function casted_on(NPC, Spawn, SpellName)
@@ -33,7 +33,7 @@ function casted_on(NPC, Spawn, SpellName)
             SpawnSet(NPC, "visual_state", "491")
             AddTimer(NPC, 4000, "depop")
             AddStepProgress(Spawn, PouringSkellies, 1, 1)
-            SendMessage(Player, "You have poured Fronden's Finest on the orc bones.")
+            SendMessage(Spawn, "You have poured Fronden's Finest on the orc bones.")
         end
 	end
 end

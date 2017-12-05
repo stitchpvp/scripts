@@ -3,7 +3,7 @@
 	Script Purpose	:	paladin trainer
 	Script Author	:	theFoof
 	Script Date		:	2013.9.24
-	Script Notes	:	
+	Script Notes	:
 --]]
 
 local PALADIN = 10
@@ -12,7 +12,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
@@ -29,7 +29,7 @@ function hailed(NPC, Spawn)
 end
 
 function PalChat1(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	FaceTarget(NPC, Spawn)
 
 	AddConversationOption(conversation, "That's useful to know!", "PalChat2")
@@ -37,15 +37,15 @@ function PalChat1(NPC, Spawn)
 end
 
 function PalChat2(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	FaceTarget(NPC, Spawn)
-	
+
 	AddConversationOption(conversation, "That's reassuring.", "PalChat3")
 	StartConversation(conversation, NPC, Spawn, "Know the power you wield.  You have been called into this service, to become a sword of valor, a servant to the divine, smiting oppressors and followers of the dark no matter if they attack one at a time or as a horde.")
 end
 
 function PalChat3(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	FaceTarget(NPC, Spawn)
 
 	AddConversationOption(conversation, "That will be useful!", "PalChat4")
@@ -53,7 +53,7 @@ function PalChat3(NPC, Spawn)
 end
 
 function PalChat4(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	FaceTarget(NPC, Spawn)
 
 	AddConversationOption(conversation, "That's interesting.", "PalChat5")
@@ -61,7 +61,7 @@ function PalChat4(NPC, Spawn)
 end
 
 function PalChat5(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	FaceTarget(NPC, Spawn)
 
 	AddConversationOption(conversation, "Thank you for the advice.")

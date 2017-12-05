@@ -1,6 +1,6 @@
 --[[
 	Script Name	: SpawnScripts/TimorousDeep/TertiaryMakKi.lua
-	Script Purpose	: Tertiary Mak'Ki 
+	Script Purpose	: Tertiary Mak'Ki
 	Script Author	: John Adams
 	Script Date	: 2009.02.22
 	Script Notes	: Auto-Generated Conversation from PacketParser Data
@@ -15,13 +15,13 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
-	
+	local conversation = CreateConversation()
+
 	if HasCompletedQuest(Spawn, QUEST_1) then
 		if HasCompletedQuest(Spawn, QUEST_2) then
 			Say(NPC, "We are done.", Spawn)
@@ -58,7 +58,7 @@ function DidYouFindThem(NPC, Spawn, conversation)
 	else
 		AddConversationOption(conversation, "No.")
 	end
-	
+
 	PlayFlavor(NPC, "voiceover/english/rok_questvo/tertiary_mak_ki/_exp04/exp04_rgn_timorous_deep/chrykori_tie/makki/makki002.mp3", "", "", 2068402346, 4245581855, Spawn)
 	StartConversation(conversation, NPC, Spawn, "Did you find them?")
 end
@@ -67,9 +67,9 @@ function dlg_31_1(NPC, Spawn)
 	if HasQuest(Spawn, QUEST_1) then
 		SetStepComplete(Spawn, QUEST_1, 2)
 	end
-	
+
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/rok_questvo/tertiary_mak_ki/_exp04/exp04_rgn_timorous_deep/chrykori_tie/makki/makki003.mp3", "", "", 2020057663, 3501237642, Spawn)
 	AddConversationOption(conversation, "All right, I'll deliver them.", "OfferQuest2")

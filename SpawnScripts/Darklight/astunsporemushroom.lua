@@ -2,8 +2,8 @@
     Script Name    : SpawnScripts/Darklight/astunsporemushroom.lua
     Script Author  : Cynnar
     Script Date    : 2016.05.02 07:05:08
-    Script Purpose : 
-                   : 
+    Script Purpose :
+                   :
 --]]
 
 function spawn(NPC)

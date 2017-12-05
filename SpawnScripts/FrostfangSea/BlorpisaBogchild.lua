@@ -1,9 +1,9 @@
 --[[
 	Script Name	: SpawnScripts/FrostfangSea/BlorpisaBogchild.lua
-	Script Purpose	: Blorpisa Bogchild 
+	Script Purpose	: Blorpisa Bogchild
 	Script Author	: theFoof
 	Script Date	: 2013.05.20
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 local ArcaneElements = 19
@@ -30,7 +30,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function SpawnAccess(NPC, Spawn)
@@ -41,7 +41,7 @@ end
 
 function hailed(NPC, Spawn)
     FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 	if HasCompletedQuest(Spawn, ArcaneElements) == false and HasQuest(Spawn, ArcaneElements) == false then
         PlayFlavor(NPC, "blorpisa_bogchild/halas/gwenevyns_cove/blorpisa_bogchild/blorpisa_bogchild_001.mp3", "", "", 1215134818, 256392720, Spawn)
 	    AddConversationOption(conversation, "Hello Blorpisa, I am " .. GetName(Spawn) .. ".", "Quest1Chat_2")
@@ -120,7 +120,7 @@ end
 
 function Quest1Chat_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "blorpisa_bogchild/halas/gwenevyns_cove/blorpisa_bogchild/blorpisa_bogchild_011.mp3", "", "", 846938752, 844089056, Spawn)
 	AddConversationOption(conversation, "I'm on my way to New Halas.", "Quest1Chat_3")
@@ -129,7 +129,7 @@ end
 
 function Quest1Chat_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "blorpisa_bogchild/halas/gwenevyns_cove/blorpisa_bogchild/blorpisa_bogchild_012.mp3", "", "", 3605255838, 2576534049, Spawn)
 	AddConversationOption(conversation, "How will you cast the spell on all of the pilgrims?", "Quest1Chat_4")
@@ -138,7 +138,7 @@ end
 
 function Quest1Chat_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "blorpisa_bogchild/halas/gwenevyns_cove/blorpisa_bogchild/blorpisa_bogchild_013.mp3", "", "", 970695236, 4167602091, Spawn)
 	AddConversationOption(conversation, "What if they can't read? What if they have children with them?", "Quest1Chat_5")
@@ -147,7 +147,7 @@ end
 
 function Quest1Chat_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "blorpisa_bogchild/halas/gwenevyns_cove/blorpisa_bogchild/blorpisa_bogchild_014.mp3", "", "", 947009240, 1540493739, Spawn)
 	AddConversationOption(conversation, "Well this all sounds very technical to me.", "Quest1Chat_6")
@@ -156,7 +156,7 @@ end
 
 function Quest1Chat_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "blorpisa_bogchild/halas/gwenevyns_cove/blorpisa_bogchild/blorpisa_bogchild_015.mp3", "", "", 1255109690, 1640879678, Spawn)
 	AddConversationOption(conversation, "What kind of help do you need?", "Quest1Chat_7")
@@ -166,8 +166,8 @@ end
 
 function Quest1Chat_7(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
-	
+	local conversation = CreateConversation()
+
 	PlayFlavor(NPC, "blorpisa_bogchild/halas/gwenevyns_cove/blorpisa_bogchild/blorpisa_bogchild_016.mp3", "", "", 1464127042, 4108357478, Spawn)
 	AddConversationOption(conversation, "I sure could.", "OfferArcaneElements")
 	AddConversationOption(conversation, "No, unfortunately.")
@@ -176,7 +176,7 @@ end
 
 function Quest1Chat_8(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "blorpisa_bogchild/halas/great_shelf/blorpisa_bogchild/blorpisa_bogchild_016.mp3", "", "", 717321044, 3158147617, Spawn)
 	AddConversationOption(conversation, "I shall return to you once I have collected the weapons.")
@@ -185,7 +185,7 @@ end
 
 function Quest1Chat_9(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "blorpisa_bogchild/halas/gwenevyns_cove/blorpisa_bogchild/blorpisa_bogchild_018.mp3", "", "", 2448606843, 4112204434, Spawn)
 	AddConversationOption(conversation, "Let me know if it turns out successful!", "Quest1Chat_10")
@@ -195,7 +195,7 @@ end
 function Quest1Chat_10(NPC, Spawn)
     SetStepComplete(Spawn, ArcaneElements, 2)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "blorpisa_bogchild/halas/gwenevyns_cove/blorpisa_bogchild/blorpisa_bogchild_022.mp3", "", "", 2006824864, 3295508205, Spawn)
 	AddConversationOption(conversation, "If you need help with anything else, please ask me. I am glad to help others here in New Halas.")
@@ -205,7 +205,7 @@ end
 
 function Quest2Chat_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "blorpisa_bogchild/halas/gwenevyns_cove/blorpisa_bogchild/blorpisa_bogchild_023.mp3", "", "", 1753584306, 4118176236, Spawn)
 	AddConversationOption(conversation, "Need any help?", "Quest2Chat_3")
@@ -214,7 +214,7 @@ end
 
 function Quest2Chat_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "blorpisa_bogchild/halas/gwenevyns_cove/blorpisa_bogchild/blorpisa_bogchild_024.mp3", "", "", 4187781831, 3119266103, Spawn)
 	AddConversationOption(conversation, "I will go and get the unmarred fur pelts for you.", "OfferBearBottoms")
@@ -224,7 +224,7 @@ end
 
 function Quest2Chat_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "blorpisa_bogchild/halas/gwenevyns_cove/blorpisa_bogchild/blorpisa_bogchild_025.mp3", "", "", 3290905220, 1893346275, Spawn)
 	AddConversationOption(conversation, "I will return to you once I have gathered the pelts.")
@@ -233,15 +233,15 @@ end
 
 function Quest2Chat_5(NPC, Spawn)
     FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
-	
+	local conversation = CreateConversation()
+
 	AddConversationOption(conversation, "I will return with the pelts.")
     StartConversation(conversation, NPC, Spawn, "The cubs roam northwest of Gwenevyn's Cove.")
 end
 
 function Quest2Chat_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "blorpisa_bogchild/halas/gwenevyns_cove/blorpisa_bogchild/blorpisa_bogchild_026.mp3", "", "", 1759018155, 1598876766, Spawn)
 	AddConversationOption(conversation, "Thank you. I did my best.", "Quest2Chat_7")
@@ -251,7 +251,7 @@ end
 function Quest2Chat_7(NPC, Spawn)
     SetStepComplete(Spawn, BearBottoms, 2)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "blorpisa_bogchild/halas/gwenevyns_cove/blorpisa_bogchild/blorpisa_bogchild_028.mp3", "", "", 3080889721, 2381851654, Spawn)
 	AddConversationOption(conversation, "Thanks, Blorpisa. I appreciate it.")
@@ -260,7 +260,7 @@ end
 
 function Quest3Chat_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "blorpisa_bogchild/halas/gwenevyns_cove/blorpisa_bogchild/blorpisa_bogchild_029.mp3", "", "", 1210199796, 2166040902, Spawn)
 	AddConversationOption(conversation, "The nerve of some people!", "Quest3Chat_2")
@@ -269,7 +269,7 @@ end
 
 function Quest3Chat_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "blorpisa_bogchild/halas/gwenevyns_cove/blorpisa_bogchild/blorpisa_bogchild_030.mp3", "", "", 14855483, 1166912182, Spawn)
 	AddConversationOption(conversation, "The Frostfang Sea didn't seem too cold to me.", "Quest3Chat_3")
@@ -279,7 +279,7 @@ end
 
 function Quest3Chat_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "blorpisa_bogchild/halas/gwenevyns_cove/blorpisa_bogchild/blorpisa_bogchild_031.mp3", "", "", 2157156103, 1975601374, Spawn)
 	AddConversationOption(conversation, "I can get the Iceclad cod for you.", "OfferCodChips")
@@ -289,7 +289,7 @@ end
 
 function Quest3Chat_4(NPC, Spawn)
     FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "I will return with enough cod for everyone's dinner.")
 	StartConversation(conversation, NPC, Spawn, "The large Iceclad cod swim in the Frostfang Sea northeast of Gwenevyn's Cove.")
@@ -297,7 +297,7 @@ end
 
 function Quest3Chat_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "blorpisa_bogchild/halas/gwenevyns_cove/blorpisa_bogchild/blorpisa_bogchild_033.mp3", "", "", 2508783935, 568039203, Spawn)
 	AddConversationOption(conversation, "I am glad that I was able to help you out.", "Quest3Chat_6")
@@ -307,7 +307,7 @@ end
 function Quest3Chat_6(NPC, Spawn)
     SetStepComplete(Spawn, CodChips, 2)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "blorpisa_bogchild/halas/gwenevyns_cove/blorpisa_bogchild/blorpisa_bogchild_035.mp3", "", "", 787726717, 3426749776, Spawn)
 	AddConversationOption(conversation, "It's more than enough. Thank you, Blorpisa.")
@@ -316,7 +316,7 @@ end
 
 function Quest4Chat_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "blorpisa_bogchild/halas/gwenevyns_cove/blorpisa_bogchild/blorpisa_bogchild_036.mp3", "", "", 3721924071, 2621057833, Spawn)
 	AddConversationOption(conversation, "Is there anything I can do to help?", "Quest4Chat_3")
@@ -325,7 +325,7 @@ end
 
 function Quest4Chat_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "blorpisa_bogchild/halas/gwenevyns_cove/blorpisa_bogchild/blorpisa_bogchild_037.mp3", "", "", 2815442129, 1528606877, Spawn)
 	AddConversationOption(conversation, "I can capture some elementals for you.", "Quest4Chat_4")
@@ -335,7 +335,7 @@ end
 
 function Quest4Chat_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "blorpisa_bogchild/halas/gwenevyns_cove/blorpisa_bogchild/blorpisa_bogchild_038.mp3", "", "", 3909457491, 3153535025, Spawn)
 	AddConversationOption(conversation, "I am sure I can handle a few small elementals.", "OfferEssentialIngredient")
@@ -344,7 +344,7 @@ end
 
 function Quest4Chat_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "blorpisa_bogchild/halas/gwenevyns_cove/blorpisa_bogchild/blorpisa_bogchild_041.mp3", "", "", 502468794, 246049475, Spawn)
 	AddConversationOption(conversation, "I will return once I have captured the elementals.")
@@ -353,7 +353,7 @@ end
 
 function Quest4Chat_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "blorpisa_bogchild/halas/gwenevyns_cove/blorpisa_bogchild/blorpisa_bogchild_040.mp3", "", "", 3949759324, 1772100940, Spawn)
 	AddConversationOption(conversation, "I am glad that you are pleased with my efforts.", "Quest4Chat_7")
@@ -362,7 +362,7 @@ end
 
 function Quest4Chat_7(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "blorpisa_bogchild/halas/gwenevyns_cove/blorpisa_bogchild/blorpisa_bogchild_042.mp3", "", "", 301178077, 3194637507, Spawn)
 	AddConversationOption(conversation, "It is the right thing to do.", "Quest4Chat_8")
@@ -372,7 +372,7 @@ end
 function Quest4Chat_8(NPC, Spawn)
     SetStepComplete(Spawn, EssentialIngredient, 3)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "blorpisa_bogchild/halas/gwenevyns_cove/blorpisa_bogchild/blorpisa_bogchild_044.mp3", "", "", 4160372502, 1958782481, Spawn)
 	AddConversationOption(conversation, "I will return if you need help.")
@@ -381,7 +381,7 @@ end
 
 function Quest5Chat_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "blorpisa_bogchild/halas/gwenevyns_cove/blorpisa_bogchild/blorpisa_bogchild_045.mp3", "", "", 2755043591, 501739216, Spawn)
 	AddConversationOption(conversation, "Sure! This is exciting!", "Quest5Chat_3")
@@ -391,7 +391,7 @@ end
 
 function Quest5Chat_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "blorpisa_bogchild/halas/gwenevyns_cove/blorpisa_bogchild/blorpisa_bogchild_046.mp3", "", "", 2185186057, 1637729185, Spawn)
 	AddConversationOption(conversation, "I know, Blorpisa.", "Quest5Chat_4")
@@ -401,7 +401,7 @@ end
 
 function Quest5Chat_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "blorpisa_bogchild/halas/gwenevyns_cove/blorpisa_bogchild/blorpisa_bogchild_047.mp3", "", "", 2602829291, 2631146795, Spawn)
 	AddConversationOption(conversation, "Is there anything else you need gathered?", "Quest5Chat_5")
@@ -410,7 +410,7 @@ end
 
 function Quest5Chat_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "blorpisa_bogchild/halas/gwenevyns_cove/blorpisa_bogchild/blorpisa_bogchild_048.mp3", "", "", 1989757627, 78481858, Spawn)
 	AddConversationOption(conversation, "Where can I find these ice lilies?", "OfferFieldTesting")
@@ -418,16 +418,16 @@ function Quest5Chat_5(NPC, Spawn)
 end
 
 function Quest5Chat_6(NPC, Spawn)
-    FaceTargget(NPC, Spawn)
-	conversation = CreateConversation()
-	
+    FaceTarget(NPC, Spawn)
+	local conversation = CreateConversation()
+
 	AddConversationOption(conversation, "I shall return with the lilies as soon as I am able")
 	StartConversation(conversation, NPC, Spawn, "You can find the ice lilies on the Icemane Plains west of here. I have also refreshed the Frost-born Ward upon you as it seemed to be very weak.")
 end
 
 function Quest5Chat_7(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "blorpisa_bogchild/halas/gwenevyns_cove/blorpisa_bogchild/blorpisa_bogchild_050.mp3", "", "", 2480968598, 2345683156, Spawn)
 	AddConversationOption(conversation, "It didn't work at all. I was attacked by every lion that I came across.", "Quest5Chat_8")
@@ -436,7 +436,7 @@ end
 
 function Quest5Chat_8(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "blorpisa_bogchild/halas/gwenevyns_cove/blorpisa_bogchild/blorpisa_bogchild_052.mp3", "", "", 1918897363, 1844692964, Spawn)
 	AddConversationOption(conversation, "I understand your dilemma.", "Quest5Chat_9")
@@ -445,7 +445,7 @@ end
 
 function Quest5Chat_9(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "blorpisa_bogchild/halas/gwenevyns_cove/blorpisa_bogchild/blorpisa_bogchild_053.mp3", "", "", 4064573044, 3063721552, Spawn)
 	AddConversationOption(conversation, "Yes, I can handle lions, bears and other creatures just fine.", "Quest5Chat_10")
@@ -455,7 +455,7 @@ end
 function Quest5Chat_10(NPC, Spawn)
     SetStepComplete(Spawn, FieldTesting, 2)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "blorpisa_bogchild/halas/gwenevyns_cove/blorpisa_bogchild/blorpisa_bogchild_054.mp3", "", "", 1222972448, 2143317846, Spawn)
 	AddConversationOption(conversation, "I will refresh myself and return to you once I am ready.")
@@ -464,7 +464,7 @@ end
 
 function Quest6Chat_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "blorpisa_bogchild/halas/gwenevyns_cove/blorpisa_bogchild/blorpisa_bogchild_055.mp3", "", "", 2588594475, 1367979821, Spawn)
 	AddConversationOption(conversation, "Where shall I go to test the spell this time?", "Quest6Chat_3")
@@ -474,7 +474,7 @@ end
 
 function Quest6Chat_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "blorpisa_bogchild/halas/gwenevyns_cove/blorpisa_bogchild/blorpisa_bogchild_056.mp3", "", "", 3655265348, 981674489, Spawn)
 	AddConversationOption(conversation, "I shall head to Pride Overlook.", "OfferFieldTwo")
@@ -483,16 +483,16 @@ end
 
 function Quest6Chat_4(NPC, Spawn)
     FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
-	
+	local conversation = CreateConversation()
+
 	AddConversationOption(conversation, "I will return to you once I have properly tested your spell.")
 	StartConversation(conversation, NPC, Spawn, "Pride Overlook is on the Icemane Plains. It is west of Gwenevyn's Cove. I have also refeshed the Frost-born Ward upon you as it seemed to be very weak.")
 end
 
 function Quest6Chat_5(NPC, Spawn)
     FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
-	
+	local conversation = CreateConversation()
+
 	PlayFlavor(NPC, "blorpisa_bogchild/halas/gwenevyns_cove/blorpisa_bogchild/blorpisa_bogchild_058.mp3", "", "", 3927456133, 2378795664, Spawn)
 	AddConversationOption(conversation, "Well, it didn't.", "Quest6Chat_6")
 	StartConversation(conversation, NPC, Spawn, "I am terribly sorry! I really thought it would work this time!")
@@ -500,7 +500,7 @@ end
 
 function Quest6Chat_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "blorpisa_bogchild/halas/gwenevyns_cove/blorpisa_bogchild/blorpisa_bogchild_060.mp3", "", "", 1746628301, 1931600273, Spawn)
 	AddConversationOption(conversation, "Maybe I will see you there.", "Quest6Chat_7")
@@ -510,7 +510,7 @@ end
 function Quest6Chat_7(NPC, Spawn)
     SetStepComplete(Spawn, FieldTwo, 2)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "blorpisa_bogchild/halas/gwenevyns_cove/blorpisa_bogchild/blorpisa_bogchild_061.mp3", "", "", 2498685853, 3116008120, Spawn)
 	AddConversationOption(conversation, "Thank you, Blorpisa.")

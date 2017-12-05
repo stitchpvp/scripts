@@ -1,5 +1,5 @@
 --[[
-	Script Name	: Quests/FrostfangSea/araidingsporetender.lua 
+	Script Name	: Quests/FrostfangSea/araidingsporetender.lua
 	Script Purpose	: the spawn "a raiding sporetender"
 	Script Author	: theFoof
 	Script Date	: 2013.5.14
@@ -13,7 +13,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-    spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)

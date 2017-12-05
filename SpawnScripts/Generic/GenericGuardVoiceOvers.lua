@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the generic hails for guards.
 	Script Author	: Scatman
 	Script Date	: 2009.09.15
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 local BARBARIAN = 0
@@ -36,10 +36,8 @@ function GenericGuardHail(NPC, Spawn, Faction)
 	if NPC ~= nil then
 		local race = GetRace(NPC)
 		local gender = GetGender(NPC)
-		
+
 		if race >= 0 and race <= 18 and gender >= 1 and gender <= 2 then
-			local file_option = math.random(1, 3)
-			local file_race_gender = 0
 			if race == BARBARIAN then
 				if gender == MALE then
 					local choice = math.random(1, 4)
@@ -89,7 +87,7 @@ function GenericGuardHail(NPC, Spawn, Faction)
 						PlayFlavor(NPC, "voiceover/english/dwarf_eco_good_1/ft/service/guard/dwarf_guard_service_good_1_hail_gm_ebfceda5.mp3", "Greetings, citizen. I am on guard duty. Should you get into trouble, seek me out.", "attention", 1717559969, 1730005307, Spawn)
 					elseif choice == 4 then
 						PlayFlavor(NPC, "voiceover/english/dwarf_eco_good_1/ft/service/guard/dwarf_guard_service_good_1_hail_gm_ee473c11.mp3", "Good day to you citizen, all preserve Queen Antonia.", "salute", 2539353309, 3288832983, Spawn)
-					end	
+					end
 				elseif gender == FEMALE then
 					local choice = math.random(1, 4)
 					if choice == 1 then

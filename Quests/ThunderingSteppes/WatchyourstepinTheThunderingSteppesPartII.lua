@@ -2,7 +2,7 @@
     Script Name    : Quests/ThunderingSteppes/WatchyourstepinTheThunderingSteppesPartII.lua
     Script Author  : Jabantiz
     Script Date    : 2014.07.05 10:07:39
-    Script Purpose : 
+    Script Purpose :
 
         Zone       : ThunderingSteppes
         Quest Giver: Jacques
@@ -34,11 +34,11 @@ function Step3Complete(Quest, QuestGiver, Player)
 end
 
 function Accepted(Quest, QuestGiver, Player)
-	FaceTarget(NPC, Player)
-	conversation = CreateConversation()
+	FaceTarget(QuestGiver, Player)
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "Okay.")
-	StartConversation(conversation, NPC, Player, "That's the spirit! Here, take this letter to a gnome named Tish Tickers at guard tower three. She's being harassed by a collection agency again. They sound pretty serious now. I can't wait to see what her excuse for not paying will be this time. Come back when you have her reply.")
+	StartConversation(conversation, QuestGiver, Player, "That's the spirit! Here, take this letter to a gnome named Tish Tickers at guard tower three. She's being harassed by a collection agency again. They sound pretty serious now. I can't wait to see what her excuse for not paying will be this time. Come back when you have her reply.")
 end
 
 function Deleted(Quest, QuestGiver, Player)

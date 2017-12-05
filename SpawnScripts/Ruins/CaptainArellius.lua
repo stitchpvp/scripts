@@ -3,12 +3,12 @@
 	Script Purpose	: Captain Arellius <Freeport Militia>
 	Script Author	: Scatman
 	Script Date	: 2009.08.20
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 local QUEST_FROM_ZADDAR_GRAVEYARD = 251
 local QUEST_FROM_KURDEK_SPRAWL = 257
-local QUEST_COMMONLANDS = 1
+-- local QUEST_COMMONLANDS = 1
 local QUEST_FROM_THORSON_SUNKENCITY = 274
 local QUEST_1 = 262
 local QUEST_4_FROM_ARGOSIAN = 280
@@ -23,7 +23,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)
@@ -46,8 +46,8 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
-	
+	local conversation = CreateConversation()
+
 	if HasQuest(Spawn, QUEST_FROM_ZADDAR_GRAVEYARD) then
 		AddConversationOption(conversation, "My name is " .. GetName(Spawn) .. ". Custodian Zaddar in the Graveyard sent me.", "dlg_0_1")
 	end
@@ -87,7 +87,7 @@ function hailed(NPC, Spawn)
 
 --[[	if HasCompletedQuest(Spawn, 1) then
 	else
-		
+
 	end
 
 	if convo==1 then
@@ -118,8 +118,8 @@ function dlg_0_1(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_FROM_ZADDAR_GRAVEYARD, 1)
 
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
-	
+	local conversation = CreateConversation()
+
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/captain_arellius/fprt_adv04_ruins/revamp/captain_arellius002.mp3", "", "", 2619235941, 3755092214, Spawn)
 	AddConversationOption(conversation, "What is going on here?", "dlg_1_1")
 	AddConversationOption(conversation, "Defend it yourself.")
@@ -134,8 +134,8 @@ function FromTheSprawl(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_FROM_KURDEK_SPRAWL, 1)
 
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
-	
+	local conversation = CreateConversation()
+
 	AddConversationOption(conversation, "What is going on here?", "dlg_1_1")
 	AddConversationOption(conversation, "Defend it yourself.")
 	StartConversation(conversation, NPC, Spawn, "Zaddar informed me how you helped him keep the rival gangs of the Sprawl in check. The help of true heroes in Freeport like you is needed if we are to defend our city against the attack.")
@@ -149,8 +149,8 @@ function FromSunkenCity(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_FROM_THORSON_SUNKENCITY, 1)
 
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
-	
+	local conversation = CreateConversation()
+
 	AddConversationOption(conversation, "What is going on here?", "dlg_1_1")
 	AddConversationOption(conversation, "Defend it yourself.")
 	StartConversation(conversation, NPC, Spawn, "Thorson informed me how you helped uncover Curfield's plot to destroy Freeport. The help of true heroes of Freeport like you is needed if we are to defend our city against this attack.")
@@ -169,7 +169,7 @@ end
 
 function dlg_1_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/captain_arellius/fprt_adv04_ruins/revamp/captain_arellius005.mp3", "", "", 1356974238, 3910566628, Spawn)
 	if not HasQuest(Spawn, QUEST_1) and not HasCompletedQuest(Spawn, QUEST_1) then
@@ -182,7 +182,7 @@ end
 
 function dlg_1_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/captain_arellius/fprt_adv04_ruins/revamp/captain_arellius_solo007.mp3", "", "", 559510185, 2463184563, Spawn)
 	AddConversationOption(conversation, "Yes, I would like to travel to the Commonlands.", "OfferQuest_Commonlands")
@@ -193,7 +193,7 @@ end
 
 function dlg_1_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/captain_arellius/fprt_adv04_ruins/revamp/captain_arellius006.mp3", "", "", 1435383956, 2150191113, Spawn)
 	AddConversationOption(conversation, "What are these tribes called?", "dlg_1_4")
@@ -203,7 +203,7 @@ end
 
 function dlg_1_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/captain_arellius/fprt_adv04_ruins/revamp/captain_arellius007.mp3", "", "", 803622320, 3191751364, Spawn)
 	AddConversationOption(conversation, "Why is this place called the Ruins?", "dlg_2_4")
@@ -214,7 +214,7 @@ end
 
 function dlg_2_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/captain_arellius/fprt_adv04_ruins/revamp/captain_arellius008.mp3", "", "", 471952694, 1388761764, Spawn)
 	AddConversationOption(conversation, "This place used to have grand houses and shops?", "dlg_2_5")
@@ -224,7 +224,7 @@ end
 
 function dlg_2_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/captain_arellius/fprt_adv04_ruins/revamp/captain_arellius009.mp3", "", "", 2311879676, 4148126515, Spawn)
 	AddConversationOption(conversation, "What do you mean?", "dlg_2_6")
@@ -234,7 +234,7 @@ end
 
 function dlg_2_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/captain_arellius/fprt_adv04_ruins/revamp/captain_arellius010.mp3", "", "", 1270241224, 2005347889, Spawn)
 	AddConversationOption(conversation, "What happened then?", "dlg_2_7")
@@ -244,7 +244,7 @@ end
 
 function dlg_2_7(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/captain_arellius/fprt_adv04_ruins/revamp/captain_arellius011.mp3", "", "", 2984532909, 290696404, Spawn)
 	AddConversationOption(conversation, "Couldn't the Militia save them?", "dlg_2_8")
@@ -255,7 +255,7 @@ end
 
 function dlg_2_8(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/captain_arellius/fprt_adv04_ruins/revamp/captain_arellius012.mp3", "", "", 516488246, 2865302304, Spawn)
 	AddConversationOption(conversation, "What do you mean?", "dlg_2_9")
@@ -265,7 +265,7 @@ end
 
 function dlg_2_9(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/captain_arellius/fprt_adv04_ruins/revamp/captain_arellius013.mp3", "", "", 2907233969, 819802352, Spawn)
 	AddConversationOption(conversation, "So what became of the Ruins?", "dlg_2_10")
@@ -275,7 +275,7 @@ end
 
 function dlg_2_10(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/captain_arellius/fprt_adv04_ruins/revamp/captain_arellius014.mp3", "", "", 2462744754, 2263094364, Spawn)
 	AddConversationOption(conversation, "What caused this change?", "dlg_2_11")
@@ -285,7 +285,7 @@ end
 
 function dlg_2_11(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/captain_arellius/fprt_adv04_ruins/revamp/captain_arellius015.mp3", "", "", 3872903634, 4159828807, Spawn)
 	AddConversationOption(conversation, "How can I be of assistance?", "dlg_2_12")
@@ -295,7 +295,7 @@ end
 
 function dlg_2_12(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/captain_arellius/fprt_adv04_ruins/revamp/captain_arellius016.mp3", "", "", 3389775257, 1638630596, Spawn)
 	AddConversationOption(conversation, "I will do so.", "OfferQuest1")
@@ -315,7 +315,7 @@ end
 
 function dlg_2_14(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/captain_arellius/fprt_adv04_ruins/revamp/captain_arellius018.mp3", "", "", 377300022, 2983031406, Spawn)
 	AddConversationOption(conversation, "I'll go see him.")
@@ -332,7 +332,7 @@ end
 
 function GoodWorkOrcActivity(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "No, we thought an ancient shrine might be behind it, but it turned out to be a dead end.", "RuleThatOut")
 	AddConversationOption(conversation, "I'd rather not say.")
@@ -343,9 +343,9 @@ function RuleThatOut(NPC, Spawn)
 	if HasQuest(Spawn, QUEST_4_FROM_ARGOSIAN) then
 		SetStepComplete(Spawn, QUEST_4_FROM_ARGOSIAN, 1)
 	end
-	
+
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "Thank you, Captain. Is there anything else I can do to aid the Militia?", "dlg_21_3")
 	AddConversationOption(conversation, "I'm going to take my loot and go.")
@@ -358,7 +358,7 @@ end
 
 function dlg_21_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/captain_arellius/fprt_adv04_ruins/revamp/captain_arellius022.mp3", "", "", 1019790101, 3910654951, Spawn)
 	AddConversationOption(conversation, "I am willing to do what is necessary to serve Freeport.", "dlg_21_4")
@@ -368,7 +368,7 @@ end
 
 function dlg_21_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/captain_arellius/fprt_adv04_ruins/revamp/captain_arellius023.mp3", "", "", 2666224286, 3160996791, Spawn)
 	AddConversationOption(conversation, "I will find some allies. What needs to be done?", "dlg_21_5")
@@ -378,7 +378,7 @@ end
 
 function dlg_21_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/captain_arellius/fprt_adv04_ruins/revamp/captain_arellius025.mp3", "", "", 3573308808, 1112650571, Spawn)
 	AddConversationOption(conversation, "So the Lonetusk are stronger?", "dlg_21_6")
@@ -388,7 +388,7 @@ end
 
 function dlg_21_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/captain_arellius/fprt_adv04_ruins/revamp/captain_arellius026.mp3", "", "", 3395408656, 1462645876, Spawn)
 	AddConversationOption(conversation, "I am not afraid. What are your orders, Captain?", "dlg_21_7")
@@ -398,7 +398,7 @@ end
 
 function dlg_21_7(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/captain_arellius/fprt_adv04_ruins/revamp/captain_arellius027.mp3", "", "", 2644659750, 71027369, Spawn)
 	AddConversationOption(conversation, "I will report to her.", "OfferQuest2")
@@ -426,7 +426,7 @@ end
 
 function dlg_40_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/captain_arellius/fprt_adv04_ruins/revamp/captain_arellius030.mp3", "", "", 669347507, 3609055382, Spawn)
 	AddConversationOption(conversation, "It seems another tribe of orcs, the Rujarkians, are supplying them with weapons and training.", "dlg_40_2")
@@ -436,7 +436,7 @@ end
 
 function dlg_40_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/captain_arellius/fprt_adv04_ruins/revamp/captain_arellius031.mp3", "", "", 2636650714, 3532932245, Spawn)
 	if GetLevel(Spawn) < 50 then
@@ -448,7 +448,7 @@ end
 
 function WhereLocated(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "Why does this information pose such a danger to Freeport?", "DangerToFreeport")
 	StartConversation(conversation, NPC, Spawn, "The Rujarkian orcs are based out of the clefts in the Desert of Ro, a harsh region that lies to the south of our own continent of D'Lere. Perhaps when you are much more experienced than you are now, you will seek adventure there.")
@@ -456,7 +456,7 @@ end
 
 function DangerToFreeport(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "I'm glad the information I obtained was useful.")
 	StartConversation(conversation, NPC, Spawn, "The Rujarkian orcs are an extremely powerful and well-organized tribe. If the Rujarkians are supplying smaller groups like the Brokentusk and Lonetusk, it is only a matter of time before they provide weapons and armor to the Bloodskull orcs in the Commonlands. For all we know, such an alliance may already be forming.")
@@ -464,9 +464,9 @@ end
 
 function dlg_40_3(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_4_FROM_LIEUTENANT_IMPERIDUS, 1)
-	
+
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/captain_arellius/fprt_adv04_ruins/revamp/captain_arellius034.mp3", "", "", 4219431602, 1872310999, Spawn)
 	AddConversationOption(conversation, "Is there anything else I can do to be of service to Freeport?")
@@ -475,7 +475,7 @@ end
 
 function dlg_40_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "Yes, I will travel to the Commonlands.")
 	AddConversationOption(conversation, "I think I will be going, Captain. Farewell.")

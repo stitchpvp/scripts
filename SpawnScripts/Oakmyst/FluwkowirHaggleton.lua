@@ -1,6 +1,6 @@
 --[[
 	Script Name	: SpawnScripts/Oakmyst/FluwkowirHaggleton.lua
-	Script Purpose	: Fluwkowir Haggleton 
+	Script Purpose	: Fluwkowir Haggleton
 	Script Author	: Scatman
 	Script Date	: 2009.05.03
 	Script Notes	: Auto-Generated Conversation from PacketParser Data
@@ -13,7 +13,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)
@@ -23,10 +23,10 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
-	
+	local conversation = CreateConversation()
+
 	if HasQuest(Spawn, QUEST_FROM_JORN) and GetQuestStep(Spawn, QUEST_FROM_JORN) == 1 then
-		JustLeaveMeAlone(NPC, Spawn, conversation)	
+		JustLeaveMeAlone(NPC, Spawn, conversation)
 	else
 	end
 end
@@ -38,7 +38,7 @@ end
 
 function WhatAbout(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "It's about Jorn Sorefoot, the barbarian you were playing cards with.", "MakeAttackable")
 	StartConversation(conversation, NPC, Spawn, "Bah! What about? I'm very busy, I don't need to waste my time talking to the likes of you.")
@@ -54,6 +54,6 @@ end
 function death(NPC, Spawn)
 	if HasQuest(Spawn, QUEST_FROM_JORN) then
 		-- Flukowir's Satchel
-		SummonItem(Player, 6389)
+		SummonItem(Spawn, 6389)
 	end
 end

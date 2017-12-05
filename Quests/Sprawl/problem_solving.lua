@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "Problem Solving"
 	Script Author	: Scatman
 	Script Date	    : 2009.07.26
-	
+
 	Zone       : The Sprawl
 	Quest Giver: Crispin Luvinius
 	Preceded by: None
@@ -17,7 +17,7 @@ end
 
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "All right.")
 	StartConversation(conversation, QuestGiver, Player, "Come back when you're done.")
@@ -29,7 +29,7 @@ end
 function Step1_Complete_KilledHoodlums(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 1, "I've dealt with the hoodlums.")
 	UpdateQuestTaskGroupDescription(Quest, 1, "Those hoodlums got the message loud and clear.")
-	
+
 	AddQuestStepChat(Quest, 2, "I need to talk with Crispin.", 1, "I should let Crispin in know that his problem has been solved. I should get paid, too.", 0, 1260004)
 	AddQuestStepCompleteAction(Quest, 2, "Quest_Complete")
 end
@@ -41,7 +41,7 @@ function Quest_Complete(Quest, QuestGiver, Player)
 	UpdateQuestDescription(Quest, "I've taken care of Crispin's problem. I think it won't be too long before his business partner decides to do what he was told to do.")
 end
 
-function Reload(Quest, QuestGiver, Player)
+function Reload(Quest, QuestGiver, Player, Step)
 	if Step == 1 then
 		Step1_Complete_KilledHoodlums(Quest, QuestGiver, Player)
 	end

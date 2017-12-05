@@ -8,7 +8,7 @@
 
 function spawn(NPC)
     AddTimer(NPC, 5000, "chatswitch")
-	AddTimer(NPC, 600000, "depop") 
+	AddTimer(NPC, 600000, "depop")
 end
 
 function hailed(NPC, Spawn)
@@ -36,4 +36,4 @@ end
 function depop(NPC, Spawn)
 	Despawn(NPC)
 end
-	
+

@@ -11,7 +11,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)
@@ -22,7 +22,7 @@ end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 		PlayFlavor(NPC, "randu_k_van/_exp03/exp03_rgn_greater_faydark/randu_kvan/randu_001.mp3", "", "", 961418872, 1648740410, Spawn)
 	AddConversationOption(conversation, "And the sun should set on my shoulders.", "dlg_20_1")
@@ -32,7 +32,7 @@ end
 
 function dlg_20_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "randu_k_van/_exp03/exp03_rgn_greater_faydark/randu_kvan/randu_002.mp3", "", "", 2731381489, 2263143427, Spawn)
 	AddConversationOption(conversation, "Your story is amusing, maybe you should do something about it.", "dlg_20_2")
@@ -41,7 +41,7 @@ end
 
 function dlg_20_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "randu_k_van/_exp03/exp03_rgn_greater_faydark/randu_kvan/randu_003.mp3", "", "", 2679582233, 3793547301, Spawn)
 	AddConversationOption(conversation, "Sure, I will see what I can find.", "dlg_20_3")
@@ -51,7 +51,7 @@ end
 
 function dlg_20_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	conversation = CreateConversation()
+	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "randu_k_van/_exp03/exp03_rgn_greater_faydark/randu_kvan/randu_004.mp3", "", "", 4004780597, 2871106835, Spawn)
 	AddConversationOption(conversation, "Why thank you.", "dlg_20_4")
