@@ -3,7 +3,7 @@
 	Script Purpose	:	for the portal that spawns orc
 	Script Author	:	theFoof
 	Script Date		:	2013.6.8
-	Script Notes	:	
+	Script Notes	:
 --]]
 
 function spawn(NPC)

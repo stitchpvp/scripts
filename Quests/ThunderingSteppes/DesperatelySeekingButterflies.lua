@@ -2,7 +2,7 @@
 	Script Name    : Quests/ThunderingSteppes/DesperatelySeekingButterflies.lua
     Script Author  : Jabantiz
     Script Date    : 2014.07.30 04:07:06
-    Script Purpose : 
+    Script Purpose :
 
 	Zone			:	Thundering Steppes
 	Quest Giver		:	Elowys Laceleaf (2490013)

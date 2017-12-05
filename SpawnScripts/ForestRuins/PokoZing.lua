@@ -1,9 +1,9 @@
 --[[
 	Script Name	: SpawnScripts/ForestRuins/PokoZing.lua
-	Script Purpose	: Poko Zing 
+	Script Purpose	: Poko Zing
 	Script Author	: Scatman
 	Script Date	: 2009.09.27
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 local GNOME = 5
@@ -15,17 +15,17 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	if HasQuest(Spawn, QUEST_FROM_NEEZER) then
 		AddConversationOption(conversation, "I have a delivery from Neezer Grund.", "dlg_0_1")
 	end
-	
+
 	if HasCompletedQuest(Spawn, QUEST_1) then
 		PlayFlavor(NPC, "voiceover/english/tutorial_revamp/poko_zing/qey_adv02_ruins_revamp/qst_gnome_poko_zing_done_2d84e55b.mp3", "Go on now, I don't need yer help and you don't need mine.", "", 16598543, 2700760297, Spawn)
 	elseif HasQuest(Spawn, QUEST_1) then
@@ -37,12 +37,12 @@ function hailed(NPC, Spawn)
 			PlayFlavor(NPC, "voiceover/english/tutorial_revamp/poko_zing/qey_adv02_ruins_revamp/qst_gnome_poko_zing_notonquest_f698071.mp3", "I am very, very busy. Please respect that.", "", 2080673395, 1843361681, Spawn)
 		end
 	end
-	
+
 	--[[
 	if HasQuest(Spawn, QUEST_FROM_NEEZER) then
 		AddConversationOption(conversation, "I have a delivery from Neezer Grund.", "dlg_0_1")
 	end
-	
+
 	if HasCompletedQuest(Spawn, QUEST_1) then
 		Say(NPC, "Go on now, I don't need yer help and you don't need mine.", Spawn)
 	elseif HasQuest(Spawn, QUEST_1) then
@@ -85,10 +85,10 @@ end
 
 function dlg_0_1(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_FROM_NEEZER, 1)
-	
+
 	FaceTarget(NPC, Spawn)
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/poko_zing/qey_adv02_ruins/quests/poko/poko_neezer001.mp3", "", "", 910537276, 2473499967, Spawn)
-	
+
 	if not HasQuest(Spawn, QUEST_1) and not HasCompletedQuest(Spawn, QUEST_1) then
 		conversation = CreateConversation()
 		AddConversationOption(conversation, "Neezer said you might have work for me.", "dlg_0_2")
@@ -198,7 +198,7 @@ end
 
 function AllPartsFromHere(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_1, 2)
-	
+
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 
@@ -242,6 +242,6 @@ function dlg_9_3(NPC, Spawn)
 end
 
 --[[ raw_conversations
-	
+
 --]]
 

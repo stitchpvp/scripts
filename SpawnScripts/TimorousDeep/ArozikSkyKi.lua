@@ -23,21 +23,21 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	if HasQuest(Spawn, QUEST_FROM_CONZUK) and GetQuestStep(Spawn, QUEST_FROM_CONZUK) == 1 then
 		AddConversationOption(conversation, "Primary Zum'Ha directed me to report to you.", "dlg_42_1")
 	end
-	
+
 	if HasQuest(Spawn, QUEST_FROM_MAKKI) and GetQuestStep(Spawn, QUEST_FROM_MAKKI) == 1 then
 		AddConversationOption(conversation, "Tertiary Mak'Ki told me to give you this. It will rust metal with ease.", "dlg_33_1")
 	end
-	
+
 	if HasCompletedQuest(Spawn, QUEST_1) then
 		if HasCompletedQuest(Spawn, QUEST_2) then
 			if HasCompletedQuest(Spawn, QUEST_3) then
@@ -77,16 +77,16 @@ end
 
 function dlg_42_1(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_FROM_CONZUK, 1)
-	
+
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/rok_questvo/arozik_sky_ki/_exp04/exp04_rgn_timorous_deep/chrykori_tie/skyki/skyki001.mp3", "", "", 2731024115, 325818484, Spawn)
-	
+
 	if not HasCompletedQuest(Spawn, QUEST_1) and not HasQuest(Spawn, QUEST_1) then
 		AddConversationOption(conversation, "What would you have me do?", "dlg_33_2")
 	end
-	
+
 	AddConversationOption(conversation, "I must be going.", "dlg_42_2")
 	StartConversation(conversation, NPC, Spawn, "Ah, good. I could use the extra help. The spiroc are tireless troubles.")
 end
@@ -97,16 +97,16 @@ end
 
 function dlg_33_1(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_FROM_MAKKI, 1)
-	
+
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/rok_questvo/arozik_sky_ki/_exp04/exp04_rgn_timorous_deep/chrykori_tie/skyki/skyki004.mp3", "", "", 2310635873, 1729195062, Spawn)
-	
+
 	if not HasCompletedQuest(Spawn, QUEST_1) and not HasQuest(Spawn, QUEST_1) then
 		AddConversationOption(conversation, "Do you have any tasks for me?", "dlg_33_2")
 	end
-	
+
 	AddConversationOption(conversation, "You're welcome.")
 	StartConversation(conversation, NPC, Spawn, "Interesting... I have someone who can put this to good use. Thank you.")
 end
@@ -138,13 +138,13 @@ end
 
 function DidYouRetrieveGlands(NPC, Spawn, conversation)
 	PlayFlavor(NPC, "voiceover/english/rok_questvo/arozik_sky_ki/_exp04/exp04_rgn_timorous_deep/chrykori_tie/skyki/skyki006.mp3", "", "", 2299189023, 2896390985, Spawn)
-	
+
 	if (HasCompletedQuest(Spawn, QUEST_1) and not HasCompletedQuest(Spawn, QUEST_2)) or (HasQuest(Spawn, QUEST_1) and GetQuestStep(Spawn, QUEST_1) == 2) then
 		AddConversationOption(conversation, "Yes.", "dlg_37_1")
 	else
 		AddConversationOption(conversation, "Not yet.")
 	end
-	
+
 	StartConversation(conversation, NPC, Spawn, "Did you retrieve the poison glands? I have valuable soldiers dying from flesh wounds as we speak.")
 end
 
@@ -152,7 +152,7 @@ function dlg_37_1(NPC, Spawn)
 	if HasQuest(Spawn, QUEST_1) then
 		SetStepComplete(Spawn, QUEST_1, 2)
 	end
-	
+
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 
@@ -181,13 +181,13 @@ end
 
 function DidYouFindHim(NPC, Spawn, conversation)
 	PlayFlavor(NPC, "voiceover/english/rok_questvo/arozik_sky_ki/_exp04/exp04_rgn_timorous_deep/chrykori_tie/skyki/skyki010.mp3", "", "", 525384220, 185678564, Spawn)
-	
+
 	if (HasCompletedQuest(Spawn, QUEST_2) and not HasCompletedQuest(Spawn, QUEST_3)) or (HasQuest(Spawn, QUEST_2) and GetQuestStep(Spawn, QUEST_2) == 2) then
 		AddConversationOption(conversation, "Only the leftover pieces, but here is his journal.", "dlg_43_1")
 	else
 		AddConversationOption(conversation, "Not yet.")
 	end
-	
+
 	StartConversation(conversation, NPC, Spawn, "Well, what do you have to report? Did you find him?")
 end
 
@@ -195,7 +195,7 @@ function dlg_43_1(NPC, Spawn)
 	if HasQuest(Spawn, QUEST_2) then
 		SetStepComplete(Spawn, QUEST_2, 2)
 	end
-	
+
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 
@@ -224,13 +224,13 @@ end
 
 function DidYouGetTheirOrders(NPC, Spawn, conversation)
 	PlayFlavor(NPC, "voiceover/english/rok_questvo/arozik_sky_ki/_exp04/exp04_rgn_timorous_deep/chrykori_tie/skyki/skyki014.mp3", "", "", 2065400668, 430864702, Spawn)
-	
+
 	if (HasCompletedQuest(Spawn, QUEST_3) and not HasCompletedQuest(Spawn, QUEST_4)) or (HasQuest(Spawn, QUEST_3) and GetQuestStep(Spawn, QUEST_3) == 2) then
 		AddConversationOption(conversation, "Yes.", "GotOrders")
 	else
 		AddConversationOption(conversation, "Not yet.")
 	end
-	
+
 	StartConversation(conversation, NPC, Spawn, "Did you get their orders?")
 end
 
@@ -238,10 +238,10 @@ function GotOrders(NPC, Spawn)
 	if HasQuest(Spawn, QUEST_3) then
 		SetStepComplete(Spawn, QUEST_3, 2)
 	end
-	
+
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	PlayFlavor(NPC, "voiceover/english/rok_questvo/arozik_sky_ki/_exp04/exp04_rgn_timorous_deep/chrykori_tie/skyki/skyki015.mp3", "", "", 1539951072, 947658939, Spawn)
 	AddConversationOption(conversation, "Ok.", "dlg_0_2")
 	StartConversation(conversation, NPC, Spawn, "Good. Give me a moment to read over these--gah, nevermind. They're encoded. Mm... my scout mentioned that this might be an issue. Wait a minute as I look it up.")
@@ -267,13 +267,13 @@ end
 
 function DidYouGetGlyph(NPC, Spawn, conversation)
 	PlayFlavor(NPC, "voiceover/english/rok_questvo/arozik_sky_ki/_exp04/exp04_rgn_timorous_deep/chrykori_tie/skyki/skyki018.mp3", "", "", 1968421684, 1745825812, Spawn)
-	
+
 	if (HasCompletedQuest(Spawn, QUEST_4) and not HasCompletedQuest(Spawn, QUEST_5)) or (HasQuest(Spawn, QUEST_4) and GetQuestStep(Spawn, QUEST_4) == 2) then
 		AddConversationOption(conversation, "Yes, I did.", "dlg_2_1")
 	else
 		AddConversationOption(conversation, "Not yet.")
 	end
-	
+
 	StartConversation(conversation, NPC, Spawn, "Did you get the glyph?")
 end
 
@@ -281,7 +281,7 @@ function dlg_2_1(NPC, Spawn)
 	if HasQuest(Spawn, QUEST_4) then
 		SetStepComplete(Spawn, QUEST_4, 2)
 	end
-	
+
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 

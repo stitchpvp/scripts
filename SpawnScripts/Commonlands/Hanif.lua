@@ -1,3 +1,5 @@
+QUEST_1_FROM_HANIF = nil
+
 function spawn(NPC)
 	SetPlayerProximityFunction(NPC, 10, "InRange")
 end
@@ -16,7 +18,7 @@ function hailed(NPC, Spawn)
 	AddConversationOption(conversation, "I couldn't agree more!", "Option3")
 	AddConversationOption(conversation, "Never.")
 	StartConversation(conversation, NPC, Spawn, "Those spared personal pain feel themselves called to assist the pain of others.  We must all carry our share of the misery which lies upon the world.  Wouldn't you agree?")
-  if HasQuest(Spawn, QUEST_1_FROM_Hanif) then
+  if HasQuest(Spawn, QUEST_1_FROM_HANIF) then
 	  AddConversationOption(conversation, "Oh, right.  I'll be back.")
 	  StartConversation(conversation, NPC, Spawn, "I am glad that you are eager to assist me, but please do as I asked.")
   end

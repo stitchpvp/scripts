@@ -3,7 +3,7 @@
 	Script Purpose	: a Brokentusk pawn
 	Script Author	: Scatman
 	Script Date	: 2009.08.21
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 dofile("SpawnScripts/Generic/BrokentuskVoiceOvers.lua")
@@ -15,17 +15,17 @@ function spawn(NPC)
 
 	if sli == 133076 or sli == 133077 or sli == 133078 or sli == 133079 then
 		-- The sparring pawns.
-		AddVisualStateLoop(NPC, 1000, math.random(0, 1000), 10783, 450) -- attack
-		AddVisualStateLoop(NPC, 1000, math.random(0, 1000), 13058, 450) -- taunt combat art
-		AddVisualStateLoop(NPC, 1000, math.random(0, 1000), 12065, 450) -- pugilist parry
-		AddVisualStateLoop(NPC, 1000, math.random(0, 1000), 12050, 450) -- pugilist dodge forehand 
+		-- AddVisualStateLoop(NPC, 1000, math.random(0, 1000), 10783, 450) -- attack
+		-- AddVisualStateLoop(NPC, 1000, math.random(0, 1000), 13058, 450) -- taunt combat art
+		-- AddVisualStateLoop(NPC, 1000, math.random(0, 1000), 12065, 450) -- pugilist parry
+		-- AddVisualStateLoop(NPC, 1000, math.random(0, 1000), 12050, 450) -- pugilist dodge forehand
 	elseif sli == 133054 or sli == 133055 or sli == 159761 or sli == 133058 or sli == 133070 or sli == 133071 or sli == 133064 or sli == 159762 or sli == 133061 or sli == 159768 then
 		-- The pawns cheering on the sparring pawns.
-		AddVisualStateLoop(NPC, 1000, math.random(0, 1000), 11150, 43918) -- cheer
-		AddVisualStateLoop(NPC, 1000, math.random(0, 1000), 10760 , 43528) -- applaud
-		AddVisualStateLoop(NPC, 1000, math.random(0, 1000), 10856, 43624) -- boggle
-		AddVisualStateLoop(NPC, 1000, math.random(0, 1000), 11152, 43920) -- chuckle
-		AddVisualStateLoop(NPC, 1000, math.random(0, 1000), 11285, 44053) -- curse
+		-- AddVisualStateLoop(NPC, 1000, math.random(0, 1000), 11150, 43918) -- cheer
+		-- AddVisualStateLoop(NPC, 1000, math.random(0, 1000), 10760 , 43528) -- applaud
+		-- AddVisualStateLoop(NPC, 1000, math.random(0, 1000), 10856, 43624) -- boggle
+		-- AddVisualStateLoop(NPC, 1000, math.random(0, 1000), 11152, 43920) -- chuckle
+		-- AddVisualStateLoop(NPC, 1000, math.random(0, 1000), 11285, 44053) -- curse
 	elseif sli == 159746 then
 		StartPath1(NPC)
 	elseif sli == 133018 then
@@ -36,7 +36,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)

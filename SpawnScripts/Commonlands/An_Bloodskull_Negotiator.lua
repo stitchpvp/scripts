@@ -3,10 +3,10 @@ function spawn(NPC)
 SetTimer(NPC)
 end
 
-function hailed(NPC, Spawn) 
+function hailed(NPC, Spawn)
   FaceTarget(NPC, Spawn)
   PlayAnimation(NPC, 10912, Spawn, 1)
-end 
+end
 
 function aggro(NPC, Spawn)
  generic_aggro(NPC, Spawn)
@@ -35,7 +35,7 @@ function SetTimer(NPC)
   elseif choice == 2 then
     AddTimer(NPC, timerfast, "DoAnimation2")
   elseif choice == 3 then
-    AddTimer(NPC, timerslow, "DoAnimation3")  
+    AddTimer(NPC, timerslow, "DoAnimation3")
   end
 end
 

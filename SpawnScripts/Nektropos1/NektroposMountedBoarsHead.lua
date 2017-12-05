@@ -1,16 +1,16 @@
 --[[
 	Script Name		:	SpawnScripts/Nektropos1/NektroposMountedBoarsHead.lua
-	Script Purpose	:	
+	Script Purpose	:
 	Script Author	:	smash
 	Script Date		:	1/26/2016
-	Script Notes	:	
+	Script Notes	:
 --]]
 
 function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function casted_on(NPC, Spawn, Message)
@@ -48,7 +48,7 @@ function Dialog1_2(NPC, Spawn)
 end
 
 function Dialog2(NPC, Spawn)
-	local conversatoin = CreateConversation()
+	local conversation = CreateConversation()
 	AddConversationOption(conversation, "Stop examining the head.", "CloseConversation")
 	StartDialogConversation(conversation, 1, NPC, Spawn, "You place the black marble-like eye in the hollow socket. A key falls from the mouth of the boar. This key appears to match the Barracks locks here in Nektropos.")
 	SetStepComplete(Spawn, 175, 1)

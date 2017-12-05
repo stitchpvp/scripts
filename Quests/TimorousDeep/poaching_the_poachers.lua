@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "Poaching the Poachers"
 	Script Author	: Scatman
 	Script Date	: 2009.02.06
-	
+
 	Zone       : Timorous Deep
 	Quest Giver: Tykor Gi'Lok
 	Preceded by: None
@@ -38,7 +38,7 @@ end
 
 function step1_complete_killedPoachers(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 1, "I have slain the Haoaeran poachers.")
-	
+
 	AddQuestStepChat(Quest, 2, "I need to return to Tykor Gi'Lok.", 1, ".", 0, 2630018)
 	AddQuestStepCompleteAction(Quest, 2, "quest_complete")
 end

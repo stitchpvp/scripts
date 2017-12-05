@@ -3,7 +3,7 @@
 	Script Purpose	: for the spawn "cave rubbish"
 	Script Author	: theFoof
 	Script Date	: 2013.05.19
-	Script Notes	: 
+	Script Notes	:
 --]]
 local SiftingGarbage = 14
 

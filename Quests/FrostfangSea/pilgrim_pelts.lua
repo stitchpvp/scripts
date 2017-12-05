@@ -7,7 +7,7 @@
         Zone            : Frostfang Sea
         Quest Giver     : Verien Skysigh
         Preceded by     : Pilgrim Scout
-        Followed by     : 
+        Followed by     :
 --]]
 
 function Accepted(Quest, QuestGiver, Player)

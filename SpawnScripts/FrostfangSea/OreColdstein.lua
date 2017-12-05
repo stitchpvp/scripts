@@ -3,7 +3,7 @@
 	Script Purpose	:	movement path for ore coldstein
 	Script Author	:	theFoof
 	Script Date		:	2013.9.26
-	Script Notes	:	
+	Script Notes	:
 --]]
 
 function spawn(NPC)
@@ -36,7 +36,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC)
@@ -56,7 +56,7 @@ function InRange(NPC)
 	end
 end
 
-function hailed(NPC)
+function hailed(NPC, Spawn)
 	PlayFlavor(NPC, "", "", "hello", 0, 0, Spawn)
 end
 

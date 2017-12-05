@@ -3,7 +3,7 @@
 	Script Purpose	:	for the quest "The Gauntlet"
 	Script Author	:	theFoof
 	Script Date		:	2013.5.29
-	Script Notes	:	
+	Script Notes	:
 
 	Zone			:	Frostfang Sea
 	Quest Giver		:	Dolur Axebeard

@@ -3,7 +3,7 @@
 	Script Purpose	: Enforcer Kurdek <Dreadnaught>
 	Script Author	: Scatman
 	Script Date	: 2008.09.29
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 local QUEST_FROM_BIGBEND_KROOTA = 169
@@ -26,7 +26,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)
@@ -51,7 +51,7 @@ end
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	if HasQuest(Spawn, QUEST_FROM_BIGBEND_KROOTA) then
 		SetStepComplete(Spawn, QUEST_FROM_BIGBEND_KROOTA, 1)
 	end
@@ -281,7 +281,7 @@ end
 
 function dlg_25_1(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_1, 2)
-	
+
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 
@@ -337,7 +337,7 @@ end
 
 function dlg_27_1(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_2, 2)
-	
+
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 
@@ -353,7 +353,6 @@ end
 
 function GreetingsAdventurer(NPC, Spawn, conversation)
 	FaceTarget(NPC, Spawn)
-	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "Can I lend you a hand?", "dlg_27_2")
 	AddConversationOption(conversation, "Sounds like you have work to do.")
@@ -434,7 +433,7 @@ end
 
 function dlg_30_2(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_3, 2)
-	
+
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 
@@ -450,7 +449,6 @@ end
 
 function NiceWork(NPC, Spawn, conversation)
 	FaceTarget(NPC, Spawn)
-	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "What did you have in mind?", "dlg_30_3")
 	AddConversationOption(conversation, "No thanks.")
@@ -492,7 +490,7 @@ end
 
 function dlg_32_1(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_4, 4)
-	
+
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 
@@ -508,7 +506,6 @@ end
 
 function WelcomeBack(NPC, Spawn, conversation)
 	FaceTarget(NPC, Spawn)
-	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/enforcer_kurdek/fprt_adv03_sprawl/quests/enforcer_kurdek042.mp3", "", "", 3199383126, 2868778481, Spawn)
 	AddConversationOption(conversation, "DDo you have anything else for me?", "dlg_32_2")

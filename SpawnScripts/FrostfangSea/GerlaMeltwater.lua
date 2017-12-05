@@ -1,9 +1,9 @@
 --[[
 	Script Name	: SpawnScripts/FrostfangSea/GerlaMeltwater.lua
-	Script Purpose	: Gerla Meltwater 
+	Script Purpose	: Gerla Meltwater
 	Script Author	: theFoof
 	Script Date	: 2013.06.13
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 local SeekingEducation = 63
@@ -12,12 +12,12 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	
+
 	if GetQuestStep(Spawn, SeekingEducation) == 2 then
 		conversation = CreateConversation()
 		PlayFlavor(NPC, "gerla_meltwater/halas/new_halas_guard_house/gerla_meltwater_001.mp3", "", "", 3974328348, 1246567656, Spawn)
@@ -79,7 +79,7 @@ function Quest1Chat_6(NPC, Spawn)
 		SummonItem(Spawn, 7666)
 	end
 	SetStepComplete(Spawn, SeekingEducation, 2)
-	
+
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 

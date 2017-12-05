@@ -1,6 +1,6 @@
 
 function Init(Quest)
-	AddQuestStepKill(Quest, 1, "I need to kill sandstone giants", 8, 100, "Inspired by the legendary axe of Grum the Giant Slayer, I have decided to seek out the sandstone giants for fortune and glory!", 611, --[[ ID's --]])
+	AddQuestStepKill(Quest, 1, "I need to kill sandstone giants", 8, 100, "Inspired by the legendary axe of Grum the Giant Slayer, I have decided to seek out the sandstone giants for fortune and glory!", 611, nil)
 	AddQuestStepCompleteAction(Quest, 1, "QuestComplete")
 end
 

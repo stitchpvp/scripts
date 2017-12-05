@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "Searching for the Ruins"
 	Script Author	: Scatman
 	Script Date	    : 2009.07.28
-	
+
 	Zone       : Sunken City
 	Quest Giver: Inquisitor Thorson
 	Preceded by: Time to Stop a Madman (time_to_stop_a_madman.lua)

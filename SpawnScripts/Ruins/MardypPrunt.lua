@@ -1,9 +1,9 @@
 --[[
 	Script Name	: SpawnScripts/Ruins/MardypPrunt.lua
-	Script Purpose	: Mardyp Prunt 
+	Script Purpose	: Mardyp Prunt
 	Script Author	: Scatman
 	Script Date	: 2009.07.28
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 local QUEST_1 = 265
@@ -13,14 +13,14 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 	RandomVoiceOver(NPC, Spawn)
-	
+
 	if HasCompletedQuest(Spawn, QUEST_1) then
 		PlayFlavor(NPC, "", "Making fang dust harder than Mardyp thought!", "", 1689589577, 4560189, Spawn)
 	elseif HasQuest(Spawn, QUEST_1) then
@@ -99,7 +99,7 @@ end
 
 function dlg_6_1(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_1, 2)
-	
+
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 

@@ -11,7 +11,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)
@@ -37,15 +37,15 @@ function hailed(NPC, Spawn)
 	AddConversationOption(conversation, "Please.", "dlg_85_1")
 	AddConversationOption(conversation, "Not right now.")
 	StartConversation(conversation, NPC, Spawn, "Hello, .. GetName(Spawn) .. . I am the Innkeeper for Kelethin.  My name is Twiggy!  We received word of your arrival and have a room prepared for you.  Is there anything you'd like to know about housing before you move in?")
-	if convo==86 then
-		PlayFlavor(NPC, "voiceover/english/exp03_questvo/innkeeper_twiggy/_exp03/exp03_cty_kelethin/quest/qst_twiggy/qst_twiggy010.mp3", "", "", 232672131, 2109387803, Spawn)
-		AddConversationOption(conversation, "How can I place an item in my house?", "dlg_86_1")
-		AddConversationOption(conversation, "What kind of housing is available to me?")
-		AddConversationOption(conversation, "What is the marketboard for?")
-		AddConversationOption(conversation, "What is my house for?")
-		AddConversationOption(conversation, "Nothing right now.")
-		StartConversation(conversation, NPC, Spawn, "Hello again, .. GetName(Spawn) .. . What can I help you with?")
-	end
+	--if convo==86 then
+	--	PlayFlavor(NPC, "voiceover/english/exp03_questvo/innkeeper_twiggy/_exp03/exp03_cty_kelethin/quest/qst_twiggy/qst_twiggy010.mp3", "", "", 232672131, 2109387803, Spawn)
+	--	AddConversationOption(conversation, "How can I place an item in my house?", "dlg_86_1")
+	--	AddConversationOption(conversation, "What kind of housing is available to me?")
+	--	AddConversationOption(conversation, "What is the marketboard for?")
+	--	AddConversationOption(conversation, "What is my house for?")
+	--	AddConversationOption(conversation, "Nothing right now.")
+	--	StartConversation(conversation, NPC, Spawn, "Hello again, .. GetName(Spawn) .. . What can I help you with?")
+	--end
 
 end
 

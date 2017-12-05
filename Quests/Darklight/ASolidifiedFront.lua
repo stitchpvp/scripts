@@ -15,7 +15,7 @@ local ASolidifiedFront = 120
 function Init(Quest)
 	AddQuestRewardCoin(Quest, math.random(10,95), math.random(39,49), math.random(1,1), 0)
 	AddQuestRewardItem(Quest, 89458)
-	
+
 	AddQuestStepChat(Quest, 1, "Locate Udiyitas X'Kilrea", 1, "I should travel outisde the breach in the southern wall of Hate's Envy and find Udiyitas X'Kilrae and Pellandra D'Xatyl.", 11, 340226)
 	AddQuestStepChat(Quest, 2, "Locate Pellandra D'Xatyl", 1, "I should travel outisde the breach in the southern wall of Hate's Envy and find Udiyitas X'Kilrae and Pellandra D'Xatyl.", 11, 340038)
 	AddQuestStepCompleteAction(Quest, 1, "Udiyitas")
@@ -47,7 +47,7 @@ end
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
 	local conversation = CreateConversation()
-	
+
 	StartConversation(conversation, QuestGiver, Player, "May Innoruuk guide your blade, young one!")
 end
 

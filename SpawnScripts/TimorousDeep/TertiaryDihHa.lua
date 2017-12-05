@@ -1,6 +1,6 @@
 --[[
 	Script Name	: SpawnScripts/TimorousDeep/TertiaryDihHa.lua
-	Script Purpose	: Tertiary Dih'Ha 
+	Script Purpose	: Tertiary Dih'Ha
 	Script Author	: John Adams
 	Script Date	: 2009.02.22
 	Script Notes	: Auto-Generated Conversation from PacketParser Data
@@ -15,17 +15,17 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	if HasQuest(Spawn, QUEST_FROM_AROZIK) and GetQuestStep(Spawn, QUEST_FROM_AROZIK) == 1 then
 		AddConversationOption(conversation, "Secondary Sky'Ki told me to speak with you.", "dlg_7_1")
 	end
-	
+
 	if HasCompletedQuest(Spawn, QUEST_1) then
 		if HasCompletedQuest(Spawn, QUEST_2) then
 		elseif HasQuest(Spawn, QUEST_2) then
@@ -52,16 +52,16 @@ end
 
 function dlg_7_1(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_FROM_AROZIK, 1)
-	
+
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/rok_questvo/tertiary_dih_ha/_exp04/exp04_rgn_timorous_deep/chrykori_tie/dihha/dihha001.mp3", "", "", 936167783, 1220078217, Spawn)
-	
+
 	if not HasCompletedQuest(Spawn, QUEST_1) and not HasQuest(Spawn, QUEST_1) then
 		AddConversationOption(conversation, "What plight?", "dlg_7_2")
 	end
-	
+
 	AddConversationOption(conversation, "I must be going.")
 	StartConversation(conversation, NPC, Spawn, "Good. Then they must be aware of our plight.")
 end
@@ -92,13 +92,13 @@ end
 
 function AreTheyTakenCareOf(NPC, Spawn)
 	PlayFlavor(NPC, "voiceover/english/rok_questvo/tertiary_dih_ha/_exp04/exp04_rgn_timorous_deep/chrykori_tie/dihha/dihha004.mp3", "", "", 2388923565, 781958893, Spawn)
-	
+
 	if (HasCompletedQuest(Spawn, QUEST_1) and not HasCompletedQuest(Spawn, QUEST_2)) or (HasQuest(Spawn, QUEST_1) and GetQuestStep(Spawn, QUEST_1) == 2) then
 		AddConversationOption(conversation, "Yes.", "dlg_8_1")
 	else
 		AddConversationOption(conversation, "Not yet.")
 	end
-	
+
 	StartConversation(conversation, NPC, Spawn, "Are they taken care of?")
 end
 
@@ -106,7 +106,7 @@ function dlg_8_1(NPC, Spawn)
 	if HasQuest(Spawn, QUEST_1) then
 		SetStepComplete(Spawn, QUEST_1, 2)
 	end
-	
+
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 

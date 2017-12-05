@@ -3,7 +3,7 @@
     Script Author  : Zcoretri
     Script Date    : 2015.07.27
     Script Purpose : Nebble Unfderroot dialog
-                   : 
+                   :
 --]]
 
 function spawn(NPC)

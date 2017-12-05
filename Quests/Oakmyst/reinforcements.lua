@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "Reinforcements"
 	Script Author	: Scatman
 	Script Date	: 2009.10.08
-	
+
 	Zone       : Oakmyst Forest
 	Quest Giver: Lieutenant Charlin
 	Preceded by: Clean Up (clean_up.lua)
@@ -12,7 +12,7 @@
 
 
 function Init(Quest)
-	AddQuestStepChat(Quest, 1, "I must report to Consul Bree in The Caves.", 1, "I must report to Consul Bree in The Caves to help in the defense of Qeynos.", 0, 1970010) 
+	AddQuestStepChat(Quest, 1, "I must report to Consul Bree in The Caves.", 1, "I must report to Consul Bree in The Caves to help in the defense of Qeynos.", 0, 1970010)
 	AddQuestStepCompleteAction(Quest, 1, "QuestComplete")
 end
 
@@ -31,7 +31,7 @@ end
 function QuestComplete(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 1, "I have spoken with Consul Bree.")
 	UpdateQuestTaskGroupDescription(Quest, 1, "I have spoken with Consul Bree.")
-	
+
 	UpdateQuestDescription(Quest, "I have spoken with Consul Bree.")
 	GiveQuestReward(Quest, Player)
 end

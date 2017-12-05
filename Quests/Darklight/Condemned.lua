@@ -3,7 +3,7 @@
 	Script Purpose	:	Handles the quest, "Condemned"
 	Script Author	:	Cynnar
 	Script Date		:	9/1/2015
-	Script Notes	:	
+	Script Notes	:
 
 	Zone			:	Darklight Wood
 	Quest Giver		:	Laexyra Y'Barriath
@@ -44,7 +44,7 @@ function Accepted(Quest, QuestGiver, Player)
 	end
 	FaceTarget(QuestGiver, Player)
 	local conversation = CreateConversation()
-	
+
 	PlayFlavor(QuestGiver, "", "", "salute", 0, 0, Player)
 	AddConversationOption(conversation, "All right.")
 	StartConversation(conversation, QuestGiver, Player, "That works for me. Let me know how it goes.")

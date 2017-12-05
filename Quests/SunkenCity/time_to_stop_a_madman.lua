@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "Time to Stop a Madman"
 	Script Author	: Scatman
 	Script Date	    : 2009.07.28
-	
+
 	Zone       : Sunken City
 	Quest Giver: Inquisitor Thorson
 	Preceded by: Back to the Inquisitor (back_to_the_inquisitor.lua)

@@ -3,7 +3,7 @@
 	Script Purpose	:	the spawn spider_puffs
 	Script Author	:	theFoof
 	Script Date		:	2013.8.27
-	Script Notes	:	
+	Script Notes	:
 --]]
 
 local SpiderPuffs = 87
@@ -14,7 +14,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function casted_on(NPC, Spawn, SpellName)

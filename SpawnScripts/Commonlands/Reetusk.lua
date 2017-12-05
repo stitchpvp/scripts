@@ -3,9 +3,9 @@ function spawn(NPC)
   AddPathing(NPC)
 end
 
-function hailed(NPC, Spawn) 
-  FaceTarget(NPC, Spawn) 
-end 
+function hailed(NPC, Spawn)
+  FaceTarget(NPC, Spawn)
+end
 
 function AddPathing(NPC)
 	local route = math.random(1,4)

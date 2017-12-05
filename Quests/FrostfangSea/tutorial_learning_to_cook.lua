@@ -3,7 +3,7 @@
 	Script Purpose	:	Tutorial: Learning to Cook
 	Script Author	:	theFoof
 	Script Date		:	2013.10.19
-	Script Notes	:	
+	Script Notes	:
 
 	Zone			:	Frostfang Sea
 	Quest Giver		:	Glin Hammerhelm

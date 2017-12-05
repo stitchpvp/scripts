@@ -3,7 +3,7 @@
 	Script Purpose	: Brutemaster Tarden <Dreadnaught>
 	Script Author	: Scatman
 	Script Date	: 2008.09.29
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 local QUEST_2_FROM_KURDEK = 254
@@ -14,7 +14,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)
@@ -35,7 +35,7 @@ end
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	if HasCompletedQuest(Spawn, QUEST_2_FROM_KURDEK) or (HasQuest(Spawn, QUEST_2_FROM_KURDEK) and GetQuestStep(Spawn, QUEST_2_FROM_KURDEK) > 1) then
 		PlayFlavor(NPC, "voiceover/english/tutorial_revamp/brutemaster_tarden/fprt_adv03_sprawl/quests/brutemaster_tarden010.mp3", "", "", 47575538, 2815062318, Spawn)
 		AddConversationOption(conversation, "I better, or else there will be another beating coming your way.")
@@ -129,7 +129,7 @@ end
 
 function dlg_26_7(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_2_FROM_KURDEK, 1)
-	
+
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 

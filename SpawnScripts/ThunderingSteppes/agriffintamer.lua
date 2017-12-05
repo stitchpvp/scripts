@@ -3,7 +3,7 @@
 	Script Purpose	: a griffon tamer (2490000)
 	Script Author	: Jabantiz
 	Script Date	: 2014.07.14
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 local GriffonEggs = 112
@@ -13,7 +13,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
@@ -45,7 +45,7 @@ end
 function dlg_0_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-		
+
 	AddConversationOption(conversation, "They certainly have. These look very sturdy, but I don't see many griffins about.", "dlg_0_2")
 	StartConversation(conversation, NPC, Spawn, "It's been a real treat watching this tower be built by all the artisans. They've done a marvelous job getting it ready for our flying friends.")
 end
@@ -74,7 +74,7 @@ end
 function dlg_1_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
     local con = CreateConversation()
-    
+
 	if GetSpawnLocationID(NPC) == 214217 then
 		AddConversationOption(con, "To Antonica Gates.", "DocksToAnt")
 		AddConversationOption(con, "To South East Station.", "DocksToSE")

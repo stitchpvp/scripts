@@ -1,7 +1,7 @@
 
 
 function Init(Quest)
-	AddQuestStepChat(Quest, 1, "I need to speak with Gerun Pontian", 1, "I need to speak with Gerun Pontian.", 11, --[[ ID's --]])
+	AddQuestStepChat(Quest, 1, "I need to speak with Gerun Pontian", 1, "I need to speak with Gerun Pontian.", 11, nil)
 	AddQuestStepCompleteAction(Quest, 1, "QuestComplete")
 end
 

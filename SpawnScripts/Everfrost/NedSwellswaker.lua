@@ -2,8 +2,8 @@
     Script Name    : SpawnScripts/Everfrost/NedSwellswaker.lua
     Script Author  : Flunklesnarkin
     Script Date    : 2015.09.25 12:09:07
-    Script Purpose : 
-                   : 
+    Script Purpose :
+                   :
 --]]
 
 function spawn(NPC)

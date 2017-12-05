@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "Malkaen Weed"
 	Script Author	: Scatman
 	Script Date	: 2009.01.31
-	
+
 	Zone       : Darklight Wood
 	Quest Giver: Fileyl Alyylharil
 	Preceded by: Prowler Pelts (prowler_pelts.lua)
@@ -22,7 +22,7 @@ function Accepted(Quest, QuestGiver, Player)
 		if GetDistance(Player, QuestGiver) < 30 then
 			FaceTarget(QuestGiver, Player)
 			conversation = CreateConversation()
-			
+
 			PlayFlavor(QuestGiver, "voiceover/english/neriak/fileyl_alyylharil/darklight_wood/hates_envy/fileyl/fileyl007.mp3", "", "", 700356968, 3682250631, Player)
 			AddConversationOption(conversation, "I'll be back.")
 			StartConversation(conversation, QuestGiver, Player, "Of course you can, a monkey could do it! But a monkey wouldn't know what to do with the money afterwards.")
@@ -36,7 +36,7 @@ end
 function step1_complete_gotWeeds(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 1, "I have collected the weeds.")
 	UpdateQuestTaskGroupDescription(Quest, 1, "I have collected the weeds.")
-	
+
 	AddQuestStepChat(Quest, 2, "I need to bring the Malkaen Weed back to Fileyl.", 1, ".", 0, 340050)
 	AddQuestStepCompleteAction(Quest, 2, "quest_complete")
 end

@@ -2,8 +2,8 @@
     Script Name    : SpawnScripts/Everfrost/BrahnaganMacLahnan.lua
     Script Author  : Flunklesnarkin
     Script Date    : 2015.10.14 11:10:51
-    Script Purpose : 
-                   : 
+    Script Purpose :
+                   :
 --]]
 
 local TheStoriesofEverfrost = 167
@@ -54,7 +54,7 @@ function hailed(NPC, Spawn)
 end
 
 function respawn(NPC)
-         spawn(NPC)
+SpawnMob(NPC)
 end
 
 function UnderLevel_Chat(NPC, Spawn)

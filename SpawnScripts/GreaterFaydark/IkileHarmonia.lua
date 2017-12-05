@@ -11,7 +11,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)
@@ -29,13 +29,13 @@ function hailed(NPC, Spawn)
 	AddConversationOption(conversation, "Sure, I think I'm pretty comfortable with it all but I can always use a memory refresher.")
 	AddConversationOption(conversation, "No thanks, I have other things to do right now.")
 	StartConversation(conversation, NPC, Spawn, "Hello, friend!  I'm here to teach interested people a little bit about how to harvest crafting materials, and how to craft tradeskilled items.  Are you interested?")
-	if convo==78 then
-		PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_1_1005.mp3", "", "", 0, 0, Spawn)
-		AddConversationOption(conversation, "Yes please, I don't know much about that stuff.", "dlg_78_1")
-		AddConversationOption(conversation, "Sure, I think I'm pretty comfortable with it all but I can always use a memory refresher.")
-		AddConversationOption(conversation, "No thanks, I have other things to do right now.")
-		StartConversation(conversation, NPC, Spawn, "Hello, friend!  I'm here to teach interested people a little bit about how to harvest crafting materials, and how to craft tradeskilled items.  Are you interested?")
-	end
+	--if convo==78 then
+	--	PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_1_1005.mp3", "", "", 0, 0, Spawn)
+	--	AddConversationOption(conversation, "Yes please, I don't know much about that stuff.", "dlg_78_1")
+	--	AddConversationOption(conversation, "Sure, I think I'm pretty comfortable with it all but I can always use a memory refresher.")
+	--	AddConversationOption(conversation, "No thanks, I have other things to do right now.")
+	--	StartConversation(conversation, NPC, Spawn, "Hello, friend!  I'm here to teach interested people a little bit about how to harvest crafting materials, and how to craft tradeskilled items.  Are you interested?")
+	--end
 
 end
 

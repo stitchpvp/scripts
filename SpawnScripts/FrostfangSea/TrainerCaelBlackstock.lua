@@ -3,7 +3,7 @@
 	Script Purpose	: Trainer Cael Blackstock <Know Your Inventory and Equipment>
 	Script Author	: theFoof
 	Script Date	: 2013.05.21
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 function spawn(NPC)
@@ -11,7 +11,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)
@@ -117,7 +117,7 @@ end
 function equip_chat_9(NPC, Spawn)
     FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	AddConversationOption(conversation, 'What does it mean when an item says it is "Attuneable"?', "equip_chat_10")
 	AddConversationOption(conversation, "I will return to instruction later.")
 	StartConversation(conversation, NPC, Spawn, 'Some items are marked "No Value" because they are easy to obtain, such as harvested goods. You have to work to earn wealth,' .. GetName(Spawn) .. '! Items are marked "No Trade" in order to ensure that you earn them yourself, such as defeating a very tough monster or completing a long quest.')

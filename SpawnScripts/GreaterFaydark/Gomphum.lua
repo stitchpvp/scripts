@@ -11,7 +11,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)
@@ -27,17 +27,17 @@ function hailed(NPC, Spawn)
 		PlayFlavor(NPC, "voiceover/english/exp03_questvo2/gomphum/_exp03/exp03_rgn_greater_faydark/shroomba/gomphum/gomphum000.mp3", "", "", 3624615111, 858972471, Spawn)
 	AddConversationOption(conversation, "So long as they allow it?", "dlg_24_1")
 	StartConversation(conversation, NPC, Spawn, "Gomphum welcomes you to Dyer Mycoria. You are free to stay so long as the grobins allow it.")
-	if convo==26 then
-		PlayFlavor(NPC, "voiceover/english/exp03_questvo2/gomphum/_exp03/exp03_rgn_greater_faydark/shroomba/gomphum/gomphum005.mp3", "", "", 3368360641, 1528435648, Spawn)
-		AddConversationOption(conversation, "I have.", "dlg_26_1")
-		StartConversation(conversation, NPC, Spawn, "Have you done it?")
-	end
+	--if convo==26 then
+	--	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/gomphum/_exp03/exp03_rgn_greater_faydark/shroomba/gomphum/gomphum005.mp3", "", "", 3368360641, 1528435648, Spawn)
+	--	AddConversationOption(conversation, "I have.", "dlg_26_1")
+	--	StartConversation(conversation, NPC, Spawn, "Have you done it?")
+	--end
 
-	if convo==27 then
-		PlayFlavor(NPC, "voiceover/english/exp03_questvo2/gomphum/_exp03/exp03_rgn_greater_faydark/shroomba/gomphum/gomphum010.mp3", "", "", 4241201770, 2705100899, Spawn)
-		AddConversationOption(conversation, "Yes, but they will be less of a problem with Pengo and Turkrik gone.", "dlg_27_1")
-		StartConversation(conversation, NPC, Spawn, "Are the grobins still here?")
-	end
+	--if convo==27 then
+	--	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/gomphum/_exp03/exp03_rgn_greater_faydark/shroomba/gomphum/gomphum010.mp3", "", "", 4241201770, 2705100899, Spawn)
+	--	AddConversationOption(conversation, "Yes, but they will be less of a problem with Pengo and Turkrik gone.", "dlg_27_1")
+	--	StartConversation(conversation, NPC, Spawn, "Are the grobins still here?")
+	--end
 
 end
 

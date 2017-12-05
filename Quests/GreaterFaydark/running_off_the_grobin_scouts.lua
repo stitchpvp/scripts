@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest Running Off the Grobin Scouts
 	Script Author	: Zcoretri
 	Script Date	: 2009.03.02
-	
+
 	Zone       : Greater Faydark
 	Quest Giver: Matron of the Nursery
 	Preceded by: Infestation!
@@ -47,7 +47,7 @@ function QuestComplete(Quest, QuestGiver, Player)
 	GiveQuestReward(Quest, Player)
 end
 
-function Reload(Quest, QuestGiver, Player)
+function Reload(Quest, QuestGiver, Player, Step)
 	 if Step == 1 then
 	KilledAllGrobinScouts(Quest, QuestGiver, Player)
 	 end

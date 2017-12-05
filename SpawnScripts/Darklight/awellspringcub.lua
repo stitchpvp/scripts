@@ -9,7 +9,7 @@
 local DrawUponWellsprings = 155
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function casted_on(NPC, Caster, SpellName)

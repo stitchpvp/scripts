@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "Thexian Taint"
 	Script Author	: Scatman
 	Script Date	: 2009.02.01
-	
+
 	Zone       : Darklight Wood
 	Quest Giver: Sselnyl Do'Zyth
 	Preceded by: None

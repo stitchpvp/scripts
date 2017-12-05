@@ -3,7 +3,7 @@
 	Script Purpose	: Lieutenant Delsun <Qeynos Guard>
 	Script Author	: Scatman
 	Script Date	: 2009.10.18
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 local QUEST4_FROM_CONSULBREE = 230
@@ -14,7 +14,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
@@ -101,7 +101,7 @@ end
 
 function dlg_21_1(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_1, 5)
-	
+
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 

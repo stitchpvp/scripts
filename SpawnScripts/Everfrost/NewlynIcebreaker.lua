@@ -2,8 +2,8 @@
     Script Name    : SpawnScripts/Everfrost/NewlynIcebreaker.lua
     Script Author  : Flunklesnarkin
     Script Date    : 2015.10.23 01:10:49
-    Script Purpose : 
-                   : 
+    Script Purpose :
+                   :
 --]]
 
 local TheStoriesofEverfrost = 167
@@ -23,7 +23,7 @@ function hailed(NPC, Spawn)
     elseif HasQuest(Spawn, TheStoriesofEverfrost) == true and GetQuestStep(Spawn, 167) == 1 then
          TSOE_Chat1(NPC, Spawn)
     end
-         
+
 end
 
 function respawn(NPC)
@@ -67,4 +67,4 @@ function TSOE_Chat4(NPC, Spawn)
 
     AddConversationOption(conversation, "I see, I see.")
     StartConversation(conversation, NPC, Spawn, "Aye, there are still the beautiful peaks, and the feel of the land is still there. It is cold and bitter, but beautiful and enduring, much like us.")
-end        
+end

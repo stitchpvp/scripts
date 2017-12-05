@@ -3,7 +3,7 @@
 	Script Purpose	:	the quest "The Nightmare is Over"
 	Script Author	:	theFoof
 	Script Date		:	2013.6.19
-	Script Notes	:	
+	Script Notes	:
 
 	Zone			:	Frostfang Sea
 	Quest Giver		:	Dolur Axebeard
@@ -20,10 +20,10 @@ end
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
 	local conversation = CreateConversation()
-	
+
 	AddConversationOption(conversation, "I look forward to meeting them.")
 	AddConversationOption(conversation, "Perhaps they will be a bit more organized.")
-	StartConversation(conversation, QuestGiver, Player, "Thank ye for sticking with us through the worst of it, " .. GetName(Spawn) .. ". Yer no fair weather friend.  I'll say taht about ye. I've sent word to Cragged Spine that yer coming and put in a good word or two.  They should welcome ye right away. Ye'll find it far to the south of here, past the battlefield and the basilisks.")
+	StartConversation(conversation, QuestGiver, Player, "Thank ye for sticking with us through the worst of it, " .. GetName(Player) .. ". Yer no fair weather friend.  I'll say taht about ye. I've sent word to Cragged Spine that yer coming and put in a good word or two.  They should welcome ye right away. Ye'll find it far to the south of here, past the battlefield and the basilisks.")
 end
 
 function Deleted(Quest, QuestGiver, Player)

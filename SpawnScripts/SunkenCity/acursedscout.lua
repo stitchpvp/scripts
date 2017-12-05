@@ -3,7 +3,7 @@
 	Script Purpose	: a cursed scout
 	Script Author	: Scatman
 	Script Date	: 2009.08.01
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 local spoke = false
@@ -17,7 +17,7 @@ function hailed(NPC, Spawn)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function aggro(NPC, Spawn)

@@ -3,7 +3,7 @@
 	Script Purpose	:	the quest Kestrel Pot Pie
 	Script Author	:	theFoof
 	Script Date		:	2013.9.3
-	Script Notes	:	
+	Script Notes	:
 
 	Zone			:	Frostfang Sea
 	Quest Giver		:	Alice Swamprunner

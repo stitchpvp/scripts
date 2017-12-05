@@ -3,7 +3,7 @@
 	Script Purpose	: Trainer Levka Foeblade <Recognizing Opportunities>
 	Script Author	: theFoof
 	Script Date	: 2013.05.21
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 function spawn(NPC)
@@ -11,7 +11,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)
@@ -32,7 +32,7 @@ function first_chat(NPC, Spawn)
 	AddConversationOption(conversation, "What are Heroic Opportunities?", "opp_chat_1")
 	AddConversationOption(conversation, "I will seek your knowledge another time.")
 	StartConversation(conversation, NPC, Spawn, "I look at you and see someone eager to defend Neriak by facing fierce opponents in battle. Well, I can teach you about Heroic Opportunities, a way for you and your allies to accomplish great feats of combat prowess.")
-end	
+end
 
 function opp_chat_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)

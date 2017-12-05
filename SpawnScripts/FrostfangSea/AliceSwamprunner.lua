@@ -1,6 +1,6 @@
 --[[
 	Script Name	: SpawnScripts/FrostfangSea/AliceSwamprunner.lua
-	Script Purpose	: Alice Swamprunner 
+	Script Purpose	: Alice Swamprunner
 	Script Author	: theFoof
 	Script Date	: 2013.09.02
 	Script Notes	:
@@ -13,13 +13,13 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	if not HasCompletedQuest(Spawn, KestrelPie) and not HasQuest(Spawn, KestrelPie) then
 		PlayFlavor(NPC, "alice_swamprunner/halas/new_halas/alice_swamprunner/alice_swamprunner_001.mp3", "", "", 3199488336, 2249135127, Spawn)
 		AddConversationOption(conversation, "Nice to meet you Alice, I'm " .. GetName(Spawn) .. ".", "Quest1Chat_1")
@@ -68,8 +68,8 @@ end
 function Quest1Chat_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
-	AddConversationOption(converstion, "I shall return once I have collected the ingredients.")
+
+	AddConversationOption(conversation, "I shall return once I have collected the ingredients.")
 	StartConversation(conversation, NPC, Spawn, "You can find the ice shrooms in the cave leading to the Erollis Dock, and the kestrels are at the south entrance to New Halas.")
 end
 
@@ -84,7 +84,7 @@ end
 function Quest1Chat_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	AddConversationOption(conversation, "I can't wait.", "Quest1Chat_7")
 	StartConversation(conversation, NPC, Spawn, "It is indeed. Now to cook it and it will be ready to eat.")
 end
@@ -94,7 +94,7 @@ function Quest1Chat_7(NPC, Spawn)
 	SetStepComplete(Spawn, KestrelPie, 3)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	AddConversationOption(conversation, "I will! Thanks, Alice.")
 	StartConversation(conversation, NPC, Spawn, "There, finished! Go ahead, take a slice!")
 end

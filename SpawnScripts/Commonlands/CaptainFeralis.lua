@@ -1,15 +1,18 @@
+QUEST_1_FROM_CAPTAIN_FERALIS = nil
+QUEST_4_FROM_RAINUS = nil
+
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-  
-  if HasQuest(Spawn, QUEST_4_FROM_Rainus) then
+
+  if HasQuest(Spawn, QUEST_4_FROM_RAINUS) then
 	AddConversationOption(conversation, "I am " .. GetName(Spawn) .. ". Rainus asked me to deliver these root samples to you.", "Option1")
 	StartConversation(conversation, NPC, Spawn, "Yes?")
-  
-  elseif HasQuest(Spawn, QUEST_1_FROM_Captain_Feralis) then
+
+  elseif HasQuest(Spawn, QUEST_1_FROM_CAPTAIN_FERALIS) then
       AddConversationOption(conversation, "Here's the money.", "Option2")
       StartConversation(conversation, NPC, Spawn, "Well?")
-  end    
+  end
 end
 
 function Option1(NPC, Spawn)

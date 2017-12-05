@@ -7,7 +7,7 @@
         Zone            : Frostfang Sea
         Quest Giver     : Flibbit Quaqmarr
         Preceded by     : An Unbearable Problem
-        Followed by     : 
+        Followed by     :
 --]]
 
 function Accepted(Quest, QuestGiver, Player)

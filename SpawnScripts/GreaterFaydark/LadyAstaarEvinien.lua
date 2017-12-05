@@ -11,7 +11,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)
@@ -28,26 +28,26 @@ function hailed(NPC, Spawn)
 	AddConversationOption(conversation, "What's that?", "dlg_37_1")
 	AddConversationOption(conversation, "No, thanks.")
 	StartConversation(conversation, NPC, Spawn, "Hello there!  Are you here to participate in the Fae Ritual of Calling?")
-	if convo==101 then
-		PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_2_1005.mp3", "", "", 0, 0, Spawn)
-		AddConversationOption(conversation, "Yes, I have.", "dlg_101_1")
-		AddConversationOption(conversation, "Not yet.")
-		StartConversation(conversation, NPC, Spawn, "Have you placed the offering at the memorial?")
-	end
+	--if convo==101 then
+	--	PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_2_1005.mp3", "", "", 0, 0, Spawn)
+	--	AddConversationOption(conversation, "Yes, I have.", "dlg_101_1")
+	--	AddConversationOption(conversation, "Not yet.")
+	--	StartConversation(conversation, NPC, Spawn, "Have you placed the offering at the memorial?")
+	--end
 
-	if convo==102 then
-		PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_2_1005.mp3", "", "", 0, 0, Spawn)
-		AddConversationOption(conversation, "Yes, I have.", "dlg_102_1")
-		AddConversationOption(conversation, "Not yet.")
-		StartConversation(conversation, NPC, Spawn, "Have you placed the offering at the memorial?")
-	end
+	--if convo==102 then
+	--	PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_2_1005.mp3", "", "", 0, 0, Spawn)
+	--	AddConversationOption(conversation, "Yes, I have.", "dlg_102_1")
+	--	AddConversationOption(conversation, "Not yet.")
+	--	StartConversation(conversation, NPC, Spawn, "Have you placed the offering at the memorial?")
+	--end
 
-	if convo==103 then
-		PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_2_1005.mp3", "", "", 0, 0, Spawn)
-		AddConversationOption(conversation, "Yes, I have.", "dlg_103_1")
-		AddConversationOption(conversation, "Not yet.")
-		StartConversation(conversation, NPC, Spawn, "Have you placed the offering at the memorial?")
-	end
+	--if convo==103 then
+	--	PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_2_1005.mp3", "", "", 0, 0, Spawn)
+	--	AddConversationOption(conversation, "Yes, I have.", "dlg_103_1")
+	--	AddConversationOption(conversation, "Not yet.")
+	--	StartConversation(conversation, NPC, Spawn, "Have you placed the offering at the memorial?")
+	--end
 
 end
 

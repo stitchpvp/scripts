@@ -3,7 +3,7 @@
     Script Author  : Zcoretri
     Script Date    : 2015.07.30
     Script Purpose : Captain Warrik dialog
-                   : 
+                   :
 --]]
 
 function spawn(NPC)
@@ -11,7 +11,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-    spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)

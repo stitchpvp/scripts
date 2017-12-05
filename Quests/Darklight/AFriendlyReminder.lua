@@ -3,10 +3,10 @@
 	Script Purpose	:	Handles the quest, "A Friendly Reminder"
 	Script Author	:	Cynnar
 	Script Date		:	9/1/2015
-	Script Notes	:	
+	Script Notes	:
 
 	Zone			:	Darklight Wood
-	Quest Giver	Laexyra Y'Barriath	:	
+	Quest Giver	Laexyra Y'Barriath	:
 	Preceded by		:	Public Service
 	Followed by		:	Reaping
 --]]
@@ -40,7 +40,7 @@ end
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
 	local conversation = CreateConversation()
-	
+
 	PlayFlavor(QuestGiver, "", "", "cutthroat", 0, 0, Player)
 	AddConversationOption(conversation, "It will be done.")
 	StartConversation(conversation, QuestGiver, Player, "Make sure he does not return.")

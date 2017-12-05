@@ -2,8 +2,8 @@
     Script Name    : SpawnScripts/Lavastorm/najenaElevatorcontrol.lua
     Script Author  : smash
     Script Date    : 2016.01.14 09:01:52
-    Script Purpose : 
-                   : 
+    Script Purpose :
+                   :
 --]]
 
 function spawn(NPC)
@@ -20,7 +20,7 @@ function MoveElevator(NPC, Direction)
 	if GetTempVariable(Elevator, "moving") == "true" then
 		return
 	end
-	
+
 	local current_pos = GetTempVariable(Elevator, "current_pos")
 	if Direction == "Raise Elevator" then
 		if current_pos == "middle" then

@@ -1,6 +1,6 @@
 --[[
 	Script Name	: SpawnScripts/Darklight/anArcaneScienceapprentice.lua
-	Script Purpose	: an Arcane Science apprentice 
+	Script Purpose	: an Arcane Science apprentice
 	Script Author	: John Adams
 	Script Date	: 2009.01.31
 	Script Notes	: Auto-Generated Conversation from PacketParser Data
@@ -11,7 +11,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)
@@ -28,19 +28,19 @@ function hailed(NPC, Spawn)
 	AddConversationOption(conversation, "You've reported this to the Academy?", "dlg_9_1")
 	AddConversationOption(conversation, "This is no time to stand back and gawk!")
 	StartConversation(conversation, NPC, Spawn, "This is not good.  These Void tempests have been tainting Norrath, but now attacking beasts are being expelled from them!")
-	if convo==10 then
-		PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_1_1008.mp3", "", "", 0, 0, Spawn)
-		AddConversationOption(conversation, "You've reported this to the Academy?", "dlg_10_1")
-		AddConversationOption(conversation, "This is no time to stand back and gawk!")
-		StartConversation(conversation, NPC, Spawn, "This is not good.  These Void tempests have been tainting Norrath, but now attacking beasts are being expelled from them!")
-	end
+	--if convo==10 then
+	--	PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_1_1008.mp3", "", "", 0, 0, Spawn)
+	--	AddConversationOption(conversation, "You've reported this to the Academy?", "dlg_10_1")
+	--	AddConversationOption(conversation, "This is no time to stand back and gawk!")
+	--	StartConversation(conversation, NPC, Spawn, "This is not good.  These Void tempests have been tainting Norrath, but now attacking beasts are being expelled from them!")
+	--end
 
-	if convo==11 then
-		PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_1_1008.mp3", "", "", 0, 0, Spawn)
-		AddConversationOption(conversation, "You've reported this to the Academy?", "dlg_11_1")
-		AddConversationOption(conversation, "This is no time to stand back and gawk!")
-		StartConversation(conversation, NPC, Spawn, "This is not good.  These Void tempests have been tainting Norrath, but now attacking beasts are being expelled from them!")
-	end
+	--if convo==11 then
+	--	PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_1_1008.mp3", "", "", 0, 0, Spawn)
+	--	AddConversationOption(conversation, "You've reported this to the Academy?", "dlg_11_1")
+	--	AddConversationOption(conversation, "This is no time to stand back and gawk!")
+	--	StartConversation(conversation, NPC, Spawn, "This is not good.  These Void tempests have been tainting Norrath, but now attacking beasts are being expelled from them!")
+	--end
 
 end
 

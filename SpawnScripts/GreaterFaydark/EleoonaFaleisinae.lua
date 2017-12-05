@@ -1,6 +1,6 @@
 --[[
 	Script Name	: SpawnScripts/GreaterFaydark/EleoonaFaleisinae.lua
-	Script Purpose	: Eleoona Faleisinae 
+	Script Purpose	: Eleoona Faleisinae
 	Script Author	: John Adams
 	Script Date	: 2009.03.01
 	Script Notes	: Auto-Generated Conversation from PacketParser Data
@@ -11,7 +11,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)

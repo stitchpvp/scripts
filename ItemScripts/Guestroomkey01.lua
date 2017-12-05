@@ -1,9 +1,9 @@
 --[[
 	Script Name		:	ItemScripts/Guestroomkey01.lua
-	Script Purpose	:	
+	Script Purpose	:
 	Script Author	:	smash
 	Script Date		:	1/27/2016
-	Script Notes	:	
+	Script Notes	:
 --]]
 
 function examined(Item, Player)

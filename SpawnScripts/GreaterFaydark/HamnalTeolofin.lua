@@ -1,6 +1,6 @@
 --[[
 	Script Name	: SpawnScripts/GreaterFaydark/HamnalTeolofin.lua
-	Script Purpose	: Hamnal Teolofin 
+	Script Purpose	: Hamnal Teolofin
 	Script Author	: John Adams
 	Script Date	: 2009.03.01
 	Script Notes	: Auto-Generated Conversation from PacketParser Data
@@ -11,7 +11,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)
@@ -38,13 +38,13 @@ function hailed(NPC, Spawn)
 	AddConversationOption(conversation, "Jalmari sent me to speak with you about the Grender.")
 	AddConversationOption(conversation, "Nothing, thanks.")
 	StartConversation(conversation, NPC, Spawn, "Yes? What can I do for you?")
-	if convo==4 then
-		PlayFlavor(NPC, "voiceover/english/exp03_questvo2/hamnal_teolofin/_exp03/exp03_cty_kelethin/tutorials/qst_hamnal/qst_hamnal001.mp3", "", "", 2895828066, 2742672495, Spawn)
-		AddConversationOption(conversation, "I've been learning the history of the Fae.", "dlg_4_1")
-		AddConversationOption(conversation, "Jalmari sent me to speak with you about the Grender.")
-		AddConversationOption(conversation, "Nothing, thanks.")
-		StartConversation(conversation, NPC, Spawn, "Yes? What can I do for you?")
-	end
+	--if convo==4 then
+	--	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/hamnal_teolofin/_exp03/exp03_cty_kelethin/tutorials/qst_hamnal/qst_hamnal001.mp3", "", "", 2895828066, 2742672495, Spawn)
+	--	AddConversationOption(conversation, "I've been learning the history of the Fae.", "dlg_4_1")
+	--	AddConversationOption(conversation, "Jalmari sent me to speak with you about the Grender.")
+	--	AddConversationOption(conversation, "Nothing, thanks.")
+	--	StartConversation(conversation, NPC, Spawn, "Yes? What can I do for you?")
+	--end
 
 end
 

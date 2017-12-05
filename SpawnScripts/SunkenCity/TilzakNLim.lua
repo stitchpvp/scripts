@@ -1,6 +1,6 @@
 --[[
 	Script Name	: SpawnScripts/SunkenCity/TilzakNLim.lua
-	Script Purpose	: Tilzak N`Lim 
+	Script Purpose	: Tilzak N`Lim
 	Script Author	: scatman
 	Script Date	: 2009.08.01
 	Script Notes	: Auto-Generated Conversation from PacketParser Data
@@ -13,13 +13,13 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	if not HasCompletedQuest(Spawn, QUEST_1) then
 		if HasQuest(Spawn, QUEST_1) then
 			if GetQuestStep(Spawn, QUEST_1) == 2 then
@@ -52,7 +52,7 @@ end
 
 function dlg_4_1(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_1, 2)
-	
+
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 

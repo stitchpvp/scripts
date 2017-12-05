@@ -3,7 +3,7 @@
 	Script Purpose	: for the totem of the iceclad manta spawn
 	Script Author	: theFoof
 	Script Date	: 2013.06.11
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 local BelowWaves = 59
@@ -14,7 +14,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function SpawnAccess(NPC, Spawn)

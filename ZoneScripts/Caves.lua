@@ -3,7 +3,7 @@
 	Script Purpose	: Caves
 	Script Author	: Scatman
 	Script Date	: 2009.10.18
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 local QUEST2_FROM_EMMA = 227

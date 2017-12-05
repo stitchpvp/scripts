@@ -7,7 +7,7 @@
         Zone            : Frostfang Sea
         Quest Giver     : Yasha Redblade
         Preceded by     : Boatload of Work
-        Followed by     : 
+        Followed by     :
 --]]
 
 function Init(Quest)

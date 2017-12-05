@@ -3,7 +3,7 @@
 	Script Purpose	: an Ethernere guard <Academy of Arcane Science>
 	Script Author	: scatman
 	Script Date	: 2009.07.25
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 -- This quest is repeatable I think.
@@ -14,13 +14,13 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	if HasCompletedQuest(Spawn, QUEST_1) then
 		Say(NPC, "May you complete your task without leaving this realm.", Spawn)
 	elseif HasQuest(Spawn, QUEST_1) then
@@ -74,7 +74,7 @@ end
 
 function Successful(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_1, 3)
-	
+
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 

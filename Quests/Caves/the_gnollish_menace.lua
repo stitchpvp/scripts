@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "The Gnollish Menace"
 	Script Author	: Scatman
 	Script Date	: 2009.10.18
-	
+
 	Zone       : The Caves
 	Quest Giver: Lieutenant Delsun
 	Preceded by: None
@@ -25,7 +25,7 @@ end
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
 	local conversation = CreateConversation()
-	
+
 	PlayFlavor(QuestGiver, "voiceover/english/tutorial_revamp/lieutenant_delsun/qey_adv03_caves/quests/delsun/delsun_002a.mp3", "", "", 1211118613, 1660657141, Player)
 	AddConversationOption(conversation, "All right.")
 	StartConversation(conversation,QuestGiver, Player, "Once you've done this return to me. The city of Qeynos will want to thank you properly.")

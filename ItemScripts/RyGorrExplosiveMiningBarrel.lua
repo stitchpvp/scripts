@@ -30,7 +30,7 @@ function used(Item, Player)
 			else
 				SendMessage(Player, "You cannot place the Ry'Gorr Explosive Mining Barrel here.", "yellow")
 			end
-		else 
+		else
 			SendMessage(Player, "You cannot place the Ry'Gorr Explosive Mining Barrel here.", "yellow")
 		end
 	end

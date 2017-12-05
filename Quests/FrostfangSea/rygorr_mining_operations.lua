@@ -3,7 +3,7 @@
 	Script Purpose	:	for the quest "Ry'Gorr Mining Operations'
 	Script Author	:	theFoof
 	Script Date		:	2013.6.13
-	Script Notes	:	
+	Script Notes	:
 
 	Zone			:	Frostfang Sea
 	Quest Giver		:	Thirin Veliumdelver

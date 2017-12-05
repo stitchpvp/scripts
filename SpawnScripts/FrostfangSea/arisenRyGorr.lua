@@ -3,7 +3,7 @@
 	Script Purpose	:	for the risen ry'gorrs that charge to the coldain spirits
 	Script Author	:	theFoof
 	Script Date		:	2013.6.6
-	Script Notes	:	
+	Script Notes	:
 --]]
 
 function spawn(NPC)
@@ -13,7 +13,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)

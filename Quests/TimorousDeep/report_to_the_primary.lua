@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "Report to the Primary"
 	Script Author	: Scatman
 	Script Date	: 2009.02.06
-	
+
 	Zone       : Timorous Deep
 	Quest Giver: Tykor Gi'Lok
 	Preceded by: Curious Ore (curious_ore.lua)

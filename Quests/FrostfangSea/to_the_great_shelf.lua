@@ -3,15 +3,13 @@
 	Script Purpose	:	for the quest "To the Great Shelf!"
 	Script Author	:	theFoof
 	Script Date		:	2013.5.30
-	Script Notes	:	
+	Script Notes	:
 
 	Zone			:	Frostfang Sea
 	Quest Giver		:	Flibbit Quagmarr
 	Preceded by		:	Pelted
 	Followed by		:	None
 --]]
-require"SpawnScripts/FrostfangSea/FlibbitQuagmarr"
-
 function Init(Quest)
 	AddQuestRewardCoin(Quest, math.random(8,80), math.random(13,25), 0, 0)
 	AddQuestStep(Quest, 1, "I must make sure Splorpy is ready to leave.", 1, 100, "I must speak with Splorpy at Gwenevyn's Cove and make sure he is ready to go.", 0)

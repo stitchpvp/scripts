@@ -20,7 +20,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
@@ -103,13 +103,13 @@ function dlg_0_2(NPC, Spawn)
 end
 
 function PlayerEmote_no(NPC, Spawn)
-	PlayFlavor(Spawn, "", "", "no", 0, 0, Player)
+	PlayFlavor(NPC, "", "", "no", 0, 0, Spawn)
 end
 
 function dlg_1_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	AddConversationOption(conversation, "I will find it.")
 		StartConversation(conversation, NPC, Spawn, "Do not return until you have found the rift and sealed it!")
 end
@@ -121,7 +121,7 @@ end
 function dlg_2_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	SetStepComplete(Spawn, SealingTheRift, 2)
 
 	PlayFlavor(NPC, "pellandra_d_xatyl/darklight_wood/hates_envy/pellandra_revamp/pellandra007.mp3", "", "", 3453657784, 2286828041, Spawn)
@@ -155,7 +155,7 @@ end
 function dlg_4_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	PlayFlavor(NPC, "pellandra_d_xatyl/darklight_wood/hates_envy/pellandra_revamp/pellandra016.mp3", "", "", 188105745, 1139692175, Spawn)
 	AddConversationOption(conversation, "I see. What can we do to stop them?", "dlg_4_2")
 	StartConversation(conversation, NPC, Spawn, "I haven't the time to give you a comprehensive history lesson, but needless to say, the Thexians are nothing more than the former ruling class of Neriak. An emasculated family who proved themselves too weak to rule Neriak. We Teir'Dal must thank Queen Cristanos for recognizing this weakness and removing it, as one would carve a burrowing tick from the back of a dog.")
@@ -164,7 +164,7 @@ end
 function dlg_4_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	PlayFlavor(NPC, "pellandra_d_xatyl/darklight_wood/hates_envy/pellandra_revamp/pellandra017.mp3", "", "agree", 1551019218, 1492381224, Spawn)
 	AddConversationOption(conversation, "Nothing will stand in my way!", "dlg_4_5")
 	AddConversationOption(conversation, "I will defeat all who oppose me!", "dlg_4_5")
@@ -173,14 +173,14 @@ function dlg_4_2(NPC, Spawn)
 end
 
 function PlayerEmote_cringe(NPC, Spawn)
-	PlayFlavor(Spawn, "", "", "cringe", 0, 0, Player)
+	PlayFlavor(NPC, "", "", "cringe", 0, 0, Spawn)
 end
 
 function dlg_4_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
-	PlayFlavor(Spawn, "", "", "cheer", 0, 0, Player)
+
+	PlayFlavor(NPC, "", "", "cheer", 0, 0, Spawn)
 	PlayFlavor(NPC, "pellandra_d_xatyl/darklight_wood/hates_envy/pellandra_revamp/pellandra018.mp3", "", "", 1441675499, 2064064965, Spawn)
 	AddConversationOption(conversation, "Go on.", "dlg_4_6")
 	StartConversation(conversation, NPC, Spawn, "Good, then we shall begin. I believe the source of our problems lies within the depths of Sablevein Tear, the place our miners were recently excavating before the elementals attacked.")
@@ -189,7 +189,7 @@ end
 function dlg_4_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	PlayFlavor(NPC, "pellandra_d_xatyl/darklight_wood/hates_envy/pellandra_revamp/pellandra019.mp3", "", "", 1398439421, 3597583644, Spawn)
 	AddConversationOption(conversation, "I will put an end to the attacks!", "QuestOffer_ReclaimingTheSableveinTear")
 	AddConversationOption(conversation, "I cannot assist at this time.", "PlayerEmote_no")
@@ -197,13 +197,13 @@ function dlg_4_6(NPC, Spawn)
 end
 
 function QuestOffer_ReclaimingTheSableveinTear(NPC, Spawn)
-	OfferQuest(NPC, Spawn, ReclaimingTheSableveinTear)	
+	OfferQuest(NPC, Spawn, ReclaimingTheSableveinTear)
 end
 
 function dlg_5_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	AddConversationOption(conversation, "I will find the source of the attacks.")
 	StartConversation(conversation, NPC, Spawn, "Time is of the essence, " .. GetName(Spawn) .. ". You must continue your search at once!")
 end
@@ -211,14 +211,14 @@ end
 function dlg_6_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	SetStepComplete(Spawn, SearchingForSigils, 2)
 	RemoveItem(Spawn, 11837)
 	RemoveItem(Spawn, 11837)
 	RemoveItem(Spawn, 11837)
 	RemoveItem(Spawn, 11837)
-	
-	PlayFlavor(Spawn, "", "", "agree", 0, 0, Player)
+
+	PlayFlavor(NPC, "", "", "agree", 0, 0, Spawn)
 	PlayFlavor(NPC, "pellandra_d_xatyl/darklight_wood/hates_envy/pellandra_revamp/pellandra013.mp3", "", "", 1325789306, 33394254, Spawn)
 	AddConversationOption(conversation, "What's that?", "dlg_6_2")
 	StartConversation(conversation, NPC, Spawn, "Good, let me see them. Hmm, this is just as I thought.")
@@ -227,7 +227,7 @@ end
 function dlg_6_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	PlayFlavor(NPC, "pellandra_d_xatyl/darklight_wood/hates_envy/pellandra_revamp/pellandra015.mp3", "", "", 1970700762, 2434868211, Spawn)
 	AddConversationOption(conversation, "What can we do to stop them?", "dlg_4_2")
 	AddConversationOption(conversation, "Who are the Thexians?", "dlg_4_1")
@@ -237,9 +237,9 @@ end
 function dlg_7_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	SetStepComplete(Spawn, ReclaimingTheSableveinTear, 2)
-	
+
 	PlayFlavor(NPC, "pellandra_d_xatyl/darklight_wood/hates_envy/pellandra_revamp/pellandra022.mp3", "", "cheer", 2095462758, 507648174, Spawn)
 	AddConversationOption(conversation, "Now what?", "dlg_7_2")
 	StartConversation(conversation, NPC, Spawn, "Skillfully done, " .. GetName(Spawn) .. "! The meddling Thexians should know better than to try to disrupt our grip on these lands. I hope you made her suffer.")
@@ -248,7 +248,7 @@ end
 function dlg_7_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	PlayFlavor(NPC, "pellandra_d_xatyl/darklight_wood/hates_envy/pellandra_revamp/pellandra024.mp3", "", "", 739852284, 4285882362, Spawn)
 	AddConversationOption(conversation, "What do you mean?", "dlg_7_3")
 	StartConversation(conversation, NPC, Spawn, "Fortunately the direct threat appears to be abated for now. Udiyitas and the other guards will concentrate on mopping up the rest of the stray Sablevein while others can begin to repair the damage done. Your fate, however, lies elsewhere.")
@@ -265,7 +265,7 @@ function dlg_7_3(NPC, Spawn)
 end
 
 function PlayerEmote_brandish(NPC, Spawn)
-	PlayFlavor(Spawn, "", "", "brandish", 0, 0, Player)
+	PlayFlavor(NPC, "", "", "brandish", 0, 0, Spawn)
 end
 
 function QuestOffer_AnAuthorityOnHate(NPC, Spawn)
@@ -277,8 +277,8 @@ end
 function dlg_8_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
-	PlayFlavor(Spawn, "", "", "no", 0, 0, Player)
+
+	PlayFlavor(NPC, "", "", "no", 0, 0, Spawn)
 	PlayFlavor(NPC, "pellandra_d_xatyl/darklight_wood/hates_envy/pellandra_revamp/pellandra008.mp3", "", "", 4200285970, 1831158049, Spawn)
 	AddConversationOption(conversation, "I will return with the Sigils!")
 	StartConversation(conversation, NPC, Spawn, "Do not return until you have collected the sigil stones from the Sablevein pulverizers.")

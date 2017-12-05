@@ -3,7 +3,7 @@
 	Script Purpose	:	for the item "Gerla's Elemental Lullaby"
 	Script Author	:	theFoof
 	Script Date		:	2013.6.13
-	Script Notes	:	
+	Script Notes	:
 --]]
 
 local NapEvigis = 64

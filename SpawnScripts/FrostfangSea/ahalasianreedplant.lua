@@ -3,7 +3,7 @@
 	Script Purpose	:	halasian reed plants
 	Script Author	:	theFoof
 	Script Date		:	2013.9.2
-	Script Notes	:	
+	Script Notes	:
 --]]
 
 local FrozenChowder = 88
@@ -13,7 +13,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function casted_on(NPC, Spawn, SpellName)

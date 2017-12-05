@@ -3,7 +3,7 @@
 	Script Purpose	:	Handles the quest, "Reclaiming the Sablevein Tear"
 	Script Author	:	Cynnar
 	Script Date		:	7/24/2015
-	Script Notes	:	
+	Script Notes	:
 
 	Zone			:	Darklight Wood
 	Quest Giver		:	Pellandra D'Xatyl

@@ -3,7 +3,7 @@
 	Script Purpose	: Nohr Flamel <Alchemy Merchant>
 	Script Author	: theFoof
 	Script Date	: 2013.09.26
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 require"SpawnScripts/FrostfangSea/halas_proximity_cheer"
@@ -13,7 +13,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)

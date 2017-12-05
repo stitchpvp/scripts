@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "Disrupting Haoaeran Studies"
 	Script Author	: Scatman
 	Script Date	: 2009.02.06
-	
+
 	Zone       : Timorous Deep
 	Quest Giver: Primary Conzuk Zum'Ha
 	Preceded by: Report to the Primary (report_to_the_primary.lua)
@@ -37,7 +37,7 @@ end
 
 function step1_complete_killedBirds(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 1, "I have slain the Haoaerans.")
-	
+
 	if QuestIsComplete(Player, 112) then
 		multiple_steps_complete(Quest, QuestGiver, Player)
 	end
@@ -45,7 +45,7 @@ end
 
 function step2_complete_gotOre(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 2, "I found some inscribed pottery.")
-	
+
 	if QuestIsComplete(Player, 112) then
 		multiple_steps_complete(Quest, QuestGiver, Player)
 	end
@@ -53,7 +53,7 @@ end
 
 function multiple_steps_complete(Quest, QuestGiver, Player)
 	UpdateQuestTaskGroupDescription(Quest, 1, "I have killed the Haoaerans and obtained a sample of what they're digging up.")
-	
+
 	AddQuestStepChat(Quest, 3, "I must speak with Primary Conzuk Zum'Ha in Chrykori Village.", 1, "I must show Primary Conzuk Zum'Ha in Chrykori Village these ore samples.", 0, 2630042)
 	AddQuestStepCompleteAction(Quest, 3, "quest_complete")
 end

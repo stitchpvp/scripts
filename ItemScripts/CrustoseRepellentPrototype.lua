@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the item "crustose repellent prototype"
 	Script Author	: theFoof
 	Script Date	: 2013.5.12
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 function used(Item, Player)

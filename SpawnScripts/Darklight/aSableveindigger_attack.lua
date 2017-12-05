@@ -3,7 +3,7 @@
 	Script Purpose	: a Sablevein digger
 	Script Author	: Scatman
 	Script Date	: 2009.11.19
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 local MIN_TIME = 3000
@@ -14,7 +14,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)

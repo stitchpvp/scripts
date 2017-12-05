@@ -1,4 +1,4 @@
-local function dmg(Target, MinDmg, MaxDmg)
+function dmg(Target, MinDmg, MaxDmg)
   SpellDamage(Target, 4, math.random(MinDmg, MaxDmg))
 
   if GetRaceType(Target) == 150 then

@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "Useful Materials"
 	Script Author	: Scatman
 	Script Date	: 2009.02.02
-	
+
 	Zone       : Darklight Wood
 	Quest Giver: Ilmtar D'Viervs
 	Preceded by: One Man's Waste... (one_mans_waste.lua)
@@ -17,7 +17,7 @@ function Init(Quest)
 	-- Scale Leaf Gloves
 	-- Shingled Helm
 	-- Stone Rivet Sabatons
-	-- Stitched Tracking Cap 
+	-- Stitched Tracking Cap
 
 
 	-- discarded wood
@@ -41,7 +41,7 @@ end
 
 function step1_complete_gotWood(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 1, "I have collected the wood.")
-	
+
 	AddQuestStepChat(Quest, 2, "I need to bring the wood back to Ilmtar.", 1, ".", 830, 340123)
 	AddQuestStepCompleteAction(Quest, 2, "quest_complete")
 end

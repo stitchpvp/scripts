@@ -1,6 +1,6 @@
 --[[
 	Script Name	: SpawnScripts/FrostfangSea/GalindaGoodfaith.lua
-	Script Purpose	: Galinda Goodfaith 
+	Script Purpose	: Galinda Goodfaith
 	Script Author	: theFoof
 	Script Date	: 2013.03.16
 	Script Notes	: Auto-Generated Conversation from PacketParser Data
@@ -13,7 +13,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)

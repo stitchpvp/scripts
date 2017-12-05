@@ -26,7 +26,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
@@ -67,7 +67,7 @@ function HasBooks(Spawn)
 	if not HasRecipeBook(Spawn, artisan_ess_2) and not HasItem(Spawn, artisan_ess_2, 1) then
 		has_books = false
 	end
-	
+
 	return has_books
 end
 

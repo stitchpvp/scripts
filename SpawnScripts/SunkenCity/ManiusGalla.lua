@@ -1,9 +1,9 @@
 --[[
 	Script Name	: SpawnScripts/SunkenCity/ManiusGalla.lua
-	Script Purpose	: Manius Galla 
+	Script Purpose	: Manius Galla
 	Script Author	: scatman
 	Script Date	: 2009.08.01
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 local QUEST_1 = 278
@@ -13,14 +13,14 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 	RandomVoiceOver(NPC, Spawn)
-	
+
 	if not HasCompletedQuest(Spawn, QUEST_1) then
 		if HasQuest(Spawn, QUEST_1) then
 			if GetQuestStep(Spawn, QUEST_1) == 6 then
@@ -72,7 +72,7 @@ end
 
 function dlg_17_1(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_1, 6)
-	
+
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 

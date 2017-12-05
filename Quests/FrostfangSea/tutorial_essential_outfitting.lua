@@ -2,7 +2,7 @@
 	Script Name		:	Quests/FrostfangSea/tutorial_essential_outfitting.lua
 	Script Author	:	theFoof
 	Script Date		:	2013.10.20
-	Script Notes	:	
+	Script Notes	:
 
 	Zone			:	Frostfang Sea
 	Quest Giver		:	Glin Hammerhelm

@@ -1,6 +1,6 @@
 --[[
 	Script Name	: SpawnScripts/GreaterFaydark/MasterBowyerMossberge.lua
-	Script Purpose	: Master Bowyer Mossberge 
+	Script Purpose	: Master Bowyer Mossberge
 	Script Author	: John Adams
 	Script Date	: 2009.03.01
 	Script Notes	: Auto-Generated Conversation from PacketParser Data
@@ -11,7 +11,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)
@@ -28,12 +28,12 @@ function hailed(NPC, Spawn)
 	AddConversationOption(conversation, "Who are the Faydark's Champions?", "dlg_83_1")
 	AddConversationOption(conversation, "I'll keep that in mind.")
 	StartConversation(conversation, NPC, Spawn, "These new carpentry devices are great, but I prefer the old traditional ways of making bows.  There is nothing like taking a plain old piece of wood and with your whittling knife, shape and transform it into a bow of beauty and power.  The Faydark's Champions understood that quite well.")
-	if convo==84 then
-		PlayFlavor(NPC, "master_bowyer_mossberge/_exp03/exp03_rgn_greater_faydark/master_bowyer_mossberge/master_bowyer_mossberge001.mp3", "", "", 3127429571, 2993577902, Spawn)
-		AddConversationOption(conversation, "Who are the Faydark's Champions?", "dlg_84_1")
-		AddConversationOption(conversation, "I'll keep that in mind.")
-		StartConversation(conversation, NPC, Spawn, "These new carpentry devices are great, but I prefer the old traditional ways of making bows.  There is nothing like taking a plain old piece of wood and with your whittling knife, shape and transform it into a bow of beauty and power.  The Faydark's Champions understood that quite well.")
-	end
+	--if convo==84 then
+	--	PlayFlavor(NPC, "master_bowyer_mossberge/_exp03/exp03_rgn_greater_faydark/master_bowyer_mossberge/master_bowyer_mossberge001.mp3", "", "", 3127429571, 2993577902, Spawn)
+	--	AddConversationOption(conversation, "Who are the Faydark's Champions?", "dlg_84_1")
+	--	AddConversationOption(conversation, "I'll keep that in mind.")
+	--	StartConversation(conversation, NPC, Spawn, "These new carpentry devices are great, but I prefer the old traditional ways of making bows.  There is nothing like taking a plain old piece of wood and with your whittling knife, shape and transform it into a bow of beauty and power.  The Faydark's Champions understood that quite well.")
+	--end
 
 end
 

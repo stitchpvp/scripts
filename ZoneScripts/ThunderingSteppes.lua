@@ -3,7 +3,7 @@
 	Script Purpose	:	Handle various things around the steppes
 	Script Author	:	Jabantiz
 	Script Date		:	7/11/2015
-	Script Notes	:	
+	Script Notes	:
 --]]
 
 -- Location ID's for the doors
@@ -33,13 +33,13 @@ end
 function dawn(zone)
 	local door1 = GetSpawnByLocationID(zone, NorthDoor)
 	local door2 = GetSpawnByLocationID(zone, SouthDoor)
-	
+
 	if door1 ~= nil then
 		if GetHeading(door1) == NorthDoorClosed then
 			UseWidget(door1)
 		end
 	end
-	
+
 	if door2 ~= nil then
 		if GetHeading(door2) == SouthDoorClosed then
 			UseWidget(door2)
@@ -50,13 +50,13 @@ end
 function dusk(zone)
 	local door1 = GetSpawnByLocationID(zone, NorthDoor)
 	local door2 = GetSpawnByLocationID(zone, SouthDoor)
-	
+
 	if door1 ~= nil then
 		if GetHeading(door1) ~= NorthDoorClosed then
 			UseWidget(door1)
 		end
 	end
-	
+
 	if door2 ~= nil then
 		if GetHeading(door2) ~= SouthDoorClosed then
 			UseWidget(door2)

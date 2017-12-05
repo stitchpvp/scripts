@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "Killing the Advance"
 	Script Author	: Scatman
 	Script Date	: 2009.03.10
-	
+
 	Zone       : Timorous Deep
 	Quest Giver: Tertiary Dih'Ha
 	Preceded by: None
@@ -33,18 +33,18 @@ end
 
 function Step1_Complete_KilledAdvancers(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 1, "I have slain the Haoaeran advancers.")
-	
+
 	AddQuestStepChat(Quest, 2, "I need to return to Tertiary Dih'Ha.", 1, "", 0, 2630108)
 	AddQuestStepCompleteAction(Quest, 2, "Quest_Complete")
 end
 
 function Quest_Complete(Quest, QuestGiver, Player)
-	RemoveItem(Spawn, 2931)
+	RemoveItem(Player, 2931)
 	UpdateQuestDescription(Quest, "I have slain the Haoaeran advancers and returned to Tertiary Dih'Ha.")
 	GiveQuestReward(Quest, Player)
 end
 
-function Reload(Quest, QusetGiver, Player, Step)
+function Reload(Quest, QuestGiver, Player, Step)
 	if Step == 1 then
 		Step1_Complete_KilledAdvancers(Quest, QuestGiver, Player)
 	end

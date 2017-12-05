@@ -3,11 +3,11 @@
 	Script Purpose	: Handles the quest "Message From The Matron"
 	Script Author	: Zcoretri
 	Script Date	: 2009.3.23
-	
+
 	Zone       : Greater Faydark
 	Quest Giver: Matron of the Nursery
 	Preceded by: Herbs of Healing and Growth
-	Followed by: 
+	Followed by:
 --]]
 
 

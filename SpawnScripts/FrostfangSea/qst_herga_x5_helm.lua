@@ -3,7 +3,7 @@
 	Script Purpose	:	for the helm during the quest "All That Remains"
 	Script Author	:	theFoof
 	Script Date		:	2013.6.5
-	Script Notes	:	
+	Script Notes	:
 --]]
 
 local AllRemains = 55

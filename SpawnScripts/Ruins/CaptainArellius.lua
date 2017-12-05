@@ -3,12 +3,12 @@
 	Script Purpose	: Captain Arellius <Freeport Militia>
 	Script Author	: Scatman
 	Script Date	: 2009.08.20
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 local QUEST_FROM_ZADDAR_GRAVEYARD = 251
 local QUEST_FROM_KURDEK_SPRAWL = 257
-local QUEST_COMMONLANDS = 1
+-- local QUEST_COMMONLANDS = 1
 local QUEST_FROM_THORSON_SUNKENCITY = 274
 local QUEST_1 = 262
 local QUEST_4_FROM_ARGOSIAN = 280
@@ -23,7 +23,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)
@@ -47,7 +47,7 @@ end
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	if HasQuest(Spawn, QUEST_FROM_ZADDAR_GRAVEYARD) then
 		AddConversationOption(conversation, "My name is " .. GetName(Spawn) .. ". Custodian Zaddar in the Graveyard sent me.", "dlg_0_1")
 	end
@@ -87,7 +87,7 @@ function hailed(NPC, Spawn)
 
 --[[	if HasCompletedQuest(Spawn, 1) then
 	else
-		
+
 	end
 
 	if convo==1 then
@@ -119,7 +119,7 @@ function dlg_0_1(NPC, Spawn)
 
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/captain_arellius/fprt_adv04_ruins/revamp/captain_arellius002.mp3", "", "", 2619235941, 3755092214, Spawn)
 	AddConversationOption(conversation, "What is going on here?", "dlg_1_1")
 	AddConversationOption(conversation, "Defend it yourself.")
@@ -135,7 +135,7 @@ function FromTheSprawl(NPC, Spawn)
 
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	AddConversationOption(conversation, "What is going on here?", "dlg_1_1")
 	AddConversationOption(conversation, "Defend it yourself.")
 	StartConversation(conversation, NPC, Spawn, "Zaddar informed me how you helped him keep the rival gangs of the Sprawl in check. The help of true heroes in Freeport like you is needed if we are to defend our city against the attack.")
@@ -150,7 +150,7 @@ function FromSunkenCity(NPC, Spawn)
 
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	AddConversationOption(conversation, "What is going on here?", "dlg_1_1")
 	AddConversationOption(conversation, "Defend it yourself.")
 	StartConversation(conversation, NPC, Spawn, "Thorson informed me how you helped uncover Curfield's plot to destroy Freeport. The help of true heroes of Freeport like you is needed if we are to defend our city against this attack.")
@@ -343,7 +343,7 @@ function RuleThatOut(NPC, Spawn)
 	if HasQuest(Spawn, QUEST_4_FROM_ARGOSIAN) then
 		SetStepComplete(Spawn, QUEST_4_FROM_ARGOSIAN, 1)
 	end
-	
+
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 
@@ -464,7 +464,7 @@ end
 
 function dlg_40_3(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_4_FROM_LIEUTENANT_IMPERIDUS, 1)
-	
+
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 

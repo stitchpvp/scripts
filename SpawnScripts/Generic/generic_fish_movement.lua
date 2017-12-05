@@ -3,7 +3,7 @@
 	Script Purpose	: Randomly chooses a path for the spawn to take
 	Script Author	: theFoof
 	Script Date	: 2013.5.16
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 function hailed(NPC, Spawn)

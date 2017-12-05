@@ -3,7 +3,7 @@
 	Script Purpose	:	for the spawn Evigis the Ancient
 	Script Author	:	theFoof
 	Script Date		:	2013.6.13
-	Script Notes	:	
+	Script Notes	:
 --]]
 
 local NapEvigis = 64
@@ -12,7 +12,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function casted_on(NPC, Spawn, SpellName)

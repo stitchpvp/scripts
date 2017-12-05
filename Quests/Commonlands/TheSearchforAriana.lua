@@ -3,17 +3,17 @@
 	Script Purpose	:	Handles the quest, "The Search for Ariana"
 	Script Author	:	QuestParser (Replace this)
 	Script Date		:	7/15/2017
-	Script Notes	:	
+	Script Notes	:
 
 	Zone			:	Commonlands
-	Quest Giver		:	
+	Quest Giver		:
 	Preceded by		:	None
 	Followed by		:	None
 --]]
 
 
 function Init(Quest)
-	AddQuestStepChat(Quest, 1, "I need to find Ariana Neovra", 1, "I need to find Ariana Neovra in the Wailing Caves.", 11, --[[ ID's --]])
+	AddQuestStepChat(Quest, 1, "I need to find Ariana Neovra", 1, "I need to find Ariana Neovra in the Wailing Caves.", 11, nil)
 	AddQuestStepCompleteAction(Quest, 1, "Step1Complete")
 end
 
@@ -21,7 +21,7 @@ function Step1Complete(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 1, "I found Ariana Neovra.")
 	UpdateQuestTaskGroupDescription(Quest, 1, "I found Ariana Neovra in a cell in the Wailing Caves.")
 
-	AddQuestStepChat(Quest, 2, "I need to return to Orwen", 1, "I need to return Ariana's necklace to Orwen.", 576, --[[ ID's --]])
+	AddQuestStepChat(Quest, 2, "I need to return to Orwen", 1, "I need to return Ariana's necklace to Orwen.", 576, nil)
 	AddQuestStepCompleteAction(Quest, 2, "QuestComplete")
 end
 

@@ -3,9 +3,9 @@
 	Script Purpose	: Handles the quest, "Prison Break"
 	Script Author	: Scatman
 	Script Date	: 2009.02.27
-	
+
 	Zone       : Timorous Deep
-	Quest Giver: Bezok Myli'Ki	
+	Quest Giver: Bezok Myli'Ki
 	Preceded by: None
 	Followed by: None
 --]]
@@ -37,7 +37,7 @@ end
 
 function step1_complete_freedSarnaks(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 1, "I have freed some captives in Pyrrin Roost.")
-	
+
 	AddQuestStepChat(Quest, 2, "I need to return to Bezok Myli'Ki.", 1, ".", 0, 2630098)
 	AddQuestStepCompleteAction(Quest, 2, "quest_complete")
 end

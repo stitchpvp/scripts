@@ -3,17 +3,17 @@
 	Script Purpose	:	Handles the quest, "The Keep of the Ardent Needle"
 	Script Author	:	QuestParser (Replace this)
 	Script Date		:	7/8/2017
-	Script Notes	:	
+	Script Notes	:
 
 	Zone			:	Antonica
-	Quest Giver		:	
+	Quest Giver		:
 	Preceded by		:	None
 	Followed by		:	None
 --]]
 
 
 function Init(Quest)
-	AddQuestStepLocation(Quest, 1, "Search the Keep of the Ardent Needle.", 1, "I must check the Keep of the Ardent Needle thoroughly.", 11, --[[ ID's --]])
+	AddQuestStepLocation(Quest, 1, "Search the Keep of the Ardent Needle.", 1, "I must check the Keep of the Ardent Needle thoroughly.", 11, nil)
 	AddQuestStepCompleteAction(Quest, 1, "Step1Complete")
 end
 
@@ -21,7 +21,7 @@ function Step1Complete(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 1, "Searched the Keep of the Ardent Needle.")
 	UpdateQuestTaskGroupDescription(Quest, 1, "I've inspected the Keep of the Ardent Needle, and found nothing suspicious.")
 
-	AddQuestStepChat(Quest, 2, "Speak with Captain Eitoa.", 1, "I must return to Captain Eitoa and inform her of the keep's status.", 11, --[[ ID's --]])
+	AddQuestStepChat(Quest, 2, "Speak with Captain Eitoa.", 1, "I must return to Captain Eitoa and inform her of the keep's status.", 11, nil)
 	AddQuestStepCompleteAction(Quest, 2, "QuestComplete")
 end
 

@@ -3,7 +3,7 @@
 	Script Purpose	: Arrin Clelland <Camp Provisioner>
 	Script Author	: theFoof
 	Script Date	: 2013.5.12
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 local CrustoseRemoval = 6
@@ -23,7 +23,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)
@@ -50,8 +50,8 @@ function hailed(NPC, Spawn)
 		AddConversationOption(conversation, "What are you going to do with the crustose spore samples?", "Quest2Chat_1")
 		StartConversation(conversation, NPC, Spawn, "You certainly helped us by getting those crustose spore samples, " .. GetName(Spawn) .. ".")
 	elseif GetQuestStep(Spawn, RepellingCritters) == 1 then
-	    if HasItem(Player, 45806) == false then
-		    SummonItem(Player, 45806, 1)
+	    if HasItem(Spawn, 45806) == false then
+		    SummonItem(Spawn, 45806, 1)
 		end
 	    AddConversationOption(conversation, "Me too.")
 		AddConversationOption(conversation, "How do I use the crustose repellent?", "Quest2Chat_4")
@@ -61,13 +61,13 @@ function hailed(NPC, Spawn)
 	    AddConversationOption(conversation, "The repellent worked great!", "Quest2Chat_5")
 	    StartConversation(conversation, NPC, Spawn, "How did it go out there?")
 	elseif GetQuestStep(Spawn, RepellingCritters) == 3 then
-	    if HasItem(Player, 45805) == false then
-		    SummonItem(Player, 45805, 1)
+	    if HasItem(Spawn, 45805) == false then
+		    SummonItem(Spawn, 45805, 1)
 		end
 	    PlayFlavor(NPC, "", "Be sure to apply enough of the crustose repellent to our barrels of foodstuff.", "nod", 1689589577, 4560189, Spawn)
 	elseif GetQuestStep(Spawn, RepellingCritters) == 4 then
 	    SetStepComplete(Spawn, RepellingCritters, 4)
-		
+
 		PlayFlavor(NPC, "yasha_redblade/halas/pilgrims_landing/redblade_024.mp3", "", "", 117755636, 4146358523, Spawn)
 		AddConversationOption(conversation, "You are welcome.", "Quest3Chat_1")
 		StartConversation(conversation, NPC, Spawn, "Those crustose creatures sure disappeared!  That will certainly help me keep mouths fed around here.  Thank you, " .. GetName(Spawn) .. "!")
@@ -206,7 +206,7 @@ end
 function Quest3Chat_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
     PlayFlavor(NPC, "arrin_clelland/halas/pilgrims_landing/clelland_005.mp3", "", "", 4016452199, 1810004622, Spawn)
 	AddConversationOption(conversation, "What can I do for you?", "Quest3Chat_2")
 	AddConversationOption(conversation, "Unfortunately, I am too busy right now.")
@@ -237,7 +237,7 @@ end
 function Quest4Chat_1(NPC, Spawn)
     FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
     PlayFlavor(NPC, "arrin_clelland/halas/pilgrims_landing/clelland_008.mp3", "", "", 2456971105, 1721744123, Spawn)
 	AddConversationOption(conversation, "Yeah, I can do that.", "Quest4Chat_2")
 	AddConversationOption(conversation, "Oh, sorry.  That isn't really my thing.")

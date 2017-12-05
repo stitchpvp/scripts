@@ -3,7 +3,7 @@
 	Script Purpose	:	Handles the quest, "Hopeful Net Returns"
 	Script Author	:	FeaRFx
 	Script Date		:	13/06/2016
-	Script Notes	:	
+	Script Notes	:
 
 	Zone			:	Darklight Wood
 	Quest Giver		:	Aunthrae
@@ -15,7 +15,6 @@
 function Init(Quest)
 	AddQuestStep(Quest, 1, "Give the fishing net to Dirzdia T'Zauvirr", 1, 100, "Deliver the fishing net to Dirzdia T'Zauvirr at the southern bridge spanning over the Searing Tendril River.", 744)
 	AddQuestStepCompleteAction(Quest, 1, "QuestComplete")
-	GiveFishingNet(Quest, QuestGiver, Player)
 end
 
 function GiveFishingNet(Quest, QuestGiver, Player)

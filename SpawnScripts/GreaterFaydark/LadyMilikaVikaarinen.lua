@@ -11,7 +11,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)
@@ -28,11 +28,11 @@ function hailed(NPC, Spawn)
 	AddConversationOption(conversation, "I have news of the Grender!", "dlg_6_1")
 	AddConversationOption(conversation, "Nothing in particular.  Just looking around.")
 	StartConversation(conversation, NPC, Spawn, "Greetings! What brings you into the Fae Royal Hall this day?")
-	if convo==70 then
-		PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_1_1005.mp3", "", "", 0, 0, Spawn)
-		AddConversationOption(conversation, "Nothing in particular.  Just looking around.", "dlg_70_1")
-		StartConversation(conversation, NPC, Spawn, "Greetings! What brings you into the Fae Royal Hall this day?")
-	end
+	--if convo==70 then
+	--	PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_1_1005.mp3", "", "", 0, 0, Spawn)
+	--	AddConversationOption(conversation, "Nothing in particular.  Just looking around.", "dlg_70_1")
+	--	StartConversation(conversation, NPC, Spawn, "Greetings! What brings you into the Fae Royal Hall this day?")
+	--end
 
 end
 

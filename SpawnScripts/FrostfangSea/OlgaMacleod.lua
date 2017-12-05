@@ -1,9 +1,9 @@
 --[[
 	Script Name	: SpawnScripts/FrostfangSea/OlgaMacleod.lua
-	Script Purpose	: Olga Macleod 
+	Script Purpose	: Olga Macleod
 	Script Author	: theFoof
 	Script Date	: 2013.09.01
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 local FrozenChowder = 88
@@ -13,13 +13,13 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	if not HasCompletedQuest(Spawn, FrozenChowder) and not HasQuest(Spawn, FrozenChowder) then
 		PlayFlavor(NPC, "olga_macleod/halas/new_halas/olga_macleod/olga_macleod_001.mp3", "", "", 183975505, 4113739209, Spawn)
 		AddConversationOption(conversation, "I'm " .. GetName(Spawn) .. ", pleased to meet you.", "Quest1Chat_1")
@@ -66,7 +66,7 @@ end
 function Quest1Chat_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	AddConversationOption(conversation, "Thanks again, sometimes I forget these things!")
 	StartConversation(conversation, NPC, Spawn, "The halasian reeds and the frozen pincers are down near the water's edge at the Erollis Dock, east of New Halas.")
 end
@@ -74,7 +74,7 @@ end
 function Quest1Chat_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	AddConversationOption(conversation, "Here you go.", "Quest1Chat_6")
 	StartConversation(conversation, NPC, Spawn, "Great, hand them over and I'll get to cooking!")
 end
@@ -82,7 +82,7 @@ end
 function Quest1Chat_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	AddConversationOption(conversation, "It smells delicious", "Quest1Chat_7")
 	StartConversation(conversation, NPC, Spawn, "Thank Marr this cooks up fast. I'll be able to have a bowl before I must get back to work.")
 end
@@ -92,7 +92,7 @@ function Quest1Chat_7(NPC, Spawn)
 	AddSpawnAccess(GetSpawn(NPC, 4701842), Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	AddConversationOption(conversation, NPC, Spawn, "Thanks Olga!")
 	StartConversation(conversation, NPC, Spawn, "There! Go ahead, ladle yourself some chowder.")
 end

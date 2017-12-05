@@ -153,7 +153,7 @@ function ShouldAddStep11(Quest, Player)
 		end
 		i = i + 1
 	end
-	
+
 	if should_add then
 		AddStep11(Quest)
 	end

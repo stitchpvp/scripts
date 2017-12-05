@@ -11,7 +11,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)
@@ -29,13 +29,13 @@ function hailed(NPC, Spawn)
 	AddConversationOption(conversation, "Teach me more advanced aspects of combat.")
 	AddConversationOption(conversation, "I'll come back later.")
 	StartConversation(conversation, NPC, Spawn, "Hello there, " .. GetName(Spawn) .. ". I'm here to teach folks the finer points of combat. I don't like to get into a fight, but if I do, I prefer to win.  Know what I mean?")
-	if convo==5 then
-		PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_arilla_larivaara/_exp03/exp03_cty_kelethin/tutorials/qst_larivaara/qst_laarivaara007.mp3", "", "", 3148880847, 947148371, Spawn)
-		AddConversationOption(conversation, "Teach me the basics of combat.", "dlg_5_1")
-		AddConversationOption(conversation, "Teach me more advanced aspects of combat.")
-		AddConversationOption(conversation, "I'll come back later.")
-		StartConversation(conversation, NPC, Spawn, "Hello there, " .. GetName(Spawn) .. ". I'm here to teach folks the finer points of combat. I don't like to get into a fight, but if I do, I prefer to win.  Know what I mean?")
-	end
+	--if convo==5 then
+	--	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_arilla_larivaara/_exp03/exp03_cty_kelethin/tutorials/qst_larivaara/qst_laarivaara007.mp3", "", "", 3148880847, 947148371, Spawn)
+	--	AddConversationOption(conversation, "Teach me the basics of combat.", "dlg_5_1")
+	--	AddConversationOption(conversation, "Teach me more advanced aspects of combat.")
+	--	AddConversationOption(conversation, "I'll come back later.")
+	--	StartConversation(conversation, NPC, Spawn, "Hello there, " .. GetName(Spawn) .. ". I'm here to teach folks the finer points of combat. I don't like to get into a fight, but if I do, I prefer to win.  Know what I mean?")
+	--end
 
 end
 

@@ -2,8 +2,8 @@
     Script Name    : SpawnScripts/Everfrost/GinnieStonestoe.lua
     Script Author  : Flunklesnarkin
     Script Date    : 2015.09.04 09:09:13
-    Script Purpose : 
-                   : 
+    Script Purpose :
+                   :
 --]]
 
 function spawn(NPC)

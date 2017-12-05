@@ -1,19 +1,19 @@
 --[[
 	Script Name	: SpawnScripts/Ruins/acapturedLonetusk.lua
-	Script Purpose	: a captured Lonetusk 
+	Script Purpose	: a captured Lonetusk
 	Script Author	: Scatman
 	Script Date	: 2009.08.21
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 local QUEST_FROM_LIEUTENANT_IMPERIDUS = 288
 
 function spawn(NPC)
-	AddVisualStateLoop(NPC, 1000, math.random(500, 2000), 11256, 44024) -- cringe
+	-- AddVisualStateLoop(NPC, 1000, math.random(500, 2000), 11256, 44024) -- cringe
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
@@ -102,7 +102,7 @@ end
 
 function dlg_32_8(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_FROM_LIEUTENANT_IMPERIDUS, 1)
-	
+
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 

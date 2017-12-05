@@ -3,7 +3,7 @@
 	Script Purpose	: Investigator Curfeld <Dismal Rage>
 	Script Author	: Scatman
 	Script Date	: 2009.07.28
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 local QUEST_4_FROM_THORSON = 269
@@ -19,14 +19,14 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	if HasCompletedQuest(Spawn, QUEST_1) then
 		if HasCompletedQuest(Spawn, QUEST_2) then
 			if HasCompletedQuest(Spawn, QUEST_3) then
@@ -73,7 +73,7 @@ end
 
 function dlg_12_1(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_4_FROM_THORSON, 1)
-	
+
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 
@@ -159,7 +159,7 @@ end
 
 function dlg_19_1(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_1, 2)
-	
+
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 
@@ -225,7 +225,7 @@ end
 
 function dlg_20_1(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_2, 2)
-	
+
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 

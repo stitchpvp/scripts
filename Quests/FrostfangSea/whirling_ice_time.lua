@@ -3,7 +3,7 @@
 	Script Purpose	:	for the quest Whirling Ice Time
 	Script Author	:	theFoof
 	Script Date		:	2013.6.16
-	Script Notes	:	
+	Script Notes	:
 
 	Zone			:	Frostfang Sea
 	Quest Giver		:	Odon Scourgeson

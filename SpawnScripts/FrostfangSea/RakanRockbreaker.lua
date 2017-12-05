@@ -3,7 +3,7 @@
 	Script Purpose	: Rakan Rockbreaker <Coldain Quartermaster>
 	Script Author	: theFoof
 	Script Date	: 2013.06.01
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 
@@ -19,7 +19,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
@@ -104,7 +104,7 @@ end
 function Quest2Chat_2(NPC, Spawn)
     FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	PlayFlavor(NPC, "rakan_rockbreaker/halas/great_shelf/rakan_rockbreaker/rakan_rockbreaker010.mp3", "", "", 3359211699, 295105343, Spawn)
 	AddConversationOption(conversation, "Was there something else you needed?", "Quest2Chat_1")
 	AddConversationOption(conversation, "I'm afraid I must be going.  Goodbye.")

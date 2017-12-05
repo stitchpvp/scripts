@@ -1,5 +1,5 @@
 --[[
-	Script Name		:	SpawnScripts/FrostfangSea/widget_qst_orcbane_x6_black_shard_cart.lua 
+	Script Name		:	SpawnScripts/FrostfangSea/widget_qst_orcbane_x6_black_shard_cart.lua
 	Script Purpose	:	the black shard cart
 	Script Author	:	theFoof
 	Script Date		:	2013.8.11
@@ -13,7 +13,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function casted_on(NPC, Spawn, SpellName)

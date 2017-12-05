@@ -3,7 +3,7 @@
 	Script Purpose	:	assassin trainer
 	Script Author	:	theFoof
 	Script Date		:	2013.9.24
-	Script Notes	:	
+	Script Notes	:
 --]]
 
 local ASSASSIN = 40
@@ -12,7 +12,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
@@ -39,7 +39,7 @@ end
 function SinChat2(NPC, Spawn)
 	local conversation = CreateConversation()
 	FaceTarget(NPC, Spawn)
-	
+
 	AddConversationOption(conversation, "That's useful to know!", "SinChat3")
 	StartConversation(conversation, NPC, Spawn, "Procure items that add to your agility or stamina, when you find them!  Agility affects both your ability to inflict damage and avoid taking damage from others.  Your stamina affects your health.  This is crucial.")
 end

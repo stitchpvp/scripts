@@ -3,7 +3,7 @@
 	Script Purpose	: A Note from the Qeynos Quartermaster - Adventures in Antonica
 	Script Author	: Scatman
 	Script Date	: 2009.10.18
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 local QUEST_1_ANTONICA = 300

@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "Growler Pelts for Brink"
 	Script Author	: Scatman
 	Script Date	: 2009.03.28
-	
+
 	Zone       : Greater Faydark
 	Quest Giver: Brink Trudger
 	Preceded by: None
@@ -25,7 +25,7 @@ end
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
 	local conversation = CreateConversation()
-	
+
 	PlayFlavor(QuestGiver, "voiceover/english/exp03_questvo2/brink_trudger/_exp03/exp03_rgn_greater_faydark/brink_trudger/brink_trudger003_offer.mp3", "", "", 179963171, 4058842652, Player)
 	AddConversationOption(conversation, "This should be no problem.")
 	StartConversation(conversation, QuestGiver, Player, "Great! I appreciate it!")
@@ -37,7 +37,7 @@ end
 function Step1_Complete_KilledGrowlers(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 1, "I should have enough growler pelts now for Brink.")
 	UpdateQuestTaskGroupDescription(Quest, 1, "I should have enough growler pelts now for Brink.")
-	
+
 	AddQuestStepChat(Quest, 2, "I should take the growler pelts back to Brink Trudger.", 1, "I should take these growler pelts to Brink Trudger. He should be busy sewing near the spirit bloom nursery.", 93, 1140005)
 	AddQuestStepCompleteAction(Quest, 2, "Quest_Complete")
 end

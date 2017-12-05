@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "Cause for Investigation"
 	Script Author	: Scatman
 	Script Date	: 2009.10.07
-	
+
 	Zone       : Oakmyst Forest
 	Quest Giver: Lieutenant Charlin
 	Preceded by: Natural Causes? (natural_causes.lua)
@@ -20,7 +20,7 @@ end
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
 	local conversation = CreateConversation()
-	
+
 	PlayFlavor(QuestGiver, "voiceover/english/tutorial_revamp/lieutenant_charlin/qey_adv01_oakmyst/quests/charlin/charlin008a.mp3", "", "", 717032559, 738942880, Player)
 	AddConversationOption(conversation, "You're welcome.")
 	StartConversation(conversation, QuestGiver, Player, "It may be nothing, but it may help us. Thanks for doing this.")
@@ -31,8 +31,8 @@ end
 
 function Step1_Complete_GotSoil(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 1, "I have collected some soil samples for Lieutenant Charlin.")
-	
-	AddQuestStepChat(Quest, 2, "I need to bring this soil to Lieutenant Charlin.", 1, "Charlin has asked that I collect soil samples from the dirt piles that are popping up all around Oakmyst Forest.", 0, 1950015) 
+
+	AddQuestStepChat(Quest, 2, "I need to bring this soil to Lieutenant Charlin.", 1, "Charlin has asked that I collect soil samples from the dirt piles that are popping up all around Oakmyst Forest.", 0, 1950015)
 	AddQuestStepCompleteAction(Quest, 2, "QuestComplete")
 end
 
@@ -44,7 +44,7 @@ function QuestComplete(Quest, QuestGiver, Player)
 	while HasItem(Player, 13238) do
 		RemoveItem(Player, 13238)
 	end
-	
+
 	UpdateQuestDescription(Quest, "I have gathered the soil samples for Charlin. He hopes something will turn up from the tests.")
 	GiveQuestReward(Quest, Player)
 end

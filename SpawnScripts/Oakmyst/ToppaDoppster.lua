@@ -3,7 +3,7 @@
 	Script Purpose	: Toppa Doppster
 	Script Author	: Scatman
 	Script Date	: 2009.09.19
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 function spawn(NPC)
@@ -45,7 +45,7 @@ function RandomGreeting(NPC, Spawn)
 end
 
 function respawn(NPC)
-   spawn(NPC)
+SpawnMob(NPC)
 end
 
 ------------------------------------------------------------------------------------------------------------

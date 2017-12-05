@@ -3,7 +3,7 @@
 	Script Purpose	:	for the quest "Pelted"
 	Script Author	:	theFoof
 	Script Date		:   2013.5.30
-	Script Notes	:	
+	Script Notes	:
 
 	Zone			:	Frostfang Sea
 	Quest Giver		:	Flibbit Quagmarr

@@ -3,7 +3,7 @@
 	Script Purpose	:	for the quest "The Demand for Supplies"
 	Script Author	:	theFoof
 	Script Date		:	2013.6.1
-	Script Notes	:	
+	Script Notes	:
 
 	Zone			:	Frostfang Sea
 	Quest Giver		:	Rakan RockBreaker

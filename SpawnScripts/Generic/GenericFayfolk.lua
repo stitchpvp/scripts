@@ -3,14 +3,14 @@
 	Script Purpose	: Any spawn that speaks Fayfolk
 	Script Author	: Scatman
 	Script Date	: 2009.10.08
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
@@ -28,7 +28,6 @@ end
 
 function SpeakGarbledFayfok(NPC, Spawn)
 	local choice = math.random(1, 4)
-	if math.random(1, 4)
 	if choice == 1 then
 		PlayFlavor(NPC, "voiceover/english/dryad_corrupted/ft/dryad/dryad_corrupted_1_garbled_e858f993.mp3", "Tawaneee   follahh    dilifilongia   avee", "", 677789876, 1792673679, Spawn)
 	elseif choice == 2 then

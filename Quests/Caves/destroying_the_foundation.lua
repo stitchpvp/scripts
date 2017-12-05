@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "Destroying the Foundation"
 	Script Author	: Scatman
 	Script Date	: 2009.10.18
-	
+
 	Zone       : The Caves
 	Quest Giver: Emma Torque
 	Preceded by: An Explosive Idea (an_explosive_idea.lua)
@@ -23,7 +23,7 @@ end
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
 	local conversation = CreateConversation()
-	
+
 	PlayFlavor(QuestGiver, "voiceover/english/tutorial_revamp/emma_torque/qey_adv03_caves/quests/emma/emma_009.mp3", "", "", 2928866225, 3555660986, Player)
 	AddConversationOption(conversation, "Thanks.")
 	StartConversation(conversation, QuestGiver, Player, "Good. The machines are likely a couple of levels up from this one. I'm sure I'll hear the explosions from here. I do hope you enjoy yourself, hah hah!")

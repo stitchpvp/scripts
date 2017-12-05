@@ -18,5 +18,5 @@ end
 
 function casted_on(Target, Caster)
 	-- add boom effect once it's found, play it for about 2 seconds
-	Despawn(NPC, 2000)
+	Despawn(Target, 2000)
 end

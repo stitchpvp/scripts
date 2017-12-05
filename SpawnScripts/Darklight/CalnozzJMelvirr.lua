@@ -1,6 +1,6 @@
 --[[
 	Script Name	: SpawnScripts/Darklight/CalnozzJMelvirr.lua
-	Script Purpose	: Calnozz J'Melvirr 
+	Script Purpose	: Calnozz J'Melvirr
 	Script Author	: John Adams
 	Script Date	: 2009.01.31
 	Script Notes	: Auto-Generated Conversation from PacketParser Data
@@ -15,7 +15,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)
@@ -27,7 +27,7 @@ end
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	if not HasQuest(Spawn, DrawUponWellsprings) and not HasCompletedQuest(Spawn, DrawUponWellsprings) and GetQuestStep(Spawn, DrawUponWellsprings) < 1 then
 		PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_1_1048.mp3", "", "", 0, 0, Spawn)
 		AddConversationOption(conversation, "You heard the guards speaking of me?", "Quest_DrawUponWellsprings_01A")
@@ -58,7 +58,7 @@ end
 function Quest_DrawUponWellsprings_01A(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	AddConversationOption(conversation, "Throw in some coin and we have a deal.", "Quest_DrawUponWellsprings_02")
 	AddConversationOption(conversation, "I would like to hear more.", "Quest_DrawUponWellsprings_02")
 	StartConversation(conversation, NPC, Spawn, "Indeed I have, and it impressed me as well. Such skills could be put to work around here.")
@@ -67,7 +67,7 @@ end
 function Quest_DrawUponWellsprings_01B(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	AddConversationOption(conversation, "Throw in some coin and we have a deal.", "Quest_DrawUponWellsprings_02")
 	AddConversationOption(conversation, "I would like to hear more.", "Quest_DrawUponWellsprings_02")
 	StartConversation(conversation, NPC, Spawn, "I hold no doubt of that. Such skills could be put to work around here.")
@@ -76,7 +76,7 @@ end
 function Quest_DrawUponWellsprings_02(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	PlayFlavor(NPC, "", "", "agree", 0, 0, Spawn)
 	AddConversationOption(conversation, "Where do I come in?", "Quest_DrawUponWellsprings_03")
 	StartConversation(conversation, NPC, Spawn, "Certainly! I am responsible for ensuring the Dread Guard remain an unequaled fighting force and are prepared for an eventual march on the Thexian invaders. They say all armies must be bred, fed and led. Well, I've got the last two categories covered.")
@@ -85,7 +85,7 @@ end
 function Quest_DrawUponWellsprings_03(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	PlayFlavor(NPC, "", "", "agree", 0, 0, Spawn)
 	AddConversationOption(conversation, "That would be impressive.", "Quest_DrawUponWellsprings_04")
 	StartConversation(conversation, NPC, Spawn, "I have turned my attention to the local fauna of this forest to expand our fighting regiments.  Imagine a full platoon of Dread Guard Dragoons charging their enemy atop fearsome bears!")
@@ -94,7 +94,7 @@ end
 function Quest_DrawUponWellsprings_04(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	AddConversationOption(conversation, "All right, I can do this.", "QuestOffer_DrawUponWellsprings")
 	AddConversationOption(conversation, "I don't think so.")
 	StartConversation(conversation, NPC, Spawn, "For this plan to come to fruition, we must capture several cubs and domesticate them at an early age before their savage nature makes them untamable. I want you to find some cubs and bring them back to me.")
@@ -107,19 +107,19 @@ end
 function Quest_DrawUponWellsprings_05(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
-	GetTempVariable(Spawn, "cub")
+
+	local cub = GetTempVariable(Spawn, "cub")
 	Say(NPC, cub)
 	Despawn(cub)
 	AddStepProgress(Spawn, 155, 1, 1)
 	SetTempVariable(Spawn, "cub", nil)
-	
+
 	PlayFlavor(NPC, "voiceover/english/neriak/calnozz_j_melvirr/darklight_wood/tvatar_post/calnozz/calnozz009.mp3", "", "", 1819294557, 1460011625, Spawn)
 	if GetQuestStep(Spawn, DrawUponWellsprings) == 2 then
 		AddConversationOption(conversation, "That's three cubs.", "Quest_StunningRevelation")
 		AddConversationOption(conversation, "All right.")
 		StartConversation(conversation, NPC, Spawn, "Nice work!")
-	else	
+	else
 		AddConversationOption(conversation, "All right.")
 		StartConversation(conversation, NPC, Spawn, "Nice work!")
 	end

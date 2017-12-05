@@ -3,7 +3,7 @@
 	Script Purpose	:	bruiser trainer
 	Script Author	:	theFoof
 	Script Date		:	2013.9.24
-	Script Notes	:	
+	Script Notes	:
 --]]
 
 local BRUISER = 7
@@ -12,7 +12,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
@@ -39,7 +39,7 @@ end
 function BruisChat2(NPC, Spawn)
 	local conversation = CreateConversation()
 	FaceTarget(NPC, Spawn)
-	
+
 	AddConversationOption(conversation, "That's good to know.", "BruisChat3")
 	StartConversation(conversation, NPC, Spawn, "But first and foremost, you should know the power that flows through you.  We focus our minds and bodies through sheer force of will in order to withstand attacks and reduce the amount of damage inflicted upon us.")
 end

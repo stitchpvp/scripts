@@ -3,7 +3,7 @@
 	Script Purpose	:	rolling rocks
 	Script Author	:	theFoof
 	Script Date		:	2013.11.15
-	Script Notes	:	
+	Script Notes	:
 --]]
 
 function spawn(NPC)
@@ -11,7 +11,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function MovementPath(NPC)

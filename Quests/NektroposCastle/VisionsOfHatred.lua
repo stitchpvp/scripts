@@ -1,6 +1,6 @@
 --[[
 	Script Name	: Quests/NektroposCastle/VisionsOfHatred.lua
-	Script Purpose	: 
+	Script Purpose	:
 	Script Author	: smash
 	Script Date	: 2016.1.24
 

@@ -3,11 +3,11 @@
 	Script Purpose	: Handles the quest, "High Shaman of the Rockpaw"
 	Script Author	: Scatman
 	Script Date	: 2009.10.18
-	
+
 	Zone       : The Caves
 	Quest Giver: A Note from the Qeynos Quartermaster - Adventures in Antonica
 	Preceded by: Elements of a Ritual (elements_of_a_ritual.lua)
-	Followed by: 
+	Followed by:
 --]]
 
 

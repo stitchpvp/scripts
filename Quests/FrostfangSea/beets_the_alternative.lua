@@ -6,8 +6,8 @@
 
         Zone            : Frostfang Sea
         Quest Giver     : Wregan Firebeard
-        Preceded by     : 
-        Followed by     : 
+        Preceded by     :
+        Followed by     :
 --]]
 
 function Init(Quest)
@@ -21,7 +21,7 @@ end
 
 function Deleted(Quest, QuestGiver, Player)
 end
- 
+
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
 	local conversation = CreateConversation()
@@ -57,4 +57,4 @@ function Reload(Quest, QuestGiver, Player, Step)
 	    CompleteQuest(Quest, QuestGiver, Player)
 	end
 end
-    
+

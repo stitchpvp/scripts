@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "Pawns in the Game"
 	Script Author	: Scatman
 	Script Date	    : 2009.07.28
-	
+
 	Zone       : The Ruins
 	Quest Giver: Captain Arellius
 	Preceded by: Reporting for Duty (reporting_for_duty.lua)
@@ -30,7 +30,7 @@ end
 function Step1_Complete_KilledOrcs(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 1, "I defeated 10 Brokentusk pawns and proved my worth.")
 	UpdateQuestTaskGroupDescription(Quest, 1, "I crushed the Brokentusk pawns as ordered.")
-	
+
 	AddQuestStepChat(Quest, 2, "I should report back to Lieutenant Argosian at the first outpost.", 1, "I should return to the lieutenant and tell him of my victory.", 0, 1270031)
 	AddQuestStepCompleteAction(Quest, 2, "Quest_Complete")
 end

@@ -1,6 +1,6 @@
 --[[
 	Script Name	: SpawnScripts/ForestRuins/IlaenLilac.lua
-	Script Purpose	: Ilaen Lilac 
+	Script Purpose	: Ilaen Lilac
 	Script Author	: John Adams
 	Script Date	: 2008.09.19
 	Script Notes	: Auto-Generated Conversation from PacketParser Data
@@ -22,10 +22,10 @@ function hailed(NPC, Spawn)
 
 	AddConversationOption(conversation, "Save this land from what?", "dlg_11_1")
 	StartConversation(conversation, NPC, Spawn, "If we do not work to save this land there are no others who will.")
-	if convo==15 then
-		AddConversationOption(conversation, "Yes, I found this arrow.", "dlg_15_1")
-		StartConversation(conversation, NPC, Spawn, "Have you found a clue yet?")
-	end
+	--if convo==15 then
+	--	AddConversationOption(conversation, "Yes, I found this arrow.", "dlg_15_1")
+	--	StartConversation(conversation, NPC, Spawn, "Have you found a clue yet?")
+	--end
 
 end
 

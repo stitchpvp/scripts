@@ -11,7 +11,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)
@@ -27,26 +27,26 @@ function hailed(NPC, Spawn)
 		PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_3_1006.mp3", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Nothing, thanks.", "dlg_3_1")
 	StartConversation(conversation, NPC, Spawn, "Greetings! Is there something I can do for you?")
-	if convo==67 then
-		PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_2_1006.mp3", "", "", 0, 0, Spawn)
-		AddConversationOption(conversation, "I was told to speak with you about becoming a citizen of Kelethin.", "dlg_67_1")
-		AddConversationOption(conversation, "Nothing, thanks.")
-		StartConversation(conversation, NPC, Spawn, "Greetings! Is there something I can do for you?")
-	end
+	--if convo==67 then
+	--	PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_2_1006.mp3", "", "", 0, 0, Spawn)
+	--	AddConversationOption(conversation, "I was told to speak with you about becoming a citizen of Kelethin.", "dlg_67_1")
+	--	AddConversationOption(conversation, "Nothing, thanks.")
+	--	StartConversation(conversation, NPC, Spawn, "Greetings! Is there something I can do for you?")
+	--end
 
-	if convo==68 then
-		PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_3_1006.mp3", "", "", 0, 0, Spawn)
-		AddConversationOption(conversation, "I want to know more about becoming a citizen of Kelethin.", "dlg_68_1")
-		AddConversationOption(conversation, "Nothing, thanks.")
-		StartConversation(conversation, NPC, Spawn, "Greetings! Is there something I can do for you?")
-	end
+	--if convo==68 then
+	--	PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_3_1006.mp3", "", "", 0, 0, Spawn)
+	--	AddConversationOption(conversation, "I want to know more about becoming a citizen of Kelethin.", "dlg_68_1")
+	--	AddConversationOption(conversation, "Nothing, thanks.")
+	--	StartConversation(conversation, NPC, Spawn, "Greetings! Is there something I can do for you?")
+	--end
 
-	if convo==69 then
-		PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_2_1006.mp3", "", "", 0, 0, Spawn)
-		AddConversationOption(conversation, "I want to know more about becoming a citizen of Kelethin.", "dlg_69_1")
-		AddConversationOption(conversation, "Nothing, thanks.")
-		StartConversation(conversation, NPC, Spawn, "Greetings! Is there something I can do for you?")
-	end
+	--if convo==69 then
+	--	PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_2_1006.mp3", "", "", 0, 0, Spawn)
+	--	AddConversationOption(conversation, "I want to know more about becoming a citizen of Kelethin.", "dlg_69_1")
+	--	AddConversationOption(conversation, "Nothing, thanks.")
+	--	StartConversation(conversation, NPC, Spawn, "Greetings! Is there something I can do for you?")
+	--end
 
 end
 

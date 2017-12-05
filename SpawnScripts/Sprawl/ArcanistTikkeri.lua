@@ -1,9 +1,9 @@
 --[[
 	Script Name	: SpawnScripts/Sprawl/ArcanistTikkeri.lua
-	Script Purpose	: Arcanist Tikkeri 
+	Script Purpose	: Arcanist Tikkeri
 	Script Author	: Scatman
 	Script Date	: 2009.07.26
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 local QUEST_3_FROM_KURDEK = 255
@@ -13,7 +13,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)
@@ -32,7 +32,7 @@ end
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	if HasCompletedQuest(Spawn, QUEST_3_FROM_KURDEK) or (HasQuest(Spawn, QUEST_3_FROM_KURDEK) and GetQuestStep(Spawn, QUEST_3_FROM_KURDEK) > 1) then
 		AddConversationOption(conversation, "As you wish.")
 		StartConversation(conversation, NPC, Spawn, "You won't trick me again, outsider. The Black Magi have nothing more to say to you.")

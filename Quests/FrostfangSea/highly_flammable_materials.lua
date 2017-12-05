@@ -3,7 +3,7 @@
 	Script Purpose	:	the quest Highly Flammable Materials
 	Script Author	:	theFoof
 	Script Date		:	2013.6.20
-	Script Notes	:	
+	Script Notes	:
 
 	Zone			:	Frostfang Sea
 	Quest Giver		:   Odon Scourgeson

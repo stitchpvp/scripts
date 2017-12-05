@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "Broken Buttons"
 	Script Author	: Scatman
 	Script Date	: 2009.03.29
-	
+
 	Zone       : Greater Faydark
 	Quest Giver: Ami Augren
 	Preceded by: Shells of Protection (shells_of_protection.lua)
@@ -24,7 +24,7 @@ end
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
 	local conversation = CreateConversation()
-	
+
 	PlayFlavor(QuestGiver, "voiceover/english/exp03_questvo2/ami_augren/_exp03/exp03_rgn_greater_faydark/ami_augren/ami_augren010.mp3", "", "", 3660711041, 3242516728, Player)
 	AddConversationOption(conversation, "I will.")
 	StartConversation(conversation, QuestGiver, Player, "Tell her I didn't mean to break it.")

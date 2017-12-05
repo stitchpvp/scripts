@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "Exotic Soups"
 	Script Author	: Scatman
 	Script Date	    : 2009.08.01
-	
+
 	Zone       : Sunken City
 	Quest Giver: Tilzak N'Lim
 	Preceded by: None

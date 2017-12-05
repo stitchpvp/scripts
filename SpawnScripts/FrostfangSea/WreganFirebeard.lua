@@ -1,9 +1,9 @@
 --[[
 	Script Name	: SpawnScripts/FrostfangSea/WreganFirebeard.lua
-	Script Purpose	: Wregan Firebeard 
+	Script Purpose	: Wregan Firebeard
 	Script Author	: theFoof
 	Script Date	: 2013.05.14
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 local RideGwenevyn = 8
@@ -20,7 +20,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)
@@ -41,7 +41,6 @@ end
 
 function hailed(NPC, Spawn)
     FaceTarget(NPC, Spawn)
-	local conversation = CreateConversation()
 	if HasQuest(Spawn, BeetsAlternative) == false and HasCompletedQuest(Spawn, BeetsAlternative) == false then
         Quest1Chat_1(NPC, Spawn)
 	elseif GetQuestStep(Spawn, RideGwenevyn) == 1 then
@@ -49,15 +48,15 @@ function hailed(NPC, Spawn)
 	elseif GetQuestStep(Spawn, BeetsAlternative) == 1 then
 	    PlayFlavor(NPC, "", "As soon as you get those tundra beets we'll be able to embark on our journey.", "tapfoot", 1689589577, 4560189, Spawn)
 	end
-end	
-	
+end
+
 function Quest1Chat_1(NPC, Spawn)
     if GetQuestStep(Spawn, RideGwenevyn) ==  1 then
 	    SetStepComplete(Spawn, RideGwenevyn, 1)
 	end
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
     PlayFlavor(NPC, "wregan_firebeard/halas/gwenevyns_cove/wregan_firebeard_001.mp3", "", "", 1553579040, 3434703804, Spawn)
     AddConversationOption(conversation, "Yes.", "Quest1Chat_2")
     AddConversationOption(conversation, "You could say that.", "Quest1Chat_2")

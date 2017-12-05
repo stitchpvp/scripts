@@ -10,7 +10,7 @@ function hailed(NPC, Spawn)
   elseif choice == 3 then
     Say(NPC, "Duty above all else, citizen, except honor!", Spawn)
     PlayAnimation(NPC, 12187, Spawn, 1)
-  elseif choice == 4
+  elseif choice == 4 then
     Say(NPC, "Good day to you, citizen. All preserve Queen Antonia.", Spawn)
     PlayAnimation(NPC, 12167,Spawn, 1)
   end

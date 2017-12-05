@@ -3,7 +3,7 @@
 	Script Purpose	:	for the quest Through Thine Eyes
 	Script Author	:	theFoof
 	Script Date		:	2013.6.10
-	Script Notes	:	
+	Script Notes	:
 
 	Zone			:	Frostfang Sea
 	Quest Giver		:	Thirin Veliumdelver

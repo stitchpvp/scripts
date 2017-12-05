@@ -11,7 +11,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)
@@ -27,11 +27,11 @@ function hailed(NPC, Spawn)
 		PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_3_1006.mp3", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Nothing right now, thanks.", "dlg_6_1")
 	StartConversation(conversation, NPC, Spawn, "What'll you have?")
-	if convo==7 then
-		PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
-		AddConversationOption(conversation, "Nothing right now, thanks.", "dlg_7_1")
-		StartConversation(conversation, NPC, Spawn, "What'll you have?")
-	end
+	--if convo==7 then
+	--	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
+	--	AddConversationOption(conversation, "Nothing right now, thanks.", "dlg_7_1")
+	--	StartConversation(conversation, NPC, Spawn, "What'll you have?")
+	--end
 
 end
 

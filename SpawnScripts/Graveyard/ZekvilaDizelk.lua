@@ -1,6 +1,6 @@
 --[[
 	Script Name	: SpawnScripts/Graveyard/ZekvilaDizelk.lua
-	Script Purpose	: Zekvila Dizelk 
+	Script Purpose	: Zekvila Dizelk
 	Script Author	: scatman
 	Script Date	: 2009.07.12
 	Script Notes	: Auto-Generated Conversation from PacketParser Data
@@ -13,15 +13,15 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	RandomVoice(NPC, Spawn)
-	
+
 	if HasCompletedQuest(Spawn, QUEST_1) then
 		Say(NPC, "You must not let that fool Ithelz rule the Scale Yard. I need the help of a diligent soldier... what do you need, peasant?", Spawn)
 	elseif HasQuest(Spawn, QUEST_2) then
@@ -78,7 +78,7 @@ end
 
 function dlg_1_1(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_1, 2)
-	
+
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 

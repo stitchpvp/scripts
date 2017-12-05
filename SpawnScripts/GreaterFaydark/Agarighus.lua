@@ -11,7 +11,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)
@@ -27,17 +27,17 @@ function hailed(NPC, Spawn)
 		PlayFlavor(NPC, "voiceover/english/exp03_questvo2/agarighus/_exp03/exp03_rgn_greater_faydark/shroomba/agarighus/agarighus000_complete.mp3", "", "", 730615560, 3996925984, Spawn)
 	AddConversationOption(conversation, "I am XXXXXXXX. Morganellus said I should visit you.", "dlg_23_1")
 	StartConversation(conversation, NPC, Spawn, "You speak to Agarighus.")
-	if convo==25 then
-		PlayFlavor(NPC, "voiceover/english/exp03_questvo2/agarighus/_exp03/exp03_rgn_greater_faydark/shroomba/agarighus/agarighus009.mp3", "", "", 2714952017, 1027396530, Spawn)
-		AddConversationOption(conversation, "Yes, they have been moved.", "dlg_25_1")
-		StartConversation(conversation, NPC, Spawn, "Have you moved the shrumblers?")
-	end
+	--if convo==25 then
+	--	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/agarighus/_exp03/exp03_rgn_greater_faydark/shroomba/agarighus/agarighus009.mp3", "", "", 2714952017, 1027396530, Spawn)
+	--	AddConversationOption(conversation, "Yes, they have been moved.", "dlg_25_1")
+	--	StartConversation(conversation, NPC, Spawn, "Have you moved the shrumblers?")
+	--end
 
-	if convo==28 then
-		PlayFlavor(NPC, "voiceover/english/exp03_questvo2/agarighus/_exp03/exp03_rgn_greater_faydark/shroomba/agarighus/agarighus016.mp3", "", "", 1905129429, 4204811677, Spawn)
-		AddConversationOption(conversation, "Yes, I have.", "dlg_28_1")
-		StartConversation(conversation, NPC, Spawn, "Have you saved our proto-caplings?")
-	end
+	--if convo==28 then
+	--	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/agarighus/_exp03/exp03_rgn_greater_faydark/shroomba/agarighus/agarighus016.mp3", "", "", 1905129429, 4204811677, Spawn)
+	--	AddConversationOption(conversation, "Yes, I have.", "dlg_28_1")
+	--	StartConversation(conversation, NPC, Spawn, "Have you saved our proto-caplings?")
+	--end
 
 end
 

@@ -3,7 +3,7 @@
 	Script Purpose	: Inquisitor Thorson <Dismal Rage>
 	Script Author	: Scatman
 	Script Date	: 2009.07.28
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 local HALFELF_MENTOR_QUEST_5 = 189
@@ -26,7 +26,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)
@@ -49,7 +49,7 @@ function hailed(NPC, Spawn)
 	if HasQuest(Spawn, HALFELF_MENTOR_QUEST_5) then
 		AddConversationOption(conversation, "My name is " .. GetName(Spawn) .. ". Delcairn Sebastian sent in Beggar's Court sent me here to speak with you.", "Delcairn")
 	end
-	
+
 	if HasCompletedQuest(Spawn, QUEST_1) then
 		if HasCompletedQuest(Spawn, QUEST_2) then
 			if HasCompletedQuest(Spawn, QUEST_3) then
@@ -107,7 +107,7 @@ function RandomVoiceOver(NPC, Spawn)
 end
 
 --------------------------------------------------------------------------------------------------------------------
---				HALFELF_MENTOR_QUEST_5		
+--				HALFELF_MENTOR_QUEST_5
 --------------------------------------------------------------------------------------------------------------------
 
 function Delcairn(NPC, Spawn)
@@ -116,7 +116,7 @@ function Delcairn(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 
-	if not HasQuest(Spawn, QUEST_1) and not HasCompleted(Spawn, QUEST_1) then
+	if not HasQuest(Spawn, QUEST_1) and not HasCompletedQuest(Spawn, QUEST_1) then
 		AddConversationOption(conversation, "I would be an honor to serve Freeport.", "dlg_0_1")
 	end
 	AddConversationOption(conversation, "I am pleased to have met you.")
@@ -124,7 +124,7 @@ function Delcairn(NPC, Spawn)
 end
 
 --------------------------------------------------------------------------------------------------------------------
---				QUEST_1		
+--				QUEST_1
 --------------------------------------------------------------------------------------------------------------------
 
 function Greetings(NPC, Spawn, conversation)
@@ -215,7 +215,7 @@ function dlg_2_1(NPC, Spawn)
 	if HasQuest(Spawn, QUEST_1) then
 		SetStepComplete(Spawn, QUEST_1, 2)
 	end
-	
+
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 
@@ -226,7 +226,7 @@ function dlg_2_1(NPC, Spawn)
 end
 
 --------------------------------------------------------------------------------------------------------------------
---				QUEST_2		
+--				QUEST_2
 --------------------------------------------------------------------------------------------------------------------
 
 function HelloAdventurer(NPC, Spawn, conversation)
@@ -340,7 +340,7 @@ end
 
 function dlg_7_1(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_2, 2)
-	
+
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 
@@ -350,7 +350,7 @@ function dlg_7_1(NPC, Spawn)
 end
 
 --------------------------------------------------------------------------------------------------------------------
---				QUEST_3		
+--				QUEST_3
 --------------------------------------------------------------------------------------------------------------------
 
 function GreetingsAdventurer(NPC, Spawn, conversation)
@@ -407,7 +407,7 @@ end
 
 function dlg_10_1(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_3, 5)
-	
+
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 
@@ -417,7 +417,7 @@ function dlg_10_1(NPC, Spawn)
 end
 
 --------------------------------------------------------------------------------------------------------------------
---				QUEST_4		
+--				QUEST_4
 --------------------------------------------------------------------------------------------------------------------
 
 function Greetings4(NPC, Spawn, conversation)
@@ -460,7 +460,7 @@ end
 function DidntFindHim(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	AddConversationOption(conversation, "I'll have another look.")
 	StartConversation(conversation, NPC, Spawn, "He is near the gateway to the Graveyard. Look to the south and the west of here, near some other inquisitors from the Dismal Rage. Investigator Curfield often makes expeditions deeper into the Sunken City, so if you don't see him right now just wait a while and he should present himself.")
 end
@@ -471,7 +471,7 @@ function SpeakWithInvestigator(NPC, Spawn, conversation)
 end
 
 --------------------------------------------------------------------------------------------------------------------
---				QUEST_3_FROM_CURFIELD		
+--				QUEST_3_FROM_CURFIELD
 --------------------------------------------------------------------------------------------------------------------
 
 function dlg_22_1(NPC, Spawn)
@@ -489,7 +489,7 @@ function dlg_22_1(NPC, Spawn)
 end
 
 --------------------------------------------------------------------------------------------------------------------
---				QUEST_3_FROM_CURFIELD		
+--				QUEST_3_FROM_CURFIELD
 --------------------------------------------------------------------------------------------------------------------
 
 function HelloOnceAgain(NPC, Spawn, conversation)
@@ -573,7 +573,7 @@ function OfferQuest5(NPC, Spawn)
 end
 
 --------------------------------------------------------------------------------------------------------------------
---				QUEST 5		
+--				QUEST 5
 --------------------------------------------------------------------------------------------------------------------
 
 function OnQuest5(NPC, Spawn, conversation)
@@ -596,7 +596,7 @@ function dlg_24_1(NPC, Spawn)
 end
 
 --------------------------------------------------------------------------------------------------------------------
---				QUEST 6		
+--				QUEST 6
 --------------------------------------------------------------------------------------------------------------------
 
 function HelloAgainBraveOne(NPC, Spawn, conversation)

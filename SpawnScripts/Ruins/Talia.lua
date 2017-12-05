@@ -3,14 +3,14 @@
 	Script Purpose	: Talia <Armorsmith>
 	Script Author	: Scatman
 	Script Date	: 2009.08.18
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)

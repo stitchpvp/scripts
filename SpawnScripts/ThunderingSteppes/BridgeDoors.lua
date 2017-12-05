@@ -2,8 +2,8 @@
     Script Name    : SpawnScripts/ThunderingSteppes/BridgeDoors.lua
     Script Author  : Jabantiz
     Script Date    : 2015.07.12 05:07:34
-    Script Purpose : 
-                   : 
+    Script Purpose :
+                   :
 --]]
 
 function spawn(NPC)
@@ -11,7 +11,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function OpenDoors(NPC)

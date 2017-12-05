@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "Heading into the Ruins"
 	Script Author	: Scatman
 	Script Date	    : 2009.07.26
-	
+
 	Zone       : The Sprawl
 	Quest Giver: Enforcer Kurdek
 	Preceded by: Dominating the Dervish (dominating_the_dervish.lua)

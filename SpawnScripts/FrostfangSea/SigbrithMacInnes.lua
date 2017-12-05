@@ -3,7 +3,7 @@
 	Script Purpose	: Sigbrith MacInnes <Mender>
 	Script Author	: Foof
 	Script Date	: 2013.05.21
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 local LostFroglok = 26
@@ -13,7 +13,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)
@@ -24,10 +24,10 @@ end
 
 function hailed(NPC, Spawn)
     FaceTarget(NPC, Spawn)
-	
+
 	if GetQuestStep(Spawn, LostFroglok) == 1 then
 	    conversation = CreateConversation()
-		
+
 	    PlayFlavor(NPC, "sigbrith_macinnes/halas/gwenevyns_cove/sigbrith_macinnes/sigbrith_macinnes_001.mp3", "", "", 3335073691, 1240095725, Spawn)
 	    AddConversationOption(conversation, "Excuse me, Sigbrith MacInnes?", "Quest1Chat_2")
 	    StartConversation(conversation, NPC, Spawn, "Yes?")
@@ -42,7 +42,7 @@ function Quest1Chat_2(NPC, Spawn)
 	AddConversationOption(conversation, "That's where the grizzlies are!", "Quest1Chat_3")
 	StartConversation(conversation, NPC, Spawn, "I saw little Splorpy run off and play with the other children. They went over the hill, to the southwest.")
 end
-    
+
 function Quest1Chat_3(NPC, Spawn)
     SetStepComplete(Spawn, LostFroglok, 1)
 	FaceTarget(NPC, Spawn)

@@ -3,7 +3,7 @@
 	Script Purpose	: Lieutenant Imperidus <Freeport Militia>
 	Script Author	: Scatman
 	Script Date	: 2009.08.20
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 local QUEST_FROM_CAPTAIN_ARELLIUS = 285
@@ -21,7 +21,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)
@@ -43,7 +43,7 @@ end
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	if HasCompletedQuest(Spawn, QUEST_FROM_CAPTAIN_ARELLIUS) then
 		if HasCompletedQuest(Spawn, QUEST_1) then
 			if HasCompletedQuest(Spawn, QUEST_2) then
@@ -92,7 +92,7 @@ end
 
 function dlg_3_1(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_FROM_CAPTAIN_ARELLIUS, 1)
-	
+
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 
@@ -188,7 +188,7 @@ function dlg_6_1(NPC, Spawn)
 	if HasQuest(Spawn, QUEST_1) then
 		SetStepComplete(Spawn, QUEST_1, 5)
 	end
-	
+
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 
@@ -236,7 +236,7 @@ function dlg_29_1(NPC, Spawn)
 	if HasQuest(Spawn, QUEST_2) then
 		SetStepComplete(Spawn, QUEST_2, 7)
 	end
-	
+
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 
@@ -302,7 +302,7 @@ end
 
 function dlg_34_2(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_3, 2)
-	
+
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 
@@ -313,7 +313,7 @@ end
 
 function dlg_36_1(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_3, 4)
-	
+
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 

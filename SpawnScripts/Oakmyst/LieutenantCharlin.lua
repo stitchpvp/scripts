@@ -3,7 +3,7 @@
 	Script Purpose	: Lieutenant Charlin <Qeynos Guard>
 	Script Author	: Scatman
 	Script Date	: 2009.10.02
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 local MIN_LEVEL = 5
@@ -27,25 +27,25 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	if HasQuest(Spawn, QUEST_FROM_JORN) and GetQuestStep(Spawn, QUEST_FROM_JORN) == 3 then
 		AddConversationOption(conversation, "I have news for you.", "FoundBookOnGnome")
 	end
-	
+
 	if HasQuest(Spawn, QUEST_FROM_ADALIN) and GetQuestStep(Spawn, QUEST_FROM_ADALIN) == 5 then
 		AddConversationOption(conversation, "I have news for you.", "GnollAttackedWhileCleansing")
 	end
-	
+
 	if HasQuest(Spawn, QUEST_FROM_MARV) and GetQuestStep(Spawn, QUEST_FROM_MARV) == 3 then
 		AddConversationOption(conversation, "I have news for you.", "FoundBlackburrowStout")
 	end
-	
+
 	if HasCompletedQuest(Spawn, QUEST_1) then
 		if HasCompletedQuest(Spawn, QUEST_2) then
 			if HasCompletedQuest(Spawn, QUEST_3) then
@@ -108,7 +108,7 @@ end
 
 function ThisIsVeryConcerning(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_FROM_JORN, 3)
-	
+
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 
@@ -117,7 +117,7 @@ function ThisIsVeryConcerning(NPC, Spawn)
 	else
 		AddConversationOption(conversation, "Is there anything else I can do?", "dlg_1_4")
 	end
-	
+
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/lieutenant_charlin/qey_adv01_oakmyst/quests/charlin/charlin_jorn002.mp3", "", "", 1267137268, 405925681, Spawn)
 	StartConversation(conversation, NPC, Spawn, "This is very concerning. I'm going to send this book in to be studied, this is a good find. Maybe it will lead to something bigger. Knowing my luck it will just be a joke book. Good work on this.")
 end
@@ -168,7 +168,7 @@ end
 
 function FoundBlackBurrowStout2(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_FROM_MARV, 3)
-	
+
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 
@@ -186,13 +186,13 @@ end
 
 function BeCareful(NPC, Spawn, conversation)
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/lieutenant_charlin/qey_adv01_oakmyst/quests/charlin/charlin000.mp3", "", "", 1924665099, 2767332789, Spawn)
-	
+
 	if GetLevel(Spawn) >= MIN_LEVEL then
 		AddConversationOption(conversation, "What do I need to look out for?", "dlg_1_1")
 	else
 		AddConversationOption(conversation, "I will be.")
 	end
-	
+
 	StartConversation(conversation, NPC, Spawn, "Be careful out there, citizen.")
 end
 
@@ -258,13 +258,13 @@ end
 
 function OnQuest1(NPC, Spawn, conversation)
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/lieutenant_charlin/qey_adv01_oakmyst/quests/charlin/charlin006.mp3", "", "", 1152487104, 26326303, Spawn)
-	
+
 	if (HasQuest(Spawn, QUEST_1) and GetQuestStep(Spawn, QUEST_1) == 4) or (HasCompletedQuest(Spawn, QUEST_1) and not HasQuest(Spawn, QUEST_2)) then
 		AddConversationOption(conversation, "Yes, I have.", "dlg_3_1")
 	else
 		AddConversationOption(conversation, "Not yet.")
 	end
-	
+
 	StartConversation(conversation, NPC, Spawn, "Have you collected the poison samples yet?")
 end
 
@@ -272,7 +272,7 @@ function dlg_3_1(NPC, Spawn)
 	if HasQuest(Spawn, QUEST_1) then
 		SetStepComplete(Spawn, QUEST_1, 4)
 	end
-	
+
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 
@@ -302,13 +302,13 @@ end
 
 function OnQuest2(NPC, Spawn, conversation)
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/lieutenant_charlin/qey_adv01_oakmyst/quests/charlin/charlin009.mp3", "", "", 197933186, 2286710260, Spawn)
-	
+
 	if (HasQuest(Spawn, QUEST_2) and GetQuestStep(Spawn, QUEST_2) == 2) or (HasCompletedQuest(Spawn, QUEST_2) and not HasQuest(Spawn, QUEST_3)) then
 		AddConversationOption(conversation, "Yes, here you go.", "dlg_0_1")
 	else
 		AddConversationOption(conversation, "No, not yet.")
 	end
-	
+
 	StartConversation(conversation, NPC, Spawn, "Have you collected the soil yet?")
 end
 
@@ -316,7 +316,7 @@ function dlg_0_1(NPC, Spawn)
 	if HasQuest(Spawn, QUEST_2) then
 		SetStepComplete(Spawn, QUEST_2, 2)
 	end
-	
+
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 
@@ -402,7 +402,7 @@ end
 
 function dlg_7_5(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_3, 2)
-	
+
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 
@@ -415,7 +415,7 @@ function dlg_10_1(NPC, Spawn)
 	if HasQuest(Spawn, QUEST_3) then
 		SetStepComplete(Spawn, QUEST_3, 4)
 	end
-	
+
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 
@@ -445,13 +445,13 @@ end
 
 function OnQuest4(NPC, Spawn, conversation)
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/lieutenant_charlin/qey_adv01_oakmyst/quests/charlin/charlin020.mp3", "", "", 2483977262, 3448158171, Spawn)
-	
+
 	if (HasQuest(Spawn, QUEST_4) and GetQuestStep(Spawn, QUEST_4) == 2) or (HasCompletedQuest(Spawn, QUEST_4)) then
 		AddConversationOption(conversation, "Yes, I did.", "dlg_13_5")
 	else
 		AddConversationOption(conversation, "No, not yet.")
 	end
-	
+
 	StartConversation(conversation, NPC, Spawn, "Did you interrupt the meeting?")
 end
 
@@ -468,7 +468,7 @@ function dlg_13_6(NPC, Spawn)
 	if HasQuest(Spawn, QUEST_4) then
 		SetStepComplete(Spawn, QUEST_4, 2)
 	end
-	
+
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 
@@ -517,13 +517,13 @@ end
 
 function OnQuest5(NPC, Spawn, conversation)
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/lieutenant_charlin/qey_adv01_oakmyst/quests/charlin/charlin025.mp3", "", "", 4104237922, 4156355427, Spawn)
-	
+
 	if (HasQuest(Spawn, QUEST_5) and GetQuestStep(Spawn, QUEST_5) == 4) or (HasCompletedQuest(Spawn, QUEST_5)) then
 		AddConversationOption(conversation, "Yes, they are all dead.", "dlg_18_1")
 	else
 		AddConversationOption(conversation, "Not yet.")
 	end
-	
+
 	StartConversation(conversation, NPC, Spawn, "Have you taken out the lieutenants?")
 end
 
@@ -531,7 +531,7 @@ function dlg_18_1(NPC, Spawn)
 	if HasQuest(Spawn, QUEST_5) then
 		SetStepComplete(Spawn, QUEST_5, 4)
 	end
-	
+
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 

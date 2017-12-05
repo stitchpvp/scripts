@@ -3,7 +3,7 @@
     Script Author  : Zcoretri
     Script Date    : 2015.07.30
     Script Purpose : Galan Crestrider dialog
-                   : 
+                   :
 --]]
 
 function spawn(NPC)
@@ -11,7 +11,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-    spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
@@ -23,8 +23,8 @@ function InRange(NPC, Player)
     choice = math.random(1,2)
 
     if choice == 1 then
-	PlayFlavor(NPC, "", "Welcome to Crestrider's Trading Post.", "", 1689589577, 4560189, Spawn)
+	PlayFlavor(NPC, "", "Welcome to Crestrider's Trading Post.", "", 1689589577, 4560189, Player)
     else
-	PlayFlavor(NPC, "", "If you can trade it, we can buy it.", "", 1689589577, 4560189, Spawn)
+	PlayFlavor(NPC, "", "If you can trade it, we can buy it.", "", 1689589577, 4560189, Player)
     end
 end

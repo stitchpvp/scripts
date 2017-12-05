@@ -1,6 +1,6 @@
 --[[
 	Script Name	: SpawnScripts/GreaterFaydark/ScoutSpelunkle.lua
-	Script Purpose	: Scout Spelunkle 
+	Script Purpose	: Scout Spelunkle
 	Script Author	: John Adams
 	Script Date	: 2009.02.05
 	Script Notes	: Auto-Generated Conversation from PacketParser Data
@@ -11,7 +11,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)
@@ -36,12 +36,12 @@ function hailed(NPC, Spawn)
 	AddConversationOption(conversation, "I was just exploring, sorry.")
 	StartConversation(conversation, NPC, Spawn, "AAAAAHHHHH!   Oh wait, yer not a grobin...  What are you doin' scaring me like that!?")
 
-	if convo==29 then
-		PlayFlavor(NPC, "voiceover/english/exp03_questvo2/scout_spelunkle/_exp03/exp03_rgn_greater_faydark/scout_spelunkle/scout_spelunkle001.mp3", "", "", 1120182218, 3612192920, Spawn)
-		AddConversationOption(conversation, "Captain Steelforge wanted to know if you were okay.  You shouldn't go running off alone.", "dlg_29_1")
-		AddConversationOption(conversation, "I was just exploring, sorry.")
-		StartConversation(conversation, NPC, Spawn, "AAAAAHHHHH!   Oh wait, yer not a grobin...  What are you doin' scaring me like that!?")
-	end
+	--if convo==29 then
+	--	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/scout_spelunkle/_exp03/exp03_rgn_greater_faydark/scout_spelunkle/scout_spelunkle001.mp3", "", "", 1120182218, 3612192920, Spawn)
+	--	AddConversationOption(conversation, "Captain Steelforge wanted to know if you were okay.  You shouldn't go running off alone.", "dlg_29_1")
+	--	AddConversationOption(conversation, "I was just exploring, sorry.")
+	--	StartConversation(conversation, NPC, Spawn, "AAAAAHHHHH!   Oh wait, yer not a grobin...  What are you doin' scaring me like that!?")
+	--end
 
 end
 

@@ -3,7 +3,7 @@
 	Script Purpose	:	the quest "Becoming Another Orcbane"
 	Script Author	:	theFoof
 	Script Date		:	2013.7.24
-	Script Notes	:	
+	Script Notes	:
 
 	Zone			:	Frostfang Sea
 	Quest Giver		:	Knut Orcbane

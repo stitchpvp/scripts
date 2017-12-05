@@ -1,6 +1,6 @@
 --[[
 	Script Name	: SpawnScripts/Oakmyst/TrackerKelnis.lua
-	Script Purpose	: Tracker Kelnis 
+	Script Purpose	: Tracker Kelnis
 	Script Author	: scatman
 	Script Date	: 2009.05.08
 	Script Notes	: Auto-Generated Conversation from PacketParser Data
@@ -10,7 +10,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)

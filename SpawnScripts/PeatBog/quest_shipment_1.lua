@@ -3,7 +3,7 @@
 	Script Purpose	: quest_shipment_1
 	Script Author	: Scatman
 	Script Date	: 2009.05.11
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 local QUEST_4 = 218
@@ -13,7 +13,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	Spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)

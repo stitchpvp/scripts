@@ -10,7 +10,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
@@ -25,7 +25,7 @@ function hailed(NPC, Spawn)
 	elseif choice == 3 then
 		PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_3_1004.mp3", "", "beckon", 0, 0, Spawn)
 	end
-	
+
 	AddConversationOption(conversation, "Tell me about items and equipment.", "dlg_15_1")
 	AddConversationOption(conversation, "Tell me about my inventory.", "dlg_15_11")
 	AddConversationOption(conversation, "I will return for instruction later.")

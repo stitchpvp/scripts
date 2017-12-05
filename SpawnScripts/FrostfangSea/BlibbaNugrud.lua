@@ -1,6 +1,6 @@
 --[[
 	Script Name	: SpawnScripts/FrostfangSea/BlibbaNugrud.lua
-	Script Purpose	: Blibba Nugrud 
+	Script Purpose	: Blibba Nugrud
 	Script Author	: theFoof
 	Script Date	: 2013.08.19
 	Script Notes	:
@@ -12,7 +12,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
@@ -98,7 +98,7 @@ end
 function Quest1Chat_7(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	AddConversationOption(conversation, "It's nothing quote so serious.", "Quest1Chat_1")
 	AddConversationOption(conversation, "Just answer the question!", "Quest1Chat_8")
 	AddConversationOption(conversation, "Whatever, I don't have the time for this.")
@@ -108,7 +108,7 @@ end
 function Quest1Chat_8(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	AddConversationOption(conversation, "Fine. Goodbye.")
 	StartConversation(conversation, NPC, Spawn, "How rude!  Good day.")
 end
@@ -116,7 +116,7 @@ end
 function Quest1Chat_9(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	AddConversationOption(conversation, "Of course.", "Quest1Chat_2")
 	AddConversationOption(conversation, "Just answer the question!", "Quest1Chat_8")
 	StartConversation(conversation, NPC, Spawn, "That's a very interesting way of putting it. I'll assume you meant no offense.")

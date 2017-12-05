@@ -1,10 +1,12 @@
+QUEST_1_FROM_NETHET = nil
+
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "[Crouch Down and Listen]", "Option1")
 	StartConversation(conversation, NPC, Spawn, "Shhh!  Quiet, I'm trying to listen to this.  And I said, get down!  We'll talk in a minute.")
-  if HasQuest(Spawn, QUEST_1_FROM_Nethet) then
+  if HasQuest(Spawn, QUEST_1_FROM_NETHET) then
 	AddConversationOption(conversation, "Yes, he said you were in trouble.", "Option2")
 	StartConversation(conversation, NPC, Spawn, "I assume Nethet sent you?")
   end

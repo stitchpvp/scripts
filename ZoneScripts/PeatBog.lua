@@ -3,7 +3,7 @@
 	Script Purpose	: Peat Bog
 	Script Author	: Scatman
 	Script Date	: 2009.05.10
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 local QUEST_4 = 218
@@ -14,6 +14,33 @@ function init_zone_script(Zone)
 	SetLocationProximityFunction(Zone, 753.824, -32.7236, 604.844, 30, "InRange2")
 	SetLocationProximityFunction(Zone, 797.389, -32.9127, 580.472, 30, "InRange3")
 	SetLocationProximityFunction(Zone, 772.80, -33.68, 489.37, 30, "SpawnDentfang")
+end
+
+function GetRandomGnollID()
+	-- a gnoll guard: 1980111, 1980118
+	-- a gnoll machinist: 1980112
+	-- a machinist assistant: 1980113, 1980120
+	local choice = math.random(1, 5)
+	if choice == 1 then
+		return 1980111
+	elseif choice == 2 then
+		return 1980118
+	elseif choice == 3 then
+		return 1980112
+	elseif choice == 4 then
+		return 1980113
+	elseif choice == 5 then
+		return 1980120
+	end
+end
+
+function SpawnGnolls(Zone, Spawn)
+	local Gnoll1 = SpawnMob(Zone, GetRandomGnollID(), false, GetX(Spawn), GetY(Spawn), GetZ(Spawn))
+	local Gnoll2 = SpawnMob(Zone, GetRandomGnollID(), false, GetX(Spawn), GetY(Spawn), GetZ(Spawn))
+	local Gnoll3 = SpawnMob(Zone, GetRandomGnollID(), false, GetX(Spawn), GetY(Spawn), GetZ(Spawn))
+	AddHate(Spawn, Gnoll1, 100)
+	AddHate(Spawn, Gnoll2, 100)
+	AddHate(Spawn, Gnoll3, 100)
 end
 
 function InRange1(Zone, Spawn)
@@ -38,33 +65,6 @@ function InRange3(Zone, Spawn)
 		SpawnGnolls(Zone, Spawn)
 		Despawn(Box, 120000)
 	end
-end
-
-function GetRandomGnollID()
-	-- a gnoll guard: 1980111, 1980118
-	-- a gnoll machinist: 1980112
-	-- a machinist assistant: 1980113, 1980120
-	choice = math.random(1, 5)
-	if choice == 1 then
-		return 1980111
-	elseif choice == 2 then
-		return 1980118
-	elseif choice == 3 then
-		return 1980112
-	elseif choice == 4 then
-		return 1980113
-	elseif choice == 5 then
-		return 1980120
-	end
-end
-
-function SpawnGnolls(Zone, Spawn)
-	local Gnoll1 = SpawnMob(Zone, GetRandomGnollID(), false, GetX(Spawn), GetY(Spawn), GetZ(Spawn))
-	local Gnoll2 = SpawnMob(Zone, GetRandomGnollID(), false, GetX(Spawn), GetY(Spawn), GetZ(Spawn))
-	local Gnoll3 = SpawnMob(Zone, GetRandomGnollID(), false, GetX(Spawn), GetY(Spawn), GetZ(Spawn))
-	AddHate(Spawn, Gnoll1, 100)
-	AddHate(Spawn, Gnoll2, 100)
-	AddHate(Spawn, Gnoll3, 100)
 end
 
 function SpawnDentfang(Zone, Spawn)

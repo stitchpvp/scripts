@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the generic hails for scribes.
 	Script Author	: Scatman
 	Script Date	: 2009.09.27
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 local BARBARIAN = 0
@@ -33,7 +33,7 @@ function GenericScribeHail(NPC, Spawn, Faction)
 	if NPC ~= nil then
 		local race = GetRace(NPC)
 		local gender = GetGender(NPC)
-		
+
 		if race >= 0 and race <= 18 and gender >= 1 and gender <= 2 then
 			if race == BARBARIAN then
 				if gender == MALE then

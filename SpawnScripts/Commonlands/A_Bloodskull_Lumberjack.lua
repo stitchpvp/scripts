@@ -12,7 +12,7 @@ function SetTimer(NPC, Spawn)
   local chance = math.random(1, 50)
 	if chance <= 25 then
     local choice = math.random(1, 2)
-  
+
     if choice == 1 then
       AddTimer(NPC, timerslow, "DoAnimation")
     elseif choice == 2 then
@@ -20,8 +20,8 @@ function SetTimer(NPC, Spawn)
     end
   else
     AddTimer(NPC, timerfast, "ResetVisualState", 1, NPC)
-    ResumeMovement(NPC)  
-    AddTimer(NPC, timerslow, "SetTimer")  
+    ResumeMovement(NPC)
+    AddTimer(NPC, timerslow, "SetTimer")
   end
 end
 

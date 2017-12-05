@@ -11,7 +11,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)
@@ -27,11 +27,11 @@ function hailed(NPC, Spawn)
 		PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_1_1004.mp3", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "I'll work towards that end then.", "dlg_80_1")
 	StartConversation(conversation, NPC, Spawn, "I'm sorry, until you have chosen a specialty in your craft I do not have any work orders for you.  Come see me when you're more practiced in your trade.")
-	if convo==81 then
-		PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_2_1004.mp3", "", "", 0, 0, Spawn)
-		AddConversationOption(conversation, "I'll work towards that end then.", "dlg_81_1")
-		StartConversation(conversation, NPC, Spawn, "I'm sorry, until you have chosen a specialty in your craft I do not have any work orders for you.  Come see me when you're more practiced in your trade.")
-	end
+	--if convo==81 then
+	--	PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_2_1004.mp3", "", "", 0, 0, Spawn)
+	--	AddConversationOption(conversation, "I'll work towards that end then.", "dlg_81_1")
+	--	StartConversation(conversation, NPC, Spawn, "I'm sorry, until you have chosen a specialty in your craft I do not have any work orders for you.  Come see me when you're more practiced in your trade.")
+	--end
 
 end
 

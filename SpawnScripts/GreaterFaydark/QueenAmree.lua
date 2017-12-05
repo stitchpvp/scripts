@@ -1,6 +1,6 @@
 --[[
 	Script Name	: SpawnScripts/GreaterFaydark/QueenAmree.lua
-	Script Purpose	: Queen Amree 
+	Script Purpose	: Queen Amree
 	Script Author	: John Adams
 	Script Date	: 2009.03.01
 	Script Notes	: Auto-Generated Conversation from PacketParser Data
@@ -11,7 +11,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)
@@ -28,19 +28,19 @@ function hailed(NPC, Spawn)
 	AddConversationOption(conversation, "Yes, I have!", "dlg_0_1")
 	AddConversationOption(conversation, "I am on my way there now.")
 	StartConversation(conversation, NPC, Spawn, "Have you successfully slain the Grender?")
-	if convo==7 then
-		PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_3_1005.mp3", "", "", 0, 0, Spawn)
-		AddConversationOption(conversation, "I seek permission to hunt the Grender!", "dlg_7_1")
-		AddConversationOption(conversation, "Nothing at the moment, Your Majesty.")
-		StartConversation(conversation, NPC, Spawn, "Welcome to the Hall.  What is it you seek?")
-	end
+	--if convo==7 then
+	--	PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_3_1005.mp3", "", "", 0, 0, Spawn)
+	--	AddConversationOption(conversation, "I seek permission to hunt the Grender!", "dlg_7_1")
+	--	AddConversationOption(conversation, "Nothing at the moment, Your Majesty.")
+	--	StartConversation(conversation, NPC, Spawn, "Welcome to the Hall.  What is it you seek?")
+	--end
 
-	if convo==71 then
-		PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_2_1005.mp3", "", "", 0, 0, Spawn)
-		AddConversationOption(conversation, "Yes, Ma'am.", "dlg_71_1")
-		AddConversationOption(conversation, "No, Ma'am.")
-		StartConversation(conversation, NPC, Spawn, "Are you prepared for the citizenship ceremony, XXXXXXXX?")
-	end
+	--if convo==71 then
+	--	PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_2_1005.mp3", "", "", 0, 0, Spawn)
+	--	AddConversationOption(conversation, "Yes, Ma'am.", "dlg_71_1")
+	--	AddConversationOption(conversation, "No, Ma'am.")
+	--	StartConversation(conversation, NPC, Spawn, "Are you prepared for the citizenship ceremony, XXXXXXXX?")
+	--end
 
 end
 

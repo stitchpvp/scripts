@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "Destroy the Corruption"
 	Script Author	: Scatman
 	Script Date	: 2009.05.09
-	
+
 	Zone       : Oakmyst Forest
 	Quest Giver: Scholar Neola
 	Preceded by: Judgement of the Dryads (judgement_of_the_dryads.lua)
@@ -19,7 +19,7 @@ end
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
 	local conversation = CreateConversation()
-	
+
 	PlayFlavor(QuestGiver, "voiceover/english/empress_anassa/qey_adv01_oakmyst/empressanassa002.mp3", "", "", 3988531876, 1061259431, Player)
 	AddConversationOption(conversation, "What is Rotweed?", "WhatIsRotweed")
 	AddConversationOption(conversation, "I will battle this Rotweed and return victorious.")
@@ -33,7 +33,7 @@ function Step1_Complete_KilledRotweed(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 1, "I have found and defeated Rotweed .")
 	UpdateQuestTaskGroupDescription(Quest, 1, "I have slain the many creatures that made up Rotweed the plant fiend.")
 
-	AddQuestStepChat(Quest, 2, "Speak to Empress Anassa.", 1, "I must return to speak to Empress Anassa in Oakmyst Forest.", 0, 1950078) 
+	AddQuestStepChat(Quest, 2, "Speak to Empress Anassa.", 1, "I must return to speak to Empress Anassa in Oakmyst Forest.", 0, 1950078)
 	AddQuestStepCompleteAction(Quest, 2, "QuestComplete")
 end
 

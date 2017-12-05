@@ -7,4 +7,4 @@ function hailed(NPC, Spawn)
 	elseif choice == 2 then
 	  Say(NPC, "What's your poison?", Spawn)
   end
-end    
+end

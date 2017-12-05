@@ -1,9 +1,9 @@
 --[[
 	Script Name	: SpawnScripts/ForestRuins/ElvicGarrett.lua
-	Script Purpose	: Elvic Garrett 
+	Script Purpose	: Elvic Garrett
 	Script Author	: Scatman
 	Script Date	: 2009.09.26
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 local HALF_ELF = 6
@@ -14,13 +14,13 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	if HasQuest(Spawn, HALFELF_MENTOR_QUEST_4) then
 		HalfElfMentorQuest(NPC, Spawn, conversation)
 	else
@@ -49,7 +49,7 @@ end
 
 function dlg_0_1(NPC, Spawn)
 	SetStepComplete(Spawn, HALFELF_MENTOR_QUEST_4, 1)
-	
+
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 

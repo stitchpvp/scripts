@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "Joining the Gang"
 	Script Author	: Scatman
 	Script Date	    : 2009.08.01
-	
+
 	Zone       : Sunken City
 	Quest Giver: Manius Galla
 	Preceded by: None
@@ -37,7 +37,7 @@ end
 
 function Step1_Complete_KilledRaiders(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 1, "I have killed the Blackshield raiders.")
-	
+
 	if QuestIsComplete(Player, 278) then
 		KilledBlacksields(Quest, QuestGiver, Player)
 	end
@@ -45,7 +45,7 @@ end
 
 function Step2_Complete_KilledPlunderers(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 2, "I have killed the Blackshield plunderers.")
-	
+
 	if QuestIsComplete(Player, 278) then
 		KilledBlacksields(Quest, QuestGiver, Player)
 	end
@@ -53,7 +53,7 @@ end
 
 function Step3_Complete_KilledPillagers(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 3, "I have killed the Blackshield pillagers.")
-	
+
 	if QuestIsComplete(Player, 278) then
 		KilledBlacksields(Quest, QuestGiver, Player)
 	end
@@ -61,7 +61,7 @@ end
 
 function Step4_Complete_KilledRavagers(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 4, "I have killed the Blackshield ravagers.")
-	
+
 	if QuestIsComplete(Player, 278) then
 		KilledBlacksields(Quest, QuestGiver, Player)
 	end
@@ -69,7 +69,7 @@ end
 
 function Step5_Complete_KilledPirates(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 5, "I have killed the Blackshield pirates.")
-	
+
 	if QuestIsComplete(Player, 278) then
 		KilledBlacksields(Quest, QuestGiver, Player)
 	end

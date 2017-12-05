@@ -3,7 +3,7 @@
 	Script Purpose	: Liege Aquila <Freeport Militia>
 	Script Author	: Scatman
 	Script Date	: 2008.09.29
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 local QUEST_1 = 261 -- repeatable
@@ -13,14 +13,14 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 	RandomVoiceOver(NPC, Spawn)
-	
+
 	if HasCompletedQuest(Spawn, QUEST_1) then
 		YouveDoneWell(NPC, Spawn, conversation)
 	elseif HasQuest(Spawn, QUEST_1) then
@@ -60,7 +60,7 @@ function hailed(NPC, Spawn)
 
 	if convo==15 then
 		PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_2_1004.mp3", "", "", 0, 0, Spawn)
-		
+
 	end
 
 	if convo==16 then
@@ -162,7 +162,7 @@ end
 
 function dlg_15_1(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_1, 2)
-	
+
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 

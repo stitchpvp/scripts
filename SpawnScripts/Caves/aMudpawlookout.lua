@@ -1,6 +1,6 @@
 --[[
 	Script Name	: SpawnScripts/Caves/aMudpawlookout.lua
-	Script Purpose	: a Mudpaw lookout 
+	Script Purpose	: a Mudpaw lookout
 	Script Author	: John Adams
 	Script Date	: 2008.09.21
 	Script Notes	: Auto-Generated Conversation from PacketParser Data

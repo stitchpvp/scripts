@@ -11,7 +11,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)
@@ -28,21 +28,21 @@ function hailed(NPC, Spawn)
 	AddConversationOption(conversation, "Who are you?", "dlg_24_1")
 	AddConversationOption(conversation, "I do not know.  Farewell.")
 	StartConversation(conversation, NPC, Spawn, "Bah! How does a dwarf feel at home with a canopy of leaves and not one of stone? ")
-	if convo==25 then
-		PlayFlavor(NPC, "captain_r.k._irontoe/_exp03/exp03_rgn_greater_faydark/captain_rk_irontoe/rk_irontoe057.mp3", "", "", 770633161, 1780911252, Spawn)
-		AddConversationOption(conversation, "I would like to hear about Kaladim.", "dlg_25_1")
-		AddConversationOption(conversation, "My interest in serving the dwarven kingdom has risen.")
-		AddConversationOption(conversation, "I just wanted to say hello. Farewell now. ")
-		StartConversation(conversation, NPC, Spawn, "Ah! You again. Has your interest in dwarven history risen?")
-	end
+	--if convo==25 then
+	--	PlayFlavor(NPC, "captain_r.k._irontoe/_exp03/exp03_rgn_greater_faydark/captain_rk_irontoe/rk_irontoe057.mp3", "", "", 770633161, 1780911252, Spawn)
+	--	AddConversationOption(conversation, "I would like to hear about Kaladim.", "dlg_25_1")
+	--	AddConversationOption(conversation, "My interest in serving the dwarven kingdom has risen.")
+	--	AddConversationOption(conversation, "I just wanted to say hello. Farewell now. ")
+	--	StartConversation(conversation, NPC, Spawn, "Ah! You again. Has your interest in dwarven history risen?")
+	--end
 
-	if convo==26 then
-		PlayFlavor(NPC, "captain_r.k._irontoe/_exp03/exp03_rgn_greater_faydark/captain_rk_irontoe/rk_irontoe057.mp3", "", "", 770633161, 1780911252, Spawn)
-		AddConversationOption(conversation, "I would like to hear about Kaladim.", "dlg_26_1")
-		AddConversationOption(conversation, "My interest in serving the dwarven kingdom has risen.")
-		AddConversationOption(conversation, "I just wanted to say hello. Farewell now. ")
-		StartConversation(conversation, NPC, Spawn, "Ah! You again. Has your interest in dwarven history risen?")
-	end
+	--if convo==26 then
+	--	PlayFlavor(NPC, "captain_r.k._irontoe/_exp03/exp03_rgn_greater_faydark/captain_rk_irontoe/rk_irontoe057.mp3", "", "", 770633161, 1780911252, Spawn)
+	--	AddConversationOption(conversation, "I would like to hear about Kaladim.", "dlg_26_1")
+	--	AddConversationOption(conversation, "My interest in serving the dwarven kingdom has risen.")
+	--	AddConversationOption(conversation, "I just wanted to say hello. Farewell now. ")
+	--	StartConversation(conversation, NPC, Spawn, "Ah! You again. Has your interest in dwarven history risen?")
+	--end
 
 end
 

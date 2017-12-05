@@ -3,7 +3,7 @@
 	Script Purpose	:   for the spawn "a velinoid seeker"
 	Script Author	:   theFoof
 	Script Date		:	2013.6.13
-	Script Notes	:	
+	Script Notes	:
 --]]
 
 local GoodDistraction = 61

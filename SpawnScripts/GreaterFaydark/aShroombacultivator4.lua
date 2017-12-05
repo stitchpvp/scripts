@@ -1,5 +1,5 @@
 --[[
-	Script Name	: SpawnScripts/GreaterFaydark/aShroombacultivator4.lua 
+	Script Name	: SpawnScripts/GreaterFaydark/aShroombacultivator4.lua
 	Script Purpose	: Shroomba Cultivator wanderer
 	Script Author	: John Adams
 	Script Date	: 2009.03.29
@@ -25,5 +25,5 @@ function hailed(NPC, Spawn)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end

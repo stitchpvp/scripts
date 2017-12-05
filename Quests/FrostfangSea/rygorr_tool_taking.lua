@@ -3,7 +3,7 @@
 	Script Purpose	:	the quest Ry'Gorr Tool Taking
 	Script Author	:	theFoof
 	Script Date		:	2013.7.10
-	Script Notes	:	
+	Script Notes	:
 
 	Zone			:	Frostfang Sea
 	Quest Giver		:   Odon Scourgeson

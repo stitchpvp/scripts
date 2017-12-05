@@ -1,6 +1,6 @@
 --[[
 	Script Name	: SpawnScripts/FrostfangSea/ThirinVeliumdelver_(caves).lua
-	Script Purpose	: Thirin Veliumdelver 
+	Script Purpose	: Thirin Veliumdelver
 	Script Author	: theFoof
 	Script Date	: 2013.06.11
 	Script Notes	:
@@ -28,7 +28,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
@@ -110,7 +110,7 @@ end
 function Quest2Chat_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	PlayFlavor(NPC, "thirin_veliumdelver/halas/cragged_spine/thirin_veliumdelver_cave007.mp3", "", "", 563381258, 467794942, Spawn)
 	AddConversationOption(conversation, "I found a race of beings that look as though they were birthed from the velium itself.  There were orcish bodies among them as well.  I was able to escape, but I don't believe they will side with us.  We are all in danger.", "Quest2Chat_2")
 	StartConversation(conversation, NPC, Spawn, "What are ye talking about?  What was there?")
@@ -138,7 +138,7 @@ end
 function Quest3Chat_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	PlayFlavor(NPC, "thirin_veliumdelver/halas/cragged_spine/thirin_veliumdelver_cave012.mp3", "", "", 196969429, 3399805289, Spawn)
 	AddConversationOption(conversation, "Perhaps he just needs more time?  It wasn't long ago that I left him.", "Quest3Chat_2")
 	StartConversation(conversation, NPC, Spawn, "Hmm, this is most troubling.  I am worried, adventurer, he would have returned by now.  I fear something may have happened to him.")

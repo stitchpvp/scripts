@@ -3,14 +3,14 @@
 	Script Purpose	: High Shaman Zen Durath
 	Script Author	: Scatman
 	Script Date	: 2009.10.18
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)

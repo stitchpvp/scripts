@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "Stuffed Gorger Claws"
 	Script Author	: Scatman
 	Script Date	: 2009.02.06
-	
+
 	Zone       : Timorous Deep
 	Quest Giver: Taroche Dry'Zok
 	Preceded by: None
@@ -33,7 +33,7 @@ end
 
 function step1_complete_gotClaws(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 1, "I have the claws.")
-	
+
 	AddQuestStepChat(Quest, 2, "I need to bring these claws to Taroche Dry'Zok", 1, ".", 77, 2630014)
 	AddQuestStepCompleteAction(Quest, 2, "quest_complete")
 end

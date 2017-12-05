@@ -1,6 +1,6 @@
 --[[
 	Script Name	: SpawnScripts/GreaterFaydark/SaelirVarryn.lua
-	Script Purpose	: Saelir Varryn 
+	Script Purpose	: Saelir Varryn
 	Script Author	: John Adams
 	Script Date	: 2009.03.01
 	Script Notes	: Auto-Generated Conversation from PacketParser Data
@@ -11,7 +11,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)
@@ -27,44 +27,44 @@ function hailed(NPC, Spawn)
 		PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_2_1006.mp3", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Yes, I have collected the materials.", "dlg_2_1")
 	StartConversation(conversation, NPC, Spawn, "Well? Did you collect all the materials?")
-	if convo==8 then
-		PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_2_1006.mp3", "", "", 0, 0, Spawn)
-		AddConversationOption(conversation, "Yes, I have the declarations.", "dlg_8_1")
-		StartConversation(conversation, NPC, Spawn, "Did you manage to get the declarations?")
-	end
+	--if convo==8 then
+	--	PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_2_1006.mp3", "", "", 0, 0, Spawn)
+	--	AddConversationOption(conversation, "Yes, I have the declarations.", "dlg_8_1")
+	--	StartConversation(conversation, NPC, Spawn, "Did you manage to get the declarations?")
+	--end
 
-	if convo==14 then
-		PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_2_1006.mp3", "", "", 0, 0, Spawn)
-		AddConversationOption(conversation, "I have the Sul Spheres.", "dlg_14_1")
-		StartConversation(conversation, NPC, Spawn, "Hi, XXXXXXXX.")
-	end
+	--if convo==14 then
+	--	PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_2_1006.mp3", "", "", 0, 0, Spawn)
+	--	AddConversationOption(conversation, "I have the Sul Spheres.", "dlg_14_1")
+	--	StartConversation(conversation, NPC, Spawn, "Hi, XXXXXXXX.")
+	--end
 
-	if convo==15 then
-		PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_2_1006.mp3", "", "", 0, 0, Spawn)
-		AddConversationOption(conversation, "I have the Sul Spheres.", "dlg_15_1")
-		StartConversation(conversation, NPC, Spawn, "Hi, XXXXXXXX.")
-	end
+	--if convo==15 then
+	--	PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_2_1006.mp3", "", "", 0, 0, Spawn)
+	--	AddConversationOption(conversation, "I have the Sul Spheres.", "dlg_15_1")
+	--	StartConversation(conversation, NPC, Spawn, "Hi, XXXXXXXX.")
+	--end
 
-	if convo==104 then
-		PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_1_1006.mp3", "", "", 0, 0, Spawn)
-		AddConversationOption(conversation, "Why do you say that?", "dlg_104_1")
-		AddConversationOption(conversation, "I must be going.")
-		StartConversation(conversation, NPC, Spawn, "Greetings. Enjoying your stroll? No, I don't suppose you would be.")
-	end
+	--if convo==104 then
+	--	PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_1_1006.mp3", "", "", 0, 0, Spawn)
+	--	AddConversationOption(conversation, "Why do you say that?", "dlg_104_1")
+	--	AddConversationOption(conversation, "I must be going.")
+	--	StartConversation(conversation, NPC, Spawn, "Greetings. Enjoying your stroll? No, I don't suppose you would be.")
+	--end
 
-	if convo==105 then
-		PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_3_1006.mp3", "", "", 0, 0, Spawn)
-		AddConversationOption(conversation, "Why do you say that?", "dlg_105_1")
-		AddConversationOption(conversation, "I must be going.")
-		StartConversation(conversation, NPC, Spawn, "Greetings. Enjoying your stroll? No, I don't suppose you would be.")
-	end
+	--if convo==105 then
+	--	PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_3_1006.mp3", "", "", 0, 0, Spawn)
+	--	AddConversationOption(conversation, "Why do you say that?", "dlg_105_1")
+	--	AddConversationOption(conversation, "I must be going.")
+	--	StartConversation(conversation, NPC, Spawn, "Greetings. Enjoying your stroll? No, I don't suppose you would be.")
+	--end
 
-	if convo==106 then
-		PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_3_1006.mp3", "", "", 0, 0, Spawn)
-		AddConversationOption(conversation, "Why do you say that?", "dlg_106_1")
-		AddConversationOption(conversation, "I must be going.")
-		StartConversation(conversation, NPC, Spawn, "Greetings. Enjoying your stroll? No, I don't suppose you would be.")
-	end
+	--if convo==106 then
+	--	PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_3_1006.mp3", "", "", 0, 0, Spawn)
+	--	AddConversationOption(conversation, "Why do you say that?", "dlg_106_1")
+	--	AddConversationOption(conversation, "I must be going.")
+	--	StartConversation(conversation, NPC, Spawn, "Greetings. Enjoying your stroll? No, I don't suppose you would be.")
+	--end
 
 end
 

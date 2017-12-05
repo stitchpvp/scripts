@@ -3,7 +3,7 @@
 	Script Purpose	:	spawn access for the runes in the quest "Calling Them Back"
 	Script Author	:	theFoof
 	Script Date		:	2013.5.28
-	Script Notes	:	
+	Script Notes	:
 --]]
 
 local CallingBack = 35

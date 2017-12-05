@@ -3,7 +3,7 @@
 	Script Purpose	: Prank Preparedness Kit
 	Script Author	: Scatman
 	Script Date	: 2009.09.27
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 local HALFLING_MENTOR_QUEST_3 = 72
@@ -42,7 +42,7 @@ function LastPage(Item, Player)
 	if HasQuest(Player, HALFLING_MENTOR_QUEST_3) and GetQuestStep(Player, HALFLING_MENTOR_QUEST_3) == 1 then
 		SetStepComplete(Player, HALFLING_MENTOR_QUEST_3, 1)
 	end
-	
+
 	local conversation = CreateConversation()
 	AddConversationOption(conversation, "Put the Prank Preparedness Kit away.")
 	StartDialogConversation(conversation, 2, Item, Player, "So there are the targets. Remember, do not let them suspect anything, and do not mention my name!\nGood luck,\nThe Prankster - R.R.")

@@ -17,7 +17,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)
@@ -39,7 +39,7 @@ end
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	if HasCompletedQuest(Spawn, QUEST_FROM_ARELLIUS) then
 		if HasCompletedQuest(Spawn, QUEST_1) then
 			if HasCompletedQuest(Spawn, QUEST_2) then
@@ -64,7 +64,7 @@ function hailed(NPC, Spawn)
 --[[
 	if HasCompletedQuest(Spawn, 1) then
 	else
-		
+
 	end
 
 	if convo==1 then
@@ -102,7 +102,7 @@ end
 function LookHere(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	AddConversationOption(conversation, "I'll go speak with her.")
 	StartConversation(conversation, NPC, Spawn, "Look here, adventurer. My troops must find a way to control these blasted brutes. If you want a history lesson, go speak with Captain Arellius on the docks. She may have time to fill you in, but I don't.")
 end
@@ -113,7 +113,7 @@ end
 
 function dlg_4_1(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_FROM_ARELLIUS, 1)
-	
+
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 
@@ -205,7 +205,7 @@ end
 
 function dlg_7_1(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_1, 2)
-	
+
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 
@@ -424,9 +424,6 @@ end
 
 function dlg_4_8(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	local conversation = CreateConversation()
-
-
 end
 
 function dlg_5_1(NPC, Spawn)
@@ -515,9 +512,6 @@ end
 
 function dlg_7_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	local conversation = CreateConversation()
-
-
 end
 
 --[[ raw_conversations

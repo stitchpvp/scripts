@@ -1,9 +1,9 @@
 --[[
 	Script Name	: SpawnScripts/SunkenCity/GerbardtheSnitch.lua
-	Script Purpose	: Gerbard the Snitch 
+	Script Purpose	: Gerbard the Snitch
 	Script Author	: scatman
 	Script Date	: 2009.08.01
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 local QUEST_1 = 275
@@ -13,7 +13,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
@@ -52,7 +52,7 @@ end
 
 function dlg_8_1(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_1, 2)
-	
+
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 

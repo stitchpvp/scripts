@@ -3,7 +3,7 @@
 	Script Purpose	:	for the lazy Ry'Gorr orc spawn
 	Script Author	:	theFoof
 	Script Date		:	2013.6.10
-	Script Notes	:	
+	Script Notes	:
 --]]
 
 local ThroughEyes = 58

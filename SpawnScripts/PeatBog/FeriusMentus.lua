@@ -1,5 +1,5 @@
 --[[
-	Script Name	: SpawnScripts/PeatBog/FeriusMentus.lua 
+	Script Name	: SpawnScripts/PeatBog/FeriusMentus.lua
 	Script Purpose	: Ferius Mentus
 	Script Author	: Scatman
 	Script Date	: 2009.05.10
@@ -13,13 +13,13 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	if HasCompletedQuest(Spawn, QUEST_1) then
 		Say(NPC, "If I can perfect this, it may be amazingly useful.", Spawn)
 	elseif HasQuest(Spawn, QUEST_1) then
@@ -79,7 +79,7 @@ end
 
 function GotFrogs(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_1, 2)
-	
+
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 

@@ -1,9 +1,9 @@
 --[[
 	Script Name	: SpawnScripts/ForestRuins/RemmyTumbub.lua
-	Script Purpose	: Remmy Tumbub 
+	Script Purpose	: Remmy Tumbub
 	Script Author	: Scatman
 	Script Date	: 2009.09.27
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 local HALFLING = 7
@@ -13,11 +13,11 @@ local QUEST_1 = 1
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	if HasQuest(Spawn, HALFLING_MENTOR_QUEST_5) then
 		AddConversationOption(conversation, "Indeed... Pie Man Sam.", "ItWasntMe")
 	end
-	
+
 	if HasCompletedQuest(Spawn, QUEST_1) then
 	elseif HasQuest(Spawn, QUEST_1) then
 	else
@@ -59,7 +59,7 @@ end
 function ItWasntMe(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	AddConversationOption(conversation, "Give it up. Whining won't save you. The only thing that can save you now is direct payment.", "OfCourseOfCourse")
 	AddConversationOption(conversation, "Rondo was right, you fell for it big time.", "RondoWasRight")
 	StartConversation(conversation, NPC, Spawn, "Oh no! It wasn't me! It's not me! I'm just a halflin' going for a walk. Oh no no no no no no! How did you find me? Listen, I didn't take the pies for myself, I had to feed a starvin' family in Antonica. They NEEDED me! Oh, oh, gosh, listen, I have the money, eh, just not on me, hehe. I'll get to the proper authorities, just don't, don't tell anyone!")
@@ -68,7 +68,7 @@ end
 function OfCourseOfCourse(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	AddConversationOption(conversation, "Offering a bribe! That's another charge we can add to your file.", "ButYouJustSaid")
 	AddConversationOption(conversation, "Rondo was right, you fell for it big time.", "RondoWasRight")
 	StartConversation(conversation, NPC, Spawn, "Oh... of course, of course! How much do you want? I only have a few silver on me at the moment, less than that probably.")
@@ -77,7 +77,7 @@ end
 function ButYouJustSaid(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	AddConversationOption(conversation, "You think a mere fine was all we had in store for Pie Man Sam? You're going to be working days and nights in each kitchen you stole from.", "CantWorkInKitchen")
 	AddConversationOption(conversation, "Rondo was right, you fell for it big time.", "RondoWasRight")
 	StartConversation(conversation, NPC, Spawn, "But you just sai- Goodness, that wasn't a bribe! Hah hah. It was just uh, I thought that was my fine! I was offering to pay my fine! How much is my fine?")
@@ -86,7 +86,7 @@ end
 function CantWorkInKitchen(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	AddConversationOption(conversation, "Well if you can't work, I suppose you could always avoid the charges.", "HowDoIDoThat")
 	AddConversationOption(conversation, "Rondo was right, you fell for it big time.", "RondoWasRight")
 	StartConversation(conversation, NPC, Spawn, "Work? I can't work in a kitchen. The heat and the spices'll get to me. I'm allergic to herbs, I'll probably die! And me knees, sometimes me knees go out without warning! Terrible, terrible condition, you see. Me father had it too, runs in the blood I guess.")
@@ -95,7 +95,7 @@ end
 function HowDoIDoThat(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	AddConversationOption(conversation, "My pockets could use a little lining, if you know what I mean.", "ThatsWhatGotMeIntoTrouble")
 	StartConversation(conversation, NPC, Spawn, "How? H-how do I do that?")
 end
@@ -103,17 +103,17 @@ end
 function ThatsWhatGotMeIntoTrouble(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	AddConversationOption(conversation, "Rondo was right, you fell for it big time.", "RondoWasRight")
 	StartConversation(conversation, NPC, Spawn, "Of course! Certainly! Wait- WAIT! That's what got me into trouble last time. Oh, this is horrible. I wish someone would just take me away. I wish someone would just come and get me and take me away!")
 end
 
 function RondoWasRight(NPC, Spawn)
 	SetStepComplete(Spawn, HALFLING_MENTOR_QUEST_5, 1)
-	
+
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	AddConversationOption(conversation, "What's that?", "SomeoneGotIntoShed")
 	StartConversation(conversation, NPC, Spawn, "Rondo? That scoundrel! Gah, he sure knows how to get to me. You had me petrified there. I've been avoiding the guard. That is actually why I am out here. Can you believe they are blaming me for something I didn't even do?")
 end
@@ -130,7 +130,7 @@ end
 function IsSomethingWrong(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	AddConversationOption(conversation, "What are they blamming you for?", "SomeoneGotIntoShed")
 	StartConversation(conversation, NPC, Spawn, "Of course! These guards are after me. Blamming me for something I didn't even do, can you believe that?")
 end

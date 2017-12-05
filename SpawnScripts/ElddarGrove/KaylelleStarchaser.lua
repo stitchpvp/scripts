@@ -1,6 +1,6 @@
 --[[
 	Script Name	: SpawnScripts/ElddarGrove/KaylelleStarchaser.lua
-	Script Purpose	: Kaylelle Starchaser 
+	Script Purpose	: Kaylelle Starchaser
 	Script Author	: John Adams
 	Script Date	: 2008.09.28
 	Script Notes	: Auto-Generated Conversation from PacketParser Data

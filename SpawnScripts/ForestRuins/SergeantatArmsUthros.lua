@@ -1,6 +1,6 @@
 --[[
 	Script Name	: SpawnScripts/ForestRuins/SergeantatArmsUthros.lua
-	Script Purpose	: Sergeant at Arms Uthros 
+	Script Purpose	: Sergeant at Arms Uthros
 	Script Author	: John Adams
 	Script Date	: 2008.09.19
 	Script Notes	: Auto-Generated Conversation from PacketParser Data
@@ -29,16 +29,16 @@ function hailed(NPC, Spawn)
 		StartConversation(conversation, NPC, Spawn, "Watch your step, friend. Many adventurers get injured because they don't know the dangers that lurk here. These grounds are home to the ruins of the old mage academy.  It was destroyed during the wars that raged centuries ago.  And aside from the already dangerous inhabitants of these ruins,  elemental servants of mages lurk about. Scared yet? ... If you're intent on staying in Qeynos, I suppose we can use your help.")
 	end
 
-	if convo==1 then
-		AddConversationOption(conversation, "Perhaps I should play it safe and go back to the village.", "dlg_1_1")
-		StartConversation(conversation, NPC, Spawn, "Watch your step, friend. Many adventurers get injured because they don't know the dangers that lurk here. These grounds are home to the ruins of the old mage academy.  It was destroyed during the wars that raged centuries ago.  And aside from the already dangerous inhabitants of these ruins,  elemental servants of mages lurk about. Scared yet? ... If you're intent on staying in Qeynos, I suppose we can use your help.")
-	end
+	--if convo==1 then
+	--	AddConversationOption(conversation, "Perhaps I should play it safe and go back to the village.", "dlg_1_1")
+	--	StartConversation(conversation, NPC, Spawn, "Watch your step, friend. Many adventurers get injured because they don't know the dangers that lurk here. These grounds are home to the ruins of the old mage academy.  It was destroyed during the wars that raged centuries ago.  And aside from the already dangerous inhabitants of these ruins,  elemental servants of mages lurk about. Scared yet? ... If you're intent on staying in Qeynos, I suppose we can use your help.")
+	--end
 
-	if convo==14 then
-		AddConversationOption(conversation, "I have taken care of the vermin.", "dlg_14_1")
-		AddConversationOption(conversation, "Perhaps I should play it safe and go back to the village.")
-		StartConversation(conversation, NPC, Spawn, "Watch your step, friend. Many adventurers get injured because they don't know the dangers that lurk here. These grounds are home to the ruins of the old mage academy.  It was destroyed during the wars that raged centuries ago.  And aside from the already dangerous inhabitants of these ruins,  elemental servants of mages lurk about. Scared yet? ... If you're intent on staying in Qeynos, I suppose we can use your help.")
-	end
+	--if convo==14 then
+	--	AddConversationOption(conversation, "I have taken care of the vermin.", "dlg_14_1")
+	--	AddConversationOption(conversation, "Perhaps I should play it safe and go back to the village.")
+	--	StartConversation(conversation, NPC, Spawn, "Watch your step, friend. Many adventurers get injured because they don't know the dangers that lurk here. These grounds are home to the ruins of the old mage academy.  It was destroyed during the wars that raged centuries ago.  And aside from the already dangerous inhabitants of these ruins,  elemental servants of mages lurk about. Scared yet? ... If you're intent on staying in Qeynos, I suppose we can use your help.")
+	--end
 
 end
 

@@ -3,7 +3,7 @@
 	Script Purpose	:	the necromancer totem in frostfang
 	Script Author	:	theFoof
 	Script Date		:	2013.8.11
-	Script Notes	:	
+	Script Notes	:
 --]]
 
 local SometimesKnut = 84
@@ -15,7 +15,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function SpawnAccess(NPC, Spawn)

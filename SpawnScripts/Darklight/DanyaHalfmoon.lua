@@ -1,6 +1,6 @@
 --[[
 	Script Name	: SpawnScripts/Darklight/DanyaHalfmoon.lua
-	Script Purpose	: Danya Halfmoon 
+	Script Purpose	: Danya Halfmoon
 	Script Author	: John Adams Updated by Cynnar
 	Script Date	: 2009.01.31
 	Script Notes	: Auto-Generated Conversation from PacketParser Data
@@ -14,14 +14,14 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	if not HasCompletedQuest(Spawn, SealingTheRift) then
 		PlayFlavor(NPC, "voiceover/english/neriak/danya_halfmoon/darklight_wood/quest/hates_envy/qst_danya_toolow_d63cbe27.mp3", "", "", 1007828063, 3522254640, Spawn)
 		StartConversation(conversation, NPC, Spawn, "I'm a little tense, perhaps you should leave me be.")
@@ -70,7 +70,7 @@ end
 
 function QuestChat_1_0(NPC, Spawn)
 	SetStepComplete(Spawn, SableveinRubble, 2)
-	
+
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 

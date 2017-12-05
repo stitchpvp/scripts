@@ -3,8 +3,8 @@
 	Script Purpose	:	for the quest "Nap Time for Evigis"
 	Script Author	:	theFoof
 	Script Date		:	2013.6.13
-	Script Notes	:	
-	
+	Script Notes	:
+
 	Zone			:	Frostfang Sea
 	Quest Giver		:	Torli Blackbow
 	Preceded by		:	Seeking Elemental Education

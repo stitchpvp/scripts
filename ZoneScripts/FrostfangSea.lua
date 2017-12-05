@@ -3,7 +3,7 @@
 	Script Purpose	: Frostfang Sea
 	Script Author	: theFoof
 	Script Date	: 2013.5.8
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 local BoatloadWork = 4
@@ -38,7 +38,7 @@ function init_zone_script(Zone)
 end
 
 function BarricadeMessage(Zone, Spawn)
-    if GetQuestStep(Spawn, BoadloadWork) == 3 then
+    if GetQuestStep(Spawn, BoatloadWork) == 3 then
         SendPopUpMessage(Spawn, "This is the break in the barricade Yasha sent you to fix.", 255, 255, 255)
     end
 end

@@ -1,9 +1,9 @@
 --[[
 	Script Name	: SpawnScripts/Caves/KahlaUlno.lua
-	Script Purpose	: Kahla Ulno 
+	Script Purpose	: Kahla Ulno
 	Script Author	: Scatman
 	Script Date	: 2009.09.04
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 local QUEST_1 = 228
@@ -13,7 +13,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
@@ -93,7 +93,7 @@ end
 
 function dlg_13_1(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_1, 4)
-	
+
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 

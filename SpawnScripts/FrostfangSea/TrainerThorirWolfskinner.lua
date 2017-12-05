@@ -3,7 +3,7 @@
 	Script Purpose	: Trainer Thorir Wolfskinner <Know Your Enemy>
 	Script Author	: theFoof
 	Script Date	: 2013.05.17
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 function spawn(NPC)
@@ -11,7 +11,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)
@@ -23,7 +23,7 @@ end
 function hailed(NPC, Spawn)
     FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_3_1060.mp3", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "How do I judge my opponent?", "dlg_1_2")
 	AddConversationOption(conversation, "I'll return later.")
@@ -31,9 +31,6 @@ function hailed(NPC, Spawn)
 end
 
 function dlg_1_2(NPC, Spawn)
-    FaceTarget(NPC, Spawn)
-	local conversation = CreateConversation()
-	
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 
@@ -104,7 +101,7 @@ end
 function dlg_1_9(NPC, Spawn)
     FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	AddConversationOption(conversation, "What are the colors?", "dlg_1_10")
     StartConversation(conversation, NPC, Spawn, "The color of your opponent's name indicates how challenging the encounter is. It is very useful as a quick indicator of whether or not you should be fighting a target. The more danger it's color indicates, the greater the threat it represents.")
 end

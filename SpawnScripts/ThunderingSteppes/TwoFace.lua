@@ -15,7 +15,7 @@ end
 
 --always include this when npc dies.
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)

@@ -1,6 +1,6 @@
 --[[
 	Script Name	: SpawnScripts/FrostfangSea/YashaRedblade.lua
-	Script Purpose	: Yasha Redblade 
+	Script Purpose	: Yasha Redblade
 	Script Author	: theFoof
 	Script Date	: 2013.03.16
 	Script Notes	:
@@ -28,7 +28,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)
@@ -103,7 +103,7 @@ function hailed(NPC, Spawn)
     end
 end
 
-function CompleteHalasianWelcome1(NPC, Spawn) 
+function CompleteHalasianWelcome1(NPC, Spawn)
 	SetStepComplete(Spawn, HalasianWelcome, 1)
 	Quest2Chat_0_1(NPC, Spawn)
 end
@@ -313,7 +313,7 @@ end
 function Quest6Chat_1(NPC, Spawn)
     FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
     PlayFlavor(NPC, "yasha_redblade/halas/pilgrims_landing/redblade_032.mp3", "", "", 4231067263, 531833046, Spawn)
 	AddConversationOption(conversation, "How do I get there?", "Quest6Chat_2")
 	AddConversationOption(conversation, "Thank you, again.", "OfferRidegwenevyn")
@@ -367,7 +367,7 @@ function OfferRidegwenevynTwo(NPC, Spawn)
 	if HasCompletedQuest(Spawn, FlameOn) then
 	    OfferQuest(NPC, Spawn, RideGwenevyn)
 	end
-	
+
 	PlayFlavor(NPC, "yasha_redblade/halas/pilgrims_landing/redblade_034.mp3", "", "", 4096485687, 3591012782, Spawn)
 	AddConversationOption(conversation, "Oh, okay.")
 	StartConversation(conversation, NPC, Spawn, "You can, sure.  But I wouldn't suggest it.  The water is freezing.")

@@ -1,9 +1,9 @@
 --[[
 	Script Name	: SpawnScripts/FrostfangSea/BlorpisaBogchild.lua
-	Script Purpose	: Blorpisa Bogchild 
+	Script Purpose	: Blorpisa Bogchild
 	Script Author	: theFoof
 	Script Date	: 2013.05.20
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 local ArcaneElements = 19
@@ -30,7 +30,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function SpawnAccess(NPC, Spawn)
@@ -167,7 +167,7 @@ end
 function Quest1Chat_7(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	PlayFlavor(NPC, "blorpisa_bogchild/halas/gwenevyns_cove/blorpisa_bogchild/blorpisa_bogchild_016.mp3", "", "", 1464127042, 4108357478, Spawn)
 	AddConversationOption(conversation, "I sure could.", "OfferArcaneElements")
 	AddConversationOption(conversation, "No, unfortunately.")
@@ -234,7 +234,7 @@ end
 function Quest2Chat_5(NPC, Spawn)
     FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	AddConversationOption(conversation, "I will return with the pelts.")
     StartConversation(conversation, NPC, Spawn, "The cubs roam northwest of Gwenevyn's Cove.")
 end
@@ -418,9 +418,9 @@ function Quest5Chat_5(NPC, Spawn)
 end
 
 function Quest5Chat_6(NPC, Spawn)
-    FaceTargget(NPC, Spawn)
+    FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	AddConversationOption(conversation, "I shall return with the lilies as soon as I am able")
 	StartConversation(conversation, NPC, Spawn, "You can find the ice lilies on the Icemane Plains west of here. I have also refreshed the Frost-born Ward upon you as it seemed to be very weak.")
 end
@@ -484,7 +484,7 @@ end
 function Quest6Chat_4(NPC, Spawn)
     FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	AddConversationOption(conversation, "I will return to you once I have properly tested your spell.")
 	StartConversation(conversation, NPC, Spawn, "Pride Overlook is on the Icemane Plains. It is west of Gwenevyn's Cove. I have also refeshed the Frost-born Ward upon you as it seemed to be very weak.")
 end
@@ -492,7 +492,7 @@ end
 function Quest6Chat_5(NPC, Spawn)
     FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	PlayFlavor(NPC, "blorpisa_bogchild/halas/gwenevyns_cove/blorpisa_bogchild/blorpisa_bogchild_058.mp3", "", "", 3927456133, 2378795664, Spawn)
 	AddConversationOption(conversation, "Well, it didn't.", "Quest6Chat_6")
 	StartConversation(conversation, NPC, Spawn, "I am terribly sorry! I really thought it would work this time!")

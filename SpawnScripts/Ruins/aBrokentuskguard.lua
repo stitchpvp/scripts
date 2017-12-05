@@ -3,7 +3,7 @@
 	Script Purpose	: a Brokentusk guard
 	Script Author	: Scatman
 	Script Date	: 2009.08.21
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 dofile("SpawnScripts/Generic/BrokentuskVoiceOvers.lua")
@@ -12,7 +12,7 @@ local spoke = false
 function spawn(NPC)
 	spoke = false
 	local sli = GetSpawnLocationID(NPC)
-	
+
 	-- Wanderer from where the 'an Overseer' spawns.
 	if sli == 159745 or sli == 159747 or sli == 159748 then
 		AddTimer(NPC, math.random(0, 10000), "StartPath1")
@@ -20,7 +20,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)

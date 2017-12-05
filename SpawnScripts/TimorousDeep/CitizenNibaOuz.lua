@@ -1,6 +1,6 @@
 --[[
 	Script Name	: SpawnScripts/TimorousDeep/CitizenNibaOuz.lua
-	Script Purpose	: Citizen Niba'Ouz 
+	Script Purpose	: Citizen Niba'Ouz
 	Script Author	: John Adams
 	Script Date	: 2009.02.06
 	Script Notes	: Auto-Generated Conversation from PacketParser Data
@@ -16,17 +16,17 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	if HasQuest(Spawn, QUEST_FROM_TAROCHE) and GetQuestStep(Spawn, QUEST_FROM_TAROCHE) == 1 then
 		AddConversationOption(conversation, "I have some special bait from Taroche Dry'Zok.", "dlg_7_1")
 	end
-	
+
 	if HasCompletedQuest(Spawn, QUEST_1) then
 		if HasCompletedQuest(Spawn, QUEST_2) then
 			PlayFlavor(NPC, "voiceover/english/rok_questvo/citizen_niba_ouz/_exp04/exp04_rgn_timorous_deep/chrykori_tie/qst_nibaouz_done_one_6b94b330.mp3", "I'll find the Gorger some day.", "", 3567000296, 2773766764, Spawn)
@@ -52,18 +52,18 @@ end
 
 function dlg_7_1(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_FROM_TAROCHE, 1)
-	
+
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/rok_questvo/citizen_niba_ouz/_exp04/exp04_rgn_timorous_deep/chrykori_tie/nibaouz/nibaouz001.mp3", "", "", 2125587846, 3993478301, Spawn)
-	
+
 	if HasCompletedQuest(Spawn, QUEST_1) then
 		AddConversationOption(conversation, "You're welcome.")
 	else
 		AddConversationOption(conversation, "So, what are you doing?", "dlg_6_1")
 	end
-	
+
 	StartConversation(conversation, NPC, Spawn, "Ah, great! Thank you. That Dry'Zok... always out to make something new.")
 end
 
@@ -94,13 +94,13 @@ end
 
 function DidYouCatchThem(NPC, Spawn, conversation)
 	PlayFlavor(NPC, "voiceover/english/rok_questvo/citizen_niba_ouz/_exp04/exp04_rgn_timorous_deep/chrykori_tie/nibaouz/nibaouz004.mp3", "", "", 2669727388, 3701951147, Spawn)
-	
+
 	if (HasCompletedQuest(Spawn, QUEST_1) and not HasCompletedQuest(Spawn, QUEST_2)) or (HasQuest(Spawn, QUEST_1) and GetQuestStep(Spawn, QUEST_1) == 2) then
 		AddConversationOption(conversation, "Yes, I did.", "dlg_7_2")
 	else
 		AddConversationOption(conversation, "Not yet.")
 	end
-	
+
 	StartConversation(conversation, NPC, Spawn, "Did you catch them?")
 end
 
@@ -108,7 +108,7 @@ function dlg_7_2(NPC, Spawn)
 	if HasQuest(Spawn, QUEST_1) then
 		SetStepComplete(Spawn, QUEST_1, 2)
 	end
-	
+
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 
@@ -128,13 +128,13 @@ end
 
 function DidYouCatchOneyet(NPC, Spawn, conversation)
 	PlayFlavor(NPC, "voiceover/english/rok_questvo/citizen_niba_ouz/_exp04/exp04_rgn_timorous_deep/chrykori_tie/nibaouz/nibaouz007.mp3", "", "", 3134955716, 150731510, Spawn)
-	
+
 	if HasQuest(Spawn, QUEST_2) and GetQuestStep(Spawn, QUEST_2) == 2 then
 		AddConversationOption(conversation, "Yes.", "dlg_10_1")
 	else
 		AddConversationOption(conversation, "Not yet.")
 	end
-	
+
 	StartConversation(conversation, NPC, Spawn, "Did you catch one yet?")
 end
 
@@ -142,7 +142,7 @@ function dlg_10_1(NPC, Spawn)
 	if HasQuest(Spawn, QUEST_2) then
 		SetStepComplete(Spawn, QUEST_2, 2)
 	end
-	
+
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 

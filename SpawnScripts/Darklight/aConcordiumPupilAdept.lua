@@ -1,6 +1,6 @@
 --[[
 	Script Name	: SpawnScripts/Darklight/aConcordiumPupilAdept.lua
-	Script Purpose	: a Concordium Pupil Adept 
+	Script Purpose	: a Concordium Pupil Adept
 	Script Author	: John Adams
 	Script Date	: 2009.01.31
 	Script Notes	: Auto-Generated Conversation from PacketParser Data
@@ -11,7 +11,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)
@@ -37,19 +37,19 @@ function hailed(NPC, Spawn)
 	AddConversationOption(conversation, "You've reported this to the Concordium?", "dlg_0_1")
 	AddConversationOption(conversation, "This is no time to stand back and gawk!")
 	StartConversation(conversation, NPC, Spawn, "First these Void storms were tainting Norrath.  Now they are spitting out forces of attacking beasts!")
-	if convo==1 then
-		PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_3_1005.mp3", "", "", 0, 0, Spawn)
-		AddConversationOption(conversation, "You've reported this to the Concordium?", "dlg_1_1")
-		AddConversationOption(conversation, "This is no time to stand back and gawk!")
-		StartConversation(conversation, NPC, Spawn, "First these Void storms were tainting Norrath.  Now they are spitting out forces of attacking beasts!")
-	end
+	--if convo==1 then
+	--	PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_3_1005.mp3", "", "", 0, 0, Spawn)
+	--	AddConversationOption(conversation, "You've reported this to the Concordium?", "dlg_1_1")
+	--	AddConversationOption(conversation, "This is no time to stand back and gawk!")
+	--	StartConversation(conversation, NPC, Spawn, "First these Void storms were tainting Norrath.  Now they are spitting out forces of attacking beasts!")
+	--end
 
-	if convo==2 then
-		PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_2_1005.mp3", "", "", 0, 0, Spawn)
-		AddConversationOption(conversation, "You've reported this to the Concordium?", "dlg_2_1")
-		AddConversationOption(conversation, "This is no time to stand back and gawk!")
-		StartConversation(conversation, NPC, Spawn, "First these Void storms were tainting Norrath.  Now they are spitting out forces of attacking beasts!")
-	end
+	--if convo==2 then
+	--	PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_2_1005.mp3", "", "", 0, 0, Spawn)
+	--	AddConversationOption(conversation, "You've reported this to the Concordium?", "dlg_2_1")
+	--	AddConversationOption(conversation, "This is no time to stand back and gawk!")
+	--	StartConversation(conversation, NPC, Spawn, "First these Void storms were tainting Norrath.  Now they are spitting out forces of attacking beasts!")
+	--end
 
 end
 

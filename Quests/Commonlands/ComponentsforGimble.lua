@@ -3,38 +3,38 @@
 	Script Purpose	:	Handles the quest, "Components for Gimble"
 	Script Author	:	QuestParser (Replace this)
 	Script Date		:	7/8/2017
-	Script Notes	:	
+	Script Notes	:
 
 	Zone			:	Commonlands
-	Quest Giver		:	
+	Quest Giver		:
 	Preceded by		:	None
 	Followed by		:	None
 --]]
 
 
 function Init(Quest)
-	AddQuestStepKill(Quest, 1, "I need to collect Strongbox Deceiver meat", 5, 100, "I'm searching for components that Gimble Cognoggin needs me to retrieve in the Wailing Caves. ", 320, --[[ ID's --]])
+	AddQuestStepKill(Quest, 1, "I need to collect Strongbox Deceiver meat", 5, 100, "I'm searching for components that Gimble Cognoggin needs me to retrieve in the Wailing Caves. ", 320, nil)
 	AddQuestStepCompleteAction(Quest, 1, "Step1Complete")
 end
 
 function Step1Complete(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 1, "I've found some Strongbox Deceiver meat.")
 
-	AddQuestStepKill(Quest, 2, "I need to collect goo from a Primordial Menace", 5, 100, "I'm searching for components that Gimble Cognoggin needs me to retrieve in the Wailing Caves. ", 8, --[[ ID's --]])
+	AddQuestStepKill(Quest, 2, "I need to collect goo from a Primordial Menace", 5, 100, "I'm searching for components that Gimble Cognoggin needs me to retrieve in the Wailing Caves. ", 8, nil)
 	AddQuestStepCompleteAction(Quest, 2, "Step2Complete")
 end
 
 function Step2Complete(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 2, "I've collected the Primordial Menace goo.")
 
-	AddQuestStepKill(Quest, 3, "I need to collect essence from a Shin`Ree Spiritist", 5, 100, "I'm searching for components that Gimble Cognoggin needs me to retrieve in the Wailing Caves. ", 182, --[[ ID's --]])
+	AddQuestStepKill(Quest, 3, "I need to collect essence from a Shin`Ree Spiritist", 5, 100, "I'm searching for components that Gimble Cognoggin needs me to retrieve in the Wailing Caves. ", 182, nil)
 	AddQuestStepCompleteAction(Quest, 3, "Step3Complete")
 end
 
 function Step3Complete(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 3, "I've collected the Spiritist's essence.")
 
-	AddQuestStepKill(Quest, 4, "I need to collect an egg sac from a Lurid Ripper", 5, 100, "I'm searching for components that Gimble Cognoggin needs me to retrieve in the Wailing Caves. ", 144, --[[ ID's --]])
+	AddQuestStepKill(Quest, 4, "I need to collect an egg sac from a Lurid Ripper", 5, 100, "I'm searching for components that Gimble Cognoggin needs me to retrieve in the Wailing Caves. ", 144, nil)
 	AddQuestStepCompleteAction(Quest, 4, "Step4Complete")
 end
 
@@ -42,7 +42,7 @@ function Step4Complete(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 4, "I've collected the Lurid Ripper's egg sack.")
 	UpdateQuestTaskGroupDescription(Quest, 1, "I've collected the components for Gimble Cognoggin's potion.")
 
-	AddQuestStepChat(Quest, 5, "I still need to return to Gimble Cognoggin to give him the components", 1, "I still need to return to Gimble Cognoggin to give him the components.", 11, --[[ ID's --]])
+	AddQuestStepChat(Quest, 5, "I still need to return to Gimble Cognoggin to give him the components", 1, "I still need to return to Gimble Cognoggin to give him the components.", 11, nil)
 	AddQuestStepCompleteAction(Quest, 5, "QuestComplete")
 end
 

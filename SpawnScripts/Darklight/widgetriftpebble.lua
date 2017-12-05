@@ -1,6 +1,6 @@
 --[[
 	Script Name	: SpawnScripts/Darklight/widgetriftpebble.lua
-	Script Purpose	: Sealing the Rift 
+	Script Purpose	: Sealing the Rift
 	Script Author	: Cynnar
 	Script Date	: 2015.07.01
 	Script Notes	: Auto-Generated Conversation from PacketParser Data
@@ -18,7 +18,7 @@ function casted_on(NPC, Spawn, SpellName)
 		if SpellName == 'Kick Rubble' then
 			SetStepComplete(Spawn, SealingTheRift, 1)
 			RemoveSpawnAccess(NPC, Spawn)
-		
+
 			private_spawn_boulder = GetSpawn(Spawn, 340761)
 			private_spawn_particle1 = GetSpawn(Spawn, 340747)
 			private_spawn_particle2 = GetSpawn(Spawn, 341218)
@@ -30,7 +30,7 @@ function casted_on(NPC, Spawn, SpellName)
 end
 
 function SpawnAccess(NPC, Spawn)
-	
+
 	if not HasQuest(Spawn, SealingTheRift) and not HasCompletedQuest(Spawn, SealingTheRift) then
 		AddSpawnAccess(NPC, Spawn)
 	elseif HasQuest(Spawn, SealingTheRift) and GetQuestStep(Spawn, SealingTheRift ) < 2 then

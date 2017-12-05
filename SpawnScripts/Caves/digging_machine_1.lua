@@ -3,7 +3,7 @@
 	Script Purpose	: digging_machine_2
 	Script Author	: Scatman
 	Script Date	: 2009.10.18
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 local QUEST2_FROM_EMMA = 227
@@ -13,7 +13,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
@@ -29,23 +29,23 @@ end
 function DespawnMachine(NPC)
 	local digging_machine1 = GetSpawn(NPC, 1970108)
 	Despawn(digging_machine1)
-	
+
 	local control_device1 = GetSpawn(NPC, 1970114)
 	Despawn(control_device1)
-	
+
 	local crate1 = GetSpawn(NPC, 1970116)
 	Despawn(crate1)
-	
+
 	local instructions1 = GetSpawn(NPC, 1970113)
 	Despawn(instructions1)
-	
+
 	local shovel1 = GetSpawn(NPC, 1970115)
 	while shovel1 ~= nil do
 		Despawn(shovel1)
 		shovel1 = GetSpawn(NPC, 1970115)
 	end
-	
+
 	-- spawn smashed machine
-	
+
 	Despawn(NPC)
 end

@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "War"
 	Script Author	: Scatman
 	Script Date	: 2009.02.27
-	
+
 	Zone       : Timorous Deep
 	Quest Giver: Arozik Sky'Ki
 	Preceded by: Decoder Glyph (decoder_glyph.lua)

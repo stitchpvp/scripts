@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "Prowler Annoyance"
 	Script Author	: Scatman
 	Script Date	: 2009.01.31
-	
+
 	Zone       : Darklight Wood
 	Quest Giver: Verex N'Za
 	Preceded by: Elemental Encroachment (elemental_encroachment.lua)
@@ -12,7 +12,7 @@
 
 
 function Init(Quest)
-	
+
 
 
 	AddQuestStepKill(Quest, 1, "I need to kill six dusk prowlers.", 6, 100, ".", 611, 340048, 340049)
@@ -26,7 +26,7 @@ function Accepted(Quest, QuestGiver, Player)
 		if GetDistance(Player, QuestGiver) < 30 then
 			FaceTarget(QuestGiver, Player)
 			conversation = CreateConversation()
-			
+
 			PlayFlavor(QuestGiver, "voiceover/english/neriak/verex_n_za/darklight_wood/hates_envy/verex/verex006.mp3", "", "", 1353181644, 668433489, Player)
 			AddConversationOption(conversation, "All right.")
 			StartConversation(conversation, QuestGiver, Player, "Good to hear. Return to me once you've finished.")
@@ -40,7 +40,7 @@ end
 function step1_complete_killedProwlers(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 1, "I have killed the dusk prowlers.")
 	UpdateQuestTaskGroupDescription(Quest, 1, "I have killed the dusk prowlers.")
-	
+
 	AddQuestStepChat(Quest, 2, "I need to return to Verex N'Za.", 1, ".", 0, 340043)
 	AddQuestStepCompleteAction(Quest, 2, "quest_complete")
 end

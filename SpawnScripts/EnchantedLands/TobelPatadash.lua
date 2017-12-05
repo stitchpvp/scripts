@@ -11,7 +11,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)
@@ -43,7 +43,7 @@ function dlg_0_2(NPC, Spawn)
 	local conversation = CreateConversation()
 	-- there is a pop up box saying "Would you like to accept Bristlebane as your deity?" with yes and no
 	AddConversationOption(conversation, "OK then. Bye.")
-	-- This is the start conversation that comes next in the dialog "Excellent then, let us begin the initiation!" 
+	-- This is the start conversation that comes next in the dialog "Excellent then, let us begin the initiation!"
 	StartConversation(conversation, NPC, Spawn, "Great! Come back another time to accept Bristlebane as you deity.")
 end
 

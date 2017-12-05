@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "Curious Ore"
 	Script Author	: Scatman
 	Script Date	: 2009.02.06
-	
+
 	Zone       : Timorous Deep
 	Quest Giver: Tykor Gi'Lok
 	Preceded by: Poaching the Poachers (poaching_the_poachers.lua)
@@ -36,7 +36,7 @@ end
 
 function step1_complete_gotOre(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 1, "I have the ore samples.")
-	
+
 	AddQuestStepChat(Quest, 2, "I need to bring these ore samples back to Tykor Gi'Lok.", 1, ".", 1086, 2630018)
 	AddQuestStepCompleteAction(Quest, 2, "quest_complete")
 end

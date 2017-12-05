@@ -1,6 +1,6 @@
 --[[
 	Script Name	: SpawnScripts/Oakmyst/BardrianVorsuth.lua
-	Script Purpose	: Bardrian Vorsuth 
+	Script Purpose	: Bardrian Vorsuth
 	Script Author	: scatman
 	Script Date	: 2009.05.04
 	Script Notes	: Auto-Generated Conversation from PacketParser Data
@@ -12,13 +12,13 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	if HasQuest(Spawn, QUEST_FROM_CHARLIN) and GetQuestStep(Spawn, QUEST_FROM_CHARLIN) == 1 then
 		WhatDoYaNeed(NPC, Spawn, conversation)
 	else
@@ -56,7 +56,7 @@ end
 
 function dlg_5_3(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_FROM_CHARLIN, 1)
-	
+
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 

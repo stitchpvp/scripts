@@ -3,7 +3,7 @@
 	Script Purpose	:	dirge trainer in Halas
 	Script Author	:	theFoof
 	Script Date		:	2013.9.24
-	Script Notes	:	
+	Script Notes	:
 --]]
 
 local DIRGE = 37
@@ -12,7 +12,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)

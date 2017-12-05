@@ -3,7 +3,7 @@
 	Script Purpose	:	the quest "Blood Spilled for the Blood Maiden"
 	Script Author	:	theFoof
 	Script Date		:	2013.6.14
-	Script Notes	:	
+	Script Notes	:
 
 	Zone			:	Frostfang Sea
 	Quest Giver		:	Hillfred Kinloch

@@ -1,6 +1,6 @@
 --[[
 	Script Name	: SpawnScripts/Darklight/DirzdiaTZauvirr.lua
-	Script Purpose	: Dirzdia T'Zauvirr 
+	Script Purpose	: Dirzdia T'Zauvirr
 	Script Author	: John Adams
 	Script Date	: 2009.01.31
 	Script Notes	: Auto-Generated Conversation from PacketParser Data
@@ -20,18 +20,18 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	if HasQuest(Spawn, QUEST_DELIVERY_FROM_FILEYL) and GetQuestStep(Spawn, QUEST_DELIVERY_FROM_FILEYL) == 1 then
 		AddConversationOption(conversation, "Hi. I've a delivery from Fileyl for you.", "dlg_24_1")
 	end
-	
+
 	if HasCompletedQuest(Spawn, QUEST_1) then
 		if HasCompletedQuest(Spawn, QUEST_2) then
 			if HasCompletedQuest(Spawn, QUEST_3) then
@@ -63,18 +63,18 @@ end
 
 function dlg_24_1(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_DELIVERY_FROM_FILEYL, 1)
-	
+
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/neriak/dirzdia_t_zauvirr/darklight_wood/tvatar_post/dirzdia/dirzdia_delivery001.mp3", "", "", 1749958115, 2883042757, Spawn)
-	
+
 	if not HasCompletedQuest(Spawn, QUEST_1) and not HasQuest(Spawn, QUEST_1) then
 		AddConversationOption(conversation, "All right. Goodbye.", "dlg_24_2")
 	else
 		AddConversationOption(conversation, "All right. Goodbye.")
 	end
-	
+
 	StartConversation(conversation, NPC, Spawn, "Perfect! Thanks! Just put it on the ground there.")
 end
 
@@ -149,13 +149,13 @@ end
 
 function HaveYouGotTheRazormaw(NPC, Spawn, conversation)
 	PlayFlavor(NPC, "voiceover/english/neriak/dirzdia_t_zauvirr/darklight_wood/tvatar_post/dirzdia/dirzdia007.mp3", "", "", 1448690893, 2588880650, Spawn)
-	
+
 	if (HasCompletedQuest(Spawn, QUEST_1) and not HasCompletedQuest(Spawn, QUEST_2)) or (HasQuest(Spawn, QUEST_1) and GetQuestStep(Spawn, QUEST_1) == 2) then
 		AddConversationOption(conversation, "I do, here you go.", "dlg_0_1")
 	else
 		AddConversationOption(conversation, "Not yet.")
 	end
-	
+
 	StartConversation(conversation, NPC, Spawn, "Have you got the razormaw?")
 end
 
@@ -163,7 +163,7 @@ function dlg_0_1(NPC, Spawn)
 	if HasQuest(Spawn, QUEST_1) then
 		SetStepComplete(Spawn, QUEST_1, 2)
 	end
-	
+
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 
@@ -213,13 +213,13 @@ end
 
 function DoYouHaveThem(NPC, Spawn, conversation)
 	PlayFlavor(NPC, "voiceover/english/neriak/dirzdia_t_zauvirr/darklight_wood/tvatar_post/dirzdia/dirzdia013.mp3", "", "", 4057665445, 4206402151, Spawn)
-	
+
 	if (HasCompletedQuest(Spawn, QUEST_2) and not HasCompletedQuest(Spawn, QUEST_3)) or (HasQuest(Spawn, QUEST_2) and GetQuestStep(Spawn, QUEST_2) == 2) then
 		AddConversationOption(conversation, "I do. Here you are.", "dlg_10_1")
 	else
 		AddConversationOption(conversation, "Not yet.")
 	end
-	
+
 	StartConversation(conversation, NPC, Spawn, "Do you have them?")
 end
 
@@ -227,7 +227,7 @@ function dlg_10_1(NPC, Spawn)
 	if HasQuest(Spawn, QUEST_2) then
 		SetStepComplete(Spawn, QUEST_2, 2)
 	end
-	
+
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 
@@ -261,7 +261,7 @@ function DidYouGetThem(NPC, Spawn, conversation)
 	else
 		AddConversationOption(conversation, "Not yet.")
 	end
-	
+
 	StartConversation(conversation, NPC, Spawn, "Did you get them?")
 end
 
@@ -269,7 +269,7 @@ function YoureGreat(NPC, Spawn)
 	if HasQuest(Spawn, QUEST_3) then
 		SetStepComplete(Spawn, QUEST_3, 2)
 	end
-	
+
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 

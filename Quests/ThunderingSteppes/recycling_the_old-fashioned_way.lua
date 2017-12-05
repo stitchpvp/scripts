@@ -2,12 +2,12 @@
     Script Name    : Quests/ThunderingSteppes/recycling_the_old-fashioned_way.lua
     Script Author  : Zcoretri
     Script Date    : 2014.07.14 07:07:41
-    Script Purpose : 
+    Script Purpose :
 
         Zone       : ThunderingSteppes
-        Quest Giver: 
+        Quest Giver:
         Preceded by: None
-        Followed by: 
+        Followed by:
 --]]
 
 function Init(Quest)

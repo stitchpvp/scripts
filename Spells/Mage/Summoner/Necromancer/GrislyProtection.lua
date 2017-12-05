@@ -1,6 +1,6 @@
 
 function cast(Caster, Target, agg, procDmg, procHeal, atkSpeed, maxHP, hateGain, spellMit, procHateMin, procHateMax)
-  AddSkillBonus(Target, GetSkillByName("Aggression"), agg)
+  AddSkillBonus(Target, GetSkillIDByName("Aggression"), agg)
   AddSpellBonus(Target, 617, atkSpeed)
   --AddSpellBonus(Target, 607, maxHP)
   AddSpellBonus(Target, 624, hateGain)

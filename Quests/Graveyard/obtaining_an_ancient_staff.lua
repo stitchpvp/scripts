@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "Obtaining an Ancient Staff"
 	Script Author	: Scatman
 	Script Date	: 2009.07.12
-	
+
 	Zone       : The Graveyard
 	Quest Giver: Custodian Zaddar Sullissia
 	Preceded by: Testing the Ward (testing_the_ward.lua)
@@ -35,7 +35,7 @@ end
 function Step1_Complete_SpokeToVaracus(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 1, "I've obtained the Staff of Ethernere.")
 	UpdateQuestTaskGroupDescription(Quest, 1, "I've managed to talk that fool Varacus out of his staff, let's hope it was worth it.")
-	
+
 	AddQuestStepChat(Quest, 2, "I must take the Staff of Ethernere to Zaddar.", 1, "I must take this staff to Zaddar with haste, there is little time and much work to be done.", 0, 1250014)
 	AddQuestStepCompleteAction(Quest, 2, "QuestComplete")
 end
@@ -45,7 +45,7 @@ function QuestComplete(Quest, QuestGiver, Player)
 	while HasItem(Player, 12438) do
 		RemoveItem(Player, 12438)
 	end
-	
+
 	UpdateQuestStepDescription(Quest, 2, "I've given the staff to Zaddar.")
 	UpdateQuestTaskGroupDescription(Quest, 2, "I must take the Staff of Ethernere to Zaddar in the graveyard so he can begin the arcane spell to reseal the ward.")
 	GiveQuestReward(Quest, Player)

@@ -3,7 +3,7 @@
 	Script Purpose	:   for the frostbiter eggs in frostfang (unnamed spawn)
 	Script Author	:	theFoof
 	Script Date		:	2013.6.1
-	Script Notes	:	
+	Script Notes	:
 --]]
 
 local DomesticationSurvivalism = 43
@@ -15,7 +15,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function casted_on(NPC, Spawn, SpellName)

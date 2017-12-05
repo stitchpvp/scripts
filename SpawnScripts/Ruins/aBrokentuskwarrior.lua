@@ -3,7 +3,7 @@
 	Script Purpose	: a Brokentusk warrior
 	Script Author	: Scatman
 	Script Date	: 2009.08.21
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 dofile("SpawnScripts/Generic/BrokentuskVoiceOvers.lua")
@@ -12,7 +12,7 @@ local spoke = false
 function spawn(NPC)
 	spoke = false
 	local sli = GetSpawnLocationID(NPC)
-	
+
 	if sli == 133303 then
 		StartPath1(NPC)
 	elseif sli == 159749 or sli == 159750 or sli == 159751 then
@@ -21,13 +21,13 @@ function spawn(NPC)
 	elseif sli == 133255 or sli == 133304 or sli == 133256 or sli == 133305 or sli == 133257 or sli == 133253 then
 		-- Orcs that cheer on the harried vagrant squatter.
 		SetPlayerProximityFunction(NPC, 10, "InRange")
-		AddVisualStateLoop(NPC, 1000, math.random(1000, 5000), 11150, 43918) -- cheer
-		AddVisualStateLoop(NPC, 1000, math.random(1000, 5000), 11152, 43920) -- chuckle
+		-- AddVisualStateLoop(NPC, 1000, math.random(1000, 5000), 11150, 43918) -- cheer
+		-- AddVisualStateLoop(NPC, 1000, math.random(1000, 5000), 11152, 43920) -- chuckle
 	end
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)

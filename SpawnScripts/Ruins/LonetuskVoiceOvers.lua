@@ -3,7 +3,7 @@
 	Script Purpose	: Handles voice overs for the Lonetusk.
 	Script Author	: Scatman
 	Script Date	: 2009.08.20
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 function generic_aggro(NPC, Spawn)

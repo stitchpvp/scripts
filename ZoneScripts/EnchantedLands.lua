@@ -3,7 +3,7 @@
 	Script Purpose	:	Handle various things around Enchanted Lands
 	Script Author	:	Cynnar
 	Script Date		:	1/25/2016
-	Script Notes	:	
+	Script Notes	:
 --]]
 
 function init_zone_script(zone)

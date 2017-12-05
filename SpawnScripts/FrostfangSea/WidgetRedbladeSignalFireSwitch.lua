@@ -3,7 +3,7 @@
    Script Purpose  : for the spawn "redblade_x4_signal_fire_switch"
    Script Author   : theFoof
    Script Date     : 2013.5.6
-   Script Notes    : 
+   Script Notes    :
 --]]
 
 local FlameOn = 5
@@ -14,7 +14,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-    spawn(NPC)
+SpawnMob(NPC)
 end
 
 function casted_on(Target, Caster, SpellName)

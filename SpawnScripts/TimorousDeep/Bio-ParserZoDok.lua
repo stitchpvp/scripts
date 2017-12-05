@@ -1,6 +1,6 @@
 --[[
 	Script Name	: SpawnScripts/TimorousDeep/Bio-ParserZoDok.lua
-	Script Purpose	: Bio-Parser Zo'Dok 
+	Script Purpose	: Bio-Parser Zo'Dok
 	Script Author	: John Adams
 	Script Date	: 2009.02.27
 	Script Notes	: Auto-Generated Conversation from PacketParser Data
@@ -15,13 +15,13 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	if HasCompletedQuest(Spawn, QUEST_1) then
 		if HasCompletedQuest(Spawn, QUEST_2) then
 			Say(NPC, "You're done.", Spawn)
@@ -63,13 +63,13 @@ end
 
 function DidYouCollectThem(NPC, Spawn, conversation)
 	PlayFlavor(NPC, "voiceover/english/rok_questvo/bio-parser_zo_dok/_exp04/exp04_rgn_timorous_deep/chrykori_tie/zodok/zodok003.mp3", "", "", 280859713, 2049233430, Spawn)
-	
+
 	if (HasCompletedQuest(Spawn, QUEST_1) and not HasCompletedQuest(Spawn, QUEST_2)) or (HasQuest(Spawn, QUEST_1) and GetQuestStep(Spawn, QUEST_1) == 2) then
 		AddConversationOption(conversation, "Yes, I did.", "dlg_38_1")
 	else
 		AddConversationOption(conversation, "Not yet.")
 	end
-	
+
 	StartConversation(conversation, NPC, Spawn, "Did you collect them?")
 end
 
@@ -77,7 +77,7 @@ function dlg_38_1(NPC, Spawn)
 	if HasQuest(Spawn, QUEST_1) then
 		SetStepComplete(Spawn, QUEST_1, 2)
 	end
-	
+
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 
@@ -97,19 +97,19 @@ end
 
 function DidYouGetTheRoots(NPC, Spawn, conversation)
 	PlayFlavor(NPC, "voiceover/english/rok_questvo/bio-parser_zo_dok/_exp04/exp04_rgn_timorous_deep/chrykori_tie/zodok/zodok006.mp3", "", "", 1609069608, 4045525587, Spawn)
-	
+
 	if HasQuest(Spawn, QUEST_2) and GetQuestStep(Spawn, QUEST_2) == 2 then
 		AddConversationOption(conversation, "Yes.", "dlg_43_1")
 	else
 		AddConversationOption(conversation, "No.")
 	end
-	
+
 	StartConversation(conversation, NPC, Spawn, "Did you get the roots?")
 end
 
 function dlg_43_1(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_2, 2)
-	
+
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 

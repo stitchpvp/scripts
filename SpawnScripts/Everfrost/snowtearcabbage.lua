@@ -2,8 +2,8 @@
     Script Name    : SpawnScripts/Everfrost/snowtearcabbage.lua
     Script Author  : John Adams
     Script Date    : 2014.05.30 10:05:43
-    Script Purpose : 
-                   : 
+    Script Purpose :
+                   :
 --]]
 
 function spawn(NPC)

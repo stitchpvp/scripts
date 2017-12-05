@@ -11,7 +11,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)
@@ -28,12 +28,12 @@ function hailed(NPC, Spawn)
 	AddConversationOption(conversation, "You're Tunare's prophet.", "dlg_19_1")
 	AddConversationOption(conversation, "I'm sorry to bother you.  Excuse me.")
 	StartConversation(conversation, NPC, Spawn, "Tunare's blessings be with you.  How may I assist you?")
-	if convo==20 then
-		PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_3_1053.mp3", "", "", 0, 0, Spawn)
-		AddConversationOption(conversation, "You're Tunare's prophet.", "dlg_20_1")
-		AddConversationOption(conversation, "I'm sorry to bother you.  Excuse me.")
-		StartConversation(conversation, NPC, Spawn, "Tunare's blessings be with you.  How may I assist you?")
-	end
+	--if convo==20 then
+	--	PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_3_1053.mp3", "", "", 0, 0, Spawn)
+	--	AddConversationOption(conversation, "You're Tunare's prophet.", "dlg_20_1")
+	--	AddConversationOption(conversation, "I'm sorry to bother you.  Excuse me.")
+	--	StartConversation(conversation, NPC, Spawn, "Tunare's blessings be with you.  How may I assist you?")
+	--end
 
 end
 

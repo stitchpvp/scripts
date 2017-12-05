@@ -160,5 +160,5 @@ function Option17(NPC, Spawn)
 	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "Thank you.")
-	StartConversation(conversation, NPC, Spawn, "May the Overlord hasten your path," .. Get(Spawn .. ".)
+	StartConversation(conversation, NPC, Spawn, "May the Overlord hasten your path, " .. GetName(Spawn) .. ".")
 end

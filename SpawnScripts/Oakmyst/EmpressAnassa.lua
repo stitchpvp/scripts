@@ -1,6 +1,6 @@
 --[[
 	Script Name	: SpawnScripts/Oakmyst/EmpressAnassa.lua
-	Script Purpose	: Empress Anassa 
+	Script Purpose	: Empress Anassa
 	Script Author	: scatman
 	Script Date	: 2009.05.09
 	Script Notes	: Auto-Generated Conversation from PacketParser Data
@@ -15,7 +15,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
@@ -23,13 +23,13 @@ function hailed(NPC, Spawn)
 	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/empress_anassa/qey_adv01_oakmyst/empressanassa000.mp3", "", "", 122104258, 2418821305, Spawn)
-	
+
 	if HasCompletedQuest(Spawn, QUEST_FROM_NEOLA) and HasCompletedQuest(Spawn, QUEST_FROM_JUDGE) and not HasQuest(Spawn, QUEST_1) and not HasCompletedQuest(Spawn, QUEST_1) then
 		AddConversationOption(conversation, "Your judge has sent me.", "dlg_5_1")
 	elseif HasQuest(Spawn, QUEST_1) and GetQuestStep(Spawn, QUEST_1) == 2 then
 		AddConversationOption(conversation, "I've killed Rotweed.", "KilledRotweed")
 	end
-	
+
 	AddConversationOption(conversation, "I seek nothing. Farewell.")
 	StartConversation(conversation, NPC, Spawn, "Greetings and welcome to our hollowed grove. What is it you seek?")
 end
@@ -60,7 +60,7 @@ end
 
 function KilledRotweed(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_1, 2)
-	
+
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 

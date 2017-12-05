@@ -11,7 +11,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)
@@ -28,12 +28,12 @@ function hailed(NPC, Spawn)
 	AddConversationOption(conversation, "Let us begin.", "dlg_4_1")
 	AddConversationOption(conversation, "I will return later.")
 	StartConversation(conversation, NPC, Spawn, "I am here to explain something very important: how your Spells, Combat Arts, and Abilities work, as well as how to improve them.")
-	if convo==9 then
-		PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_3_1007.mp3", "", "", 0, 0, Spawn)
-		AddConversationOption(conversation, "Let us begin.", "dlg_9_1")
-		AddConversationOption(conversation, "I will return later.")
-		StartConversation(conversation, NPC, Spawn, "I am here to explain something very important: how your Spells, Combat Arts, and Abilities work, as well as how to improve them.")
-	end
+	--if convo==9 then
+	--	PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_3_1007.mp3", "", "", 0, 0, Spawn)
+	--	AddConversationOption(conversation, "Let us begin.", "dlg_9_1")
+	--	AddConversationOption(conversation, "I will return later.")
+	--	StartConversation(conversation, NPC, Spawn, "I am here to explain something very important: how your Spells, Combat Arts, and Abilities work, as well as how to improve them.")
+	--end
 
 end
 

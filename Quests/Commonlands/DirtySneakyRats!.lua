@@ -3,17 +3,17 @@
 	Script Purpose	:	Handles the quest, "Dirty Sneaky Rats!"
 	Script Author	:	QuestParser (Replace this)
 	Script Date		:	7/14/2017
-	Script Notes	:	
+	Script Notes	:
 
 	Zone			:	Commonlands
-	Quest Giver		:	
+	Quest Giver		:
 	Preceded by		:	None
 	Followed by		:	None
 --]]
 
 
 function Init(Quest)
-	AddQuestStepKill(Quest, 1, "Kill the dregs sneaks till I find the journal", 1, 100, "From the crossroads, cross the southern bridge and head south until you find a small encampment of ratonga dregs.  Among them find the sneak that stole the journal.", 195, --[[ ID's --]])
+	AddQuestStepKill(Quest, 1, "Kill the dregs sneaks till I find the journal", 1, 100, "From the crossroads, cross the southern bridge and head south until you find a small encampment of ratonga dregs.  Among them find the sneak that stole the journal.", 195, nil)
 	AddQuestStepCompleteAction(Quest, 1, "Step1Complete")
 end
 
@@ -21,7 +21,7 @@ function Step1Complete(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 1, "I've found the stolen journal.")
 	UpdateQuestTaskGroupDescription(Quest, 1, "I found the journal and should return it to the Master of the Hunt.")
 
-	AddQuestStepChat(Quest, 2, "Return the journal to the hunter", 1, "I need to go back to the Master of the Hunt and return the stolen journal.", 11, --[[ ID's --]])
+	AddQuestStepChat(Quest, 2, "Return the journal to the hunter", 1, "I need to go back to the Master of the Hunt and return the stolen journal.", 11, nil)
 	AddQuestStepCompleteAction(Quest, 2, "QuestComplete")
 end
 

@@ -3,7 +3,7 @@
 	Script Purpose	: Lieutenant Dawson <Qeynos Guard>
 	Script Author	: Scatman
 	Script Date	: 2009.08.10
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 local MIN_LEVEL = 5
@@ -25,13 +25,13 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	if HasQuest(Spawn, QUEST_FROM_JOHFRIT) then
 		SetStepComplete(Spawn, QUEST_FROM_JOHFRIT, 1)
 	end
@@ -133,13 +133,13 @@ end
 
 function OnQuest1(NPC, Spawn, conversation)
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/lieutenant_dawson/qey_adv04_bog/quests/dawson/dawson005.mp3", "", "", 3763908858, 4198264181, Spawn)
-	
+
 	if (HasQuest(Spawn, QUEST_1) and GetQuestStep(Spawn, QUEST_1) == 3) or (HasCompletedQuest(Spawn, QUEST_1)) then
 		AddConversationOption(conversation, "Yes, I have.", "dlg_1_1")
 	else
 		AddConversationOption(conversation, "No, not yet.")
 	end
-	
+
 	StartConversation(conversation, NPC, Spawn, "Have you killed the slugs and fungus men?")
 end
 
@@ -151,7 +151,7 @@ function dlg_1_1(NPC, Spawn)
 	if HasQuest(Spawn, QUEST_1) then
 		SetStepComplete(Spawn, QUEST_1, 3)
 	end
-	
+
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 
@@ -177,13 +177,13 @@ end
 
 function OnQuest2(NPC, Spawn)
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/lieutenant_dawson/qey_adv04_bog/quests/dawson/dawson008.mp3", "", "", 702901482, 1827477819, Spawn)
-	
+
 	if (HasQuest(Spawn, QUEST_2) and GetQuestStep(Spawn, QUEST_2) == 2) or (HasCompletedQuest(Spawn, QUEST_2)) then
 		AddConversationOption(conversation, "Yes. I attached the beacon, but before that I was attacked by a gnoll.", "dlg_6_1")
 	else
 		AddConversationOption(conversation, "No, not yet.")
 	end
-	
+
 	StartConversation(conversation, NPC, Spawn, "Did you find the machine?")
 end
 
@@ -191,7 +191,7 @@ function dlg_6_1(NPC, Spawn)
 	if HasQuest(Spawn, QUEST_2) then
 		SetStepComplete(Spawn, QUEST_2, 2)
 	end
-	
+
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 
@@ -230,7 +230,7 @@ end
 
 function OnQuest3(NPC, Spawn, conversation)
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/lieutenant_dawson/qey_adv04_bog/quests/dawson/dawson012.mp3", "", "", 3649722083, 1259667690, Spawn)
-	
+
 	if (HasQuest(Spawn, QUEST_3) and GetQuestStep(Spawn, QUEST_3) == 4) or (HasCompletedQuest(Spawn, QUEST_3)) then
 		AddConversationOption(conversation, "Yes, at one I found a gnoll paw. There was nothing telling at the others.", "dlg_12_1")
 	else
@@ -243,7 +243,7 @@ function dlg_12_1(NPC, Spawn)
 	if HasQuest(Spawn, QUEST_3) then
 		SetStepComplete(Spawn, QUEST_3, 4)
 	end
-	
+
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 
@@ -273,13 +273,13 @@ end
 
 function OnQuest4(NPC, Spawn, conversation)
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/lieutenant_dawson/qey_adv04_bog/quests/dawson/dawson015.mp3", "", "", 2647530103, 2587149233, Spawn)
-	
+
 	if (HasQuest(Spawn, QUEST_4) and GetQuestStep(Spawn, QUEST_4) == 4) or (HasCompletedQuest(Spawn, QUEST_4)) then
 		AddConversationOption(conversation, "Yes, I have.", "dlg_14_1")
 	else
 		AddConversationOption(conversation, "Not yet.")
 	end
-	
+
 	StartConversation(conversation, NPC, Spawn, "Did you stop the gnolls?")
 end
 
@@ -287,7 +287,7 @@ function dlg_14_1(NPC, Spawn)
 	if HasQuest(Spawn, QUEST_4) then
 		SetStepComplete(Spawn, QUEST_4, 4)
 	end
-	
+
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 
@@ -330,7 +330,7 @@ function OnQuest5(NPC, Spawn, conversation)
 	else
 		AddConversationOption(conversation, "Not yet.")
 	end
-	
+
 	StartConversation(conversation, NPC, Spawn, "Did you dispose of Dentfang?")
 end
 
@@ -338,7 +338,7 @@ function Quest5Done(NPC, Spawn)
 	if HasQuest(Spawn, QUEST_5) then
 		SetStepComplete(Spawn, QUEST_5, 2)
 	end
-	
+
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 

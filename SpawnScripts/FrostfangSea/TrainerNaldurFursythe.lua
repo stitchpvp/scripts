@@ -3,7 +3,7 @@
 	Script Purpose	: Trainer Naldur Fursythe <Expert in Physical Attributes>
 	Script Author	: theFoof
 	Script Date	: 2013.05.21
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 function spawn(NPC)
@@ -11,7 +11,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)
@@ -70,7 +70,7 @@ function what_chat_3(NPC, Spawn)
 	AddConversationOption(conversation, "How do I improve my physical attributes?", "impr_chat_1")
 	AddConversationOption(conversation, "Thank you for the information.")
 	StartConversation(conversation, NPC, Spawn, "Stamina gives you more Health points. The more Health you have, the longer you can survive in battle. Stamina is a useful attribute for every class.")
-end 
+end
 
 function what_chat_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)

@@ -3,24 +3,24 @@
 	Script Purpose	:	Handles the quest, "Bloodskull Intentions"
 	Script Author	:	QuestParser (Replace this)
 	Script Date		:	7/8/2017
-	Script Notes	:	
+	Script Notes	:
 
 	Zone			:	Commonlands
-	Quest Giver		:	
+	Quest Giver		:
 	Preceded by		:	None
 	Followed by		:	None
 --]]
 
 
 function Init(Quest)
-	AddQuestStepKill(Quest, 1, "I need to kill 4 Bloodskull tower guards", 4, 100, "I need to kill some orc tower guards and get a copy of the orcish orders.", 611, --[[ ID's --]])
+	AddQuestStepKill(Quest, 1, "I need to kill 4 Bloodskull tower guards", 4, 100, "I need to kill some orc tower guards and get a copy of the orcish orders.", 611, nil)
 	AddQuestStepCompleteAction(Quest, 1, "Step1Complete")
 end
 
 function Step1Complete(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 1, "I have slain 4 Bloodskull tower guards.")
 
-	AddQuestStepObtainItem(Quest, 2, "I need to collect the Bloodskull standing orders", 1, 100, "I need to kill some orc tower guards and get a copy of the orcish orders.", 75, --[[ ID's --]])
+	AddQuestStepObtainItem(Quest, 2, "I need to collect the Bloodskull standing orders", 1, 100, "I need to kill some orc tower guards and get a copy of the orcish orders.", 75, nil)
 	AddQuestStepCompleteAction(Quest, 2, "Step2Complete")
 end
 
@@ -28,7 +28,7 @@ function Step2Complete(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 2, "I have collected the Bloodskull standing orders.")
 	UpdateQuestTaskGroupDescription(Quest, 1, "I killed the orcs and obtained a copy of their orders.")
 
-	AddQuestStepChat(Quest, 3, "I need to return to Rainus", 1, "Now that I have done as he asked, I should return to Rainus Canton.", 11, --[[ ID's --]])
+	AddQuestStepChat(Quest, 3, "I need to return to Rainus", 1, "Now that I have done as he asked, I should return to Rainus Canton.", 11, nil)
 	AddQuestStepCompleteAction(Quest, 3, "QuestComplete")
 end
 

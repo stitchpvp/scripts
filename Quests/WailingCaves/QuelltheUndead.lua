@@ -3,17 +3,17 @@
 	Script Purpose	:	Handles the quest, "Quell the Undead"
 	Script Author	:	QuestParser (Replace this)
 	Script Date		:	7/9/2017
-	Script Notes	:	
+	Script Notes	:
 
 	Zone			:	Commonlands
-	Quest Giver		:	
+	Quest Giver		:
 	Preceded by		:	None
 	Followed by		:	None
 --]]
 
 
 function Init(Quest)
-	AddQuestStepKill(Quest, 1, "I must kill fifteen orc skeletons", 15, 100, "I'm destroying the risen skeletons of orc warriors in the Wailing Caves for Ronam Olansk.", 611, --[[ ID's --]])
+	AddQuestStepKill(Quest, 1, "I must kill fifteen orc skeletons", 15, 100, "I'm destroying the risen skeletons of orc warriors in the Wailing Caves for Ronam Olansk.", 611, nil)
 	AddQuestStepCompleteAction(Quest, 1, "Step1Complete")
 end
 
@@ -21,7 +21,7 @@ function Step1Complete(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 1, "I have killed the orc skeletons.")
 	UpdateQuestTaskGroupDescription(Quest, 1, "I've destroyed enough orc skeletons in the Wailing Caves to satisfy Ronam Olansk's needs for now.")
 
-	AddQuestStepChat(Quest, 2, "I must return to speak with Ronam Olansk", 1, "I must return to Ronam Olansk at the nomad camp to inform him of the completion of his task.", 11, --[[ ID's --]])
+	AddQuestStepChat(Quest, 2, "I must return to speak with Ronam Olansk", 1, "I must return to Ronam Olansk at the nomad camp to inform him of the completion of his task.", 11, nil)
 	AddQuestStepCompleteAction(Quest, 2, "QuestComplete")
 end
 

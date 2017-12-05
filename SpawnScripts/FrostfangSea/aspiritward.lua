@@ -3,7 +3,7 @@
 	Script Purpose	:	for despawning a spirit ward
 	Script Author	:	theFoof
 	Script Date		:	2013.5.28
-	Script Notes	:	
+	Script Notes	:
 --]]
 
 function spawn(NPC)

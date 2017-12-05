@@ -11,7 +11,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)
@@ -29,13 +29,13 @@ function hailed(NPC, Spawn)
 	AddConversationOption(conversation, "Tell me about mending items.")
 	AddConversationOption(conversation, "I'll return for training later.")
 	StartConversation(conversation, NPC, Spawn, "I can explain the finer points of banking and mending to you if you like. Would you care to hear about either?")
-	if convo==8 then
-		PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_3_1047.mp3", "", "", 0, 0, Spawn)
-		AddConversationOption(conversation, "Tell me about banking.", "dlg_8_1")
-		AddConversationOption(conversation, "Tell me about mending items.")
-		AddConversationOption(conversation, "I'll return for training later.")
-		StartConversation(conversation, NPC, Spawn, "I can explain the finer points of banking and mending to you if you like. Would you care to hear about either?")
-	end
+	--if convo==8 then
+	--	PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_3_1047.mp3", "", "", 0, 0, Spawn)
+	--	AddConversationOption(conversation, "Tell me about banking.", "dlg_8_1")
+	--	AddConversationOption(conversation, "Tell me about mending items.")
+	--	AddConversationOption(conversation, "I'll return for training later.")
+	--	StartConversation(conversation, NPC, Spawn, "I can explain the finer points of banking and mending to you if you like. Would you care to hear about either?")
+	--end
 
 end
 

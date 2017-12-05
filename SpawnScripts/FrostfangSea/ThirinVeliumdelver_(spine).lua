@@ -1,9 +1,9 @@
 --[[
 	Script Name	: SpawnScripts/FrostfangSea/ThirinVeliumdelver_(spine).lua
-	Script Purpose	: Thirin Veliumdelver 
+	Script Purpose	: Thirin Veliumdelver
 	Script Author	: theFoof
 	Script Date	: 2013.06.09
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 local NothingWaste = 56
@@ -28,7 +28,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function SpawnAccess(NPC, Spawn)

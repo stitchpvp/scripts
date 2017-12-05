@@ -1,5 +1,5 @@
 --[[
-	Script Name	: SpawnScripts/Oakmyst/HuntmasterKrell.lua 
+	Script Name	: SpawnScripts/Oakmyst/HuntmasterKrell.lua
 	Script Purpose	: Huntmaster Krell
 	Script Author	: John Adams/Scatman
 	Script Date	: 2009.05.07
@@ -25,7 +25,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)

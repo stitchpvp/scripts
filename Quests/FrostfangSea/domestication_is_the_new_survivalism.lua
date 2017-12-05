@@ -3,7 +3,7 @@
 	Script Purpose	:	for the quest "Domestication is the New Survivalism"
 	Script Author	:	theFoof
 	Script Date		:	2013.5.31
-	Script Notes	:	
+	Script Notes	:
 
 	Zone			:	Frostfang Sea
 	Quest Giver		:	Belka Thunderheart

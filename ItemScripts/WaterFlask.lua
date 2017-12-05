@@ -23,9 +23,9 @@ function examined(Item, Player)
 	StartDialogConversation(conversation, 2, Item, Player, "This is the flask of water that Vindain has asked you to fill with blessed water from the Fountain of Valor.")
 end
 
-local function FillFlask(Item, Player)
+function FillFlask(Item, Player)
 	SetStepComplete(Player, HIGH_ELF_MENTOR_QUEST_1, 2)
-	
+
 	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "Put the flask away.")

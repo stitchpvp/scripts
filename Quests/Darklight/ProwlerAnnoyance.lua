@@ -3,7 +3,7 @@
 	Script Purpose	:	Handles the quest, "Prowler Annoyance"
 	Script Author	:	Cynnar
 	Script Date		:	7/27/2015
-	Script Notes	:	
+	Script Notes	:
 
 	Zone			:	Darklight Wood
 	Quest Giver		:	Jhana Do'Zyth
@@ -40,7 +40,7 @@ end
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
 	local conversation = CreateConversation()
-	
+
 	PlayFlavor(QuestGiver, "jhana_do_zyth/darklight_wood/hates_envy/jhana_revamp/jhana004.mp3", "", "", 2033106753, 62697825, Player)
 	AddConversationOption(conversation, "I will return once the deed is done.")
 	StartConversation(conversation, QuestGiver, Player, "Excellent, Ayeecaith. I eagerly await your return.")

@@ -3,7 +3,7 @@
 	Script Purpose	: Wregan Firebeard(dead)
 	Script Author	: theFoof
 	Script Date	: 2013.05.19
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 function spawn(NPC)
@@ -11,7 +11,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-    spawn(NPC)
+SpawnMob(NPC)
 end
 
 function casted_on(Target, Caster, SpellName)

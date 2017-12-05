@@ -3,7 +3,7 @@
 	Script Purpose	:	the quest Impish Threats
 	Script Author	:	theFoof
 	Script Date		:	2013.7.19
-	Script Notes	:	
+	Script Notes	:
 
 	Zone			:	Frostfang Sea
 	Quest Giver		:	Knut Orcbane

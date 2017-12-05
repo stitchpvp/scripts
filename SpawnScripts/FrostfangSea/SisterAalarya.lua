@@ -12,13 +12,13 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	if HasQuest(Spawn, TrustIssues) and not QuestStepIsComplete(Spawn, TrustIssues, 3) then
 		PlayFlavor(NPC, "sister_aalarya/halas/new_halas_guard_house/sister_aalarya001.mp3", "", "", 2119732267, 2070285157, Spawn)
 		AddConversationOption(conversation, "Is this a good time?", "Quest1Chat_1")
@@ -120,7 +120,7 @@ end
 function Quest1Chat_9(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	AddConversationOption(conversation, "I see what you mean.", "Quest1Chat_3")
 	AddConversationOption(conversation, "Tell me about your arrival.", "Quest1Chat_3")
 	StartConversation(conversation, NPC, Spawn, "This land is holy, blessed by the gods we revere.  I'll answer your question with a question: why would be anywhere else?")
@@ -129,7 +129,7 @@ end
 function Quest1Chat_10(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	AddConversationOption(conversation, "Sorry to offend.  Tell me about your arrival.", "Quest1Chat_3")
 	AddConversationOption(conversation, "You wouldn't be so defensive if you weren't hiding something!")
 	StartConversation(conversation, NPC, Spawn, 'That depends on what "they" say.  And I would suggest that unless you are genuinely interested in becoming a member of the Sisterhood, that you ' .. "don't make a cad of yourself by questioning our customs.")

@@ -1,9 +1,9 @@
 --[[
 	Script Name	: SpawnScripts/FrostfangSea/OrdinSleetfoot.lua
-	Script Purpose	: Ordin Sleetfoot 
+	Script Purpose	: Ordin Sleetfoot
 	Script Author	: theFoof
 	Script Date	: 2013.06.11
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 local BelowWaves = 59
@@ -16,7 +16,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function SpawnAccess(NPC, Spawn)
@@ -25,7 +25,7 @@ function SpawnAccess(NPC, Spawn)
 			AddSpawnAccess(NPC, Spawn)
 		end
 	elseif HasCompletedQuest(Spawn, GoodDistraction) then
-		
+
 	elseif HasCompletedQuest(Spawn, BelowWaves) then
 		AddSpawnAccess(NPC, Spawn)
 	end

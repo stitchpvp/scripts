@@ -11,7 +11,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)
@@ -28,18 +28,18 @@ function hailed(NPC, Spawn)
 	AddConversationOption(conversation, "Lady Katri said that you're the history instructor.", "dlg_39_1")
 	AddConversationOption(conversation, "Not right now, thanks.")
 	StartConversation(conversation, NPC, Spawn, "May I help you with something?")
-	if convo==40 then
-		PlayFlavor(NPC, "voiceover/english/exp03_questvo/lyyti_eloranta/_exp03/exp03_cty_kelethin/tutorials/qst_lyyti/qst_lyyti001.mp3", "", "", 4088228408, 3514253455, Spawn)
-		AddConversationOption(conversation, "Lady Katri said that you're the history instructor.", "dlg_40_1")
-		AddConversationOption(conversation, "Not right now, thanks.")
-		StartConversation(conversation, NPC, Spawn, "May I help you with something?")
-	end
+	--if convo==40 then
+	--	PlayFlavor(NPC, "voiceover/english/exp03_questvo/lyyti_eloranta/_exp03/exp03_cty_kelethin/tutorials/qst_lyyti/qst_lyyti001.mp3", "", "", 4088228408, 3514253455, Spawn)
+	--	AddConversationOption(conversation, "Lady Katri said that you're the history instructor.", "dlg_40_1")
+	--	AddConversationOption(conversation, "Not right now, thanks.")
+	--	StartConversation(conversation, NPC, Spawn, "May I help you with something?")
+	--end
 
-	if convo==41 then
-		PlayFlavor(NPC, "voiceover/english/exp03_questvo/lyyti_eloranta/_exp03/exp03_cty_kelethin/tutorials/qst_lyyti/qst_lyyti001.mp3", "", "", 4088228408, 3514253455, Spawn)
-		AddConversationOption(conversation, "Not right now, thanks.", "dlg_41_1")
-		StartConversation(conversation, NPC, Spawn, "May I help you with something?")
-	end
+	--if convo==41 then
+	--	PlayFlavor(NPC, "voiceover/english/exp03_questvo/lyyti_eloranta/_exp03/exp03_cty_kelethin/tutorials/qst_lyyti/qst_lyyti001.mp3", "", "", 4088228408, 3514253455, Spawn)
+	--	AddConversationOption(conversation, "Not right now, thanks.", "dlg_41_1")
+	--	StartConversation(conversation, NPC, Spawn, "May I help you with something?")
+	--end
 
 end
 

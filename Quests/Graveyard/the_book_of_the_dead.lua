@@ -20,7 +20,7 @@ end
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
 	local conversation = CreateConversation()
-	
+
 	PlayFlavor(QuestGiver, "voiceover/english/tutorial_revamp/custodian_zaddar_sullissia/fprt_adv02_graveyard/custodian_zaddar079b.mp3", "", "", 2915353095, 1248129975, Player)
 	AddConversationOption(conversation, "I will return when I have it.")
 	StartConversation(conversation, QuestGiver, Player, "Excellent. Return to me when you have found it.")
@@ -32,13 +32,13 @@ end
 function Step1_Complete_FoundBook(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 1, "I've obtained the Book of the Dead.")
 	UpdateQuestTaskGroupDescription(Quest, 1, "I've found the Book of the Dead and must return it to Zaddar.")
-	
+
 	-- The Book of the Dead
 	-- TODO: Display quest reward popup.
 	if not HasItem(Player, 12141) then
 		SummonItem(Player, 12141)
 	end
-	
+
 	AddQuestStepChat(Quest, 2, "Take the Book of the Dead to Zaddar.", 1, "I must return this ancient tome to Zaddar quickly.", 0, 1250014)
 	AddQuestStepCompleteAction(Quest, 2, "QuestComplete")
 end
@@ -48,7 +48,7 @@ function QuestComplete(Quest, QuestGiver, Player)
 	while HasItem(Player, 12141) do
 		RemoveItem(Player, 12141)
 	end
-	
+
 	UpdateQuestStepDescription(Quest, 2, "I've given Zaddar the Book of the Dead.")
 	UpdateQuestTaskGroupDescription(Quest, 2, "I've given the Book of the Dead to Zaddar.")
 	GiveQuestReward(Quest, Player)

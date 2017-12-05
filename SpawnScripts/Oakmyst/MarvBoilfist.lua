@@ -3,7 +3,7 @@
 	Script Purpose	: Marv Boilfist
 	Script Author	: Scatman
 	Script Date	: 2009.10.07
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 local DWARF = 2
@@ -18,12 +18,12 @@ end
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	if HasQuest(Spawn, DWARF_MENTOR_QUEST_FROM_MAV) then
 		SetStepComplete(Spawn, DWARF_MENTOR_QUEST_FROM_MAV, 1)
 		AddConversationOption(conversation, "Mav sent me to check up on you.", "Mav")
 	end
- 
+
 	if HasCompletedQuest(Spawn, QUEST_1) then
 		if HasCompletedQuest(Spawn, QUEST_LAST_IN_OAKMYST) then
 			Say(NPC, "I heard ya created quite a stir, good job to you.", Spawn)
@@ -42,7 +42,7 @@ function hailed(NPC, Spawn)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function NotDwarf(NPC, Spawn)
@@ -137,12 +137,12 @@ end
 
 function ShouldTakeItBack(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_1, 2)
-	
+
 	-- blackburrow stout
 	if not HasItem(Spawn, 3774) then
 		SummonItem(Spawn, 3774, 1)
 	end
-	
+
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 

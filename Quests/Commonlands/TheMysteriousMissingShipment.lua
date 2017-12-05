@@ -3,17 +3,17 @@
 	Script Purpose	:	Handles the quest, "The Mysterious Missing Shipment"
 	Script Author	:	QuestParser (Replace this)
 	Script Date		:	7/8/2017
-	Script Notes	:	
+	Script Notes	:
 
 	Zone			:	Commonlands
-	Quest Giver		:	
+	Quest Giver		:
 	Preceded by		:	None
 	Followed by		:	None
 --]]
 
 
 function Init(Quest)
-	AddQuestStepChat(Quest, 1, "I should speak to Nethet about Brandus's shipment", 1, "Brandus directed me to an individual named Nethet who frequents the City of Freeport gates in the Commonlands.", 11, --[[ ID's --]])
+	AddQuestStepChat(Quest, 1, "I should speak to Nethet about Brandus's shipment", 1, "Brandus directed me to an individual named Nethet who frequents the City of Freeport gates in the Commonlands.", 11, nil)
 	AddQuestStepCompleteAction(Quest, 1, "Step1Complete")
 end
 
@@ -28,7 +28,7 @@ function Step2Complete(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 2, "I have helped Nethet. His information was very useful.")
 	UpdateQuestTaskGroupDescription(Quest, 1, "I've spoken to Nethet and done everything he asked before he finally gave up the information I was looking for.")
 
-	AddQuestStepChat(Quest, 3, "I need to return to Brandus", 1, "I should return to Brandus and let him know that it is the Dervish Cutthroats that have his shipment, and his sorcerer.", 11, --[[ ID's --]])
+	AddQuestStepChat(Quest, 3, "I need to return to Brandus", 1, "I should return to Brandus and let him know that it is the Dervish Cutthroats that have his shipment, and his sorcerer.", 11, nil)
 	AddQuestStepCompleteAction(Quest, 3, "QuestComplete")
 end
 

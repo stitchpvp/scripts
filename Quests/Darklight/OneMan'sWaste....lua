@@ -3,7 +3,7 @@
 	Script Purpose	:	Handles the quest, "One Man's Waste..."
 	Script Author	:	Cynnar
 	Script Date		:	8/30/2015
-	Script Notes	:	
+	Script Notes	:
 
 	Zone			:	Darklight Wood
 	Quest Giver		:	Ilmtar D'Viervs

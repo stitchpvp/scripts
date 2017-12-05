@@ -12,7 +12,7 @@ function examined(Item, Player)
 	if HasQuest(Player, GNOME_MENTOR_QUEST_3) and GetQuestStep(Player, GNOME_MENTOR_QUEST_3) == 1 then
 		SetStepComplete(Player, GNOME_MENTOR_QUEST_3, 1)
 	end
-	
+
 	local conversation = CreateConversation()
 	AddConversationOption(conversation, "Continue Reading", "ContinueReading")
 	AddConversationOption(conversation, "Put note away.")

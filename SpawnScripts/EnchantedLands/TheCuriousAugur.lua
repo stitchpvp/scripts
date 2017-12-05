@@ -1,6 +1,6 @@
 --[[
 	Script Name	: SpawnScripts/EnchantedLands/TheCuriousAugur.lua
-	Script Purpose	: The Curious Augur 
+	Script Purpose	: The Curious Augur
 	Script Author	: Cynnar
 	Script Date	: 2015.02.17
 	Script Notes	: Auto-Generated Conversation from PacketParser Data
@@ -13,14 +13,14 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
-	
+
+
 	if not HasQuest(Spawn, ThreeMeaningsOfLife) and not HasCompletedQuest(Spawn, ThreeMeaningsOfLife) or HasQuest(Spawn, ThreeMeaningsOfLife) and GetQuestStep(Spawn, ThreeMeaningsOfLife) == 1 then
 		-- start the quest
 		PlayFlavor(NPC, "voiceover/english/the_curious_augur/enchanted/quests/quest_curious_augur/curious_augur001.mp3", "", "", 2804170240, 1658399698, Spawn)
@@ -61,7 +61,7 @@ function hailed(NPC, Spawn)
 		AddConversationOption(conversation, "I'll be on my way.")
 		StartConversation(conversation, NPC, Spawn, "I have given you the keys, my child.  How or if you ever use them is in your hands.  Other Augurs you meet in your travels may provide you with more wisdom.")
 	end
-		
+
 end
 
 function dlg_0_1(NPC, Spawn)
@@ -86,7 +86,7 @@ end
 function QuestChat_0_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	PlayFlavor(NPC, "voiceover/english/the_curious_augur/enchanted/quests/quest_curious_augur/curious_augur003.mp3", "", "", 4037106442, 3061634368, Spawn)
 	AddConversationOption(conversation, "I have seven fear feeders and eighteen shoal serpents.", "QuestChat_0_4")
 	AddConversationOption(conversation, "I have fifteen fear feeders and ten shoal serpents.", "QuestChat_0_2")
@@ -128,7 +128,7 @@ end
 function QuestChat_1_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	PlayFlavor(NPC, "voiceover/english/the_curious_augur/enchanted/quests/quest_curious_augur/curious_augur004.mp3", "", "", 2520256937, 2710009453, Spawn)
 	AddConversationOption(conversation, "I suppose so.", "QuestChat_1_2")
 	AddConversationOption(conversation, "Probably not.")

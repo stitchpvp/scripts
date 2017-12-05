@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "Paying a Visit"
 	Script Author	: Scatman
 	Script Date	: 2009.07.10
-	
+
 	Zone       : The Graveyard
 	Quest Giver: Custodian Zaddar Sullissia
 	Preceded by: The Door Knocker (the_door_knocker.lua)

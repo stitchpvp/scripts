@@ -1,6 +1,6 @@
 --[[
 	Script Name	: SpawnScripts/DarklightWood/UdiyitasXKilrae.lua
-	Script Purpose	: Udiyitas X'Kilrae 
+	Script Purpose	: Udiyitas X'Kilrae
 	Script Author	: Cynnar
 	Script Date	: 2015.07.05
 	Script Notes	: Beginning dialog has "wince" emote being used but is not correct.
@@ -15,13 +15,13 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	if HasQuest(Spawn, ASolidifiedFront) and not QuestStepIsComplete(Spawn, ASolidifiedFront, 1) then
 		SetStepComplete(Spawn, ASolidifiedFront, 1)
         end
@@ -37,7 +37,7 @@ function hailed(NPC, Spawn)
 		AddConversationOption(conversation, "I slew a great number of the Sablevein crumblers!", "dlg_2_1")
 		StartConversation(conversation, NPC, Spawn, "Were you successful in striking down the invaders?")
 	elseif HasCompletedQuest(Spawn, ElementalEncroachment) then
-		PlayFlavor(Spawn, "", "", "wave", 0, 0, Player)
+		PlayFlavor(NPC, "", "", "wave", 0, 0, Spawn)
 		PlayFlavor(NPC, "udiyitas_x_kilrae/darklight_wood/hates_envy/udiyitas_revamp/udiyitas005.mp3", "", "", 3475491960, 633382350, Spawn)
 		AddConversationOption(conversation, "Good-bye, Udiyitas.")
 		StartConversation(conversation, NPC, Spawn, "Excellent work, " .. GetName(Spawn) .. ". I see now that fear is not an emotion you're much familiar with. Neriak will prosper greatly so long as you defend her banner. Now then, enough idle discourse. The Sablevein continue to strike. You must speak with Pellandra if you have not already.")
@@ -62,13 +62,13 @@ function dlg_0_1(NPC, Spawn)
 end
 
 function PlayerEmote(NPC, Spawn)
-	PlayFlavor(Spawn, "", "", "no", 0, 0, Player)
+	PlayFlavor(NPC, "", "", "no", 0, 0, Spawn)
 end
 
 function dlg_1_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	PlayFlavor(NPC, "udiyitas_x_kilrae/darklight_wood/hates_envy/udiyitas_revamp/udiyitas006.mp3", "", "", 2328635398, 829982468, Spawn)
 	AddConversationOption(conversation, "I wiill return victoriouns!")
 	StartConversation(conversation, NPC, Spawn, "Do not return until you have slain a great number of the Sablevein elementals!")
@@ -78,8 +78,8 @@ function dlg_2_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 	SetStepComplete(Spawn, ElementalEncroachment, 2)
-	
-	PlayFlavor(Spawn, "", "", "wave", 0, 0, Player)
+
+	PlayFlavor(NPC, "", "", "wave", 0, 0, Spawn)
 	PlayFlavor(NPC, "udiyitas_x_kilrae/darklight_wood/hates_envy/udiyitas_revamp/udiyitas005.mp3", "", "", 3475491960, 633382350, Spawn)
 	SetStepComplete(Spawn, ElementalEncroachment, 2)
 	AddConversationOption(conversation, "Good-bye, Udiyitas.")
@@ -87,6 +87,6 @@ function dlg_2_1(NPC, Spawn)
 end
 
 function QuestOffer(NPC, Spawn)
-	PlayFlavor(Spawn, "", "", "brandish", 0, 0, Player)
+	PlayFlavor(NPC, "", "", "brandish", 0, 0, Spawn)
 	OfferQuest(NPC, Spawn, ElementalEncroachment)
 end

@@ -20,7 +20,7 @@ end
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
 	local conversation = CreateConversation()
-	
+
 	PlayFlavor(QuestGiver, "voiceover/english/tutorial_revamp/custodian_zaddar_sullissia/fprt_adv02_graveyard/custodian_zaddar114.mp3", "", "", 463438268, 1793214191, Player)
 	AddConversationOption(conversation, "I'm on my way.")
 	StartConversation(conversation, QuestGiver, Player, "Your help in the Ruins is desperately needed. Do not delay too long, for our great city of Freeport is in peril!")

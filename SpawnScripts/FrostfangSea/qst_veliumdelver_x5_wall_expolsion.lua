@@ -1,9 +1,9 @@
 --[[
-	Script Name		:	SpawnScripts/FrostfangSea/qst_veliumdelver_x5_wall_expolsion.lua 
+	Script Name		:	SpawnScripts/FrostfangSea/qst_veliumdelver_x5_wall_expolsion.lua
 	Script Purpose	:	the exploding animation for the ry'gorr exploding barrel as well as hiding the boulder
 	Script Author	:	theFoof
 	Script Date		:	2013.6.12
-	Script Notes	:	
+	Script Notes	:
 --]]
 
 local RyGorrOperations = 60
@@ -13,7 +13,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function explosion(NPC)

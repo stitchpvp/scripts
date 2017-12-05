@@ -15,13 +15,13 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	if HasCompletedQuest(Spawn, QUEST_1) then
 		if HasCompletedQuest(Spawn, QUEST_2) then
 			Say(NPC, "The eggs are perfect, thank you!", Spawn)
@@ -54,13 +54,13 @@ end
 
 function DidYouGetTheMeat(NPC, Spawn, conversation)
 	PlayFlavor(NPC, "voiceover/english/rok_questvo/varkori_riz_lul/_exp04/exp04_rgn_timorous_deep/chrykori_tie/rizlul/rizlul002.mp3", "", "", 1914925436, 868661066, Spawn)
-	
+
 	if (HasCompletedQuest(Spawn, QUEST_1) and not HasCompletedQuest(Spawn, QUEST_2)) or (HasQuest(Spawn, QUEST_1) and GetQuestStep(Spawn, QUEST_1) == 2) then
 		AddConversationOption(conversation, "Yes, here you are.", "dlg_27_1")
 	else
 		AddConversationOption(conversation, "Not yet.")
 	end
-	
+
 	StartConversation(conversation, NPC, Spawn, "Did you get the meat?")
 end
 
@@ -68,7 +68,7 @@ function dlg_27_1(NPC, Spawn)
 	if HasQuest(Spawn, QUEST_1) then
 		SetStepComplete(Spawn, QUEST_1, 2)
 	end
-	
+
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 
@@ -106,19 +106,19 @@ end
 
 function DidYouGetTheEggs(NPC, Spawn, conversation)
 	PlayFlavor(NPC, "voiceover/english/rok_questvo/varkori_riz_lul/_exp04/exp04_rgn_timorous_deep/chrykori_tie/rizlul/rizlul006.mp3", "", "", 3179652377, 1025718617, Spawn)
-	
+
 	if HasQuest(Spawn, QUEST_2) and GetQuestStep(Spawn, QUEST_2) == 2 then
 		AddConversationOption(conversation, "Yes I did.", "dlg_29_1")
 	else
 		AddConversationOption(conversation, "Not yet.")
 	end
-	
+
 	StartConversation(conversation, NPC, Spawn, "Did you get the eggs?")
 end
 
 function dlg_29_1(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_2, 2)
-	
+
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 

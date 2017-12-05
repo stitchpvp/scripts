@@ -14,13 +14,13 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-    spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
     FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
     if GetQuestStep(Spawn, LostFroglok) == 2 then
         PlayFlavor(NPC, "splorpy_quagmarr/halas/gwenevyns_cove/splorpy_quagmarr/splorpy_quagmarr_001.mp3", "", "", 3711049527, 3895860763, Spawn)
 	    AddConversationOption(conversation, "Splorpy! It's me, " .. GetName(Spawn) .. ". I'm a friend of your dad's.", "Quest1Chat_1")

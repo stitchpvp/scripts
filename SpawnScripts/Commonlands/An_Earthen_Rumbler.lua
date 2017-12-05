@@ -2,14 +2,14 @@ function spawn(NPC)
   waypoints(NPC)
 end
 
-function hailed(NPC, Spawn) 
-  FaceTarget(NPC, Spawn) 
-end 
+function hailed(NPC, Spawn)
+  FaceTarget(NPC, Spawn)
+end
 
 function waypoints(NPC)
 local X = GetX(NPC)
 local Y = GetY(NPC)
-local Z = GetZ(NPC)  
+local Z = GetZ(NPC)
   MovementLoopAddLocation(NPC, X, Y, Z, 2, 1)
   MovementLoopAddLocation(NPC, X - 2, Y, Z + 20, 2,  math.random(2,10))
   MovementLoopAddLocation(NPC, X + 4, Y, Z + 31.5, 2, math.random(20,85))

@@ -1,6 +1,6 @@
 --[[
 	Script Name	: SpawnScripts/Darklight/aBriarstoneslayer.lua
-	Script Purpose	: a Briarstone slayer 
+	Script Purpose	: a Briarstone slayer
 	Script Author	: John Adams
 	Script Date	: 2009.01.31
 	Script Notes	: Auto-Generated Conversation from PacketParser Data
@@ -11,7 +11,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)

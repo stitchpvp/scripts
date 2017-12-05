@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "Advanced Problem Solving"
 	Script Author	: Scatman
 	Script Date	    : 2009.07.26
-	
+
 	Zone       : The Sprawl
 	Quest Giver: Crispin Luvinius
 	Preceded by: Problem Solving (problem_solving.lua)
@@ -29,7 +29,7 @@ end
 function Step1_Complete_KilledBashers(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 1, "I've beat down five Giantslayer bashers.")
 	UpdateQuestTaskGroupDescription(Quest, 1, "I've sent the Giantslayers a message that they shouldn't listen to vagrants who tell tall tales.")
-	
+
 	AddQuestStepChat(Quest, 2, "I need to talk with Crispin.", 1, "I should let Crispin know that he and his gang have nothing to worry about.", 0, 1260004)
 	AddQuestStepCompleteAction(Quest, 2, "Quest_Complete")
 end
@@ -41,7 +41,7 @@ function Quest_Complete(Quest, QuestGiver, Player)
 	UpdateQuestDescription(Quest, "I've taken care of Crispin's problem. It seems that the guy isn't as tough as he acts.")
 end
 
-function Reload(Quest, QuestGiver, Player)
+function Reload(Quest, QuestGiver, Player, Step)
 	if Step == 1 then
 		Step1_Complete_KilledBashers(Quest, QuestGiver, Player)
 	end

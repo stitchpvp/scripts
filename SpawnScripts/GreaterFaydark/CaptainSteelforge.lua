@@ -1,6 +1,6 @@
 --[[
 	Script Name	: SpawnScripts/GreaterFaydark/CaptainSteelforge.lua
-	Script Purpose	: Captain Steelforge 
+	Script Purpose	: Captain Steelforge
 	Script Author	: John Adams
 	Script Date	: 2009.02.05
 	Script Notes	: Auto-Generated Conversation from PacketParser Data
@@ -11,7 +11,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)
@@ -40,20 +40,20 @@ function hailed(NPC, Spawn)
 	end
 
 	-- initial response when on Trillis quest, but not on Spelunkle quest
-	if convo==22 then
-		PlayFlavor(NPC, "voiceover/english/exp03_questvo2/captain_steelforge/_exp03/exp03_rgn_greater_faydark/captain_steelforge001.mp3", "", "", 3588015158, 768345314, Spawn)
-		AddConversationOption(conversation, "I brought a status report from Sentry Trillis.", "dlg_22_1")
-		AddConversationOption(conversation, "I'm out of here!")
-		StartConversation(conversation, NPC, Spawn, "Whoa, what are ye doin' out here?  Thar be grobins in this cave that'll eat yer eyeballs and roast yer toes!  Watch yerself youngin'.")
-	end
+	--if convo==22 then
+	--	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/captain_steelforge/_exp03/exp03_rgn_greater_faydark/captain_steelforge001.mp3", "", "", 3588015158, 768345314, Spawn)
+	--	AddConversationOption(conversation, "I brought a status report from Sentry Trillis.", "dlg_22_1")
+	--	AddConversationOption(conversation, "I'm out of here!")
+	--	StartConversation(conversation, NPC, Spawn, "Whoa, what are ye doin' out here?  Thar be grobins in this cave that'll eat yer eyeballs and roast yer toes!  Watch yerself youngin'.")
+	--end
 
-	-- completing Spelunkle quest
-	if convo==30 then
-		PlayFlavor(NPC, "voiceover/english/exp03_questvo2/captain_steelforge/_exp03/exp03_rgn_greater_faydark/captain_steelforge/captain_steelforge005.mp3", "", "", 2083248035, 1619033401, Spawn)
-		AddConversationOption(conversation, "He's fine.  He also told me about the shrumbler queen they had in the cave.", "dlg_30_1")
-		AddConversationOption(conversation, "I haven't found him yet.")
-		StartConversation(conversation, NPC, Spawn, "Did ya find little Spelunkle?  Tell me, is he okay?")
-	end
+	---- completing Spelunkle quest
+	--if convo==30 then
+	--	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/captain_steelforge/_exp03/exp03_rgn_greater_faydark/captain_steelforge/captain_steelforge005.mp3", "", "", 2083248035, 1619033401, Spawn)
+	--	AddConversationOption(conversation, "He's fine.  He also told me about the shrumbler queen they had in the cave.", "dlg_30_1")
+	--	AddConversationOption(conversation, "I haven't found him yet.")
+	--	StartConversation(conversation, NPC, Spawn, "Did ya find little Spelunkle?  Tell me, is he okay?")
+	--end
 
 end
 

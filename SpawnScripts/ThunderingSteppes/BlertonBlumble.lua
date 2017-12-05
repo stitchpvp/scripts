@@ -2,8 +2,8 @@
     Script Name    : SpawnScripts/ThunderingSteppes/BlertonBlumble.lua
     Script Author  : Jabantiz
     Script Date    : 2014.07.07 09:07:30
-    Script Purpose : 
-                   : 
+    Script Purpose :
+                   :
 --]]
 
 local WatchYourStepInTheTSPartI = 99
@@ -14,7 +14,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)
@@ -35,9 +35,9 @@ function hailed(NPC, Spawn)
 		AddConversationOption(conversation, "Yeah, whatever. I have a letter for you.", "dlg_0_1")
 		AddConversationOption(conversation, "I think I'll be going now.")
 		StartConversation(conversation, NPC, Spawn, "Oh, hey. Uh, could you maybe just run along and go bother someone else? Thanks a bunch...")
-	elseif HasQuest(Spawn, BlumbleBlunder) and GetQuestStep(Spawn, BlumbleBlunder) ~= 2 then	
+	elseif HasQuest(Spawn, BlumbleBlunder) and GetQuestStep(Spawn, BlumbleBlunder) ~= 2 then
 		PlayFlavor(NPC, "", "Look, I'm not giving you anything until you find Grandpa Blumble. He's probably off searching for pirates again. We've never found out why he does it, but he usually ends up on the beach north of here.", "", 1689589577, 4560189, Spawn)
-	elseif HasQuest(Spawn, BlumbleBlunder) and GetQuestStep(Spawn, BlumbleBlunder) == 2 then	
+	elseif HasQuest(Spawn, BlumbleBlunder) and GetQuestStep(Spawn, BlumbleBlunder) == 2 then
 		-- Turn in BlumbleBlunder
 		PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_3_1026.mp3", "", "", 0, 0, Spawn)
 		AddConversationOption(conversation, "I've found Grandpa Blumble.", "dlg_1_1")
@@ -75,10 +75,10 @@ end
 function dlg_1_1(NPC, Spawn)
 	SetStepComplete(Spawn, BlumbleBlunder, 2)
 	SetStepComplete(Spawn, WatchYourStepInTheTSPartI, 2)
-	
+
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	AddConversationOption(conversation, "Sure thing.")
 	StartConversation(conversation, NPC, Spawn, "Thank you so much for finding old Grandpa Blumble. I was beginning to worry. Hah! He really did find pirates? Wow, maybe he isn't quite as crazy as we thought... No, nevermind. There was still that incident with the badgers. He's a loony alright. Please take this reply for Matsy back to Jacques for me.")
 end

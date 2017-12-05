@@ -1,9 +1,9 @@
 --[[
 	Script Name	: SpawnScripts/FrostfangSea/VerienSkysigh.lua
-	Script Purpose	: Verien Skysigh 
+	Script Purpose	: Verien Skysigh
 	Script Author	: theFoof
 	Script Date	: 2013.05.18
-	Script Notes	: 
+	Script Notes	:
 --]]
 local BeetsAlternative = 13
 
@@ -28,7 +28,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)
@@ -40,7 +40,7 @@ end
 function hailed(NPC, Spawn)
     FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
     if GetQuestStep(Spawn, BeetsAlternative) == 3 then
         PlayFlavor(NPC, "verien_skysigh/halas/gwenevyns_cove/verien_skysigh_001.mp3", "", "", 144081749, 1511716196, Spawn)
 	    AddConversationOption(conversation, "Are you sure it wasn't an orc?", "Quest1Chat_2")
@@ -87,7 +87,7 @@ function hailed(NPC, Spawn)
 		AddConversationOption(conversation, "Gladly!", "Quest6Chat_5")
 		AddConversationOption(conversation, "It would be rude of me not to accept this gift.", "Quest6Chat_5")
 		StartConversation(conversation, NPC, Spawn, "You have provided us with enough icemane cubs, " .. GetName(Spawn) .. ".  Please take this as a token of our appreciation.  We are all very grateful for what you have done.")
-	elseif HasCompleteQuest(Spawn, IcemanesCometh) then
+	elseif HasCompletedQuest(Spawn, IcemanesCometh) then
 	    PlayFlavor(NPC, "", "I have alerted Pilgrims' Landing of all that transpired here, and of the orc prints you found.", "", 0, 0, Spawn)
 	end
 end
@@ -105,7 +105,7 @@ function Quest1Chat_3(NPC, Spawn)
     if GetQuestStep(Spawn, BeetsAlternative) == 3 then
 	    SetStepComplete(Spawn, BeetsAlternative, 3)
 	end
-	
+
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 
@@ -189,7 +189,7 @@ end
 function Quest4Chat_2(NPC, Spawn)
     FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	PlayFlavor(NPC, "verien_skysigh/halas/gwenevyns_cove/verien_skysigh_013.mp3", "", "", 45193987, 852341503, Spawn)
 	AddConversationOption(conversation, "Yeah, that is true.", "Quest4Chat_3")
 	AddConversationOption(conversation, "We must take the chance.", "Quest4Chat_3")
@@ -278,7 +278,7 @@ end
 function Quest6Chat_1(NPC, Spawn)
     FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
     PlayFlavor(NPC, "verien_skysigh/halas/gwenevyns_cove/verien_skysigh_026.mp3", "", "", 3888781085, 2569289661, Spawn)
 	AddConversationOption(conversation, "No.  Why?", "Quest6Chat_2")
 	StartConversation(conversation, NPC, Spawn, "Did you see any of the ferocious grizzlies amongst the icemane cats?")

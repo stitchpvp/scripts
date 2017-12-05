@@ -7,7 +7,7 @@
         Zone            : Frostfang Sea
         Quest Giver     : Bull the Craft
         Preceded by     : Tutorial: Learning to Harvest
-        Followed by     : 
+        Followed by     :
 --]]
 -- reward is "Handbook of the Ravens of the North", 722 tradeskill xp, +250 Ravens of the North faction and 6-8 silver
 

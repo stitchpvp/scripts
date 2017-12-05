@@ -3,7 +3,7 @@
 	Script Purpose	:	Handles the quest, "Elemental Encroachment"
 	Script Author	:	Cynnar
 	Script Date		:	7/5/2015
-	Script Notes	:	
+	Script Notes	:
 
 	Zone			:	Darklight Wood
 	Quest Giver		:	Udiyitas X'Kilrae

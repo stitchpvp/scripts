@@ -11,7 +11,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)
@@ -29,13 +29,13 @@ function hailed(NPC, Spawn)
 	AddConversationOption(conversation, "I would like the writ: Fayflies")
 	AddConversationOption(conversation, "I will return later to lend my aid.")
 	StartConversation(conversation, NPC, Spawn, "Welcome to the Order of Arcane, .. GetName(Spawn) .. .  We could use your assistance if you are willing to lend a hand.")
-	if convo==13 then
-		PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_3_1011.mp3", "", "", 0, 0, Spawn)
-		AddConversationOption(conversation, "I would like the writ: Scorched Skeletal Wizards", "dlg_13_1")
-		AddConversationOption(conversation, "I would like the writ: Fayflies")
-		AddConversationOption(conversation, "I will return later to lend my aid.")
-		StartConversation(conversation, NPC, Spawn, "Welcome to the Order of Arcane, .. GetName(Spawn) .. .  We could use your assistance if you are willing to lend a hand.")
-	end
+	--if convo==13 then
+	--	PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_3_1011.mp3", "", "", 0, 0, Spawn)
+	--	AddConversationOption(conversation, "I would like the writ: Scorched Skeletal Wizards", "dlg_13_1")
+	--	AddConversationOption(conversation, "I would like the writ: Fayflies")
+	--	AddConversationOption(conversation, "I will return later to lend my aid.")
+	--	StartConversation(conversation, NPC, Spawn, "Welcome to the Order of Arcane, .. GetName(Spawn) .. .  We could use your assistance if you are willing to lend a hand.")
+	--end
 
 end
 

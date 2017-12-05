@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "Don't Get It in Arozik's Eyes"
 	Script Author	: Scatman
 	Script Date	: 2009.02.22
-	
+
 	Zone       : Timorous Deep
 	Quest Giver: Tertiary Mak'Ki
 	Preceded by: Don't Get It in Arozik's Eyes (dont_get_it_in_aroziks_eyes.lua)

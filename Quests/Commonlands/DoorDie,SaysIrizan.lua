@@ -3,17 +3,17 @@
 	Script Purpose	:	Handles the quest, "Do or Die, Says Irizan"
 	Script Author	:	QuestParser (Replace this)
 	Script Date		:	7/8/2017
-	Script Notes	:	
+	Script Notes	:
 
 	Zone			:	Commonlands
-	Quest Giver		:	
+	Quest Giver		:
 	Preceded by		:	None
 	Followed by		:	None
 --]]
 
 
 function Init(Quest)
-	AddQuestStepChat(Quest, 1, "Speak with Merchant Edmond at the Crossroads", 1, "My contact is Merchant Edmond at the Crossroads.  He will give me my assignment.", 11, --[[ ID's --]])
+	AddQuestStepChat(Quest, 1, "Speak with Merchant Edmond at the Crossroads", 1, "My contact is Merchant Edmond at the Crossroads.  He will give me my assignment.", 11, nil)
 	AddQuestStepCompleteAction(Quest, 1, "Step1Complete")
 end
 
@@ -21,7 +21,7 @@ function Step1Complete(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 1, "I've spoken with Merchant Edmond.")
 	UpdateQuestTaskGroupDescription(Quest, 1, "I've got my assignment from Edmond. I'm supposed to help a dark elf. Huh?")
 
-	AddQuestStepChat(Quest, 2, "I should speak with V'tal Narin", 1, "Help the dark elf at the Crossroads and give whatever I find to Merchant Edmond.", 11, --[[ ID's --]])
+	AddQuestStepChat(Quest, 2, "I should speak with V'tal Narin", 1, "Help the dark elf at the Crossroads and give whatever I find to Merchant Edmond.", 11, nil)
 	AddQuestStepCompleteAction(Quest, 2, "Step2Complete")
 end
 
@@ -35,7 +35,7 @@ end
 function Step3Complete(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 3, "I've helped V'tal Narin.")
 
-	AddQuestStepChat(Quest, 4, "Now that I have helped V'tal Narin, I should return to Edmond at the Crossroads", 1, "Help the dark elf at the Crossroads and give whatever I find to Merchant Edmond.", 11, --[[ ID's --]])
+	AddQuestStepChat(Quest, 4, "Now that I have helped V'tal Narin, I should return to Edmond at the Crossroads", 1, "Help the dark elf at the Crossroads and give whatever I find to Merchant Edmond.", 11, nil)
 	AddQuestStepCompleteAction(Quest, 4, "Step4Complete")
 end
 
@@ -43,7 +43,7 @@ function Step4Complete(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 4, "I've given the items to Edmond.")
 	UpdateQuestTaskGroupDescription(Quest, 2, "I gave Edmond the items I found while helping V'tal Narin.")
 
-	AddQuestStepChat(Quest, 5, "Deliver report to Inquisitor Irizan", 1, "I need to deliver this ledger to Inquisitor Irizan.", 716, --[[ ID's --]])
+	AddQuestStepChat(Quest, 5, "Deliver report to Inquisitor Irizan", 1, "I need to deliver this ledger to Inquisitor Irizan.", 716, nil)
 	AddQuestStepCompleteAction(Quest, 5, "QuestComplete")
 end
 

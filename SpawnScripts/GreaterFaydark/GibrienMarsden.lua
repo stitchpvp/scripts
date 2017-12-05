@@ -11,7 +11,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)
@@ -39,57 +39,57 @@ function hailed(NPC, Spawn)
 	AddConversationOption(conversation, "Have I proven my worth to Kelethin yet?")
 	AddConversationOption(conversation, "Nothing right now, thanks.")
 	StartConversation(conversation, NPC, Spawn, "What would you like more information about?")
-	if convo==58 then
-		PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_1_1022.mp3", "", "", 0, 0, Spawn)
-		AddConversationOption(conversation, "I'm interested in becoming a citizen of Kelethin.", "dlg_58_1")
-		AddConversationOption(conversation, "I'd like to work on my citizenship with Kelethin.")
-		AddConversationOption(conversation, "Have I proven my worth to Kelethin yet?")
-		AddConversationOption(conversation, "Nothing right now, thanks.")
-		StartConversation(conversation, NPC, Spawn, "What would you like more information about?")
-	end
+	--if convo==58 then
+	--	PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_1_1022.mp3", "", "", 0, 0, Spawn)
+	--	AddConversationOption(conversation, "I'm interested in becoming a citizen of Kelethin.", "dlg_58_1")
+	--	AddConversationOption(conversation, "I'd like to work on my citizenship with Kelethin.")
+	--	AddConversationOption(conversation, "Have I proven my worth to Kelethin yet?")
+	--	AddConversationOption(conversation, "Nothing right now, thanks.")
+	--	StartConversation(conversation, NPC, Spawn, "What would you like more information about?")
+	--end
 
-	if convo==59 then
-		PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_1_1022.mp3", "", "", 0, 0, Spawn)
-		AddConversationOption(conversation, "I'm interested in becoming a citizen of Kelethin.", "dlg_59_1")
-		AddConversationOption(conversation, "I'd like to work on my citizenship with Kelethin.")
-		AddConversationOption(conversation, "Have I proven my worth to Kelethin yet?")
-		AddConversationOption(conversation, "Nothing right now, thanks.")
-		StartConversation(conversation, NPC, Spawn, "What would you like more information about?")
-	end
+	--if convo==59 then
+	--	PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_1_1022.mp3", "", "", 0, 0, Spawn)
+	--	AddConversationOption(conversation, "I'm interested in becoming a citizen of Kelethin.", "dlg_59_1")
+	--	AddConversationOption(conversation, "I'd like to work on my citizenship with Kelethin.")
+	--	AddConversationOption(conversation, "Have I proven my worth to Kelethin yet?")
+	--	AddConversationOption(conversation, "Nothing right now, thanks.")
+	--	StartConversation(conversation, NPC, Spawn, "What would you like more information about?")
+	--end
 
-	if convo==60 then
-		PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_2_1022.mp3", "", "", 0, 0, Spawn)
-		AddConversationOption(conversation, "I'm interested in becoming a citizen of Kelethin.", "dlg_60_1")
-		AddConversationOption(conversation, "I'd like to work on my citizenship with Kelethin.")
-		AddConversationOption(conversation, "Have I proven my worth to Kelethin yet?")
-		AddConversationOption(conversation, "Nothing right now, thanks.")
-		StartConversation(conversation, NPC, Spawn, "What would you like more information about?")
-	end
+	--if convo==60 then
+	--	PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_2_1022.mp3", "", "", 0, 0, Spawn)
+	--	AddConversationOption(conversation, "I'm interested in becoming a citizen of Kelethin.", "dlg_60_1")
+	--	AddConversationOption(conversation, "I'd like to work on my citizenship with Kelethin.")
+	--	AddConversationOption(conversation, "Have I proven my worth to Kelethin yet?")
+	--	AddConversationOption(conversation, "Nothing right now, thanks.")
+	--	StartConversation(conversation, NPC, Spawn, "What would you like more information about?")
+	--end
 
-	if convo==61 then
-		PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_3_1022.mp3", "", "", 0, 0, Spawn)
-		AddConversationOption(conversation, "I'm interested in becoming a citizen of Kelethin.", "dlg_61_1")
-		AddConversationOption(conversation, "I'd like to work on my citizenship with Kelethin.")
-		AddConversationOption(conversation, "Have I proven my worth to Kelethin yet?")
-		AddConversationOption(conversation, "Nothing right now, thanks.")
-		StartConversation(conversation, NPC, Spawn, "What would you like more information about?")
-	end
+	--if convo==61 then
+	--	PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_3_1022.mp3", "", "", 0, 0, Spawn)
+	--	AddConversationOption(conversation, "I'm interested in becoming a citizen of Kelethin.", "dlg_61_1")
+	--	AddConversationOption(conversation, "I'd like to work on my citizenship with Kelethin.")
+	--	AddConversationOption(conversation, "Have I proven my worth to Kelethin yet?")
+	--	AddConversationOption(conversation, "Nothing right now, thanks.")
+	--	StartConversation(conversation, NPC, Spawn, "What would you like more information about?")
+	--end
 
-	if convo==62 then
-		PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_2_1022.mp3", "", "", 0, 0, Spawn)
-		AddConversationOption(conversation, "I'd like to work on my citizenship with Kelethin.", "dlg_62_1")
-		AddConversationOption(conversation, "Have I proven my worth to Kelethin yet?")
-		AddConversationOption(conversation, "Nothing right now, thanks.")
-		StartConversation(conversation, NPC, Spawn, "What would you like more information about?")
-	end
+	--if convo==62 then
+	--	PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_2_1022.mp3", "", "", 0, 0, Spawn)
+	--	AddConversationOption(conversation, "I'd like to work on my citizenship with Kelethin.", "dlg_62_1")
+	--	AddConversationOption(conversation, "Have I proven my worth to Kelethin yet?")
+	--	AddConversationOption(conversation, "Nothing right now, thanks.")
+	--	StartConversation(conversation, NPC, Spawn, "What would you like more information about?")
+	--end
 
-	if convo==63 then
-		PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_2_1022.mp3", "", "", 0, 0, Spawn)
-		AddConversationOption(conversation, "I'd like to work on my citizenship with Kelethin.", "dlg_63_1")
-		AddConversationOption(conversation, "Have I proven my worth to Kelethin yet?")
-		AddConversationOption(conversation, "Nothing right now, thanks.")
-		StartConversation(conversation, NPC, Spawn, "What would you like more information about?")
-	end
+	--if convo==63 then
+	--	PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_2_1022.mp3", "", "", 0, 0, Spawn)
+	--	AddConversationOption(conversation, "I'd like to work on my citizenship with Kelethin.", "dlg_63_1")
+	--	AddConversationOption(conversation, "Have I proven my worth to Kelethin yet?")
+	--	AddConversationOption(conversation, "Nothing right now, thanks.")
+	--	StartConversation(conversation, NPC, Spawn, "What would you like more information about?")
+	--end
 
 end
 

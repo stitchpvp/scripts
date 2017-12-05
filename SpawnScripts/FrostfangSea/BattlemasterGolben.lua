@@ -3,7 +3,7 @@
 	Script Purpose	: Battlemaster Golben <Guardians of Herga's Choke>
 	Script Author	: theFoof
 	Script Date	: 2013.06.01
-	Script Notes	: 
+	Script Notes	:
 --]]
 local DemandSupplies = 45
 
@@ -11,7 +11,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)

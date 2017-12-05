@@ -24,7 +24,7 @@ end
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
 	local conversation = CreateConversation()
-	
+
 	AddConversationOption(conversation, "Thanks.")
 	StartConversation(conversation, QuestGiver, Player, "Good. The machines are likely a couple of levels up from this one. I'm sure I'll hear the explosions from here. I do hope you enjoy yourself, hah hah!")
 end

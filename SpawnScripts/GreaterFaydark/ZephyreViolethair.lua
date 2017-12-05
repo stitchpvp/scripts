@@ -1,6 +1,6 @@
 --[[
 	Script Name	: SpawnScripts/GreaterFaydark/ZephyreViolethair.lua
-	Script Purpose	: Zephyre Violethair 
+	Script Purpose	: Zephyre Violethair
 	Script Author	: John Adams
 	Script Date	: 2009.03.01
 	Script Notes	: Auto-Generated Conversation from PacketParser Data
@@ -11,7 +11,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)
@@ -29,21 +29,21 @@ function hailed(NPC, Spawn)
 	AddConversationOption(conversation, "Actually, I was hoping you could tell me a bit about Kelethin.")
 	AddConversationOption(conversation, "No, sorry.")
 	StartConversation(conversation, NPC, Spawn, "Hi! Do you have a moment to help me out?")
-	if convo==22 then
-		PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_3_1005.mp3", "", "", 0, 0, Spawn)
-		AddConversationOption(conversation, "I might.", "dlg_22_1")
-		AddConversationOption(conversation, "Actually, I was hoping you could tell me a bit about Kelethin.")
-		AddConversationOption(conversation, "No, sorry.")
-		StartConversation(conversation, NPC, Spawn, "Hi! Do you have a moment to help me out?")
-	end
+	--if convo==22 then
+	--	PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_3_1005.mp3", "", "", 0, 0, Spawn)
+	--	AddConversationOption(conversation, "I might.", "dlg_22_1")
+	--	AddConversationOption(conversation, "Actually, I was hoping you could tell me a bit about Kelethin.")
+	--	AddConversationOption(conversation, "No, sorry.")
+	--	StartConversation(conversation, NPC, Spawn, "Hi! Do you have a moment to help me out?")
+	--end
 
-	if convo==23 then
-		PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_3_1005.mp3", "", "", 0, 0, Spawn)
-		AddConversationOption(conversation, "I might.", "dlg_23_1")
-		AddConversationOption(conversation, "Actually, I was hoping you could tell me a bit about Kelethin.")
-		AddConversationOption(conversation, "No, sorry.")
-		StartConversation(conversation, NPC, Spawn, "Hi! Do you have a moment to help me out?")
-	end
+	--if convo==23 then
+	--	PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_3_1005.mp3", "", "", 0, 0, Spawn)
+	--	AddConversationOption(conversation, "I might.", "dlg_23_1")
+	--	AddConversationOption(conversation, "Actually, I was hoping you could tell me a bit about Kelethin.")
+	--	AddConversationOption(conversation, "No, sorry.")
+	--	StartConversation(conversation, NPC, Spawn, "Hi! Do you have a moment to help me out?")
+	--end
 
 end
 

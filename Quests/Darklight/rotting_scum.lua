@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "Rotting Scum"
 	Script Author	: Scatman
 	Script Date	: 2009.02.02
-	
+
 	Zone       : Darklight Wood
 	Quest Giver: Ginwyss D'Arkenett
 	Preceded by: None

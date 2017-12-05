@@ -3,7 +3,7 @@
 	Script Purpose	: Hillfred Kinloch <Blade Maiden>
 	Script Author	: theFoof
 	Script Date	: 2013.06.09
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 local NothingWaste = 56
@@ -29,13 +29,13 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	if not HasCompletedQuest(Spawn, NothingWaste) then
 		PlayFlavor(NPC, "", "There are some coldain that could use your help.  Speak with Dolur Axebeard or Belka Thunderheart at the Great Shelf.", "nod", 0, 0, Spawn)
 	elseif HasCompletedQuest(Spawn, NothingWaste) and not HasCompletedQuest(Spawn, BloodMaiden) and not HasQuest(Spawn, BloodMaiden) then
@@ -57,7 +57,7 @@ function hailed(NPC, Spawn)
 		AddConversationOption(conversation, "I like my keg exactly the way it is.  Goodbye.")
 		StartConversation(conversation, NPC, Spawn, "Now for a task that is sure to tap your keg of skill, if not empty it!")
 	elseif GetQuestStep(Spawn, SkullsTaking) == 1 then
-		PlayFlavor(NPC, "", "Return from Jagged Daggers with Ry'Gorr skulls. I'll adorn the defnses with 'em!", "agree", 0, 0, Spawn) 
+		PlayFlavor(NPC, "", "Return from Jagged Daggers with Ry'Gorr skulls. I'll adorn the defnses with 'em!", "agree", 0, 0, Spawn)
 	elseif GetQuestStep(Spawn, SkullsTaking) == 2 then
 		PlayFlavor(NPC, "hillfred_kinloch/halas/cragged_spine/hillfred_kinloch_011.mp3", "", "", 1023147983, 2407728628, Spawn)
 		AddConversationOption(conversation, "Many orc skulls.", "Quest2Chat_3")
@@ -136,7 +136,7 @@ end
 function Quest2Chat_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	AddConversationOption(conversation, "What should I do?", "OfferSkullsTaking")
 	AddConversationOption(conversation, "I am not going over there. No way!")
 	StartConversation(conversation, NPC, Spawn, "Aye.  The isle with the spires of ice sticking out of it, like velium blades from the back of a slain giant.  It is across the waters to the west of the beach front.")
@@ -165,7 +165,7 @@ end
 function Quest3Chat_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	AddConversationOption(conversation, "It is hard to imagine.", "Quest3Chat_3")
 	StartConversation(conversation, NPC, Spawn, "For years?!  Ha! I hightly doubt that. Although, I was raised to believe that anything is possible, I cannot fathom these brutes being tempered by strategy or reined in by tactics.")
 end

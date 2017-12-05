@@ -6,13 +6,13 @@ function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
   Say(NPC, "What do you want?", Spawn)
-  
+
   if HasQuest(Spawn, QUEST_1_Captain_Feralis) then
 	AddConversationOption(conversation, "Your taxes weren't all in your mailbox, you still owe more.", "Option1")
 	StartConversation(conversation, NPC, Spawn, "What yous want?")
   end
-end  
-  
+end
+
 
 function Option1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)

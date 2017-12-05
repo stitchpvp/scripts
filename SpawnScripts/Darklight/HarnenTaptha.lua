@@ -1,6 +1,6 @@
 --[[
 	Script Name	: SpawnScripts/Darklight/HarnenTaptha.lua
-	Script Purpose	: Harnen Taptha 
+	Script Purpose	: Harnen Taptha
 	Script Author	: John Adams
 	Script Date	: 2009.01.31
 	Script Notes	: Auto-Generated Conversation from PacketParser Data
@@ -10,13 +10,13 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	if HasQuest(Spawn, 99) and GetQuestStep(Spawn, 99) == 1 then
 		WhatDoYouWant(NPC, Spawn, conversation)
 	else
@@ -43,7 +43,7 @@ function dlg_2_2(NPC, Spawn)
 	SetStepComplete(Spawn, 99, 1)
 	SpawnSet(NPC, "attackable", 1)
 	SpawnSet(NPC, "show_level", 1)
-	
+
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 
@@ -54,7 +54,7 @@ end
 function healthchanged(NPC, Spawn)
 	current_hp = GetHP(NPC)
 	max_hp = GetMaxHP(NPC)
-	
+
 	if (current_hp <= (max_hp *2)) then
 		choice = math.random(1, 2)
 		if choice == 1 then

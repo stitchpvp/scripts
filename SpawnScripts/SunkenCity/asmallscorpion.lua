@@ -3,7 +3,7 @@
 	Script Purpose	: a small scorpion
 	Script Author	: Scatman
 	Script Date	: 2009.07.28
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 local QUEST_3_FROM_THORSON = 268
@@ -12,7 +12,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)

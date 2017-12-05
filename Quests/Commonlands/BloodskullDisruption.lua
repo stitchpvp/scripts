@@ -3,38 +3,38 @@
 	Script Purpose	:	Handles the quest, "Bloodskull Disruption"
 	Script Author	:	QuestParser (Replace this)
 	Script Date		:	7/8/2017
-	Script Notes	:	
+	Script Notes	:
 
 	Zone			:	Commonlands
-	Quest Giver		:	
+	Quest Giver		:
 	Preceded by		:	None
 	Followed by		:	None
 --]]
 
 
 function Init(Quest)
-	AddQuestStepSpell(Quest, 1, "I need to disrupt the southern Bloodskull offensive encampment", 1, 100, "I need to disrupt the orc encampments south of the kerran and ratonga communities.", 11, --[[ ID's --]])
+	AddQuestStepSpell(Quest, 1, "I need to disrupt the southern Bloodskull offensive encampment", 1, 100, "I need to disrupt the orc encampments south of the kerran and ratonga communities.", 11, nil)
 	AddQuestStepCompleteAction(Quest, 1, "Step1Complete")
 end
 
 function Step1Complete(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 1, "I have disrupted the southern Bloodskull offensive encampment.")
 
-	AddQuestStepSpell(Quest, 2, "I need to disrupt the northern Bloodskull offensive encampment", 1, 100, "I need to disrupt the orc encampments south of the kerran and ratonga communities.", 11, --[[ ID's --]])
+	AddQuestStepSpell(Quest, 2, "I need to disrupt the northern Bloodskull offensive encampment", 1, 100, "I need to disrupt the orc encampments south of the kerran and ratonga communities.", 11, nil)
 	AddQuestStepCompleteAction(Quest, 2, "Step2Complete")
 end
 
 function Step2Complete(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 2, "I have disrupted the northern Bloodskull offensive encampment.")
 
-	AddQuestStepSpell(Quest, 3, "I need to destroy 5 boxes of Bloodskull supplies", 5, 100, "I need to disrupt the orc encampments south of the kerran and ratonga communities.", 655, --[[ ID's --]])
+	AddQuestStepSpell(Quest, 3, "I need to destroy 5 boxes of Bloodskull supplies", 5, 100, "I need to disrupt the orc encampments south of the kerran and ratonga communities.", 655, nil)
 	AddQuestStepCompleteAction(Quest, 3, "Step3Complete")
 end
 
 function Step3Complete(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 3, "I have destroyed 5 boxes of Bloodskull supplies.")
 
-	AddQuestStepSpell(Quest, 4, "I need to destroy the orc siege tower", 1, 100, "I need to disrupt the orc encampments south of the kerran and ratonga communities.", 2339, --[[ ID's --]])
+	AddQuestStepSpell(Quest, 4, "I need to destroy the orc siege tower", 1, 100, "I need to disrupt the orc encampments south of the kerran and ratonga communities.", 2339, nil)
 	AddQuestStepCompleteAction(Quest, 4, "Step4Complete")
 end
 
@@ -42,7 +42,7 @@ function Step4Complete(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 4, "I have destroyed the orc siege tower.")
 	UpdateQuestTaskGroupDescription(Quest, 1, "I have disrupted the orc encampments.")
 
-	AddQuestStepChat(Quest, 5, "I need to return to Rainus", 1, "Now that I have done as he asked, I should return to Rainus Canton.", 11, --[[ ID's --]])
+	AddQuestStepChat(Quest, 5, "I need to return to Rainus", 1, "Now that I have done as he asked, I should return to Rainus Canton.", 11, nil)
 	AddQuestStepCompleteAction(Quest, 5, "QuestComplete")
 end
 

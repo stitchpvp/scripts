@@ -3,7 +3,7 @@
 	Script Purpose	: Blorpisa Bogchild located at the Great Shelf
 	Script Author	: theFoof
 	Script Date	: 2013.06.02
-	Script Notes	: 
+	Script Notes	:
 --]]
 local FieldTwo = 24
 
@@ -25,13 +25,13 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	if not HasCompletedQuest(Spawn, WeaponChoice) and not HasQuest(Spawn, WeaponChoice) then
 		PlayFlavor(NPC, "blorpisa_bogchild/halas/great_shelf/blorpisa_bogchild/blorpisa_bogchild_003.mp3", "", "", 3193177069, 1800399458, Spawn)
 	    AddConversationOption(conversation, "Hello, Blorpisa.", "Quest1Chat_1")
@@ -140,7 +140,7 @@ end
 function Quest1Chat_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	AddConversationOption(conversation, "Thanks, Blorpisa.")
 	StartConversation(conversation, NPC, Spawn, "You can find the weapons on the slain coldain that lie on the battlefield southeast of the Great Shelf.")
 end

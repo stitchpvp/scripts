@@ -2,7 +2,7 @@
     Script Name    : Quests/ThunderingSteppes/AScryingShame.lua
     Script Author  : Jabantiz
     Script Date    : 2014.07.08 08:07:47
-    Script Purpose : 
+    Script Purpose :
 
         Zone       : ThunderingSteppes
         Quest Giver: Tish Tickers (2490042)
@@ -35,7 +35,7 @@ end
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
 	local conversation = CreateConversation()
-	
+
 	AddConversationOption(conversation, "Okay.")
 	StartConversation(conversation, QuestGiver, Player, "Great! Thank you! Here, take these five scrying stones and see if you can get me my ancient silver coins. If you run out of stones, you might need to shop around and see if some of the local merchants have some. Please be fast. I don't want to get a visit from the clockworks...")
 	SetStepComplete(Player, WatchYourStepInTheTSPartII, 1)

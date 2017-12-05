@@ -3,7 +3,7 @@
 	Script Purpose	:	for the quest Roughing Up the Reinforcements
 	Script Author	:	theFoof
 	Script Date		:	2013.6.10
-	Script Notes	:	
+	Script Notes	:
 
 	Zone			:	Frostfang Sea
 	Quest Giver		:	Thirin Veliumdelver
@@ -97,5 +97,5 @@ function Reload(Quest, QuestGiver, Player, Step)
 		KilledShaman(Quest, QuestGiver, Player)
 	elseif Step == 5 then
 		GotEye(Quest, QuestGiver, Player)
-	end		
+	end
 end

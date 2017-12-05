@@ -1,6 +1,6 @@
 --[[
 	Script Name	: SpawnScripts/FrostfangSea/BelkaThunderheart.lua
-	Script Purpose	: Belka Thunderheart 
+	Script Purpose	: Belka Thunderheart
 	Script Author	: theFoof
 	Script Date	: 2013.05.31
 	Script Notes	:
@@ -34,7 +34,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
@@ -231,7 +231,7 @@ end
 function Quest2Chat_1(NPC, Spawn)
     FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-   
+
     PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_3_1009.mp3", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Tell me more.", "Quest2Chat_3")
 	AddConversationOption(conversation, "Of course.  An honorable orc is an oxymoron.", "Quest2Chat_2")
@@ -285,7 +285,7 @@ end
 function Quest3Chat_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
     conversation = CreateConversation()
-	
+
 	PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_2_1009.mp3", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "What's most unnatural?", "Quest3Chat_2")
 	AddConversationOption(conversation, "You mean the skeletal orcs?", "Quest3Chat_7")
@@ -791,7 +791,7 @@ function Quest8Chat_5(NPC, Spawn)
     AddConversationOption(conversation, "Just get me out of here.", "Quest8Chat_3")
     AddConversationOption(conversation, "the sooner  I get off this rock, the better. Goodbye.")
     StartConversation(conversation, NPC, Spawn, "Well, I'm sure you have a life to return to. This is likely all we coldain have left.")
-end 
+end
 
 function OfferDisplacedDiscouraged(NPC, Spawn)
 	OfferQuest(NPC, Spawn, DisplacedDiscouraged)

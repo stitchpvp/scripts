@@ -2,7 +2,7 @@
     Script Name    : SpawnScripts/FrostfangSea/DefenderDetmer.lua
     Script Author  : Flunklesnarkin
     Script Date    : 2015.10.14 09:10:02
-    Script Purpose : 
+    Script Purpose :
                    : Testing guard voiceovers.. not complete
 --]]
 

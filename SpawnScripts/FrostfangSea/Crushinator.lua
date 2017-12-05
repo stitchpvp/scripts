@@ -3,7 +3,7 @@
 	Script Purpose	: Crushinator movement loop
 	Script Author	: theFoof
 	Script Date	: 2013.5.20
-	Script Notes	: 
+	Script Notes	:
 --]]
 function spawn(NPC)
     MovementLoopAddLocation(NPC, -273.33, 23.12, -407.99, 8, 0)
@@ -18,5 +18,5 @@ function hailed(NPC, Spawn)
 end
 
 function respawn(NPC)
-    spawn(NPC)
+SpawnMob(NPC)
 end

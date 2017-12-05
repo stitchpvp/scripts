@@ -1,6 +1,6 @@
 --[[
 	Script Name	: SpawnScripts/Oakmyst/ObserverGaladn.lua
-	Script Purpose	: Observer Galadn 
+	Script Purpose	: Observer Galadn
 	Script Author	: scatman
 	Script Date	: 2009.05.10
 	Script Notes	: Auto-Generated Conversation from PacketParser Data
@@ -10,7 +10,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)

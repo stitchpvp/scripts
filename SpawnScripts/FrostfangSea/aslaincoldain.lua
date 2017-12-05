@@ -3,7 +3,7 @@
 	Script Purpose	: for the spawn "a slain coldain"
 	Script Author	: theFoof
 	Script Date	: 2013.06.3
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 local WeaponChoice = 47
@@ -12,7 +12,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function casted_on(NPC, Spawn, SpellName)

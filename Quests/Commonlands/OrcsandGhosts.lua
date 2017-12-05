@@ -3,24 +3,24 @@
 	Script Purpose	:	Handles the quest, "Orcs and Ghosts"
 	Script Author	:	QuestParser (Replace this)
 	Script Date		:	7/8/2017
-	Script Notes	:	
+	Script Notes	:
 
 	Zone			:	Commonlands
-	Quest Giver		:	
+	Quest Giver		:
 	Preceded by		:	None
 	Followed by		:	None
 --]]
 
 
 function Init(Quest)
-	AddQuestStepKill(Quest, 1, "I need to slay ten ghostly orcs", 10, 100, "I need to kill ten ghostly orcs.", 611, --[[ ID's --]])
+	AddQuestStepKill(Quest, 1, "I need to slay ten ghostly orcs", 10, 100, "I need to kill ten ghostly orcs.", 611, nil)
 	AddQuestStepCompleteAction(Quest, 1, "Step1Complete")
 end
 
 function Step1Complete(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 1, "I have slain the ghostly orcs.")
 
-	AddQuestStepChat(Quest, 2, "I need to return to Gerun", 1, "I need to kill ten ghostly orcs.", 11, --[[ ID's --]])
+	AddQuestStepChat(Quest, 2, "I need to return to Gerun", 1, "I need to kill ten ghostly orcs.", 11, nil)
 	AddQuestStepCompleteAction(Quest, 2, "QuestComplete")
 end
 

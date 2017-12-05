@@ -3,7 +3,7 @@
 	Script Purpose	: Nektropos Castle
 	Script Author	: smash
 	Script Date	: 2016.1.24
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 function init_zone_script(Zone)

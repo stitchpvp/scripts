@@ -3,7 +3,7 @@
 	Script Purpose	: Consul Bree <Qeynos Guard>
 	Script Author	: Scatman
 	Script Date	: 2008.09.21
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 local QUEST_FROM_OAKMYST = 209
@@ -21,17 +21,17 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	if HasQuest(Spawn, QUEST_FROM_OAKMYST) or HasQuest(Spawn, QUEST_FROM_PEATBOG) then
 		AddConversationOption(conversation, "I am here as requested.", "HereAsRequested")
 	end
-	
+
 	if HasCompletedQuest(Spawn, QUEST_1) then
 		if HasCompletedQuest(Spawn, QUEST_2) then
 			if HasCompletedQuest(Spawn, QUEST_3) then
@@ -69,18 +69,18 @@ function HereAsRequested(NPC, Spawn)
 	elseif HasQuest(Spawn, QUEST_FROM_PEATBOG) then
 		SetStepComplete(Spawn, QUEST_FROM_PEATBOG, 1)
 	end
-	
+
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/consul_bree/qey_adv03_caves/quests/bree/bree_001.mp3", "", "", 2064805321, 3198467105)
-	
+
 	if not HasCompletedQuest(Spawn, QUEST_1) and not HasQuest(Spawn, QUEST_1) then
 		AddConversationOption(conversation, "How can I be of service?", "dlg_0_2")
 	else
 		AddConversationOption(conversation, "I will get to work on my current task.", "dlg_2_2")
 	end
-	
+
 	StartConversation(conversation, NPC, Spawn, "That you are. I appreciate your answering the summons.")
 end
 
@@ -181,12 +181,12 @@ function OnQuest1(NPC, Spawn, conversation)
 	else
 		AddConversationOption(conversation, "No, not yet.")
 	end
-	
+
 	--------- TEMPORARY
 	if HasQuest(Spawn, QUEST_1) and GetQuestStep(Spawn, QUEST_1) == 2 then
 		SetStepComplete(Spawn, QUEST_1, 2)
 	end
-	
+
 	AddConversationOption(conversation, "What can you tell me about the Caves?", "AboutCaves")
 	StartConversation(conversation, NPC, Spawn, "Have you gotten the gnollish order book?")
 end
@@ -240,7 +240,7 @@ function dlg_7_1(NPC, Spawn)
 	if HasQuest(Spawn, QUEST_1) then
 		SetStepComplete(Spawn, QUEST_1, 4)
 	end
-	
+
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 
@@ -447,7 +447,7 @@ end
 
 function dlg_28_1(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_4, 2)
-	
+
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 

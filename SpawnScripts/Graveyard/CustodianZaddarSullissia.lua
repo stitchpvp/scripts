@@ -3,7 +3,7 @@
 	Script Purpose	: Custodian Zaddar Sullissia <Academy of Arcane Science>
 	Script Author	: Scatman
 	Script Date	: 2009.04.11
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 local DARKELF_MENTOR_QUEST_5 = 195
@@ -27,17 +27,17 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	if HasQuest(Spawn, DARKELF_MENTOR_QUEST_5) then
 		AddConversationOption(conversation, "My name is " .. GetName(Spawn) .. ". Aldera V'exxa in Longshadow Alley sent me to speak to you.", "dlg_0_1")
 	end
-	
+
 	if HasCompletedQuest(Spawn, QUEST_1) then
 		if HasCompletedQuest(Spawn, QUEST_2) then
 			if HasCompletedQuest(Spawn, QUEST_3) then
@@ -102,12 +102,12 @@ end
 
 function dlg_0_1(NPC, Spawn)
 	SetStepComplete(Spawn, DARKELF_MENTOR_QUEST_5, 1)
-	
+
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/custodian_zaddar_sullissia/fprt_adv02_graveyard/custodian_zaddar002.mp3", "", "", 2597518553, 302585905, Spawn)
-	
+
 	if not HasCompletedQuest(Spawn, QUEST_1) or not HasQuest(Spawn, QUEST_1) then
 		AddConversationOption(conversation, "I am honored that you know my name.", "dlg_1_1")
 	end
@@ -392,11 +392,11 @@ end
 
 function OnQuest1(NPC, Spawn, conversation)
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/custodian_zaddar_sullissia/fprt_adv02_graveyard/custodian_zaddar031.mp3", "", "", 3448241542, 826932721, Spawn)
-	
+
 	if (GetQuestStep(Spawn, QUEST_1) == 6) then
 		AddConversationOption(conversation, "I checked the tombs as you asked.", "PleasedToHear")
 	end
-	
+
 	AddConversationOption(conversation, "I'm not finished yet, Zaddar.")
 	StartConversation(conversation, NPC, Spawn, "Back so soon? I certainly hope you didn't just sneak off somewhere and take a nap. The Overlord is not to be trifled with!")
 end
@@ -405,7 +405,7 @@ function PleasedToHear(NPC, Spawn)
 	if HasQuest(Spawn, QUEST_1) then
 		SetStepComplete(Spawn, QUEST_1, 6)
 	end
-	
+
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 
@@ -466,11 +466,11 @@ end
 
 function OnQuest3(NPC, Spawn, conversation)
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/custodian_zaddar_sullissia/fprt_adv02_graveyard/custodian_zaddar037.mp3", "", "", 2173814710, 3365638930, Spawn)
-	
+
 	if GetQuestStep(Spawn, QUEST_3) == 5 then
 		AddConversationOption(conversation, "I spoke to Varacus and have returned with the pages you needed.", "dlg_4_1")
 	end
-	
+
 	AddConversationOption(conversation, "Not yet.")
 	StartConversation(conversation, NPC, Spawn, "Ah, " .. GetName(Spawn) .. ". I see you have returned. Have you brought back the pages you obtained from Varacus of the Keepers of Ethernere?")
 end
@@ -479,7 +479,7 @@ function dlg_4_1(NPC, Spawn)
 	if HasQuest(Spawn, QUEST_3) then
 		SetStepComplete(Spawn, QUEST_3, 5)
 	end
-	
+
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 
@@ -649,13 +649,13 @@ end
 
 function dlg_4_16(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_4, 1)
-	
+
 	 -- Relic of Unholy Power
 	 -- TODO: Display quest reward popup
-	if not HasItem(Spawn, 7868) then 
+	if not HasItem(Spawn, 7868) then
 		SummonItem(Spawn, 7868)
 	end
-	
+
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 
@@ -711,7 +711,7 @@ function dlg_5_1(NPC, Spawn)
 	if HasQuest(Spawn, QUEST_4) then
 		SetStepComplete(Spawn, QUEST_4, 4)
 	end
-	
+
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 
@@ -814,7 +814,7 @@ function WellDone(NPC, Spawn)
 	if HasQuest(Spawn, QUEST_5) then
 		SetStepComplete(Spawn, QUEST_5, 2)
 	end
-	
+
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 
@@ -856,7 +856,7 @@ function ExcellentWork(NPC, Spawn, conversation)
 	if HasQuest(Spawn, QUEST_6) then
 		SetStepComplete(Spawn, QUEST_6, 2)
 	end
-	
+
 	if conversation == nil then
 		FaceTarget(NPC, Spawn)
 		conversation = CreateConversation()
@@ -946,7 +946,7 @@ end
 
 function dlg_36_4(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_7, 1)
-	
+
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 
@@ -1056,7 +1056,7 @@ end
 
 function dlg_18_12(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_7, 3)
-	
+
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 

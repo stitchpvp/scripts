@@ -2,8 +2,8 @@
     Script Name    : SpawnScripts/Everfrost/ThyrStormhammer.lua
     Script Author  : Flunklesnarkin
     Script Date    : 2016.01.13 02:01:44
-    Script Purpose : 
-                   : 
+    Script Purpose :
+                   :
 --]]
 
 local SuppliesForThePioneers = 171

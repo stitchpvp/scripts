@@ -1,6 +1,6 @@
 --[[
 	Script Name	: SpawnScripts/GreaterFaydark/SuaAugren.lua
-	Script Purpose	: Sua Augren 
+	Script Purpose	: Sua Augren
 	Script Author	: John Adams
 	Script Date	: 2009.03.01
 	Script Notes	: Auto-Generated Conversation from PacketParser Data
@@ -11,7 +11,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)
@@ -27,19 +27,19 @@ function hailed(NPC, Spawn)
 		PlayFlavor(NPC, "voiceover/english/exp03_questvo2/sua_augren/_exp03/exp03_rgn_greater_faydark/sua_augren/sua_augren001.mp3", "", "", 3127279058, 3080550258, Spawn)
 	AddConversationOption(conversation, "I understand, goodbye.", "dlg_6_1")
 	StartConversation(conversation, NPC, Spawn, "I'd love to chat but I've so much work to do.")
-	if convo==9 then
-		PlayFlavor(NPC, "voiceover/english/exp03_questvo2/sua_augren/_exp03/exp03_rgn_greater_faydark/sua_augren/sua_augren001.mp3", "", "", 3127279058, 3080550258, Spawn)
-		AddConversationOption(conversation, "Ami wants you to fix her coat.  She broke the buttons... but wants you to know she didn't mean it.", "dlg_9_1")
-		AddConversationOption(conversation, "I understand, goodbye.")
-		StartConversation(conversation, NPC, Spawn, "I'd love to chat but I've so much work to do.")
-	end
+	--if convo==9 then
+	--	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/sua_augren/_exp03/exp03_rgn_greater_faydark/sua_augren/sua_augren001.mp3", "", "", 3127279058, 3080550258, Spawn)
+	--	AddConversationOption(conversation, "Ami wants you to fix her coat.  She broke the buttons... but wants you to know she didn't mean it.", "dlg_9_1")
+	--	AddConversationOption(conversation, "I understand, goodbye.")
+	--	StartConversation(conversation, NPC, Spawn, "I'd love to chat but I've so much work to do.")
+	--end
 
-	if convo==11 then
-		PlayFlavor(NPC, "voiceover/english/exp03_questvo2/sua_augren/_exp03/exp03_rgn_greater_faydark/sua_augren/sua_augren001.mp3", "", "", 3127279058, 3080550258, Spawn)
-		AddConversationOption(conversation, "Ami wants you to fix her coat.  She broke the buttons... but wants you to know she didn't mean it.", "dlg_11_1")
-		AddConversationOption(conversation, "I understand, goodbye.")
-		StartConversation(conversation, NPC, Spawn, "I'd love to chat but I've so much work to do.")
-	end
+	--if convo==11 then
+	--	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/sua_augren/_exp03/exp03_rgn_greater_faydark/sua_augren/sua_augren001.mp3", "", "", 3127279058, 3080550258, Spawn)
+	--	AddConversationOption(conversation, "Ami wants you to fix her coat.  She broke the buttons... but wants you to know she didn't mean it.", "dlg_11_1")
+	--	AddConversationOption(conversation, "I understand, goodbye.")
+	--	StartConversation(conversation, NPC, Spawn, "I'd love to chat but I've so much work to do.")
+	--end
 
 end
 

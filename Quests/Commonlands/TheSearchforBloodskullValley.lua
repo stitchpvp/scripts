@@ -3,38 +3,38 @@
 	Script Purpose	:	Handles the quest, "The Search for Bloodskull Valley"
 	Script Author	:	QuestParser (Replace this)
 	Script Date		:	7/8/2017
-	Script Notes	:	
+	Script Notes	:
 
 	Zone			:	Commonlands
-	Quest Giver		:	
+	Quest Giver		:
 	Preceded by		:	None
 	Followed by		:	None
 --]]
 
 
 function Init(Quest)
-	AddQuestStepKill(Quest, 1, "Defeat Commander Du'Nar's platoon for his gem!", 1, 100, "Only the officers carry the gems of tribute, I'm going to have to kill them to get the gems.", 1191, --[[ ID's --]])
+	AddQuestStepKill(Quest, 1, "Defeat Commander Du'Nar's platoon for his gem!", 1, 100, "Only the officers carry the gems of tribute, I'm going to have to kill them to get the gems.", 1191, nil)
 	AddQuestStepCompleteAction(Quest, 1, "Step1Complete")
 end
 
 function Step1Complete(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 1, "Commander Du'Nar gave up his gem... unwillingly.")
 
-	AddQuestStepKill(Quest, 2, "Defeat Commander Grik'Sna and pry the gem from his body!", 1, 100, "Only the officers carry the gems of tribute, I'm going to have to kill them to get the gems.", 1198, --[[ ID's --]])
+	AddQuestStepKill(Quest, 2, "Defeat Commander Grik'Sna and pry the gem from his body!", 1, 100, "Only the officers carry the gems of tribute, I'm going to have to kill them to get the gems.", 1198, nil)
 	AddQuestStepCompleteAction(Quest, 2, "Step2Complete")
 end
 
 function Step2Complete(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 2, "Commander Grik'Sna's gem has been collected.")
 
-	AddQuestStepKill(Quest, 3, "Kill Lieutenant Vrah'Kna and take away his gem!", 1, 100, "Only the officers carry the gems of tribute, I'm going to have to kill them to get the gems.", 1153, --[[ ID's --]])
+	AddQuestStepKill(Quest, 3, "Kill Lieutenant Vrah'Kna and take away his gem!", 1, 100, "Only the officers carry the gems of tribute, I'm going to have to kill them to get the gems.", 1153, nil)
 	AddQuestStepCompleteAction(Quest, 3, "Step3Complete")
 end
 
 function Step3Complete(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 3, "I've collected Lieutenant Vrah'Kna's gem.")
 
-	AddQuestStepKill(Quest, 4, "Kill General Vhar'Taug and force him to give you his gem!", 1, 100, "Only the officers carry the gems of tribute, I'm going to have to kill them to get the gems.", 1176, --[[ ID's --]])
+	AddQuestStepKill(Quest, 4, "Kill General Vhar'Taug and force him to give you his gem!", 1, 100, "Only the officers carry the gems of tribute, I'm going to have to kill them to get the gems.", 1176, nil)
 	AddQuestStepCompleteAction(Quest, 4, "QuestComplete")
 end
 

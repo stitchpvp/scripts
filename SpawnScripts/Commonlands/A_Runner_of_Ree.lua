@@ -3,9 +3,9 @@ function spawn(NPC)
  waypoints(NPC)
 end
 
-function hailed(NPC, Spawn) 
-  FaceTarget(NPC, Spawn) 
-end 
+function hailed(NPC, Spawn)
+  FaceTarget(NPC, Spawn)
+end
 
 function aggro(NPC, Spawn)
  generic_aggro(NPC, Spawn)
@@ -42,5 +42,5 @@ MovementLoopAddLocation(NPC, -264.3, -47.99, -977.43, 3, 0)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end

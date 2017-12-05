@@ -11,7 +11,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)
@@ -28,7 +28,7 @@ end
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	AddConversationOption(conversation, "Thank you.")
 	StartConversation(NPC, Spawn, conversation, "Your armor and weapons wear down when you die during combat. When they are down to zero durability, you no longer receive any benefit from them. You can visit myself or any mender to get them repaired.")
 end

@@ -3,7 +3,7 @@
 	Script Purpose	:	Handles the quest, "Granville's Restaurant, Antonica"
 	Script Author	:	Jabantiz
 	Script Date		:	6/14/2016
-	Script Notes	:	
+	Script Notes	:
 
 	Zone			:	Thundering Steppes
 	Quest Giver		:	Tobias Granville (2490178)

@@ -3,7 +3,7 @@
 	Script Purpose	: for the spawn "lion post"
 	Script Author	: theFoof
 	Script Date	: 2013.05.25
-	Script Notes	: 
+	Script Notes	:
 --]]
 local IcemanesCometh = 18
 

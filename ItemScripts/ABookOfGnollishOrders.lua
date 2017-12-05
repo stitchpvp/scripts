@@ -3,7 +3,7 @@
 	Script Purpose	: A Book of Gnollish Orders
 	Script Author	: Scatman
 	Script Date	: 2009.10.08
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 local QUEST_1_CONSULBREE = 223

@@ -11,7 +11,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)
@@ -29,21 +29,21 @@ function hailed(NPC, Spawn)
 	AddConversationOption(conversation, "I'd like to learn about harvesting.")
 	AddConversationOption(conversation, "I've no time to chat right now.")
 	StartConversation(conversation, NPC, Spawn, "I am able to answer any questions you have about collections or harvesting.")
-	if convo==4 then
-		PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_3_1048.mp3", "", "", 0, 0, Spawn)
-		AddConversationOption(conversation, "I'd like to learn about collections.", "dlg_4_1")
-		AddConversationOption(conversation, "I'd like to learn about harvesting.")
-		AddConversationOption(conversation, "I've no time to chat right now.")
-		StartConversation(conversation, NPC, Spawn, "I am able to answer any questions you have about collections or harvesting.")
-	end
+	--if convo==4 then
+	--	PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_3_1048.mp3", "", "", 0, 0, Spawn)
+	--	AddConversationOption(conversation, "I'd like to learn about collections.", "dlg_4_1")
+	--	AddConversationOption(conversation, "I'd like to learn about harvesting.")
+	--	AddConversationOption(conversation, "I've no time to chat right now.")
+	--	StartConversation(conversation, NPC, Spawn, "I am able to answer any questions you have about collections or harvesting.")
+	--end
 
-	if convo==5 then
-		PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_1_1048.mp3", "", "", 0, 0, Spawn)
-		AddConversationOption(conversation, "I'd like to learn about collections.", "dlg_5_1")
-		AddConversationOption(conversation, "I'd like to learn about harvesting.")
-		AddConversationOption(conversation, "I've no time to chat right now.")
-		StartConversation(conversation, NPC, Spawn, "I am able to answer any questions you have about collections or harvesting.")
-	end
+	--if convo==5 then
+	--	PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_1_1048.mp3", "", "", 0, 0, Spawn)
+	--	AddConversationOption(conversation, "I'd like to learn about collections.", "dlg_5_1")
+	--	AddConversationOption(conversation, "I'd like to learn about harvesting.")
+	--	AddConversationOption(conversation, "I've no time to chat right now.")
+	--	StartConversation(conversation, NPC, Spawn, "I am able to answer any questions you have about collections or harvesting.")
+	--end
 
 end
 

@@ -3,7 +3,7 @@
 	Script Purpose	: Voice overs for the courageous and seasoned defenders of the Ruins.
 	Script Author	: Scatman
 	Script Date	: 2009.08.29
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 function generic_hail(NPC, Spawn)

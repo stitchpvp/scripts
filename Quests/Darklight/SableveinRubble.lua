@@ -3,7 +3,7 @@
 	Script Purpose	:	Handles the quest, "Sablevein Rubble"
 	Script Author	:	QuestParser Cynnar
 	Script Date		:	8/30/2015
-	Script Notes	:	
+	Script Notes	:
 
 	Zone			:	Darklight Wood
 	Quest Giver		:	Danya Halfmoon 340018

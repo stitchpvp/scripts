@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "Smoking the Competition"
 	Script Author	: Scatman
 	Script Date	: 2009.02.04
-	
+
 	Zone       : Darklight Wood
 	Quest Giver: Dirzdia T'Zauvirr
 	Preceded by: None
@@ -15,7 +15,7 @@ function Init(Quest)
 	-- Cross Stitch Britches
 	-- Barkbiter
 
-	-- JA: Why are there two of the same items in a selection? 
+	-- JA: Why are there two of the same items in a selection?
 	-- Add QuestSelectableRewardItem(Quest, 3, 1) -- had to breakup function name for auto-updates script
 
 
@@ -38,7 +38,7 @@ end
 
 function step1_complete_killedRazormaws(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 1, "I have slain the razormaw.")
-	
+
 	AddQuestStepChat(Quest, 2, "I need to bring the razormaw flesh back to Dirzdia.", 1, ".", 0, 340139)
 	AddQuestStepCompleteAction(Quest, 2, "quest_complete")
 end

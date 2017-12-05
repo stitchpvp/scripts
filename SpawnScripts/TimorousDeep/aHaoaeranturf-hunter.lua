@@ -1,6 +1,6 @@
 --[[
 	Script Name	: SpawnScripts/TimorousDeep/aHaoaeranturf-hunter.lua
-	Script Purpose	: a Haoaeran turf-hunter 
+	Script Purpose	: a Haoaeran turf-hunter
 	Script Author	: John Adams
 	Script Date	: 2009.02.26
 	Script Notes	: Auto-Generated Conversation from PacketParser Data
@@ -10,7 +10,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)

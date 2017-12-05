@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "The Ends Justify the Means"
 	Script Author	: Scatman
 	Script Date	: 2009.02.07
-	
+
 	Zone       : Timorous Deep
 	Quest Giver: Civ-Parser Di'Xin
 	Preceded by: Chrykori Relics (chrykori_relics.lua)
@@ -38,7 +38,7 @@ end
 
 function step1_complete_gotRelics(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 1, "I have collected the scavenged relics.")
-	
+
 	AddQuestStepChat(Quest, 2, "I need to bring these relics back to Civ-Parser Di'Xin.", 1, ".", 368, 2630045)
 	AddQuestStepCompleteAction(Quest, 2, "quest_complete")
 end

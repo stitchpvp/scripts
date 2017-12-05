@@ -3,7 +3,7 @@
 	Script Purpose	:	the quest "Trust Issues"
 	Script Author	:	theFoof
 	Script Date		:	2013.8.19
-	Script Notes	:	
+	Script Notes	:
 
 	Zone			:	Frostfang Sea
 	Quest Giver		:	Brogan MacLellan

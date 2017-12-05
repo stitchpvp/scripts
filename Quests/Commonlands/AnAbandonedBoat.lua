@@ -3,17 +3,17 @@
 	Script Purpose	:	Handles the quest, "An Abandoned Boat"
 	Script Author	:	QuestParser (Replace this)
 	Script Date		:	7/8/2017
-	Script Notes	:	
+	Script Notes	:
 
 	Zone			:	Commonlands
-	Quest Giver		:	
+	Quest Giver		:
 	Preceded by		:	None
 	Followed by		:	None
 --]]
 
 
 function Init(Quest)
-	AddQuestStepKill(Quest, 1, "I need to slay some carrion hounds", 15, 100, "There are some carrion hounds near a small pond in the Commonlands that have been causing some people a bit of trouble.  I should slay those beasts and run them out of the area.", 2256, --[[ ID's --]])
+	AddQuestStepKill(Quest, 1, "I need to slay some carrion hounds", 15, 100, "There are some carrion hounds near a small pond in the Commonlands that have been causing some people a bit of trouble.  I should slay those beasts and run them out of the area.", 2256, nil)
 	AddQuestStepCompleteAction(Quest, 1, "QuestComplete")
 end
 

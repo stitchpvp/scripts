@@ -3,17 +3,17 @@
 	Script Purpose	:	Handles the quest, "Deliveries for Flores"
 	Script Author	:	QuestParser (Replace this)
 	Script Date		:	7/8/2017
-	Script Notes	:	
+	Script Notes	:
 
 	Zone			:	Antonica
-	Quest Giver		:	
+	Quest Giver		:
 	Preceded by		:	None
 	Followed by		:	None
 --]]
 
 
 function Init(Quest)
-	AddQuestStepChat(Quest, 1, "I need to deliver a crate to Merchant Novak.", 1, "I must deliver a crate of Flores' merchandise to Merchant Novak by the lighthouse.", 654, --[[ ID's --]])
+	AddQuestStepChat(Quest, 1, "I need to deliver a crate to Merchant Novak.", 1, "I must deliver a crate of Flores' merchandise to Merchant Novak by the lighthouse.", 654, nil)
 	AddQuestStepCompleteAction(Quest, 1, "Step1Complete")
 end
 
@@ -21,7 +21,7 @@ function Step1Complete(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 1, "I've delivered the crate to Merchant Novak.")
 	UpdateQuestTaskGroupDescription(Quest, 1, "I've delivered the crate to Novak and picked up her pouch.")
 
-	AddQuestStepChat(Quest, 2, "I need to deliver a crate to Merchant Geddard.", 1, "I must deliver a crate of Flores' merchandise to Merchant Geddard in Gnollslayer Keep.", 654, --[[ ID's --]])
+	AddQuestStepChat(Quest, 2, "I need to deliver a crate to Merchant Geddard.", 1, "I must deliver a crate of Flores' merchandise to Merchant Geddard in Gnollslayer Keep.", 654, nil)
 	AddQuestStepCompleteAction(Quest, 2, "Step2Complete")
 end
 
@@ -29,7 +29,7 @@ function Step2Complete(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 2, "I've delivered the crate to Merchant Geddard.")
 	UpdateQuestTaskGroupDescription(Quest, 2, "I've delivered the crate to Geddard and picked up his pouch.")
 
-	AddQuestStepChat(Quest, 3, "I need to deliver the pouches to Merchant Flores.", 1, "I must deliver both Novak and Geddard's pouches to Flores outside of Qeynos.", 401, --[[ ID's --]])
+	AddQuestStepChat(Quest, 3, "I need to deliver the pouches to Merchant Flores.", 1, "I must deliver both Novak and Geddard's pouches to Flores outside of Qeynos.", 401, nil)
 	AddQuestStepCompleteAction(Quest, 3, "QuestComplete")
 end
 

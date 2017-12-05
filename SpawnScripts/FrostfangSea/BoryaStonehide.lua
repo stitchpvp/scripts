@@ -3,7 +3,7 @@
 	Script Purpose	:	guardian trainer
 	Script Author	:	theFoof
 	Script Date		:	2013.9.24
-	Script Notes	:	
+	Script Notes	:
 --]]
 
 local GUARDIAN = 3
@@ -12,7 +12,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
@@ -39,7 +39,7 @@ end
 function GuardChat2(NPC, Spawn)
 	local conversation = CreateConversation()
 	FaceTarget(NPC, Spawn)
-	
+
 	AddConversationOption(conversation, "That will be useful!", "GuardChat3")
 	StartConversation(conversation, NPC, Spawn, "And when you are faced with multiple foes, prioritize your opponents.  It often behooves you and your group to pit yourself against the most powerful opponent.")
 end

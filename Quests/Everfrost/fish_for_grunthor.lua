@@ -2,7 +2,7 @@
     Script Name    : Quests/Everfrost/fish_for_grunthor.lua
     Script Author  : Flunklesnarkin
     Script Date    : 2015.09.03 12:09:31
-    Script Purpose : 
+    Script Purpose :
 
         Zone       : Everfrost
         Quest Giver: Burm Grunthor

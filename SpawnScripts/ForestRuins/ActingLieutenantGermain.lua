@@ -3,7 +3,7 @@
 	Script Purpose	: Acting Lieutenant Germain <Qeynos Guard>
 	Script Author	: Scatman
 	Script Date	: 2009.09.27
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 local QUEST_FROM_POKO = 201
@@ -15,13 +15,13 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	if HasQuest(Spawn, QUEST_FROM_POKO) and GetQuestStep(Spawn, QUEST_FROM_POKO) == 3 then
 		AddConversationOption(conversation, "I have news for you.", "NewsForYou")
 	end
@@ -34,7 +34,7 @@ function hailed(NPC, Spawn)
 	else
 		PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_3_1004.mp3", "", "", 0, 0)
 	end
-	
+
 	if HasCompletedQuest(Spawn, QUEST_1) then
 		if HasCompletedQuest(Spawn, QUEST_2) then
 		elseif HasQuest(Spawn, QUEST_2) then
@@ -50,7 +50,7 @@ function hailed(NPC, Spawn)
 			Say(NPC, "Come back to me once you've gotten a bit stronger.", Spawn)
 		end
 	end
-	
+
 
 --[[
 
@@ -64,7 +64,7 @@ function hailed(NPC, Spawn)
 	end
 
 	if convo==7 then
-		
+
 		StartConversation(conversation, NPC, Spawn, "Any news of Del Varun?")
 	end
 
@@ -86,7 +86,7 @@ end
 
 function NewsForYou(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_FROM_POKO, 3)
-	
+
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 
@@ -97,7 +97,7 @@ end
 function dlg_16_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	if not HasQuest(Spawn, QUEST_1) and not HasCompletedQuest(Spawn, QUEST_1) then
 		AddConversationOption(conversation, "I can help.", "dlg_16_3")
 	else
@@ -146,14 +146,14 @@ function OfferQuest1(NPC, Spawn)
 end
 
 function OnQuest1(NPC, Spawn, conversation)
-	if (HasQuest(Spawn, QUSET_1) and GetQuestStep(Spawn, QUEST_1) == 4) or (HasCompletedQuest(Spawn, QUEST_1)) then
+	if (HasQuest(Spawn, QUEST_1) and GetQuestStep(Spawn, QUEST_1) == 4) or (HasCompletedQuest(Spawn, QUEST_1)) then
 		AddConversationOption(conversation, "Yes. I found his satchel.", "dlg_7_1")
 	elseif GetQuestStep(Spawn, QUEST_1) == 2 then
 		SetStepComplete(Spawn, QUEST_1, 2)
 	else
 		AddConversationOption(conversation, "Not quite yet.")
 	end
-	
+
 	StartConversation(conversation, NPC, Spawn, "Any news of Del Varun?")
 end
 
@@ -169,7 +169,7 @@ function dlg_7_2(NPC, Spawn)
 	if HasQuest(Spawn, QUEST_1) then
 		SetStepComplete(Spawn, QUEST_1, 4)
 	end
-	
+
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 

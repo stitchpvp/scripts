@@ -1,9 +1,9 @@
 --[[
 	Script Name	: SpawnScripts/Sprawl/CrispinLuvinius.lua
-	Script Purpose	: Crispin Luvinius 
+	Script Purpose	: Crispin Luvinius
 	Script Author	: Scatman
 	Script Date	: 2009.07.26
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 local QUEST_1 = 258
@@ -15,18 +15,18 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	if HasCompletedQuest(Spawn, QUEST_1) then
 		if HasCompletedQuest(Spawn, QUEST_2) then
 			DoYouHaveAProblemDone(NPC, Spawn, conversation)
 		elseif HasQuest(Spawn, QUEST_2) then
-			OnQuset2(NPC, Spawn, conversation)
+			OnQuest2(NPC, Spawn, conversation)
 		else
 			DoYouHaveAProblem2(NPC, Spawn, conversation)
 		end
@@ -81,7 +81,7 @@ end
 
 function dlg_23_1(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_1, 2)
-	
+
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 
@@ -120,7 +120,7 @@ end
 function OfferQuest2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	OfferQuest(NPC, Spawn, QUEST_2)
-end	
+end
 
 function OnQuest2(NPC, Spawn, conversation)
 	PlayFlavor(NPC, "voiceover/english/crispin_luvinius/fprt_hood04/std_crispin_luvinius.mp3", "", "", 1982819374, 703450678, Spawn)
@@ -133,7 +133,7 @@ end
 
 function dlg_34_1(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_2, 2)
-	
+
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 

@@ -2,7 +2,7 @@
     Script Name    : Quests/Everfrost/cull_the_threat_to_the_pioneers.lua
     Script Author  : Flunklesnarkin
     Script Date    : 2015.10.24 02:10:26
-    Script Purpose : 
+    Script Purpose :
 
         Zone       : Everfrost
         Quest Giver: Brahnagan MacLahnan

@@ -1,6 +1,6 @@
 --[[
 	Script Name	: SpawnScripts/ElddarGrove/SolomenStormwatch.lua
-	Script Purpose	: Solomen Stormwatch 
+	Script Purpose	: Solomen Stormwatch
 	Script Author	: John Adams
 	Script Date	: 2008.09.28
 	Script Notes	: Auto-Generated Conversation from PacketParser Data

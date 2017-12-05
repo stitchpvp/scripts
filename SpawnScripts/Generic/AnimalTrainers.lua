@@ -1,9 +1,9 @@
 --[[
-	Script Name	: SpawnScripts/Generic/AnimalTrainers.lua 
+	Script Name	: SpawnScripts/Generic/AnimalTrainers.lua
 	Script Purpose	: Generic script to make animal trainers emote to their animals
 	Script Author	: John Adams
 	Script Date	: 2009.06.14
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 function spawn(NPC)
@@ -49,5 +49,5 @@ function hailed(NPC, Spawn)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end

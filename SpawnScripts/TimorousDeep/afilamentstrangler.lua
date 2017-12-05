@@ -14,12 +14,12 @@ function hailed(NPC, Spawn)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)
 	Monitor = GetSpawn(NPC, 2630070)
-	
+
 	if Monitor ~= nil and GetDistance(NPC, Monitor) <= 10 then
 		Emote(NPC, "moves slightly as filaments emerge from the ground, gripping its target.")
 		SpawnMob(GetZone(NPC), 2630682, false, GetX(Monitor), GetY(Monitor), GetZ(Monitor), GetHeading(Monitor))

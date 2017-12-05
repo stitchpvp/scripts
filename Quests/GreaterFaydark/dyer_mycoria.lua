@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "Dyer Mycoria"
 	Script Author	: Scatman
 	Script Date	: 2009.03.29
-	
+
 	Zone       : Greater Faydark
 	Quest Giver: Morganellus
 	Preceded by: None
@@ -22,7 +22,7 @@ end
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
 	local conversation = CreateConversation()
-	
+
 	PlayFlavor(QuestGiver, "voiceover/english/exp03_questvo2/morganellus/_exp03/exp03_rgn_greater_faydark/shroomba/morganellus/morganellus004.mp3", "", "", 2956711105, 2602303407, Player)
 	AddConversationOption(conversation, "All right, I'll just find him.")
 	StartConversation(conversation, QuestGiver, Player, "Why would I want that? You are going to Dyer Mycoria, not me.")

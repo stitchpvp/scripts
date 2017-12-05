@@ -7,7 +7,7 @@
         Zone            : Frostfang Sea
         Quest Giver     : Arrin Clelland
         Preceded by     : Scraggly Foodstuffs
-        Followed by     : 
+        Followed by     :
 --]]
 
 function Init(Quest)

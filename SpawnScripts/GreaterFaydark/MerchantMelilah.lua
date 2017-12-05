@@ -1,6 +1,6 @@
 --[[
 	Script Name	: SpawnScripts/GreaterFaydark/MerchantMelilah.lua
-	Script Purpose	: Merchant Melilah 
+	Script Purpose	: Merchant Melilah
 	Script Author	: John Adams
 	Script Date	: 2009.03.01
 	Script Notes	: Auto-Generated Conversation from PacketParser Data
@@ -11,7 +11,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)
@@ -28,35 +28,35 @@ function hailed(NPC, Spawn)
 	AddConversationOption(conversation, "That depends.", "dlg_17_1")
 	AddConversationOption(conversation, "No, thanks.")
 	StartConversation(conversation, NPC, Spawn, "Did you want to earn a little commission on a job for me?")
-	if convo==45 then
-		PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
-		AddConversationOption(conversation, "Yes.  She asked me to tell you...", "dlg_45_1")
-		AddConversationOption(conversation, "Um...I think I've lost the note you gave me earlier.")
-		AddConversationOption(conversation, "Not yet.")
-		StartConversation(conversation, NPC, Spawn, "Have you spoken with HER yet?")
-	end
+	--if convo==45 then
+	--	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
+	--	AddConversationOption(conversation, "Yes.  She asked me to tell you...", "dlg_45_1")
+	--	AddConversationOption(conversation, "Um...I think I've lost the note you gave me earlier.")
+	--	AddConversationOption(conversation, "Not yet.")
+	--	StartConversation(conversation, NPC, Spawn, "Have you spoken with HER yet?")
+	--end
 
-	if convo==46 then
-		PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_3_1005.mp3", "", "", 0, 0, Spawn)
-		AddConversationOption(conversation, "Yes.  She asked me to tell you...", "dlg_46_1")
-		AddConversationOption(conversation, "Um...I think I've lost the note you gave me earlier.")
-		AddConversationOption(conversation, "Not yet.")
-		StartConversation(conversation, NPC, Spawn, "Have you spoken with HER yet?")
-	end
+	--if convo==46 then
+	--	PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_3_1005.mp3", "", "", 0, 0, Spawn)
+	--	AddConversationOption(conversation, "Yes.  She asked me to tell you...", "dlg_46_1")
+	--	AddConversationOption(conversation, "Um...I think I've lost the note you gave me earlier.")
+	--	AddConversationOption(conversation, "Not yet.")
+	--	StartConversation(conversation, NPC, Spawn, "Have you spoken with HER yet?")
+	--end
 
-	if convo==48 then
-		PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_2_1005.mp3", "", "", 0, 0, Spawn)
-		AddConversationOption(conversation, "You two are fighting over your father's estate?", "dlg_48_1")
-		AddConversationOption(conversation, "Relax! I just said 'hello' to you.")
-		StartConversation(conversation, NPC, Spawn, "Well?")
-	end
+	--if convo==48 then
+	--	PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_2_1005.mp3", "", "", 0, 0, Spawn)
+	--	AddConversationOption(conversation, "You two are fighting over your father's estate?", "dlg_48_1")
+	--	AddConversationOption(conversation, "Relax! I just said 'hello' to you.")
+	--	StartConversation(conversation, NPC, Spawn, "Well?")
+	--end
 
-	if convo==49 then
-		PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_1_1005.mp3", "", "", 0, 0, Spawn)
-		AddConversationOption(conversation, "You two are fighting over your father's estate?", "dlg_49_1")
-		AddConversationOption(conversation, "Relax! I just said 'hello' to you.")
-		StartConversation(conversation, NPC, Spawn, "Well?")
-	end
+	--if convo==49 then
+	--	PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_1_1005.mp3", "", "", 0, 0, Spawn)
+	--	AddConversationOption(conversation, "You two are fighting over your father's estate?", "dlg_49_1")
+	--	AddConversationOption(conversation, "Relax! I just said 'hello' to you.")
+	--	StartConversation(conversation, NPC, Spawn, "Well?")
+	--end
 
 end
 

@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "What's in Demand?"
 	Script Author	: Scatman
 	Script Date	: 2009.02.02
-	
+
 	Zone       : Darklight Wood
 	Quest Giver: Ilmtar D'Viervs
 	Preceded by: None
@@ -34,7 +34,7 @@ end
 
 function step1_complete_gotBones(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 1, "Bone Fragment Found")
-	
+
 	AddQuestStepChat(Quest, 2, "I need to bring these bone fragments to Ilmtar.", 1, ".", 418, 340123)
 	AddQuestStepCompleteAction(Quest, 2, "quest_complete")
 end

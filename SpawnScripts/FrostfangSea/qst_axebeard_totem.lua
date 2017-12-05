@@ -3,7 +3,7 @@
 	Script Purpose	:	for the spawn "qst_axebeard_x4_totem"
 	Script Author	:	theFoof
 	Script Date		:	2013.5.28
-	Script Notes	:	
+	Script Notes	:
 --]]
 local TotemAnnihilation = 34
 
@@ -13,7 +13,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function casted_on(NPC, Spawn, SpellName)
@@ -28,7 +28,7 @@ end
 function SpawnAccess(NPC, Spawn)
 	if GetQuestStep(Spawn, TotemAnnihilation) == 1 then
 		AddSpawnAccess(NPC, Spawn)
-    else 
+    else
 		RemoveSpawnAccess(NPC, Spawn)
     end
 end

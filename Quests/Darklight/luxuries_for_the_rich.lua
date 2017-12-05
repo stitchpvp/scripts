@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "Luxuries for the Rich"
 	Script Author	: Scatman
 	Script Date	: 2009.02.02
-	
+
 	Zone       : Darklight Wood
 	Quest Giver: Ilmtar D'Viervs
 	Preceded by: Trinkets (trinkets.lua)
@@ -33,7 +33,7 @@ end
 
 function step1_complete_gotScales(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 1, "I have collected the snake scales for Ilmtar.")
-	
+
 	AddQuestStepChat(Quest, 2, "I need to bring these scales to Ilmtar D'Viervs.", 1, ".", 98, 340123)
 	AddQuestStepCompleteAction(Quest, 2, "quest_complete")
 end

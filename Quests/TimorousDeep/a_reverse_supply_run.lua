@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "A Reverse Supply Run"
 	Script Author	: Scatman
 	Script Date	: 2009.03.10
-	
+
 	Zone       : Timorous Deep
 	Quest Giver: Tanzikla Hir'Ki
 	Preceded by: None
@@ -33,18 +33,18 @@ end
 
 function Step1_Complete_DestroyedSupplies(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 1, "I have destroyed the Haoaeran supplies.")
-	
+
 	AddQuestStepChat(Quest, 2, "I need to return to Tanzikla Hir'Ki.", 1, ".", 0, 2630611)
 	AddQuestStepCompleteAction(Quest, 2, "Quest_Complete")
 end
 
 function Quest_Complete(Quest, QuestGiver, Player)
-	RemoveItem(Spawn, 2931)
+	RemoveItem(Player, 2931)
 	UpdateQuestDescription(Quest, "I've destroyed the Haoaeran caches.")
 	GiveQuestReward(Quest, Player)
 end
 
-function Reload(Quest, QusetGiver, Player, Step)
+function Reload(Quest, QuestGiver, Player, Step)
 	if Step == 1 then
 		Step1_Complete_DestroyedSupplies(Quest, QuestGiver, Player)
 	end

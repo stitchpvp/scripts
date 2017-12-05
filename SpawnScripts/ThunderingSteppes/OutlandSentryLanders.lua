@@ -2,8 +2,8 @@
     Script Name    : SpawnScripts/ThunderingSteppes/OutlandSentryLanders.lua
     Script Author  : Jabantiz
     Script Date    : 2015.07.12 02:07:53
-    Script Purpose : 
-                   : 
+    Script Purpose :
+                   :
 --]]
 
 function spawn(NPC)
@@ -24,7 +24,7 @@ function spawn(NPC)
 	MovementLoopAddLocation(NPC, -190.58, -0.66, -464.35, 2)
 	MovementLoopAddLocation(NPC, -198.52, -4.40, -447.93, 2)
 	MovementLoopAddLocation(NPC, -204.33, -8.51, -440.59, 2)
-	
+
 	MovementLoopAddLocation(NPC, -198.52, -4.40, -447.93, 2)
 	MovementLoopAddLocation(NPC, -190.58, -0.66, -464.35, 2)
 	MovementLoopAddLocation(NPC, -174.85, 2.48, -483.08, 2)
@@ -42,7 +42,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)

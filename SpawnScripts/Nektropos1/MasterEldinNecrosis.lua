@@ -1,9 +1,9 @@
 --[[
 	Script Name	: SpawnScripts/NektroposCastle/MasterEldinNecrosis.lua
-	Script Purpose	: Master Eldin Necrosis 
+	Script Purpose	: Master Eldin Necrosis
 	Script Author	: smash
 	Script Date	: 2016.01.24
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 function spawn(NPC)
@@ -26,7 +26,7 @@ end
 function Dialog1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	PlayFlavor(NPC, "voiceover/english/master_eldin_necrosis_/nektropos/eldin001.mp3", "", "", 1924861304, 1919830896, Spawn)
 	AddConversationOption(conversation, "Wait a minute!  Who are you?", "Dialog1_1")
 	AddConversationOption(conversation, "Ok crazy, I'm getting out of here.  Goodbye!")
@@ -36,7 +36,7 @@ end
 function Dialog1_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	PlayFlavor(NPC, "voiceover/english/master_eldin_necrosis_/nektropos/eldin002.mp3", "", "", 2253492197, 1707213719, Spawn)
 	AddConversationOption(conversation, "Okay, so what are you doing here?", "Dialog1_2")
 	AddConversationOption(conversation, "Yeah right.  Okay well have fun Eldin... goodbye.")
@@ -46,7 +46,7 @@ end
 function Dialog1_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	PlayFlavor(NPC, "voiceover/english/master_eldin_necrosis_/nektropos/eldin003.mp3", "", "", 3928579694, 2557793051, Spawn)
 	AddConversationOption(conversation, "Okay, so what's the wall you've hit?", "Dialog1_3")
 	AddConversationOption(conversation, "I'm sorry I hate the dead, I need to get out of here!")
@@ -56,7 +56,7 @@ end
 function Dialog1_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	PlayFlavor(NPC, "voiceover/english/master_eldin_necrosis_/nektropos/eldin004.mp3", "", "", 3224153706, 3957572596, Spawn)
 	AddConversationOption(conversation, "Is there anything I can do to help?", "Dialog1_4")
 	AddConversationOption(conversation, "That's too bad.  Well better luck next time, I'm afraid I've other matters to attend to.")
@@ -74,14 +74,14 @@ function Dialog1_4(NPC, Spawn)
 end
 
 function Dialog2(NPC, Spawn)
-	FaceTarget(NPC, Spawn)	
+	FaceTarget(NPC, Spawn)
 	PlayFlavor(NPC, "", "Why are you here?  Useless! You're the worst minion I've ever had in my employ.  Now, go out there and finish what I've asked you to do! ", "tapfoot", 1689589577, 4560189, Spawn)
 end
 
 function Dialog3(NPC, Spawn)
 	local conversation = CreateConversation()
 	FaceTarget(NPC, Spawn)
-	
+
 	AddConversationOption(conversation, "Ok crazy, I'm getting out of here.  Goodbye!")
 	StartConversation(conversation, NPC, Spawn, "Who are you?  Who dares to challenge the might of Eldin?", "voiceover/english/master_eldin_necrosis_/nektropos/eldin001.mp3", 1924861304, 1919830896)
 end
@@ -89,7 +89,7 @@ end
 function Dialog4(NPC, Spawn)
 	local conversation = CreateConversation()
 	FaceTarget(NPC, Spawn)
-	
+
 	AddConversationOption(conversation, "I'll keep you in mind.  Farewell Eldin.")
 	StartConversation(conversation, NPC, Spawn, "Welcome back! Perhaps you're not as useless as you appear. Many thanks for all your hard work. Here is the coin I promised you. I appreciate your efforts! If you wish to help me again, I will pay you equally as well.", "voiceover/english/master_eldin_necrosis_/nektropos/eldin007.mp3", 2193129488, 1209581027)
 	SetStepComplete(Spawn, 174, 11)

@@ -15,7 +15,7 @@ local HarvestTutorial = 11
 function Init(Quest)
 	AddQuestStepHarvest(Quest, 1, "Harvest some elm lumber.", 3, 100, "I must harvest some crafting supplies in a nearby low-risk adventure area. Harvest nodes can generally be found on the ground in most outdoor adventure regions.", 826, 12098)
     AddQuestStepHarvest(Quest, 2, "Harvest some roots.", 3, 100, "I must harvest some crafting supplies in a nearby low-risk adventure area. Harvest nodes can generally be found on the ground in most outdoor adventure regions.", 200, 11637)
-    AddQuestStepHarvest(Quest, 3, "Mine some tin clusters.", 3, 100, "I must harvest some crafting supplies in a nearby low-risk adventure area. Harvest nodes can generally be found on the ground in most outdoor adventure regions.", 3391, 14463) 
+    AddQuestStepHarvest(Quest, 3, "Mine some tin clusters.", 3, 100, "I must harvest some crafting supplies in a nearby low-risk adventure area. Harvest nodes can generally be found on the ground in most outdoor adventure regions.", 3391, 14463)
 	AddQuestStepHarvest(Quest, 4, "Mine some lead clusters.", 3, 100, "I must harvest some crafting supplies in a nearby low-risk adventure area. Harvest nodes can generally be found on the ground in most outdoor adventure regions.", 1086, 8808)
 	AddQuestStepHarvest(Quest, 5, "Fish up some sunfish.", 3, 100, "I must harvest some crafting supplies in a nearby low-risk adventure area. Harvest nodes can generally be found on the ground in most outdoor adventure regions.", 2540, 13586)
 	AddQuestStepHarvest(Quest, 6, "Harvest jumjum from a shrub or garden.", 3, 100, "I must harvest some crafting supplies in a nearby low-risk adventure area. Harvest nodes can generally be found on the ground in most outdoor adventure regions.", 816, 8486)
@@ -88,7 +88,7 @@ function Accepted(Quest, QuestGiver, Player)
 	if GetName(QuestGiver) == "Glin Hammerhelm" then
 		conversation = CreateConversation()
 		FaceTarget(QuestGiver, Player)
-		
+
 		AddConversationOption(conversation, "I'll get right on it.")
 		StartConversation(conversation, QuestGiver, Player, "Harvesting resources tend to be segregated by areas - for example, you'll be able to harvest items (often also called nodes) for making equipment for level 1-9 adventurers, in the same areas where you'll find level 1-9 adventurers hunting.  There are seven types of harvestable item: wood, roots, ore, soft metal, animal dens, shrubs, and fish. I'd like you to get a few harvests from each type of harvestable item.")
 	end

@@ -3,7 +3,7 @@
 	Script Purpose	:	The Boar's Head
 	Script Author	:	smash
 	Script Date		:	1/26/2016
-	Script Notes	:	
+	Script Notes	:
 
 	Zone			:	Nektropos Castle
 	Quest Giver		:	None

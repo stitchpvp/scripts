@@ -3,7 +3,7 @@
 	Script Purpose	: a Lonetusk champion
 	Script Author	: Scatman
 	Script Date	: 2009.08.21
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 dofile("SpawnScripts/Ruins/LonetuskVoiceOvers.lua")
@@ -14,7 +14,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)

@@ -3,7 +3,7 @@
 	Script Purpose	: a white spider
 	Script Author	: Scatman
 	Script Date	: 2009.10.27
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 dofile("SpawnScripts/Generic/MovementCircleSmall.lua")
@@ -16,7 +16,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)

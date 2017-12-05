@@ -1,9 +1,9 @@
 --[[
-	Script Name	: SpawnScripts/Graveyard/acrumblingskeleton.lua 
+	Script Name	: SpawnScripts/Graveyard/acrumblingskeleton.lua
 	Script Purpose	: a crumbling skeleton
 	Script Author	: Scatman
 	Script Date	: 2009.07.10
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 local spoke = false
@@ -17,7 +17,7 @@ function hailed(NPC, Spawn)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function healthchanged(NPC, Spawn)

@@ -11,7 +11,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)
@@ -27,7 +27,7 @@ end
 function first_chat(NPC, Spawn)
     FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
     local choice = math.random(1,2)
 	if choice == 1 then
 	    PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_2_1041.mp3", "", "", 0, 0, Spawn)

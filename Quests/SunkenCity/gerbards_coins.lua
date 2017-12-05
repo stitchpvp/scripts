@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "Gerbard's Necklace
 	Script Author	: Scatman
 	Script Date	    : 2009.08.01
-	
+
 	Zone       : Sunken City
 	Quest Giver: Gerbard the Snitch
 	Preceded by: None

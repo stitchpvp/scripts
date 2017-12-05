@@ -1,6 +1,6 @@
 --[[
 	Script Name	: SpawnScripts/Oakmyst/TrackerGalera.lua
-	Script Purpose	: Tracker Galera 
+	Script Purpose	: Tracker Galera
 	Script Author	: scatman
 	Script Date	: 2009.05.08
 	Script Notes	: Auto-Generated Conversation from PacketParser Data
@@ -21,7 +21,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
@@ -43,7 +43,7 @@ end
 
 function dlg_17_1(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_FROM_STEWARD_TREDO, 2)
-	
+
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 

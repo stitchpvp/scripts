@@ -55,9 +55,9 @@ MovementLoopAddLocation(NPC, -851.03, -47.53, 647.4, speed, 0)
 MovementLoopAddLocation(NPC, -818.88, -47.72, 626.26, speed, delay)
 end
 
-function hailed(NPC, Spawn) 
-  FaceTarget(NPC, Spawn) 
-end 
+function hailed(NPC, Spawn)
+  FaceTarget(NPC, Spawn)
+end
 
 function aggro(NPC, Spawn)
  generic_aggro(NPC, Spawn)

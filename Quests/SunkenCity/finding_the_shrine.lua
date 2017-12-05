@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "Finding the Shrine"
 	Script Author	: Scatman
 	Script Date	    : 2009.07.28
-	
+
 	Zone       : Sunken City
 	Quest Giver: Investigator Curfield
 	Preceded by: Taking Back from the Blackshields (taking_back_from_the_blackshields.lua)

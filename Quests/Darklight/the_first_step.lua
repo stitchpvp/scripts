@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "The First Step"
 	Script Author	: Scatman
 	Script Date	: 2009.01.31
-	
+
 	Zone       : Darklight Wood
 	Quest Giver: Verex N'Za
 	Preceded by: Prowler Annoyance (prowler_annoyance.lua)
@@ -12,7 +12,7 @@
 
 
 function Init(Quest)
-	
+
 	-- Shadowed Glen Blade
 	-- Blade of the Outcast
 	-- Smoldering Scepter
@@ -29,7 +29,7 @@ function Accepted(Quest, QuestGiver, Player)
 		if GetDistance(Player, QuestGiver) < 30 then
 			FaceTarget(QuestGiver, Player)
 			conversation = CreateConversation()
-			
+
 			PlayFlavor(QuestGiver, "voiceover/english/neriak/verex_n_za/darklight_wood/hates_envy/verex/verex010.mp3", "", "", 1616419105, 2681650739, Player)
 			AddConversationOption(conversation, "On my way.")
 			StartConversation(conversation, QuestGiver, Player, "All right. Get to work, then.")
@@ -43,7 +43,7 @@ end
 function step1_complete_killedPulverizers(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 1, "I have destroyed the Sablevein pulverizers.")
 	UpdateQuestTaskGroupDescription(Quest, 1, "I have destroyed the Sablevein pulverizers.")
-	
+
 	AddQuestStepChat(Quest, 2, "I need to return to Verex N'Za.", 1, ".", 0, 340043)
 	AddQuestStepCompleteAction(Quest, 2, "quest_complete")
 end

@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "Finding the Investigator"
 	Script Author	: Scatman
 	Script Date	    : 2009.07.28
-	
+
 	Zone       : Sunken City
 	Quest Giver: Inquisitor Thorson
 	Preceded by: Cataloging Local Critters (cataloging_local_critters.lua)

@@ -3,7 +3,7 @@
 	Script Purpose	: Trainer Nhilzyne B'Myar <Combat Trainer>
 	Script Author	: Scatman
 	Script Date	: 2009.09.05
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 dofile("SpawnScripts/Generic/GenericVoiceOvers.lua")
@@ -12,13 +12,13 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	GenericHail(NPC, Spawn)
 
 	AddConversationOption(conversation, "Teach me the basics of combat.", "dlg_2_1")

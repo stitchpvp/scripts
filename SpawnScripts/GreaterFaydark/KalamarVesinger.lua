@@ -11,7 +11,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)
@@ -39,28 +39,28 @@ function hailed(NPC, Spawn)
 	AddConversationOption(conversation, "I located several magical devices and destroyed them.", "dlg_0_1")
 	AddConversationOption(conversation, "Not yet.")
 	StartConversation(conversation, NPC, Spawn, "Any news, XXXXXXXX?")
-	if convo==98 then
-		PlayFlavor(NPC, "voiceover/english/exp03_questvo/kalamar_vesinger/_exp03/exp03_cty_kelethin/quest/qst_kalamar_vesinger/qst_kalamar_vesinger001.mp3", "", "", 1370796179, 1768003050, Spawn)
-		AddConversationOption(conversation, "Lady Katri said you might be able to help me.", "dlg_98_1")
-		AddConversationOption(conversation, "Nothing, thanks.")
-		StartConversation(conversation, NPC, Spawn, "Yes? How can I help you?")
-	end
+	--if convo==98 then
+	--	PlayFlavor(NPC, "voiceover/english/exp03_questvo/kalamar_vesinger/_exp03/exp03_cty_kelethin/quest/qst_kalamar_vesinger/qst_kalamar_vesinger001.mp3", "", "", 1370796179, 1768003050, Spawn)
+	--	AddConversationOption(conversation, "Lady Katri said you might be able to help me.", "dlg_98_1")
+	--	AddConversationOption(conversation, "Nothing, thanks.")
+	--	StartConversation(conversation, NPC, Spawn, "Yes? How can I help you?")
+	--end
 
-	if convo==107 then
-		PlayFlavor(NPC, "voiceover/english/exp03_questvo/kalamar_vesinger/_exp03/exp03_cty_kelethin/quest/qst_kalamar_vesinger/qst_kalamar_vesinger008.mp3", "", "", 1634811844, 2197818091, Spawn)
-		AddConversationOption(conversation, "I've been everywhere on the list but haven't seen anything about the Grender.", "dlg_107_1")
-		AddConversationOption(conversation, "I've misplaced the scroll you gave me.")
-		AddConversationOption(conversation, "I'm still searching.")
-		StartConversation(conversation, NPC, Spawn, "How goes the hunt?")
-	end
+	--if convo==107 then
+	--	PlayFlavor(NPC, "voiceover/english/exp03_questvo/kalamar_vesinger/_exp03/exp03_cty_kelethin/quest/qst_kalamar_vesinger/qst_kalamar_vesinger008.mp3", "", "", 1634811844, 2197818091, Spawn)
+	--	AddConversationOption(conversation, "I've been everywhere on the list but haven't seen anything about the Grender.", "dlg_107_1")
+	--	AddConversationOption(conversation, "I've misplaced the scroll you gave me.")
+	--	AddConversationOption(conversation, "I'm still searching.")
+	--	StartConversation(conversation, NPC, Spawn, "How goes the hunt?")
+	--end
 
-	if convo==108 then
-		PlayFlavor(NPC, "voiceover/english/exp03_questvo/kalamar_vesinger/_exp03/exp03_cty_kelethin/quest/qst_kalamar_vesinger/qst_kalamar_vesinger008.mp3", "", "", 1634811844, 2197818091, Spawn)
-		AddConversationOption(conversation, "I've been everywhere on the list but haven't seen anything about the Grender.", "dlg_108_1")
-		AddConversationOption(conversation, "I've misplaced the scroll you gave me.")
-		AddConversationOption(conversation, "I'm still searching.")
-		StartConversation(conversation, NPC, Spawn, "How goes the hunt?")
-	end
+	--if convo==108 then
+	--	PlayFlavor(NPC, "voiceover/english/exp03_questvo/kalamar_vesinger/_exp03/exp03_cty_kelethin/quest/qst_kalamar_vesinger/qst_kalamar_vesinger008.mp3", "", "", 1634811844, 2197818091, Spawn)
+	--	AddConversationOption(conversation, "I've been everywhere on the list but haven't seen anything about the Grender.", "dlg_108_1")
+	--	AddConversationOption(conversation, "I've misplaced the scroll you gave me.")
+	--	AddConversationOption(conversation, "I'm still searching.")
+	--	StartConversation(conversation, NPC, Spawn, "How goes the hunt?")
+	--end
 
 end
 

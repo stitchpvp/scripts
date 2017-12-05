@@ -2,12 +2,12 @@
     Script Name    : Quests/ThunderingSteppes/TheGnollCave.lua
     Script Author  : Jabantiz
     Script Date    : 2014.07.08 10:07:08
-    Script Purpose : 
+    Script Purpose :
 
         Zone       : ThunderingSteppes
         Quest Giver: Tish Tickers (2490042)
         Preceded by: A Scrying Shame
-        Followed by: 
+        Followed by:
 --]]
 
 -- Quests

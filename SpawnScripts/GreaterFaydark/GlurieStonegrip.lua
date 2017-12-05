@@ -11,7 +11,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)
@@ -30,64 +30,64 @@ function hailed(NPC, Spawn)
 	AddConversationOption(conversation, "I would like the writ: Crushbone Centurions")
 	AddConversationOption(conversation, "I will return to assist you, later.")
 	StartConversation(conversation, NPC, Spawn, "Welcome to the Protectors of Growth, .. GetName(Spawn) .. .  We are in need of your help if you are willing to assist us.")
-	if convo==5 then
-		PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_2_1003.mp3", "", "", 0, 0, Spawn)
-		AddConversationOption(conversation, "I would like the writ: Crushbone Pawns", "dlg_5_1")
-		AddConversationOption(conversation, "I would like the writ: Crushbone Footmen")
-		AddConversationOption(conversation, "I would like the writ: Crushbone Centurions")
-		AddConversationOption(conversation, "I will return to assist you, later.")
-		StartConversation(conversation, NPC, Spawn, "Welcome to the Protectors of Growth, .. GetName(Spawn) .. .  We are in need of your help if you are willing to assist us.")
-	end
+	--if convo==5 then
+	--	PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_2_1003.mp3", "", "", 0, 0, Spawn)
+	--	AddConversationOption(conversation, "I would like the writ: Crushbone Pawns", "dlg_5_1")
+	--	AddConversationOption(conversation, "I would like the writ: Crushbone Footmen")
+	--	AddConversationOption(conversation, "I would like the writ: Crushbone Centurions")
+	--	AddConversationOption(conversation, "I will return to assist you, later.")
+	--	StartConversation(conversation, NPC, Spawn, "Welcome to the Protectors of Growth, .. GetName(Spawn) .. .  We are in need of your help if you are willing to assist us.")
+	--end
 
-	if convo==6 then
-		PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_2_1003.mp3", "", "", 0, 0, Spawn)
-		AddConversationOption(conversation, "I would like the writ: Crushbone Pawns", "dlg_6_1")
-		AddConversationOption(conversation, "I would like the writ: Crushbone Footmen")
-		AddConversationOption(conversation, "I would like the writ: Crushbone Centurions")
-		AddConversationOption(conversation, "I will return to assist you, later.")
-		StartConversation(conversation, NPC, Spawn, "Welcome to the Protectors of Growth, .. GetName(Spawn) .. .  We are in need of your help if you are willing to assist us.")
-	end
+	--if convo==6 then
+	--	PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_2_1003.mp3", "", "", 0, 0, Spawn)
+	--	AddConversationOption(conversation, "I would like the writ: Crushbone Pawns", "dlg_6_1")
+	--	AddConversationOption(conversation, "I would like the writ: Crushbone Footmen")
+	--	AddConversationOption(conversation, "I would like the writ: Crushbone Centurions")
+	--	AddConversationOption(conversation, "I will return to assist you, later.")
+	--	StartConversation(conversation, NPC, Spawn, "Welcome to the Protectors of Growth, .. GetName(Spawn) .. .  We are in need of your help if you are willing to assist us.")
+	--end
 
-	if convo==7 then
-		PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_3_1003.mp3", "", "", 0, 0, Spawn)
-		AddConversationOption(conversation, "I would like the writ: Crushbone Pawns", "dlg_7_1")
-		AddConversationOption(conversation, "I would like the writ: Crushbone Footmen")
-		AddConversationOption(conversation, "I would like the writ: Crushbone Centurions")
-		AddConversationOption(conversation, "I will return to assist you, later.")
-		StartConversation(conversation, NPC, Spawn, "Welcome to the Protectors of Growth, .. GetName(Spawn) .. .  We are in need of your help if you are willing to assist us.")
-	end
+	--if convo==7 then
+	--	PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_3_1003.mp3", "", "", 0, 0, Spawn)
+	--	AddConversationOption(conversation, "I would like the writ: Crushbone Pawns", "dlg_7_1")
+	--	AddConversationOption(conversation, "I would like the writ: Crushbone Footmen")
+	--	AddConversationOption(conversation, "I would like the writ: Crushbone Centurions")
+	--	AddConversationOption(conversation, "I will return to assist you, later.")
+	--	StartConversation(conversation, NPC, Spawn, "Welcome to the Protectors of Growth, .. GetName(Spawn) .. .  We are in need of your help if you are willing to assist us.")
+	--end
 
-	if convo==15 then
-		PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_2_1003.mp3", "", "", 0, 0, Spawn)
-		AddConversationOption(conversation, "I would like the writ: Crushbone Pawns", "dlg_15_1")
-		AddConversationOption(conversation, "I would like the writ: Crushbone Footmen")
-		AddConversationOption(conversation, "I will return to assist you, later.")
-		StartConversation(conversation, NPC, Spawn, "Welcome to the Protectors of Growth, .. GetName(Spawn) .. .  We are in need of your help if you are willing to assist us.")
-	end
+	--if convo==15 then
+	--	PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_2_1003.mp3", "", "", 0, 0, Spawn)
+	--	AddConversationOption(conversation, "I would like the writ: Crushbone Pawns", "dlg_15_1")
+	--	AddConversationOption(conversation, "I would like the writ: Crushbone Footmen")
+	--	AddConversationOption(conversation, "I will return to assist you, later.")
+	--	StartConversation(conversation, NPC, Spawn, "Welcome to the Protectors of Growth, .. GetName(Spawn) .. .  We are in need of your help if you are willing to assist us.")
+	--end
 
-	if convo==16 then
-		PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_2_1003.mp3", "", "", 0, 0, Spawn)
-		AddConversationOption(conversation, "I would like the writ: Crushbone Pawns", "dlg_16_1")
-		AddConversationOption(conversation, "I would like the writ: Crushbone Footmen")
-		AddConversationOption(conversation, "I will return to assist you, later.")
-		StartConversation(conversation, NPC, Spawn, "Welcome to the Protectors of Growth, .. GetName(Spawn) .. .  We are in need of your help if you are willing to assist us.")
-	end
+	--if convo==16 then
+	--	PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_2_1003.mp3", "", "", 0, 0, Spawn)
+	--	AddConversationOption(conversation, "I would like the writ: Crushbone Pawns", "dlg_16_1")
+	--	AddConversationOption(conversation, "I would like the writ: Crushbone Footmen")
+	--	AddConversationOption(conversation, "I will return to assist you, later.")
+	--	StartConversation(conversation, NPC, Spawn, "Welcome to the Protectors of Growth, .. GetName(Spawn) .. .  We are in need of your help if you are willing to assist us.")
+	--end
 
-	if convo==94 then
-		PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_3_1003.mp3", "", "", 0, 0, Spawn)
-		AddConversationOption(conversation, "I would like the writ: Crushbone Pawns", "dlg_94_1")
-		AddConversationOption(conversation, "I would like the writ: Crushbone Footmen")
-		AddConversationOption(conversation, "I will return to assist you, later.")
-		StartConversation(conversation, NPC, Spawn, "Welcome to the Protectors of Growth, .. GetName(Spawn) .. .  We are in need of your help if you are willing to assist us.")
-	end
+	--if convo==94 then
+	--	PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_3_1003.mp3", "", "", 0, 0, Spawn)
+	--	AddConversationOption(conversation, "I would like the writ: Crushbone Pawns", "dlg_94_1")
+	--	AddConversationOption(conversation, "I would like the writ: Crushbone Footmen")
+	--	AddConversationOption(conversation, "I will return to assist you, later.")
+	--	StartConversation(conversation, NPC, Spawn, "Welcome to the Protectors of Growth, .. GetName(Spawn) .. .  We are in need of your help if you are willing to assist us.")
+	--end
 
-	if convo==95 then
-		PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_3_1003.mp3", "", "", 0, 0, Spawn)
-		AddConversationOption(conversation, "I would like the writ: Crushbone Pawns", "dlg_95_1")
-		AddConversationOption(conversation, "I would like the writ: Crushbone Footmen")
-		AddConversationOption(conversation, "I will return to assist you, later.")
-		StartConversation(conversation, NPC, Spawn, "Welcome to the Protectors of Growth, .. GetName(Spawn) .. .  We are in need of your help if you are willing to assist us.")
-	end
+	--if convo==95 then
+	--	PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_3_1003.mp3", "", "", 0, 0, Spawn)
+	--	AddConversationOption(conversation, "I would like the writ: Crushbone Pawns", "dlg_95_1")
+	--	AddConversationOption(conversation, "I would like the writ: Crushbone Footmen")
+	--	AddConversationOption(conversation, "I will return to assist you, later.")
+	--	StartConversation(conversation, NPC, Spawn, "Welcome to the Protectors of Growth, .. GetName(Spawn) .. .  We are in need of your help if you are willing to assist us.")
+	--end
 
 end
 

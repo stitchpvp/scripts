@@ -3,7 +3,7 @@
 	Script Purpose	: for the spawn "a Ry'Gorr weapon"
 	Script Author	: theFoof
 	Script Date	: 2013.06.3
-	Script Notes	: 
+	Script Notes	:
 --]]
 local DisarmingRyGorr = 48
 
@@ -13,7 +13,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function casted_on(NPC, Spawn, SpellName)
@@ -29,7 +29,7 @@ end
 function SpawnAccess(NPC, Spawn)
 	if GetQuestStep(Spawn, DisarmingRyGorr) == 1 then
 		AddSpawnAccess(NPC, Spawn)
-	else 
+	else
 		RemoveSpawnAccess(NPC, Spawn)
 	end
 end

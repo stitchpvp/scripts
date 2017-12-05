@@ -3,17 +3,17 @@
 	Script Purpose	:	Handles the quest, "Trouble About"
 	Script Author	:	QuestParser (Replace this)
 	Script Date		:	7/8/2017
-	Script Notes	:	
+	Script Notes	:
 
 	Zone			:	Commonlands
-	Quest Giver		:	
+	Quest Giver		:
 	Preceded by		:	None
 	Followed by		:	None
 --]]
 
 
 function Init(Quest)
-	AddQuestStepKill(Quest, 1, "I need to kill the orc emissary", 1, 100, "I must kill the orc emissary for Captain Vertas.", 11, --[[ ID's --]])
+	AddQuestStepKill(Quest, 1, "I need to kill the orc emissary", 1, 100, "I must kill the orc emissary for Captain Vertas.", 11, nil)
 	AddQuestStepCompleteAction(Quest, 1, "Step1Complete")
 end
 
@@ -21,7 +21,7 @@ function Step1Complete(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 1, "I killed the emissary. I should report what I found to Captain Vertas.")
 	UpdateQuestTaskGroupDescription(Quest, 1, "I have killed the orc emissary.")
 
-	AddQuestStepChat(Quest, 2, "I should return to Captain Vertas", 1, "I should return to Captain Vertas in the Commonlands and report my findings.", 185, --[[ ID's --]])
+	AddQuestStepChat(Quest, 2, "I should return to Captain Vertas", 1, "I should return to Captain Vertas in the Commonlands and report my findings.", 185, nil)
 	AddQuestStepCompleteAction(Quest, 2, "QuestComplete")
 end
 

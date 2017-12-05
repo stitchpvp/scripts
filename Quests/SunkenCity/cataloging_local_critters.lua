@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "Cataloging Local Critters"
 	Script Author	: Scatman
 	Script Date	    : 2009.07.28
-	
+
 	Zone       : Sunken City
 	Quest Giver: Inquisitor Thorson
 	Preceded by: Spirits of the Night (spirits_of_the_night.lua)
@@ -34,7 +34,7 @@ end
 
 function Step1_Complete_BrineSifter(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 1, "I have found that there are quite a lot of brine sifters here.")
-	
+
 	if QuestIsComplete(Player, 268) then
 		AllCreaturesCataloged(Quest, QuestGiver, Player)
 	end
@@ -42,7 +42,7 @@ end
 
 function Step2_Complete_SmallRustMonster(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 2, "I have discovered that small rust monsters live in this area.")
-	
+
 	if QuestIsComplete(Player, 268) then
 		AllCreaturesCataloged(Quest, QuestGiver, Player)
 	end
@@ -50,7 +50,7 @@ end
 
 function Step3_Complete_RustMonster(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 3, "I have found rust monsters here in the Sunken City.")
-	
+
 	if QuestIsComplete(Player, 268) then
 		AllCreaturesCataloged(Quest, QuestGiver, Player)
 	end
@@ -58,7 +58,7 @@ end
 
 function Step4_Complete_SmallScorpion(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 4, "I have found small scorpions here in the Sunken City.")
-	
+
 	if QuestIsComplete(Player, 268) then
 		AllCreaturesCataloged(Quest, QuestGiver, Player)
 	end
@@ -66,7 +66,7 @@ end
 
 function AllCreaturesCataloged(Quest, QuestGiver, Player)
 	UpdateQuestTaskGroupDescription(Quest, 1, "I have obtained information on the local creatures.")
-	
+
 	AddQuestStepChat(Quest, 5, "I should take the information I obtained back to Inquisitor Thorson..", 1, "I should return to Inquisitor Thorson with what I have learned.", 0, 1240007)
 	AddQuestStepCompleteAction(Quest, 5, "Quest_Complete")
 end

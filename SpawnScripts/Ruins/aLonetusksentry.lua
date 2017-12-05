@@ -3,7 +3,7 @@
 	Script Purpose	: a Lonetusk sentry
 	Script Author	: Scatman
 	Script Date	: 2009.08.21
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 dofile("SpawnScripts/Ruins/aLonetuskBloodseer.lua")
@@ -12,7 +12,7 @@ local spoke = false
 function spawn(NPC)
 	spoke = false
 	local sli = GetSpawnLocationID(NPC)
-	
+
 	if sli == 159752 then
 		StartPath1(NPC)
 	elseif sli == 133494 then
@@ -28,7 +28,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)

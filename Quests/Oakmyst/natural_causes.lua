@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "Natural Causes?"
 	Script Author	: Scatman
 	Script Date	: 2009.05.03
-	
+
 	Zone       : Oakmyst Forest
 	Quest Giver: Lieutenant Charlin
 	Preceded by: None
@@ -13,8 +13,8 @@
 
 function Init(Quest)
 	AddQuestStepKill(Quest, 1, "I need to collect a poison gland from the frogs of Oakmyst Forest, commonly found near The Western Falls.", 1, 25, "Lieutenant Charlin has asked that I collect poison from some of the creatures local to Oakmyst Forest.", 160, 1950058)
-	AddQuestStepKill(Quest, 2, "I need to collect a poison sac from the spiders found near The Western Falls.", 1, 25, "Lieutenant Charlin has asked that I collect poison from some of the creatures local to Oakmyst Forest.", 158, 1950045, 1950042, 1950040, 1950043) 
-	AddQuestStepKill(Quest, 3, "I need to collect a poison sac from any of the mystail rats in Oakmyst Forest.", 1, 25, "Lieutenant Charlin has asked that I collect poison from some of the creatures local to Oakmyst Forest.", 112, 1950026, 1950016, 1950018, 1950025) 
+	AddQuestStepKill(Quest, 2, "I need to collect a poison sac from the spiders found near The Western Falls.", 1, 25, "Lieutenant Charlin has asked that I collect poison from some of the creatures local to Oakmyst Forest.", 158, 1950045, 1950042, 1950040, 1950043)
+	AddQuestStepKill(Quest, 3, "I need to collect a poison sac from any of the mystail rats in Oakmyst Forest.", 1, 25, "Lieutenant Charlin has asked that I collect poison from some of the creatures local to Oakmyst Forest.", 112, 1950026, 1950016, 1950018, 1950025)
 	AddQuestStepCompleteAction(Quest, 1, "Step1_Complete_GotPoison")
 	AddQuestStepCompleteAction(Quest, 2, "Step2_Complete_GotPoison")
 	AddQuestStepCompleteAction(Quest, 3, "Step3_Complete_GotPoison")
@@ -23,7 +23,7 @@ end
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
 	local conversation = CreateConversation()
-	
+
 	PlayFlavor(QuestGiver, "voiceover/english/tutorial_revamp/lieutenant_charlin/qey_adv01_oakmyst/quests/charlin/charlin005a.mp3", "", "", 3816458075, 1868191399, Player)
 	AddConversationOption(conversation, "I will be.")
 	StartConversation(conversation, QuestGiver, Player, "Be careful out there.")
@@ -58,7 +58,7 @@ end
 
 function MultipleStepComplete(Quest, QuestGiver, Player)
 	UpdateQuestTaskGroupDescription(Quest, 1, "I have collected some poison for Lieutenant Charlin.")
-	AddQuestStepChat(Quest, 4, "I need to speak with Lieutenant Charlin near the gates to Castleview Hamlet.", 1, "I need to return to Lieutenant Charlin and give him the poison that I have collected.", 0, 1950015) 
+	AddQuestStepChat(Quest, 4, "I need to speak with Lieutenant Charlin near the gates to Castleview Hamlet.", 1, "I need to return to Lieutenant Charlin and give him the poison that I have collected.", 0, 1950015)
 	AddQuestStepCompleteAction(Quest, 4, "QuestComplete")
 end
 

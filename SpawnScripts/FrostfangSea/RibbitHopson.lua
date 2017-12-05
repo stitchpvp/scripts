@@ -1,6 +1,6 @@
 --[[
 	Script Name	: SpawnScripts/FrostfangSea/RibbitHopson.lua
-	Script Purpose	: Ribbit Hopson 
+	Script Purpose	: Ribbit Hopson
 	Script Author	: theFoof
 	Script Date	: 2013.08.27
 	Script Notes	:
@@ -14,7 +14,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)
@@ -24,7 +24,7 @@ end
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	if not HasCompletedQuest(Spawn, SpiderPuffs) and not HasQuest(Spawn, SpiderPuffs) then
 		PlayFlavor(NPC, "ribbit_hopson/halas/new_halas/ribbit_hopson/ribbit_hopson_001.mp3", "", "", 2788145631, 3173619593, Spawn)
 		AddConversationOption(conversation, "Hello, Ribbit. I am " .. GetName(Spawn) .. ".", "Quest1Chat_1")
@@ -90,7 +90,7 @@ end
 function Quest1Chat_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	AddConversationOption(conversation, "I can rest a bit.", "Quest1Chat_7")
 	StartConversation(conversation, NPC, Spawn, "Splendid! If you will rest for a moment, I can have the spider puff batter whipped up and baked in no time!")
 end
@@ -100,7 +100,7 @@ function Quest1Chat_7(NPC, Spawn)
 	SetStepComplete(Spawn, SpiderPuffs, 3)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	AddConversationOption(conversation, "Thank you, Ribbit!")
 	StartConversation(conversation, "There, finished! Please take some puffs for yourself.")
 end

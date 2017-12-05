@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "Haoaeran Poisons"
 	Script Author	: Scatman
 	Script Date	: 2009.02.27
-	
+
 	Zone       : Timorous Deep
 	Quest Giver: Arozik Sky'Ki
 	Preceded by: None
@@ -22,7 +22,7 @@ end
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
 	local conversation = CreateConversation()
-	
+
 	PlayFlavor(QuestGiver, "voiceover/english/rok_questvo/arozik_sky_ki/_exp04/exp04_rgn_timorous_deep/chrykori_tie/skyki/skyki003.mp3", "", "", 1707113595, 2002626119, Player)
 	AddConversationOption(conversation, "I will handle myself carefully.")
 	StartConversation(conversation, QuestGiver, Player, "Good. Careful handling the monitors and their sacs; remember, we don't have an antidote yet, and I do not need another invalid to care for. Return once you have enough for a thorough study.")
@@ -33,7 +33,7 @@ end
 
 function step1_complete_gotGlands(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 1, "I have the poison glands.")
-	
+
 	AddQuestStepChat(Quest, 2, "I need to bring these poison glands to Secondary Arozik Sky'Ki.", 1, ".", 336, 2630081)
 	AddQuestStepCompleteAction(Quest, 2, "quest_complete")
 end

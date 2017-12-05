@@ -3,17 +3,17 @@
 	Script Purpose	:	Handles the quest, "Wisp-er Sweet Nothings"
 	Script Author	:	QuestParser (Replace this)
 	Script Date		:	7/8/2017
-	Script Notes	:	
+	Script Notes	:
 
 	Zone			:	Commonlands
-	Quest Giver		:	
+	Quest Giver		:
 	Preceded by		:	None
 	Followed by		:	None
 --]]
 
 
 function Init(Quest)
-	AddQuestStepKill(Quest, 1, "Kill wisps for their essence", 10, 100, "I have offered to help Mooshga get wisp essences for her wisp tofu.", 145, --[[ ID's --]])
+	AddQuestStepKill(Quest, 1, "Kill wisps for their essence", 10, 100, "I have offered to help Mooshga get wisp essences for her wisp tofu.", 145, nil)
 	AddQuestStepCompleteAction(Quest, 1, "Step1Complete")
 end
 
@@ -21,7 +21,7 @@ function Step1Complete(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 1, "I have collected ten wisp essences.")
 	UpdateQuestTaskGroupDescription(Quest, 1, "I have Mooshga's wisp essences.")
 
-	AddQuestStepChat(Quest, 2, "I have the essences Mooshga wanted", 1, "I should return to Mooshga outside of the Freeport gates.", 11, --[[ ID's --]])
+	AddQuestStepChat(Quest, 2, "I have the essences Mooshga wanted", 1, "I should return to Mooshga outside of the Freeport gates.", 11, nil)
 	AddQuestStepCompleteAction(Quest, 2, "QuestComplete")
 end
 

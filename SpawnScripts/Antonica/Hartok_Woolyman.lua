@@ -48,10 +48,5 @@ function Option5(NPC, Spawn)
 
 	AddConversationOption(conversation, "I'll be right back with your pelts.")
 	StartConversation(conversation, NPC, Spawn, "Yup, Miss Windstalker must be rolling over in her grave! Oh well, more bears for me, right? Ha!")
-  
-  function hailed(NPC, Spawn)
-	FaceTarget(NPC, Spawn)
-  Say(NPC, "Hey! What are you doing back here so soon? I don't want to hear any excuses. Come back when you finish the task I have given you, or don't return at all!", Spawn)
-  end
 end
 

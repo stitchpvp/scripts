@@ -3,7 +3,7 @@
 	Script Purpose	:	the quest Watch Out Below!
 	Script Author	:	theFoof
 	Script Date		:	2013.7.18
-	Script Notes	:   
+	Script Notes	:
 
 	Zone			:	Frostfang Sea
 	Quest Giver		:	Odon Sourgeson

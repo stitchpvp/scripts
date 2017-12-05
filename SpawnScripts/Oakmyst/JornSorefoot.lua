@@ -1,6 +1,6 @@
 --[[
 	Script Name	: SpawnScripts/Oakmyst/JornSorefoot.lua
-	Script Purpose	: Jorn Sorefoot 
+	Script Purpose	: Jorn Sorefoot
 	Script Author	: John Adams/Scatman
 	Script Date	: 2009.05.03
 	Script Notes	: Auto-Generated Conversation from PacketParser Data
@@ -16,13 +16,13 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	if HasQuest(Spawn, QUEST_FROM_BURK) then
 		ThatLittle(NPC, Spawn, conversation)
 	else
@@ -56,18 +56,18 @@ end
 
 function dlg_0_1(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_FROM_BURK, 1)
-	
+
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/jorn_sorefoot/qey_adv01_oakmyst/quests/jorn/jorn_burk001.mp3", "", "", 2501778388, 330892647, Spawn)
-	
+
 	if not HasQuest(Spawn, QUEST_1) and not HasCompletedQuest(Spawn, QUEST_1) then
 		AddConversationOption(conversation, "He said you might be able to use my help.", "YeahICanUseYourHelp")
 	else
 		AddConversationOption(conversation, "I'm not sure. I've already completed your one quest so you're not use to me.")
 	end
-	
+
 	StartConversation(conversation, NPC, Spawn, "No, Burk isn't a liar. That gnome, though, he's got me steamed. Erm, sorry, why did Burk send you?")
 end
 
@@ -154,7 +154,7 @@ end
 
 function dlg_2_2(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_1, 2)
-	
+
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 

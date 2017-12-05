@@ -22,7 +22,7 @@ function Option2(NPC, Spawn)
 
 	AddConversationOption(conversation, "Maybe someday some brave explorer will find the answer. ")
 	AddConversationOption(conversation, "I may explore Stormhold some day.  If I find out how, I'll be sure to let you know.", "Option3")
-	StartConversation(conversation, NPC, Spawn, "Oh, come now!  Surely you have heard the rumors that some explorers believe they found the location of the legendary Stormhold? ... The ancient fortress of the Knights of Thunder?  Personally, I think those "explorers" were crypt raiders, but what do I know?  Plants.  That's what I know.  And no one ever saw the Knights of Thunder growing their own plants ...  or hauling supply wagons out of Qeynos for that matter.  So, how do you suppose they fed themselves?  Hmm?")
+	StartConversation(conversation, NPC, Spawn, "Oh, come now!  Surely you have heard the rumors that some explorers believe they found the location of the legendary Stormhold? ... The ancient fortress of the Knights of Thunder?  Personally, I think those \"explorers\" were crypt raiders, but what do I know?  Plants.  That's what I know.  And no one ever saw the Knights of Thunder growing their own plants ...  or hauling supply wagons out of Qeynos for that matter.  So, how do you suppose they fed themselves?  Hmm?")
 end
 
 function Option3(NPC, Spawn)

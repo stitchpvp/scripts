@@ -33,7 +33,7 @@ function HoldStone(Item, Player)
 	if GetQuestStep(Player, DWARF_MENTOR_QUEST_4) == 1 then
 		SetStepComplete(Player, DWARF_MENTOR_QUEST_4, 1)
 	end
-	
+
 	local conversation = CreateConversation()
 	AddConversationOption(conversation, "Put the stone away.")
 	StartDialogConversation(conversation, 2, Item, Player, "When you focus on the stone there is an almost audible sense of hammers and chisels working at stone, carts moving back and forth, and a low hum of an ancient dwarven work song.")

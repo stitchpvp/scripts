@@ -3,7 +3,7 @@
 	Script Purpose	:	Ry'Gorr tunnelers
 	Script Author	:	theFoof
 	Script Date		:	2013.7.24
-	Script Notes	:	
+	Script Notes	:
 --]]
 
 local BecomingOrcbane = 81
@@ -12,7 +12,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)

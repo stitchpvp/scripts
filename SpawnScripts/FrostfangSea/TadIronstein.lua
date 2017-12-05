@@ -1,6 +1,6 @@
 --[[
 	Script Name	: SpawnScripts/FrostfangSea/TadIronstein.lua
-	Script Purpose	: Tad Ironstein 
+	Script Purpose	: Tad Ironstein
 	Script Author	: theFoof
 	Script Date	: 2013.06.09
 	Script Notes	:
@@ -14,13 +14,13 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	if GetQuestStep(Spawn, ReportSpine) == 1 or GetQuestStep(Spawn, NightmareOver) == 1 then
 	    PlayFlavor(NPC, "tad_ironstein/halas/cragged_spine/tad_ironstein_001.mp3", "", "", 159212760, 893738328, Spawn)
 	    AddConversationOption(conversation, GetName(Spawn) .. ", reporting for duty!", "Quest1Chat_1")

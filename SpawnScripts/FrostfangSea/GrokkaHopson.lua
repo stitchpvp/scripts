@@ -1,16 +1,16 @@
 --[[
 	Script Name	: SpawnScripts/FrostfangSea/GrokkaHopson.lua
-	Script Purpose	: Grokka Hopson 
+	Script Purpose	: Grokka Hopson
 	Script Author	: theFoof
 	Script Date	: 2013.09.13
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)

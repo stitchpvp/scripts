@@ -3,7 +3,7 @@
 	Script Purpose	:	Handles the quest, "No Undead Goes Unturned"
 	Script Author	:	Cynnar
 	Script Date		:	8/17/2015
-	Script Notes	:	
+	Script Notes	:
 
 	Zone			:	Darklight Wood
 	Quest Giver		:	Sselnyl Do'Zyth
@@ -39,7 +39,7 @@ end
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
 	local conversation = CreateConversation()
-	
+
 	PlayFlavor(QuestGiver, "sselnyl_do_zyth/darklight_wood/hates_envy/sselnyl_revamp/sselnyl005.mp3", "", "", 2966552414, 1013655055, Player)
 	AddConversationOption(conversation, "I will return shortly with the remains.")
 	StartConversation(conversation, QuestGiver, Player, "With haste, " ..GetName(Player).. ".")

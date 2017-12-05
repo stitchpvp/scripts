@@ -1,6 +1,6 @@
 --[[
 	Script Name	: SpawnScripts/Darklight/FileylAlyylharil.lua
-	Script Purpose	: Fileyl Alyylharil 
+	Script Purpose	: Fileyl Alyylharil
 	Script Author	: John Adams
 	Script Date	: 2009.01.31
 	Script Notes	: Auto-Generated Conversation from PacketParser Data
@@ -20,7 +20,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
@@ -56,9 +56,9 @@ function hailed(NPC, Spawn)
 			NewToHatesEnvy(NPC, Spawn, conversation)
 		end
 	end
-	
+
 	--[[
-	
+
 
 
 	if convo==8 then
@@ -165,13 +165,13 @@ end
 
 function DoYouHaveThePelts(NPC, Spawn, conversation)
 	PlayFlavor(NPC, "voiceover/english/neriak/fileyl_alyylharil/darklight_wood/hates_envy/fileyl/fileyl004.mp3", "", "", 3186146596, 1953587154, Spawn)
-	
+
 	if (HasCompletedQuest(Spawn, QUEST_1) and not HasCompletedQuest(Spawn, QUEST_2)) or (HasQuest(Spawn, QUEST_1) and GetQuestStep(Spawn, QUEST_1) == 2) then
 		AddConversationOption(conversation, "Yes.", "dlg_7_1")
 	else
 		AddConversationOption(conversation, "Not yet.")
 	end
-	
+
 	StartConversation(conversation, NPC, Spawn, "Do you have the pelts?")
 end
 
@@ -179,7 +179,7 @@ function dlg_7_1(NPC, Spawn)
 	if HasQuest(Spawn, QUEST_1) then
 		SetStepComplete(Spawn, QUEST_1, 2)
 	end
-	
+
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 
@@ -209,13 +209,13 @@ end
 
 function DidYouCollectWeeds(NPC, Spawn, conversation)
 	PlayFlavor(NPC, "voiceover/english/neriak/fileyl_alyylharil/darklight_wood/hates_envy/fileyl/fileyl008.mp3", "", "", 3278232788, 3073634729, Spawn)
-	
+
 	if (HasCompletedQuest(Spawn, QUEST_2) and not HasCompletedQuest(Spawn, QUEST_3)) or (HasQuest(Spawn, QUEST_2) and GetQuestStep(Spawn, QUEST_2) == 2) then
 		AddConversationOption(conversation, "Yes, I did. Here you go.", "dlg_9_1")
 	else
 		AddConversationOption(conversation, "Not yet.")
 	end
-	
+
 	StartConversation(conversation, NPC, Spawn, "Did you collect the weeds?")
 end
 
@@ -223,7 +223,7 @@ function dlg_9_1(NPC, Spawn)
 	if HasQuest(Spawn, QUEST_2) then
 		SetStepComplete(Spawn, QUEST_2, 2)
 	end
-	
+
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 

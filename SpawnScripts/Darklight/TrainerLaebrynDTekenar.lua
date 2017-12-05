@@ -11,7 +11,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)
@@ -28,12 +28,12 @@ function hailed(NPC, Spawn)
 	AddConversationOption(conversation, "How do I judge my opponent?", "dlg_2_1")
 	AddConversationOption(conversation, "I'll return later.")
 	StartConversation(conversation, NPC, Spawn, "Greetings. I sense that you will fight many battles and that you will one day be known as a great hero. But remember, we all have to start somewhere. The first thing you need to know to be successful in combat is how to size up your adversary.")
-	if convo==3 then
-		PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_1_1007.mp3", "", "", 0, 0, Spawn)
-		AddConversationOption(conversation, "How do I judge my opponent?", "dlg_3_1")
-		AddConversationOption(conversation, "I'll return later.")
-		StartConversation(conversation, NPC, Spawn, "Greetings. I sense that you will fight many battles and that you will one day be known as a great hero. But remember, we all have to start somewhere. The first thing you need to know to be successful in combat is how to size up your adversary.")
-	end
+	--if convo==3 then
+	--	PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_1_1007.mp3", "", "", 0, 0, Spawn)
+	--	AddConversationOption(conversation, "How do I judge my opponent?", "dlg_3_1")
+	--	AddConversationOption(conversation, "I'll return later.")
+	--	StartConversation(conversation, NPC, Spawn, "Greetings. I sense that you will fight many battles and that you will one day be known as a great hero. But remember, we all have to start somewhere. The first thing you need to know to be successful in combat is how to size up your adversary.")
+	--end
 
 end
 

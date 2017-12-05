@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "Sandy Eggs"
 	Script Author	: Scatman
 	Script Date	: 2009.02.10
-	
+
 	Zone       : Timorous Deep
 	Quest Giver: Varkori Riz'Lul
 	Preceded by: Hopefully the Meat Isn't Timeworn (hopefully_the_meat_isnt_timeworn.lua)
@@ -39,7 +39,7 @@ end
 
 function step1_complete_gotEggs(Quest, QuestGiver, Player)
 	SetStepComplete(Quest, 1, "I have collected the tortoise eggs.")
-	
+
 	AddQuestStepChat(Quest, 2, "I need to bring these eggs to Varkori Riz'Lul.", 1, ".", 2148, 2630043)
 	AddQuestStepCompleteAction(Quest, 2, "quest_complete")
 end

@@ -3,7 +3,7 @@
 	Script Purpose	:	to make the mining barrel die and create an explosion/hide the rock widget
 	Script Author	:	theFoof
 	Script Date		:	2013.6.12
-	Script Notes	:	
+	Script Notes	:
 --]]
 
 function spawn(NPC)
@@ -12,7 +12,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function destroy_barrel(NPC)

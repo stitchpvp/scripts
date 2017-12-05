@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "Clean Up"
 	Script Author	: Scatman
 	Script Date	: 2009.10.08
-	
+
 	Zone       : Oakmyst Forest
 	Quest Giver: Lieutenant Charlin
 	Preceded by: An Important Meeting (an_important_meeting.lua)
@@ -58,14 +58,14 @@ end
 function Multiple_Steps_Complete(Quest, QuestGiver, Player)
 	UpdateQuestTaskGroupDescription(Quest, 1, "I have slain the three gnoll lieutenants.")
 
-	AddQuestStepChat(Quest, 4, "I need to return to Lieutenant Charlin.", 1, "I need to bring the news of the slain lieutenants back to Lieutenant Charlin.", 0, 1950015) 
+	AddQuestStepChat(Quest, 4, "I need to return to Lieutenant Charlin.", 1, "I need to bring the news of the slain lieutenants back to Lieutenant Charlin.", 0, 1950015)
 	AddQuestStepCompleteAction(Quest, 4, "QuestComplete")
 end
 
 function QuestComplete(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 4, "I have spoken with Lieutenant Charlin.")
 	UpdateQuestTaskGroupDescription(Quest, 2, "I have spoken with Lieutenant Charlin.")
-	
+
 	UpdateQuestDescription(Quest, "I have slain all three of the gnoll lieutenants. With their deaths the Oakmyst Forest should be free of gnollish corruption for some time.")
 	GiveQuestReward(Quest, Player)
 end

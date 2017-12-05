@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "Driving Back the Dervish"
 	Script Author	: Scatman
 	Script Date	    : 2009.07.27
-	
+
 	Zone       : The Sprawl
 	Quest Giver: Liege Aquila
 	Preceded by: None
@@ -29,7 +29,7 @@ end
 function Step1_Complete_KilledCrooks(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 1, "I've defeated the Dervish in battle.")
 	UpdateQuestTaskGroupDescription(Quest, 1, "I've taught the Dervish a lesson.")
-	
+
 	AddQuestStepChat(Quest, 2, "I should report back to Liege Aquila.", 1, "I should report back to Liege Aquila near the gate to the Ruins.", 0, 1260109)
 	AddQuestStepCompleteAction(Quest, 2, "Quest_Complete")
 end
@@ -41,7 +41,7 @@ function Quest_Complete(Quest, QuestGiver, Player)
 	UpdateQuestDescription(Quest, "I fought back against the Dervish in the Sprawl. So far they seem to be contained, but their numbers are significant. I fear this battle will be ongoing.")
 end
 
-function Reload(Quest, QuestGiver, Player)
+function Reload(Quest, QuestGiver, Player, Step)
 	if Step == 1 then
 		Step1_Complete_KilledCrooks(Quest, QuestGiver, Player)
 	end

@@ -15,11 +15,11 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-    spawn(NPC)
+SpawnMob(NPC)
 end
 
 function SpawnAccess(NPC, Spawn)
-	
+
 	if HasQuest(Spawn, ThexianTaint) and GetQuestStep(Spawn, ThexianTaint) == 2 then
 		AddSpawnAccess(NPC, Spawn)
 	else
@@ -36,6 +36,6 @@ function casted_on(NPC, Spawn, SpellName)
 		    SetStepComplete(Spawn, ThexianTaint, 2)
 			end
 		end
-		
+
 	end
 end

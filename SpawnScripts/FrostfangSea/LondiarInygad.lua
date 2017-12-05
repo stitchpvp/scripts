@@ -3,20 +3,20 @@
 	Script Purpose	: Londiar Inygad <Adorning Daily Tasks>
 	Script Author	: theFoof
 	Script Date	: 2013.09.26
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_2_1052.mp3", "hello", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Thank you, I'll keep that in mind.")
 	AddConversationOption(conversation, "How would I learn adorning?", "AdornChat1")

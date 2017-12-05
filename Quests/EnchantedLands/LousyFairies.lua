@@ -20,7 +20,7 @@ end
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
 	local conversation = CreateConversation()
-	
+
 	AddConversationOption(conversation, "Alright.")
 	StartConversation(conversation, QuestGiver, Player, "Right over there, along the coast ... those blasted, smug fairies!")
 end

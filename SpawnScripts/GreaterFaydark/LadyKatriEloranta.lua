@@ -11,7 +11,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)
@@ -28,68 +28,68 @@ function hailed(NPC, Spawn)
 	AddConversationOption(conversation, "Apparently, it really does exist -- and it's using one of Kelethin's tree stumps as its lair!", "dlg_1_1")
 	AddConversationOption(conversation, "I'm still learning.")
 	StartConversation(conversation, NPC, Spawn, "Have you learned more about the Grender?")
-	if convo==18 then
-		PlayFlavor(NPC, "voiceover/english/exp03_questvo/lady_katri_eloranta/_exp03/exp03_cty_kelethin/tutorials/qst_katri/qst_katri_both001.mp3", "", "", 3983154354, 2409150172, Spawn)
-		AddConversationOption(conversation, "I am seeking adventure.", "dlg_18_1")
-		AddConversationOption(conversation, "I'll be on my way now.")
-		StartConversation(conversation, NPC, Spawn, "Hello, I am Lady Katri Eloranta, advisor.  How may I help you?")
-	end
+	--if convo==18 then
+	--	PlayFlavor(NPC, "voiceover/english/exp03_questvo/lady_katri_eloranta/_exp03/exp03_cty_kelethin/tutorials/qst_katri/qst_katri_both001.mp3", "", "", 3983154354, 2409150172, Spawn)
+	--	AddConversationOption(conversation, "I am seeking adventure.", "dlg_18_1")
+	--	AddConversationOption(conversation, "I'll be on my way now.")
+	--	StartConversation(conversation, NPC, Spawn, "Hello, I am Lady Katri Eloranta, advisor.  How may I help you?")
+	--end
 
-	if convo==36 then
-		PlayFlavor(NPC, "voiceover/english/exp03_questvo/lady_katri_eloranta/_exp03/exp03_cty_kelethin/tutorials/qst_katri/qst_katri009.mp3", "", "", 4145784618, 3223534278, Spawn)
-		AddConversationOption(conversation, "I completed the training, my lady.", "dlg_36_1")
-		AddConversationOption(conversation, "I am still working on it.")
-		StartConversation(conversation, NPC, Spawn, "How goes your self-defense training?")
-	end
+	--if convo==36 then
+	--	PlayFlavor(NPC, "voiceover/english/exp03_questvo/lady_katri_eloranta/_exp03/exp03_cty_kelethin/tutorials/qst_katri/qst_katri009.mp3", "", "", 4145784618, 3223534278, Spawn)
+	--	AddConversationOption(conversation, "I completed the training, my lady.", "dlg_36_1")
+	--	AddConversationOption(conversation, "I am still working on it.")
+	--	StartConversation(conversation, NPC, Spawn, "How goes your self-defense training?")
+	--end
 
-	if convo==37 then
-		PlayFlavor(NPC, "voiceover/english/exp03_questvo/lady_katri_eloranta/_exp03/exp03_cty_kelethin/tutorials/qst_katri/qst_katri009.mp3", "", "", 4145784618, 3223534278, Spawn)
-		AddConversationOption(conversation, "I completed the training, my lady.", "dlg_37_1")
-		AddConversationOption(conversation, "I am still working on it.")
-		StartConversation(conversation, NPC, Spawn, "How goes your self-defense training?")
-	end
+	--if convo==37 then
+	--	PlayFlavor(NPC, "voiceover/english/exp03_questvo/lady_katri_eloranta/_exp03/exp03_cty_kelethin/tutorials/qst_katri/qst_katri009.mp3", "", "", 4145784618, 3223534278, Spawn)
+	--	AddConversationOption(conversation, "I completed the training, my lady.", "dlg_37_1")
+	--	AddConversationOption(conversation, "I am still working on it.")
+	--	StartConversation(conversation, NPC, Spawn, "How goes your self-defense training?")
+	--end
 
-	if convo==89 then
-		PlayFlavor(NPC, "voiceover/english/exp03_questvo/lady_katri_eloranta/_exp03/exp03_cty_kelethin/tutorials/qst_katri/qst_katri015.mp3", "", "", 3835887931, 684375070, Spawn)
-		AddConversationOption(conversation, "Not yet, but I have some questions.", "dlg_89_1")
-		AddConversationOption(conversation, "Not yet.")
-		StartConversation(conversation, NPC, Spawn, "You've finished your Fae history studies so soon?")
-	end
+	--if convo==89 then
+	--	PlayFlavor(NPC, "voiceover/english/exp03_questvo/lady_katri_eloranta/_exp03/exp03_cty_kelethin/tutorials/qst_katri/qst_katri015.mp3", "", "", 3835887931, 684375070, Spawn)
+	--	AddConversationOption(conversation, "Not yet, but I have some questions.", "dlg_89_1")
+	--	AddConversationOption(conversation, "Not yet.")
+	--	StartConversation(conversation, NPC, Spawn, "You've finished your Fae history studies so soon?")
+	--end
 
-	if convo==90 then
-		PlayFlavor(NPC, "voiceover/english/exp03_questvo/lady_katri_eloranta/_exp03/exp03_cty_kelethin/tutorials/qst_katri/qst_katri015.mp3", "", "", 3835887931, 684375070, Spawn)
-		AddConversationOption(conversation, "Not yet, but I have some questions.", "dlg_90_1")
-		AddConversationOption(conversation, "Not yet.")
-		StartConversation(conversation, NPC, Spawn, "You've finished your Fae history studies so soon?")
-	end
+	--if convo==90 then
+	--	PlayFlavor(NPC, "voiceover/english/exp03_questvo/lady_katri_eloranta/_exp03/exp03_cty_kelethin/tutorials/qst_katri/qst_katri015.mp3", "", "", 3835887931, 684375070, Spawn)
+	--	AddConversationOption(conversation, "Not yet, but I have some questions.", "dlg_90_1")
+	--	AddConversationOption(conversation, "Not yet.")
+	--	StartConversation(conversation, NPC, Spawn, "You've finished your Fae history studies so soon?")
+	--end
 
-	if convo==91 then
-		PlayFlavor(NPC, "voiceover/english/exp03_questvo/lady_katri_eloranta/_exp03/exp03_cty_kelethin/tutorials/qst_katri/qst_katri015.mp3", "", "", 3835887931, 684375070, Spawn)
-		AddConversationOption(conversation, "Not yet, but I have some questions.", "dlg_91_1")
-		AddConversationOption(conversation, "Not yet.")
-		StartConversation(conversation, NPC, Spawn, "You've finished your Fae history studies so soon?")
-	end
+	--if convo==91 then
+	--	PlayFlavor(NPC, "voiceover/english/exp03_questvo/lady_katri_eloranta/_exp03/exp03_cty_kelethin/tutorials/qst_katri/qst_katri015.mp3", "", "", 3835887931, 684375070, Spawn)
+	--	AddConversationOption(conversation, "Not yet, but I have some questions.", "dlg_91_1")
+	--	AddConversationOption(conversation, "Not yet.")
+	--	StartConversation(conversation, NPC, Spawn, "You've finished your Fae history studies so soon?")
+	--end
 
-	if convo==92 then
-		PlayFlavor(NPC, "voiceover/english/exp03_questvo/lady_katri_eloranta/_exp03/exp03_cty_kelethin/tutorials/qst_katri/qst_katri020.mp3", "", "", 1734937732, 3669646106, Spawn)
-		AddConversationOption(conversation, "We must cull those that are diseased.", "dlg_92_1")
-		AddConversationOption(conversation, "I cannot decide.")
-		StartConversation(conversation, NPC, Spawn, "You stand at the cusp of your adulthood.  What do you recommend that we do with these creatures, .. GetName(Spawn) .. . What does your spirit tell you?")
-	end
+	--if convo==92 then
+	--	PlayFlavor(NPC, "voiceover/english/exp03_questvo/lady_katri_eloranta/_exp03/exp03_cty_kelethin/tutorials/qst_katri/qst_katri020.mp3", "", "", 1734937732, 3669646106, Spawn)
+	--	AddConversationOption(conversation, "We must cull those that are diseased.", "dlg_92_1")
+	--	AddConversationOption(conversation, "I cannot decide.")
+	--	StartConversation(conversation, NPC, Spawn, "You stand at the cusp of your adulthood.  What do you recommend that we do with these creatures, .. GetName(Spawn) .. . What does your spirit tell you?")
+	--end
 
-	if convo==93 then
-		PlayFlavor(NPC, "voiceover/english/exp03_questvo/lady_katri_eloranta/_exp03/exp03_cty_kelethin/tutorials/qst_katri/qst_katri020.mp3", "", "", 1734937732, 3669646106, Spawn)
-		AddConversationOption(conversation, "We must cull those that are diseased.", "dlg_93_1")
-		AddConversationOption(conversation, "I cannot decide.")
-		StartConversation(conversation, NPC, Spawn, "You stand at the cusp of your adulthood.  What do you recommend that we do with these creatures, .. GetName(Spawn) .. . What does your spirit tell you?")
-	end
+	--if convo==93 then
+	--	PlayFlavor(NPC, "voiceover/english/exp03_questvo/lady_katri_eloranta/_exp03/exp03_cty_kelethin/tutorials/qst_katri/qst_katri020.mp3", "", "", 1734937732, 3669646106, Spawn)
+	--	AddConversationOption(conversation, "We must cull those that are diseased.", "dlg_93_1")
+	--	AddConversationOption(conversation, "I cannot decide.")
+	--	StartConversation(conversation, NPC, Spawn, "You stand at the cusp of your adulthood.  What do you recommend that we do with these creatures, .. GetName(Spawn) .. . What does your spirit tell you?")
+	--end
 
-	if convo==97 then
-		PlayFlavor(NPC, "voiceover/english/exp03_questvo/lady_katri_eloranta/_exp03/exp03_cty_kelethin/tutorials/qst_katri/qst_katri030.mp3", "", "", 601485501, 2301313071, Spawn)
-		AddConversationOption(conversation, "I wish we could have healed those creatures.", "dlg_97_1")
-		AddConversationOption(conversation, "I'd rather not speak about it now.")
-		StartConversation(conversation, NPC, Spawn, "You seem troubled, .. GetName(Spawn) .. .  What is it?")
-	end
+	--if convo==97 then
+	--	PlayFlavor(NPC, "voiceover/english/exp03_questvo/lady_katri_eloranta/_exp03/exp03_cty_kelethin/tutorials/qst_katri/qst_katri030.mp3", "", "", 601485501, 2301313071, Spawn)
+	--	AddConversationOption(conversation, "I wish we could have healed those creatures.", "dlg_97_1")
+	--	AddConversationOption(conversation, "I'd rather not speak about it now.")
+	--	StartConversation(conversation, NPC, Spawn, "You seem troubled, .. GetName(Spawn) .. .  What is it?")
+	--end
 
 end
 

@@ -1,9 +1,9 @@
 --[[
 	Script Name	: SpawnScripts/FrostfangSea/DandiMcCarren.lua
-	Script Purpose	: Dandi McCarren 
+	Script Purpose	: Dandi McCarren
 	Script Author	: theFoof
 	Script Date	: 2013.08.19
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 local TrustIssues = 85
@@ -12,7 +12,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
@@ -89,7 +89,7 @@ end
 function Quest1Chat_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	AddConversationOption(conversation, "Um...I'm taking a poll.", "Quest1Chat_1")
 	AddConversationOption(conversation, "There's no need to get upset!", "Quest1Chat_1")
 	AddConversationOption(conversation, "I was just leaving.")
@@ -99,7 +99,7 @@ end
 function Quest1Chat_7(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	AddConversationOption(conversation, "What do you like about Erollis?", "Quest1Chat_5")
 	AddConversationOption(conversation, "Whatever, I don't have time for this.")
 	StartConversation(conversation, NPC, Spawn, "A collection of quaint and curious volumes of forgotten lore.  I doubt you've heard of them.")
@@ -108,7 +108,7 @@ end
 function Quest1Chat_8(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	AddConversationOption(conversation, "I was just leaving.")
 	StartConversation(conversation, NPC, Spawn, "Bah.  Get out of my sight!")
 end

@@ -1,6 +1,6 @@
 --[[
 	Script Name	: SpawnScripts/EnchantedLands/astablemaster.lua
-	Script Purpose	: a stable master 
+	Script Purpose	: a stable master
 	Script Author	: Cynnar
 	Script Date	: 2015.02.17
 	Script Notes	: Auto-Generated Conversation from PacketParser Data
@@ -10,13 +10,13 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	if GetSpawnLocationID(NPC) == 106627 then
 		PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_3_1047.mp3", "", "", 0, 0, Spawn)
 		AddConversationOption(conversation, "I would like to travel.", "dlg_PlacesB")
@@ -53,7 +53,7 @@ function hailed(NPC, Spawn)
 		AddConversationOption(conversation, "I am fine staying here, thanks.")
 		StartConversation(conversation, NPC, Spawn, "Greetings traveler, how can I assist you today?")
 	end
-	
+
 end
 
 function dlg_0_1(NPC, Spawn)

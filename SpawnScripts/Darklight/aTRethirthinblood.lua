@@ -2,8 +2,8 @@
     Script Name    : SpawnScripts/Darklight/aTRethirthinblood.lua
     Script Author  : theFoof
     Script Date    : 2013.11.27
-    Script Purpose : 
-                   : 
+    Script Purpose :
+                   :
 --]]
 
 function spawn(NPC)
@@ -19,5 +19,5 @@ function hailed(NPC, Spawn)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end

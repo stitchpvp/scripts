@@ -1,9 +1,9 @@
 --[[
 	Script Name	: SpawnScripts/FrostfangSea/PretchonIronstein.lua
-	Script Purpose	: Pretchon Ironstein 
+	Script Purpose	: Pretchon Ironstein
 	Script Author	: theFoof
 	Script Date	: 2013.08.19
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 local TrustIssues = 85
@@ -12,7 +12,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)

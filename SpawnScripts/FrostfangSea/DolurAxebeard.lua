@@ -1,9 +1,9 @@
 --[[
 	Script Name	: SpawnScripts/FrostfangSea/DolurAxebeard.lua
-	Script Purpose	: Dolur Axebeard 
+	Script Purpose	: Dolur Axebeard
 	Script Author	: theFoof
 	Script Date	: 2013.05.25
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 local GlimmerOrc = 31
@@ -37,13 +37,13 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
     FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
     if not HasQuest(Spawn, GlimmerOrc) and not HasCompletedQuest(Spawn, GlimmerOrc) then
 	    PlayFlavor(NPC, "dolur_axebeard/halas/great_shelf/dolur_axebeard/dolur_axebeard001.mp3", "", "", 1652895933, 4056769103, Spawn)
 		AddConversationOption(conversation, "What's wrong?", "Quest1Chat_1")
@@ -240,7 +240,7 @@ end
 function Quest1Chat_11(NPC, Spawn)
     FaceTarget(NPC, Spawn)
 	converation = CreateConversation()
-	
+
 	PlayFlavor(NPC, "dolur_axebeard/halas/great_shelf/dolur_axebeard/dolur_axebeard013.mp3", "", "", 4055438067, 163416310, Spawn)
 	AddConversationOption(conversation, "It wasn't easy.", "Quest1Chat_12")
 	AddConversationOption(conversation, "Here's the glimmer dust.", "Quest1Chat_12")
@@ -325,7 +325,7 @@ end
 function Quest3Chat_1(NPC, Spawn)
     FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	PlayFlavor(NPC, "dolur_axebeard/halas/great_shelf/dolur_axebeard/dolur_axebeard023.mp3", "", "", 3394689570, 853009244, Spawn)
 	AddConversationOption(conversation, "That is unfortunate, but you have to balance your priorities.", "Quest3Chat_2")
 	AddConversationOption(conversation, "Is this something I can help with?", "Quest3Chat_2")
@@ -357,7 +357,7 @@ end
 function Quest3Chat_4(NPC, Spawn)
     FaceTarget(NPC, Spawn)
 	conversation = CreateConversation
-	
+
 	AddConversationOption(conversation, "Tell me more.", "Quest3Chat_3")
 	AddConversationOption(conversation, "Your burdens are yours alone. Goodbye.")
 	StartConversation(conversation, NPC, Spawn, "I'm not certain we've done everything we can, but then again I've always taken on more burdens than I can easily carry. There's someting else we can do, right now. If ye'll hear me out, maybe ye could even lend a hand.")
@@ -397,7 +397,7 @@ end
 function Quest3Chat_8(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	AddConversationOption(conversation, "Fair enough.", "Quest3Chat_9")
 	AddConversationOption(conversation, "Whatever. If you say so.", "Quest3Chat_9")
 	StartConversation(conversation, NPC, Spawn, "Have a little faith. The spirits believe in us, or else they wouldn't be here. It's only fair to believe in them, in return.")
@@ -417,7 +417,7 @@ end
 function Quest4Chat_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	PlayFlavor(NPC, "dolur_axebeard/halas/great_shelf/dolur_axebeard/dolur_axebeard034.mp3", "", "", 4183445940, 2191855130, Spawn)
 	AddConversationOption(conversation, "If you need to kill skeletons, I'm in.", "Quest4Chat_2")
 	AddConversationOption(conversation, "How can I help?", "Quest4Chat_3")
@@ -644,7 +644,7 @@ end
 function Quest5Chat_11(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	AddConversationOption(conversation, "Of course not. How can I help?", "Quest5Chat_5")
 	AddConversationOption(conversation, "The jury is still out on that, but I'm willing to help today.", "Quest5Chat_5")
 	AddConversationOption(conversation, "I do feel underappreciated. Goodbye.")
@@ -655,7 +655,7 @@ function Quest5Chat_12(NPC, Spawn)
 	SetStepComplete(Spawn, CallingBack, 6)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	AddConversationOption(conversation, "I hope we can tip the scales even futher.", "Quest5Chat_13")
 	AddConversationOption(conversation, "Is there anything else I can do to help, Dolur?", "Quest6Chat_1")
 	AddConversationOption(conversation, "I hope you have some real work for me, next time.", "Quest5Chat_13")
@@ -741,7 +741,7 @@ function Quest7Chat_1(NPC, Spawn)
 	SetStepComplete(Spawn, TheGauntlet, 2)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
     PlayFlavor(NPC, "dolur_axebeard/halas/great_shelf/dolur_axebeard/dolur_axebeard072.mp3", "", "", 1784529, 3849185180, Spawn)
 	AddConversationOption(conversation, "What about disabling the totems?","Quest7Chat_2")
 	AddConversationOption(conversation, "Even replacing the spirit wards didn't help?", "Quest7Chat_10")
@@ -1003,7 +1003,7 @@ function Quest8Chat_10(NPC, Spawn)
 	SetStepComplete(Spawn, SeveringHead, 3)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	AddConversationOption(conversation, "I'm glad to have helped.", "Quest9Chat_1")
 	AddConversationOption(conversation, "So, do you need any more help?", "Quest9Chat_1")
 	StartConversation(conversation, NPC, Spawn, "I wish I could have been there to see the looks on thier tooth-grinned faces.  Haha!  It must have been a sight to behold. And now their forced run around like helpless, leaderless, axe-fodder.")
@@ -1012,7 +1012,7 @@ end
 function Quest9Chat_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	AddConversationOption(conversation, "I'm fairly sure.", "Quest9Chat_2")
 	AddConversationOption(conversation, "Your flattery will be the death of me, Dolur.", "Quest9Chat_2")
 	StartConversation(conversation, NPC, Spawn, "Are ye sure ye don't have any Frostreaver blood in ye, " .. GetName(Spawn) .. "?")
@@ -1021,7 +1021,7 @@ end
 function Quest9Chat_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	AddConversationOption(conversation, "I'm just glad it's over.", "Quest9Chat_3")
 	AddConversationOption(conversation, "A few missteps are to be expected.", "Quest9Chat_3")
 	AddConversationOption(conversation, "War is rarely clean or predictable.", "Quest9Chat_3")
@@ -1032,12 +1032,12 @@ end
 function Quest9Chat_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	AddConversationOption(conversation, "I'd be happy to help.", "OfferNightmareOver")
 	AddConversationOption(conversation, "I will head over right away.", "OfferNightmareOver")
 	AddConversationOption(conversation, "I could use a break, actually. Goodbye.")
 	StartConversation(conversation, NPC, Spawn, "Yer welcome to stay here and celebrate, but I'd say yer handiwork will be needed more elsewhere.  The men in Cragged Spine could use someone with yer tenacity. What do ye say?")
-end	
+end
 
 function OfferGlimmerOrc(NPC, Spawn)
     OfferQuest(NPC, Spawn, GlimmerOrc)

@@ -3,7 +3,7 @@
 	Script Purpose	: Emma Torque <Field Engineer>
 	Script Author	: Scatman
 	Script Date	: 2009.10.18
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 local QUEST1_FROM_CONSULBREE = 223
@@ -18,19 +18,19 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	-- her quests require QUEST1_FROM_CONSULBREE to be completed first
-	
+
 	if HasQuest(Spawn, QUEST3_FROM_CONSULBREE) then
 		if GetQuestStep(Spawn, QUEST3_FROM_CONSULBREE) == 1 then
 			AddConversationOption(conversation, "Consul Bree sent me to you. I need a river stone.", "dlg_17_1")
-			
+
 		-- Drawing Ray
 		elseif not HasItem(Spawn, 140946) then
 			AddConversationOption(conversation, "I need the Drawing Ray.", "dlg_17_2")
@@ -77,10 +77,10 @@ end
 
 function dlg_17_2(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST3_FROM_CONSULBREE, 1)
-	
+
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	-- Drawing Ray
 	if not HasItem(Spawn, 140946) then
 		SummonItem(Spawn, 140946, 1)
@@ -213,7 +213,7 @@ end
 
 function dlg_26_2(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_2, 4)
-	
+
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 

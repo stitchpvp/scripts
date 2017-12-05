@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "Sablevein Rubble"
 	Script Author	: Scatman
 	Script Date	: 2009.02.01
-	
+
 	Zone       : Darklight Wood
 	Quest Giver: Danya Halfmoon
 	Preceded by: None
@@ -32,7 +32,7 @@ end
 function step1_complete_gotRubble(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 1, "I have collected the Sablevein rubble.")
 	UpdateQuestTaskGroupDescription(Quest, 1, "I have collected the Sablevein rubble.")
-	
+
 	AddQuestStepChat(Quest, 2, "I need to bring the rubble back to Danya Halfmoon.", 1, ".", 183, 340073)
 	AddQuestStepCompleteAction(Quest, 2, "quest_complete")
 end

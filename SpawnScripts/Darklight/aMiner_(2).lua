@@ -7,7 +7,7 @@
 	Script Notes	:	Location is in Hate's Envy
 --]]
 
-local SealingTheRift = 122
+--local SealingTheRift = 122
 local ReclaimingTheSableveinTear = 124
 
 function spawn(NPC, Player)
@@ -16,7 +16,7 @@ function spawn(NPC, Player)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function QuestCheck(NPC, Player)

@@ -1,9 +1,9 @@
 --[[
-	Script Name		:	SpawnScripts/FrostfangSea/widget_velium_barricade_01.lua 
+	Script Name		:	SpawnScripts/FrostfangSea/widget_velium_barricade_01.lua
 	Script Purpose	:	for the giant boulder barrier in the velinoid caves
 	Script Author	:	theFoof
 	Script Date		:	2013.6.12
-	Script Notes	:	
+	Script Notes	:
 --]]
 
 local RyGorrOperations = 60

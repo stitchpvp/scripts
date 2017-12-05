@@ -11,7 +11,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)
@@ -27,11 +27,11 @@ function hailed(NPC, Spawn)
 		PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_1_1008.mp3", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "What can cause my death? ", "dlg_5_1")
 	StartConversation(conversation, NPC, Spawn, "In time, all must fall. Allow me to teach you the consequences of death and how you can recover properly.")
-	if convo==11 then
-		PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_2_1008.mp3", "", "", 0, 0, Spawn)
-		AddConversationOption(conversation, "What can cause my death? ", "dlg_11_1")
-		StartConversation(conversation, NPC, Spawn, "In time, all must fall. Allow me to teach you the consequences of death and how you can recover properly.")
-	end
+	--if convo==11 then
+	--	PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_2_1008.mp3", "", "", 0, 0, Spawn)
+	--	AddConversationOption(conversation, "What can cause my death? ", "dlg_11_1")
+	--	StartConversation(conversation, NPC, Spawn, "In time, all must fall. Allow me to teach you the consequences of death and how you can recover properly.")
+	--end
 
 end
 

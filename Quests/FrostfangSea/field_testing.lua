@@ -43,7 +43,7 @@ end
 
 function Reload(Quest, QuestGiver, Player, Step)
     if Step == 1 then
-	    GotLillies(Quest, QuestGiver, Player)
+	    GotLilies(Quest, QuestGiver, Player)
 	elseif Step == 2 then
 	    CompleteQuest(Quest, QuestGiver, Player)
 	end

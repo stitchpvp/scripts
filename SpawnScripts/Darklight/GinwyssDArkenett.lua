@@ -7,7 +7,7 @@
 	Scritp Notes	:	It leads to Gwinyss final quest.
 --]]
 
-local NoUndeadGoesUnturned = 134
+-- local NoUndeadGoesUnturned = 134
 local ThexianTaint = 135
 local RottingScum = 138
 local PickingUpSlack = 139
@@ -20,13 +20,13 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	if not HasCompletedQuest(Spawn, ThexianTaint) and GetQuestStep(Spawn, ThexianTaint) < 3 then
 		StartConversation(conversation, NPC, Spawn, "You need speak with Sselnyl Do'Zyth in Hate's Envy, then come back and see me.")
 	elseif not HasCompletedQuest(Spawn, ThexianTaint) and GetQuestStep(Spawn, ThexianTaint) == 3 then
@@ -90,9 +90,9 @@ end
 function ThexianTaint_Finish(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	SetStepComplete(Spawn, ThexianTaint, 3)
-	
+
 	PlayFlavor(NPC, "ginwyss_d_arkenett/darklight_wood/tvatar_post/ginwyss_revamp/ginwyss002.mp3", "", "", 195833289, 1438804587, Spawn)
 	AddConversationOption(conversation, "Why is that?", "Quest_RottingScum")
 	StartConversation(conversation, NPC, Spawn, "Of course. We appreciate this. Anything we can do to keep the Thexians out of these woods is helpful. I am glad you have arrived.")
@@ -104,7 +104,7 @@ end
 function Quest_RottingScum(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	PlayFlavor(NPC, "ginwyss_d_arkenett/darklight_wood/tvatar_post/ginwyss_revamp/ginwyss004.mp3", "", "", 2620151660, 2492067079, Spawn)
 	AddConversationOption(conversation, "I am.", "Quest_RottingScum_01")
 	AddConversationOption(conversation, "I am not.")
@@ -114,7 +114,7 @@ end
 function Quest_RottingScum_B(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	PlayFlavor(NPC, "ginwyss_d_arkenett/darklight_wood/tvatar_post/ginwyss_revamp/ginwyss003.mp3", "", "", 3004928751, 1497818906, Spawn)
 	AddConversationOption(conversation, "Oh?", "Quest_RottingScum")
 	StartConversation(conversation, NPC, Spawn, "You wish to help? If that's the case, then I'm glad you're here.")
@@ -123,7 +123,7 @@ end
 function Quest_RottingScum_01(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	PlayFlavor(NPC, "", "", "agree", 0, 0, Spawn)
 	AddConversationOption(conversation, "Where have they come from?", "Quest_RottingScum_02")
 	StartConversation(conversation, NPC, Spawn, "That is good to hear, " .. GetName(Spawn) .. ". I would like your help with the undead that infest this camp.")
@@ -132,7 +132,7 @@ end
 function Quest_RottingScum_02(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	PlayFlavor(NPC, "ginwyss_d_arkenett/darklight_wood/tvatar_post/ginwyss_revamp/ginwyss006.mp3", "", "", 1721704244, 1661413444, Spawn)
 	AddConversationOption(conversation, "These corpses... Who were they?", "Quest_RottingScum_03")
 	StartConversation(conversation, NPC, Spawn, "This was once the site of a very large battle. Though ages old, new corpses are beginning to resurface and attack. I suspect none other than the Thexians to be behind this plot. The cowards would rather have the dead attack us than face us in open battle!")
@@ -141,7 +141,7 @@ end
 function Quest_RottingScum_03(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	PlayFlavor(NPC, "ginwyss_d_arkenett/darklight_wood/tvatar_post/ginwyss_revamp/ginwyss007.mp3", "", "", 1606040300, 1401696355, Spawn)
 	AddConversationOption(conversation, "Very well.", "QuestOffer_RottingScum")
 	AddConversationOption(conversation, "I cannot do what you ask.")
@@ -155,7 +155,7 @@ end
 function RottingScum_No(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	PlayFlavor(NPC, "ginwyss_d_arkenett/darklight_wood/tvatar_post/ginwyss_revamp/ginwyss011.mp3", "", "", 465595230, 4113153338, Spawn)
 	AddConversationOption(conversation, "I will return.")
 	StartConversation(conversation, NPC, Spawn, "Do not return until you have put down the stout cadavers and fallen rangers!")
@@ -165,7 +165,7 @@ function RottingScum_Yes(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 	SetStepComplete(Spawn, RottingScum, 3)
-	
+
 	PlayFlavor(NPC, "ginwyss_d_arkenett/darklight_wood/tvatar_post/ginwyss_revamp/ginwyss010.mp3", "", "agree", 1734208636, 3841795105, Spawn)
 	AddConversationOption(conversation, "Isn't there a way to get rid of them permanently?", "PickingUpSlack_A")
 	StartConversation(conversation, NPC, Spawn, "Good. They'll be back in short order, unfortunately. Your efforts, however, should cause them to cease annoying us for the time being.")
@@ -178,7 +178,7 @@ end
 function PickingUpSlack_A(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	PlayFlavor(NPC, "ginwyss_d_arkenett/darklight_wood/tvatar_post/ginwyss_revamp/ginwyss012.mp3", "", "agree", 1734208636, 3841795105, Spawn)
 	AddConversationOption(conversation, "What do you mean?", "PickingUpSlack_B")
 	StartConversation(conversation, NPC, Spawn, "I believe Laexyra is looking into that matter. However, before you run along and help her, I first need your assistance in dealing with a few deserters.")
@@ -187,7 +187,7 @@ end
 function PickingUpSlack_B(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_1_1047.mp3", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "I could help again.", "PickingUpSlack_01")
 	AddConversationOption(conversation, "I must take my leave.")
@@ -197,7 +197,7 @@ end
 function PickingUpSlack_01(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	PlayFlavor(NPC, "ginwyss_d_arkenett/darklight_wood/tvatar_post/ginwyss_revamp/ginwyss014.mp3", "", "", 3763405805, 3752416036, Spawn)
 	AddConversationOption(conversation, "All right.", "QuestOffer_PickingUpSlack")
 	AddConversationOption(conversation, "I would prefer not to.")
@@ -211,7 +211,7 @@ end
 function PickingUpSlack_No(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	PlayFlavor(NPC, "ginwyss_d_arkenett/darklight_wood/tvatar_post/ginwyss_revamp/ginwyss018.mp3", "", "", 3110804349, 157804660, Spawn)
 	AddConversationOption(conversation, "I will return.")
 	StartConversation(conversation, NPC, Spawn, "Jargos cannot make armor plates with raw material. Do not return until you've collected enough scrap armor from the moldering soldiers.")
@@ -222,7 +222,7 @@ function PickingUpSlack_Yes(NPC, Spawn)
 	local conversation = CreateConversation()
 
 	SetStepComplete(Spawn, PickingUpSlack, 2)
-		
+
 	if HasQuest(Spawn, AGuardInsignia) then
 		AddConversationOption(conversation, "I found this while hunting undead.", "Quest_MissingRecruit")
 		StartConversation(conversation, NPC, Spawn, "Good work, young one. You're turning out to be a much harder worker than that no good deserter, Soltrin. Curious... I wonder what became of him.")
@@ -247,7 +247,7 @@ end
 function PickingUpSlack_03(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	AddConversationOption(conversation, "I'll see what I can do.")
 	StartConversation(conversation, NPC, Spawn, "That is much appreciated, " .. GetName(Spawn) .. ". Now, in the meantime I suggest you speak with some of the others found here at this post. There is much work to be done.")
 end
@@ -260,7 +260,7 @@ function Quest_MissingRecruit(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 	SetStepComplete(Spawn, MissingRecruit, 1)
-	
+
 	PlayFlavor(NPC, "ginwyss_d_arkenett/darklight_wood/tvatar_post/ginwyss_revamp/ginwyss021.mp3", "", "", 4046947438, 1960374270, Spawn)
 	AddConversationOption(conversation, "Sure.", "Quest_MissingRecruit_01")
 	StartConversation(conversation, NPC, Spawn, "Hmm. Interesting. Perhaps Soltrin didn't catch the fever. Perhaps he died while performing his duties--how noble of him. I wonder if we can still retrieve his field kit... Are you up for another task, " .. GetName(Spawn) .. "?")
@@ -270,7 +270,7 @@ function Quest_MissingRecruit_01(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 	SetStepComplete(Spawn, AGuardInsignia, 1)
-	
+
 	PlayFlavor(NPC, "ginwyss_d_arkenett/darklight_wood/tvatar_post/ginwyss_revamp/ginwyss022.mp3", "", "", 2283622719, 1945338688, Spawn)
 	AddConversationOption(conversation, "All right.", "QuestOffer_MissingRecruit")
 	StartConversation(conversation, NPC, Spawn, "I'd like you to search the same area where you destroyed the undead soldiers. If Soltrin was killed, it's quite possible that his body is nearby. Hopefully his field kit will still be intact. If it is, I'd like you to retrieve it for me.")
@@ -283,7 +283,7 @@ end
 function MissingRecruit_No(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	PlayFlavor(NPC, "ginwyss_d_arkenett/darklight_wood/tvatar_post/ginwyss_revamp/ginwyss026.mp3", "", "", 3389215806, 2500269282, Spawn)
 	AddConversationOption(conversation, "Alright, alright!")
 	StartConversation(conversation, NPC, Spawn, "Keep searching then!")
@@ -293,7 +293,7 @@ function MissingRecruit_Yes(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 	SetStepComplete(Spawn, MissingRecruit, 2)
-	
+
 	PlayFlavor(NPC, "ginwyss_d_arkenett/darklight_wood/tvatar_post/ginwyss_revamp/ginwyss025.mp3", "", "", 3122094664, 4174660668, Spawn)
 	AddConversationOption(conversation, "You're welcome.")
 	StartConversation(conversation, NPC, Spawn, "Nice work, Sygman. These kits aren't cheap. Again, you have our thanks.")

@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "Anger-Fang"
 	Script Author	: Scatman
 	Script Date	    : 2009.07.28
-	
+
 	Zone       : The Ruins
 	Quest Giver: Mardyp Prunt
 	Preceded by: None
@@ -28,7 +28,7 @@ end
 
 function Step1_Complete_KilledOrcs(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 1, "I have collected the orc fangs.")
-	
+
 	AddQuestStepChat(Quest, 2, "I need to bring the orc fangs to Mardyp.", 1, "Mardyp would like me to collect some orc fangs for him.", 0, 1270016)
 	AddQuestStepCompleteAction(Quest, 2, "Quest_Complete")
 end

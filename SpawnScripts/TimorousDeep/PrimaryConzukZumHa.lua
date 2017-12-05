@@ -18,7 +18,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
@@ -56,7 +56,7 @@ end
 
 function IWelcomeYou(NPC, Spawn, conversation)
 	PlayFlavor(NPC, "voiceover/english/rok_questvo/primary_conzuk_zum_ha/_exp04/exp04_rgn_timorous_deep/chrykori_tie/zumha/zumha000.mp3", "", "", 147931511, 1161032950, Spawn)
-	
+
 	if (HasCompletedQuest(Spawn, QUEST_3) and not HasCompletedQuest(Spawn, QUEST_4)) or (HasQuest(Spawn, QUEST_3) and GetQuestStep(Spawn, QUEST_3) == 1) then
 		AddConversationOption(conversation, "Tykor Gi'Lok thought you should see this; the Haoaerans were digging this ore up along the beach wall.", "dlg_10_1")
 		if HasCompletedQuest(Spawn, QUEST_3) then
@@ -65,7 +65,7 @@ function IWelcomeYou(NPC, Spawn, conversation)
 	else
 		AddConversationOption(conversation, "Nothing, thank you.")
 	end
-	
+
 	StartConversation(conversation, NPC, Spawn, "I welcome you to Chrykori Village, " .. GetName(Spawn) .. ". I am Conzuk Zum'Ha, the Primary of Chrykori Island. What can I do for you?")
 end
 
@@ -73,7 +73,7 @@ function dlg_10_1(NPC, Spawn)
 	if HasQuest(Spawn, QUEST_3) then
 		SetStepComplete(Spawn, QUEST_3, 1)
 	end
-	
+
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 
@@ -102,13 +102,13 @@ end
 
 function WellWhatAreTheyUpTo(NPC, Spawn, conversation)
 	PlayFlavor(NPC, "voiceover/english/rok_questvo/primary_conzuk_zum_ha/_exp04/exp04_rgn_timorous_deep/chrykori_tie/zumha/zumha003.mp3", "", "", 4127661595, 3391252035, Spawn)
-	
+
 	if (HasCompletedQuest(Spawn, QUEST_4) and not HasCompletedQuest(Spawn, QUEST_5)) or (HasQuest(Spawn, QUEST_4) and GetQuestStep(Spawn, QUEST_4) == 3) then
 		AddConversationOption(conversation, "Yes, I found this pottery. It's curiously decorated.", "dlg_28_1")
 	else
 		AddConversationOption(conversation, "Not yet. I will continue looking.")
 	end
-	
+
 	StartConversation(conversation, NPC, Spawn, "Well? What are they up to? Have you found anything worthwhile?")
 end
 
@@ -116,7 +116,7 @@ function dlg_28_1(NPC, Spawn)
 	if HasQuest(Spawn, QUEST_4) then
 		SetStepComplete(Spawn, QUEST_4, 3)
 	end
-	
+
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 
@@ -136,13 +136,13 @@ end
 
 function HaveYouSucceeded(NPC, Spawn, conversation)
 	PlayFlavor(NPC, "voiceover/english/rok_questvo/primary_conzuk_zum_ha/_exp04/exp04_rgn_timorous_deep/chrykori_tie/zumha/zumha006.mp3", "", "", 1471399693, 1482281040, Spawn)
-	
+
 	if (HasCompletedQuest(Spawn, QUEST_5) and not HasCompletedQuest(Spawn, QUEST_6)) or (HasQuest(Spawn, QUEST_5) and GetQuestStep(Spawn, QUEST_5) == 2) then
 		AddConversationOption(conversation, "Yes. The ritualists were infusing a giant Haoaeran with power.", "dlg_39_1")
 	else
 		AddConversationOption(conversation, "Not yet. They're eluding me.")
 	end
-	
+
 	StartConversation(conversation, NPC, Spawn, "Well? Have you succeeded in putting an end to their ritual?")
 end
 
@@ -150,7 +150,7 @@ function dlg_39_1(NPC, Spawn)
 	if HasQuest(Spawn, QUEST_5) then
 		SetStepComplete(Spawn, QUEST_5, 2)
 	end
-	
+
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 

@@ -1,9 +1,9 @@
 --[[
 	Script Name	: SpawnScripts/Caves/analabasterbehemoth.lua
-	Script Purpose	: an alabaster behemoth 
+	Script Purpose	: an alabaster behemoth
 	Script Author	: Scatman
 	Script Date	: 2009.11.20
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 local MIN_TIME = 3000
@@ -17,7 +17,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)

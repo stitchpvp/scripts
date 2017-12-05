@@ -1,5 +1,5 @@
-function hailed(NPC, Spawn) 
+function hailed(NPC, Spawn)
   FaceTarget(NPC, Spawn)
   conversation = CreateConversation()
-  Say(NPC, "Yes..?", Spawn) 
-end 
+  Say(NPC, "Yes..?", Spawn)
+end

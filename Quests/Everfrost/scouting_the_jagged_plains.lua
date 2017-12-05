@@ -2,7 +2,7 @@
     Script Name    : Quests/Everfrost/scouting_the_jagged_plains.lua
     Script Author  : Flunklesnarkin
     Script Date    : 2016.01.13 02:01:35
-    Script Purpose : 
+    Script Purpose :
 
         Zone       : Everfrost
         Quest Giver: Thyr Stormhammer

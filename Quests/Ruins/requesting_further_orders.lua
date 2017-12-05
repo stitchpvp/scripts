@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "Requesting Further Orders"
 	Script Author	: Scatman
 	Script Date	    : 2009.08.02
-	
+
 	Zone       : The Ruins
 	Quest Giver: Lieutenant Argosian
 	Preceded by: Prophet and Loss (prophet_and_loss.lua)

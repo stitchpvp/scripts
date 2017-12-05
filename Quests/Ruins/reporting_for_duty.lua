@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "Driving Back the Dervish"
 	Script Author	: Scatman
 	Script Date	    : 2009.07.28
-	
+
 	Zone       : The Ruins
 	Quest Giver: Captain Arellius
 	Preceded by: None

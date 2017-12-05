@@ -2,7 +2,7 @@
     Script Name    : Quests/ThunderingSteppes/BlumbleBlunder.lua
     Script Author  : Jabantiz
     Script Date    : 2014.07.07 08:07:18
-    Script Purpose : 
+    Script Purpose :
 
         Zone       : ThunderingSteppes
         Quest Giver: Blerton Blumble (2490025)
@@ -29,11 +29,11 @@ function Step2Complete(Quest, QuestGiver, Player)
 end
 
 function Accepted(Quest, QuestGiver, Player)
-	FaceTarget(NPC, Spawn)
+	FaceTarget(QuestGiver, Player)
 	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "Okay.")
-	StartConversation(conversation, NPC, Spawn, "Thank you very much. Grandpa sometimes gets it into his head to go searching for pirate treasure. None of us are quite sure why, but the whole family worries about him. He has a knack for getting lost. Last time we found him he had fallen asleep digging over on the beach to the north of the docks here and we've been wondering when he'd try it again. You can't miss it, he always marks his dig with a big 'X'.")
+	StartConversation(conversation, QuestGiver, Player, "Thank you very much. Grandpa sometimes gets it into his head to go searching for pirate treasure. None of us are quite sure why, but the whole family worries about him. He has a knack for getting lost. Last time we found him he had fallen asleep digging over on the beach to the north of the docks here and we've been wondering when he'd try it again. You can't miss it, he always marks his dig with a big 'X'.")
 
 	-- Advance step 1 of Watch Your Step in The Thundering Steppes, Part I
 	SetStepComplete(Player, WatchYourStepInTSPartI, 1)

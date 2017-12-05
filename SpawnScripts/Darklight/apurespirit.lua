@@ -14,7 +14,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function casted_on(NPC, Spawn, SpellName)
@@ -25,7 +25,7 @@ function casted_on(NPC, Spawn, SpellName)
 		else
 		    SetStepComplete(Spawn, Reaping, 2)
 		end
-		
+
 	end
 end
 

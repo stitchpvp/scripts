@@ -1,9 +1,9 @@
 --[[
 	Script Name	: SpawnScripts/Graveyard/anovicegraverobber.lua
-	Script Purpose	: a novice graverobber 
+	Script Purpose	: a novice graverobber
 	Script Author	: Scatman
 	Script Date	: 2009.07.25
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 local spoke = false
@@ -15,7 +15,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)

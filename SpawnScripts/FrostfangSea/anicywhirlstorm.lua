@@ -3,7 +3,7 @@
 	Script Purpose	:	for the spawn "an ice whirlstorm"
 	Script Author	:	theFoof
 	Script Date		:	2013.6.16
-	Script Notes	:	
+	Script Notes	:
 --]]
 
 require"SpawnScripts/Generic/MovementCircleSmall"

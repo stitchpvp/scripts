@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "Further Assistance to Chrykori Island"
 	Script Author	: Scatman
 	Script Date	: 2009.02.06
-	
+
 	Zone       : Timorous Deep
 	Quest Giver: Primary Conzuk Zum'Ha
 	Preceded by: Disrupting Haoaeran Rituals (disrupting_haoaeran_rituals.lua)
@@ -12,7 +12,7 @@
 
 
 function Init(Quest)
-	
+
 
 
 	AddQuestStepChat(Quest, 1, "I need to report to Secondary Arozik Sky'Ki on the Trythec Loft to the southwest.", 1, ".", 0, 2630081)

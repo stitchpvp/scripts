@@ -3,12 +3,8 @@
     Script Author  : Zcoretri
     Script Date    : 2015.07.30
     Script Purpose : Banker Bogfoot dialog
-                   : 
+                   :
 --]]
-
-function spawn(NPC)
-    hailed(NPC, Spawn)
-end
 
 function hailed(NPC, Spawn)
     FaceTarget(NPC, Spawn)

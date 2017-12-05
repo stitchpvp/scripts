@@ -3,7 +3,7 @@
 	Script Purpose	: Keeper Varacus T'Kur
 	Script Author	: Scatman
 	Script Date	: 2009.07.11
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 local QUEST_1 = 232
@@ -15,13 +15,13 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	if HasCompletedQuest(Spawn, QUEST_1) then
 		if HasCompletedQuest(Spawn, QUEST_2) then
 			if HasCompletedQuest(Spawn, QUEST_5) then
@@ -108,7 +108,7 @@ function FindThePages(NPC, Spawn, conversation)
 	if HasQuest(Spawn, QUEST_1) then
 		SetStepComplete(Spawn, QUEST_1, 1)
 	end
-	
+
 	if conversation == nil then
 		FaceTarget(NPC, Spawn)
 		conversation = CreateConversation()
@@ -131,14 +131,14 @@ end
 
 function OnQuest2(NPC, Spawn, conversation)
 	PlayFlavor(NPC, "voiceover/english/tutorial_revamp/keeper_varacus_t_kur/fprt_adv02_graveyard/varacus_tkur009.mp3", "", "", 3736503585, 3888829392, Spawn)
-	
+
 	if GetQuestStep(Spawn, QUEST_2) > 4 then
 		Say(NPC, "Please, don't tell anyone about our conversation!", Spawn)
 	else
 		if GetQuestStep(Spawn, QUEST_2) == 4 then
 			AddConversationOption(conversation, "I've found the missing pages.", "dlg_10_1")
 		end
-	
+
 		AddConversationOption(conversation, "Not yet, but I will keep looking.")
 		StartConversation(conversation, NPC, Spawn, "I hope your search for the missing pages has been fruitful. Neither of us can afford to disappoint the Overlord.")
 	end
@@ -176,7 +176,7 @@ end
 
 function dlg_10_4(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_2, 4)
-	
+
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 
@@ -253,10 +253,10 @@ end
 
 function dlg_13_6(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_5, 1)
-	
+
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	-- The Staff of Ethernere
 	-- TODO: Show quest reward popup.
 	if not HasItem(Spawn, 21591) then

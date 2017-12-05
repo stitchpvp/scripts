@@ -3,7 +3,7 @@
 	Script Purpose	:	for the spawns "orc pickaxe"
 	Script Author	:	theFoof
 	Script Date		:	2013.7.23
-	Script Notes	:	
+	Script Notes	:
 --]]
 
 local MysteryIceberg = 80
@@ -14,7 +14,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function casted_on(NPC, Spawn, SpellName)

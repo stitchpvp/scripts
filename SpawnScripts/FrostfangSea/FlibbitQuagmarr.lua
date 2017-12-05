@@ -1,6 +1,6 @@
 --[[
 	Script Name	: SpawnScripts/FrostfangSea/FlibbitQuagmarr.lua
-	Script Purpose	: Flibbit Quagmarr 
+	Script Purpose	: Flibbit Quagmarr
 	Script Author	: theFoof
 	Script Date	: 2013.05.21
 	Script Notes	:
@@ -31,7 +31,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function SpawnAccess(NPC, Spawn)
@@ -43,7 +43,7 @@ end
 function hailed(NPC, Spawn)
     FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
     if HasCompletedQuest(Spawn, UnbearableProblem) == false and HasQuest(Spawn, UnbearableProblem) == false then
 	    PlayFlavor(NPC, "flibbit_quagmarr/halas/gwenevyns_cove/flibbit_quagmarr/flibbit_quagmarr_001.mp3", "", "", 3105180851, 2650595838, Spawn)
 	    AddConversationOption(conversation, "Indeed I have. I am " .. GetName(Spawn) .. ".", "Quest1Chat_1")
@@ -280,7 +280,7 @@ function Quest3Chat_2(NPC, Spawn)
 	AddConversationOption(conversation, "What do you need help with?", "Quest3Chat_3")
 	AddConversationOption(conversation, "I'm a bit busy right now, perhaps later.")
 	StartConversation(conversation, NPC, Spawn, "We are doing very well. I have been taking stock of our supplies, and while they have been depleted during our long stay in Gwenevyn's Cove, I hope that we can restock soon and be on our way. Say, can you spare a moment to help us?")
-end 
+end
 
 function Quest3Chat_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
@@ -294,7 +294,7 @@ end
 function Quest3Chat_4(NPC, Spawn)
     FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	AddConversationOption(conversation, "I shall look for it amongst the frigid whirlstorms, then.")
 	StartConversation(conversation, "I figure it's probably been picked up in an eddy of one of those frigid whirlstorms you see ripping about across the ice shelf.")
 end
@@ -322,7 +322,7 @@ end
 function Quest4Chat_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	PlayFlavor(NPC, "flibbit_quagmarr/halas/gwenevyns_cove/flibbit_quagmarr/flibbit_quagmarr_010.mp3", "", "", 3573239731, 1050060111, Spawn)
 	AddConversationOption(conversation, "Hello, Flibbit. Do you need anything else for your pilgrimage?", "Quest4Chat_3")
 	StartConversation(conversation, NPC, Spawn, "Good day, brave " .. GetName(Spawn) .. ".")
@@ -369,7 +369,7 @@ end
 function Quest4Chat_7(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	AddConversationOption(conversation, "I shall continue my search for the ice crystals.")
 	StartConversation(conversation, NPC, Spawn, "You can find the crystals south of here, on the Icemane Plains.")
 end
@@ -434,7 +434,7 @@ end
 function Quest5Chat_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	AddConversationOption(conversation, "I will return with the pelts you requested.")
 	StartConversation(conversation, NPC, Spawn, "They are south of here, on the Icemane Plains.")
 end
@@ -499,7 +499,7 @@ end
 function Quest6Chat_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	AddConversationOption(conversation, "I am. Is Splorpy ready to go?", "Quest6Chat_6")
 	StartConversation(conversation, NPC, Spawn, "Are you ready, " .. GetName(Spawn) .. "?")
 end
@@ -507,7 +507,7 @@ end
 function Quest6Chat_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	AddConversationOption(conversation, "See you there!", "Quest6Chat_7")
 	StartConversation(conversation, NPC, Spawn, "He is. Take care, I shall see you both at the Great Shelf!")
 end

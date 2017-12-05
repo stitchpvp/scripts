@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "The Big One"
 	Script Author	: Scatman
 	Script Date	: 2009.02.04
-	
+
 	Zone       : Darklight Wood
 	Quest Giver: Dirzdia T'Zauvirr
 	Preceded by: So Hot You Catch Them Cooked (so_hot_you_catch_them_cooked.lua)
@@ -12,7 +12,7 @@
 
 
 function Init(Quest)
-	
+
 
 
 	AddQuestStepObtainItem(Quest, 1,  "I need to catch eight seared char.", 8, 100,  ".", 2541,  40609)
@@ -35,7 +35,7 @@ end
 
 function step1_complete_caughtFish(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 1, "I have caught the seared char.")
-	
+
 	AddQuestStepChat(Quest, 2, "I need to bring these fish back to Dirzdia.", 1, ".", 2541, 340139)
 	AddQuestStepCompleteAction(Quest, 2, "quest_complete")
 end

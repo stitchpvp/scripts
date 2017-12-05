@@ -11,7 +11,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)
@@ -33,7 +33,7 @@ function hailed(NPC, Spawn)
 	    AddConversationOption(conversation, "I was victorious!", "complete_step3")
 		AddConversationOption(conversation, "Not yet, but I will soon.")
 		StartConversation(conversation, NPC, Spawn, "So, did you defeat the sparring partner like I asked?")
-	else 
+	else
 	    first_chat(NPC, Spawn)
 	end
 end

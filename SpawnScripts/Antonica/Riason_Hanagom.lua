@@ -29,7 +29,7 @@ function Option2(NPC, Spawn)
 
 	AddConversationOption(conversation, "Fine, I'm going.")
 	AddConversationOption(conversation, "What kind of research?  Maybe I can help you out.", "Option4")
-	StartConversation(conversation, NPC, Spawn, "Favor?!  You demanded money for that "favor" as I recall.  Besides, that man is no "friend" of mine.  He was merely doing a little... research for me.  Now leave me alone!")
+	StartConversation(conversation, NPC, Spawn, "Favor?!  You demanded money for that \"favor\" as I recall.  Besides, that man is no \"friend\" of mine.  He was merely doing a little... research for me.  Now leave me alone!")
 end
 
 function Option4(NPC, Spawn)

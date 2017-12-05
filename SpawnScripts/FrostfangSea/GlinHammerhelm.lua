@@ -3,8 +3,8 @@
 	Script Purpose	: Glin Hammerhelm <Tradeskill Tutorial>
 	Script Author	: theFoof
 	Script Date	: 2013.10.20
-	Script Notes	: see 
-		              SpawnScripts/Generic/GenericTradeskillTutor.lua 
+	Script Notes	: see
+		              SpawnScripts/Generic/GenericTradeskillTutor.lua
 					  for function details
 --]]
 

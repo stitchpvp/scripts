@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "Delivery to a Veteran"
 	Script Author	: Scatman
 	Script Date	: 2009.02.06
-	
+
 	Zone       : Timorous Deep
 	Quest Giver: Taroche Dry'Zok
 	Preceded by: Stuffed Gorger Claws (stuffed_gorger_claws.lua)

@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "Taking Back from the Blackshields"
 	Script Author	: Scatman
 	Script Date	    : 2009.07.28
-	
+
 	Zone       : Sunken City
 	Quest Giver: Investigator Curfield
 	Preceded by: Finding the Investigator (finding_the_investigator)

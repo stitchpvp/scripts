@@ -11,7 +11,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)
@@ -38,21 +38,21 @@ function hailed(NPC, Spawn)
 	AddConversationOption(conversation, "I'd like to learn about harvesting.")
 	AddConversationOption(conversation, "I've no time to chat right now.")
 	StartConversation(conversation, NPC, Spawn, "Don't be shy! Come closer, m'dear, and I'd be happy to answer any questions you have about collections or harvesting!")
-	if convo==74 then
-		PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_eivarra_laceleaf/_exp03/exp03_cty_kelethin/tutorials/qst_eivarra/qst_eivarra001.mp3", "", "", 1784643111, 2793677851, Spawn)
-		AddConversationOption(conversation, "I'd like to learn about collections.", "dlg_74_1")
-		AddConversationOption(conversation, "I'd like to learn about harvesting.")
-		AddConversationOption(conversation, "I've no time to chat right now.")
-		StartConversation(conversation, NPC, Spawn, "Don't be shy! Come closer, m'dear, and I'd be happy to answer any questions you have about collections or harvesting!")
-	end
+	--if convo==74 then
+	--	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_eivarra_laceleaf/_exp03/exp03_cty_kelethin/tutorials/qst_eivarra/qst_eivarra001.mp3", "", "", 1784643111, 2793677851, Spawn)
+	--	AddConversationOption(conversation, "I'd like to learn about collections.", "dlg_74_1")
+	--	AddConversationOption(conversation, "I'd like to learn about harvesting.")
+	--	AddConversationOption(conversation, "I've no time to chat right now.")
+	--	StartConversation(conversation, NPC, Spawn, "Don't be shy! Come closer, m'dear, and I'd be happy to answer any questions you have about collections or harvesting!")
+	--end
 
-	if convo==88 then
-		PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_eivarra_laceleaf/_exp03/exp03_cty_kelethin/tutorials/qst_eivarra/qst_eivarra001.mp3", "", "", 1784643111, 2793677851, Spawn)
-		AddConversationOption(conversation, "I'd like to learn about collections.", "dlg_88_1")
-		AddConversationOption(conversation, "I'd like to learn about harvesting.")
-		AddConversationOption(conversation, "I've no time to chat right now.")
-		StartConversation(conversation, NPC, Spawn, "Don't be shy! Come closer, m'dear, and I'd be happy to answer any questions you have about collections or harvesting!")
-	end
+	--if convo==88 then
+	--	PlayFlavor(NPC, "voiceover/english/exp03_questvo/trainer_eivarra_laceleaf/_exp03/exp03_cty_kelethin/tutorials/qst_eivarra/qst_eivarra001.mp3", "", "", 1784643111, 2793677851, Spawn)
+	--	AddConversationOption(conversation, "I'd like to learn about collections.", "dlg_88_1")
+	--	AddConversationOption(conversation, "I'd like to learn about harvesting.")
+	--	AddConversationOption(conversation, "I've no time to chat right now.")
+	--	StartConversation(conversation, NPC, Spawn, "Don't be shy! Come closer, m'dear, and I'd be happy to answer any questions you have about collections or harvesting!")
+	--end
 
 end
 

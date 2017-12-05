@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "Bring Out Your Souls"
 	Script Author	: Scatman
 	Script Date	: 2009.07.12
-	
+
 	Zone       : The Graveyard
 	Quest Giver: Zekvila Dizelk
 	Preceded by: None
@@ -19,7 +19,7 @@ end
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
 	local conversation = CreateConversation()
-	
+
 	AddConversationOption(conversation, "I understand. I'll be back when it's done.")
 	StartConversation(conversation, QuestGiver, Player, "You choose wisely, friend. I shall use the lessons taught to the Iksar by our dead emperor, Venril Sathir. This is where you come in ... the magic of the dead will put a stop to Ithelz's pompous belief that he is our new ruler.  I will tell you only once: take the crystal, go to the graveyard, and kill the undead knights. As the beasts die, hold out the crystal and collect their souls. Return when you fill the crystal.")
 end
@@ -30,12 +30,12 @@ end
 function Step1_Complete_KilledUndead(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 1, "I have killed the undead.")
 	UpdateQuestTaskGroupDescription(Quest, 1, "I've killed ten undead and collected their souls.")
-	
+
 	AddQuestStepChat(Quest, 2, "I need to speak with Zekvila.", 1, "I should return to Zekvila the crystal as she had commanded.", 0, 1250069)
 	AddQuestStepCompleteAction(Quest, 2, "QuestComplete")
 end
 
-function QuestComplete(Quest, QuestGiver, Player)	
+function QuestComplete(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 2, "I have spoken with Zekvila.")
 	UpdateQuestTaskGroupDescription(Quest, 2, "I have given Zekvila the crystal filled with souls.")
 	GiveQuestReward(Quest, Player)

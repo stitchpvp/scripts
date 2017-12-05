@@ -11,7 +11,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)
@@ -29,13 +29,13 @@ function hailed(NPC, Spawn)
 	AddConversationOption(conversation, "Tell me about my inventory.")
 	AddConversationOption(conversation, "I will return for instruction later.")
 	StartConversation(conversation, NPC, Spawn, "Well met. I'm here to teach our newest recruits about equipment and inventory space. Good equipment is one of the most important tools of any adventurer!")
-	if convo==15 then
-		PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_3_1008.mp3", "", "", 0, 0, Spawn)
-		AddConversationOption(conversation, "Tell me about items and equipment.", "dlg_15_1")
-		AddConversationOption(conversation, "Tell me about my inventory.")
-		AddConversationOption(conversation, "I will return for instruction later.")
-		StartConversation(conversation, NPC, Spawn, "Well met. I'm here to teach our newest recruits about equipment and inventory space. Good equipment is one of the most important tools of any adventurer!")
-	end
+	--if convo==15 then
+	--	PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_3_1008.mp3", "", "", 0, 0, Spawn)
+	--	AddConversationOption(conversation, "Tell me about items and equipment.", "dlg_15_1")
+	--	AddConversationOption(conversation, "Tell me about my inventory.")
+	--	AddConversationOption(conversation, "I will return for instruction later.")
+	--	StartConversation(conversation, NPC, Spawn, "Well met. I'm here to teach our newest recruits about equipment and inventory space. Good equipment is one of the most important tools of any adventurer!")
+	--end
 
 end
 

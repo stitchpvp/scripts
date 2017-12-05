@@ -3,11 +3,11 @@
     Script Author  : Zcoretri
     Script Date    : 2015.07.30
     Script Purpose : Visage of the Queen talking statue dialog
-                   : 
+                   :
 --]]
 
 function spawn(NPC)
-    Start(NPC) 
+    Start(NPC)
     --SetPlayerProximityFunction(NPC, 10, "InRange", "LeaveRange")
 end
 
@@ -63,9 +63,9 @@ function speech4(NPC, Spawn)
 
 end
 
-function stop_speech(NPC) 
+function stop_speech(NPC)
     SpawnSet(NPC, "mood_state", "0") 		-- Give her stone face!
     SpawnSet(NPC, "action_state", "0")		-- Stop her waving
-	
+
     AddTimer(NPC, 1200000, "speech1")
-end 
+end

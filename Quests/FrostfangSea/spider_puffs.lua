@@ -3,7 +3,7 @@
 	Script Purpose	:	the quest "Spider Puffs"
 	Script Author	:	theFoof
 	Script Date		:	2013.8.27
-	Script Notes	:	
+	Script Notes	:
 
 	Zone			:	Frostfang Sea
 	Quest Giver		:	Ribbit Hopson

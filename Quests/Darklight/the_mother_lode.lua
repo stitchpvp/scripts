@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "The Mother Lode"
 	Script Author	: Scatman
 	Script Date	: 2009.02.03
-	
+
 	Zone       : Darklight Wood
 	Quest Giver: Ilmtar D'Viervs
 	Preceded by: More Luxuries (more_luxuries.lua)

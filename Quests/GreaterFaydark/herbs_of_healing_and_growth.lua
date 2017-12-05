@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest "Herbs of Healing and Growth
 	Script Author	: Zcoretri
 	Script Date	: 2009.03.05
-	
+
 	Zone       : Greater Faydark
 	Quest Giver: Matron of the Nursery
 	Preceded by: Grobin Trouble at the Pond
@@ -12,10 +12,10 @@
 
 
 function Init(Quest)
-	AddQuestStepObtainItem(Quest, 1,  "I need to gather herbs from the faeicia leaf plants west of the nursery", 5, 100,  "I need to gather herbs from the faeicia leaf plant for the Matron of the Nursery. I should be able to find these herbs west of the nursery past the wolves.", 336,  6096) 
+	AddQuestStepObtainItem(Quest, 1,  "I need to gather herbs from the faeicia leaf plants west of the nursery", 5, 100,  "I need to gather herbs from the faeicia leaf plant for the Matron of the Nursery. I should be able to find these herbs west of the nursery past the wolves.", 336,  6096)
 	AddQuestStepCompleteAction(Quest, 1, "CollectedAllLeafs")
 
-	
+
 end
 
 function Accepted(Quest, QuestGiver, Player)
@@ -25,7 +25,7 @@ function Accepted(Quest, QuestGiver, Player)
 	    conversation = CreateConversation
 	    AddConversationOption(conversation, "I'll be careful")
 	    StartConversation(conversation, QuestGiver, Player, "Be careful of the wolves though, they can be quite feisty if they haven't eaten.")
-		
+
 	end
 	 end
 end

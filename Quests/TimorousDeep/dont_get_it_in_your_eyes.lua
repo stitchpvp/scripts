@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "Don't Get it in Your Eyes"
 	Script Author	: Scatman
 	Script Date	: 2009.02.22
-	
+
 	Zone       : Timorous Deep
 	Quest Giver: Tertiary Mak'Ki
 	Preceded by: None
@@ -38,7 +38,7 @@ end
 
 function step1_complete_gotSacs(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 1, "I have collected the acid sacs.")
-	
+
 	AddQuestStepChat(Quest, 2, "I need to bring these acid sacs back to Tertiary Mak'Ki.", 1, ".", 111, 2630044)
 	AddQuestStepCompleteAction(Quest, 2, "quest_complete")
 end

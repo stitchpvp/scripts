@@ -3,7 +3,7 @@
 	Script Purpose	: Trainer Hawk Dunlop <Harvesting and Collections>
 	Script Author	: Foof
 	Script Date	: 2013.5.15
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 local HarvestTutorial = 11
@@ -14,7 +14,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)
@@ -28,7 +28,7 @@ function hailed(NPC, Spawn)
 	if GetQuestStep(Spawn, HarvestTutorial) == 8 then
 	    SetStepComplete(Spawn, HarvestTutorial, 8)
 		conversation = CreateConversation()
-		
+
 	    PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_3_1004.mp3", "", "", 0, 0, Spawn)
 		AddConversationOption(conversation, "Thank you.")
 		StartConversation(conversation, NPC, Spawn, "Excellent work learning about harvesting!  As a reward, allow me to offer you this box for storing harvested items.  It's quite heavy, so I suggest you put it in your bank rather than carrying it, but it has plenty of storage room for harvests.")
@@ -105,7 +105,7 @@ end
 function BaseChat(NPC, Spawn)
     FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_2_1004.mp3", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "I'd like to learn about collections.", "collections_chat_1")
 	AddConversationOption(conversation, "I'd like to learn about harvesting.", "harvests_chat_1")
@@ -119,4 +119,4 @@ function OfferHarvesttutorial(NPC, Spawn)
         OfferQuest(NPC, Spawn, HarvestTutorial)
     end
 	harvests_chat_3(NPC, Spawn)
-end	
+end

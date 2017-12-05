@@ -1,6 +1,6 @@
 --[[
 	Script Name	: SpawnScripts/GreaterFaydark/AmiAugren.lua
-	Script Purpose	: Ami Augren 
+	Script Purpose	: Ami Augren
 	Script Author	: John Adams
 	Script Date	: 2009.02.05
 	Script Notes	: Auto-Generated Conversation from PacketParser Data
@@ -12,7 +12,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)
@@ -34,36 +34,36 @@ function hailed(NPC, Spawn)
 	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/ami_augren/_exp03/exp03_rgn_greater_faydark/ami_augren/ami_augren001.mp3", "", "", 12113457, 274345192, Spawn)
 	AddConversationOption(conversation, "Buzzies?  Do you mean the bees?  Do the bees scare you?", "dlg_6_1")
 	StartConversation(conversation, NPC, Spawn, "WAAAAaaaa!  Go away, buzzies!  Go away!")
-	if convo==8 then
-		PlayFlavor(NPC, "voiceover/english/exp03_questvo2/ami_augren/_exp03/exp03_rgn_greater_faydark/ami_augren/ami_augren006.mp3", "", "", 198532712, 1197028678, Spawn)
-		AddConversationOption(conversation, "Yes... I can tell.", "dlg_8_1")
-		StartConversation(conversation, NPC, Spawn, "Thank you.  I don't like buzzies.")
-	end
+	--if convo==8 then
+	--	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/ami_augren/_exp03/exp03_rgn_greater_faydark/ami_augren/ami_augren006.mp3", "", "", 198532712, 1197028678, Spawn)
+	--	AddConversationOption(conversation, "Yes... I can tell.", "dlg_8_1")
+	--	StartConversation(conversation, NPC, Spawn, "Thank you.  I don't like buzzies.")
+	--end
 
-	if convo==9 then
-		PlayFlavor(NPC, "voiceover/english/exp03_questvo2/ami_augren/_exp03/exp03_rgn_greater_faydark/ami_augren/ami_augren001.mp3", "", "", 12113457, 274345192, Spawn)
-		AddConversationOption(conversation, "Buzzies?  Do you mean the bees?  Do the bees scare you?", "dlg_9_1")
-		StartConversation(conversation, NPC, Spawn, "WAAAAaaaa!  Go away, buzzies!  Go away!")
-	end
+	--if convo==9 then
+	--	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/ami_augren/_exp03/exp03_rgn_greater_faydark/ami_augren/ami_augren001.mp3", "", "", 12113457, 274345192, Spawn)
+	--	AddConversationOption(conversation, "Buzzies?  Do you mean the bees?  Do the bees scare you?", "dlg_9_1")
+	--	StartConversation(conversation, NPC, Spawn, "WAAAAaaaa!  Go away, buzzies!  Go away!")
+	--end
 
-	if convo==10 then
-		PlayFlavor(NPC, "voiceover/english/exp03_questvo2/ami_augren/_exp03/exp03_rgn_greater_faydark/ami_augren/ami_augren004.mp3", "", "", 3325418190, 161234706, Spawn)
-		AddConversationOption(conversation, "I made sure the bees won't be bothering anyone anymore.", "dlg_10_1")
-		AddConversationOption(conversation, "Not yet, but don't worry.")
-		StartConversation(conversation, NPC, Spawn, "Are the buzzies gone?")
-	end
+	--if convo==10 then
+	--	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/ami_augren/_exp03/exp03_rgn_greater_faydark/ami_augren/ami_augren004.mp3", "", "", 3325418190, 161234706, Spawn)
+	--	AddConversationOption(conversation, "I made sure the bees won't be bothering anyone anymore.", "dlg_10_1")
+	--	AddConversationOption(conversation, "Not yet, but don't worry.")
+	--	StartConversation(conversation, NPC, Spawn, "Are the buzzies gone?")
+	--end
 
-	if convo==12 then
-		PlayFlavor(NPC, "voiceover/english/exp03_questvo2/ami_augren/_exp03/exp03_rgn_greater_faydark/ami_augren/ami_augren011.mp3", "", "", 735443449, 1189746741, Spawn)
-		AddConversationOption(conversation, "I got your doll back for you.", "dlg_12_1")
-		StartConversation(conversation, NPC, Spawn, "What's that you have?!")
-	end
+	--if convo==12 then
+	--	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/ami_augren/_exp03/exp03_rgn_greater_faydark/ami_augren/ami_augren011.mp3", "", "", 735443449, 1189746741, Spawn)
+	--	AddConversationOption(conversation, "I got your doll back for you.", "dlg_12_1")
+	--	StartConversation(conversation, NPC, Spawn, "What's that you have?!")
+	--end
 
-	if convo==14 then
-		PlayFlavor(NPC, "voiceover/english/exp03_questvo2/ami_augren/_exp03/exp03_rgn_greater_faydark/ami_augren/ami_augren011.mp3", "", "", 735443449, 1189746741, Spawn)
-		AddConversationOption(conversation, "I got your doll back for you.", "dlg_14_1")
-		StartConversation(conversation, NPC, Spawn, "What's that you have?!")
-	end
+	--if convo==14 then
+	--	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/ami_augren/_exp03/exp03_rgn_greater_faydark/ami_augren/ami_augren011.mp3", "", "", 735443449, 1189746741, Spawn)
+	--	AddConversationOption(conversation, "I got your doll back for you.", "dlg_14_1")
+	--	StartConversation(conversation, NPC, Spawn, "What's that you have?!")
+	--end
 
 end
 

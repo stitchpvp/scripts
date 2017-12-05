@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "Dollnapping!"
 	Script Author	: Scatman
 	Script Date	: 2009.03.29
-	
+
 	Zone       : Greater Faydark
 	Quest Giver: Sua Augren
 	Preceded by: Broken Buttons (broken_buttons.lua)
@@ -27,7 +27,7 @@ end
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
 	local conversation = CreateConversation()
-	
+
 	PlayFlavor(QuestGiver, "voiceover/english/exp03_questvo2/sua_augren/_exp03/exp03_rgn_greater_faydark/sua_augren/sua_augren006.mp3", "", "", 2584537319, 806721000, Player)
 	AddConversationOption(conversation, "No problem.  I'll get the doll for Ami.")
 	StartConversation(conversation, QuestGiver, Player, "I couldn't ask you to do that.  It would be wonderful if Ami got her doll back, but it's too dangerous.")
@@ -39,7 +39,7 @@ end
 function Step1_Complete_KilledYellowjacket(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 1, "I got Ami's doll back from the Klixie Yellowjacket.")
 	UpdateQuestTaskGroupDescription(Quest, 1, "I got Ami's doll back from the Klixie Yellowjacket.")
-	
+
 	AddQuestStepChat(Quest, 2, "I should give the doll I recovered back to Ami.", 1, "I should give the doll I recovered from Yellowjacket to Ami Augren. It would make her really happy to see it.", 2254, 1140019)
 	AddQuestStepCompleteAction(Quest, 2, "Quest_Complete")
 end

@@ -3,7 +3,7 @@
 	Script Purpose	:	for the spawn "Splorpy Quagmarr" located in the great shelf cave.
 	Script Author	:	theFoof
 	Script Date		:	2013.5.30
-	Script Notes	:	
+	Script Notes	:
 --]]
 local GreatShelf = 30
 
@@ -13,7 +13,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)

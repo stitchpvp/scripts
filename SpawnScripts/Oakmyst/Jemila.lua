@@ -11,7 +11,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)
@@ -27,7 +27,7 @@ end
 
 function SaySomethingRandom(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	
+
 	choice = math.random(1, 4)
 	if choice == 1 then
 		PlayFlavor(NPC, "voiceover/english/kerran_eco_good_1/ft/service/merchant/kerran_merchant_service_good_1_aoi_gf_c5e79ff5.mp3", "Hello there!  Can I interest you in some of the finest merchandise this side of Norrath?", "wave", 2091371377, 2422178491, Spawn)

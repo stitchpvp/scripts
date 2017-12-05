@@ -19,7 +19,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
@@ -76,15 +76,15 @@ function hailed(NPC, Spawn)
 		-- Currently on quest 4 or finished everything
 		PlayFlavor(NPC, "", "Thank you for all of your help with the mail deliveries, friend. That's all we have for now. I'll let you know as soon as we have more work for you.", "", 1689589577, 4560189, Spawn)
 	end
-	
-	
+
+
 	-- who the hell is matsy?
 	--[[
 	PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_1_1054.mp3", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "Yes, I have a letter from Matsy.", "dlg_0_1")
 	AddConversationOption(conversation, "No. I don't know what you're talking about.")
 	StartConversation(conversation, NPC, Spawn, "Hello there! Are you here to drop off some mail?")
-	
+
 	PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_3_1054.mp3", "", "", 0, 0, Spawn)
 	AddConversationOption(conversation, "No, I already dropped off that letter for Matsy.", "dlg_2_1")
 	AddConversationOption(conversation, "No. I don't know what you're talking about.")
@@ -117,7 +117,7 @@ end
 function dlg_1_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	SetStepComplete(Spawn, WatchYourStepInTheTSPartI, 3)
 	AddConversationOption(conversation, "Okay.")
 	StartConversation (conversation, NPC, Spawn, "Great! Well done on your first mail delivery. Come see me again when you're ready for your next assignment.")
@@ -130,16 +130,16 @@ end
 function dlg_3_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	SetStepComplete(Spawn, WatchYourStepInTheTSPartII, 3)
 	AddConversationOption(conversation, "I will return as soon as I'm ready.")
 	StartConversation(conversation, NPC, Spawn, "Wonderful! I'll deliver this on my next run into town. Go take a break and come see me when you're ready for more.")
 end
 
 function dlg_4_1(NPC, Spawn)
-	OfferQuest(NPC, Player, WatchYourStepInTheTSPartIII)
+	OfferQuest(NPC, Spawn, WatchYourStepInTheTSPartIII)
 end
-	
+
 function dlg_4_2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
@@ -152,11 +152,11 @@ end
 function dlg_5_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	AddConversationOption(conversation, "Okay.")
 	StartConversation(conversation, NPC, Spawn, "Ahh, there is Brianna's receipt. Thank you. Here is your payment for today's work.")
 end
 
 function dlg_6_1(NPC, Spawn)
-	OfferQuest(NPC, Player, WatchYourStepInTheTSPartIV)
+	OfferQuest(NPC, Spawn, WatchYourStepInTheTSPartIV)
 end

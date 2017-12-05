@@ -1,14 +1,14 @@
 
 
 function Init(Quest)
-	AddQuestStepKill(Quest, 1, "I need to collect venom from eight speckled rattlers", 8, 100, "Gerun wants the venom from eight speckled rattlers.", 325, --[[ ID's --]])
+	AddQuestStepKill(Quest, 1, "I need to collect venom from eight speckled rattlers", 8, 100, "Gerun wants the venom from eight speckled rattlers.", 325, nil)
 	AddQuestStepCompleteAction(Quest, 1, "Step1Complete")
 end
 
 function Step1Complete(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 1, "I have collected the venom.")
 
-	AddQuestStepChat(Quest, 2, "I need to bring this venom back to Gerun", 1, "Gerun wants the venom from eight speckled rattlers.", 11, --[[ ID's --]])
+	AddQuestStepChat(Quest, 2, "I need to bring this venom back to Gerun", 1, "Gerun wants the venom from eight speckled rattlers.", 11, nil)
 	AddQuestStepCompleteAction(Quest, 2, "QuestComplete")
 end
 

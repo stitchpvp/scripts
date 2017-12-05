@@ -11,7 +11,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)
@@ -29,37 +29,37 @@ function hailed(NPC, Spawn)
 	AddConversationOption(conversation, "Feh. Gods, who needs em? Always a pain in yer neck! I'd sooner stick a knife in their gut than worship those churlish manifestations.")
 	AddConversationOption(conversation, "I'm really not interested at all.")
 	StartConversation(conversation, NPC, Spawn, "Hello there! I'm sure you've heard all the hubbub about the deities coming back to us! Some people think it's grand, others not so much.")
-	if convo==29 then
-		PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
-		AddConversationOption(conversation, "It's so wonderful! I just want to go out and start basking in their glory right away!", "dlg_29_1")
-		AddConversationOption(conversation, "Feh. Gods, who needs em? Always a pain in yer neck! I'd sooner stick a knife in their gut than worship those churlish manifestations.")
-		AddConversationOption(conversation, "I'm really not interested at all.")
-		StartConversation(conversation, NPC, Spawn, "Hello there! I'm sure you've heard all the hubbub about the deities coming back to us! Some people think it's grand, others not so much.")
-	end
+	--if convo==29 then
+	--	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
+	--	AddConversationOption(conversation, "It's so wonderful! I just want to go out and start basking in their glory right away!", "dlg_29_1")
+	--	AddConversationOption(conversation, "Feh. Gods, who needs em? Always a pain in yer neck! I'd sooner stick a knife in their gut than worship those churlish manifestations.")
+	--	AddConversationOption(conversation, "I'm really not interested at all.")
+	--	StartConversation(conversation, NPC, Spawn, "Hello there! I'm sure you've heard all the hubbub about the deities coming back to us! Some people think it's grand, others not so much.")
+	--end
 
-	if convo==30 then
-		PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
-		AddConversationOption(conversation, "It's so wonderful! I just want to go out and start basking in their glory right away!", "dlg_30_1")
-		AddConversationOption(conversation, "Feh. Gods, who needs em? Always a pain in yer neck! I'd sooner stick a knife in their gut than worship those churlish manifestations.")
-		AddConversationOption(conversation, "I'm really not interested at all.")
-		StartConversation(conversation, NPC, Spawn, "Hello there! I'm sure you've heard all the hubbub about the deities coming back to us! Some people think it's grand, others not so much.")
-	end
+	--if convo==30 then
+	--	PlayFlavor(NPC, "", "", "", 0, 0, Spawn)
+	--	AddConversationOption(conversation, "It's so wonderful! I just want to go out and start basking in their glory right away!", "dlg_30_1")
+	--	AddConversationOption(conversation, "Feh. Gods, who needs em? Always a pain in yer neck! I'd sooner stick a knife in their gut than worship those churlish manifestations.")
+	--	AddConversationOption(conversation, "I'm really not interested at all.")
+	--	StartConversation(conversation, NPC, Spawn, "Hello there! I'm sure you've heard all the hubbub about the deities coming back to us! Some people think it's grand, others not so much.")
+	--end
 
-	if convo==31 then
-		PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_1_1006.mp3", "", "", 0, 0, Spawn)
-		AddConversationOption(conversation, "It's so wonderful! I just want to go out and start basking in their glory right away!", "dlg_31_1")
-		AddConversationOption(conversation, "Feh. Gods, who needs em? Always a pain in yer neck! I'd sooner stick a knife in their gut than worship those churlish manifestations.")
-		AddConversationOption(conversation, "I'm really not interested at all.")
-		StartConversation(conversation, NPC, Spawn, "Hello there! I'm sure you've heard all the hubbub about the deities coming back to us! Some people think it's grand, others not so much.")
-	end
+	--if convo==31 then
+	--	PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_1_1006.mp3", "", "", 0, 0, Spawn)
+	--	AddConversationOption(conversation, "It's so wonderful! I just want to go out and start basking in their glory right away!", "dlg_31_1")
+	--	AddConversationOption(conversation, "Feh. Gods, who needs em? Always a pain in yer neck! I'd sooner stick a knife in their gut than worship those churlish manifestations.")
+	--	AddConversationOption(conversation, "I'm really not interested at all.")
+	--	StartConversation(conversation, NPC, Spawn, "Hello there! I'm sure you've heard all the hubbub about the deities coming back to us! Some people think it's grand, others not so much.")
+	--end
 
-	if convo==32 then
-		PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_3_1006.mp3", "", "", 0, 0, Spawn)
-		AddConversationOption(conversation, "It's so wonderful! I just want to go out and start basking in their glory right away!", "dlg_32_1")
-		AddConversationOption(conversation, "Feh. Gods, who needs em? Always a pain in yer neck! I'd sooner stick a knife in their gut than worship those churlish manifestations.")
-		AddConversationOption(conversation, "I'm really not interested at all.")
-		StartConversation(conversation, NPC, Spawn, "Hello there! I'm sure you've heard all the hubbub about the deities coming back to us! Some people think it's grand, others not so much.")
-	end
+	--if convo==32 then
+	--	PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_3_1006.mp3", "", "", 0, 0, Spawn)
+	--	AddConversationOption(conversation, "It's so wonderful! I just want to go out and start basking in their glory right away!", "dlg_32_1")
+	--	AddConversationOption(conversation, "Feh. Gods, who needs em? Always a pain in yer neck! I'd sooner stick a knife in their gut than worship those churlish manifestations.")
+	--	AddConversationOption(conversation, "I'm really not interested at all.")
+	--	StartConversation(conversation, NPC, Spawn, "Hello there! I'm sure you've heard all the hubbub about the deities coming back to us! Some people think it's grand, others not so much.")
+	--end
 
 end
 

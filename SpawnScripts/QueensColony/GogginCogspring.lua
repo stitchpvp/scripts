@@ -3,7 +3,7 @@
     Script Author  : Zcoretri
     Script Date    : 2015.07.30
     Script Purpose : Goggin Cogspring dialog
-                   : 
+                   :
 --]]
 
 function hailed(NPC, Spawn)

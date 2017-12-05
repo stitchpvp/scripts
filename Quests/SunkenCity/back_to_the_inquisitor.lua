@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "Back to the Inquisitor"
 	Script Author	: Scatman
 	Script Date	    : 2009.07.28
-	
+
 	Zone       : Sunken City
 	Quest Giver: Investigator Curfield
 	Preceded by: Finding the Shrine (finding_the_shrine.lua)

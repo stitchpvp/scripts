@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "Reclaiming the Bog"
 	Script Author	: Scatman
 	Script Date	: 2009.05.10
-	
+
 	Zone       : The Peat Bog
 	Quest Giver: Lieutenant Dawson
 	Preceded by: None
@@ -24,7 +24,7 @@ end
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
 	local conversation = CreateConversation()
-	
+
 	PlayFlavor(QuestGiver, "voiceover/english/tutorial_revamp/lieutenant_dawson/qey_adv04_bog/quests/dawson/dawson004a.mp3", "", "", 2845036711, 1744152200, Player)
 	AddConversationOption(conversation, "Ok.")
 	StartConversation(conversation, QuestGiver, Player, "Once you're done with that return to me.")
@@ -52,7 +52,7 @@ end
 function Multiple_Steps_Complete(Quest, QuestGiver, Player)
 	UpdateQuestTaskGroupDescription(Quest, 1, "I have slain the ravenous bog slugs and the fungus men.")
 
-	AddQuestStepChat(Quest, 3, "I need to return to Lieutenant Dawson near the gates to Nettleville hovel.", 1, "I need to return to Lieutenant Dawson now that I have completed her task.", 0, 1980022) 
+	AddQuestStepChat(Quest, 3, "I need to return to Lieutenant Dawson near the gates to Nettleville hovel.", 1, "I need to return to Lieutenant Dawson now that I have completed her task.", 0, 1980022)
 	AddQuestStepCompleteAction(Quest, 3, "QuestComplete")
 end
 

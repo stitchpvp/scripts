@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "A Strange Find"
 	Script Author	: Scatman
 	Script Date	: 2009.01.31
-	
+
 	Zone       : Darklight Wood
 	Quest Giver: Strange Plant
 	Preceded by: None
@@ -12,7 +12,7 @@
 
 
 function Init(Quest)
-	
+
 	-- Sun Bleached Spaulders
 
 
@@ -26,7 +26,7 @@ function Accepted(Quest, QuestGiver, Player)
 		if GetDistance(Player, QuestGiver) < 30 then
 			FaceTarget(QuestGiver, Player)
 			conversation = CreateConversation()
-			
+
 			PlayFlavor(QuestGiver, "voiceover/english/neriak/verex_n_za/darklight_wood/hates_envy/verex/verex013.mp3", "", "", 3010718218, 2537871754, Player)
 			AddConversationOption(conversation, "I will return.")
 			StartConversation(conversation, QuestGiver, Player, "I thought so.")
@@ -40,7 +40,7 @@ end
 function step1_complete_talkedToVerex(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 1, "I have spoken with Verex N'Za.")
 	UpdateQuestTaskGroupDescription(Quest, 1, "I have spoken with Verex N'Za.")
-	
+
 	AddQuestStepChat(Quest, 2, "I must bring the plant to Sselnyl Do'Zyth.", 1, ".", 0, 340087)
 	AddQuestStepCompleteAction(Quest, 2, "quest_complete")
 end

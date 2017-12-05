@@ -3,7 +3,7 @@
 	Script Purpose	:	Handles the quest, "Searching for Sigils"
 	Script Author	:	Cynnar
 	Script Date		:	7/8/2015
-	Script Notes	:	
+	Script Notes	:
 
 	Zone			:	Darklight Wood
 	Quest Giver		:	Pellandra D'Xatyl

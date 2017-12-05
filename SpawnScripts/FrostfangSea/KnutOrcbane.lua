@@ -1,9 +1,9 @@
 --[[
 	Script Name	: SpawnScripts/FrostfangSea/KnutOrcbane.lua
-	Script Purpose	: Knut Orcbane 
+	Script Purpose	: Knut Orcbane
 	Script Author	: theFoof
 	Script Date	: 2013.06.10
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 local NothingWaste = 56
@@ -34,13 +34,13 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	if not HasCompletedQuest(Spawn, NothingWaste) then
 		PlayFlavor(NPC, "", "There are some coldain that could use your help.  Speak with Dolur Axebeard or Belka Thunderheart at the Great Shelf.", "nod", 1689589577, 4560189, Spawn)
 	elseif not HasCompletedQuest(Spawn, ImpishThreats) and not HasQuest(Spawn, ImpishThreats) then
@@ -239,7 +239,7 @@ end
 function Quest2Chat_1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	PlayFlavor(NPC, "knut_orcbane/halas/cragged_spine/knut_orcbane_019.mp3", "", "", 2687986263, 1290955912, Spawn)
 	AddConversationOption(conversation, "Do you want me to retrieve them?", "Quest2Chat_2")
 	AddConversationOption(conversation, "Can't we just replace them?", "Quest2Chat_3")
@@ -413,7 +413,7 @@ function Quest4Chat_5(NPC, Spawn)
 	SetStepComplete(Spawn, BecomingOrcbane, 2)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	PlayFlavor(NPC, "", "", "bow", 0, 0, Spawn)
 	AddConversationOption(conversation, "Thank you.")
 	StartConversation(conversation, NPC, Spawn, "I had all confidence in you!")
@@ -499,7 +499,7 @@ end
 function Quest6Chat_3(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	PlayFlavor(NPC, "", "", "shrug", 0, 0, Spawn)
 	AddConversationOption(conversation, "Then how am I supposed to...", "Quest6Chat_4")
 	StartConversation(conversation, NPC, Spawn, "He doesn't know and neither do I.")
@@ -508,7 +508,7 @@ end
 function Quest6Chat_4(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	AddConversationOption(conversation, "I'll do it. I'll take him down with me.", "OfferSometimesKnut")
 	AddConversationOption(conversation, "No thank you.  You can keep your companion to yourself.")
 	StartConversation(conversation, NPC, Spawn, "He wants you to take him with you. It's the only way for him to be sure that you find the source.")
@@ -517,7 +517,7 @@ end
 function Quest6Chat_5(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	AddConversationOption(conversation, "He told me to destroy it.  It was a black shard, like the ones that were being used to raise Ry'Gorr skeletons.", "Quest6Chat_6")
 	StartConversation(conversation, NPC, Spawn, "What?  I thought he wanted to find it and use it?")
 end
@@ -525,7 +525,7 @@ end
 function Quest6Chat_6(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	AddConversationOption(conversation, "Good thing we found it.", "Quest6Chat_7")
 	StartConversation(conversation, NPC, Spawn, "Ah, then it is best to destroy it. They must have wanted to plant it below New Halas in order to bring forth an army of undead within the city.")
 end
@@ -535,7 +535,7 @@ function Quest6Chat_7(NPC, Spawn)
 	RemoveItem(Spawn, 157116)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	AddConversationOption(conversation, "Certainly.")
 	AddConversationOption(conversation, "I will miss him.")
 	StartConversation(conversation, NPC, Spawn, "Now take this, as you have earned it, " .. GetName(Spawn) .. ". And return to me my friend, Griz.")

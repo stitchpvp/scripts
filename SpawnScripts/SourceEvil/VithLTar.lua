@@ -14,7 +14,7 @@ function hailed(NPC, Spawn)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)
@@ -23,20 +23,20 @@ function InRange(NPC, Spawn)
 		TestMob2 = GetSpawn(Spawn, 2540005)
 		if TestMob1 == nil and TestMob2 == nil then
 			Say(NPC, "Remember any of these? Maybe they were your friends.")
-	
+
 			Mob1 = math.random(1, 2)
 			Mob2 = math.random(1, 2)
 			SpawnID1 = 2540005
 			SpawnID2 = 2540005
-	
+
 			if Mob1 == 1 then
 				SpawnID1 = 2540004
 			end
-	
+
 			if Mob2 == 1 then
 				SpawnID2 = 2540004
 			end
-		
+
 			SpawnMob(GetZone(Spawn), SpawnID1, false, 6.82, 0, 2.28, 90)
 			SpawnMob(GetZone(Spawn), SpawnID2, false, 7.16, 0, -1.10, 90)
 		end

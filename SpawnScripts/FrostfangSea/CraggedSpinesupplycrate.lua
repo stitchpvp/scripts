@@ -3,7 +3,7 @@
 	Script Purpose	:   for the supply crate spawns
 	Script Author	:	theFoof
 	Script Date		:	2013.7.21
-	Script Notes	:	
+	Script Notes	:
 --]]
 
 local ClanImps = 79
@@ -14,7 +14,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function casted_on(NPC, Spawn, SpellName)

@@ -1,6 +1,6 @@
 --[[
 	Script Name	: SpawnScripts/GreaterFaydark/MerchantFallulah.lua
-	Script Purpose	: Merchant Fallulah 
+	Script Purpose	: Merchant Fallulah
 	Script Author	: John Adams
 	Script Date	: 2009.03.01
 	Script Notes	: Auto-Generated Conversation from PacketParser Data
@@ -11,7 +11,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)
@@ -28,19 +28,19 @@ function hailed(NPC, Spawn)
 	AddConversationOption(conversation, "Your sister Melilah asked me...", "dlg_43_1")
 	AddConversationOption(conversation, "Have a nice day!")
 	StartConversation(conversation, NPC, Spawn, "Hello.")
-	if convo==51 then
-		PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_2_1005.mp3", "", "", 0, 0, Spawn)
-		AddConversationOption(conversation, "Do you want to talk about it?", "dlg_51_1")
-		AddConversationOption(conversation, "No problem.")
-		StartConversation(conversation, NPC, Spawn, "Oh.  It's you again.  Listen, sorry about my outburst earlier.")
-	end
+	--if convo==51 then
+	--	PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_2_1005.mp3", "", "", 0, 0, Spawn)
+	--	AddConversationOption(conversation, "Do you want to talk about it?", "dlg_51_1")
+	--	AddConversationOption(conversation, "No problem.")
+	--	StartConversation(conversation, NPC, Spawn, "Oh.  It's you again.  Listen, sorry about my outburst earlier.")
+	--end
 
-	if convo==52 then
-		PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_1_1005.mp3", "", "", 0, 0, Spawn)
-		AddConversationOption(conversation, "Do you want to talk about it?", "dlg_52_1")
-		AddConversationOption(conversation, "No problem.")
-		StartConversation(conversation, NPC, Spawn, "Oh.  It's you again.  Listen, sorry about my outburst earlier.")
-	end
+	--if convo==52 then
+	--	PlayFlavor(NPC, "voiceover/english/voice_emotes/greetings/greetings_1_1005.mp3", "", "", 0, 0, Spawn)
+	--	AddConversationOption(conversation, "Do you want to talk about it?", "dlg_52_1")
+	--	AddConversationOption(conversation, "No problem.")
+	--	StartConversation(conversation, NPC, Spawn, "Oh.  It's you again.  Listen, sorry about my outburst earlier.")
+	--end
 
 end
 

@@ -3,7 +3,7 @@
 	Script Purpose	:	Tutorial: Forging Ahead
 	Script Author	:	theFoof
 	Script Date		:   2013.10.6
-	Script Notes	:	
+	Script Notes	:
 
 	Zone			:	Frostfang Sea
 	Quest Giver		:	Glin Hammerhelm
@@ -35,7 +35,7 @@ end
 
 function CraftedCandelabra(Quest, QuestGiver, Player)
 	UpdateQuestTaskGroupDescription(Quest, 1, "I have reviewed the process of crafting an item.")
-	AddQuestStepChat(Quest, 2, "I should return to the tutor with my candelabra.", 1, "I should return to the tutor with the candelabra.", 0, 4700220) 
+	AddQuestStepChat(Quest, 2, "I should return to the tutor with my candelabra.", 1, "I should return to the tutor with the candelabra.", 0, 4700220)
 	AddQuestStepCompleteAction(Quest, 2, "CompleteQuest")
 	SetCompleteFlag(Quest)
 end

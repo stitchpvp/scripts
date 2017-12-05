@@ -3,7 +3,7 @@
 	Script Purpose	: Guard Moor <Guard>
 	Script Author	: Scatman
 	Script Date	: 2009.05.15
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 function spawn(NPC)
@@ -61,7 +61,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)

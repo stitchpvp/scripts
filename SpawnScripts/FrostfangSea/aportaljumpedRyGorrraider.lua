@@ -3,7 +3,7 @@
 	Script Purpose	:	for the raiders that pop out of the portal in frostfang
 	Script Author	:	theFoof
 	Script Date		:	2013.6.8
-	Script Notes	:	
+	Script Notes	:
 --]]
 
 function spawn(NPC)
@@ -17,7 +17,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)

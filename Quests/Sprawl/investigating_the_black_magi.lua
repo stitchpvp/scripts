@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "Investigating the Black Magi"
 	Script Author	: Scatman
 	Script Date	    : 2009.07.26
-	
+
 	Zone       : The Sprawl
 	Quest Giver: Enforcer Kurdek
 	Preceded by: Bullying the Bully (bullying_the_bully.lua)
@@ -31,7 +31,7 @@ end
 function Step1_Complete_SpokeWithTikkeri(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 1, "I found Arcanist Tikkeri and learned a clue about some organization called 'the Marked.'")
 	UpdateQuestTaskGroupDescription(Quest, 1, "I found Arcanist Tikkeri and found out about some organization called 'the Marked.'")
-	
+
 	AddQuestStepChat(Quest, 2, "I should return to Enforcer Kurdek near the gate to Big Bend.", 1, "I should return to Enforcer Kurdek and tell him what I learned.", 0, 1260006)
 	AddQuestStepCompleteAction(Quest, 2, "Quest_Complete")
 end
@@ -43,7 +43,7 @@ function Quest_Complete(Quest, QuestGiver, Player)
 	UpdateQuestDescription(Quest, "I found Arcanish Tikkeri deep inside the Sprawl and tried to trick her by pretending that I had information about some kind of wheel. She saw through my plan, but not before I found out about some organization called 'the Marked.' I let Enforcer Kurdek know what I found out, and he will let the Dreadnaughts know so that the matter can be investigated more fully.")
 end
 
-function Reload(Quest, QuestGiver, Player)
+function Reload(Quest, QuestGiver, Player, Step)
 	if Step == 1 then
 		Step1_Complete_SpokeWithTikkeri(Quest, QuestGiver, Player)
 	end

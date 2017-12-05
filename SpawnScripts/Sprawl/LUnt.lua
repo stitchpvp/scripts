@@ -3,7 +3,7 @@
 	Script Purpose	: L'Unt <Guard>
 	Script Author	: Scatman
 	Script Date	: 2009.07.26
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 function spawn(NPC)
@@ -24,5 +24,5 @@ function hailed(NPC, Spawn)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end

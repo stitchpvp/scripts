@@ -3,7 +3,7 @@
 	Script Purpose	:	the quest Mystery on the Orc Iceberg
 	Script Author	:	theFoof
 	Script Date		:	2013.7.23
-	Script Notes	:	
+	Script Notes	:
 
 	Zone			:	Frostfang Sea
 	 QuestGiver		:	Knut Orcbane

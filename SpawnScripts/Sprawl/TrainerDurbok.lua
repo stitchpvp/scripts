@@ -3,7 +3,7 @@
 	Script Purpose	: Trainer Durbok <Dreadnaught>
 	Script Author	: Scatman
 	Script Date	: 2008.09.29
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 local QUEST_1_FROM_KURDEK = 253
@@ -16,7 +16,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)
@@ -37,7 +37,7 @@ end
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	if HasCompletedQuest(Spawn, QUEST_1_FROM_KURDEK) or (HasQuest(Spawn, QUEST_1_FROM_KURDEK) and GetQuestStep(Spawn, QUEST_1_FROM_KURDEK) > 1) then
 		if HasCompletedQuest(Spawn, QUEST_3_FROM_KURDEK) then
 			if HasCompletedQuest(Spawn, QUEST_1) then
@@ -64,10 +64,10 @@ function hailed(NPC, Spawn)
 		StartConversation(conversation, NPC, Spawn, "Hey! Can't you see I'm busy training these recruits how to fight?")
 	end
 
-	
+
 	--[[
 
-		
+
 	if convo==2 then
 
 	end
@@ -170,7 +170,7 @@ end
 
 function dlg_18_4(NPC, Spawn)
 	SetStepComplete(Spawn, QUEST_1_FROM_KURDEK, 1)
-	
+
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 
@@ -208,8 +208,8 @@ function OnQuest1(NPC, Spawn, conversation)
 end
 
 function dlg_2_1(NPC, Spawn)
-	SetStepComlete(Spawn, QUEST_1, 2)
-	
+	SetStepComplete(Spawn, QUEST_1, 2)
+
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 

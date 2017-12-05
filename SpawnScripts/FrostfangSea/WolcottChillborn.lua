@@ -3,7 +3,7 @@
 	Script Purpose	:	inquis trainer in Halas
 	Script Author	:	theFoof
 	Script Date		:	2013.9.24
-	Script Notes	:	
+	Script Notes	:
 --]]
 
 local INQUISITOR = 14
@@ -12,12 +12,12 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
-	if GetClass(Spawn) == INSQUISITOR then
+	if GetClass(Spawn) == INQUISITOR then
 		PlayFlavor(NPC, "", "", "hello", 0, 0, Spawn)
 		conversation = CreateConversation()
 		AddConversationOption(conversation, "What advice do you have for a fellow inquisitor?", "InqChat1")

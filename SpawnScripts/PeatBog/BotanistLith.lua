@@ -1,6 +1,6 @@
 --[[
 	Script Name	: SpawnScripts/PeatBog/BotanistLith.lua
-	Script Purpose	: Botanist Lith 
+	Script Purpose	: Botanist Lith
 	Script Author	: scatman
 	Script Date	: 2009.05.10
 	Script Notes	: Auto-Generated Conversation from PacketParser Data
@@ -13,13 +13,13 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	if HasCompletedQuest(Spawn, QUEST_1) then
 	elseif HasQuest(Spawn, QUEST_1) then
 	else

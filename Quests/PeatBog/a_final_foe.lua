@@ -3,7 +3,7 @@
 	Script Purpose	: Handles the quest, "A Final Foe"
 	Script Author	: Scatman
 	Script Date	: 2009.05.10
-	
+
 	Zone       : The Peat Bog
 	Quest Giver: Lieutenant Dawson
 	Preceded by: On the Move (on_the_move.lua)
@@ -22,7 +22,7 @@ end
 function Accepted(Quest, QuestGiver, Player)
 	FaceTarget(QuestGiver, Player)
 	local conversation = CreateConversation()
-	
+
 	PlayFlavor(QuestGiver, "voiceover/english/tutorial_revamp/lieutenant_dawson/qey_adv04_bog/quests/dawson/dawson019a.mp3", "", "", 2166332707, 347747136, Player)
 	AddConversationOption(conversation, "All right.")
 	StartConversation(conversation, QuestGiver, Player, "He may have bodyguards, but I'm sure you can handle them.")
@@ -34,7 +34,7 @@ end
 function Step1_Complete_KilledDentFang(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 1, "I have killed Dentfang.")
 
-	AddQuestStepChat(Quest, 2, "I need to return to Lieutenant Dawson.", 1, "I need to kill Dentfang for Lieutenant Dawson.", 0, 1980022) 
+	AddQuestStepChat(Quest, 2, "I need to return to Lieutenant Dawson.", 1, "I need to kill Dentfang for Lieutenant Dawson.", 0, 1980022)
 	AddQuestStepCompleteAction(Quest, 2, "QuestComplete")
 end
 

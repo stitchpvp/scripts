@@ -3,14 +3,14 @@
 	Script Purpose	: Guard L'Sek <Guard>
 	Script Author	: Scatman
 	Script Date	: 2009.07.25
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)

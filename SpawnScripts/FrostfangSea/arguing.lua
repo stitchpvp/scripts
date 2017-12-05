@@ -3,7 +3,7 @@
 	Script Purpose	:	for npcs arguing in halas
 	Script Author	:	theFoof
 	Script Date		:	2013.9.26
-	Script Notes	:	
+	Script Notes	:
 --]]
 
 function spawn(NPC)
@@ -11,7 +11,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function hailed(NPC, Spawn)

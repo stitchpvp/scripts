@@ -1,6 +1,6 @@
 --[[
 	Script Name	: SpawnScripts/GreaterFaydark/JenthisViridar.lua
-	Script Purpose	: Jenthis Viridar 
+	Script Purpose	: Jenthis Viridar
 	Script Author	: John Adams
 	Script Date	: 2009.03.01
 	Script Notes	: Auto-Generated Conversation from PacketParser Data
@@ -11,7 +11,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function InRange(NPC, Spawn)
@@ -29,18 +29,18 @@ function hailed(NPC, Spawn)
 	AddConversationOption(conversation, "I am Leighlah. I have a status report from Captain Steelforge.")
 	AddConversationOption(conversation, "I am Leighlah. I have news from Gomphum.")
 	StartConversation(conversation, NPC, Spawn, "Welcome to Sapling Spur Outpost. I am Jenthis Viridar, the current rank around here. I, well... I'd like to offer our assistance, but we're in a bit of a predicament right now.")
-	if convo==35 then
-		PlayFlavor(NPC, "voiceover/english/exp03_questvo2/jenthis_viridar/_exp03/exp03_rgn_greater_faydark/scp/jenthis/jenthis000.mp3", "", "", 6246646, 2119314563, Spawn)
-		AddConversationOption(conversation, "I am XXXXXXXX. What is the problem?", "dlg_35_1")
-		AddConversationOption(conversation, "I am Leighlah. I have news from Gomphum.")
-		StartConversation(conversation, NPC, Spawn, "Welcome to Sapling Spur Outpost. I am Jenthis Viridar, the current rank around here. I, well... I'd like to offer our assistance, but we're in a bit of a predicament right now.")
-	end
+	--if convo==35 then
+	--	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/jenthis_viridar/_exp03/exp03_rgn_greater_faydark/scp/jenthis/jenthis000.mp3", "", "", 6246646, 2119314563, Spawn)
+	--	AddConversationOption(conversation, "I am XXXXXXXX. What is the problem?", "dlg_35_1")
+	--	AddConversationOption(conversation, "I am Leighlah. I have news from Gomphum.")
+	--	StartConversation(conversation, NPC, Spawn, "Welcome to Sapling Spur Outpost. I am Jenthis Viridar, the current rank around here. I, well... I'd like to offer our assistance, but we're in a bit of a predicament right now.")
+	--end
 
-	if convo==36 then
-		PlayFlavor(NPC, "voiceover/english/exp03_questvo2/jenthis_viridar/_exp03/exp03_rgn_greater_faydark/scp/jenthis/jenthis000.mp3", "", "", 6246646, 2119314563, Spawn)
-		AddConversationOption(conversation, "I am XXXXXXXX. What is the problem?", "dlg_36_1")
-		StartConversation(conversation, NPC, Spawn, "Welcome to Sapling Spur Outpost. I am Jenthis Viridar, the current rank around here. I, well... I'd like to offer our assistance, but we're in a bit of a predicament right now.")
-	end
+	--if convo==36 then
+	--	PlayFlavor(NPC, "voiceover/english/exp03_questvo2/jenthis_viridar/_exp03/exp03_rgn_greater_faydark/scp/jenthis/jenthis000.mp3", "", "", 6246646, 2119314563, Spawn)
+	--	AddConversationOption(conversation, "I am XXXXXXXX. What is the problem?", "dlg_36_1")
+	--	StartConversation(conversation, NPC, Spawn, "Welcome to Sapling Spur Outpost. I am Jenthis Viridar, the current rank around here. I, well... I'd like to offer our assistance, but we're in a bit of a predicament right now.")
+	--end
 
 end
 

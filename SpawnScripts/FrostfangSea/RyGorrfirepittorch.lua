@@ -3,7 +3,7 @@
 	Script Purpose	:	for the spawn "Ry'Gorr firepit torch"
 	Script Author	:	theFoof
 	Script Date		:	2013.6.20
-	Script Notes	:	
+	Script Notes	:
 --]]
 
 local HighlyMaterials = 74
@@ -15,7 +15,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-	spawn(NPC)
+SpawnMob(NPC)
 end
 
 function SpawnAccess(NPC, Spawn)

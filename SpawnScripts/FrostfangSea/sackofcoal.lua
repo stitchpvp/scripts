@@ -1,9 +1,9 @@
 --[[
-	Script Name	: SpawnScripts/FrostfangSea/sackofcoal.lua 
+	Script Name	: SpawnScripts/FrostfangSea/sackofcoal.lua
 	Script Purpose	: "sack of coal" sign
 	Script Author	: theFoof
 	Script Date	: 2013.5.15
-	Script Notes	: 
+	Script Notes	:
 --]]
 
 local HadAHammer = 12
@@ -14,7 +14,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-    spawn(NPC)
+SpawnMob(NPC)
 end
 
 function SpawnAccess(NPC, Player)
