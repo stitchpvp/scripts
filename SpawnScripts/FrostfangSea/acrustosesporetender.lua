@@ -18,7 +18,7 @@ function hailed(NPC, Spawn)
 end
 
 function respawn(NPC)
-SpawnMob(NPC)
+spawn(NPC)
 end
 
 function casted_on(Target, Caster, SpellName)

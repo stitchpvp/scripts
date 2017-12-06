@@ -21,7 +21,7 @@ function casted_on(Target, Caster, SpellName)
 end
 
 function respawn(NPC)
-SpawnMob(NPC)
+spawn(NPC)
 end
 
 function CheckQuest(NPC, Player)

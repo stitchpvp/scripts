@@ -11,7 +11,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-SpawnMob(NPC)
+spawn(NPC)
 end
 
 local IcemanesCometh = 18

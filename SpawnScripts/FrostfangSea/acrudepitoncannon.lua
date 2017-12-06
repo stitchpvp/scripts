@@ -14,7 +14,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-SpawnMob(NPC)
+spawn(NPC)
 end
 
 function LoadCannon(NPC) -- sets the cannon to load the harpooon and start a timer
