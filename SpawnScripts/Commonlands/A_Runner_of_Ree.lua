@@ -42,5 +42,5 @@ MovementLoopAddLocation(NPC, -264.3, -47.99, -977.43, 3, 0)
 end
 
 function respawn(NPC)
-SpawnMob(NPC)
+spawn(NPC)
 end

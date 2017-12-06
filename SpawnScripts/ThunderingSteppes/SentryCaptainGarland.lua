@@ -65,6 +65,6 @@ function hailed(NPC, Spawn)
 end
 
 function respawn(NPC)
-SpawnMob(NPC)
+spawn(NPC)
 end
 

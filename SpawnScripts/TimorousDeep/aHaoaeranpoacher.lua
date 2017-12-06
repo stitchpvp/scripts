@@ -22,7 +22,7 @@ function spawn(NPC)
 end
 
 function respawn(NPC)
-SpawnMob(NPC)
+spawn(NPC)
 end
 
 function InitialWait(NPC)

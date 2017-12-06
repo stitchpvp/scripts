@@ -24,7 +24,7 @@ function LeaveRange(NPC, Spawn)
 end
 
 function respawn(NPC)
-SpawnMob(NPC)
+spawn(NPC)
 end
 
 function hailed(NPC, Spawn)

@@ -16,7 +16,7 @@ function spawn(NPC, Player)
 end
 
 function respawn(NPC)
-SpawnMob(NPC)
+spawn(NPC)
 end
 
 function QuestCheck(NPC, Player)

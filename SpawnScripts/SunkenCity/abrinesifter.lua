@@ -26,7 +26,7 @@ function ChooseMovement(NPC)
 end
 
 function respawn(NPC)
-SpawnMob(NPC)
+spawn(NPC)
 end
 
 function clockwise1(NPC)
@@ -70,7 +70,7 @@ function counter_clockwise2(NPC)
 end
 
 function respawn(NPC)
-SpawnMob(NPC)
+spawn(NPC)
 end
 
 function hailed(NPC, Spawn)
