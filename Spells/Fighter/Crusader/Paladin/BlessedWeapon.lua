@@ -5,8 +5,8 @@ function cast(Caster)
   AddProc(Caster, 3, proc_chance)
 end
 
-function proc(Caster, Target, MinDmg, MaxDmg, MinUndeadDmg, MaxUndeadDmg)
-  ProcDamage(Caster, Target, "Glorious Strike", 7, MinDmg, MaxDmg)
+function proc(Caster, Target, SpellID)
+  CastSpell(Target, SpellID, 1, Caster)
 end
 
 function remove(Caster)
