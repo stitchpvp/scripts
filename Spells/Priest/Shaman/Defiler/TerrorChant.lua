@@ -14,5 +14,5 @@ end
 
 function remove(Caster, Target)
   RemoveControlEffect(Target, 6)
-  RemoveProc(Target, 2)
+  RemoveProc(Target)
 end
