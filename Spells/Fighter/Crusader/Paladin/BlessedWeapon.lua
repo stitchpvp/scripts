@@ -5,7 +5,7 @@ function cast(Caster)
   AddProc(Caster, 3, proc_chance)
 end
 
-function proc(Caster, Target, SpellID)
+function proc(Caster, Target, Type, SpellID)
   CastSpell(Target, SpellID, 1, Caster)
 end
 
