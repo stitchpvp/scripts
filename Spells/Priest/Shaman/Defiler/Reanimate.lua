@@ -1,3 +1,3 @@
 function cast(Caster, Target)
-  Resurrect(15, 15, 1)
+  Resurrect(Target, 15, 15, 1)
 end
