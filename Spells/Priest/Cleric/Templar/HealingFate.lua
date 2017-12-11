@@ -6,17 +6,21 @@ function cast(Caster, Target)
 end
 
 function proc(Caster, Target, Type, SpellID)
-  local var_name = "Spell_" .. GetName(Caster) .. "_HealingFate"
+  local spell_caster = GetCaster()
+  local var_name = "Spell_" .. GetName(spell_caster) .. "_HealingFate"
 
-  local start_hp = GetTempVariable(Target, var_name)
+  local start_hp = GetTempVariable(Caster, var_name)
   local target_hp = start_hp - (start_hp * 0.2)
 
-  if GetHP(Target) <= target_hp then
-    CastSpell(Caster, SpellID, 1)
+  if GetHP(Caster) <= target_hp then
+    CastSpell(spell_caster, SpellID, 1)
     CancelSpell()
   end
 end
 
 function remove(Caster, Target)
+  local var_name = "Spell_" .. GetName(Caster) .. "_HealingFate"
+
   RemoveProc(Target)
+  SetTempVariable(Target, var_name, nil)
 end
