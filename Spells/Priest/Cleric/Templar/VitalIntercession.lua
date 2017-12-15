@@ -6,7 +6,7 @@ end
 function proc(Caster, Target, ProcType, MinHeal, MaxHeal)
   local spell_caster = GetCaster()
 
-  ProcHeal(spell_caster, Target, "Supplicant's Prayer", "Heal", MinHeal, MaxHeal)
+  ProcHeal(spell_caster, Caster, "Supplicant's Prayer", "Heal", MinHeal, MaxHeal)
   RemoveTriggerFromSpell()
 end
 
