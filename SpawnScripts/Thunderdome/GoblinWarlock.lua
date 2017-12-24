@@ -10,7 +10,9 @@ function find_victim(NPC)
   if IsInCombat(NPC) == false then
     local victim = GetSpawn(NPC, 7720007)
     
-    AddHate(NPC, victim, 1)
+    if IsInCombat(victim) == false then
+      AddHate(NPC, victim, 1)
+    end
   end
 
   AddTimer(NPC, 5000, "find_victim")
