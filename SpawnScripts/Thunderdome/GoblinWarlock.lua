@@ -3,3 +3,7 @@ function spawn(NPC)
   
   AddHate(NPC, victim, 1)
 end
+
+function respawn(NPC)
+  spawn(NPC)
+end
