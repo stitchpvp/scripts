@@ -5,7 +5,7 @@ end
 function proc(Caster, Target, Type, HateTransfer, SpellID)
   local spell_caster = GetCaster()
 
-  CastSpell(Target, SpellID, 1, spell_caster)
+  CastSpell(Caster, SpellID, 1, spell_caster)
 end
 
 function remove(Caster, Target)
