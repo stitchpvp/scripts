@@ -1,6 +1,5 @@
-function cast(Caster, Target, MinPowerDmg, MaxPowerDmg, MinDmg, MaxDmg, MinPowerHeal, MaxPowerHeal, MinHeal, MaxHeal)
---  SpellHeal(Target, "Power", -1 * MinPowerDmg, -1 * MaxPowerDmg)
---  SpellDamage(Target, 9, MinDmg, MaxDmg)
---  SpellHeal(Caster, "Power")
-  RemoveSpell()
+function cast(Caster, Target, FriendlySpellID, HostileSpellID)
+  -- CastSpell(Caster, FriendlySpellID, 1)
+  -- CastSpell(Target, HostileSpellID, 1, Caster)
+  CancelSpell()
 end
