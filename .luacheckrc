@@ -86,6 +86,7 @@ std = {
     "GetAgi",
     "GetAgiBase",
     "GetArchetypeName",
+    "GetCaster",
     "GetCharmedPet",
     "GetClass",
     "GetClassName",
