@@ -1,3 +1,3 @@
 function cast(Caster, Target)
-  AddSpellBonus(Target, 609, 24)
+  Stealth(1, Caster)
 end
