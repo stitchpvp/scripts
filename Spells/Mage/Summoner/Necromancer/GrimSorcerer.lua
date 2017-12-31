@@ -1,5 +1,5 @@
 function cast(Caster, Target)
-  SummonPet(Caster, 331129)
+  SummonPet(Caster, 7720008)
 end
 
 function remove(Caster, Target)
