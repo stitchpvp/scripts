@@ -10,5 +10,5 @@ function proc()
 end
 
 function remove(Caster, Target, SpellID)
-  RemoveProc(Target, 15)
+  RemoveProc(Target)
 end

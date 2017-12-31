@@ -8,6 +8,6 @@ function proc()
 end
 
 function remove(Caster, Target, SpellID)
-  RemoveProc(Target, 15)
+  RemoveProc(Target)
   CastSpell(Target, SpellID, 1, Caster)
 end
