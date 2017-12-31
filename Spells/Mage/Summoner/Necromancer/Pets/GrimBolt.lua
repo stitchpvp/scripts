@@ -1,3 +1,3 @@
-function cast(Caster, Target, Dmg)
-  SpellDamage(Target, 9, Dmg)
+function cast(Caster, Target, MinDmg, MaxDmg)
+  SpellDamage(Target, 9, MinDmg, MaxDmg)
 end
