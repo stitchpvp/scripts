@@ -9,3 +9,7 @@ function proc(Caster, Target, ProcType, SpellID)
   CastSpell(Target, SpellID, 1)
   CancelSpell()
 end
+
+function remove(Caster, Target)
+  RemoveProc(Target)
+end
