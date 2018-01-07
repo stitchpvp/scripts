@@ -1,30 +1,28 @@
+function cast(Caster, Pet, AttackSpeed, MaxHP, HateGain, Aggression, Mitigation)
+  AddSpellBonus(Pet, 617, AttackSpeed)
+  AddSpellBonus(Pet, 607, MaxHP)
+  AddSpellBonus(Pet, 624, HateGain)
+  AddSkillBonus(Pet, GetSkillIDByName("Aggression"), Aggression)
 
-function cast(Caster, Target, agg, procDmg, procHeal, atkSpeed, maxHP, hateGain, spellMit, procHateMin, procHateMax)
-  AddSkillBonus(Target, GetSkillIDByName("Aggression"), agg)
-  AddSpellBonus(Target, 617, atkSpeed)
-  --AddSpellBonus(Target, 607, maxHP)
-  AddSpellBonus(Target, 624, hateGain)
-  AddSpellBonus(Target, 201, spellMit)
+  AddSpellBonus(Pet, 201, Mitigation)
+  AddSpellBonus(Pet, 202, Mitigation)
+  AddSpellBonus(Pet, 203, Mitigation)
 
-  AddProc(Target, 1, 100)
-  AddProc(Target, 2, 100)
+  AddProc(Pet, 1, 100)
+  AddProc(Pet, 2, 100)
 end
 
-function proc(Caster, Target, Type, agg, procDmg, procHeal, atkSpeed, maxHP, hateGain, spellMit, procHateMin, procHateMax)
+function proc(Caster, Target, Type, AttackSpeed, MaxHP, HateGain, Aggression, Mitigation, DmgAmt, HealAmt, MinHate, MaxHate)
   if Type == 1 then
-    if procHateMax ~= nil and procHateMin < procHateMax then
-      AddHate(Target, math.random(procHateMin, procHateMax))
-    else
-      AddHate(Target, procHateMin)
-    end
+    Say(Caster, "I should be taunting, but this didn't get set up yet.")
   elseif Type == 2 then
-    ProcDamage(Caster, Target, "Grisly Feedback", 8, procDmg)
-    SpellHeal("Heal", procHeal, 0, Caster)
+    ProcDamage(Caster, Target, "Grisly Feedback", 8, DmgAmt)
+    SpellHeal(Caster, "Heal", HealAmt)
   end
 end
 
-function remove(Caster, Target)
-    RemoveSpellBonus(Target)
-    RemoveSkillBonus(Target)
-    RemoveProc(Target)
+function remove(Caster, Pet)
+  RemoveSpellBonus(Pet)
+  RemoveSkillBonus(Pet)
+  RemoveProc(Pet)
 end

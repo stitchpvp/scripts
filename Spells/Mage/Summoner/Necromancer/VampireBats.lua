@@ -6,7 +6,3 @@ end
 function tick(Caster, Target, MinDmg, MaxDmg)
   SpellDamage(Target, 2, MinDmg, MaxDmg)
 end
-
-function remove(Caster, Target)
-  RemoveSpellBonus(Target)
-end

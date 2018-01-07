@@ -1,17 +1,11 @@
-function cast(Caster, Target)
-  AddProc(Target, 1, 100)
-  AddProc(Target, 2, 100)
+function cast(Caster, Pet)
+  AddProc(Pet, 1, 5)
+  AddProc(Pet, 2, 25)
 end
 
-function proc(Caster, Target, Type, Debuff)
-  if Type == 1 then
-    AddSpellBonus(Target, 201, Debuff)
-  elseif Type == 2 then
-    AddSpellBonus(Target, 201, Debuff)
-  end
+function proc(Caster, Target, Type, SpellID)
 end
 
-function remove(Caster, Target)
-  RemoveSpellBonus(Target)
-  RemoveProc(Target)
+function remove(Caster, Pet)
+  RemoveProc(Pet)
 end

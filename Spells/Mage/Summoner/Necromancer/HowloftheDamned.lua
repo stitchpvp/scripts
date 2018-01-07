@@ -1,28 +1,19 @@
-function precast (Caster, Target)
-  local Pet = GetPet(Caster)
+function cast(Caster, Pet, AttackSpeed, DefenseDebuff, CastSkills)
+  AddSpellBonus(Pet, 617, AttackSpeed)
+  AddSkillBonus(Pet, GetSkillIDByName("Defense"), DefenseDebuff)
+  AddSkillBonus(Pet, GetSkillIDByName("Parry"), DefenseDebuff)
+  AddSkillBonus(Pet, GetSkillIDByName("Focus"), CastSkills)
+  AddSkillBonus(Pet, GetSkillIDByName("Subjugation"), CastSkills)
+  AddSkillBonus(Pet, GetSkillIDByName("Disruption"), CastSkills)
 
-  if Pet ~= nil then
-    return true
-  else
-    return false
-  end
+  AddProc(Pet, 1, 5)
 end
 
-function cast(Caster, Target, atkSpeed, defPenalty, focusBonus, procDmg, procHeal, castSkills)
-    AddSpellBonus(Target, 617, atkSpeed)
-    AddSkillBonus(Target, GetSkillIDByName("Defense"), defPenalty)
-    AddSkillBonus(Target, GetSkillIDByName("Parry"), defPenalty)
-    AddSkillBonus(Target, GetSkillIDByName("Focus"), focusBonus)
-    AddSkillBonus(Target, GetSkillIDByName("Subjugation"), castSkills)
-    AddSkillBonus(Target, GetSkillIDByName("Disruption"), castSkills)
+function proc(Caster, Target, Type, AttackSpeed, DefenseDebuff, CastSkills, DmgAmt, HealAmt)
+  ProcDamage(Caster, Target, "Clawing of the Soul", 8, DmgAmt)
+  SpellHeal(Caster, "Heal", HealAmt)
 end
 
-function proc(Caster, Target, Type, atkSpeed, defPenalty, focusBonus, procDmg, procHeal, castSkills)
-    ProcDamage(Caster, Target, "Clawing of the Soul", 8, procDmg)
-    SpellHeal("Heal", procHeal)
-end
-
-function remove(Caster, Target)
-    RemoveSpellBonus(Target)
-    RemoveSkillBonus(Target)
+function remove(Caster, Pet)
+  RemoveProc(Pet)
 end

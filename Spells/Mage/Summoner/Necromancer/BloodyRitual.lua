@@ -1,22 +1,9 @@
-function precast (Caster, Target)
-  local Pet = GetPet(Caster)
-
-  if Pet ~= nil then
-    return true
-  else
-    return false
-  end
+function cast(Caster, Pet, Dmg, Power)
+  SpellDamage(Pet, 5, Dmg)
+  SpellHeal(Caster, "Power", Power)
 end
 
-function cast(Caster, Target, dmg, power)
-local Pet = GetPet(Caster)
-  SpellDamage(Pet, 5, dmg)
-  SpellHeal(Caster, "Power", power)
+function tick(Caster, Pet, Dmg, Power)
+  SpellDamage(Pet, 5, Dmg)
+  SpellHeal(Caster, "Power", Power)
 end
-
-function tick(Caster, Target, dmg, power)
-local Pet = GetPet(Caster)
-  SpellDamage(Pet, 5, dmg)
-  SpellHeal(Caster, "Power", power)
-end
-

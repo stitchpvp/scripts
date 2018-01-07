@@ -1,12 +1,9 @@
-function cast(Caster, Target, healVal, tickHealVal, dispelLevels)
-    SpellHeal("Heal", healVal)
+function cast(Caster, Pet, DispelLevels, HealAmt, HealTickAmt)
+    CureByType(Pet, DispelLevels, 0)
 
-    CureByType(1, 1, 0, dispelLevels)
-    CureByType(1, 2, 0, dispelLevels)
-    CureByType(1, 3, 0, dispelLevels)
-    CureByType(1, 4, 0, dispelLevels)
+    SpellHeal(Pet, "Heal", HealAmt)
 end
 
-function tick(Caster, Target, healVal, tickHealVal, dispelLevels)
-    SpellHeal("Heal", tickHealVal)
+function tick(Caster, Pet, DispelLevels, HealAmt, HealTickAmt)
+    SpellHeal(Pet, "Heal", HealTickAmt)
 end
