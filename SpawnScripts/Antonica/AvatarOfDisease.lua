@@ -1,7 +1,3 @@
-function hailed(NPC, Spawn)
-  FaceTarget(NPC, Spawn)
-end
-
 function attacked(NPC)
   Say(NPC, "A plague of suffering will be your only reward!")
 
