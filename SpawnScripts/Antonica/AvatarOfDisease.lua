@@ -18,6 +18,6 @@ end
 end
 
 function death(NPC, Spawn)
-  KillSpawn(NPC, GetSpawn(Spawn, 2520014), 1)
-  KillSpawn(NPC, GetSpawn(Spawn, 2520015), 1)
+  KillSpawn(NPC, GetSpawn(NPC, 2520014), 1)
+  KillSpawn(NPC, GetSpawn(NPC, 2520015), 1)
 end
