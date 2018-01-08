@@ -21,3 +21,8 @@ function death(NPC, Spawn)
   KillSpawn(NPC, GetSpawn(NPC, 2520014), 1)
   KillSpawn(NPC, GetSpawn(NPC, 2520015), 1)
 end
+
+function CombatReset(NPC)
+  KillSpawn(NPC, GetSpawn(NPC, 2520014), 1)
+  KillSpawn(NPC, GetSpawn(NPC, 2520015), 1)
+end
