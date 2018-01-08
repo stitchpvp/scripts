@@ -9,11 +9,11 @@ function second_sentence(NPC)
 end
 
 function SpawnAdds(NPC)
-  if IsInCombat(Spawn) == false then
+  if IsInCombat(NPC) == false then
   return
 end
-	SpawnMob(GetZone(Spawn), 2520014, false, 81.54, -8.64, 99.78, 90)
-	SpawnMob(GetZone(Spawn), 2520015, false, 81.54, -8.64, 99.78, 90)
+	SpawnMob(GetZone(NPC), 2520014, false, 81.54, -8.64, 99.78, 90)
+	SpawnMob(GetZone(NPC), 2520015, false, 81.54, -8.64, 99.78, 90)
 	AddTimer(NPC, 45000, "SpawnAdds")
 end
 
