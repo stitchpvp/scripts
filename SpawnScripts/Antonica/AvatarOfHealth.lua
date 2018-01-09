@@ -9,9 +9,9 @@ function second_sentence(NPC)
   Say(NPC, "You will soon learn the error of your ways!")
 end
 
-function SpawnGrummus(NPC)
-  SpawnMob(GetZone(NPC), 2520012, false, 81.54, -8.64, 99.78, 90)
-  AddHate(NPC, 2520012, 100)
+function SpawnGrummus(Zone, Spawn)
+  local Grummus = SpawnMob(Zone, 2520012, false, 81.54, -8.64, 99.78, 90)
+  AddHate(Spawn, Grummus, 100)
 end
 
 function CombatReset(NPC)
