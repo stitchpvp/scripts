@@ -1,4 +1,5 @@
 function attacked(NPC)
+  SetInCombat(NPC, true)
   Say(NPC, "A plague of suffering will be your only reward!")
   AddTimer(NPC, 5000, "second_sentence")
   AddTimer(NPC, 45000, "SpawnAdds")
@@ -11,6 +12,7 @@ end
 
 function battleweary(NPC)
   Say(NPC, "I see you grow tired from my onslaught, it won't be long now before victory is mine!")
+  CastSpell(NPC, 1001406, 1) --[[Shadowknight's Dark Blade II]]--
 end
 
 function SpawnAdds(NPC)
