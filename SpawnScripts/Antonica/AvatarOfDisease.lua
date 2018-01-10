@@ -1,5 +1,4 @@
 function attacked(NPC)
-  SetInCombat(NPC, true)
   Say(NPC, "A plague of suffering will be your only reward!")
   AddTimer(NPC, 5000, "second_sentence")
   AddTimer(NPC, 45000, "SpawnAdds")
@@ -24,7 +23,7 @@ end
 	AddTimer(NPC, 45000, "SpawnAdds")
 end
 
-function death(NPC)
+function death(NPC, Target)
   TraumaticPoxule = GetSpawn(NPC, 2520014)
   ArcanePoxule = GetSpawn(NPC, 2520015)
   KillSpawn(TraumaticPoxule, NPC, 1)
