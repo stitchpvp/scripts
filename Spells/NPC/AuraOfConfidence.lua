@@ -5,7 +5,3 @@ function cast(Caster)
   AddSpellBonus(Caster, 629, 50)
   AddSpellBonus(Caster, 659, 50)
 end
-
-function CombatReset(Caster)
-  RemoveSpellBonus(Caster)
-end
