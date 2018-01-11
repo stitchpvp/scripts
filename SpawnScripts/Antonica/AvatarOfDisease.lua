@@ -27,19 +27,45 @@ end
 end
 
 function death(NPC)
-  while add1 = GetSpawn(NPC, 2520014) do
+  while true do
+    local add1 = GetSpawn(NPC, 2520014)
+
+    if add1 == nil then
+      break
+    end
+
     Despawn(add1)
   end
-  while add2 = GetSpawn(NPC, 2520015) do
+  
+  while true do
+    local add2 = GetSpawn(NPC, 2520015)
+
+    if add2 == nil then
+      break
+    end
+
     Despawn(add2)
   end
 end
 
 function CombatReset(NPC)
-  while add1 = GetSpawn(NPC, 2520014) do
+  while true do
+    local add1 = GetSpawn(NPC, 2520014)
+
+    if add1 == nil then
+      break
+    end
+
     Despawn(add1)
   end
-  while add2 = GetSpawn(NPC, 2520015) do
+  
+  while true do
+    local add2 = GetSpawn(NPC, 2520015)
+
+    if add2 == nil then
+      break
+    end
+
     Despawn(add2)
   end
 end
