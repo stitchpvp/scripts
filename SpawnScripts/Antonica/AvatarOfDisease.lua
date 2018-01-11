@@ -3,6 +3,7 @@ function attacked(NPC)
   AddTimer(NPC, 5000, "second_sentence")
   AddTimer(NPC, 45000, "SpawnAdds")
   AddTimer(NPC, 45000, "battleweary") --[[change back to 390000 when done testing]]
+end
   
 function second_sentence(NPC)
   Say(NPC, "I will wrap you in a protective cloak of virulent disease, just to be fair.")
