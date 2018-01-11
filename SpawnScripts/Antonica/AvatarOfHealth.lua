@@ -10,6 +10,6 @@ end
 
 function SpawnGrummus(Spawn, Player)
   local zone = GetZone(Spawn)
-  local Grummus = SpawnMob(zone, 2520012, false, 81.54, -8.64, 99.78, 90)
+  local Grummus = SpawnMob(zone, 2520012, false, GetX(Player), GetY(Player), GetZ(Player), 90)
   AddHate(Player, Grummus, 1)
 end
