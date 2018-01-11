@@ -10,8 +10,11 @@ function second_sentence(NPC)
 end
 
 function battleweary(NPC)
+  if IsInCombat(NPC) == false then
+  return
+end
   Say(NPC, "I see you grow tired from my onslaught, it won't be long now before victory is mine!")
-  CastSpell(NPC, 1001406, 1) --[[Shadowknight's Dark Blade II]]--
+  CastSpell(NPC, 1002183, 1) --[[Aura of Confidence]]
 end
 
 function SpawnAdds(NPC)
