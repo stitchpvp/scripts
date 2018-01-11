@@ -36,7 +36,6 @@ function death(NPC)
 
     Despawn(add1)
   end
-  
   while true do
     local add2 = GetSpawn(NPC, 2520015)
 
@@ -58,7 +57,6 @@ function CombatReset(NPC)
 
     Despawn(add1)
   end
-  
   while true do
     local add2 = GetSpawn(NPC, 2520015)
 
