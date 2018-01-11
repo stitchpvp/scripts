@@ -1,11 +1,11 @@
 function hailed(NPC, Player)
-  Say(NPC, "<placeholder emote> Are you here to help me assist against Disease's servant, Grummus?")
+  Say(NPC, "Hail. Do you have what it takes to aid me in the battle against Avatar of Disease's servant, Grummus?") --[[placeholder emote]]
   AddTimer(NPC, 5000, "second_sentence")
   AddTimer(NPC, 7000, "SpawnGrummus", 1, Player)
-end
+ end
 
 function second_sentence(NPC)
-  Say(NPC, "<placeholder emote> I see. I hope you are well prepared.")
+  Say(NPC, "Very well, then. Get ready!") --[[placeholder emote]]
 end
 
 function SpawnGrummus(Spawn, Player)
