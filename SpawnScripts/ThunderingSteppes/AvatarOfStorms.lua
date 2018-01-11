@@ -25,22 +25,22 @@ function SpawnAdds(NPC, Player)
   if IsInCombat(NPC) == false then
     return
 end
-  local zone = GetZone(Spawn)
+  local zone = GetZone(NPC)
   local elementals = GetSpawnByGroupID(zone, 1043766)
-  SpawnMob(GetZone(NPC), elementals, false, GetX(Player), GetY(Player), GetZ(Player), 90)
+  SpawnMob(zone, elementals, false, GetX(Player), GetY(Player), GetZ(Player), 90)
   AddHate(Player, elementals, 1)
   AddTimer(NPC, 45000, "SpawnAdds", 1, Player)
 end
 
 function death(NPC)
-  local zone = GetZone(Spawn)
+  local zone = GetZone(NPC)
   local elementals = GetSpawnByGroupID(zone, 1043766)
     Despawn(elementals)
 end
 
 function CombatReset(NPC)
   while true do
-    local zone = GetZone(Spawn)
+    local zone = GetZone(NPC)
     local elementals = GetSpawnByGroupID(zone, 1043766)
       if elementals == nil then
         break
