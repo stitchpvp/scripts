@@ -15,7 +15,7 @@ end
 
 function battleweary(NPC)
   if IsInCombat(NPC) == false then
-  return
+    return
 end
   Say(NPC, "I see you grow tired from my onslaught, it won't be long now before victory is mine!")
   CastSpell(NPC, 1002183, 1) --[[Aura of Confidence]]
@@ -23,25 +23,28 @@ end
 
 function SpawnAdds(NPC, Player)
   if IsInCombat(NPC) == false then
-  return
+    return
 end
-  local elementals = GetSpawnGroupID(NPC, 1043766)
+  local zone = GetZone(Spawn)
+  local elementals = GetSpawnByGroupID(zone, 1043766)
   SpawnMob(GetZone(NPC), elementals, false, GetX(Player), GetY(Player), GetZ(Player), 90)
   AddHate(Player, elementals, 1)
   AddTimer(NPC, 45000, "SpawnAdds", 1, Player)
 end
 
 function death(NPC)
-  local elementals = GetSpawnGroupID(NPC, 1043766)
+  local zone = GetZone(Spawn)
+  local elementals = GetSpawnByGroupID(zone, 1043766)
     Despawn(elementals)
 end
 
 function CombatReset(NPC)
   while true do
-    local elementals = GetSpawnGroupID(NPC, 1043766)
-    if elementals == nil then
-      break
-    end
+    local zone = GetZone(Spawn)
+    local elementals = GetSpawnByGroupID(zone, 1043766)
+      if elementals == nil then
+        break
+      end
     Despawn(elementals)
   end
 end
