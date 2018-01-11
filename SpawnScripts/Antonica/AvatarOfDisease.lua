@@ -21,21 +21,25 @@ function SpawnAdds(NPC)
   if IsInCombat(NPC) == false then
   return
 end
-	SpawnMob(GetZone(NPC), 2520014, false, 81.54, -8.64, 99.78, 90)
-	SpawnMob(GetZone(NPC), 2520015, false, 81.54, -8.64, 99.78, 90)
-	AddTimer(NPC, 45000, "SpawnAdds")
+  SpawnMob(GetZone(NPC), 2520014, false, 81.54, -8.64, 99.78, 90)
+  SpawnMob(GetZone(NPC), 2520015, false, 81.54, -8.64, 111.75, 90)
+  AddTimer(NPC, 45000, "SpawnAdds")
 end
 
-function death(NPC, Target)
-  TraumaticPoxule = GetSpawn(NPC, 2520014)
-  ArcanePoxule = GetSpawn(NPC, 2520015)
-  KillSpawn(TraumaticPoxule, NPC, 1)
-  KillSpawn(ArcanePoxule, NPC, 1)
+function death(NPC)
+  while add1 = GetSpawn(NPC, 2520014) do
+    Despawn(add1)
+  end
+  while add2 = GetSpawn(NPC, 2520015) do
+    Despawn(add2)
+  end
 end
 
 function CombatReset(NPC)
-  TraumaticPoxule = GetSpawn(NPC, 2520014)
-  ArcanePoxule = GetSpawn(NPC, 2520015)
-  KillSpawn(TraumaticPoxule, NPC, 1)
-  KillSpawn(ArcanePoxule, NPC, 1)
+  while add1 = GetSpawn(NPC, 2520014) do
+    Despawn(add1)
+  end
+  while add2 = GetSpawn(NPC, 2520015) do
+    Despawn(add2)
+  end
 end
