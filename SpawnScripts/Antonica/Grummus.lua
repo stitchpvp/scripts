@@ -20,5 +20,5 @@ function death(NPC)
 end
 
 function CombatReset(NPC)
-  Despawn(NPC, 10000)
+  Despawn(NPC)
 end
