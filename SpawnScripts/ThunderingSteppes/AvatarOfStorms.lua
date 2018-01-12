@@ -26,8 +26,8 @@ function SpawnAdds(NPC, Player)
     return
 end
   local zone = GetZone(NPC)
-  local elementals = GetSpawnByGroupID(zone, 1043766)
-  SpawnMob(zone, elementals, false, GetX(Player), GetY(Player), GetZ(Player), 90)
+  local elementals_id = SpawnGroupByID(zone, 1043766)
+  local elementals = SpawnMob(zone, elementals_id, false, GetX(Player), GetY(Player), GetZ(Player), 90)
   AddHate(Player, elementals, 1)
   AddTimer(NPC, 45000, "SpawnAdds", 1, Player)
 end
