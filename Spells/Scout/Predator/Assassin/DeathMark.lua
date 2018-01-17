@@ -3,7 +3,7 @@ function cast(Caster, Target)
 end
 
 function proc(Caster, Target, Type, SpellID)
-  CastSpell(Target, SpellID, 1, Caster)
+  CastSpell(Caster, SpellID, 1, Target)
   CancelSpell()
 end
 

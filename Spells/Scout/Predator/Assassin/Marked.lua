@@ -5,7 +5,7 @@ function cast(Caster, Target)
 end
 
 function proc(Caster, Target, Type, MinDmg, MaxDmg)
-  ProcDamage(Caster, Target, "Agonizing Pain", 3, MinDmg, MaxDmg)
+  ProcDamage(GetCaster(), Target, "Agonizing Pain", 3, MinDmg, MaxDmg)
 
   RemoveTriggerFromSpell()
 end
