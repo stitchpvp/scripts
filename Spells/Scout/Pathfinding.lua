@@ -1,3 +1,3 @@
 function cast(Caster, Target)
-  AddSpellBonus(Target, 609, 24)
+  AddSpellBonus(Target, 609, 16)
 end
