@@ -1,4 +1,4 @@
-function caster(Caster, Target, DefenseDebuff, OffenseBuff)
+function cast(Caster, Target, DefenseDebuff, OffenseBuff)
   local Weapon = GetEquippedItemBySlot(Caster, 0)
   local ProcChance = GetProcPercentageForWeapon(Weapon, 2.0)
 
