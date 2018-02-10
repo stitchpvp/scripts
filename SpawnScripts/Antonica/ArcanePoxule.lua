@@ -1,4 +1,4 @@
-function attacked(NPC, Target)
+function healthchanged(NPC, Target)
     local check = GetArchetypeName(Target)
 
     if check == "Fighter" or check == "Scout" then
