@@ -14,4 +14,4 @@ function remove(Caster)
   if pet then
     RemoveInvis(pet)
   end
-end 
+end
