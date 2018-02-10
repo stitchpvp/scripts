@@ -1,7 +1,18 @@
-function healthchanged(NPC, Target)
-    local check = GetArchetypeName(Target)
+function spawn(NPC)
+  CastSpell(NPC, 1002187, 1)
+  AddTimer(NPC, 45000, "slaughter") --[change back to 390000 when done testing]
+end
 
-    if check == "Mage" or check == "Priest" then
-        CastSpell(Target, 1002187, 1, NPC) --[raidwide stun & dmg]
-    end
+function slaughter(NPC, Target)
+  if IsInCombat(NPC) == false then
+    SendPopUpMessage(Target, "Traumatic Poxule has not been tagged by a mage or priest, therefore releasing massive diseases and plagues to your raid force!", 255, 0, 0)
+    SendMessage(Target, "Traumatic Poxule has not been tagged by a mage or priest, therefore releasing massive diseases and plagues to your raid force!", "red")
+    CastSpell(NPC, 1002187, 1)
+  end
+
+  if IsInCombat(NPC) == true then
+    SendPopUpMessage(Target, "Traumatic Poxule has been up for too long, sending out massive diseases and plagues to your raid force!", 255, 0, 0)
+    SendMessage(Target, "Traumatic Poxule has been up for too long, sending out massive diseases and plagues to your raid force!", "red")
+    CastSpell(NPC, 1002187, 1)
+  end
 end
