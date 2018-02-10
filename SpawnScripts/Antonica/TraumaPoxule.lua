@@ -5,8 +5,8 @@ end
 
 function slaughter(NPC, Target)
   if IsInCombat(NPC) == false then
-    SendPopUpMessage(Target, "Traumatic Poxule has not been tagged by a mage or priest, therefore releasing massive diseases and plagues to your raid force!", 255, 0, 0)
-    SendMessage(Target, "Traumatic Poxule has not been tagged by a mage or priest, therefore releasing massive diseases and plagues to your raid force!", "red")
+    SendPopUpMessage(Target, "Traumatic Poxule has not been tagged by a fighter or scout, therefore releasing massive diseases and plagues to your raid force!", 255, 0, 0)
+    SendMessage(Target, "Traumatic Poxule has not been tagged by a fighter or scout, therefore releasing massive diseases and plagues to your raid force!", "red")
     CastSpell(NPC, 1002187, 1)
   end
 
