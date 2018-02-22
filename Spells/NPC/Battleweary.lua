@@ -9,5 +9,5 @@ function cast(Caster, Target)
   AddSpellBonus(Target, 659, -10) --[potency]
   AddSpellBonus(Target, 664, -50) --[casting speed]
   AddControlEffect(Target, 11)
-  SetSpellSnareValue(60, Target)
+  SetSpellSnareValue(5, Target)
 end
