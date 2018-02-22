@@ -22,7 +22,7 @@ function death(NPC)
   Despawn(Spawn, 10000)
 end
 
-function CombatReset(NPC, Spawn)
+function CombatReset(NPC)
   local Spawn = GetSpawn(NPC, 2520010)
   SetTempVariable(Spawn, "grummus_spawned", nil)
   SetTempVariable(Spawn, "say", nil)
