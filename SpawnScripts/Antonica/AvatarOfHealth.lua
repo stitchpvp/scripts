@@ -5,7 +5,7 @@ function hailed(NPC, Spawn)
     AddConversationOption(conversation, "I must go.", "Choice2")
     StartConversation(conversation, NPC, Spawn, "Hello " .. GetName(Spawn) .. ", you must gather enough raid force to aid me against the filth that is Avatar of Disease! Are you ready?") --[[placeholder emote]]
 	SpawnSet(NPC, "visual_state", 121)
-	if GetTempVariable(NPC, "grummus_spawned") ~= nil then
+	if GetTempVariable(NPC, "grummus_spawned") == nil then
 		AddTimer(NPC, 4000, "defaultvisual")
 	end
 	else
