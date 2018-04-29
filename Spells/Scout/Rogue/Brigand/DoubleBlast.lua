@@ -1,10 +1,11 @@
-function precast(Caster, Target)
-  local ranged = GetEquippedItemBySlot(Caster, 16)
-
-  return GetItemType(ranged) == 2
-end
-
-function cast(Caster, Target, MinDmg, MaxDmg)
+function cast(Caster, Target, MinDmg, MaxDmg, SpellID)
   SpellDamage(Target, 2, MinDmg, MaxDmg)
-  SpellDamage(Target, 2, MinDmg, MaxDmg)
+
+  if LastSpellAttackHit() then
+    SpellDamage(Target, 2, MinDmg, MaxDmg)
+
+    if LastSpellAttackHit() then
+      CastSpell(Target, SpellID, 1, Caster)
+    end
+  end
 end

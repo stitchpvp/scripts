@@ -4,8 +4,8 @@ function cast(Caster, Target)
   AddProc(Caster, 14, 100)
 end
 
-function proc(Caster, Target, ProcType, SpellTier)
-  CastSpell(Caster, 1001284, SpellTier)
+function proc(Caster, Target, ProcType, SpellID)
+  CastSpell(Caster, SpellID, 1)
 end
 
 function remove(Caster, Target)

@@ -1,7 +1,6 @@
-function cast(Caster, Target, Agi, BaseAvoidance, Mitigation, Resists, MinProcDmg, MaxProcDmg)
+function cast(Caster, Target, Agi, BaseAvoidance, Resists, MinProcDmg, MaxProcDmg)
   AddSpellBonus(Caster, 3, Agi)
   AddSpellBonus(Caster, 696, BaseAvoidance)
-  AddSpellBonus(Caster, 204, Mitigation)
   AddSpellBonus(Caster, 201, Resists)
   AddSpellBonus(Caster, 202, Resists)
   AddSpellBonus(Caster, 203, Resists)

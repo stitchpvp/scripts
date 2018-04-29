@@ -1,9 +1,9 @@
 function cast(Caster, Target)
-  AddProc(Target, 1, 15)
+  AddProc(Target, 1, 30)
 end
 
 function proc(Caster, Target)
-  AddWard(Target, 350)
+  -- AddWard(Target, 350)
 end
 
 function remove(Caster, Target)

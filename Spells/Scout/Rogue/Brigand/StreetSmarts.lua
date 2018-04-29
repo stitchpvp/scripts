@@ -1,5 +1,6 @@
 function cast(Caster, Target, Agi, Avoidance, Resists, Mit)
   AddSpellBonus(Caster, 2, Agi)
+  AddSpellBonus(Caster, 696, Avoidance)
   AddSpellBonus(Caster, 201, Resists)
   AddSpellBonus(Caster, 202, Resists)
   AddSpellBonus(Caster, 203, Resists)

@@ -1,6 +1,6 @@
-function cast(Caster, Target, Health, Mitigation)
+function cast(Caster, Target, STA, Mitigation)
   if GetArchetypeName(Target) == "Fighter" then
-    AddSpellBonus(Target, 500, Health)
+    AddSpellBonus(Target, 1, STA)
   else
     AddSpellBonus(Target, 204, Mitigation)
   end
