@@ -64,6 +64,11 @@ function BuffPlayer(NPC, Player)
   SummonItem(Player, 20930)
   SummonItem(Player, 20930)
 
+  SummonItem(Player, 20503, 200)
+  SummonItem(Player, 20503, 200)
+  SummonItem(Player, 20503, 200)
+  SummonItem(Player, 20503, 200)
+
   BuffSkills(Player)
 
   if item_list[AdventureClass] ~= nil then
