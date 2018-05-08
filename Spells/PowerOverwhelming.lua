@@ -1,10 +1,10 @@
 function cast(Caster, Target)
-  AddImmunitySpell(1, Caster)
-  AddImmunitySpell(2, Caster)
-  AddImmunitySpell(3, Caster)
-  AddImmunitySpell(4, Caster)
-  AddImmunitySpell(5, Caster)
-  AddImmunitySpell(6, Caster)
+  AddImmunitySpell(Caster, 1)
+  AddImmunitySpell(Caster, 2)
+  AddImmunitySpell(Caster, 3)
+  AddImmunitySpell(Caster, 4)
+  AddImmunitySpell(Caster, 5)
+  AddImmunitySpell(Caster, 6)
 
   AddProc(Caster, 13, 100)
 end
@@ -16,12 +16,12 @@ function proc(Caster, Target)
 end
 
 function remove(Caster, Target)
-  RemoveImmunitySpell(1, Caster)
-  RemoveImmunitySpell(2, Caster)
-  RemoveImmunitySpell(3, Caster)
-  RemoveImmunitySpell(4, Caster)
-  RemoveImmunitySpell(5, Caster)
-  RemoveImmunitySpell(6, Caster)
+  RemoveImmunitySpell(Caster, 1)
+  RemoveImmunitySpell(Caster, 2)
+  RemoveImmunitySpell(Caster, 3)
+  RemoveImmunitySpell(Caster, 4)
+  RemoveImmunitySpell(Caster, 5)
+  RemoveImmunitySpell(Caster, 6)
 
   RemoveProc(Caster)
 end
