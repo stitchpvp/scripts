@@ -1,4 +1,3 @@
-function cast(Caster, Target, MinDmg, MaxDmg, HealMin, HealMax)
+function cast(Caster, Target, MinDmg, MaxDmg)
   SpellDamage(Target, 8, MinDmg, MaxDmg)
-  SpellHeal(Caster, "Heal", HealMin, HealMax)
 end

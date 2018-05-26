@@ -1,14 +1,15 @@
 function cast(Caster, Target)
-    AddProc(Target, 3, 15.0)
+  local weapon = GetEquippedItemBySlot(Caster, 0)
+  local proc_chance = GetProcPercentageForWeapon(weapon, 3.0)
+
+  AddProc(Caster, 3, proc_chance)
 end
 
-function proc(Caster, Target, Type, DmgMin, DmgMax, HealMin, HealMax)
-    if Type == 3 then
-        ProcDamage(Caster, Target, "Grim Strike", 8, DmgMin, DmgMax)
-        ProcHeal(Caster, Caster, "Grim Strike", "Heal", HealMin, HealMax)
-    end
+function proc(Caster, Target, Type, MinDmg, MaxDmg, MinHeal, MaxHeal)
+  ProcDamage(Caster, Target, "Grim Strike", 8, MinDmg, MaxDmg)
+  ProcHeal(Caster, Caster, "Grim Strike", "Heal", MinHeal, MaxHeal)
 end
 
 function remove(Caster, Target)
-    RemoveProc(Target)
+  RemoveProc(Caster)
 end

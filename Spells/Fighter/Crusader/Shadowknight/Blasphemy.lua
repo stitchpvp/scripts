@@ -1,5 +1,4 @@
-function cast(Caster, Target, MinVal, MaxVal, ResistAmt)
-  AddSpellBonus(Target, 202, ResistAmt)
+function cast(Caster, Target, MinVal, MaxVal)
   AddHate(Caster, Target, MinVal, MaxVal, 1)
 
   Interrupt(Target)
@@ -7,9 +6,4 @@ function cast(Caster, Target, MinVal, MaxVal, ResistAmt)
   if IsPlayer(Target) then
     SetTarget(Target, Caster)
   end
-end
-
-
-function remove(Caster, Target)
-  RemoveSpellBonus(Target)
 end

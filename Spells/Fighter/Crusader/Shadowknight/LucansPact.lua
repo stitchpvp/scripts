@@ -1,5 +1,4 @@
-function cast(Caster, Target, BonusAmt, StaBonusAmt, AvdBonusAmt, OffSkillAmt, DefSkillAmt, ResistAmt, ArmorBonusAmt)
-  AddSpellBonus(Target, 313, BonusAmt)
+function cast(Caster, Target, StaBonusAmt, AvdBonusAmt, OffSkillAmt, DefSkillAmt, NoxResist, AllResists)
   AddSpellBonus(Target, 1, StaBonusAmt)
   AddSpellBonus(Target, 696, AvdBonusAmt)
 
@@ -10,9 +9,11 @@ function cast(Caster, Target, BonusAmt, StaBonusAmt, AvdBonusAmt, OffSkillAmt, D
   AddSkillBonus(Target, GetSkillIDByName("Aggression"), DefSkillAmt)
   AddSkillBonus(Target, GetSkillIDByName("Defense"), DefSkillAmt)
 
-  AddSpellBonus(Target, 202, ResistAmt)
+  AddSpellBonus(Target, 202, NoxResist)
 
-  AddSpellBonus(Target, 678, ArmorBonusAmt)
+  AddSpellBonus(Target, 201, AllResists)
+  AddSpellBonus(Target, 202, AllResists)
+  AddSpellBonus(Target, 203, AllResists)
 end
 
 function remove(Caster, Target)

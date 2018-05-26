@@ -1,9 +1,11 @@
-function cast(Caster, Target, MinDmg, MaxDmg, DoTMax, HealMin, HealMax)
-  SpellDamage(Target, 0, MinDmg, MaxDmg)
-  SpellHeal("Heal", HealMin, HealMax)
+function cast(Caster, Target, MinHeal, MaxHeal, MinHealTick, MaxHealTick, MinDmg, MaxDmg, TickDmg)
+  local DamageType = GetWeaponDamageType(Caster)
+
+  SpellDamage(Target, DamageType, MinDmg, MaxDmg)
+  SpellHeal(Caster, "Heal", MinHeal, MaxHeal)
 end
 
-function tick(Caster, Target, MinDmg, MaxDmg, DoTMax, HealMin, HealMax)
-  SpellDamage(Target, 8, DoTMax)
-  SpellHeal(Caster, "Heal", HealMin, HealMax)
+function tick(Caster, Target, MinHeal, MaxHeal, MinHealTick, MaxHealTick, MinDmg, MaxDmg, TickDmg)
+  SpellDamage(Target, 8, TickDmg)
+  SpellHeal(Caster, "Heal", MinHealTick, MaxHealTick)
 end
