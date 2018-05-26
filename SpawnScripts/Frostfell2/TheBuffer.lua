@@ -63,6 +63,7 @@ end
 function GiveFoodDrink(NPC, Player)
   Say(NPC, "If you die, the effects will be lost. Worry not, you can always return to me for more.", Player)
   SummonItem(Player, 192273, 20)
+  SummonItem(Player, 192275, 20)
 end
 
 function ChangeAlignment(NPC, Player)
