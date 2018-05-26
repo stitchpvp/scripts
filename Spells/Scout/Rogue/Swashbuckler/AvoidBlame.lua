@@ -6,7 +6,7 @@ function cast(Caster, Target)
 end
 
 function proc(Caster, Target, ProcType)
-  CastSpell(Target, 101135794, 1, Caster)
+  CastSpell(Target, 5260880, 1, Caster)
 end
 
 function remove(Caster, Target)
