@@ -39,20 +39,48 @@ item_list = {
 -- #define CHANNELER       44
 
 function hailed(NPC, Player)
-  Emote(NPC, "gazes at you with cold, lifeless eyes.", Player)
+  Emote(NPC, "looks upon you with burning eyes.", Player, Player)
+
+  local conversation = CreateConversation()
 
   if GetLevel(Player) < 25 then
-    local conversation = CreateConversation()
     AddConversationOption(conversation, "I could use some buffs.", "BuffMeBro")
-    AddConversationOption(conversation, "I'm okay.")
-    StartConversation(conversation, NPC, Player, "What is it you ask of me? Like all others, do you seek the buffs I have to offer?")
+  else
+    AddConversationOption(conversation, "I could use some food and drink", "GiveFoodDrink")
+    AddConversationOption(conversation, "I need to change my alignment", "ChangeAlignment")
   end
+
+  AddConversationOption(conversation, "I'm okay.")
+  StartConversation(conversation, NPC, Player, "What is it you ask of me?")
 end
 
 function BuffMeBro(NPC, Player)
   local conversation = CreateConversation()
   AddConversationOption(conversation, "Noted.", "BuffPlayer")
   StartConversation(conversation, NPC, Player, "Very well, but know this: I've grown weary of war and will not tolerate attacks upon others in my vicinity. Do not challenge me. The outcome will not be in your favor.")
+end
+
+function GiveFoodDrink(NPC, Player)
+  Say(NPC, "If you die, the effects will be lost. Worry not, you can always return to me for more.", Player)
+  SummonItem(Player, 192273, 20)
+end
+
+function ChangeAlignment(NPC, Player)
+  local conversation = CreateConversation()
+  AddConversationOption(conversation, "I fight for Qeynos.", "ChangeQeynos")
+  AddConversationOption(conversation, "I fight for Freeport", "ChangeFreeport")
+  AddConversationOption(conversation, "On second thought, nevermind.")
+  StartConversation(conversation, NPC, Player, "Hmm. Having trouble making up your mind? Who is it you fight for?")
+end
+
+function ChangeQeynos(NPC, Player)
+  Say(NPC, "You now fight for the City of Qeynos.", Player)
+  SetPlayerAlignment(Player, 1)
+end
+
+function ChangeFreeport(NPC, Player)
+  Say(NPC, "You now fight for the City of Freeport.", Player)
+  SetPlayerAlignment(Player, -1)
 end
 
 function BuffPlayer(NPC, Player)
