@@ -1,3 +1,3 @@
 function cast(Caster, Target, CureLevel)
-  CureByType(Target, GetLevel(Caster) + 8, 0)
+  CureByType(Target, CureLevel, 0)
 end
