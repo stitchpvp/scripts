@@ -1,7 +1,7 @@
-function cast(Caster, Target)
+function cast(Caster, Target, SnareAmount)
   AddControlEffect(Target, 6)
   AddControlEffect(Target, 11)
-  SetSpellSnareValue(27.9, Target)
+  SetSpellSnareValue(SnareAmount, Target)
   AddProc(Target, 15, 30)
 end
 
