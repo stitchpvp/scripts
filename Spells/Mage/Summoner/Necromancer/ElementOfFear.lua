@@ -1,8 +1,8 @@
 function cast(Caster, Target)
-  AddControlEffect(Caster, 6)
-  AddControlEffect(Caster, 11)
-  SetSpellSnareValue(27.9, Caster)
-  AddProc(Caster, 15, 30)
+  AddControlEffect(Target, 6)
+  AddControlEffect(Target, 11)
+  SetSpellSnareValue(27.9, Target)
+  AddProc(Target, 15, 30)
 end
 
 function proc(Caster, Target, ProcType)
@@ -10,7 +10,7 @@ function proc(Caster, Target, ProcType)
 end
 
 function remove(Caster, Target)
-  RemoveControlEffect(Caster, 6)
-  RemoveControlEffect(Caster, 11)
-  RemoveProc(Caster)
+  RemoveControlEffect(Target, 6)
+  RemoveControlEffect(Target, 11)
+  RemoveProc(Target)
 end
