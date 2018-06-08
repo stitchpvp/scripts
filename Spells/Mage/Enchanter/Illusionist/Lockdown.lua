@@ -2,7 +2,7 @@ function cast(Caster, Target)
   AddControlEffect(Target, 5)
   AddProc(Target, 15, 5)
 
-  CastSpell(Target, 12911009, 1)
+  CastSpell(Target, 12911009, 1, Caster)
 end
 
 function proc(Caster, Target, ProcType)
