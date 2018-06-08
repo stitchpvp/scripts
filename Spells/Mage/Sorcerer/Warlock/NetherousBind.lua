@@ -7,7 +7,7 @@ function proc()
   CancelSpell()
 end
 
-function remove(Caster, Target, SpellID)
+function remove(Caster, Target)
   RemoveProc(Target)
-  CastSpell(Target, SpellID, 1, Caster)
+  CastSpell(Target, 146184762, 1, Caster)
 end
