@@ -9,7 +9,7 @@ function proc(Caster, Target, ProcType)
 end
 
 function remove(Caster, Target)
-  BlurVision(Caster, 0)
+  BlurVision(Target, 0)
   RemoveControlEffect(Caster, 3)
   RemoveProc(Caster)
 end
