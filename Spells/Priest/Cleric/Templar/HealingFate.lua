@@ -13,7 +13,7 @@ function proc(Caster, Target, Type, SpellID)
   local target_hp = start_hp - (start_hp * 0.2)
 
   if GetHP(Caster) <= target_hp then
-    CastSpell(spell_caster, SpellID, 1)
+    CastSpell(spell_caster, SpellID, 1, spell_caster, true)
     CancelSpell()
   end
 end

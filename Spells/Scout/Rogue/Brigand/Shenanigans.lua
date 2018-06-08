@@ -2,8 +2,9 @@ function cast(Caster, Target, DebuffAmt)
   AddProc(Caster, 4, 100)
   AddSkillBonus(Caster, 609880714, DebuffAmt)
   AddSkillBonus(Caster, 540022425, DebuffAmt)
-  PlayAnimation(Caster, 229)
   AddControlEffect(Caster, 4)
+
+  PlayAnimation(Caster, 229)
 
   if IsPlayer(Target) then
     SetTarget(Target, Caster)
@@ -18,5 +19,4 @@ end
 function remove(Caster, Target)
   RemoveControlEffect(Caster, 4)
   RemoveProc(Caster)
-  RemoveSkillBonus(Caster)
 end

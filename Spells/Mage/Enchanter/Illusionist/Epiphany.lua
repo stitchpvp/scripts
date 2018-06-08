@@ -1,5 +1,5 @@
 function cast(Caster, Target, PowerRegen)
-  AddSpellBonus(Target, 601, PowerRegen)
+  AddSpellBonus(Target, 673, PowerRegen)
 end
 
 function remove(Caster, Target)

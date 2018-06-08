@@ -1,4 +1,6 @@
 function cast(Caster, Target, MinDmg, MaxDmg, Threat)
-  SpellDamage(Target, 2, MinDmg, MaxDmg)
+  local DamageType = GetWeaponDamageType(Caster)
+
   AddHate(Caster, Target, Threat)
+  SpellDamage(Target, DamageType, MinDmg, MaxDmg)
 end

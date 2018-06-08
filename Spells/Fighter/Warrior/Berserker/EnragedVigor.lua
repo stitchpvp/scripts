@@ -3,7 +3,9 @@ function cast(Caster, Target)
 end
 
 function proc(Caster, Target, ProcType, MinDmg, MaxDmg)
-  ProcDamage(Caster, Target, "Enraged Vigor", 2, MinDmg, MaxDmg)
+  local DamageType = GetWeaponDamageType(Caster)
+
+  ProcDamage(Caster, Target, "Enraged Vigor", DamageType, MinDmg, MaxDmg)
 
   local percentage = (GetHP(Caster) / GetMaxHP(Caster)) * 100
   if percentage <= 30 then

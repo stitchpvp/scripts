@@ -1,11 +1,9 @@
-function cast(Caster, Target)
-  local dmg = GetMaxHP(Target) * 0.4
-
+function cast(Caster, Target, MinDmg, MaxDmg)
   AddControlEffect(Target, 5)
 
   Knockback(Caster, Target, -30, 25)
 
-  SpellDamage(Target, 1, dmg, dmg, 0, 1)
+  SpellDamage(Target, 1, MinDmg, MaxDmg)
 
   ClearHate(Caster, Target)
 end

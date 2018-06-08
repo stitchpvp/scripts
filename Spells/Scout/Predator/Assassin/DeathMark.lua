@@ -1,10 +1,13 @@
 function cast(Caster, Target)
-  AddProc(Target, 16, 5)
+  SetSpellTriggerCount(5, 1)
+
+  AddProc(Target, 16, 100)
 end
 
-function proc(Caster, Target, Type, SpellID)
-  CastSpell(Caster, SpellID, 1, Target)
-  CancelSpell()
+function proc(Caster, Target, Type, MinDmg, MaxDmg)
+  ProcDamage(GetCaster(), Caster, "Agonizing Pain", 3, MinDmg, MaxDmg)
+
+  RemoveTriggerFromSpell()
 end
 
 function remove(Caster, Target)

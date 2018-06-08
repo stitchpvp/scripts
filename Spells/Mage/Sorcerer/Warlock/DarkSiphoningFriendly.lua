@@ -1,13 +1,7 @@
-function cast(Caster, Target, PowerPct, MinHeal, MaxHeal)
-  local PowerAmount = GetMaxPower(Target) * (PowerPct / 100.0)
-
-  SpellHeal(Target, "Power", PowerAmount)
+function cast(Caster, Target, MinDmg, MaxDmg, MinHeal, MaxHeal)
   SpellHeal(Target, "Heal", MinHeal, MaxHeal)
 end
 
-function tick(Caster, Target, PowerPct, MinHeal, MaxHeal)
-  local PowerAmount = GetMaxPower(Target) * (PowerPct / 100.0)
-
-  SpellHeal(Target, "Power", PowerAmount)
+function tick(Caster, Target, MinDmg, MaxDmg, MinHeal, MaxHeal)
   SpellHeal(Target, "Heal", MinHeal, MaxHeal)
 end

@@ -1,8 +1,4 @@
-function cast(Caster, Target, StaAmt, PowerAmt)
-  AddSpellBonus(Target, 1, StaAmt)
+function cast(Caster, Target, HealthAmt, PowerAmt)
+  AddSpellBonus(Target, 500, HealthAmt)
   AddSpellBonus(Target, 501, PowerAmt)
-end
-
-function remove(Caster, Target)
-  RemoveSpellBonus(Target)
 end

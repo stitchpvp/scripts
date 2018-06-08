@@ -1,12 +1,11 @@
 function cast(Caster, Target)
-  AddProc(Target, 1, 15)
+  AddProc(Target, 1, 25)
 end
 
 function proc(Caster, Target)
-  AddWard(Target, 350)
+  CastSpell(Target, 209545949, 1, GetCaster())
 end
 
 function remove(Caster, Target)
-  RemoveWard(Target)
   RemoveProc(Target)
 end

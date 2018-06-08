@@ -1,19 +1,10 @@
-function cast(Caster, Target)
-  local Level = GetLevel(Caster)
-  local ExtraMit = 5 * (200 + 40 * Level) / (100 - 5)
-  local BaseBonus = math.ceil(Level / 2)
+function cast(Caster, Target, MaxHP, Avoidance, Offensive, Resists)
+  AddSkillBonus(Caster, GetSkillIDByName("Defense"), Offensive)
+  AddSkillBonus(Caster, GetSkillIDByName("Focus"), Offensive)
 
-  AddSkillBonus(Caster, GetSkillIDByName("Defense"), BaseBonus)
-  AddSkillBonus(Caster, GetSkillIDByName("Focus"), BaseBonus)
-
-  AddSpellBonus(Caster, 500, BaseBonus * 15)
-  AddSpellBonus(Caster, 201, BaseBonus)
-  AddSpellBonus(Caster, 202, BaseBonus)
-  AddSpellBonus(Caster, 203, BaseBonus)
-  AddSpellBonus(Caster, 204, ExtraMit)
-end
-
-function remove(Caster, Target)
-  RemoveSkillBonus(Caster)
-  RemoveSpellBonus(Caster)
+  AddSpellBonus(Caster, 500, MaxHP)
+  AddSpellBonus(Caster, 201, Resists)
+  AddSpellBonus(Caster, 202, Resists)
+  AddSpellBonus(Caster, 203, Resists)
+  AddSpellBonus(Caster, 696, Avoidance)
 end

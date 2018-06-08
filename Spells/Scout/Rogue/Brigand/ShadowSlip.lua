@@ -1,9 +1,11 @@
 function cast(Caster, Target, Dehate)
   AddHate(Caster, Target, Dehate)
 
-  CastSpell(Caster, 1001214, 1)
-
   if IsPlayer(Target) then
     SetTarget(Target, 0xFFFFFFFF)
   end
+end
+
+function remove(Caster, Target)
+  CastSpell(Caster, 232860311, 1)
 end
