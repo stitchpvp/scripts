@@ -1,6 +1,6 @@
 function cast(Caster, Target)
   AddControlEffect(Target, 5)
-  CastSpell(Target, 173468532, 1)
+  CastSpell(Target, 173468532, 1, Caster)
   AddProc(Target, 15, 5)
 end
 
