@@ -5,7 +5,7 @@ end
 
 function proc(Caster, Target, ProcType, MinDmg, MaxDmg)
   local spell_caster = GetCaster()
-  ProcDamage(spell_caster, Caster, "Convulsions", 6, MinDmg, MaxDmg)
+  ProcDamage(spell_caster, Target, "Convulsions", 6, MinDmg, MaxDmg)
   RemoveTriggerFromSpell()
 end
 

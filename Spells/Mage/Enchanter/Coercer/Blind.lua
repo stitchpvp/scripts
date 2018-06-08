@@ -1,7 +1,7 @@
 function cast(Caster, Target)
-  AddControlEffect(Target, 3)
-  BlurVision(Target, 5)
-  AddProc(Target, 15, 100)
+  AddControlEffect(Caster, 3)
+  BlurVision(Caster, 5)
+  AddProc(Caster, 15, 100)
 end
 
 function proc(Caster, Target, ProcType)
@@ -9,7 +9,7 @@ function proc(Caster, Target, ProcType)
 end
 
 function remove(Caster, Target)
-  BlurVision(Target, 0)
-  RemoveControlEffect(Target, 3)
-  RemoveProc(Target)
+  BlurVision(Caster, 0)
+  RemoveControlEffect(Caster, 3)
+  RemoveProc(Caster)
 end
