@@ -10,7 +10,7 @@ function remove(Caster, Target, MinDmg, MaxDmg)
   local spell_caster = GetCaster()
   local power_percent = GetPower(Target) / GetMaxPower(Target)
 
-  if power_percent >= 50 then
+  if power_percent >= 0.5 then
     ProcDamage(spell_caster, Target, "Forceful Headache", 6, MinDmg, MaxDmg)
   else
     return
