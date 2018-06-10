@@ -9,4 +9,5 @@ end
 
 function remove(Caster, Target)
   RemoveProc(Target)
+  CastSpell(Target, 198509038, 1, Caster)
 end
