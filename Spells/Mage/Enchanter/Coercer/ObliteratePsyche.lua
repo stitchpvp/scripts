@@ -1,7 +1,9 @@
 function cast(Caster, Target, Debuff)
-  AddSkillBonus(Target, 203, Debuff)
+  AddSpellBonus(Target, 201, Debuff)
+  AddSpellBonus(Target, 202, Debuff)
+  AddSpellBonus(Target, 203, Debuff)
 end
 
 function remove(Caster, Target)
-  RemoveSkillBonus(Target)
+  RemoveSpellBonus(Target)
 end
