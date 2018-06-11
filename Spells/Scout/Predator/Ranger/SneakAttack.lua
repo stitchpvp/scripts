@@ -1,9 +1,9 @@
-function cast(Caster, Target, SpellID, MinDmg, MaxDmg)
+function cast(Caster, Target, MinDmg, MaxDmg)
   local DamageType = GetWeaponDamageType(Caster)
 
   SpellDamage(Target, DamageType, MinDmg, MaxDmg)
 end
 
-function remove(Caster, Target, SpellID)
-  CastSpell(Caster, SpellID, 1)
+function remove(Caster, Target)
+  CastSpell(Caster, 143527919, 1)
 end

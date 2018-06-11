@@ -5,8 +5,8 @@ function cast(Caster, Target, SpellID, MinDmg, MaxDmg)
   SpellDamage(Target, DamageType, MinDmg, MaxDmg)
 end
 
-function proc(Caster, Target, ProcType, SpellID)
-  CastSpell(Target, SpellID, 1)
+function proc(Caster, Target, ProcType)
+  CastSpell(Target, 67113753, 1)
   CancelSpell()
 end
 
