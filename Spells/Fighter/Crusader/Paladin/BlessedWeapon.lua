@@ -5,8 +5,8 @@ function cast(Caster)
   AddProc(Caster, 3, proc_chance)
 end
 
-function proc(Caster, Target, Type, SpellID)
-  CastSpell(Target, SpellID, 1, Caster)
+function proc(Caster, Target, Type)
+  CastSpell(Target, 96694323, 1, Caster)
 end
 
 function remove(Caster)
