@@ -1,5 +1,8 @@
 function cast(Caster, Target)
-  AddProc(Caster, 18, 14.4)
+  local weapon = GetEquippedItemBySlot(Caster, 16)
+  local proc_chance = GetProcPercentageForWeapon(weapon, 14.4)
+
+  AddProc(Caster, 18, proc_chance)
 end
 
 function proc(Caster, Target, Type)

@@ -7,3 +7,7 @@ function cast(Caster, Target, MinDmg, MaxDmg, MinUndeadDmg, MaxUndeadDmg)
     ProcDamage(Caster, Target, "Glorious Strike", 7, MinUndeadDmg, MaxUndeadDmg)
   end
 end
+
+function remove(Caster, Target)
+  RemoveControlEffect(Target, 4)
+end
