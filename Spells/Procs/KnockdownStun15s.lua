@@ -1,6 +1,6 @@
 function cast(Caster, Target)
   AddControlEffect(Target, 4)
-  BlurVision(Target, 1.0)
+  BlurVision(Target, 5.0)
   Knockback(Caster, Target, -20, 10)
 end
 

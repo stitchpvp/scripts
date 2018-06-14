@@ -1,4 +1,4 @@
 function cast(Caster, Target, MinDmg, MaxDmg)
   SpellDamage(Target, 7, MinDmg, MaxDmg)
-  CastSpell(Target, 1001594, 1, Caster)
+  CastSpell(Target, 181890697, 1, Caster)
 end
