@@ -1,4 +1,4 @@
-function cast(Caster, Target, HealSpell, DamageSpell)
-  CastSpell(Caster, HealSpell, 1)
-  CastSpell(Caster, DamageSpell, 1)
+function cast(Caster, Target)
+  CastSpell(Caster, 63948605, 1)
+  CastSpell(Caster, 15583193, 1)
 end
