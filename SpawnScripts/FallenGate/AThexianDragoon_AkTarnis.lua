@@ -1,5 +1,6 @@
 function spawn(npc)
-  local speed = 1.5
+  local speed = 2.0
+
   local locations = {
     {-1.29, 0.00, -34.55, speed, 5},
     {-20.95, 0.00, -30.61, speed, 0},
