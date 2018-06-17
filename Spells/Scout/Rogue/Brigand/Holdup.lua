@@ -1,4 +1,4 @@
-function cast(Caster, Target, SpellID, EleDebuff)
+function cast(Caster, Target, EleDebuff)
   AddSpellBonus(Target, 201, EleDebuff)
-  CastSpell(Target, SpellID, 1, Caster)
+  CastSpell(Target, 198509038, 1, Caster)
 end

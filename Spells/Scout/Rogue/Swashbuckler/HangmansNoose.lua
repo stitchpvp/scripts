@@ -1,4 +1,4 @@
-function cast(Caster, Target, SpellID, ArcaneDebuff)
+function cast(Caster, Target, ArcaneDebuff)
   AddSpellBonus(Target, 203, ArcaneDebuff)
-  CastSpell(Target, SpellID, 1, Caster)
+  CastSpell(Target, 198509038, 1, Caster)
 end
