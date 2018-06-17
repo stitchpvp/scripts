@@ -1,12 +1,13 @@
 function spawn(npc)
-  local speed = 1.5
+  local speed = 2.0
+
   local locations = {
-    {-1.29, 0.00, -34.55, speed, 5},
+    {-1.29, 0.00, -34.55, speed, 0},
     {-20.95, 0.00, -30.61, speed, 0},
     {-26.14, 0.00, -22.88, speed, 0},
     {-26.48, 0.00, -12.92, speed, 0},
     {-23.11, 0.00, 5.85, speed, 0},
-    {-22.66, 0.00, 6.08, speed, 5}
+    {-22.66, 0.00, 6.08, speed, 0}
   }
 
   for _, location in ipairs(locations) do
