@@ -8,8 +8,7 @@ function proc(Caster, Target)
 end
 
 function remove(Caster, Target)
-  CastSpell(Target, 1001597, 1, Caster)
-
+  CastSpell(Target, 9387478, 1, Caster)
   RemoveControlEffect(Target, 5)
   RemoveProc(Target)
 end
