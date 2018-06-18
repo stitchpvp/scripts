@@ -3,7 +3,7 @@ function cast(Caster, Target)
 end
 
 function proc(Caster, Target, ProcType, MinHeal, MaxHeal)
-  ProcHeal(Caster, Caster, "Adrenal Flow", "Heal", MinHeal, MaxHeal)
+  CastSpell(Caster, 129986450, 1)
 end
 
 function remove(Caster, Target)
