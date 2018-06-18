@@ -1,8 +1,8 @@
 function cast(Caster, Target)
-  AddControlEffect(Caster, 4)
-  Knockback(Caster, Caster, -20, 10)
+  AddControlEffect(Target, 4)
+  Knockback(Caster, Target, -20, 10)
 end
 
 function remove(Caster, Target)
-  RemoveControlEffect(Caster, 4)
+  RemoveControlEffect(Target, 4)
 end

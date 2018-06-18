@@ -6,7 +6,8 @@ function cast(Caster, Target, Block, Defensive)
 end
 
 function proc(Caster, Target, ProcType)
-  CastSpell(Target, 118678846, 1, Caster)
+  local spell_caster = GetCaster()
+  CastSpell(Caster, 118678846, 1, spell_caster)
 end
 
 function remove(Caster, Target)
