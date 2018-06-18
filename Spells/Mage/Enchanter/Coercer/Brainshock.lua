@@ -1,9 +1,7 @@
-function cast(Caster, Target, MinDmg, MaxDmg, PowerAmount)
+function cast(Caster, Target, MinDmg, MaxDmg)
   SpellDamage(Target, 6, MinDmg, MaxDmg)
-  SpellHeal(Caster, "Power", PowerAmount, PowerAmount)
 end
 
-function tick(Caster, Target, MinDmg, MaxDmg, PowerAmount)
+function tick(Caster, Target, MinDmg, MaxDmg)
   SpellDamage(Target, 6, MinDmg, MaxDmg)
-  SpellHeal(Caster, "Power", PowerAmount, PowerAmount)
 end
