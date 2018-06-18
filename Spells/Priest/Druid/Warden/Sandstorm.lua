@@ -6,7 +6,7 @@ function cast(Caster, Target, Block, Defensive)
 end
 
 function proc(Caster, Target, ProcType)
-  CastSpell(Target, 118678846, 1, GetCaster())
+  CastSpell(Target, 118678846, 1, Caster)
 end
 
 function remove(Caster, Target)
