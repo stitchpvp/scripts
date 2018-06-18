@@ -1,8 +1,5 @@
-function cast(Caster, Target, MinHealPct, MaxHealPct, Health, Mitigation)
-  local min_heal = GetMaxHP(Caster) * (MinHealPct / 100.0)
-  local max_heal = GetMaxHP(Caster) * (MaxHealPct / 100.0)
-
-  SpellHeal(Target, "Heal", min_heal, max_heal)
+function cast(Caster, Target, MinHeal, MaxHeal, Health, Mitigation)
+  SpellHeal(Target, "Heal", MinHeal, MaxHeal)
   AddSpellBonus(Target, 500, Health)
   AddSpellBonus(Target, 204, Mitigation)
 end
