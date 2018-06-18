@@ -4,7 +4,7 @@ function cast(Caster, Target, DebuffAmt, BuffAmt)
   AddSkillBonus(Caster, 3048574950, BuffAmt)
   AddSkillBonus(Caster, 3421494576, BuffAmt)
 
-  AddProc(Caster, 3, 10)
+  AddProc(Caster, 3, 30)
 end
 
 function proc(Caster, Target, ProcType, DebuffAmt, BuffAmt, MinDmg, MaxDmg)
