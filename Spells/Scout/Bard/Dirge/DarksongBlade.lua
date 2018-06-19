@@ -1,8 +1,8 @@
-function cast(Caster, Target, MinDmg1, MaxDmg1, MinDmg2, MaxDmg2, DotAmt)
-  SpellDamage(Target, 8, MinDmg1, MaxDmg1)
+function cast(Caster, Target, MinDmg, MaxDmg, DotAmt)
+  SpellDamage(Target, 8, MinDmg, MaxDmg)
 
   if LastSpellAttackHit() then
-    SpellDamage(Target, 8, MinDmg2, MaxDmg2)
+    SpellDamage(Target, 8, MinDmg, MaxDmg)
   end
 
   if LastSpellAttackHit() then
@@ -10,7 +10,7 @@ function cast(Caster, Target, MinDmg1, MaxDmg1, MinDmg2, MaxDmg2, DotAmt)
   end
 end
 
-function tick(Caster, Target, MinDmg1, MaxDmg1, MinDmg2, MaxDmg2, DotAmt)
+function tick(Caster, Target, MinDmg, MaxDmg, DotAmt)
   if LastSpellAttackHit() then
     SpellDamage(Target, 8, DotAmt)
   end

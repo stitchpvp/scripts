@@ -6,5 +6,5 @@ function cast(Caster, Target, SkillAmt)
 end
 
 function remove(Caster, Target)
-    RemoveSkillBonus(Caster)
+    RemoveSkillBonus(Target)
 end

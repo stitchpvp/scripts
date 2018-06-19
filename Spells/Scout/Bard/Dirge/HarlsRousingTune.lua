@@ -1,9 +1,9 @@
 function cast(Caster, Target, StatAmount, AvoidanceAmt)
-    AddSpellBonus(Caster, 0, StatAmount)
-    AddSpellBonus(Caster, 2, StatAmount)
-    AddSpellBonus(Caster, 696, AvoidanceAmt)
+    AddSpellBonus(Target, 0, StatAmount)
+    AddSpellBonus(Target, 2, StatAmount)
+    AddSpellBonus(Target, 696, AvoidanceAmt)
 end
 
 function remove(Caster, Target)
-    RemoveSpellBonus(Caster)
+    RemoveSpellBonus(Target)
 end
