@@ -1,5 +1,5 @@
-function cast(Caster, Target, MultiAmt)
-    AddSpellBonus(Target, 641, MultiAmt)
+function cast(Caster, Target, DpsAmt)
+    AddSpellBonus(Target, 629, DpsAmt)
 end
 
 function remove(Caster, Target)

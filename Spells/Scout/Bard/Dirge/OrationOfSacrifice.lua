@@ -1,6 +1,6 @@
 function cast(Caster, Target, MinHeal, MaxHeal)
   SpellHeal(Target, "Heal", MinHeal, MaxHeal)
-  AddControlEffect(Caster, 2)
+  AddControlEffect(Caster, 2, 1)
 end
 
 function tick(Caster, Target, MinHeal, MaxHeal)
@@ -8,5 +8,5 @@ function tick(Caster, Target, MinHeal, MaxHeal)
 end
 
 function remove(Caster, Target)
-  RemoveControlEffect(Caster, 2)
+  RemoveControlEffect(Caster)
 end
