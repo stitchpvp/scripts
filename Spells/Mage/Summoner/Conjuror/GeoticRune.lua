@@ -1,10 +1,10 @@
 function cast(Caster, Target, Physical, EleResist)
-  AddSkillBonus(Target, 200, Physical)
-  AddSkillBonus(Target, 201, EleResist)
-  AddSkillBonus(Target, 202, EleResist)
-  AddSkillBonus(Target, 203, EleResist)
+  AddSpellBonus(Target, 200, Physical)
+  AddSpellBonus(Target, 201, EleResist)
+  AddSpellBonus(Target, 202, EleResist)
+  AddSpellBonus(Target, 203, EleResist)
 end
 
 function remove(Caster, Target)
-  RemoveSkillBonus(Target)
+  RemoveSpellBonus(Target)
 end
