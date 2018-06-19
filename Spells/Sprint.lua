@@ -1,4 +1,4 @@
-function cast(Caster, MovementSpeed)
+function cast(Caster, Target, MovementSpeed)
   local power_percentage = GetPower(Caster) * -0.1
 
   AddSpellBonus(Caster, 616, MovementSpeed)
