@@ -5,7 +5,7 @@ end
 
 function proc(Caster, Target, ProcType)
   local spell_caster = GetCaster()
-  if HasSpellEffect(Caster, 217660483) then
+  if HasSpellEffect(Target, 217660483) then
     return
   else
     CastSpell(Caster, 217660483, 1, spell_caster)
