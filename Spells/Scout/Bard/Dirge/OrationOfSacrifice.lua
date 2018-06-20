@@ -21,7 +21,7 @@ function tick(Caster, Target, MinHeal, MaxHeal)
   local hp_percentage = GetMaxHP(Caster) * -0.1
 
   SpellHeal(Target, "Heal", MinHeal, MaxHeal)
-  if hp_check <= 0.10 then
+  if hp_check < 0.1 then
     CancelSpell()
   else
     ModifyHP(Caster, hp_percentage)

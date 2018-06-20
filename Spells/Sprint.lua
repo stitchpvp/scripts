@@ -19,7 +19,7 @@ function tick(Caster)
   local power_check = GetPower(Caster) / GetMaxPower(Caster)
   local power_percentage = GetMaxPower(Caster) * -0.1
   
-  if power_check == 0 then
+  if power_check < 0.1 then
     CancelSpell()
   else
     ModifyPower(Caster, power_percentage)
