@@ -4,7 +4,7 @@ end
 
 function healthchanged(NPC, Target)
   local target_pct = tonumber(GetTempVariable(NPC, "target_pct"))
-  local percent = GetHP(NPC) / GetMaxHP(NPC)
+  local percent = (GetHP(NPC) / GetMaxHP(NPC)) * 100
 
   if percent <= target_pct then
     Say(NPC, "Casting a spell!")
