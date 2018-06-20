@@ -23,7 +23,7 @@ function healthchanged(NPC, Target)
   local percent = (GetHP(NPC) / GetMaxHP(NPC)) * 100
 
   if percent <= target_pct then
-    CastSpell(Caster, SPELL_RUPTURE, 1)
+    CastSpell(Target, SPELL_RUPTURE, 1, NPC)
 
     for i = 1, 3 do
       local loc = SPAWN_LOCATIONS[math.random(#SPAWN_LOCATIONS)]
