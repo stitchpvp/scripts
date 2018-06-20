@@ -5,8 +5,12 @@ end
 
 function proc(Caster, Target, ProcType)
   local spell_caster = GetCaster()
-  CastSpell(Caster, 217660483, 1, spell_caster)
-  RemoveTriggerFromSpell()
+  if HasSpellEffect(spell_caster, 217660483) then
+    return
+  else
+    CastSpell(Caster, 217660483, 1, spell_caster)
+    RemoveTriggerFromSpell()
+  end
 end
 
 function remove(Caster, Target)
