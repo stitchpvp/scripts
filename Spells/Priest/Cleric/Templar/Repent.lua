@@ -3,10 +3,10 @@ function cast(Caster, Target, WardAmt)
 end
 
 function remove(Caster, Target)
-  local heal = GetWardAmountLeft()
+  --local heal = GetWardAmountLeft()
   
   RemoveWard(Target)
-  if heal > 0 then
-    SpellHeal(Target, "Heal", heal)
-  end
+  --if heal > 0 then
+    --SpellHeal(Target, "Heal", heal)
+  --end
 end
