@@ -6,9 +6,9 @@ end
 
 function proc(Caster, Target, Type, MinDmg, MaxDmg)
   if GetSpellTriggerCount() > 0 then
-    ProcDamage(GetCaster(), Caster, "Agonizing Pain", 2, MinDmg, MaxDmg)
-
     RemoveTriggerFromSpell()
+
+    ProcDamage(GetCaster(), Caster, "Agonizing Pain", 2, MinDmg, MaxDmg)
   end
 end
 

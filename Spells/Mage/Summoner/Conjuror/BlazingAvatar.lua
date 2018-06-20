@@ -9,8 +9,9 @@ function proc(Caster, Target, ProcType, MinDmg, MaxDmg)
   if GetSpellTriggerCount() > 0 then
     local spell_caster = GetCaster()
 
-    ProcDamage(spell_caster, Target, "Blaze", 3, MinDmg, MaxDmg)
     RemoveTriggerFromSpell()
+
+    ProcDamage(spell_caster, Target, "Blaze", 3, MinDmg, MaxDmg)
   end
 end
 
