@@ -3,6 +3,8 @@ function precast(Caster, Target)
 
   if power_check == 0 then
     return false
+  else
+    return true
   end
 end
 

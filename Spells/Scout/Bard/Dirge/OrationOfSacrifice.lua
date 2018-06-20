@@ -3,6 +3,8 @@ function precast(Caster, Target)
 
   if hp_check <= 0.10 then
     return false
+  else
+    return true
   end
 end
 
