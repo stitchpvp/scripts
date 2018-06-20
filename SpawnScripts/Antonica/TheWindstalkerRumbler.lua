@@ -1,4 +1,5 @@
 local BURROWING_RUMBLER = 7720034
+local SPELL_RUPTURE = 143477816
 
 local SPAWN_LOCATIONS = {
   {-788.74, -31.21, -40.74},
@@ -22,7 +23,7 @@ function healthchanged(NPC, Target)
   local percent = (GetHP(NPC) / GetMaxHP(NPC)) * 100
 
   if percent <= target_pct then
-    -- Say(NPC, "Casting a spell!")
+    CastSpell(Caster, SPELL_RUPTURE, 1)
 
     for i = 1, 3 do
       local loc = SPAWN_LOCATIONS[math.random(#SPAWN_LOCATIONS)]
