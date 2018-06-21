@@ -1,6 +1,6 @@
-function cast(Caster, Target)
-  AddProc(Caster, 1, 5)
-  AddProc(Caster, 2, 25)
+function cast(Caster, Pet)
+  AddProc(Pet, 1, 5)
+  AddProc(Pet, 2, 25)
 end
 
 function proc(Caster, Target, ProcType)
@@ -8,6 +8,6 @@ function proc(Caster, Target, ProcType)
   CastSpell(Caster, 93353493, 1, spell_caster)
 end
 
-function remove(Caster)
-  RemoveProc(Caster)
+function remove(Caster, Pet)
+  RemoveProc(Pet)
 end
