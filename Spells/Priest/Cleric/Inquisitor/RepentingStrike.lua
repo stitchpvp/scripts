@@ -1,11 +1,11 @@
 function cast(Caster, Target)
-  if IsEpic(Target) ~= true then
-    AddControlEffect(Target, 4)
+  if IsEpic(Caster) ~= true then
+    AddControlEffect(Caster, 4)
   end
 end
 
 function remove(Caster, Target)
-  if IsEpic(Target) ~= true then
-    RemoveControlEffect(Target, 4)
+  if IsEpic(Caster) ~= true then
+    RemoveControlEffect(Caster, 4)
   end
 end
