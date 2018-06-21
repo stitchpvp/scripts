@@ -1,5 +1,5 @@
 function cast(Caster, Target)
-  SetSpellTriggerCount(5, 1)
+  SetSpellTriggerCount(3, 1)
   AddProc(Caster, 1, 100)
 end
 

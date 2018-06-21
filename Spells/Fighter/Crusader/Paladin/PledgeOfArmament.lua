@@ -1,6 +1,6 @@
 function cast(Caster, Target, MitigationBuff, MitigationDebuff)
-  AddSpellBonus(Target, 200, MitigationBuff)
-  AddSpellBonus(Caster, 200, MitigationDebuff)
+  AddSpellBonus(Target, 204, MitigationBuff)
+  AddSpellBonus(Caster, 204, MitigationDebuff)
 end
 
 function remove(Caster, Target)
