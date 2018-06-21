@@ -1,5 +1,5 @@
-function cast(Caster, Target, Max Health, Mitigation)
-  AddSpellBonus(Target, 500, Health)
+function cast(Caster, Target, MaxHealth, Mitigation)
+  AddSpellBonus(Target, 500, MaxHealth)
   AddSpellBonus(Target, 204, Mitigation)
 end
 
