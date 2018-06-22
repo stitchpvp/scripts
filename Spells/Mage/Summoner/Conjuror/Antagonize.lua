@@ -1,7 +1,5 @@
 function cast(Caster, Target, Haste, Debuff, MeleeSkills, SpellSkills, AbilityMod)
-  if HasSpellEffect(Target, 96781662) then
-    return
-  else
+  if not HasSpellEffect(Target, 96781662) then
     AddSpellBonus(Target, 617, Haste)
     AddSkillBonus(Target, GetSkillIDByName("Defense"), Debuff)
     AddSkillBonus(Target, GetSkillIDByName("Parry"), Debuff)
@@ -12,7 +10,8 @@ function cast(Caster, Target, Haste, Debuff, MeleeSkills, SpellSkills, AbilityMo
     AddSkillBonus(Target, GetSkillIDByName("Subjugation"), SpellSkills)
     AddSkillBonus(Target, GetSkillIDByName("Ordination"), SpellSkills)
     AddSpellBonus(Target, 707, AbilityMod)
-  end
+  else
+    SendMessage(Caster, "You already have a pet stance up!", "yellow")
 end
 
 function remove(Caster, Target)
