@@ -1,5 +1,6 @@
 function cast(Caster, Target, WardAmt, Debuff, MaxHealth, Resists)
-  if not HasSpellEffect(Target, 62142793) then
+local pet = GetPet(Caster)
+  if not HasSpellEffect(pet, 62142793) then
     AddWard(Target, WardAmt, 1, 1)
     AddSpellBonus(Target, 617, Debuff)
     AddSpellBonus(Target, 500, MaxHealth)

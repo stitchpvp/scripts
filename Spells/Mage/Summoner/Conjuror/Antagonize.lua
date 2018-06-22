@@ -1,5 +1,6 @@
 function cast(Caster, Target, Haste, Debuff, MeleeSkills, SpellSkills, AbilityMod)
-  if not HasSpellEffect(Target, 96781662) then
+local pet = GetPet(Caster)
+  if not HasSpellEffect(pet, 96781662) then
     AddSpellBonus(Target, 617, Haste)
     AddSkillBonus(Target, GetSkillIDByName("Defense"), Debuff)
     AddSkillBonus(Target, GetSkillIDByName("Parry"), Debuff)
