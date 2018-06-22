@@ -9,7 +9,7 @@ function proc(Caster, Target, ProcType, MinDmg, MaxDmg)
 	
     RemoveTriggerFromSpell()
 	
-    CastSpell(spell_caster, 54423060, 1, Target)
+    CastSpell(Target, 54423060, 1, spell_caster)
     ProcDamage(spell_caster, Target, "Repenting Strike", 7, MinDmg, MaxDmg)
   end
 end
