@@ -1,4 +1,5 @@
 function cast(Caster, Target, Damage, PowerAmount)
-  SpellDamage(Target, 5, Damage)
+  local hp_percentage = GetMaxHP(Target) * Damage
+  ModifyHP(Target, hp_percentage)
   SpellHeal(Caster, "Power", PowerAmount)
 end
