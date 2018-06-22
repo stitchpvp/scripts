@@ -1,5 +1,5 @@
 function cast(Caster, Target, WisDebuff, DefDebuff)
-  AddSpellBonus(Target, 3, AgiDebuff)
+  AddSpellBonus(Target, 3, WisDebuff)
   AddSkillBonus(Target, 609880714, DefDebuff)
 end
 

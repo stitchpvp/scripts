@@ -13,6 +13,7 @@ function cast(Caster, Target, Haste, Debuff, MeleeSkills, SpellSkills, AbilityMo
     AddSpellBonus(pet, 707, AbilityMod)
   else
     SendMessage(Caster, "You already have a pet stance up!", "yellow")
+  end
 end
 
 function remove(Caster, Target)

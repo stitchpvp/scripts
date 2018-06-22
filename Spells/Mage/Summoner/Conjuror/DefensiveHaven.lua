@@ -9,6 +9,7 @@ function cast(Caster, Target, WardAmt, Debuff, MaxHealth, Resists)
     AddSpellBonus(pet, 203, Resists)
   else
     SendMessage(Caster, "You already have a pet stance up!", "yellow")
+  end
 end
 
 function tick(Caster, Target, WardAmt)
