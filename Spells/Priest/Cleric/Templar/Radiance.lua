@@ -1,13 +1,16 @@
 function cast(Caster, Target)
   SetSpellTriggerCount(5, 1)
-  AddProc(Target, 2, 100)
+  AddProc(Target, 15, 100)
 end
 
 function proc(Caster, Target, ProcType, MinHeal, MaxHeal)
-  local spell_caster = GetCaster()
+  if GetSpellTriggerCount() > 0 then
+    local spell_caster = GetCaster()
 
-  ProcHeal(spell_caster, Caster, "Vitae", "Heal", MinHeal, MaxHeal)
-  RemoveTriggerFromSpell()
+    RemoveTriggerFromSpell()
+
+	ProcHeal(spell_caster, Caster, "Vitae", "Heal", MinHeal, MaxHeal)
+  end
 end
 
 function remove(Caster, Target)
