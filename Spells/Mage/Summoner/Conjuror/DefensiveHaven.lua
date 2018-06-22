@@ -1,21 +1,23 @@
 function cast(Caster, Target, WardAmt, Debuff, MaxHealth, Resists)
-local pet = GetPet(Caster)
+  local pet = GetPet(Caster)
   if not HasSpellEffect(pet, 62142793) then
-    AddWard(Target, WardAmt, 1, 1)
-    AddSpellBonus(Target, 617, Debuff)
-    AddSpellBonus(Target, 500, MaxHealth)
-    AddSpellBonus(Target, 201, Resists)
-    AddSpellBonus(Target, 202, Resists)
-    AddSpellBonus(Target, 203, Resists)
+    AddWard(pet, WardAmt, 1, 1)
+    AddSpellBonus(pet, 617, Debuff)
+    AddSpellBonus(pet, 500, MaxHealth)
+    AddSpellBonus(pet, 201, Resists)
+    AddSpellBonus(pet, 202, Resists)
+    AddSpellBonus(pet, 203, Resists)
   else
     SendMessage(Caster, "You already have a pet stance up!", "yellow")
 end
 
 function tick(Caster, Target, WardAmt)
-  AddToWard(Target, WardAmt)
+  local pet = GetPet(Caster)
+  AddToWard(pet, WardAmt)
 end
 
 function remove(Caster, Target)
-  RemoveWard(Target)
-  RemoveSpellBonus(Target)
+  local pet = GetPet(Caster)
+  RemoveWard(pet)
+  RemoveSpellBonus(pet)
 end
