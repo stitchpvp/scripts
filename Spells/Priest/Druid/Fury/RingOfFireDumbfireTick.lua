@@ -1,5 +1,5 @@
 function cast(Caster, Target, MinDmg, MaxDmg)
-  AddImmunitySpell(Target, 7)
+  AddImmunitySpell(Caster, 7)
   SpellDamage(Target, 3, MinDmg, MaxDmg)
 end
 
