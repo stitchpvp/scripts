@@ -23,6 +23,10 @@ function healthchanged(NPC, Target)
   local percent = (GetHP(NPC) / GetMaxHP(NPC)) * 100
 
   if percent <= target_pct then
+    if target_pct > 10 then
+      SetTempVariable(NPC, "target_pct", target_pct - 10)
+    end
+
     CastSpell(Target, SPELL_RUPTURE, 1, NPC)
 
     for i = 1, 3 do
@@ -31,10 +35,6 @@ function healthchanged(NPC, Target)
       local RumblerAdd = SpawnMob(GetZone(NPC), BURROWING_RUMBLER, false, loc[1], loc[2], loc[3])
 
       AddHate(Target, RumblerAdd, 1)
-    end
-
-    if target_pct > 10 then
-      SetTempVariable(NPC, "target_pct", target_pct - 10)
     end
   end
 end
