@@ -5,10 +5,12 @@ function cast(Caster, Target, MinDmg, MaxDmg, MinHeal, MaxHeal)
 end
 
 function proc(Caster, Target, Type, MinDmg, MaxDmg, MinHeal, MaxHeal)
-  ProcDamage(Caster, Target, "Voracious Soul", 8, MinDmg, MaxDmg)
-  ProcHeal(Caster, Caster, "Unholy Blessing", "Heal", MinHeal, MaxHeal)
+  if GetSpellTriggerCount() > 0 then
+    RemoveTriggerFromSpell()
 
-  RemoveTriggerFromSpell(1)
+    ProcDamage(Caster, Target, "Voracious Soul", 8, MinDmg, MaxDmg)
+    ProcHeal(Caster, Caster, "Unholy Blessing", "Heal", MinHeal, MaxHeal)
+  end
 end
 
 function remove(Caster, Target)
