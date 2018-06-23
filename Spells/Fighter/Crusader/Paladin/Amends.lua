@@ -1,3 +1,3 @@
-function cast(Caster, Target, Amount)
-  AddSpellBonus(Caster, 817, Amount)
+function cast(Caster, Target, Amount, HateTransfer)
+  AddSpellBonus(Target, 817, Amount)
 end
