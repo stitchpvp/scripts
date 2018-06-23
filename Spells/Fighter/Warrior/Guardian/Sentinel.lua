@@ -3,7 +3,7 @@ function cast(Caster, Target)
 end
 
 function proc(Caster, Target, ProcType)
-  AddStoneskin(Target, 0, 1, 0)
+  AddStoneskin(Target, 200, 1, 0)
 end
 
 function remove(Caster, Target)
