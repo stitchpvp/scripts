@@ -4,7 +4,7 @@ function cast(Caster, Target)
 end
 
 function proc(Caster, Target, ProcType, MinHeal, MaxHeal)
-  if GetSpellTriggerCount() > 0 then
+  if GetPlayerTriggerCount(Caster) > 0 then
     local spell_caster = GetCaster()
 	
     RemoveTriggerFromPlayer(Caster)
