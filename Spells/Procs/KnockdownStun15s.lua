@@ -5,5 +5,6 @@ function cast(Caster, Target)
 end
 
 function remove(Caster, Target)
+  RemoveControlEffect(Target, 4)
   BlurVision(Target, 0.0)
 end
