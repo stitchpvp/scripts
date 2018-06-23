@@ -1,6 +1,7 @@
 function spawn(NPC)
-	SetBrainTick(NPC, 5000)
-	SetLuaBrain(NPC)
+  SetBrainTick(NPC, 5000)
+  SetLuaBrain(NPC)
+  PauseMovement(NPC)
 end
 
 function respawn(NPC)
@@ -8,5 +9,5 @@ function respawn(NPC)
 end
 
 function Think(NPC)
-	CastSpell(NPC, 77415749, 1)
+  CastSpell(NPC, 77415749, 1)
 end
