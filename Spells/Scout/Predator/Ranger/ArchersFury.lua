@@ -5,7 +5,7 @@ function cast(Caster, Target, DefenseDebuff, OffensiveBuff)
   AddSkillBonus(Caster, GetSkillIDByName("Ranged"), OffensiveBuff)
   AddSkillBonus(Caster, GetSkillIDByName("Slashing"), OffensiveBuff)
 
-  AddProc(Caster, 18, 30)
+  AddProc(Caster, 3, 30)
 end
 
 function proc(Caster, Target, Type, DefenseDebuff, OffensiveBuff, ProcDmg)
