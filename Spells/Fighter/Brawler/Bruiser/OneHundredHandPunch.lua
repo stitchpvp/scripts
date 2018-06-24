@@ -1,33 +1,11 @@
 function cast(Caster, Target, MinDmg, MaxDmg)
   local DamageType = GetWeaponDamageType(Caster)
 
+  for i = 1, 8 do
   SpellDamage(Target, DamageType, MinDmg, MaxDmg)
-  
-  if LastSpellAttackHit() then
-    SpellDamage(Target, DamageType, MinDmg, MaxDmg)
+
+  if not LastSpellAttackHit() then
+    break
   end
- 
-  if LastSpellAttackHit() then
-    SpellDamage(Target, DamageType, MinDmg, MaxDmg)
-  end
-  
-  if LastSpellAttackHit() then
-    SpellDamage(Target, DamageType, MinDmg, MaxDmg)
-  end
-  
-  if LastSpellAttackHit() then
-    SpellDamage(Target, DamageType, MinDmg, MaxDmg)
-  end
-  
-  if LastSpellAttackHit() then
-    SpellDamage(Target, DamageType, MinDmg, MaxDmg)
-  end
-  
-  if LastSpellAttackHit() then
-    SpellDamage(Target, DamageType, MinDmg, MaxDmg)
-  end
-  
-  if LastSpellAttackHit() then
-    SpellDamage(Target, DamageType, MinDmg, MaxDmg)
-  end
+ end
 end
