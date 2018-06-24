@@ -12,7 +12,7 @@ function cast(Caster, Target, MinDmg, MaxDmg, DefenseDebuff, OffenseBuff, Haste)
 end
 
 function proc(Caster, Target, Type, MinDmg, MaxDmg, DefenseDebuff, OffensiveBuff, Haste)
-  ProcDamage(Caster, Target, "Engulf", 3, ProcDmg)
+  ProcDamage(Caster, Target, "Engulf", 3, MinDmg, MaxDmg)
 end
 
 function remove(Caster, Target)
