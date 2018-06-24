@@ -8,7 +8,7 @@ end
 function proc(Caster, Target, ProcType, MinDmg, MaxDmg, MinHate, MaxHate)
   local DamageType = GetWeaponDamageType(Caster)
   
-  SpellDamage(Target, DamageType, MinDmg, MaxDmg)
+  ProcDamage(Caster, Target, "Roughhousing", DamageType, MinDmg, MaxDmg)
   AddHate(Caster, Target, math.random(MinHate, MaxHate), 1)
 end
 
