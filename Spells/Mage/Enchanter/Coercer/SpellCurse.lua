@@ -1,11 +1,11 @@
 function cast(Caster, Target)
   SetSpellTriggerCount(3, 1)
-  AddProc(Target, 5, 100)
+  AddProc(Target, 6, 100)
 end
 
 function proc(Caster, Target, ProcType, MinDmg, MaxDmg)
   local spell_caster = GetCaster()
-  ProcDamage(spell_caster, Target, "Lash", 6, MinDmg, MaxDmg)
+  ProcDamage(Target, spell_caster, "Lash", 6, MinDmg, MaxDmg)
   RemoveTriggerFromSpell()
 end
 

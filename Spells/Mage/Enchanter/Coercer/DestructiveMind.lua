@@ -5,7 +5,7 @@ end
 
 function proc(Caster, Target, ProcType, MinDmg, MaxDmg)
   local spell_caster = GetCaster()
-  ProcDamage(spell_caster, Target, "Despotic Mind", 6, MinDmg, MaxDmg)
+  ProcDamage(Target, spell_caster, "Despotic Mind", 6, MinDmg, MaxDmg)
   RemoveTriggerFromSpell()
 end
 
