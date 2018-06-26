@@ -1,15 +1,20 @@
 function cast(Caster, Target, BonusAmt, DefSkillAmt, SkillAmt)
-    AddSpellBonus(Target, 0, BonusAmt)
-    AddSkillBonus(Target, GetSkillIDByName("Defense"), DefSkillAmt)
+  AddSpellBonus(Caster, 0, BonusAmt)
+  AddSkillBonus(Caster, GetSkillIDByName("Defense"), DefSkillAmt)
 
-    AddSkillBonus(Target, GetSkillIDByName("Crushing"), SkillAmt)
-    AddSkillBonus(Target, GetSkillIDByName("Disruption"), SkillAmt)
-    AddSkillBonus(Target, GetSkillIDByName("Piercing"), SkillAmt)
-    AddSkillBonus(Target, GetSkillIDByName("Slashing"), SkillAmt)
+  AddSkillBonus(Caster, GetSkillIDByName("Crushing"), SkillAmt)
+  AddSkillBonus(Caster, GetSkillIDByName("Disruption"), SkillAmt)
+  AddSkillBonus(Caster, GetSkillIDByName("Piercing"), SkillAmt)
+  AddSkillBonus(Caster, GetSkillIDByName("Slashing"), SkillAmt)
+  AddProc(Caster, 5, 12)
+end
 
+function proc(Caster, Target, Type)
+  CastSpell(Target, 53638705, 1, Caster)
 end
 
 function remove(Caster, Target)
-    RemoveSpellBonus(Target)
-    RemoveSkillBonus(Target)
+  RemoveProc(Caster)
+  RemoveSpellBonus(Caster)
+  RemoveSkillBonus(Caster)
 end
