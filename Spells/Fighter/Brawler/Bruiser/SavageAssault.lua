@@ -7,7 +7,7 @@ function cast(Caster, Target, MinDmg, MaxDmg)
     for i = 1, 3 do
       ProcDamage(Caster, Target, "Savage Assault", DamageType, MinDmg, MaxDmg)
 
-      if not LastSpellAttackHit() then
+      if not LastProcHit() then
         break
       end
 
