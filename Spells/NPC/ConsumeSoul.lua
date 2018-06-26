@@ -11,7 +11,7 @@ function cast(Caster, Target)
     local heal_amount = hp * 0.03
 
     SpellHeal(Target, "Heal", heal_amount)
-	
+
   elseif number == 3 then
     local heal_amount = hp * 0.04
 

@@ -3,7 +3,7 @@ function cast(Caster, Target)
   AddProc(Caster, 6, 2.0)
 end
 
-function proc(Target, Caster, ProcType)  
+function proc(Target, Caster, ProcType)
   if HasSpellEffect(Caster, 209484141) then
     return
   else

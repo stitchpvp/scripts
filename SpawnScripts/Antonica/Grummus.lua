@@ -160,7 +160,7 @@ end
 function SpawnDiseaseConvo(Spawn)
   local zone = GetZone(Spawn)
   local HealthPos = GetSpawn(Spawn, 2520010)
-  local Disease = SpawnMob(zone, 2520040, false, GetX(HealthPos) + 20, GetY(HealthPos), GetZ(HealthPos), 90)
+  SpawnMob(zone, 2520040, false, GetX(HealthPos) + 20, GetY(HealthPos), GetZ(HealthPos), 90)
   SetTempVariable(Spawn, "diseaseconvo_spawned", true)
 end
 

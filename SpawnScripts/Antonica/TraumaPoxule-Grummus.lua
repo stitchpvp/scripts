@@ -1,8 +1,5 @@
 function spawn(NPC)
-  local Grummus = GetSpawn(NPC, 2520012)
-  local most_hated = GetMostHated(Grummus)
-  local sendmsgtoall = GetGroup(most_hated)
-  AddTimer(NPC, 30000, "manifested")
+  AddTimer(NPC, 35000, "manifested")
 end
 
 function manifested(NPC, Spawn)
@@ -22,7 +19,7 @@ function manifested(NPC, Spawn)
         SendMessage(players, "Traumatic poxule was up for too long and have manifested! The end of all that is...", "red")
         end
       end
-	
+
       if GetTempVariable(NPC, "manifested_spawned") == nil then
         SpawnManifested(NPC, Spawn)
       end
