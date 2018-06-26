@@ -11,3 +11,8 @@ function cast(Caster, Target)
   AddControlEffect(Target, 11)
   SetSpellSnareValue(5, Target)
 end
+
+function remove(Caster, Target)
+  RemoveControlEffect(Target, 11)
+  RemoveSpellBonus(Target)
+end
