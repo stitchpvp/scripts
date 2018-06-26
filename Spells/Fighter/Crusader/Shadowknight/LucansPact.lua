@@ -14,6 +14,7 @@ function cast(Caster, Target, StaBonusAmt, AvdBonusAmt, OffSkillAmt, DefSkillAmt
   AddSpellBonus(Target, 201, AllResists)
   AddSpellBonus(Target, 202, AllResists)
   AddSpellBonus(Target, 203, AllResists)
+  AddSpellBonus(Target, 678, 15)
 end
 
 function remove(Caster, Target)
