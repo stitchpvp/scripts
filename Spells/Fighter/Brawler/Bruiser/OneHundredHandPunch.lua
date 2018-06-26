@@ -7,7 +7,7 @@ function cast(Caster, Target, MinDmg, MaxDmg)
     for i = 1, 7 do
       ProcDamage(Caster, Target, "One Hundred Hand Punch", DamageType, MinDmg, MaxDmg)
 
-      if not LastProcHit() then
+      if not LastProcHit(Caster) then
 	    break
       end
 
