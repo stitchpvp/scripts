@@ -32,14 +32,18 @@ function SpawnManifested(Spawn)
   local zone = GetZone(Spawn)
   local Grummus = GetSpawn(Spawn, 2520012)
   local most_hated = GetMostHated(Grummus)
-  local manifested = SpawnMob(zone, 2520037, false, GetX(most_hated), GetY(most_hated), GetZ(most_hated), GetHeading(most_hated) - 90)
+
+  SpawnMob(zone, 2520037, false, GetX(most_hated), GetY(most_hated), GetZ(most_hated), GetHeading(most_hated) - 90)
+
+  local manifested = GetSpawn(Spawn, 2520037)
+
   AddHate(most_hated, manifested, 1)
   SetTempVariable(Spawn, "manifested_spawned", "true")
   SetTempVariable(Grummus, "poxule_dead_part_one", "true")
   SetTempVariable(Grummus, "poxule_dead_part_two", "true")
   SetTempVariable(Grummus, "poxule_dead_part_three", "true")
-  Despawn(Spawn)
   Despawn(arcane)
+  Despawn(Spawn)
 end
 
 function killed(NPC)

@@ -22,12 +22,6 @@ function debuffs(NPC)
   end
 end
 
-function attacked(NPC)
-  CastSpell(NPC, 26620319, 1) --Hardened Constitution
-  CastSpell(NPC, 166451223, 1) --Brute Strength
-  CastSpell(NPC, 209484141, 1) --Retribution of Grummus
-end
-
 function killed(NPC)
   CastSpell(NPC, 209997759, 1) --Consume Soul
 end
