@@ -1,6 +1,6 @@
 function cast(Caster, Target)
   SetSpellTriggerCount(3, 1)
-  AddProc(Caster, 1, 100)
+  AddProc(Target, 1, 100)
 end
 
 function proc(Caster, Target, ProcType, MinDmg, MaxDmg)
