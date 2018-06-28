@@ -6,7 +6,7 @@ function cast(Caster, Target, BonusAmt, DefSkillAmt, SkillAmt)
   AddSkillBonus(Caster, GetSkillIDByName("Disruption"), SkillAmt)
   AddSkillBonus(Caster, GetSkillIDByName("Piercing"), SkillAmt)
   AddSkillBonus(Caster, GetSkillIDByName("Slashing"), SkillAmt)
-  AddProc(Caster, 5, 12)
+  AddProc(Caster, 1, 12)
 end
 
 function proc(Caster, Target, Type)
