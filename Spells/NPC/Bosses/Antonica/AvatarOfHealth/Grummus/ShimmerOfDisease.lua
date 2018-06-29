@@ -7,12 +7,8 @@ function tick(Caster, Target)
   ProcDamage(Caster, Target, "Shimmer of Disease", 8, 1, 10)
 end
 
-function proc(Caster, Target, ProcType)
-  if HasSpellEffect(Caster, 203266846) then
-	SpellDamage(Caster, 8, 5, 25, 2)
-  else
-    CastSpell(Target, 203266846, 1)
-  end
+function proc(Attacker, Target, ProcType)
+  ProcDamage(GetCaster(), Caster, "Shimmer of Disease", 8, 5, 25)
 end
 
 function remove(Caster, Target)

@@ -1,12 +1,19 @@
 function spawn(NPC)
+  CastSpell(NPC, 26620319, 1) --Hardened Constitution
+  CastSpell(NPC, 166451223, 1) --Brute Strength
+  CastSpell(NPC, 209484141, 1) --Retribution of Grummus
+
   Say(NPC, "Argggh!")
+
   local Health = GetSpawn(NPC, 2520010)
   SetInCombat(Health, true)
+
   AddTimer(NPC, 5000, "debuffs")
   AddTimer(NPC, 35000, "SpawnAddsMsg")
   AddTimer(NPC, 45000, "Plaguebound")
   AddTimer(NPC, 390000, "battleweary")
   AddTimer(NPC, 510000, "combat_fatigue")
+
   SetTempVariable(NPC, "grummus_alive_for_health_barrier_check", true)
   SetTempVariable(NPC, "prevent_loop", nil)
   SetTempVariable(NPC, "killspawn", "test")
@@ -14,16 +21,13 @@ end
 
 function debuffs(NPC)
   if IsInCombat(NPC) == false then
-	return
+    return
   else
-    CastSpell(GetMostHated(NPC), 118670389, 1, NPC) --Unwavering Faith
-    CastSpell(GetMostHated(NPC), 203266846, 1, NPC) --Shimmer of Disease
-    AddTimer(NPC, math.random(6000,10000), "debuffs") -- re-apply this in case of resurrections
-  end
-end
+    CastSpell(NPC, 118670389, 1, NPC) --Unwavering Faith
+    CastSpell(NPC, 203266846, 1, NPC) --Shimmer of Disease
 
-function killed(NPC)
-  CastSpell(NPC, 209997759, 1) --Consume Soul
+    AddTimer(NPC, math.random(6000, 10000), "debuffs") -- re-apply this in case of resurrections
+  end
 end
 
 function Plaguebound(NPC, Spawn)
@@ -34,17 +38,17 @@ function Plaguebound(NPC, Spawn)
 
   if not HasGroup(most_hated) then --for self testing purpose
     if not IsAlive(most_hated) then
-	  return
-	else
+      return
+    else
       CastSpell(most_hated, 5038031, 1)
-	end
+    end
   else
     local player = group[math.random(#group)]
-	if not IsAlive(player) then
-	  return
-	else
-	  CastSpell(player, 5038031, 1)
-	end
+    if not IsAlive(player) then
+      return
+    else
+      CastSpell(player, 5038031, 1)
+    end
   end
 end
 
@@ -52,17 +56,21 @@ function battleweary(NPC)
   if IsInCombat(NPC) == false then
     return
   end
+
   Say(NPC, "I see you grow tired from my onslaught, it won't be long now before victory is mine!")
+
   CastSpell(NPC, 87835731, 1) --Aura of Confidence
-  CastSpell(GetMostHated(NPC), 220077792, 1, NPC) --Battleweary
+  CastSpell(NPC, 220077792, 1, NPC) --Battleweary
 end
 
 function combat_fatigue(NPC, Spawn)
   if IsInCombat(NPC) == false then
-	return
+    return
   end
+
   Say(NPC, "It's over now!")
-  CastSpell(GetMostHated(NPC), 177432220, 1, NPC) --Combat Fatigue 
+
+  CastSpell(NPC, 177432220, 1, NPC) --Combat Fatigue 
 end
 
 function death(NPC)
@@ -102,7 +110,7 @@ function CombatReset(NPC)
   SpawnSet(Health, "mood_state", 0)
   PlayAnimation(Health, 12246)
   Emote(Health, "sighs.")
-  
+
   while true do
     local add1 = GetSpawn(NPC, 2520038)
 
@@ -112,7 +120,7 @@ function CombatReset(NPC)
 
     Despawn(add1)
   end
-  
+
   while true do
     local add2 = GetSpawn(NPC, 2520039)
 
@@ -122,15 +130,15 @@ function CombatReset(NPC)
 
     Despawn(add2)
   end
-  
+
   while true do
     local manifested = GetSpawn(NPC, 2520037)
-	
-	if manifested == nil then
-	  break
-	end
-	
-	Despawn(manifested)
+
+    if manifested == nil then
+      break
+    end
+
+    Despawn(manifested)
   end
   Despawn(NPC, 1000)
   Despawn(Disease, 1000)
@@ -150,7 +158,7 @@ function SpawnAdds(Spawn)
   AddHate(player, add1, 1)
   AddHate(player, add2, 1)
 end
-	
+
 function SpawnDiseaseConvo(Spawn)
   local zone = GetZone(Spawn)
   local HealthPos = GetSpawn(Spawn, 2520010)
@@ -165,19 +173,19 @@ function healthchanged(NPC, Spawn)
 
   if hp_percent <= 0.75 and DiseaseConvo == nil then
     if GetTempVariable(NPC, "diseaseconvo_spawned") == nil then
-	  SpawnDiseaseConvo(NPC, Spawn)
-	  AddTimer(NPC, 1000, "disease_visual_state_teleport_in")
-	  AddTimer(NPC, 5000, "disease_convo1_1")
-	  Say(HealthConvo, "The manifested god of decay, putrefy and rot is approaching!")
-	end
+      SpawnDiseaseConvo(NPC, Spawn)
+      AddTimer(NPC, 1000, "disease_visual_state_teleport_in")
+      AddTimer(NPC, 5000, "disease_convo1_1")
+      Say(HealthConvo, "The manifested god of decay, putrefy and rot is approaching!")
+    end
   end
 
   if hp_percent <= 0.10 and DiseaseConvo ~= nil then
     if GetTempVariable(NPC, "prevent_loop") == nil then
-	  AddTimer(NPC, 2000, "disease_convo_end")
-	  Say(HealthConvo, "Bertoxxulous is retreating back to Plane of Disease! Finish off Grummus so Norrath is saved!")
-	  SetTempVariable(NPC, "prevent_loop", true)
-	end
+      AddTimer(NPC, 2000, "disease_convo_end")
+      Say(HealthConvo, "Bertoxxulous is retreating back to Plane of Disease! Finish off Grummus so Norrath is saved!")
+      SetTempVariable(NPC, "prevent_loop", true)
+    end
   end
 end
 
