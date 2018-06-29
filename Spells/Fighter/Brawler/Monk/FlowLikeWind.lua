@@ -12,7 +12,7 @@ function cast(Caster, Target, AttackSpeed, DefenseDebuff, OffenseBuff, MinDmg, M
 end
 
 function proc(Caster, Target, Type, AttackSpeed, DefenseDebuff, OffenseBuff, MinDmg, MaxDmg, SnareAmount)
-  CastSpell(Target, 16787456, 1, Caster)
+  CastSpell(Target, 52963937, 1, Caster)
 end
 
 function remove(Caster, Target)
