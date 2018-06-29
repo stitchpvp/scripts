@@ -1,7 +1,7 @@
 function spawn(NPC)
-  CastSpell(NPC, 26620319, 1) --Hardened Constitution
-  CastSpell(NPC, 166451223, 1) --Brute Strength
-  CastSpell(NPC, 209484141, 1) --Retribution of Grummus
+  CastSpell(NPC, 26620319, 1, NPC, true) --Hardened Constitution
+  CastSpell(NPC, 166451223, 1, NPC, true) --Brute Strength
+  CastSpell(NPC, 209484141, 1, NPC, true) --Retribution of Grummus
 
   Say(NPC, "Argggh!")
 
