@@ -4,6 +4,6 @@ function cast(Caster, Target, MinDmg, MaxDmg)
   SpellDamage(Target, DamageType, MinDmg, MaxDmg)
 
   if LastSpellAttackHit() then
-    CastSpell(Target, 1001532, 1, Caster)
+    CastSpell(Target, 68480171, 1, Caster)
   end
 end

@@ -4,6 +4,13 @@ function cast(Caster, Target, MinDmg, MaxDmg)
   SpellDamage(Target, DamageType, MinDmg, MaxDmg)
 
   if LastSpellAttackHit() then
-    CastSpell(Target, 181890697, 1, Caster)
+    for i = 1, 4 do
+      ProcDamage(Caster, Target, "Five Rings", DamageType, MinDmg, MaxDmg)
+
+      if not LastProcHit(Caster) then
+	    break
+      end
+
+    end
   end
 end

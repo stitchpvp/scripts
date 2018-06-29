@@ -1,4 +1,8 @@
-function cast(Caster, Target, AttackSpeed, DefenseDebuff, OffenseBuff)
+function cast(Caster, Target, AttackSpeed, DefenseDebuff, OffenseBuff, MinDmg, MaxDmg, SnareAmount)
+  local weapon = GetEquippedItemBySlot(Caster, 0)
+  local proc_chance = GetProcPercentageForWeapon(weapon, 5.0)
+
+  AddProc(Caster, 3, proc_chance)
   AddSpellBonus(Caster, 617, AttackSpeed)
   AddSkillBonus(Caster, GetSkillIDByName("Defense"), DefenseDebuff)
   AddSkillBonus(Caster, GetSkillIDByName("Slashing"), OffenseBuff)
@@ -7,7 +11,12 @@ function cast(Caster, Target, AttackSpeed, DefenseDebuff, OffenseBuff)
   AddSkillBonus(Caster, GetSkillIDByName("Ranged"), OffenseBuff)
 end
 
+function proc(Caster, Target, Type, AttackSpeed, DefenseDebuff, OffenseBuff, MinDmg, MaxDmg, SnareAmount)
+  CastSpell(Target, 16787456, 1, Caster)
+end
+
 function remove(Caster, Target)
+  RemoveProc(Caster)
   RemoveSpellBonus(Caster)
   RemoveSkillBonus(Caster)
 end

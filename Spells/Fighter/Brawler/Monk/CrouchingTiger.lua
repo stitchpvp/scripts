@@ -1,5 +1,5 @@
-function cast(Caster, Target, BaseAvoidance, MinimumDeflection, ParryBuff, OffensiveDebuff, AggressionBuff, DefensiveBuff, MitigationBuff)
-  AddSpellBonus(Caster, 817, 5)
+function cast(Caster, Target, PhysReduc, BaseAvoidance, MinimumDeflection, ParryBuff, OffensiveDebuff, AggressionBuff, DefensiveBuff, MitigationBuff)
+  AddSpellBonus(Caster, 817, PhysReduc)
   AddSpellBonus(Caster, 696, BaseAvoidance)
   AddSpellBonus(Caster, 670, MinimumDeflection)
   AddSkillBonus(Caster, GetSkillIDByName("Parry"), ParryBuff)
