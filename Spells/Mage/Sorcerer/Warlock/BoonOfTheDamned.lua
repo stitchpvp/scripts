@@ -1,5 +1,5 @@
 function cast(Caster, Target)
-  AddProc(Target, 4, 10)
+  AddProc(Target, 4, 5)
 end
 
 function proc(Caster, Target, Type, HateTransfer)
