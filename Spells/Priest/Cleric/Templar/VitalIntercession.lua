@@ -6,10 +6,10 @@ end
 function proc(Caster, Target, ProcType, MinHeal, MaxHeal)
   if GetSpellTriggerCount() > 0 then
     local spell_caster = GetCaster()
-  
+
     RemoveTriggerFromSpell()
 
-    ProcHeal(spell_caster, Caster, "Supplicant's Prayer", "Heal", MinHeal, MaxHeal)
+    ProcHeal(spell_caster, Caster, "Supplicant's Prayer", "Heal", MinHeal, MaxHeal, true)
   end
 end
 

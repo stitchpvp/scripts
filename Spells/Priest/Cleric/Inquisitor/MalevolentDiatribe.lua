@@ -6,10 +6,10 @@ end
 function proc(Caster, Target, ProcType, MinHeal, MaxHeal)
   if GetPlayerTriggerCount(Caster) > 0 then
     local spell_caster = GetCaster()
-	
+
     RemoveTriggerFromPlayer(Caster)
-  
-    ProcHeal(spell_caster, Caster, "Atoning Faith", "Heal", MinHeal, MaxHeal)
+
+    ProcHeal(spell_caster, Caster, "Atoning Faith", "Heal", MinHeal, MaxHeal, true)
   end
 end
 

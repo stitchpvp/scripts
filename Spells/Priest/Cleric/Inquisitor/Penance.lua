@@ -9,7 +9,7 @@ function proc(Caster, Target, ProcType, MinHeal, MaxHeal)
   
     RemoveTriggerFromSpell()
 
-    ProcHeal(spell_caster, Caster, "Vengeful Faith", "Heal", MinHeal, MaxHeal)
+    ProcHeal(spell_caster, Caster, "Vengeful Faith", "Heal", MinHeal, MaxHeal, true)
   end
 end
 

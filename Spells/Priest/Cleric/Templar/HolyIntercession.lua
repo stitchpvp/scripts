@@ -9,7 +9,7 @@ function proc(Caster, Target, ProcType, MinHeal, MaxHeal)
 
     RemoveTriggerFromPlayer(Caster)
 
-    ProcHeal(spell_caster, Caster, "Divine Prayer", "Heal", MinHeal, MaxHeal)
+    ProcHeal(spell_caster, Caster, "Divine Prayer", "Heal", MinHeal, MaxHeal, true)
   end
 end
 
