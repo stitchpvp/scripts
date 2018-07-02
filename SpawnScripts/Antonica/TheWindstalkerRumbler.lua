@@ -29,12 +29,12 @@ function healthchanged(NPC, Target)
 
     CastSpell(Target, SPELL_RUPTURE, 1, NPC)
 
-    for i = 1, 3 do
-      local loc = SPAWN_LOCATIONS[math.random(#SPAWN_LOCATIONS)]
+    --for i = 1, 3 do
+    local loc = SPAWN_LOCATIONS[math.random(#SPAWN_LOCATIONS)]
 
-      local RumblerAdd = SpawnMob(GetZone(NPC), BURROWING_RUMBLER, false, loc[1], loc[2], loc[3])
+    local RumblerAdd = SpawnMob(GetZone(NPC), BURROWING_RUMBLER, false, loc[1], loc[2], loc[3])
 
-      AddHate(Target, RumblerAdd, 1)
-    end
+    AddHate(Target, RumblerAdd, 1)
+    --end
   end
 end
