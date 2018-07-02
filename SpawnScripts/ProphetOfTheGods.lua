@@ -39,7 +39,7 @@ function list_of_good_choices(NPC, Spawn)
     AddConversationOption(conversation, "I would like to assist the Avatar of Rodcet Nife.", "healthavatar")
 	AddConversationOption(conversation, "I would like to challenge the Avatar of Mithaniel Marr.", "valoravatar")
 	AddConversationOption(conversation, "None at this time!")
-	StartConversation(conversation, NPC, Spawn, "Which avatar would you like to challenge?")
+	StartConversation(conversation, NPC, Spawn, "Which avatar would you like to assist or challenge?")
   else
     return
   end
@@ -67,7 +67,7 @@ function valoravatar(NPC)
 end
 
 function valoravatar2(NPC)
-  if not GetTempVariable(NPC, "avatar_spawned") and not GetTempVariable(NPC, "choice_made") then
+  if not GetTempVariable(NPC, "avatar_spawned") then
 	local zone = GetZone(NPC)
 	local Valor = SpawnMob(zone, 980013, false, GetX(NPC), GetY(NPC), GetZ(NPC), GetHeading(NPC))
 	SetTempVariable(NPC, "avatar_spawned", true)
