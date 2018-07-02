@@ -33,6 +33,10 @@ function debuffs(NPC)
   end
 end
 
+function killed(NPC)
+  CastSpell(NPC, 209997759, 1, NPC, true) --Consume Soul
+end
+
 function Plaguebound(NPC, Spawn)
   local most_hated = GetMostHated(NPC)
   local group = GetGroup(most_hated)
