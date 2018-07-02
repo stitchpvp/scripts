@@ -1,7 +1,11 @@
 function cast(Caster, Target, PetID)
-	local x = GetX(Caster)
-	local y = GetY(Caster)
-	local z = GetZ(Caster)
+  SummonPet(Caster, PetID)
+end
 
-	SummonDumbFirePet(Caster, Target, PetID, math.random(0, 5) + x, math.random(0, 5) + y, math.random(0, 5) + z)
+function remove(Caster, Target)
+  local pet = GetPet(Caster)
+
+  if pet ~= nil then
+    DismissPet(pet)
+  end
 end
