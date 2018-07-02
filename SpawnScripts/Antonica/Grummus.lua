@@ -4,7 +4,7 @@ function spawn(NPC)
   local Health = GetSpawn(NPC, 2520010)
   SetInCombat(Health, true)
 
-  Addtimer(NPC, 500, "cast_things")
+  AddTimer(NPC, 500, "cast_things")
   AddTimer(NPC, 5000, "debuffs")
   AddTimer(NPC, 35000, "SpawnAddsMsg")
   AddTimer(NPC, 45000, "Plaguebound")
