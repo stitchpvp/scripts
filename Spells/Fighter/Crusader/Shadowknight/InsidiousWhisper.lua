@@ -14,8 +14,4 @@ function tick(Caster, Target, MinTaunt, MaxTaunt, MinTauntTick, MaxTauntTick, Mi
 
   AddHate(Caster, Target, hateAmount)
   SpellDamage(Target, 8, TickDmg)
-
-  if IsPlayer(Target) then
-    SetTarget(Target, Caster)
-  end
 end
