@@ -1,13 +1,10 @@
 function spawn(NPC)
-  CastSpell(NPC, 26620319, 1, NPC, true) --Hardened Constitution
-  CastSpell(NPC, 166451223, 1, NPC, true) --Brute Strength
-  CastSpell(NPC, 209484141, 1, NPC, true) --Retribution of Grummus
-
   Say(NPC, "Argggh!")
 
   local Health = GetSpawn(NPC, 2520010)
   SetInCombat(Health, true)
 
+  Addtimer(NPC, 500, "cast_things")
   AddTimer(NPC, 5000, "debuffs")
   AddTimer(NPC, 35000, "SpawnAddsMsg")
   AddTimer(NPC, 45000, "Plaguebound")
@@ -17,6 +14,12 @@ function spawn(NPC)
   SetTempVariable(NPC, "grummus_alive_for_health_barrier_check", true)
   SetTempVariable(NPC, "prevent_loop", nil)
   SetTempVariable(NPC, "killspawn", "test")
+end
+
+function cast_things(NPC)
+  CastSpell(NPC, 26620319, 1, NPC, true) --Hardened Constitution
+  CastSpell(NPC, 166451223, 1, NPC, true) --Brute Strength
+  CastSpell(NPC, 209484141, 1, NPC, true) --Retribution of Grummus
 end
 
 function debuffs(NPC)

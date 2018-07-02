@@ -8,11 +8,11 @@ function spawn(NPC)
   AddTimer(NPC, 35000, "manifested")
 
   if not HasGroup(most_hated) then
-    SendPopUpMessage(most_hated, "The poxules springs forth, which can manifest themselves into danger before long!", 239, 142, 38)
+    SendPopUpMessage(most_hated, "The poxules springs forth, which can manifest themselves into danger before long!", 255, 0, 0)
     SendMessage(most_hated, "The poxules springs forth, which can manifest themselves into danger before long!", "red")
   else
     for _, players in ipairs(sendmsgtoall) do
-    SendPopUpMessage(players, "The poxules springs forth, which can manifest themselves into danger before long!", 239, 142, 38)
+    SendPopUpMessage(players, "The poxules springs forth, which can manifest themselves into danger before long!", 255, 0, 0)
     SendMessage(players, "The poxules springs forth, which can manifest themselves into danger before long!", "red")
     end
   end
@@ -68,9 +68,7 @@ function SpawnManifested(Spawn)
   local trauma = GetSpawn(Spawn, 2520038)
   local most_hated = GetMostHated(Grummus)
 
-  SpawnMob(zone, 2520037, false, GetX(most_hated), GetY(most_hated), GetZ(most_hated), GetHeading(most_hated) - 90)
-
-  local manifested = GetSpawn(Spawn, 2520037)
+  local manifested = SpawnMob(zone, 2520037, false, GetX(most_hated), GetY(most_hated), GetZ(most_hated), GetHeading(most_hated) - 90)
   
   AddHate(most_hated, manifested, 1)
   SetTempVariable(Spawn, "manifested_spawned", "true")

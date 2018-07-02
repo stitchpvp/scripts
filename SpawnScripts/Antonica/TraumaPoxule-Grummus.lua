@@ -28,14 +28,12 @@ function manifested(NPC, Spawn)
 end
 
 function SpawnManifested(Spawn)
-  local arcane = GetSpawn(Spawn, 2520039)
   local zone = GetZone(Spawn)
   local Grummus = GetSpawn(Spawn, 2520012)
+  local arcane = GetSpawn(Spawn, 2520039)
   local most_hated = GetMostHated(Grummus)
 
-  SpawnMob(zone, 2520037, false, GetX(most_hated), GetY(most_hated), GetZ(most_hated), GetHeading(most_hated) - 90)
-
-  local manifested = GetSpawn(Spawn, 2520037)
+  local manifested = SpawnMob(zone, 2520037, false, GetX(most_hated), GetY(most_hated), GetZ(most_hated), GetHeading(most_hated) - 90)
 
   AddHate(most_hated, manifested, 1)
   SetTempVariable(Spawn, "manifested_spawned", "true")
