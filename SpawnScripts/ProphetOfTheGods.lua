@@ -11,14 +11,18 @@ function respawn(NPC)
 end
 
 function hailed(NPC, Spawn)
-  if not GetTempVariable(NPC, "avatar_spawned") and not GetTempVariable(NPC, "choice_made") then
+  local Valor = GetSpawn(NPC, 980013)
+  local Health = GetSpawn(NPC, 2520010)
+  local Disease = GetSpawn(NPC, 2520005)
+  
+  if not GetTempVariable(NPC, "avatar_spawned") and not GetTempVariable(NPC, "choice_made") and not IsAlive(Valor) and not IsAlive(Health) and not IsAlive(Disease) then
     local conversation = CreateConversation()
 	AddConversationOption(conversation, "We are up for the task!", "list_of_choices")
     AddConversationOption(conversation, "Interesting, I might come back later.")
     StartConversation(conversation, NPC, Spawn, "Welcome, " .. GetName(Spawn) .. ". Here you can challenge the avatars of the gods to a test of battle! If you survive, you will be rewarded dearly from any avatar you are able to defeat!")
     PlayAnimation(NPC, 12030, Spawn)
   else
-    return
+    Say(NPC, "I'm sorry, but there is already an avatar present in this area. Come back to me when you've completed your task.", Spawn)
   end
 end
 
@@ -57,12 +61,18 @@ function list_of_evil_choices(NPC, Spawn)
 end
 
 function valoravatar(NPC)
-  if not GetTempVariable(NPC, "avatar_spawned") and not GetTempVariable(NPC, "choice_made") then
+  local Valor = GetSpawn(NPC, 980013)
+  local Health = GetSpawn(NPC, 2520010)
+  local Disease = GetSpawn(NPC, 2520005)
+  
+  if not GetTempVariable(NPC, "avatar_spawned") and not GetTempVariable(NPC, "choice_made") and not IsAlive(Valor) and not IsAlive(Health) and not IsAlive(Disease) then
     AddTimer(NPC, 5000, "valoravatar2")
     Say(NPC, "I call forth the Avatar of Mithaniel Marr, lord of Valor, to be challenged by these mortals!")
 	SpawnSet(NPC, "action_state", 10141)
 	SpawnSet(NPC, "mood_state", 28619)
 	SetTempVariable(NPC, "choice_made", true)
+  else
+    Say(NPC, "I'm sorry, but there is already an avatar present in this area. Come back to me when you've completed your task.", Spawn)
   end
 end
 
@@ -76,12 +86,18 @@ function valoravatar2(NPC)
 end
 
 function healthavatar(NPC)
-  if not GetTempVariable(NPC, "avatar_spawned") and not GetTempVariable(NPC, "choice_made") then
+  local Valor = GetSpawn(NPC, 980013)
+  local Health = GetSpawn(NPC, 2520010)
+  local Disease = GetSpawn(NPC, 2520005)
+  
+  if not GetTempVariable(NPC, "avatar_spawned") and not GetTempVariable(NPC, "choice_made") and not IsAlive(Valor) and not IsAlive(Health) and not IsAlive(Disease) then
     AddTimer(NPC, 5000, "healthavatar2")
     Say(NPC, "I call forth the Avatar of Rodcet Nife, lord of health and bringer of life, to be assisted by these mortals!")
 	SpawnSet(NPC, "action_state", 17561)
 	SpawnSet(NPC, "mood_state", 28619)
 	SetTempVariable(NPC, "choice_made", true)
+  else
+    Say(NPC, "I'm sorry, but there is already an avatar present in this area. Come back to me when you've completed your task.", Spawn)
   end
 end
 
@@ -95,12 +111,18 @@ function healthavatar2(NPC)
 end
 
 function diseaseavatar(NPC)
-  if not GetTempVariable(NPC, "avatar_spawned") then
+  local Valor = GetSpawn(NPC, 980013)
+  local Health = GetSpawn(NPC, 2520010)
+  local Disease = GetSpawn(NPC, 2520005)
+  
+  if not GetTempVariable(NPC, "avatar_spawned") and not GetTempVariable(NPC, "choice_made") and not IsAlive(Valor) and not IsAlive(Health) and not IsAlive(Disease) then
     AddTimer(NPC, 5000, "diseaseavatar2")
     Say(NPC, "I call forth the Avatar of Bertoxxulous, god of disease and bringer of plague, to be challenged by these mortals!")
 	SpawnSet(NPC, "action_state", 16357)
 	SpawnSet(NPC, "mood_state", 28619)
 	SetTempVariable(NPC, "choice_made", true)
+  else
+    Say(NPC, "I'm sorry, but there is already an avatar present in this area. Come back to me when you've completed your task.", Spawn)
   end
 end
 
