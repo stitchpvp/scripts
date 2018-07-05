@@ -14,7 +14,8 @@ end
 
 function proc(Caster, Target, Type, AttackSpeed, MaxHP, HateGain, Aggression, Mitigation, DmgAmt, HealAmt, MinHate, MaxHate)
   if Type == 1 then
-    Say(Caster, "I should be taunting, but this didn't get set up yet.")
+    local HateAmt = math.random(MinHate, MaxHate)
+    AddHate(Caster, Target, HateAmt)
   elseif Type == 2 then
     ProcDamage(Caster, Target, "Grisly Feedback", 8, DmgAmt)
     SpellHeal(Caster, "Heal", HealAmt)
