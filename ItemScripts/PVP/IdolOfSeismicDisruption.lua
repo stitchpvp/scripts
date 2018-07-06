@@ -1,11 +1,11 @@
-function equipped(item, player)
-  AddProc(player, 2, 5, item)
+function equipped(Item, Player)
+  AddProc(Player, 4, 5, Item)
 end
 
-function unequipped(item, player)
-  RemoveProc(player, item)
+function unequipped(Item, Player)
+  RemoveProc(Player, Item)
 end
 
-function proc(item, caster, attacker, proctype)
-  CastSpell(attacker, 1001346, 1, caster)
+function proc(Item, Caster, Attacker, ProcType)
+  CastSpell(Attacker, 181890697, 1, Caster)
 end
