@@ -1,4 +1,4 @@
-function cast(Caster, Target, StaBonusAmt, AvdBonusAmt, OffSkillAmt, DefSkillAmt, NoxResist, AllResists)
+function cast(Caster, Target, StaBonusAmt, AvdBonusAmt, OffSkillAmt, DefSkillAmt, NoxResist)
   AddSpellBonus(Target, 1, StaBonusAmt)
   AddSpellBonus(Target, 696, AvdBonusAmt)
 
@@ -11,9 +11,6 @@ function cast(Caster, Target, StaBonusAmt, AvdBonusAmt, OffSkillAmt, DefSkillAmt
 
   AddSpellBonus(Target, 202, NoxResist)
 
-  AddSpellBonus(Target, 201, AllResists)
-  AddSpellBonus(Target, 202, AllResists)
-  AddSpellBonus(Target, 203, AllResists)
   AddSpellBonus(Target, 678, 15)
   AddSpellBonus(Target, 817, 5)
 end
