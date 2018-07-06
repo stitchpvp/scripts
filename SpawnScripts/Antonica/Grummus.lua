@@ -101,6 +101,7 @@ function death(NPC)
   Despawn(add1)
   Despawn(add2)
   Despawn(manifested)
+  DropChest(NPC)
 end
 
 function CombatReset(NPC)
