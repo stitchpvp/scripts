@@ -1,5 +1,5 @@
 function cast(Caster, Target, Crit, Cast, Reuse, Recovery, Multi, Flurry, Potency, CritBonus, Doublecast, AbMod, AEAuto, DPS, Haste)
-  AddSpellBonus(Target, 654, Crit)
+  AddSpellBonus(Target, 656, Crit)
   AddSpellBonus(Target, 664, Cast)
   AddSpellBonus(Target, 662, Reuse)
   AddSpellBonus(Target, 663, Recovery)
