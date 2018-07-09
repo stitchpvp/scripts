@@ -1,3 +1,7 @@
+function precast(Caster)
+  return (not IsInCombat(Caster)), 12
+end
+
 function cast(Caster, Target)
   local pet = GetPet(Target)
 

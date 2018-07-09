@@ -1,7 +1,7 @@
 function precast(Caster, Target)
   local hp_check = GetHP(Caster) / GetMaxHP(Caster)
 
-  if hp_check <= 0.10 then
+  if hp_check <= 0.1 then
     return false
   else
     return true
@@ -21,7 +21,7 @@ function tick(Caster, Target, MinHeal, MaxHeal)
   local hp_percentage = GetHP(Caster) * -0.1
 
   SpellHeal(Target, "Heal", MinHeal, MaxHeal)
-  if hp_check < 0.1 then
+  if hp_check <= 0.1 then
     CancelSpell()
   else
     ModifyHP(Caster, hp_percentage)
