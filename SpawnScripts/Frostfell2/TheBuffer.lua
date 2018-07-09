@@ -56,7 +56,8 @@ end
 function ChangeAlignment(NPC, Player)
   local conversation = CreateConversation()
   AddConversationOption(conversation, "I fight for Qeynos.", "ChangeQeynos")
-  AddConversationOption(conversation, "I fight for Freeport", "ChangeFreeport")
+  AddConversationOption(conversation, "I fight for Freeport.", "ChangeFreeport")
+  AddConversationOption(conversation, "I fight for myself.", "ChangeExile")
   AddConversationOption(conversation, "On second thought, nevermind.")
   StartConversation(conversation, NPC, Player, "Hmm. Having trouble making up your mind? Who is it you fight for?")
 end
@@ -69,6 +70,11 @@ end
 function ChangeFreeport(NPC, Player)
   Say(NPC, "You now fight for the City of Freeport.", Player)
   SetPlayerAlignment(Player, -1)
+end
+
+function ChangeExile(NPC, Player)
+  Say(NPC, "Selfish - but you now fight for yourself.", Player)
+  SetPlayerAlignment(Player, 2)
 end
 
 function BuffPlayer(NPC, Player)
