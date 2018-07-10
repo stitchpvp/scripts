@@ -1,7 +1,7 @@
 function cast(Caster, Target, Chance)
   AddControlEffect(Target, 16)
 
-  local roll = math.random(1, 100);
+  local roll = math.random(1, 100)
   if roll <= Chance then
 	SendMessage(Caster, "Your feign death succeeded.", "yellow")
 	SendMessage(Target, "Your feign death succeeded.", "yellow")
