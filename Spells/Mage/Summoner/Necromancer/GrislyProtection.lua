@@ -1,15 +1,17 @@
-function cast(Caster, Pet, AttackSpeed, MaxHP, HateGain, Aggression, Mitigation)
-  AddSpellBonus(Pet, 617, AttackSpeed)
-  AddSpellBonus(Pet, 607, MaxHP)
-  AddSpellBonus(Pet, 624, HateGain)
-  AddSkillBonus(Pet, GetSkillIDByName("Aggression"), Aggression)
+function cast(Caster, Target, AttackSpeed, MaxHP, HateGain, Aggression, Mitigation)
+  local pet = GetPet(Caster)
+  AddSpellBonus(pet, 617, AttackSpeed)
+  AddSpellBonus(pet, 607, MaxHP)
+  AddSpellBonus(pet, 624, HateGain)
+  AddSkillBonus(pet, GetSkillIDByName("Aggression"), Aggression)
 
-  AddSpellBonus(Pet, 201, Mitigation)
-  AddSpellBonus(Pet, 202, Mitigation)
-  AddSpellBonus(Pet, 203, Mitigation)
+  AddSpellBonus(pet, 201, Mitigation)
+  AddSpellBonus(pet, 202, Mitigation)
+  AddSpellBonus(pet, 203, Mitigation)
 
-  AddProc(Pet, 1, 100)
-  AddProc(Pet, 2, 100)
+  AddProc(pet, 1, 100)
+  AddProc(pet, 2, 100)
+  CastSpell(pet, 145538487, 1, Caster)
 end
 
 function proc(Caster, Target, Type, AttackSpeed, MaxHP, HateGain, Aggression, Mitigation, DmgAmt, HealAmt, MinHate, MaxHate)
@@ -22,8 +24,13 @@ function proc(Caster, Target, Type, AttackSpeed, MaxHP, HateGain, Aggression, Mi
   end
 end
 
-function remove(Caster, Pet)
-  RemoveSpellBonus(Pet)
-  RemoveSkillBonus(Pet)
-  RemoveProc(Pet)
+function remove(Caster, Target)
+  local pet = GetPet(Caster)
+
+  if pet ~= nil then
+	CastSpell(pet, 145538487, 1, Caster)
+	RemoveSpellBonus(pet)
+	RemoveSkillBonus(pet)
+	RemoveProc(pet)
+  end
 end

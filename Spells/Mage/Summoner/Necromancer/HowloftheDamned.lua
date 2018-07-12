@@ -1,12 +1,14 @@
-function cast(Caster, Pet, DmgAmt, HealAmt, AttackSpeed, DefenseDebuff, CastSkills)
-  AddSpellBonus(Pet, 617, AttackSpeed)
-  AddSkillBonus(Pet, GetSkillIDByName("Defense"), DefenseDebuff)
-  AddSkillBonus(Pet, GetSkillIDByName("Parry"), DefenseDebuff)
-  AddSkillBonus(Pet, GetSkillIDByName("Focus"), CastSkills)
-  AddSkillBonus(Pet, GetSkillIDByName("Subjugation"), CastSkills)
-  AddSkillBonus(Pet, GetSkillIDByName("Disruption"), CastSkills)
+function cast(Caster, Target, DmgAmt, HealAmt, AttackSpeed, DefenseDebuff, CastSkills)
+  local pet = GetPet(Caster)
+  AddSpellBonus(pet, 617, AttackSpeed)
+  AddSkillBonus(pet, GetSkillIDByName("Defense"), DefenseDebuff)
+  AddSkillBonus(pet, GetSkillIDByName("Parry"), DefenseDebuff)
+  AddSkillBonus(pet, GetSkillIDByName("Focus"), CastSkills)
+  AddSkillBonus(pet, GetSkillIDByName("Subjugation"), CastSkills)
+  AddSkillBonus(pet, GetSkillIDByName("Disruption"), CastSkills)
 
-  AddProc(Pet, 1, 5)
+  AddProc(pet, 1, 100)
+  CastSpell(pet, 133049473, 1, Caster)
 end
 
 function proc(Caster, Target, Type, DmgAmt, HealAmt, AttackSpeed, DefenseDebuff, CastSkills)
@@ -14,6 +16,11 @@ function proc(Caster, Target, Type, DmgAmt, HealAmt, AttackSpeed, DefenseDebuff,
   SpellHeal(Caster, "Heal", HealAmt)
 end
 
-function remove(Caster, Pet)
-  RemoveProc(Pet)
+function remove(Caster, Target)
+  local pet = GetPet(Caster)
+
+  if pet ~= nil then
+	CastSpell(pet, 133049473, 1, Caster)
+	RemoveProc(pet)
+  end
 end

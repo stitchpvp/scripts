@@ -1,15 +1,3 @@
-function precast(Caster, Target)
-  local pet = GetPet(Caster)
-  
-  if pet ~= nil then
-    if not HasSpellEffect(pet, 62142793) and not HasSpellEffect(pet, 96781662) then
-	  return true
-    else
-      return false, 73
-    end
-  end
-end
-
 function cast(Caster, Target, Haste, Debuff, MeleeSkills, SpellSkills, AbilityMod)
   local pet = GetPet(Caster)
   AddSpellBonus(pet, 617, Haste)
@@ -22,10 +10,15 @@ function cast(Caster, Target, Haste, Debuff, MeleeSkills, SpellSkills, AbilityMo
   AddSkillBonus(pet, GetSkillIDByName("Subjugation"), SpellSkills)
   AddSkillBonus(pet, GetSkillIDByName("Ordination"), SpellSkills)
   AddSpellBonus(pet, 707, AbilityMod)
+  CastSpell(pet, 115656050, 1, Caster)
 end
 
 function remove(Caster, Target)
   local pet = GetPet(Caster)
-  RemoveSpellBonus(pet)
-  RemoveSkillBonus(pet)
+
+  if pet ~= nil then
+	CastSpell(pet, 115656050, 1, Caster)
+	RemoveSpellBonus(pet)
+	RemoveSkillBonus(pet)
+  end
 end
