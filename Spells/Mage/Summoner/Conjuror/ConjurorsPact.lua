@@ -1,8 +1,18 @@
+function precast(Caster, Target)
+  local pet = GetPet(Caster)
+  
+  if pet == nil then
+	return false
+  else
+    return true
+  end
+end
+
 function cast(Caster, Target)
   local pet = GetPet(Caster)
   AddProc(pet, 1, 5)
   AddProc(pet, 2, 25)
-  CastSpell(pet, 1002838, 1, Caster)
+  CastSpell(pet, 154528456, 1, Caster)
 end
 
 function proc(Caster, Target, ProcType)
@@ -14,7 +24,7 @@ function remove(Caster, Target)
   local pet = GetPet(Caster)
 
   if pet ~= nil then
-	CastSpell(pet, 1002838, 1, Caster)
+	CastSpell(pet, 154528456, 1, Caster)
 	RemoveProc(pet)
   end
 end

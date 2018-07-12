@@ -1,3 +1,13 @@
+function precast(Caster, Target)
+  local pet = GetPet(Caster)
+  
+  if pet == nil then
+	return false
+  else
+    return true
+  end
+end
+
 function cast(Caster, Target)
   local pet = GetPet(Caster)
   AddProc(pet, 1, 5)

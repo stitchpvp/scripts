@@ -1,3 +1,13 @@
+function precast(Caster, Target)
+  local pet = GetPet(Caster)
+  
+  if pet == nil then
+	return false
+  else
+    return true
+  end
+end
+
 function cast(Caster, Target, DmgAmt, HealAmt, AttackSpeed, DefenseDebuff, CastSkills)
   local pet = GetPet(Caster)
   AddSpellBonus(pet, 617, AttackSpeed)

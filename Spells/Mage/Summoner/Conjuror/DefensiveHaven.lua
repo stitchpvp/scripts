@@ -1,3 +1,13 @@
+function precast(Caster, Target)
+  local pet = GetPet(Caster)
+  
+  if pet == nil then
+	return false
+  else
+    return true
+  end
+end
+
 function cast(Caster, Target, WardAmt, Debuff, MaxHealth, Resists)
   local pet = GetPet(Caster)
   AddWard(pet, WardAmt, 1, 0)
