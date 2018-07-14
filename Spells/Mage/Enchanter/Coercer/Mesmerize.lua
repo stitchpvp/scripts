@@ -9,7 +9,7 @@ function proc(Caster, Target, ProcType)
 end
 
 function remove(Caster, Target)
-  RemoveControlEffect(Target, 3)
+  RemoveControlEffect(Target, 1)
   RemoveImmunitySpell(Target, 7)
   RemoveProc(Target)
 end

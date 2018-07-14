@@ -4,7 +4,7 @@ function cast(Caster, Target)
   AddProc(Target, 15, 100)
 end
 
-function proc(Caster, Target)
+function proc(Caster, Target, ProcType)
   CancelSpell()
 end
 
