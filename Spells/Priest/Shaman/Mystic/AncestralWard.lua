@@ -1,5 +1,5 @@
 function cast(Caster, Target, WardAmt)
-  AddWard(Target, WardAmt, 1)
+  AddWard(Target, WardAmt, 0)
 end
 
 function remove(Caster, Target)
