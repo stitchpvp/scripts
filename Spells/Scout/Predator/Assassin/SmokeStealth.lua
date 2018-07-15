@@ -1,5 +1,5 @@
 function cast(Caster, Target)
-  Interrupt(Caster, Target)
+  return
 end
 
 function remove(Caster, Target)

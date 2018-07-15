@@ -5,5 +5,5 @@ function cast(Caster, Target, MinDmg, MaxDmg)
 end
 
 function tick(Caster, Target, MinDmg, MaxDmg, DoTDmg)
-  ProcDamage(Caster, Target, "Quick Strike", 0, DoTDmg)
+  SpellDamage(Target, 0, DoTDmg)
 end

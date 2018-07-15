@@ -1,6 +1,6 @@
 function cast(Caster, Target, MinDmg, MaxDmg, DefenseDebuff, OffenseBuff, Haste)
   local weapon = GetEquippedItemBySlot(Caster, 0)
-  local proc_chance = GetProcPercentageForWeapon(weapon, 5.0)
+  local proc_chance = GetProcPercentageForWeapon(weapon, 3.0)
 
   AddProc(Caster, 3, proc_chance)
   AddSkillBonus(Caster, GetSkillIDByName("Defense"), DefenseDebuff)
