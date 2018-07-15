@@ -1,4 +1,4 @@
-function hailed(NPC)
+function hailed(NPC, Spawn)
   local conversation = CreateConversation()
   
   AddConversationOption(conversation, "I'm not really looking for a broom today, but thanks anyway.")
