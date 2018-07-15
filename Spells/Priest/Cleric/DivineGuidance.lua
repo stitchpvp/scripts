@@ -1,7 +1,7 @@
 function cast(Caster, Target, MinHeal, MaxHeal, MaxHealth)
   local maxhealth_percentage = GetMaxHP(Target) * MaxHealth
 
-  AddSpellBonus(Target, 501, maxhealth_percentage)
+  AddSpellBonus(Target, 500, maxhealth_percentage)
   AddProc(Target, 15, 100)
 end
 
