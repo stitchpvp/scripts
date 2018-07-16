@@ -6,9 +6,16 @@ function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 	
-	AddConversationOption(conversation, "Who are you talking about?", "Option1")
-	AddConversationOption(conversation, "I'll stay out of your way.")
-	StartConversation(conversation, NPC, Spawn, "She's gone! There was nothing I could do. Once I finish this cutter, that will all change. I got a few scars that I need to return to their dealers.")
+	if HasCompletedQuest(Spawn, 187) then
+		AddConversationOption(conversation, "Be at peace, Orwen.")
+		StartConversation(conversation, NPC, Spawn, "Leave me to grieve in peace. ")
+	end
+	
+	if not HasQuest(Spawn, 187) and not HasCompletedQuest(Spawn, 187) then
+		AddConversationOption(conversation, "Who are you talking about?", "Option1")
+		AddConversationOption(conversation, "I'll stay out of your way.")
+		StartConversation(conversation, NPC, Spawn, "She's gone! There was nothing I could do. Once I finish this cutter, that will all change. I got a few scars that I need to return to their dealers.")
+	end
 	
 	if HasQuest(Spawn, 187) and GetQuestStep(Spawn, 187) == 1 then
 		AddConversationOption(conversation, "I'll return when I know more.")
@@ -16,11 +23,6 @@ function hailed(NPC, Spawn)
 	elseif HasQuest(Spawn, 187) and GetQuestStep(Spawn, 187) == 2 then
 		AddConversationOption(conversation, "I have some news regarding Ariana.", "Option3")
 		StartConversation(conversation, NPC, Spawn, "That look on your face ... I fear what news you bear. ")
-    end
-	
-	if not HasQuest(Spawn, 187) and HasCompletedQuest(Spawn, 187) then
-		AddConversationOption(conversation, "Be at peace, Orwen.")
-		StartConversation(conversation, NPC, Spawn, "Leave me to grieve in peace. ")
 	end
 end
 
