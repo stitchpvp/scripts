@@ -16,16 +16,14 @@ function SetTimer(NPC)
 end
 
 function hailed(NPC, Spawn)
-  if not HasQuest(Spawn, 186) and HasCompletedQuest(Spawn, 186) then
-    local conversation = CreateConversation()
+  local conversation = CreateConversation()
 
+  if not HasQuest(Spawn, 186) and HasCompletedQuest(Spawn, 186) then
 	AddConversationOption(conversation, "Sure.")
 	StartConversation(conversation, NPC, Spawn, "Hello again! Lovely day for a bit of doom, wouldn't you say?")
   end
 
   if not HasQuest(Spawn, 186) and not HasCompletedQuest(Spawn, 186) then
-	local conversation = CreateConversation()
-
 	AddConversationOption(conversation, "I have to smash them?", "Option1")
 	StartConversation(conversation, NPC, Spawn, "You're just in time!  Yes, yes, just in time to help me continue my research.  With the popping and smoke, poofing!  So, so very exciting!  All you have to do is fetch me the smashed remains of these undead orcs.")
   end
