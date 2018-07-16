@@ -1,8 +1,8 @@
 --[[
 	Script Name		:	TheSearchforAriana.lua
 	Script Purpose	:	Handles the quest, "The Search for Ariana"
-	Script Author	:	QuestParser (Replace this)
-	Script Date		:	7/15/2017
+	Script Author	:	Rixan
+	Script Date		:	7/16/2018
 	Script Notes	:
 
 	Zone			:	Commonlands
@@ -13,7 +13,7 @@
 
 
 function Init(Quest)
-	AddQuestStepChat(Quest, 1, "I need to find Ariana Neovra", 1, "I need to find Ariana Neovra in the Wailing Caves.", 11, nil)
+	AddQuestStepChat(Quest, 1, "I need to find Ariana Neovra", 1, "I need to find Ariana Neovra in the Wailing Caves.", 11, 2580021)
 	AddQuestStepCompleteAction(Quest, 1, "Step1Complete")
 end
 
@@ -21,7 +21,7 @@ function Step1Complete(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 1, "I found Ariana Neovra.")
 	UpdateQuestTaskGroupDescription(Quest, 1, "I found Ariana Neovra in a cell in the Wailing Caves.")
 
-	AddQuestStepChat(Quest, 2, "I need to return to Orwen", 1, "I need to return Ariana's necklace to Orwen.", 576, nil)
+	AddQuestStepChat(Quest, 2, "I need to return to Orwen", 1, "I need to return Ariana's necklace to Orwen.", 576, 330137)
 	AddQuestStepCompleteAction(Quest, 2, "QuestComplete")
 end
 

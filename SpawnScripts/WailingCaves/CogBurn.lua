@@ -3,6 +3,7 @@ local timerslow = math.random(8000, 17000)
 function spawn(NPC)
   SetPlayerProximityFunction(NPC, 10, "InRange")
   SetTimer(NPC)
+  ProvidesQuest(NPC, 186)
 end
 
 function SetTimer(NPC)
