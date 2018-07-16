@@ -18,7 +18,7 @@ end
 function hailed(NPC, Spawn)
   local conversation = CreateConversation()
 
-  if not HasQuest(Spawn, 186) and HasCompletedQuest(Spawn, 186) then
+  if HasCompletedQuest(Spawn, 186) then
 	AddConversationOption(conversation, "Sure.")
 	StartConversation(conversation, NPC, Spawn, "Hello again! Lovely day for a bit of doom, wouldn't you say?")
   end
@@ -28,13 +28,11 @@ function hailed(NPC, Spawn)
 	StartConversation(conversation, NPC, Spawn, "You're just in time!  Yes, yes, just in time to help me continue my research.  With the popping and smoke, poofing!  So, so very exciting!  All you have to do is fetch me the smashed remains of these undead orcs.")
   end
 
-  if HasQuest(Spawn, 186) and not HasCompletedQuest(Spawn, 186) then
+  if HasQuest(Spawn, 186) and GetQuestStep(Spawn, 186) == 1 then
 	AddConversationOption(conversation, "Ok.")
 	StartConversation(conversation, NPC, Spawn, "What!?  No smoldering, popping boom!  I'm almost done!  I've 78% of component A; 12% of ingredient B; and all I need now is the last 15% of sample D!  Go, go, go get me my stuff!  ")
-  end
-  
-  if HasQuest(Spawn, 186) and GetQuestStep(Spawn, 186) == 2 then
-	AddConversationOption(conversation, "Nothing for me?", "Option3")
+  elseif HasQuest(Spawn, 186) and GetQuestStep(Spawn, 186) == 2 then
+    AddConversationOption(conversation, "Nothing for me?", "Option3")
 	StartConversation(conversation, NPC, Spawn, "Marvelous!  Just fine, most satisfactory, absolutely acceptable.  Hmm!  Not bad even ... What?  What is it?  What are you looking at!? ")
   end
 end
