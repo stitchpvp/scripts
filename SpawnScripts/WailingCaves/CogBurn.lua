@@ -32,6 +32,11 @@ function hailed(NPC, Spawn)
 	AddConversationOption(conversation, "Ok.")
 	StartConversation(conversation, NPC, Spawn, "What!?  No smoldering, popping boom!  I'm almost done!  I've 78% of component A; 12% of ingredient B; and all I need now is the last 15% of sample D!  Go, go, go get me my stuff!  ")
   end
+  
+  if HasQuest(Spawn, 186) and GetQuestStep(Spawn, 186) == 2 then
+	AddConversationOption(conversation, "Nothing for me?", "Option3")
+	StartConversation(conversation, NPC, Spawn, "Marvelous!  Just fine, most satisfactory, absolutely acceptable.  Hmm!  Not bad even ... What?  What is it?  What are you looking at!? ")
+  end
 end
 
 function Option1(NPC, Spawn)
@@ -47,6 +52,14 @@ function Option2(NPC, Spawn)
   AddConversationOption(conversation, "Ok.")
   StartConversation(conversation, NPC, Spawn, "Good, good!  I'm glad we agree. You fetch me what I need, and I'll see what I can do for you.  You can trust me ... can't you?  Oh, no matter.  ")
   OfferQuest(NPC, Spawn, 186)
+end
+
+function Option3(NPC, Spawn)
+  local conversation = CreateConversation()
+
+  AddConversationOption(conversation, "Uh, thanks?")
+  StartConversation(conversation, NPC, Spawn, "I see. So it's that kind of relationship is it?  So be it!  Here, take it!  Go on, take it I didn't want it anyway.  Wait ... yes I did.  I need that piece.  Here, take this; it's much nicer anyway, really!")
+  SetStepComplete(Spawn, 186, 2)
 end
 
 function DoAnimation1(NPC)
