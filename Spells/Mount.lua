@@ -8,4 +8,6 @@ end
 
 function remove(Caster, Target)
   RemoveSpellBonus(Caster)
+  SetSpeed(Caster, 0)
+  SetMount(Caster, 0)
 end
