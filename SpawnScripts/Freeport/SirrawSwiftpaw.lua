@@ -4,7 +4,7 @@ end
 
 function InRange(NPC, Spawn)
   FaceTarget(NPC, Spawn)
-  PlayAnimation(NPC, 11150, Spawn, 2)
+  PlayAnimation(NPC, 11150, Spawn)
 end
 
 function hailed(NPC, Spawn)

@@ -3,7 +3,7 @@ function spawn(NPC)
 end
 
 function InRange(NPC, Spawn)
-  PlayAnimation(NPC, 11150, Spawn, 2)
+  PlayAnimation(NPC, 11150, Spawn)
   FaceTarget(NPC, Spawn)
 end
 

@@ -8,5 +8,5 @@ function InRange(NPC, Spawn)
 end
 
 function hailed(NPC, Spawn)
-  Say(NPC, "Before you go opening your mouth, remember that I'm a citizen of Freeport. A rich one at that.", Spawn)
+  Say(NPC, "Don't be fooled.  Although on the surface, Freeport seems calm, there are battles that rage around us.  Be mindful.", Spawn)
 end

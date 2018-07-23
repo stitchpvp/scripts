@@ -3,10 +3,10 @@ function spawn(NPC)
 end
 
 function InRange(NPC, Spawn)
-  PlayAnimation(NPC, 11150, Spawn)
   FaceTarget(NPC, Spawn)
+  PlayAnimation(NPC, 11150, Spawn)
 end
 
 function hailed(NPC, Spawn)
-  PlayAnimation(NPC, 11682, Spawn)
+  Say(NPC, "We were right to keep our eye on you.  I have a feeling you'll be quite useful indeed!", Spawn)
 end

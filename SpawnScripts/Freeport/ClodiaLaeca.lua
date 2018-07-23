@@ -8,5 +8,5 @@ function InRange(NPC, Spawn)
 end
 
 function hailed(NPC, Spawn)
-  Say(NPC, "Before you go opening your mouth, remember that I'm a citizen of Freeport. A rich one at that.", Spawn)
+  Say(NPC, "If you need supplies, you best get 'em now! My wares go quickly. Hurry over, traveler. You mustn't wait! Come now!", Spawn)
 end

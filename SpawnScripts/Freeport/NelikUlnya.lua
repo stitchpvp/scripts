@@ -8,5 +8,5 @@ function InRange(NPC, Spawn)
 end
 
 function hailed(NPC, Spawn)
-  Say(NPC, "Before you go opening your mouth, remember that I'm a citizen of Freeport. A rich one at that.", Spawn)
+  Say(NPC, "There is a power reawakening.  Some can sense it, and others are oblivious.  However, there are none who will be able to escape it.", Spawn)
 end
