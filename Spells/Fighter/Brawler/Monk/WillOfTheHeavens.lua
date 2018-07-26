@@ -1,7 +1,10 @@
-function cast(Caster, Target)
+function cast(Caster, Target, CureLevel)
   AddImmunitySpell(Caster, 3)
   AddImmunitySpell(Caster, 4)
   AddImmunitySpell(Caster, 5)
+  CureByType(Target, CureLevel, 2)
+  CureByType(Target, CureLevel, 3)
+  CureByType(Target, CureLevel, 4)
 end
 
 function remove(Caster, Target)

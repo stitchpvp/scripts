@@ -6,10 +6,10 @@ function cast(Caster, Target)
 end
 
 function proc(Caster, Target, MinDmg, MaxDmg)
-  ProcDamage(Caster, Target, "Divine Strike", 7, MinDmg, MaxDmg)
+  ProcDamage(Caster, Target, "Divine Strike", 7, MinDmg, MaxDmg, 0, 0, true)
 
   if GetRaceBaseType(Target) == 233 then
-    ProcDamage(Caster, Target, "Divine Strike", 7, MinDmg, MaxDmg)
+    ProcDamage(Caster, Target, "Divine Strike", 7, MinDmg, MaxDmg, 0, 0, true)
   end
 end
 
