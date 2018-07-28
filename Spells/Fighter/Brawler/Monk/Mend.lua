@@ -1,5 +1,5 @@
-function cast(Caster, Target, CureLevel, MinHeal, MaxHeal, MinTick, MaxTick)
-  local base_hp = GetMaxHP(Caster) * 0.50
+function cast(Caster, Target, CureLevel, MinHeal, MaxHeal, MinTick, MaxTick, Percentage)
+  local base_hp = GetMaxHP(Caster) * Percentage
   local random = math.random(MinHeal, MaxHeal)
   local heal = base_hp + random
 
