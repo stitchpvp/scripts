@@ -1,11 +1,9 @@
-function cast(Caster, Target, Sta, Avoidance, Offensive, Defensive, ArcaneMitigation, OtherMitigation)
+function cast(Caster, Target, Sta, Avoidance, Offensive, Defensive, ArcaneMitigation)
   AddSpellBonus(Caster, 817, 5)
 
   AddSpellBonus(Caster, 1, Sta)
   AddSpellBonus(Caster, 696, Avoidance)
   AddSpellBonus(Caster, 203, ArcaneMitigation)
-  AddSpellBonus(Caster, 201, OtherMitigation)
-  AddSpellBonus(Caster, 202, OtherMitigation)
 
   AddSkillBonus(Caster, GetSkillIDByName("Slashing"), Offensive)
   AddSkillBonus(Caster, GetSkillIDByName("Piercing"), Offensive)
