@@ -1,8 +1,8 @@
-function cast(Caster, Target, Mitigation)
-  AddSpellBonus(Caster, 678, Mitigation)
-  AddSpellBonus(Caster, 201, Mitigation)
-  AddSpellBonus(Caster, 202, Mitigation)
-  AddSpellBonus(Caster, 203, Mitigation)
+function cast(Caster, Target, PhysMitigation, OtherMitigation)
+  AddSpellBonus(Caster, 204, PhysMitigation)
+  AddSpellBonus(Caster, 201, OtherMitigation)
+  AddSpellBonus(Caster, 202, OtherMitigation)
+  AddSpellBonus(Caster, 203, OtherMitigation)
 end
 
 function remove(Caster, Target)
