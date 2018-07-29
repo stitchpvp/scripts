@@ -1,4 +1,4 @@
-function cast(Caster, Target, MinDmg, MaxDmg, DefenseDebuff, OffenseBuff, Haste)
+function cast(Caster, Target, MinDmg, MaxDmg, DefenseDebuff, OffenseBuff, DPS)
   local weapon = GetEquippedItemBySlot(Caster, 0)
   local proc_chance = GetProcPercentageForWeapon(weapon, 3.0)
 
@@ -8,10 +8,10 @@ function cast(Caster, Target, MinDmg, MaxDmg, DefenseDebuff, OffenseBuff, Haste)
   AddSkillBonus(Caster, GetSkillIDByName("Piercing"), OffenseBuff)
   AddSkillBonus(Caster, GetSkillIDByName("Crushing"), OffenseBuff)
   AddSkillBonus(Caster, GetSkillIDByName("Ranged"), OffenseBuff)
-  AddSpellBonus(Caster, 617, Haste)
+  AddSpellBonus(Caster, 629, DPS)
 end
 
-function proc(Caster, Target, Type, MinDmg, MaxDmg, DefenseDebuff, OffensiveBuff, Haste)
+function proc(Caster, Target, Type, MinDmg, MaxDmg, DefenseDebuff, OffensiveBuff, DPS)
   ProcDamage(Caster, Target, "Engulf", 3, MinDmg, MaxDmg)
 end
 

@@ -1,4 +1,4 @@
-function cast(Caster, Target, DebuffAmt, AggressionAmt, DefenseAmt, ColdMit, MitIncrease)
+function cast(Caster, Target, DebuffAmt, AggressionAmt, DefenseAmt, ColdMit, MitIncrease, Stamina)
   AddSkillBonus(Caster, 418532101, DebuffAmt)
   AddSkillBonus(Caster, 3048574950, DebuffAmt)
   AddSkillBonus(Caster, 3421494576, DebuffAmt)
@@ -7,6 +7,7 @@ function cast(Caster, Target, DebuffAmt, AggressionAmt, DefenseAmt, ColdMit, Mit
   AddSkillBonus(Caster, 540022425, DefenseAmt)
   AddSpellBonus(Caster, 201, ColdMit)
   AddSpellBonus(Caster, 678, MitIncrease)
+  AddSpellBonus(Caster, 1, Stamina)
 end
 
 function remove(Caster, Target)
