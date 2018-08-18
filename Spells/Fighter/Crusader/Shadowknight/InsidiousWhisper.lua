@@ -3,6 +3,8 @@ function cast(Caster, Target, MinTaunt, MaxTaunt, MinTauntTick, MaxTauntTick, Mi
 
   AddHate(Caster, Target, hateAmount)
   SpellDamage(Target, 8, MinDmg, MaxDmg)
+  AddControlEffect(Target, 15)
+  AddTimer(Caster, 2000, "remove_taunt_lock")
 
   if IsPlayer(Target) then
     SetTarget(Target, Caster)
@@ -14,4 +16,8 @@ function tick(Caster, Target, MinTaunt, MaxTaunt, MinTauntTick, MaxTauntTick, Mi
 
   AddHate(Caster, Target, hateAmount)
   SpellDamage(Target, 8, TickDmg)
+end
+
+function remove_taunt_lock(Caster, Target)
+  RemoveControlEffect(Target, 15)
 end
