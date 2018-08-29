@@ -1,5 +1,3 @@
-
-
 function Init(Quest)
 	AddQuestStepKill(Quest, 1, "I need to collect venom from eight speckled rattlers", 8, 100, "Gerun wants the venom from eight speckled rattlers.", 325, nil)
 	AddQuestStepCompleteAction(Quest, 1, "Step1Complete")

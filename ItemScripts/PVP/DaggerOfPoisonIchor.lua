@@ -1,12 +1,12 @@
-function equipped(item, player)
-  local proc_chance = GetProcPercentageForWeapon(item, 1.8)
-  AddProc(player, 3, proc_chance, item)
+function equipped(Item, Player)
+  local proc_chance = GetProcPercentageForWeapon(Item, 1.8)
+  AddProc(Player, 3, proc_chance, Item)
 end
 
-function proc(item, caster, target, proctype)
-  ProcDamage(caster, target, "Poison Strike", 9, 200)
+function proc(Item, Caster, Target)
+  ProcDamage(Caster, Target, "Poison Strike", 9, 125)
 end
 
-function unequipped(item, player)
-  RemoveProc(player, item)
+function unequipped(Item, Player)
+  RemoveProc(Player, Item)
 end

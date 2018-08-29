@@ -8,11 +8,11 @@ function hailed(NPC, Spawn)
 	AddConversationOption(conversation, "You were expecting me? Who are you?", "part1_intro")
 	AddConversationOption(conversation, "How do I leave the island?", "leave")
 	AddConversationOption(conversation, "I should be going.")
-	StartConversation(conversation, NPC, Spawn, "Ah, there you are, Outpost. I have been expecting you. There is much work ahead of us in establishing Freeport's dominance over this island. The Overlord's troops have secured the outpost, but there is a growing nuisance on the other side of the island that must be addressed. That is where you come in.")
+	StartConversation(conversation, NPC, Spawn, "Ah, there you are, %t. I have been expecting you. There is much work ahead of us in establishing Freeport's dominance over this island. The Overlord's troops have secured the outpost, but there is a growing nuisance on the other side of the island that must be addressed. That is where you come in.")
 
 	--AddConversationOption(conversation, "I am ready.", "Option3")
 	--AddConversationOption(conversation, "Not just yet.")
-	--StartConversation(conversation, NPC, Spawn, "So, Outpost, are you ready to learn more about the outpost and perform your first service for the Overlord?")
+	--StartConversation(conversation, NPC, Spawn, "So, %t, are you ready to learn more about the outpost and perform your first service for the Overlord?")
 
 	--AddConversationOption(conversation, "I'll keep that in mind. So who are the inhabitants?", "Option4")
 	--AddConversationOption(conversation, "We'll discuss this later.")
@@ -24,7 +24,7 @@ function hailed(NPC, Spawn)
 	--StartConversation(conversation, NPC, Spawn, "Did you enjoy your hunting in the Seaside Glade with Chef Gorga?")
 
 	--AddConversationOption(conversation, "I am ready for my next assignment.", "Option7")
-	--StartConversation(conversation, NPC, Spawn, "So, Outpost, are you ready to prove your worth again?")
+	--StartConversation(conversation, NPC, Spawn, "So, %t, are you ready to prove your worth again?")
 end
 
 function leave(NPC, Spawn)
@@ -55,7 +55,7 @@ function part1_overlord(NPC, Spawn)
 
 	AddConversationOption(conversation, "I will remember that. What can you tell me of Freeport?", "part1_freeport")
 	AddConversationOption(conversation, "I'll hear more of this later.")
-	StartConversation(conversation, NPC, Spawn, "The Overlord is the fiercely courageous ruler of Freeport. A statue of his glorious visage graces the pond in the center of the outpost. Though he is merciless to his enemies, he is generous to those who serve him. Pray you never do anything to fall from his grace, Outpost.")
+	StartConversation(conversation, NPC, Spawn, "The Overlord is the fiercely courageous ruler of Freeport. A statue of his glorious visage graces the pond in the center of the outpost. Though he is merciless to his enemies, he is generous to those who serve him. Pray you never do anything to fall from his grace, %t.")
 end
 
 function part1_freeport(NPC, Spawn)
@@ -70,7 +70,7 @@ function part1_qeynos(NPC, Spawn)
 	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "Thank you for the advice, Tayil.", "part1_pledge")
-	StartConversation(conversation, NPC, Spawn, "The city of Qeynos is the enemy of Freeport. It is a weak land ruled by an incompetent queen, Antonia Bayle. I've had my share of battles with her and her pet kerra, I assure you. Qeynosians try to spread lies about the Overlord and portray him as some kind of power-mad tyrant. Don't believe their propaganda, Outpost!")
+	StartConversation(conversation, NPC, Spawn, "The city of Qeynos is the enemy of Freeport. It is a weak land ruled by an incompetent queen, Antonia Bayle. I've had my share of battles with her and her pet kerra, I assure you. Qeynosians try to spread lies about the Overlord and portray him as some kind of power-mad tyrant. Don't believe their propaganda, %t!")
 end
 
 function part1_pledge(NPC, Spawn)
@@ -132,7 +132,7 @@ function Option18(NPC, Spawn)
 
 	AddConversationOption(conversation, "Perhaps later.")
 	AddConversationOption(conversation, "I am ready.", "Option19")
-	StartConversation(conversation, NPC, Spawn, "Not just yet, Outpost. You will strike against those Qeynosian scum when the time is right. First we need to see if that weapon of yours is working! Are you ready for your first test?")
+	StartConversation(conversation, NPC, Spawn, "Not just yet, %t. You will strike against those Qeynosian scum when the time is right. First we need to see if that weapon of yours is working! Are you ready for your first test?")
 end
 
 function Option19(NPC, Spawn)
@@ -166,14 +166,14 @@ function Option6(NPC, Spawn)
 	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "Thank you, Tayil.", "Option22")
-	StartConversation(conversation, NPC, Spawn, "Gorga was impressed with your handiwork. I'm sure the outpost Militia guards will be pleased with her stew, though I can't stomach troll cooking myself. You show potential indeed, Outpost. As promised, here is your reward.")
+	StartConversation(conversation, NPC, Spawn, "Gorga was impressed with your handiwork. I'm sure the outpost Militia guards will be pleased with her stew, though I can't stomach troll cooking myself. You show potential indeed, %t. As promised, here is your reward.")
 end
 
 function Option22(NPC, Spawn)
 	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "I am ready for my next assignment.", "Option23")
-	StartConversation(conversation, NPC, Spawn, "So, Outpost, are you ready to prove your worth again?")
+	StartConversation(conversation, NPC, Spawn, "So, %t, are you ready to prove your worth again?")
 end
 
 function Option23(NPC, Spawn)

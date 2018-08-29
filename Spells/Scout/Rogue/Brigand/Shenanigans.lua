@@ -4,6 +4,8 @@ function cast(Caster, Target, DebuffAmt)
   AddSkillBonus(Caster, 540022425, DebuffAmt)
   AddControlEffect(Caster, 4)
 
+  SetSpellTriggerCount(1, 1)
+
   PlayAnimation(Caster, 229)
 
   if IsPlayer(Target) then
@@ -12,8 +14,10 @@ function cast(Caster, Target, DebuffAmt)
 end
 
 function proc(Caster, Target, ProcType, DebuffAmt, MinDmg, MaxDmg)
-  SpellDamage(Target, 2, MinDmg, MaxDmg)
-  CancelSpell()
+  if GetSpellTriggerCount() > 0 then
+    SpellDamage(Target, 2, MinDmg, MaxDmg)
+    RemoveTriggerFromSpell()
+  end
 end
 
 function remove(Caster, Target)
