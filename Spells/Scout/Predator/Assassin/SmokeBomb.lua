@@ -1,6 +1,7 @@
 function cast(Caster, Target, Dehate)
   AddHate(Caster, Target, Dehate)
   CastSpell(Caster, 2903996, 1)
+  CastSpell(Target, 50448799, 1, Caster)
   BlurVision(Target, 20.0)
   Interrupt(Caster, Target)
 
