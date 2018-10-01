@@ -1,5 +1,7 @@
 function equipped(item, player)
   AddProc(player, 5, 20, item)
+  AddProc(player, 11, 20, item)
+  AddProc(player, 12, 20, item)
 end
 
 function unequipped(item, player)
