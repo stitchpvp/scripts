@@ -4,7 +4,7 @@ function hailed(NPC, Spawn)
   AddConversationOption(conversation, "How did a goblin get in here?  Don't you kill people?", "Option1")
   AddConversationOption(conversation, "I think I'd rather keep my money, thanks.")
   StartConversation(conversation, NPC, Spawn, "Buy ticket, you!  Only ten shiny coins! You give just ten shiny coins and maybe you get um... many shinier coins!")
-endh
+end
 
 function Option1(NPC, Spawn)
   local conversation = CreateConversation()
