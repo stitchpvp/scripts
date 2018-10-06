@@ -13,24 +13,24 @@
 
 
 function Init(Quest)
-	AddQuestStepKill(Quest, 1, "I need to collect gnarled carrion hound ears", 15, 100, "Mooshga has asked me to collect fifteen gnarled carrion hound ears.", 94, 330027, 330030)
+	AddQuestStepKill(Quest, 1, "I need to collect ten huge freshwater crab claws for Mooshga. I should look to the southeast near a tower by the ruins.", 10, 100, "I need to collect huge freshwater crab claws.", 94, 330568)
 	AddQuestStepCompleteAction(Quest, 1, "Step1Complete")
 end
 
 function Step1Complete(Quest, QuestGiver, Player)
-	UpdateQuestStepDescription(Quest, 1, "I have collected fifteen gnarled carrion hound ears.")
+	UpdateQuestStepDescription(Quest, 1, "I have collected ten huge freshwater crab claws.")
 	UpdateQuestTaskGroupDescription(Quest, 1, "I have the gnarled carrion hound ears that Mooshga requested.")
 
-	AddQuestStepChat(Quest, 2, "I should return to Mooshga", 1, "I have collected fifteen gnarled carrion hound ears.  I should return to Mooshga near the Freeport gates.", 11, 330015)
+	AddQuestStepChat(Quest, 2, "I should return to Mooshga", 1, "I should take these crab claws back to Mooshga.", 11, 330015)
 	AddQuestStepCompleteAction(Quest, 2, "QuestComplete")
 end
 
 function QuestComplete(Quest, QuestGiver, Player)
 	-- The following UpdateQuestStepDescription and UpdateTaskGroupDescription are not needed, parser adds them for completion in case stuff needs to be moved around
-	UpdateQuestStepDescription(Quest, 2, "I have returned ears to Mooshga.")
-	UpdateQuestTaskGroupDescription(Quest, 2, "I have returned the gnarled carrion hound ears to Mooshga.")
+	UpdateQuestStepDescription(Quest, 2, "I have returned crab claws to Mooshga.")
+	UpdateQuestTaskGroupDescription(Quest, 2, "I have returned the freshwater crab claws to Mooshga.")
 
-	UpdateQuestDescription(Quest, "I collected fifteen Gnarled Carrion Hound Ears and returned to Mooshga.")
+	UpdateQuestDescription(Quest, "I collected ten Huge Freshwater Crab Claws and returned to Mooshga.")
 	GiveQuestReward(Quest, Player)
 end
 
