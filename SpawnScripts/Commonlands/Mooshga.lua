@@ -32,9 +32,10 @@ function hailed(NPC, Spawn)
   end
   
   if HasCompletedQuest(Spawn, 188) and not HasQuest(Spawn, 189) then
-    AddConversationOption(conversation, "What? No thanks... I just ate.")
 	AddConversationOption(conversation, "Yes, I am. I would love more of your cooking, Mooshga.", "Quest2_Option1")
+	AddConversationOption(conversation, "What? No thanks... I just ate.")
 	StartConversation(conversation, NPC, Spawn, "You still look hungry! You hungry? Mooshga knows when people hungry. Mooshga will feed you but you do something for Mooshga first.")
+  end
 end
 
 ----------- "Hyena Jerky"
