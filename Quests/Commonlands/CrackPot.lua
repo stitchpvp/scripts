@@ -2,18 +2,18 @@
 	Script Name		:	CrackPot.lua
 	Script Purpose	:	Handles the quest, "Crack Pot"
 	Script Author	:	QuestParser (Replace this)
-	Script Date		:	7/8/2017
-	Script Notes	:
+	Script Date		:	10/6/2018
+	Script Notes	:	
 
 	Zone			:	Commonlands
-	Quest Giver		:
+	Quest Giver		:	
 	Preceded by		:	None
 	Followed by		:	None
 --]]
 
 
 function Init(Quest)
-	AddQuestStepHarvest(Quest, 1, "Collect iron clusters from cloven ore", 5, 100, "I need to collect iron clusters here in the Commonlands so Mooshga can repair her cracked pot.", 1085, nil)
+	AddQuestStepHarvest(Quest, 1, "Collect iron clusters from cloven ore", 5, 100, "I need to collect iron clusters here in the Commonlands so Mooshga can repair her cracked pot.", 1085, 331113)
 	AddQuestStepCompleteAction(Quest, 1, "Step1Complete")
 end
 
@@ -21,7 +21,7 @@ function Step1Complete(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 1, "I have collected five iron clusters.")
 	UpdateQuestTaskGroupDescription(Quest, 1, "I have collected five irons clusters.")
 
-	AddQuestStepChat(Quest, 2, "I should return to Mooshga", 1, "I should return to Mooshga outside of Freeport.", 11, nil)
+	AddQuestStepChat(Quest, 2, "I should return to Mooshga", 1, "I should return to Mooshga outside of Freeport.", 11, 330015)
 	AddQuestStepCompleteAction(Quest, 2, "QuestComplete")
 end
 

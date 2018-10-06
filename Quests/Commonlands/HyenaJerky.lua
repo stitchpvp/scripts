@@ -13,7 +13,7 @@
 
 
 function Init(Quest)
-	AddQuestStepKill(Quest, 1, "I need to collect gnarled carrion hound ears", 15, 100, "Mooshga has asked me to collect fifteen gnarled carrion hound ears.", 94, 330027, 330030)
+	AddQuestStepKill(Quest, 1, "I need to collect gnarled carrion hound ears", 15, 100, "Mooshga has asked me to collect fifteen gnarled carrion hound ears.", 94, 330027, 330029, 330030)
 	AddQuestStepCompleteAction(Quest, 1, "Step1Complete")
 end
 

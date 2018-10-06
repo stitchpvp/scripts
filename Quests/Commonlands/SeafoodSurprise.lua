@@ -13,7 +13,7 @@
 
 
 function Init(Quest)
-	AddQuestStepKill(Quest, 1, "I need to collect ten huge freshwater crab claws for Mooshga. I should look to the southeast near a tower by the ruins.", 10, 100, "I need to collect huge freshwater crab claws.", 94, 330568)
+	AddQuestStepKill(Quest, 1, "I need to collect ten huge freshwater crab claws for Mooshga. I should look to the southeast near a tower by the ruins.", 10, 100, "I need to collect huge freshwater crab claws.", 94, 330247, 330568)
 	AddQuestStepCompleteAction(Quest, 1, "Step1Complete")
 end
 
