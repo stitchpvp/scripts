@@ -90,9 +90,12 @@ function Quest2_Option2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 
-	AddConversationOption(conversation, "I'm getting hungrier by the minute." "Quest2_Option3")
+	AddConversationOption(conversation, "I'm getting hungrier by the minute.", "Quest2_Option3")
 	AddConversationOption(conversation, "Oh... I think I just lost my appetite.")
 	StartConversation(conversation, NPC, Spawn, "Mooshga need special claws from crabs. The HUGE ones. You find crabs in southeast. They live in freshwater. Near old tower there is good spot. You go find crabs and snap tasty claws off, then bring back to Mooshga.")
+end
+
+function Quest2_Option3(NPC, Spawn)
 	OfferQuest(NPC, Spawn, 189)
 end
 
