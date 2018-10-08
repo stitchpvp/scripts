@@ -1,6 +1,6 @@
 function cast(Caster)
-  CureByControlEffect(1, 1, "Cure", 0, Caster)
-  CureByControlEffect(1, 2, "Cure", 0, Caster)
-  CureByControlEffect(1, 3, "Cure", 0, Caster)
-  CureByControlEffect(1, 4, "Cure", 0, Caster)
+  CureByControlEffect(Caster, 99, 1, "Cure", 0)
+  CureByControlEffect(Caster, 99, 2, "Cure", 0)
+  CureByControlEffect(Caster, 99, 3, "Cure", 0)
+  CureByControlEffect(Caster, 99, 4, "Cure", 0)
 end

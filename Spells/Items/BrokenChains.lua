@@ -3,8 +3,8 @@ function cast(Caster, Target)
 end
 
 function proc(Caster, Target, Type, Speed)
-  CureByControlEffect(99, 4, "Cure", 0, Caster) -- Stun
-  CureByControlEffect(99, 5, "Cure", 0, Caster) -- Root
+  CureByControlEffect(Caster, 99, 4, "Cure") -- Stun
+  CureByControlEffect(Caster, 99, 5, "Cure") -- Root
   AddSpellBonus(Caster, 616, Speed)
 end
 
