@@ -6,12 +6,12 @@ function cast(Caster, Target, HateAmt, Dmg, Resistances)
 end
 
 function proc(Caster, Target, Type, HateAmt, Dmg, Resistances)
-  AddHate(Caster, Target, HateAmt)
-
   ProcDamage(Caster, Target, "Caress Feedback", 8, Dmg)
 
   if IsPlayer(Target) then
     SetTarget(Target, Caster)
+  else
+    AddHate(Caster, Target, HateAmt, 1)
   end
 end
 

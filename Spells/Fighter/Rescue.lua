@@ -1,9 +1,10 @@
 function cast(Caster, Target, ThreatPriority, ThreatAmount)
-  AddHate(Caster, Target, ThreatAmount)
   AddControlEffect(Target, 15)
 
   if IsPlayer(Target) then
     SetTarget(Target, Caster)
+  else
+    AddHate(Caster, Target, ThreatAmount, 1)
   end
 end
 

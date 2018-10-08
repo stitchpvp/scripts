@@ -6,7 +6,7 @@ function cast(Caster, Target, MinHate, MaxHate)
     SetTarget(Target, Caster)
   else
     local HateAmt = math.random(MinHate, MaxHate)
-    AddHate(Caster, Target, HateAmt)
+    AddHate(Caster, Target, HateAmt, 1)
   end
 end
 

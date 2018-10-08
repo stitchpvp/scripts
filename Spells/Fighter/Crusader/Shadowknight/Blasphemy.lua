@@ -1,5 +1,4 @@
 function cast(Caster, Target, MinVal, MaxVal, Debuff)
-  AddHate(Caster, Target, MinVal, MaxVal, 1)
   AddSpellBonus(Target, 202, Debuff)
   Interrupt(Caster, Target)
   AddControlEffect(Target, 15)
@@ -7,6 +6,8 @@ function cast(Caster, Target, MinVal, MaxVal, Debuff)
 
   if IsPlayer(Target) then
     SetTarget(Target, Caster)
+  else
+    AddHate(Caster, Target, math.random(MinVal, MaxVal), 1)
   end
 end
 
