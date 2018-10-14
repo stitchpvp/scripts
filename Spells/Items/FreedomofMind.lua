@@ -1,6 +1,6 @@
 function cast(Caster, Target)
-  AddImmunitySpell(Caster, 2)
-  AddImmunitySpell(Caster, 4)
+  AddImmunitySpell(Caster, 2, true)
+  AddImmunitySpell(Caster, 4, true)
 end
 
 function remove(Caster, Target)

@@ -2,10 +2,10 @@ function cast(Caster, Target, MinTaunt, MaxTaunt, MinTauntTick, MaxTauntTick, Mi
   local hateAmount = math.random(MinTaunt, MaxTaunt)
 
   SpellDamage(Target, 8, MinDmg, MaxDmg)
-  AddControlEffect(Target, 15)
-  AddTimer(Caster, 2000, "remove_taunt_lock")
 
   if IsPlayer(Target) then
+    AddControlEffect(Target, 15)
+    AddSpellTimer(2000, "remove_taunt_lock", Caster, Target)
     SetTarget(Target, Caster)
   else
     AddHate(Caster, Target, hateAmount, 1)
