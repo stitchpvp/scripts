@@ -1,4 +1,4 @@
-function cast(Caster, Target, Crit, Cast, Reuse, Recovery, Multi, Flurry, Potency, CritBonus, Doublecast, AbMod, AEAuto, DPS, Haste)
+function cast(Caster, Target, Crit, Cast, Reuse, Recovery, Multi, Flurry, Potency, CritBonus, Doublecast, AbMod, AEAuto, DPS, Haste, PowerCost)
   AddSpellBonus(Target, 656, Crit)
   AddSpellBonus(Target, 664, Cast)
   AddSpellBonus(Target, 662, Reuse)
@@ -12,6 +12,7 @@ function cast(Caster, Target, Crit, Cast, Reuse, Recovery, Multi, Flurry, Potenc
   AddSpellBonus(Target, 639, AEAuto)
   AddSpellBonus(Target, 629, DPS)
   AddSpellBonus(Target, 617, Haste)
+  AddSpellBonus(Target, 818, PowerCost)
 end
 
 function remove(Caster, Target)
