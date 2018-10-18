@@ -4,6 +4,6 @@ function cast(Caster, Target, Percentage, Mitigation)
   SpellHeal(Target, "Heal", hp_perc, hp_perc, 2, 1)
 end
 
-function cast(Caster, Target)
+function remove(Caster, Target)
   RemoveSpellBonus(Target)
 end
