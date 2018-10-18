@@ -1,3 +1,7 @@
-function cast(Caster, Target)
-  Resurrect(Target, 15, 15, 1)
+function cast(Caster, Target, PowerTick, Health, Percentage, SpellName)
+  Resurrect(Target, Percentage, Percentage, 1, SpellName, 2, 1)
+end
+
+function remove(Caster, Target)
+  CastSpell(Target, 18164179, 1, Caster)
 end

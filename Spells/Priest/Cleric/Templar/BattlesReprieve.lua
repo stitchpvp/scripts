@@ -1,7 +1,7 @@
-function cast(Caster, Target)
-  Resurrect(Target, 15, 15, 1)
+function cast(Caster, Target, Health, Mitigation, Percentage, SpellName)
+  Resurrect(Target, Percentage, Percentage, 1, SpellName, 2, 1)
 end
 
 function remove(Caster, Target)
-  Say(Target, "Now I would have a heal buff thing")
+  CastSpell(Target, 125639000, 1, Caster)
 end
