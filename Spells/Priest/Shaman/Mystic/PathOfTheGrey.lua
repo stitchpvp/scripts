@@ -1,4 +1,4 @@
-function cast(Caster, Target, MaxHealthMin, MaxHealthMax, Health, Percentage, SpellName)
+function cast(Caster, Target, CasterMaxHealth, Health, Percentage, SpellName)
   Resurrect(Target, Percentage, Percentage, 1, SpellName, 2, 1)
 end
 
