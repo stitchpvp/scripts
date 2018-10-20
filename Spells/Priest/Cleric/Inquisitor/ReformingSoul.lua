@@ -4,4 +4,5 @@ end
 
 function remove(Caster, Target)
   CastSpell(Target, 2177681, 1, Caster)
+  ApplySpellVisual(Target, 1563)
 end

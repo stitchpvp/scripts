@@ -1,3 +1,3 @@
 function cast(Caster, Target, Dmg)
-  SpellDamage(Target, 7, Dmg)
+  ProcDamage(Caster, Target, "Blood Siphon", 7, Dmg, Dmg)
 end

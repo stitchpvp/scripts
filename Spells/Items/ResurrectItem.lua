@@ -9,7 +9,7 @@ function cast(Caster, Target, Percentage, SpellName)
   if check ~= nil then
 	if not IsAlive(Target) and check2 == "Priest" then
 	  Resurrect(Target, Percentage, Percentage, 1, SpellName, 2, 1)
-    else
+	else
 	  SendMessage(Caster, "Target must be priest class.", "yellow")
 	end
   end

@@ -1,3 +1,3 @@
 function cast(Caster, Target, Heal)
-  SpellHeal(Target, "Blood Siphon", Heal)
+  ProcHeal(Caster, Target, "Blood Siphon", "Heal", Heal)
 end
