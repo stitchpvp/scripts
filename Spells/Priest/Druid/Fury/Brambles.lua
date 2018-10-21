@@ -1,13 +1,13 @@
 function cast(Caster, Target, Threat, SlowAmt)
-  AddHate(Caster, Target, Threat)
   AddControlEffect(Target, 2)
-  Interrupt(Caster, Target)
   SetSpellSnareValue(SlowAmt, Target)
   AddControlEffect(Target, 11)
-  AddProc(Target, 2, 5)
+  AddProc(Target, 2, 10)
 
   if IsPlayer(Target) then
-    SetTarget(Target, 0xFFFFFFFF)
+	SetTarget(Target, 0xFFFFFFFF)
+  else
+	AddHate(Caster, Target, Threat, 1)
   end
 end
 
