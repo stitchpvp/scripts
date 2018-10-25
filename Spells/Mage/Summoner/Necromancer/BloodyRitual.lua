@@ -1,7 +1,7 @@
 function cast(Caster, Target, Damage, PowerAmount)
   local hp_percentage = GetMaxHP(Target) * Damage
   local hp_check = GetHP(Target) / GetMaxHP(Target)
-  if hp_check > 0.10
+  if hp_check > 0.10 then
     ModifyHP(Target, hp_percentage)
     SpellHeal(Caster, "Power", PowerAmount)
   else
@@ -12,7 +12,7 @@ end
 function tick(Caster, Target, Damage, PowerAmount)
   local hp_percentage = GetMaxHP(Target) * Damage
   local hp_check = GetHP(Target) / GetMaxHP(Target)
-  if hp_check > 0.10
+  if hp_check > 0.10 then
     ModifyHP(Target, hp_percentage)
     SpellHeal(Caster, "Power", PowerAmount)
   else
