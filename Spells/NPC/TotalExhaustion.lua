@@ -1,4 +1,4 @@
-function cast(Caster, Target, Attributes, Haste, DPS, CastingSpeed, Mitigation)
+function cast(Caster, Target, Haste, DPS, Attributes, Accuracy, Potency, Mitigation, CastingSpeed)
   AddSpellBonus(Target, 0, Attributes)
   AddSpellBonus(Target, 1, Attributes)
   AddSpellBonus(Target, 2, Attributes)
@@ -7,6 +7,8 @@ function cast(Caster, Target, Attributes, Haste, DPS, CastingSpeed, Mitigation)
   AddSpellBonus(Target, 617, Haste)
   AddSpellBonus(Target, 629, DPS)
   AddSpellBonus(Target, 664, CastingSpeed)
+  AddSpellBonus(Target, 659, Potency)
+  AddSpellBonus(Target, 682, Accuracy)
   AddSpellBonus(Target, 200, Mitigation)
 end
 

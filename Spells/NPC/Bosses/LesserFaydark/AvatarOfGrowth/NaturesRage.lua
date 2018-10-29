@@ -36,5 +36,5 @@ function tick(Caster, Target, Power, PowerTick, HighDmgMin, HighDmgMax, HighDmgT
 end
 
 function remove(Caster, Target)
-  BlurVision(Target, 50.0)
+  BlurVision(Target, 0.0)
 end

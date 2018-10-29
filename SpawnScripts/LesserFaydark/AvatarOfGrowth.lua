@@ -32,8 +32,8 @@ function SpawnAdds(NPC)
   else
     local player = GetMostHated(NPC)
     local guardian = SpawnMob(GetZone(NPC), 2520044, false, GetX(NPC) + 20, GetY(NPC), GetZ(NPC) + 20, 90)
-    local wizard = SpawnMob(GetZone(NPC), 2520045, false, GetX(NPC) + 20, GetY(NPC), GetZ(NPC) + 20, 90)
-    local acolyte = SpawnMob(GetZone(NPC), 2520046, false, GetX(NPC) + 20, GetY(NPC), GetZ(NPC) + 20, 90)
+    local wizard = SpawnMob(GetZone(NPC), 2520045, false, GetX(NPC) + 25, GetY(NPC), GetZ(NPC) + 25, 90)
+    local acolyte = SpawnMob(GetZone(NPC), 2520046, false, GetX(NPC) + 30, GetY(NPC), GetZ(NPC) + 30, 90)
     AddHate(player, guardian, 1)
     AddHate(player, wizard, 1)
     AddHate(player, acolyte, 1)
@@ -57,14 +57,14 @@ function MothersNatureRebuke(NPC)
     local most_hated = GetMostHated(NPC)
     local group = GetGroup(most_hated)
     local player = group[math.random(#group)]
-    AddTimer(NPC, math.random(15000,17000), "MothersNatureRebuke")
 
     if not IsAlive(player) then
       local player2 = group[math.random(#group)]
-      CastSpell(player2, 96457182, 1)
+      CastSpell(player2, 96457182, 1, NPC)
     else
-      CastSpell(player, 96457182, 1)
+      CastSpell(player, 96457182, 1, NPC)
     end
+    AddTimer(NPC, math.random(15000,17000), "MothersNatureRebuke")
   end
 end
 
@@ -75,13 +75,14 @@ function CurseOfTunare(NPC)
     local most_hated = GetMostHated(NPC)
     local group = GetGroup(most_hated)
     local player = group[math.random(#group)]
-    AddTimer(NPC, math.random(25000,40000), "CurseOfTunare")
+
     if not IsAlive(player) then
       local player2 = group[math.random(#group)]
-      CastSpell(player2, 57868531, 1)
+      CastSpell(player2, 57868531, 1, NPC)
     else
-      CastSpell(player, 57868531, 1)
+      CastSpell(player, 57868531, 1, NPC)
     end
+    AddTimer(NPC, math.random(25000,40000), "CurseOfTunare")
   end
 end
 
@@ -92,14 +93,14 @@ function NaturesScorn(NPC)
     local most_hated = GetMostHated(NPC)
     local group = GetGroup(most_hated)
     local player = group[math.random(#group)]
-    AddTimer(NPC, math.random(5000,15000), "NaturesScorn")
 
     if not IsAlive(player) then
       local player2 = group[math.random(#group)]
-      CastSpell(player2, 43166296, 1)
+      CastSpell(player2, 43166296, 1, NPC)
     else
-      CastSpell(player, 43166296, 1)
+      CastSpell(player, 43166296, 1, NPC)
     end
+    AddTimer(NPC, math.random(5000,15000), "NaturesScorn")
   end
 end
 
