@@ -1,5 +1,5 @@
 function cast(Caster, Target)
-  local hp = GetHP(Target)
+  local hp = GetMaxHP(Target)
   local number = math.random(1, 3)
 
   if number == 1 then

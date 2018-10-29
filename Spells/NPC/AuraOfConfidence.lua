@@ -1,7 +1,11 @@
-function cast(Caster)
-  AddSpellBonus(Caster, 0, 30)
-  AddSpellBonus(Caster, 4, 30)
-  AddSpellBonus(Caster, 617, 50)
-  AddSpellBonus(Caster, 629, 50)
-  AddSpellBonus(Caster, 659, 50)
+function cast(Caster, Target, Attribute, Potency, Haste, DPS)
+  AddSpellBonus(Caster, 0, Attribute)
+  AddSpellBonus(Caster, 4, Attribute)
+  AddSpellBonus(Caster, 617, Potency)
+  AddSpellBonus(Caster, 629, Haste)
+  AddSpellBonus(Caster, 659, DPS)
+end
+
+function remove(Caster, Target)
+  RemoveSpellBonus(Caster)
 end
