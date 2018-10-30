@@ -9,6 +9,7 @@ function attacked(NPC)
   AddTimer(NPC, 390000, "battleweary")
   AddTimer(NPC, 510000, "combat_fatigue")
   AddTimer(NPC, 560000, "total_exhaustion")
+  AddTimer(NPC, 6000, "movement_check")
 end
 
 function debuffs(NPC)
@@ -34,10 +35,44 @@ function SpawnAdds(NPC)
     local guardian = SpawnMob(GetZone(NPC), 2520044, false, GetX(NPC) + 20, GetY(NPC), GetZ(NPC) + 20, 90)
     local wizard = SpawnMob(GetZone(NPC), 2520045, false, GetX(NPC) + 25, GetY(NPC), GetZ(NPC) + 25, 90)
     local acolyte = SpawnMob(GetZone(NPC), 2520046, false, GetX(NPC) + 30, GetY(NPC), GetZ(NPC) + 30, 90)
+    local acolyte_2 = SpawnMob(GetZone(NPC), 2520046, false, GetX(NPC) + 35, GetY(NPC), GetZ(NPC) + 35, 90)
     AddHate(player, guardian, 1)
     AddHate(player, wizard, 1)
     AddHate(player, acolyte, 1)
+    AddHate(player, acolyte_2, 1)
     AddTimer(NPC, 100000, "SpawnAdds")
+  end
+end
+
+function movement_check(NPC, Player)
+  if IsInCombat(NPC) == false then
+    return
+  else
+    local most_hated = GetMostHated(NPC)
+    local sendmsgtoall = GetGroup(most_hated)
+
+    if HasGroup(Player) and HasSpellEffect(Player, 92091026) and GetTempVariable(Player, "moved") == nil then
+      SpawnLurker(NPC, Player)
+      for _, players in ipairs(sendmsgtoall) do
+        SendPopUpMessage(players, "A lurker has spawned at " .. GetName(Player) .. "'s location due to lack of movement!'", 255, 0, 0)
+        SendMessage(players, "A lurker has spawned at " .. GetName(Player) .. "'s location due to lack of movement!", "red")
+      end
+    else
+      SpawnLurker(NPC, Player)
+      SendPopUpMessage(Player, "A lurker has spawned at " .. GetName(Player) .. "'s location due to lack of movement!'", 255, 0, 0)
+      SendMessage(Player, "A lurker has spawned at " .. GetName(Player) .. "'s location due to lack of movement!", "red")
+    end
+    AddTimer(NPC, 6000, "movement_check")
+  end
+end
+
+function SpawnLurker(NPC, Player)
+  if IsInCombat(NPC) == false then
+    return
+  else
+    local most_hated = GetMostHated(NPC)
+    local lurker = SpawnMob(GetZone(NPC), 25200043, false, GetX(Player), GetY(Player), GetZ(Player), 90)
+    AddHate(most_hated, lurker, 1)
   end
 end
 
@@ -58,11 +93,15 @@ function MotherNaturesRebuke(NPC)
     local group = GetGroup(most_hated)
     local player = group[math.random(#group)]
 
-    if not IsAlive(player) then
-      local player2 = group[math.random(#group)]
-      CastSpell(player2, 96457182, 1, NPC)
+    if not HasGroup(most_hated) then
+      CastSpell(most_hated, 96457182, 1, NPC)
     else
-      CastSpell(player, 96457182, 1, NPC)
+      if not IsAlive(player) then
+        local player2 = group[math.random(#group)]
+        CastSpell(player2, 96457182, 1, NPC)
+      else
+        CastSpell(player, 96457182, 1, NPC)
+      end
     end
     AddTimer(NPC, math.random(15000,17000), "MotherNaturesRebuke")
   end
@@ -76,11 +115,15 @@ function CurseOfTunare(NPC)
     local group = GetGroup(most_hated)
     local player = group[math.random(#group)]
 
-    if not IsAlive(player) then
-      local player2 = group[math.random(#group)]
-      CastSpell(player2, 57868531, 1, NPC)
+    if not HasGroup(most_hated) then
+      CastSpell(most_hated, 57868531, 1, NPC)
     else
-      CastSpell(player, 57868531, 1, NPC)
+      if not IsAlive(player) then
+        local player2 = group[math.random(#group)]
+        CastSpell(player2, 57868531, 1, NPC)
+      else
+        CastSpell(player, 57868531, 1, NPC)
+      end
     end
     AddTimer(NPC, math.random(25000,40000), "CurseOfTunare")
   end
@@ -94,11 +137,15 @@ function NaturesScorn(NPC)
     local group = GetGroup(most_hated)
     local player = group[math.random(#group)]
 
-    if not IsAlive(player) then
-      local player2 = group[math.random(#group)]
-      CastSpell(player2, 43166296, 1, NPC)
+    if not HasGroup(most_hated) then
+      CastSpell(most_hated, 43166296, 1, NPC)
     else
-      CastSpell(player, 43166296, 1, NPC)
+      if not IsAlive(player) then
+        local player2 = group[math.random(#group)]
+        CastSpell(player2, 43166296, 1, NPC)
+      else
+        CastSpell(player, 43166296, 1, NPC)
+      end
     end
     AddTimer(NPC, math.random(5000,15000), "NaturesScorn")
   end
@@ -141,13 +188,19 @@ function death(NPC)
 
   if guardian ~= nil then
     Despawn(guardian)
+    Despawn(guardian)
+    Despawn(guardian)
   end
 
   if wizard ~= nil then
     Despawn(wizard)
+    Despawn(wizard)
+    Despawn(wizard)
   end
 
   if acolyte ~= nil then
+    Despawn(acolyte)
+    Despawn(acolyte)
     Despawn(acolyte)
   end
   DropChest(NPC)
