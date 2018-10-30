@@ -4,7 +4,7 @@ function attacked(NPC)
   AddTimer(NPC, 5000, "SpawnAdds")
   AddTimer(NPC, 45000, "MotherNaturesRebuke")
   AddTimer(NPC, 45000, "NaturesScorn")
-  AddTimer(NPC, 30000, "NaturesRage")
+  AddTimer(NPC, 10000, "NaturesRage")
   AddTimer(NPC, 10000, "CurseOfTunare")
   AddTimer(NPC, 390000, "battleweary")
   AddTimer(NPC, 510000, "combat_fatigue")
@@ -37,7 +37,7 @@ function SpawnAdds(NPC)
     AddHate(player, guardian, 1)
     AddHate(player, wizard, 1)
     AddHate(player, acolyte, 1)
-    AddTimer(NPC, 25000, "SpawnAdds")
+    AddTimer(NPC, 100000, "SpawnAdds")
   end
 end
 
@@ -46,11 +46,11 @@ function NaturesRage(NPC)
     return
   else
     CastSpell(NPC, 62859182, 1, NPC)
-    AddTimer(NPC, 30000, "NaturesRage")
+    AddTimer(NPC, 50000, "NaturesRage")
   end
 end
 
-function MothersNatureRebuke(NPC)
+function MotherNaturesRebuke(NPC)
   if IsInCombat(NPC) == false then
     return
   else
@@ -64,7 +64,7 @@ function MothersNatureRebuke(NPC)
     else
       CastSpell(player, 96457182, 1, NPC)
     end
-    AddTimer(NPC, math.random(15000,17000), "MothersNatureRebuke")
+    AddTimer(NPC, math.random(15000,17000), "MotherNaturesRebuke")
   end
 end
 

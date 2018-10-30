@@ -11,7 +11,7 @@ end
 function tick(Caster, Target, Health, HealthTick, Power, PowerTick)
   local powertick_percentage = GetMaxPower(Target) * PowerTick
   local hptick_percentage = GetMaxHP(Target) * HealthTick
-  ProcDamage(Caster, Target, "Mother Nature's Rebuke", 7, hptick_percentage, hptick_percentage)
+  ProcDamage(Caster, Target, "Bolt From Beyond", 7, hptick_percentage, hptick_percentage)
   ModifyPower(Target, powertick_percentage)
 end
 
