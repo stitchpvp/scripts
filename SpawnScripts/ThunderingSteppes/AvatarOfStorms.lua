@@ -1,6 +1,6 @@
 function attacked(NPC, Player)
   Say(NPC, "You dare challenge the power of the true stormlord. You shall pay dearly for this affront!")
-  AddTimer(NPC, 1000, "debuffs"))
+  AddTimer(NPC, 1000, "debuffs")
   AddTimer(NPC, 45000, "SpawnAdds")
   AddTimer(NPC, 390000, "battleweary")
   AddTimer(NPC, 510000, "combat_fatigue")
