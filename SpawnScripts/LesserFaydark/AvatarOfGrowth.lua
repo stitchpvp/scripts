@@ -120,9 +120,9 @@ function CurseOfTunare(NPC)
     else
       if not IsAlive(player) then
         local player2 = group[math.random(#group)]
-        CastSpell(player2, 57868531, 1, NPC)
+        CastSpell(player2, 57868531, 1)
       else
-        CastSpell(player, 57868531, 1, NPC)
+        CastSpell(player, 57868531, 1)
       end
     end
     AddTimer(NPC, math.random(25000,40000), "CurseOfTunare")
