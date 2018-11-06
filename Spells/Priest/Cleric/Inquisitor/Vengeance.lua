@@ -9,7 +9,7 @@ function proc(Caster, Target, ProcType, MinDmg, MaxDmg)
 
     RemoveTriggerFromSpell()
 
-    ProcDamage(Target, spell_caster, "Vengeance", 7, MinDmg, MaxDmg)
+    ProcDamage(spell_caster, Caster, "Vengeance", 7, MinDmg, MaxDmg)
   end
 end
 
