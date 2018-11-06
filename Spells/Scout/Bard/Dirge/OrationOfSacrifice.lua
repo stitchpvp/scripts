@@ -8,19 +8,19 @@ function precast(Caster, Target)
   end
 end
 
-function cast(Caster, Target, MinHeal, MaxHeal)
-  local hp_percentage = GetHP(Caster) * -0.1
+function cast(Caster, Target, Heal, Percentage)
+  local hp_percentage = GetMaxHP(Caster) * Percentage
 
-  SpellHeal(Target, "Heal", MinHeal, MaxHeal)
+  SpellHeal(Target, "Heal", Heal)
   AddControlEffect(Caster, 2)
   ModifyHP(Caster, hp_percentage)
 end
 
-function tick(Caster, Target, MinHeal, MaxHeal)
+function tick(Caster, Target, Heal, Percentage)
   local hp_check = GetHP(Caster) / GetMaxHP(Caster)
-  local hp_percentage = GetHP(Caster) * -0.1
+  local hp_percentage = GetMaxHP(Caster) * Percentage
 
-  SpellHeal(Target, "Heal", MinHeal, MaxHeal)
+  SpellHeal(Target, "Heal", Heal)
   if hp_check <= 0.1 then
     CancelSpell()
   else

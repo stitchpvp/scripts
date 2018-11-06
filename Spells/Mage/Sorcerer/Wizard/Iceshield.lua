@@ -4,7 +4,8 @@ function cast(Caster, Target)
 end
 
 function proc(Caster, Target, ProcType, MinDmg, MaxDmg)
-  ProcDamage(Caster, Target, "Frost Spikes", 4, MinDmg, MaxDmg)
+  local spell_caster = GetCaster()
+  ProcDamage(spell_caster, Target, "Frost Spikes", 4, MinDmg, MaxDmg)
   RemoveTriggerFromSpell()
 end
 
