@@ -11,7 +11,7 @@ end
 function proc(Caster, Target, ProcType, MinDmg, MaxDmg)
   if GetSpellTriggerCount() > 0 then
     local spell_caster = GetCaster()
-    CastSpell(spell_caster, 227129044, 1, Target)
+    CastSpell(Target, 227129044, 1, spell_caster)
     RemoveTriggerFromSpell()
   end
 end

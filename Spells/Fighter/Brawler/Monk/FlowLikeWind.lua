@@ -1,6 +1,6 @@
 function cast(Caster, Target, AttackSpeed, DefenseDebuff, OffenseBuff, MinDmg, MaxDmg, SnareAmount)
   local weapon = GetEquippedItemBySlot(Caster, 0)
-  local proc_chance = GetProcPercentageForWeapon(weapon, 5.0)
+  local proc_chance = GetProcPercentageForWeapon(weapon, 2.0)
 
   AddProc(Caster, 3, proc_chance)
   AddSpellBonus(Caster, 617, AttackSpeed)
