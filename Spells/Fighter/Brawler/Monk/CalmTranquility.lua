@@ -4,5 +4,5 @@ function cast(Caster, Target, CastSpeed, AttackSpeed)
 end
 
 function remove(Caster, Target)
-  RemoveSpellBonus(Caster)
+  RemoveSpellBonus(Target)
 end

@@ -3,7 +3,7 @@ function cast(Caster, Target)
   AddProc(Caster, 1, 100)
 end
 
-function proc(Caster, Target, MinDmg, MaxDmg)
+function proc(Caster, Target, ProcType, MinDmg, MaxDmg)
   ProcDamage(Caster, Target, "Jolting Strike", 5, MinDmg, MaxDmg)
   RemoveTriggerFromSpell()
 end

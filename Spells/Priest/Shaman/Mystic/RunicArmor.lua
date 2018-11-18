@@ -1,5 +1,5 @@
 function cast(Caster, Target, WardAmt, MitAmt)
-  AddWard(Target, WardAmt, 1, 1)
+  AddWard(Target, WardAmt, 1, 2)
 
   if GetArchetypeName(Target) ~= "Fighter" then
     AddSpellBonus(Target, 204, MitAmt)

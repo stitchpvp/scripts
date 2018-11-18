@@ -1,5 +1,5 @@
 function cast(Caster, Target, HateLoss)
-AddSpellBonus(Caster, 624, HateLoss)
+  AddSpellBonus(Caster, 624, HateLoss)
   AddProc(Caster, 3, 25)
 end
 
