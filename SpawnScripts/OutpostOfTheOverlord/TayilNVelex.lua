@@ -5,19 +5,26 @@ end
 function hailed(NPC, Spawn)
 	local conversation = CreateConversation()
 
-	AddConversationOption(conversation, "You were expecting me? Who are you?", "part1_intro")
-	AddConversationOption(conversation, "How do I leave the island?", "leave")
-	AddConversationOption(conversation, "I should be going.")
-	StartConversation(conversation, NPC, Spawn, "Ah, there you are, Outpost. I have been expecting you. There is much work ahead of us in establishing Freeport's dominance over this island. The Overlord's troops have secured the outpost, but there is a growing nuisance on the other side of the island that must be addressed. That is where you come in.")
-
-	--AddConversationOption(conversation, "I am ready.", "Option3")
-	--AddConversationOption(conversation, "Not just yet.")
-	--StartConversation(conversation, NPC, Spawn, "So, Outpost, are you ready to learn more about the outpost and perform your first service for the Overlord?")
-
-	--AddConversationOption(conversation, "I'll keep that in mind. So who are the inhabitants?", "Option4")
-	--AddConversationOption(conversation, "We'll discuss this later.")
-	--StartConversation(conversation, NPC, Spawn, "This outpost was recently established as a training ground for potential citizens of Freeport to hone their skills. Our first scouts on the island reported it as being uninhabited, perfect for our needs. It soon became clear that the initial reports were incorrect, and those scouts have been permanently reassigned to the bottom of the bay. Such is the price of failure.")
-
+  if not HasQuest(Spawn, 184) then
+    AddConversationOption(conversation, "You were expecting me? Who are you?", "part1_intro")
+	  AddConversationOption(conversation, "How do I leave the island?", "leave")
+	  AddConversationOption(conversation, "I should be going.")
+	  StartConversation(conversation, NPC, Spawn, "Ah, there you are, " ... GetName(Spawn) ... ". I have been expecting you. There is much work ahead of us in establishing Freeport's dominance over this island. The Overlord's troops have secured the outpost, but there is a growing nuisance on the other side of the island that must be addressed. That is where you come in.")
+  elseif HasQuest(Spawn, 184) and GetQuestStep(Spawn, 184) == 1 then
+	  AddConversationOption(conversation, "I haven't completed my training yet, I'll return to Darg.")
+    AddConversationOption(conversation, "How do I leave the island?", "leave")
+	  AddConversationOption(conversation, "Not just yet.")
+	  StartConversation(conversation, NPC, Spawn, "So, " ... GetName(Spawn) ... ", are you ready to learn more about the outpost and perform your first service for the Overlord?")
+  elseif HasQuest(Spawn, 184) and GetQuestStep(Spawn, 184) == 4 then
+    AddConversationOption(conversation, "I am ready." "completed_quest")
+    AddConversationOption(conversation, "How do I leave the island?", "leave")
+	  AddConversationOption(conversation, "Not just yet.")
+	  StartConversation(conversation, NPC, Spawn, "So, " ... GetName(Spawn) ... ", are you ready to learn more about the outpost and perform your first service for the Overlord?")
+  elseif HasCompletedQuest(Spawn, 184) and not HasQuest(Spawn, 192) then
+    AddConversationOption(conversation, "I'll keep that in mind. So who are the inhabitants?", "Option4")
+  	AddConversationOption(conversation, "We'll discuss this later.")
+  	StartConversation(conversation, NPC, Spawn, "This outpost was recently established as a training ground for potential citizens of Freeport to hone their skills. Our first scouts on the island reported it as being uninhabited, perfect for our needs. It soon became clear that the initial reports were incorrect, and those scouts have been permanently reassigned to the bottom of the bay. Such is the price of failure.")
+  end
 	--AddConversationOption(conversation, "I helped Gorga gather supplies.", "Option6")
 	--AddConversationOption(conversation, "How do I leave the island?", "Option5")
 	--AddConversationOption(conversation, "I still have some more hunting to do.")
@@ -25,6 +32,13 @@ function hailed(NPC, Spawn)
 
 	--AddConversationOption(conversation, "I am ready for my next assignment.", "Option7")
 	--StartConversation(conversation, NPC, Spawn, "So, Outpost, are you ready to prove your worth again?")
+end
+
+function completed_quest(NPC, Spawn)
+  AddConversationOption(conversation, "I'll keep that in mind. So who are the inhabitants?", "Option4")
+	AddConversationOption(conversation, "We'll discuss this later.")
+	StartConversation(conversation, NPC, Spawn, "This outpost was recently established as a training ground for potential citizens of Freeport to hone their skills. Our first scouts on the island reported it as being uninhabited, perfect for our needs. It soon became clear that the initial reports were incorrect, and those scouts have been permanently reassigned to the bottom of the bay. Such is the price of failure.")
+  SetStepComplete(Spawn, 184, 4)
 end
 
 function leave(NPC, Spawn)
@@ -113,26 +127,20 @@ function Option3(NPC, Spawn)
 	StartConversation(conversation, NPC, Spawn, "This outpost was recently established as a training ground for potential citizens of Freeport to hone their skills. Our first scouts on the island reported it as being uninhabited, perfect for our needs. It soon became clear that the initial reports were incorrect, and those scouts have been permanently reassigned to the bottom of the bay. Such is the price of failure.")
 end
 
-function Option17(NPC, Spawn)
-	local conversation = CreateConversation()
-
-	AddConversationOption(conversation, "That sounds like a lot of effort.")
-	StartConversation(conversation, NPC, Spawn, "The intruders are a sect of the Tunarian Alliance, a lowly order of vermin originating from Qeynos. As a true servant of the Overlord, your duty is to eliminate them. This should prove extremely useful in preparing you for the challenges that lie ahead after you leave the outpost.")
-end
-
 function Option4(NPC, Spawn)
 	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "So I should go wipe them out?", "Option18")
+  AddConversationOption(conversation, "That sounds like a lot of effort.")
 	StartConversation(conversation, NPC, Spawn, "The intruders are a sect of the Tunarian Alliance, a lowly order of vermin originating from Qeynos. As a true servant of the Overlord, your duty is to eliminate them. This should prove extremely useful in preparing you for the challenges that lie ahead after you leave the outpost.")
 end
 
 function Option18(NPC, Spawn)
 	local conversation = CreateConversation()
 
-	AddConversationOption(conversation, "Perhaps later.")
 	AddConversationOption(conversation, "I am ready.", "Option19")
-	StartConversation(conversation, NPC, Spawn, "Not just yet, Outpost. You will strike against those Qeynosian scum when the time is right. First we need to see if that weapon of yours is working! Are you ready for your first test?")
+  AddConversationOption(conversation, "Perhaps later.")
+	StartConversation(conversation, NPC, Spawn, "Not just yet, " ... GetName(Spawn) ... ". You will strike against those Qeynosian scum when the time is right. First we need to see if that weapon of yours is working! Are you ready for your first test?")
 end
 
 function Option19(NPC, Spawn)
@@ -146,6 +154,7 @@ function Option20(NPC, Spawn)
 	local conversation = CreateConversation()
 
 	StartConversation(conversation, NPC, Spawn, "Report back to me when your duties with Chef Gorga are done.")
+  OfferQuest(NPC, Spawn, 192)
 end
 
 function Option5(NPC, Spawn)
