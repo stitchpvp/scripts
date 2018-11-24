@@ -6,7 +6,7 @@ function hailed(NPC, Spawn)
 		AddConversationOption(conversation, "I am ready to fight.", "fight")
 		AddConversationOption(conversation, "What can you teach me about combat?", "Main_1")
 		AddConversationOption(conversation, "I'll come back later.")
-		StartConversation(conversation, NPC, Spawn, "Greetings, " ... GetName(Spawn) ... ". I've been stationed here at the outpost to teach new recruits the finer points of combat. After all, it's our duty to honor the Overlord by achieving legendary victories in his glorious name.")
+		StartConversation(conversation, NPC, Spawn, "Greetings, " .. GetName(Spawn) .. ". I've been stationed here at the outpost to teach new recruits the finer points of combat. After all, it's our duty to honor the Overlord by achieving legendary victories in his glorious name.")
 	elseif HasQuest(Spawn, 184) and GetQuestStep(Spawn, 184) == 3 then
 		AddConversationOption(conversation, "I defeated one of the sparring partners.", "fight_completed")
 		AddConversationOption(conversation, "I need you to explain combat to me again.", "Main_1")
@@ -14,11 +14,11 @@ function hailed(NPC, Spawn)
 	elseif HasQuest(Spawn, 184) and GetQuestStep(Spawn, 184) == 4 then
 		AddConversationOption(conversation, "What can you teach me about combat?", "Main_1")
 		AddConversationOption(conversation, "I'll come back later.")
-		StartConversation(conversation, NPC, Spawn, "Greetings, " ... GetName(Spawn) ... ". I've been stationed here at the outpost to teach new recruits the finer points of combat. After all, it's our duty to honor the Overlord by achieving legendary victories in his glorious name.")
+		StartConversation(conversation, NPC, Spawn, "Greetings, " .. GetName(Spawn) .. ". I've been stationed here at the outpost to teach new recruits the finer points of combat. After all, it's our duty to honor the Overlord by achieving legendary victories in his glorious name.")
   elseif not HasQuest(Spawn, 184) then
 		AddConversationOption(conversation, "What can you teach me about combat?", "Main_1")
 		AddConversationOption(conversation, "I'll come back later.")
-		StartConversation(conversation, NPC, Spawn, "Greetings, " ... GetName(Spawn) ... ". I've been stationed here at the outpost to teach new recruits the finer points of combat. After all, it's our duty to honor the Overlord by achieving legendary victories in his glorious name.")
+		StartConversation(conversation, NPC, Spawn, "Greetings, " .. GetName(Spawn) .. ". I've been stationed here at the outpost to teach new recruits the finer points of combat. After all, it's our duty to honor the Overlord by achieving legendary victories in his glorious name.")
 	end
 end
 

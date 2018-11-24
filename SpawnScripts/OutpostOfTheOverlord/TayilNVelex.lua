@@ -9,17 +9,17 @@ function hailed(NPC, Spawn)
     AddConversationOption(conversation, "You were expecting me? Who are you?", "part1_intro")
 	  AddConversationOption(conversation, "How do I leave the island?", "leave")
 	  AddConversationOption(conversation, "I should be going.")
-	  StartConversation(conversation, NPC, Spawn, "Ah, there you are, " ... GetName(Spawn) ... ". I have been expecting you. There is much work ahead of us in establishing Freeport's dominance over this island. The Overlord's troops have secured the outpost, but there is a growing nuisance on the other side of the island that must be addressed. That is where you come in.")
+	  StartConversation(conversation, NPC, Spawn, "Ah, there you are, " .. GetName(Spawn) .. ". I have been expecting you. There is much work ahead of us in establishing Freeport's dominance over this island. The Overlord's troops have secured the outpost, but there is a growing nuisance on the other side of the island that must be addressed. That is where you come in.")
   elseif HasQuest(Spawn, 184) and GetQuestStep(Spawn, 184) == 1 then
 	  AddConversationOption(conversation, "I haven't completed my training yet, I'll return to Darg.")
     AddConversationOption(conversation, "How do I leave the island?", "leave")
 	  AddConversationOption(conversation, "Not just yet.")
-	  StartConversation(conversation, NPC, Spawn, "So, " ... GetName(Spawn) ... ", are you ready to learn more about the outpost and perform your first service for the Overlord?")
+	  StartConversation(conversation, NPC, Spawn, "So, " .. GetName(Spawn) .. ", are you ready to learn more about the outpost and perform your first service for the Overlord?")
   elseif HasQuest(Spawn, 184) and GetQuestStep(Spawn, 184) == 4 then
     AddConversationOption(conversation, "I am ready." "completed_quest")
     AddConversationOption(conversation, "How do I leave the island?", "leave")
 	  AddConversationOption(conversation, "Not just yet.")
-	  StartConversation(conversation, NPC, Spawn, "So, " ... GetName(Spawn) ... ", are you ready to learn more about the outpost and perform your first service for the Overlord?")
+	  StartConversation(conversation, NPC, Spawn, "So, " .. GetName(Spawn) .. ", are you ready to learn more about the outpost and perform your first service for the Overlord?")
   elseif HasCompletedQuest(Spawn, 184) and not HasQuest(Spawn, 192) then
     AddConversationOption(conversation, "I'll keep that in mind. So who are the inhabitants?", "Option4")
   	AddConversationOption(conversation, "We'll discuss this later.")
@@ -140,7 +140,7 @@ function Option18(NPC, Spawn)
 
 	AddConversationOption(conversation, "I am ready.", "Option19")
   AddConversationOption(conversation, "Perhaps later.")
-	StartConversation(conversation, NPC, Spawn, "Not just yet, " ... GetName(Spawn) ... ". You will strike against those Qeynosian scum when the time is right. First we need to see if that weapon of yours is working! Are you ready for your first test?")
+	StartConversation(conversation, NPC, Spawn, "Not just yet, " .. GetName(Spawn) .. ". You will strike against those Qeynosian scum when the time is right. First we need to see if that weapon of yours is working! Are you ready for your first test?")
 end
 
 function Option19(NPC, Spawn)

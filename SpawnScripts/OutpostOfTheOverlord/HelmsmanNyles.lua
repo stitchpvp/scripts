@@ -8,3 +8,4 @@ function hailed(NPC, Spawn)
   elseif choice == 3 then
   	Say(NPC, "Land!  I see land!", Spawn)
   end
+end

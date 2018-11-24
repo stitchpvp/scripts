@@ -11,3 +11,4 @@ function hailed(NPC, Spawn)
   	Say(NPC, "I hate rats, every time we dock they get on board and eat our supplies.", Spawn)
     PlayAnimation(NPC, 10745, Spawn)
   end
+end

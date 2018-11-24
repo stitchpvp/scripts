@@ -17,6 +17,7 @@ function healthchanged(NPC, Spawn)
       SpawnSet(NPC, "show_level", "0")
       Say(NPC, "Well done!", Spawn)
       AddTimer(NPC, 5000, "next_emote")
+    end
   end
 end
 

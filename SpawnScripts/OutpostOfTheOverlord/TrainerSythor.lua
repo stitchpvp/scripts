@@ -26,7 +26,7 @@ function Option2(NPC, Spawn)
 
 	AddConversationOption(conversation, "Who uses Spells?", "Option3")
   AddConversationOption(conversation, "I will return for instructions later.")
-	StartConversation(conversation, NPC, Spawn, "A Spell is a magical ability. Spells can have a variety of uses. Some allow you to damage an enemy, while others might provide benefits to yourself or an ally. You can hold your mouse pointer over a Spell's icon to see a description of what it does, or right-click on it and select "Examine."")
+	StartConversation(conversation, NPC, Spawn, "A Spell is a magical ability. Spells can have a variety of uses. Some allow you to damage an enemy, while others might provide benefits to yourself or an ally. You can hold your mouse pointer over a Spell's icon to see a description of what it does, or right-click on it and select \"Examine.\"")
 end
 
 function Option3(NPC, Spawn)

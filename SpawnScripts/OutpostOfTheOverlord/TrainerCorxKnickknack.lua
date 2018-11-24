@@ -72,7 +72,7 @@ function Option9(NPC, Spawn)
 	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "Why are some items marked \"No Value\" or \"No Trade\"?", "Option10")
-	StartConversation(conversation, NPC, Spawn, "An item can be sold to a non-player merchant for cash unless it has the \"No Value\" flag on it. Items can be sold or traded to another player unless it has the "No Trade" flag. If an item says it is "Lore," you can only have one of them on your character at a time.")
+	StartConversation(conversation, NPC, Spawn, "An item can be sold to a non-player merchant for cash unless it has the \"No Value\" flag on it. Items can be sold or traded to another player unless it has the \"No Trade\" flag. If an item says it is \"Lore,\" you can only have one of them on your character at a time.")
 end
 
 function Option10(NPC, Spawn)

@@ -4,7 +4,7 @@ function hailed(NPC, Spawn)
 
 	AddConversationOption(conversation, "Teach me about interacting with people and objects around Norrath.", "Main")
   AddConversationOption(conversation, "I'll return for instruction later.")
-	StartConversation(conversation, NPC, Spawn, "Hello there, " ... GetName(Spawn) ... ". So you're the new addition to the outpost that we've been hearing about. I've been stationed here by the Overlord to instruct you in ways that you can interact with the world around you.")
+	StartConversation(conversation, NPC, Spawn, "Hello there, " .. GetName(Spawn) .. ". So you're the new addition to the outpost that we've been hearing about. I've been stationed here by the Overlord to instruct you in ways that you can interact with the world around you.")
 end
 
 function Main(NPC, Spawn)

@@ -49,7 +49,7 @@ function Option5(NPC, Spawn)
 
 	AddConversationOption(conversation, "What does the level indicate?", "Option6")
   AddConversationOption(conversation, "I will learn this lesson later.")
-	StartConversation(conversation, NPC, Spawn, "The Target window tells you several important facts, which collectively form what is referred to as the "con" (overall challenge) of the opponent. It shows you the numerical level of the creature you have targeted, a color to indicate its relative level range, up or down arrows to indicate toughness, and indicators that tell you if the encounter is normal, heroic, or epic.")
+	StartConversation(conversation, NPC, Spawn, "The Target window tells you several important facts, which collectively form what is referred to as the \"con\" (overall challenge) of the opponent. It shows you the numerical level of the creature you have targeted, a color to indicate its relative level range, up or down arrows to indicate toughness, and indicators that tell you if the encounter is normal, heroic, or epic.")
 end
 
 function Option6(NPC, Spawn)
