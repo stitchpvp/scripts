@@ -106,7 +106,7 @@ function Option2_3(NPC, Spawn)
 	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "How do I go about attacking an NPC?", "Main_3")
-	StartConversation(conversation, NPC, Spawn, "Well, you're talking to me, so you know at least one way! You can either right-click and select "hail," click on them if that's their default action, or target them and hit the H key.")
+	StartConversation(conversation, NPC, Spawn, "Well, you're talking to me, so you know at least one way! You can either right-click and select \"hail,\" click on them if that's their default action, or target them and hit the H key.")
 end
 
 function Option3(NPC, Spawn)

@@ -23,12 +23,14 @@ function hailed(NPC, Spawn)
 end
 
 function fight(NPC, Spawn)
+	local conversation = CreateConversation()
 	AddConversationOption(conversation, "I will return.")
 	StartConversation(conversation, NPC, Spawn, "Very well. The nearby sparring partners to my left are all looking to fight.  They may hurt you, but they won't kill you. Return to me once you've bested one of them in combat.")
 	SetStepComplete(Spawn, 184, 1)
 end
 
 function fight_completed(NPC, Spawn)
+	local conversation = CreateConversation()
 	AddConversationOption(conversation, "Is there anything else I can do?", "fight_completed_2")
 	AddConversationOption(conversation, "I may return later.")
 	StartConversation(conversation, NPC, Spawn, "Good. The stronger you are the more use you are to us.")
@@ -36,6 +38,7 @@ function fight_completed(NPC, Spawn)
 end
 
 function fight_completed_2(NPC, Spawn)
+	local conversation = CreateConversation()
 	AddConversationOption(conversation, "I will go speak with her.")
 	StartConversation(conversation, NPC, Spawn, "I'm sure of it! Go speak with Tayil N'Velex, she is just south of Sythor's Spire.")
 end

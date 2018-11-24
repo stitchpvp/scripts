@@ -47,7 +47,7 @@ function Option6(NPC, Spawn)
 
 	AddConversationOption(conversation, "I want to learn about mending items.", "Option7")
 	AddConversationOption(conversation, "I'll return for training later.")
-	StartConversation(conversation, NPC, Spawn, "If you choose to join a guild made up of your fellow players one day, you can access your guild bank by right-clicking on a banker and selecting "Guild Bank."")
+	StartConversation(conversation, NPC, Spawn, "If you choose to join a guild made up of your fellow players one day, you can access your guild bank by right-clicking on a banker and selecting \"Guild Bank.\"")
 end
 
 function Option7(NPC, Spawn)

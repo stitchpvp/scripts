@@ -80,7 +80,7 @@ function Option10(NPC, Spawn)
 	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "What does it mean when an item says it is \"Attuneable\"?", "Option11")
-	StartConversation(conversation, NPC, Spawn, "Some items are marked \"No Value\" because they are easy to obtain, such as harvested goods. You have to work to earn wealth, Rixan! Items are marked "No Trade" in order to ensure that you earn them yourself, such as defeating a very tough monster or completing a long quest.")
+	StartConversation(conversation, NPC, Spawn, "Some items are marked \"No Value\" because they are easy to obtain, such as harvested goods. You have to work to earn wealth, Rixan! Items are marked \"No Trade\" in order to ensure that you earn them yourself, such as defeating a very tough monster or completing a long quest.")
 end
 
 function Option11(NPC, Spawn)
@@ -89,7 +89,7 @@ function Option11(NPC, Spawn)
 
 	AddConversationOption(conversation, "How do I manage my inventory?", "Option12")
   AddConversationOption(conversation, "I will return for instruction later.")
-	StartConversation(conversation, NPC, Spawn, "If an item is marked \"Attuneable,\" you must attune it to yourself before it provides any benefits. You'll notice a message on screen when you are wearing an item that must be attuned. To attune it, right-click on the item and select "Attune."  Once attuned, that item can no longer be traded or sold to another player.")
+	StartConversation(conversation, NPC, Spawn, "If an item is marked \"Attuneable,\" you must attune it to yourself before it provides any benefits. You'll notice a message on screen when you are wearing an item that must be attuned. To attune it, right-click on the item and select \"Attune.\"  Once attuned, that item can no longer be traded or sold to another player.")
 end
 
 function Option12(NPC, Spawn)

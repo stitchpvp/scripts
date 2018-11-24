@@ -23,6 +23,7 @@ function auto_attack_tick(NPC, Spawn)
     if hp_percent <= 0.10 then
       SetStepComplete(Spawn, 184, 2)
     end
+  end
 
   if hp_percent <= 0.10 then
     ClearHate(NPC, Spawn)

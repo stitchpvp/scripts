@@ -152,5 +152,5 @@ function Option20(NPC, Spawn)
 
 	AddConversationOption(conversation, "I have more questions.", "Option1")
   AddConversationOption(conversation, "I will return for instructions later.")
-	StartConversation(conversation, NPC, Spawn, "Your Spells and Combat Arts can easily be organized according to your personal taste. Just open your Knowledge Book and click the "Sort" button in the upper right corner. This allows you to organize your Spells and Arts for easy access to the abilities you wish to use.")
+	StartConversation(conversation, NPC, Spawn, "Your Spells and Combat Arts can easily be organized according to your personal taste. Just open your Knowledge Book and click the \"Sort\" button in the upper right corner. This allows you to organize your Spells and Arts for easy access to the abilities you wish to use.")
 end
