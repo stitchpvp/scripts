@@ -89,7 +89,7 @@ function Option12(NPC, Spawn)
 
 	AddConversationOption(conversation, "I have more questions.", "Option1")
   AddConversationOption(conversation, "I will return for instructions later.")
-	StartConversation(conversation, NPC, Spawn, "To use a Spell, Combat Art, or Ability, drag its icon from your Knowledge Book onto your hotbar. Some have already been placed there for you. To use one, simply click its icon on your hotbar or press the key assigned to it. You can open additional hotbars by right-clicking on a hotbar and selecting "Open New Hotbar."")
+	StartConversation(conversation, NPC, Spawn, "To use a Spell, Combat Art, or Ability, drag its icon from your Knowledge Book onto your hotbar. Some have already been placed there for you. To use one, simply click its icon on your hotbar or press the key assigned to it. You can open additional hotbars by right-clicking on a hotbar and selecting \"Open New Hotbar.\"")
 end
 
 function Option14(NPC, Spawn)

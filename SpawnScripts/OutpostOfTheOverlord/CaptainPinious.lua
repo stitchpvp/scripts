@@ -58,7 +58,7 @@ function Main_5(NPC, Spawn)
   AddConversationOption(conversation, "How do I interact with non-player characters?", "Option2")
   AddConversationOption(conversation, "How can I interact with objects in the world?", "Option3")
 	AddConversationOption(conversation, "I'll return for instruction later.")
-	StartConversation(conversation, NPC, Spawn, "Some items in your inventory can give you quests or provide other benefits. Right-click on items in your inventory and select the "Examine" option to learn more about any item you're carrying.")
+	StartConversation(conversation, NPC, Spawn, "Some items in your inventory can give you quests or provide other benefits. Right-click on items in your inventory and select the \"Examine\" option to learn more about any item you're carrying.")
 end
 
 function Option1(NPC, Spawn)

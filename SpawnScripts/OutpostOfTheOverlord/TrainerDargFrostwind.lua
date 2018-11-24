@@ -263,7 +263,7 @@ function Option19(NPC, Spawn)
 	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "What about during battle?", "Option20")
-	StartConversation(conversation, NPC, Spawn, "Before you begin fighting, make sure you and your allies have activated all beneficial spells, also known as "buffs," so that you're operating at peak efficiency. Buffs can add health or power, increase your rate of regeneration, enhance your physical attributes, make you attack faster or do more damage, and more.")
+	StartConversation(conversation, NPC, Spawn, "Before you begin fighting, make sure you and your allies have activated all beneficial spells, also known as \"buffs,\" so that you're operating at peak efficiency. Buffs can add health or power, increase your rate of regeneration, enhance your physical attributes, make you attack faster or do more damage, and more.")
 end
 
 function Option20(NPC, Spawn)
@@ -271,7 +271,7 @@ function Option20(NPC, Spawn)
 	local conversation = CreateConversation()
 
 	AddConversationOption(conversation, "What else should I know about spells and arts?", "advanced_4")
-	StartConversation(conversation, NPC, Spawn, "Whether you're a front-lines melee type or someone attacking from a distance with weapons or spells, you should be using abilities that damage your foes effectively and efficiently. Right click on your spells and arts and select "Examine" to see details on their effects.")
+	StartConversation(conversation, NPC, Spawn, "Whether you're a front-lines melee type or someone attacking from a distance with weapons or spells, you should be using abilities that damage your foes effectively and efficiently. Right click on your spells and arts and select \"Examine\" to see details on their effects.")
 end
 
 function Option22(NPC, Spawn)

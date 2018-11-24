@@ -16,7 +16,7 @@ function hailed(NPC, Spawn)
 	  AddConversationOption(conversation, "Not just yet.")
 	  StartConversation(conversation, NPC, Spawn, "So, " .. GetName(Spawn) .. ", are you ready to learn more about the outpost and perform your first service for the Overlord?")
   elseif HasQuest(Spawn, 184) and GetQuestStep(Spawn, 184) == 4 then
-    AddConversationOption(conversation, "I am ready." "completed_quest")
+    AddConversationOption(conversation, "I am ready.", "completed_quest")
     AddConversationOption(conversation, "How do I leave the island?", "leave")
 	  AddConversationOption(conversation, "Not just yet.")
 	  StartConversation(conversation, NPC, Spawn, "So, " .. GetName(Spawn) .. ", are you ready to learn more about the outpost and perform your first service for the Overlord?")
