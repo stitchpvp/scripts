@@ -50,7 +50,7 @@ function Option6(NPC, Spawn)
 	StartConversation(conversation, NPC, Spawn, "If you choose to join a guild made up of your fellow players one day, you can access your guild bank by right-clicking on a banker and selecting \"Guild Bank.\"")
 end
 
-function Option7(NPC, Spawn)
+function Option2(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
 

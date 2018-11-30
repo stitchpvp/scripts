@@ -71,10 +71,10 @@ end
 function Option7(NPC, Spawn)
 	local conversation = CreateConversation()
 
-  if not HasItem(Spawn, 21177, 1) then
+  if not HasItem(Spawn, 21177) then
     SendPopUpMessage(Spawn, "You have received a book entitled Handbook of the Coalition of Tradesfolke. It will guide you toward becoming a great artisan.", 255, 255, 0)
     SendMessage(Spawn, "You have received a book entitled Handbook of the Coalition of Tradesfolke. It will guide you toward becoming a great artisan.", "white")
-    SummonItem(Spawn, 21177, 1)
+    SummonItem(Spawn, 21177)
   end
 	AddConversationOption(conversation, "Thank you for the guidance.")
 	StartConversation(conversation, NPC, Spawn, "Here is a handbook that will provide you with some basic reference material to start with. Once you reach Freeport, you will find a tradeskill tutor within your local crafting workshop who can teach you more about crafting in further detail.")

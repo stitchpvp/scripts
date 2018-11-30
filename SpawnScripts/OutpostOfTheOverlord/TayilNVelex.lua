@@ -5,12 +5,12 @@ end
 function hailed(NPC, Spawn)
 	local conversation = CreateConversation()
 
-  if not HasQuest(Spawn, 184) then
+  if not HasQuest(Spawn, 184) or not HasCompletedQuest(Spawn, 184) then
     AddConversationOption(conversation, "You were expecting me? Who are you?", "part1_intro")
 	  AddConversationOption(conversation, "How do I leave the island?", "leave")
 	  AddConversationOption(conversation, "I should be going.")
 	  StartConversation(conversation, NPC, Spawn, "Ah, there you are, " .. GetName(Spawn) .. ". I have been expecting you. There is much work ahead of us in establishing Freeport's dominance over this island. The Overlord's troops have secured the outpost, but there is a growing nuisance on the other side of the island that must be addressed. That is where you come in.")
-  elseif HasQuest(Spawn, 184) and GetQuestStep(Spawn, 184) == 1 then
+  elseif HasQuest(Spawn, 184) and GetQuestStep(Spawn, 184) == 1 or GetQuestStep(Spawn, 184) == 2 or GetQuestStep(Spawn, 184) == 3 then
 	  AddConversationOption(conversation, "I haven't completed my training yet, I'll return to Darg.")
     AddConversationOption(conversation, "How do I leave the island?", "leave")
 	  AddConversationOption(conversation, "Not just yet.")
@@ -24,11 +24,17 @@ function hailed(NPC, Spawn)
     AddConversationOption(conversation, "I'll keep that in mind. So who are the inhabitants?", "Option4")
   	AddConversationOption(conversation, "We'll discuss this later.")
   	StartConversation(conversation, NPC, Spawn, "This outpost was recently established as a training ground for potential citizens of Freeport to hone their skills. Our first scouts on the island reported it as being uninhabited, perfect for our needs. It soon became clear that the initial reports were incorrect, and those scouts have been permanently reassigned to the bottom of the bay. Such is the price of failure.")
+  elseif HasQuest(Spawn, 192) and GetQuestStep(Spawn, 192) == 1 or GetQuestStep(Spawn, 192) == 2 or GetQuestStep(Spawn, 192) == 3 then
+	  AddConversationOption(conversation, "I haven't finished working with Gorga yet.")
+    AddConversationOption(conversation, "How do I leave the island?", "leave")
+	  AddConversationOption(conversation, "I still have some more hunting to do.")
+    StartConversation(conversation, NPC, Spawn, "Did you enjoy your hunting in the Seaside Glade with Chef Gorga?")
+  elseif HasQuest(Spawn, 192) and GetQuestStep(Spawn, 192) == 4 then
+	  AddConversationOption(conversation, "I helped Gorga gather supplies.")
+    AddConversationOption(conversation, "How do I leave the island?", "leave")
+	  AddConversationOption(conversation, "I still have some more hunting to do.")
+    StartConversation(conversation, NPC, Spawn, "Did you enjoy your hunting in the Seaside Glade with Chef Gorga?")
   end
-	--AddConversationOption(conversation, "I helped Gorga gather supplies.", "Option6")
-	--AddConversationOption(conversation, "How do I leave the island?", "Option5")
-	--AddConversationOption(conversation, "I still have some more hunting to do.")
-	--StartConversation(conversation, NPC, Spawn, "Did you enjoy your hunting in the Seaside Glade with Chef Gorga?")
 
 	--AddConversationOption(conversation, "I am ready for my next assignment.", "Option7")
 	--StartConversation(conversation, NPC, Spawn, "So, Outpost, are you ready to prove your worth again?")

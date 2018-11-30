@@ -8,7 +8,7 @@ function healthchanged(NPC, Spawn)
   end
 
   if hp_percent <= 0.20 then
-    ClearHate(NPC, Spawn)
+    ClearHate(NPC)
     SpawnSet(NPC, "attackable", "0")
     SpawnSet(NPC, "show_level", "0")
     Say(NPC, "Well done!", Spawn)
@@ -20,12 +20,12 @@ function auto_attack_tick(NPC, Spawn)
   local hp_percent = GetHP(Spawn) / GetMaxHP(Spawn)
 
   if HasQuest(Spawn, 184) and GetQuestStep(Spawn, 184) == 2 then
-    if hp_percent <= 0.10 then
+    if hp_percent <= 0.15 then
       SetStepComplete(Spawn, 184, 2)
     end
   end
 
-  if hp_percent <= 0.10 then
+  if hp_percent <= 0.15 then
     ClearHate(NPC, Spawn)
     SpawnSet(NPC, "attackable", "0")
     SpawnSet(NPC, "show_level", "0")
