@@ -13,7 +13,7 @@
 
 
 function Init(Quest)
-	AddQuestStepChat(Quest, 1, "Seek out Chef Gorga outside the west gate.", 1, "I need to seek out Chef Gorga outside the west gate.  She should have some tasks for me to test out my combat skills.", 11, --[[ ID's --]])
+	AddQuestStepChat(Quest, 1, "Seek out Chef Gorga outside the west gate.", 1, "I need to seek out Chef Gorga outside the west gate.  She should have some tasks for me to test out my combat skills.", 11, 2780057)
 	AddQuestStepCompleteAction(Quest, 1, "Step1Complete")
 end
 
@@ -21,7 +21,7 @@ function Step1Complete(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 1, "I spoke with Chef Gorga.")
 	UpdateQuestTaskGroupDescription(Quest, 1, "I reported to Chef Gorga and have been given my first task.")
 
-	AddQuestStepKill(Quest, 2, "Kill the nearby bees to add to Gorga's stew.", 3, 100, "The first ingredient for the Seaside Stew is the nearby bees.  I need to kill some for Gorga.", 611, --[[ ID's --]])
+	AddQuestStepKill(Quest, 2, "Kill the nearby bees to add to Gorga's stew.", 3, 100, "The first ingredient for the Seaside Stew is the nearby bees.  I need to kill some for Gorga.", 611, 2780076, 2780078, 2780064)
 	AddQuestStepCompleteAction(Quest, 2, "Step2Complete")
 end
 
@@ -29,7 +29,7 @@ function Step2Complete(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 2, "I killed enough bees for the stew.")
 	UpdateQuestTaskGroupDescription(Quest, 2, "I killed enough bees for the first ingredient of Gorga's Seaside Stew.")
 
-	AddQuestStepChat(Quest, 3, "Return to Chef Gorga.", 1, "I killed the bees that Gorga wants for her stew.  I should return to her now.", 11, --[[ ID's --]])
+	AddQuestStepChat(Quest, 3, "Return to Chef Gorga.", 1, "I killed the bees that Gorga wants for her stew.  I should return to her now.", 11, 2780057)
 	AddQuestStepCompleteAction(Quest, 3, "Step3Complete")
 end
 
@@ -37,7 +37,7 @@ function Step3Complete(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 3, "I returned to Chef Gorga.")
 	UpdateQuestTaskGroupDescription(Quest, 3, "I returned to Chef Gorga.")
 
-	AddQuestStepKill(Quest, 4, "Kill elk for their livers.", 4, 100, "The second ingredient is elk livers. The elk roam throughout Seaside Glade, out past the barricades.", 611, --[[ ID's --]])
+	AddQuestStepKill(Quest, 4, "Kill elk for their livers.", 4, 100, "The second ingredient is elk livers. The elk roam throughout Seaside Glade, out past the barricades.", 611, 2780065, 2780066, 2780068)
 	AddQuestStepCompleteAction(Quest, 4, "Step4Complete")
 end
 
@@ -45,7 +45,7 @@ function Step4Complete(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 4, "I have gathered enough elk livers.")
 	UpdateQuestTaskGroupDescription(Quest, 4, "I gathered enough elk livers for Gorga's Seaside Stew.")
 
-	AddQuestStepChat(Quest, 5, "Return the livers to Chef Gorga.", 1, "I've gathered the elk livers and need to return to Chef Gorga.", 11, --[[ ID's --]])
+	AddQuestStepChat(Quest, 5, "Return the livers to Chef Gorga.", 1, "I've gathered the elk livers and need to return to Chef Gorga.", 11, 2780057)
 	AddQuestStepCompleteAction(Quest, 5, "Step5Complete")
 end
 
@@ -53,7 +53,7 @@ function Step5Complete(Quest, QuestGiver, Player)
 	UpdateQuestStepDescription(Quest, 5, "I gave the livers to Chef Gorga.")
 	UpdateQuestTaskGroupDescription(Quest, 5, "I returned to Chef Gorga with the elk livers for her stew.")
 
-	AddQuestStepChat(Quest, 6, "Return to Tayil N'Velex.", 1, "I should return to Tayil N'Velex and let her know that I've finished helping Gorga.", 11, --[[ ID's --]])
+	AddQuestStepChat(Quest, 6, "Return to Tayil N'Velex.", 1, "I should return to Tayil N'Velex and let her know that I've finished helping Gorga.", 11, 2780038)
 	AddQuestStepCompleteAction(Quest, 6, "QuestComplete")
 end
 

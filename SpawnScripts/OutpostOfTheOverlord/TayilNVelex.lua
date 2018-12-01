@@ -30,7 +30,7 @@ function hailed(NPC, Spawn)
 	  AddConversationOption(conversation, "I still have some more hunting to do.")
     StartConversation(conversation, NPC, Spawn, "Did you enjoy your hunting in the Seaside Glade with Chef Gorga?")
   elseif HasQuest(Spawn, 192) and GetQuestStep(Spawn, 192) == 4 then
-	  AddConversationOption(conversation, "I helped Gorga gather supplies.")
+	  AddConversationOption(conversation, "I helped Gorga gather supplies.", "gorga_completed")
     AddConversationOption(conversation, "How do I leave the island?", "leave")
 	  AddConversationOption(conversation, "I still have some more hunting to do.")
     StartConversation(conversation, NPC, Spawn, "Did you enjoy your hunting in the Seaside Glade with Chef Gorga?")
@@ -45,6 +45,12 @@ function completed_quest(NPC, Spawn)
 	AddConversationOption(conversation, "We'll discuss this later.")
 	StartConversation(conversation, NPC, Spawn, "This outpost was recently established as a training ground for potential citizens of Freeport to hone their skills. Our first scouts on the island reported it as being uninhabited, perfect for our needs. It soon became clear that the initial reports were incorrect, and those scouts have been permanently reassigned to the bottom of the bay. Such is the price of failure.")
   SetStepComplete(Spawn, 184, 4)
+end
+
+function gorga_completed(NPC, Spawn)
+  AddConversationOption(conversation, "Thank you, Tayil.")
+	StartConversation(conversation, NPC, Spawn, "Gorga was impressed with your handiwork. I'm sure the outpost Militia guards will be pleased with her stew, though I can't stomach troll cooking myself. You show potential indeed, " .. GetName(Spawn) .. ". As promised, here is your reward.")
+  SetStepComplete(Spawn, 192, 4)
 end
 
 function leave(NPC, Spawn)
