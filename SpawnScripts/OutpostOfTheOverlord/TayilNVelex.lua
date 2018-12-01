@@ -25,12 +25,12 @@ function hailed(NPC, Spawn)
     AddConversationOption(conversation, "I'll keep that in mind. So who are the inhabitants?", "Option4")
   	AddConversationOption(conversation, "We'll discuss this later.")
   	StartConversation(conversation, NPC, Spawn, "This outpost was recently established as a training ground for potential citizens of Freeport to hone their skills. Our first scouts on the island reported it as being uninhabited, perfect for our needs. It soon became clear that the initial reports were incorrect, and those scouts have been permanently reassigned to the bottom of the bay. Such is the price of failure.")
-  elseif HasQuest(Spawn, 192) and GetQuestStep(Spawn, 192) == 1 or GetQuestStep(Spawn, 192) == 2 or GetQuestStep(Spawn, 192) == 3 then
+  elseif HasQuest(Spawn, 192) and GetQuestStep(Spawn, 192) == 1 or GetQuestStep(Spawn, 192) == 2 or GetQuestStep(Spawn, 192) == 3 or GetQuestStep(Spawn, 192) == 4 then
 	  AddConversationOption(conversation, "I haven't finished working with Gorga yet.")
     AddConversationOption(conversation, "How do I leave the island?", "leave")
 	  AddConversationOption(conversation, "I still have some more hunting to do.")
     StartConversation(conversation, NPC, Spawn, "Did you enjoy your hunting in the Seaside Glade with Chef Gorga?")
-  elseif HasQuest(Spawn, 192) and GetQuestStep(Spawn, 192) == 4 then
+  elseif HasQuest(Spawn, 192) and GetQuestStep(Spawn, 192) == 5 then
 	  AddConversationOption(conversation, "I helped Gorga gather supplies.", "gorga_completed")
     AddConversationOption(conversation, "How do I leave the island?", "leave")
 	  AddConversationOption(conversation, "I still have some more hunting to do.")
