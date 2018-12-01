@@ -5,7 +5,7 @@ end
 function hailed(NPC, Spawn)
 	local conversation = CreateConversation()
 
-  if not HasQuest(Spawn, 184) or not HasCompletedQuest(Spawn, 184) then
+  if not HasQuest(Spawn, 184) and not HasCompletedQuest(Spawn, 184) then
     AddConversationOption(conversation, "You were expecting me? Who are you?", "part1_intro")
 	  AddConversationOption(conversation, "How do I leave the island?", "leave")
 	  AddConversationOption(conversation, "I should be going.")
