@@ -1,7 +1,7 @@
 function examined(Item, Spawn)
   local con = CreateConversation()
   AddConversationOption(con, "Release the mole rat.", "release")
-  AddConversationOption(con, "Let him be for now." "close_dialog")
+  AddConversationOption(con, "Let him be for now.", "close_dialog")
   StartDialogConversation(con, 2, Item, Spawn, "This cute little guy would be perfect as bait to lure down the cliffdiver hawks.")
 end
 
