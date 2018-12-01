@@ -22,6 +22,9 @@ function hailed(NPC, Spawn)
 		AddConversationOption(conversation, "Back to Tayil!")
 	  StartConversation(conversation, NPC, Spawn, "Heeheehee!  Toss 'em in and smell the Gorga magic.  The stew is done now!  Head back to Tayil, she's waitin' for ya.")
 		SetStepComplete(Spawn, 192, 5)
+	elseif HasQuest(Spawn, 192) and GetQuestStep(Spawn, 192) == 6 then
+		AddConversationOption(conversation, "Uh yeah, livers!")
+		StartConversation(conversation, NPC, Spawn, "Mmm, this stew is yums. Livers!")
 	elseif not HasQuest(Spawn, 192) and HasCompletedQuest(Spawn, 192) then
 		AddConversationOption(conversation, "Uh yeah, livers!")
 		StartConversation(conversation, NPC, Spawn, "Mmm, this stew is yums. Livers!")
