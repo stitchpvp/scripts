@@ -26,12 +26,12 @@ function hailed(NPC, Spawn)
 	  StartConversation(conversation, NPC, Spawn, "Excellent job!  I think we's done a good job stoppings any new recruits for the Tunarians. Here, this note was just delivered to us.  I believe it is from Tayil.")
 		SetStepComplete(Spawn, 193, 5)
 	elseif HasQuest(Spawn, 193) and GetQuestStep(Spawn, 193) == 6 then
-    if not HasItem(Spawn, 2344) then
-      AddConversationOption(conversation, "I need the note Tayil wanted you to give me.", "summon_note")
-    end
 		AddConversationOption(conversation, "Goodbye.")
 		StartConversation(conversation, NPC, Spawn, "The Tunarians won't have many animals to train because of you. Nice works!  Returns to me if you ever needs more mole rats.")
 	elseif not HasQuest(Spawn, 193) and HasCompletedQuest(Spawn, 193) then
+    if not HasItem(Spawn, 2344) then
+      AddConversationOption(conversation, "I need the note Tayil wanted you to give me.", "summon_note")
+    end
 		AddConversationOption(conversation, "Goodbye.")
 		StartConversation(conversation, NPC, Spawn, "The Tunarians won't have many animals to train because of you. Nice works!  Returns to me if you ever needs more mole rats.")
 	end
