@@ -1,5 +1,6 @@
 function spawn(NPC)
   ProvidesQuest(NPC, 184)
+  ProvidesQuest(NPC, 192)
 end
 
 function hailed(NPC, Spawn)
@@ -41,6 +42,7 @@ function hailed(NPC, Spawn)
 end
 
 function completed_quest(NPC, Spawn)
+  local conversation = CreateConversation()
   AddConversationOption(conversation, "I'll keep that in mind. So who are the inhabitants?", "Option4")
 	AddConversationOption(conversation, "We'll discuss this later.")
 	StartConversation(conversation, NPC, Spawn, "This outpost was recently established as a training ground for potential citizens of Freeport to hone their skills. Our first scouts on the island reported it as being uninhabited, perfect for our needs. It soon became clear that the initial reports were incorrect, and those scouts have been permanently reassigned to the bottom of the bay. Such is the price of failure.")
@@ -48,9 +50,10 @@ function completed_quest(NPC, Spawn)
 end
 
 function gorga_completed(NPC, Spawn)
+  local conversation = CreateConversation()
   AddConversationOption(conversation, "Thank you, Tayil.")
 	StartConversation(conversation, NPC, Spawn, "Gorga was impressed with your handiwork. I'm sure the outpost Militia guards will be pleased with her stew, though I can't stomach troll cooking myself. You show potential indeed, " .. GetName(Spawn) .. ". As promised, here is your reward.")
-  SetStepComplete(Spawn, 192, 4)
+  SetStepComplete(Spawn, 192, 6)
 end
 
 function leave(NPC, Spawn)

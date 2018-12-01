@@ -30,11 +30,13 @@ function hailed(NPC, Spawn)
 end
 
 function convo_1(NPC, Spawn)
+	local conversation = CreateConversation()
 	AddConversationOption(conversation, "So what are we making here?", "convo_2")
 	StartConversation(conversation, NPC, Spawn, "Ahh yes, " .. GetName(Spawn) .. ", Tayil said you were comin'.  Good then, Gorga can stir the pot while you goes to collect more ingredients.  Heeheehee!")
 end
 
 function convo_2(NPC, Spawn)
+	local conversation = CreateConversation()
 	AddConversationOption(conversation, "I'll get some bees.")
 	StartConversation(conversation, NPC, Spawn, "Seaside Stew!  Only a couple things we still needs to get. First is the buzzers, buggin' Gorga they are.  Not sure how they taste, but less of 'em is better.  Be sure to pluck out the wings slowly, the last buzz is the best buzz.")
 	SetStepComplete(Spawn, 192, 1)
