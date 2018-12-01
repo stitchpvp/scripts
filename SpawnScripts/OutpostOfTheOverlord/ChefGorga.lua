@@ -1,7 +1,7 @@
 function hailed(NPC, Spawn)
 	local conversation = CreateConversation()
 
-  if HasQuest(Spawn, 192) and not HasCompletedQuest(Spawn, 192) then
+  if HasQuest(Spawn, 192) and GetQuestStep(Spawn, 192) == 1 then
 	  AddConversationOption(conversation, "I was actually sent here to see if you needed any help.", "convo_1")
 	  AddConversationOption(conversation, "I'll come back.")
 	  StartConversation(conversation, NPC, Spawn, "Need to wait for stew to be done, no firsties!  Many Militia to feed, your mouth no bigger than the rest.")
