@@ -2,6 +2,7 @@ function spawn(NPC)
   ProvidesQuest(NPC, 184)
   ProvidesQuest(NPC, 192)
   ProvidesQuest(NPC, 193)
+  ProvidesQuest(NPC, 194)
 end
 
 function hailed(NPC, Spawn)
