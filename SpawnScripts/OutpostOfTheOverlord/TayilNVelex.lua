@@ -22,7 +22,7 @@ function hailed(NPC, Spawn)
     AddConversationOption(conversation, "How do I leave the island?", "leave")
 	  AddConversationOption(conversation, "Not just yet.")
 	  StartConversation(conversation, NPC, Spawn, "So, " .. GetName(Spawn) .. ", are you ready to learn more about the outpost and perform your first service for the Overlord?")
-  elseif HasCompletedQuest(Spawn, 184) and not HasQuest(Spawn, 192) then
+  elseif HasCompletedQuest(Spawn, 184) and not HasQuest(Spawn, 192) and not HasCompletedQuest(Spawn, 192) then
     AddConversationOption(conversation, "I'll keep that in mind. So who are the inhabitants?", "quest_2_begin")
   	AddConversationOption(conversation, "We'll discuss this later.")
   	StartConversation(conversation, NPC, Spawn, "This outpost was recently established as a training ground for potential citizens of Freeport to hone their skills. Our first scouts on the island reported it as being uninhabited, perfect for our needs. It soon became clear that the initial reports were incorrect, and those scouts have been permanently reassigned to the bottom of the bay. Such is the price of failure.")

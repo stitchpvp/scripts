@@ -65,7 +65,7 @@ end
 function more_rats(NPC, Spawn)
   local conversation = CreateConversation()
   AddConversationOption(conversation, "Dinner is served!")
-  StartConversation(conversation, NPC, Spawn, "Here is some mores of the little pudgies!  Have fun."
+  StartConversation(conversation, NPC, Spawn, "Here is some mores of the little pudgies!  Have fun.")
   SummonItem(Spawn, 8060, 1)
   SummonItem(Spawn, 8060, 1)
   SummonItem(Spawn, 8060, 1)
