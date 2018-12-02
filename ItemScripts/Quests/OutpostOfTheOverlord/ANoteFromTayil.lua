@@ -6,6 +6,8 @@ function examined(Item, Spawn)
 
   if HasQuest(Spawn, 194) then
     SendMessage(Spawn, "You are already on the Quest \"Disruption for Distraction\".", "white")
+  else
+    OfferQuest(Item, Spawn, 194)
   end
 
   if HasCompletedQuest(Spawn, 194) then

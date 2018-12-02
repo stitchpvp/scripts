@@ -1,13 +1,13 @@
 function hailed(NPC, Spawn)
 	local conversation = CreateConversation()
 
-  if not HasQuest(Spawn, 193) and not HasCompletedQuest(Spawn, 193) then
-	  AddConversationOption(conversation, "Very well.")
-	  StartConversation(conversation, NPC, Spawn, "You are not yet ready to take on the tasks I will offer you. Return to Tayil N'Velex outside Sythor's Spire if you are unsure how to prepare yourself.")
-  elseif HasQuest(Spawn, 194) and GetQuestStep(Spawn, 194) == 1 then
+  if HasQuest(Spawn, 194) and GetQuestStep(Spawn, 194) == 1 then
 	  AddConversationOption(conversation, "And you want me to...?", "begin_step_1")
 	  AddConversationOption(conversation, "Not right now.")
 	  StartConversation(conversation, NPC, Spawn, "Sssso " .. GetName(Spawn) .. ", ready for a little sabotage? The mine is inside the Wilderwood in the far eastern corner.")
+  elseif not HasQuest(Spawn, 194) and not HasCompletedQuest(Spawn, 194) then
+    AddConversationOption(conversation, "Very well.")
+    StartConversation(conversation, NPC, Spawn, "You are not yet ready to take on the tasks I will offer you. Return to Tayil N'Velex outside Sythor's Spire if you are unsure how to prepare yourself.")
   elseif HasQuest(Spawn, 194) and GetQuestStep(Spawn, 193) == 2 then
 		AddConversationOption(conversation, "Okay, I'll be back.")
 	  StartConversation(conversation, NPC, Spawn, "The mine is north up the ssslope into the Wilderwood and then eassst. This should definitely cause the disstraction we need for our final attack.")
