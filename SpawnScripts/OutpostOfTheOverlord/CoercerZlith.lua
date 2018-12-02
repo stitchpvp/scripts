@@ -34,7 +34,7 @@ function begin_step_1(NPC, Spawn)
   local conversation = CreateConversation()
 
   AddConversationOption(conversation, "Consider it done!")
-  StartConversation(conversation, "Head in there and sstir up the hornet's nest. Take out sssome of their miners, and while you're at it, grab some of the loose ore around the mine. Tayil wants to know what it is that they're mining.")
+  StartConversation(conversation, NPC, Spawn, "Head in there and sstir up the hornet's nest. Take out sssome of their miners, and while you're at it, grab some of the loose ore around the mine. Tayil wants to know what it is that they're mining.")
   SetStepComplete(Spawn, 194, 1)
 end
 
