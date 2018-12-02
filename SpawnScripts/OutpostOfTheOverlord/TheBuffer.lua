@@ -5,6 +5,7 @@ end
 function InRange(NPC, Spawn)
   local conversation = CreateConversation()
 
+  FaceTarget(NPC, Spawn)
   AddConversationOption(conversation, "Um, please send me there. *gulps*", "teleport_1")
   AddConversationOption(conversation, "I would like to stay here to quest and explore.")
   StartConversation(conversation, NPC, Spawn, "You. I can send you to The Commonlands Spire if you'd like to get out of here. Otherwise, go on a quest journey on this island and leave me be. *growls*")
@@ -13,7 +14,8 @@ end
 
 function hailed(NPC, Spawn)
   local conversation = CreateConversation()
-  
+
+  FaceTarget(NPC, Spawn)
   AddConversationOption(conversation, "Um, please send me there. *gulps*", "teleport_1")
   AddConversationOption(conversation, "I would like to stay here to quest and explore.")
   StartConversation(conversation, NPC, Spawn, "You. I can send you to The Commonlands Spire if you'd like to get out of here. Otherwise, go on a quest journey on this island and leave me be. *growls*")
