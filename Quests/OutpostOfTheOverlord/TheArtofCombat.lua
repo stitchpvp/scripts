@@ -45,8 +45,15 @@ function Reload(Quest, QuestGiver, Player, Step)
 	end
 end
 
-function Accepted()
+function Accepted(Quest, QuestGiver, Player)
+	FaceTarget(QuestGiver, Player)
+	conversation = CreateConversation()
+
+	PlayFlavor(QuestGiver, "voiceover/english/tutorial_revamp/tayil_n_velex/tutorial_island02_evil_revamp/quests/citizenship/tayilnvelex/tayilnvelex035.mp3", "", "", 613247670, 1228791827, Player)
+	AddConversationOption(conversation, "Thanks.")
+	StartConversation(conversation, QuestGiver, Player, "In case you forgot, I've written down his name and location in your quest journal.")
 end
+
 
 function Declined()
 end

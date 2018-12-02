@@ -139,12 +139,7 @@ function part1_begin(NPC, Spawn)
 end
 
 function part1_confirm(NPC, Spawn)
-	local conversation = CreateConversation()
-
   OfferQuest(NPC, Spawn, 184)
-
-	AddConversationOption(conversation, "Thanks.")
-	StartConversation(conversation, NPC, Spawn, "In case you forget, I've written down his name and location in your quest journal.")
 end
 
 function quest_2_begin(NPC, Spawn)
