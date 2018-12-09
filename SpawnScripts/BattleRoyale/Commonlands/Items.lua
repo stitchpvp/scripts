@@ -17,7 +17,7 @@ function InRange(NPC, Spawn)
   for i, item in ipairs(item_list[math.random(#item_list)]) do
     SummonItem(Spawn, item)
     ApplySpellVisual(Spawn, 591)
-    SendMessage(Spawn, "\\#ffffffYou picked up \\#6b42f4" .. item .. "\\#ffffff.")
+    SendMessage(Spawn, "\\#ffffffYou picked up \\#9989b5[" .. GetName(item) .. "]\\#ffffff.")
     Despawn(NPC)
   end
 end

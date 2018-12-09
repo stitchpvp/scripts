@@ -16,7 +16,7 @@ function InRange(NPC, Spawn)
   for i, spell in ipairs(spell_list[math.random(#spell_list)]) do
     AddSpellBookEntry(Spawn, spell, 1)
     ApplySpellVisual(Spawn, 591)
-    SendMessage(Spawn, "\\#ffffffYou picked up \\#6b42f4" .. spell .. "\\#ffffff.")
+    SendMessage(Spawn, "\\#ffffffYou picked up \\#9989b5[" .. GetSpellName(spell) .. "]\\#ffffff.")
     Despawn(NPC)
   end
 end
