@@ -3,6 +3,6 @@ function spawn(NPC)
 end
 
 function InRange(NPC, Spawn)
-  CastSpell(Spawn, 137167011, 1, NPC)
+  CastSpell(Spawn, 137167011, 1)
   Despawn(NPC)
 end

@@ -1,29 +1,38 @@
 function spawn(NPC, Spawn)
   local players = GetPlayersInZone(GetZone(NPC))
-  spoke = false
+  SetTempVariable(NPC, "prevent_loop", nil)
 	for index, player in pairs(players) do
-		SendPopUpMessage(player, "A fiery golem have spawned at a random location and let out a monstrous roar! Dare challenging it and you will be rewarded!", 255, 0, 0)
-		SendMessage(player, "A fiery golem have spawned at a random location and let out a monstrous roar! Dare challenging it and you will be rewarded!", "red")
+		SendPopUpMessage(player, "\\#ff0000A fiery golem have spawned at a random location and let out a monstrous roar! \\#ffff00Dare challenging it and you will be rewarded!")
+		SendMessage(player, "\\#ff0000A fiery golem have spawned at a random location and let out a monstrous roar! \\#ffff00Dare challenging it and you will be rewarded!")
 	end
+end
+
+function attacked(NPC, Spawn)
+  local players = GetPlayersInZone(GetZone(NPC))
+  for index, player in pairs(players) do
+    SendPopUpMessage(player, "\\#ffffffA fiery golem was \\#ff0000attacked \\#ffffffby \\#ffff00" .. GetName(Spawn) .. "\\#ffffff!")
+    SendMessage(player, "\\#ffffffA fiery golem was \\#ff0000attacked \\#ffffffby \\#ffff00" .. GetName(Spawn) .. "\\#ffffff!")
+  end
 end
 
 function healthchanged(NPC, Spawn)
   local health_percent = GetHP(NPC) / GetMaxHP(NPC)
-  if health_percent <= 0.50 and spoke == false then
+  if health_percent <= 0.50 and GetTempVariable(NPC, "prevent_loop") == nil then
     spoke = true
     local players = GetPlayersInZone(GetZone(NPC))
   	for index, player in pairs(players) do
-      SendPopUpMessage(player, "A fiery golem's health is deteriorating...", 255, 0, 0)
-      SendMessage(player, "A fiery golem's health is deteriorating...", "red")
+      SendPopUpMessage(player, "\\#ffffffA fiery golem's health is \\#ff0000deteriorating...")
+      SendMessage(player, "\\#ffffffA fiery golem's health is \\#ff0000deteriorating...")
+      SetTempVariable(NPC, "prevent_loop", "true")
     end
 	end
 end
 
 function death(NPC, Spawn)
   local players = GetPlayersInZone(GetZone(NPC))
-  spoke = false
+  SetTempVariable(NPC, "prevent_loop", nil)
 	for index, player in pairs(players) do
-		SendPopUpMessage(player, "A fiery golem was slained by " .. GetName(Spawn) .. "!", 255, 0, 0)
-		SendMessage(player, "A fiery golem was slained by " .. GetName(Spawn) .. "!", "red")
+		SendPopUpMessage(player, "\\#ffffffA fiery golem was \\#ff0000slained \\#ffffffby \\#ffff00" .. GetName(Spawn) .. "\\#ffffff!")
+		SendMessage(player, "\\#ffffffA fiery golem was \\#ff0000slained \\#ffffffby \\#ffff00" .. GetName(Spawn) .. "\\#ffffff!")
 	end
 end
