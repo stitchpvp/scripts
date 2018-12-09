@@ -37,7 +37,7 @@ function hailed(NPC, Spawn)
     AddConversationOption(conversation, "How do I leave the island?", "leave")
 	  AddConversationOption(conversation, "I still have some more hunting to do.")
     StartConversation(conversation, NPC, Spawn, "Did you enjoy your hunting in the Seaside Glade with Chef Gorga?")
-  elseif HasCompletedQuest(Spawn, 192) and not HasQuest(Spawn, 193) then
+  elseif HasCompletedQuest(Spawn, 192) and not HasQuest(Spawn, 193) and not HasCompletedQuest(Spawn, 193) then
     AddConversationOption(conversation, "I am ready for my next assignment", "quest_3_begin")
     AddConversationOption(conversation, "How do I leave the island?", "leave")
 	  AddConversationOption(conversation, "Not just yet.")
