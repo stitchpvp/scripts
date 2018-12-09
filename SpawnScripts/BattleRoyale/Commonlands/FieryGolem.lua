@@ -1,5 +1,3 @@
-local spoke = false
-
 function spawn(NPC, Spawn)
   local players = GetPlayersInZone(GetZone(NPC))
   spoke = false
@@ -15,8 +13,8 @@ function healthchanged(NPC, Spawn)
     spoke = true
     local players = GetPlayersInZone(GetZone(NPC))
   	for index, player in pairs(players) do
-  		SendPopUpMessage(player, "A fiery golem's health is deteriorating...", 255, 0, 0)
-  		SendMessage(player, "A fiery golem's health is deteriorating...", "red")
+      SendPopUpMessage(player, "A fiery golem's health is deteriorating...", 255, 0, 0)
+      SendMessage(player, "A fiery golem's health is deteriorating...", "red")
     end
 	end
 end
