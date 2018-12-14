@@ -28,7 +28,7 @@ function InRange(NPC, Spawn)
       item_name = "Test 4"
     end
 
-    SendMessage(Spawn, "\\#ffffffYou picked up \\#9989b5[" .. item_name .. "]\\#ffffff.")
+    SendMessage(Spawn, "\\#ffffffYou picked up \\#9989b5[" .. item_name .. "]\\#ffffff (Item).")
 
     Despawn(NPC)
   end

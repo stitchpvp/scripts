@@ -2,8 +2,8 @@ function spawn(NPC, Spawn)
   local players = GetPlayersInZone(GetZone(NPC))
   SetTempVariable(NPC, "prevent_loop", nil)
 	for index, player in pairs(players) do
-		SendPopUpMessage(player, "\\#ff0000A fiery golem have spawned at a random location and let out a monstrous roar! \\#ffff00Dare challenging it and you will be rewarded!")
-		SendMessage(player, "\\#ff0000A fiery golem have spawned at a random location and let out a monstrous roar! \\#ffff00Dare challenging it and you will be rewarded!")
+		SendPopUpMessage(player, "\\#ff0000A fiery golem have spawned at a random location and let out a monstrous roar! \\#ffff00Dare challenge it and you will be rewarded!")
+		SendMessage(player, "\\#ff0000A fiery golem have spawned at a random location and let out a monstrous roar! \\#ffff00Dare challenge it and you will be rewarded!")
 	end
 end
 

@@ -25,7 +25,7 @@ function InRange(NPC, Spawn)
       spell_name = "Fuliginous Whip"
     end
 
-    SendMessage(Spawn, "\\#ffffffYou picked up \\#9989b5[" .. spell_name .. "]\\#ffffff.")
+    SendMessage(Spawn, "\\#ffffffYou picked up \\#9989b5[" .. spell_name .. "]\\#ffffff (Spell).")
     Despawn(NPC)
   end
 end
