@@ -1,8 +1,8 @@
 function precast(Caster, Target)
   if not HasSpell(Target, 215780092) then
-    SendMessage(Caster, "Target is not under down but not out (DBNO) state.", "yellow")
+    SendMessage(Caster, "Target is not in DBNO (down but not out) state.", "yellow")
     return false, 44
-  else
+  elseif HasSpell(Target, 215780092) then
     return true
   end
 end

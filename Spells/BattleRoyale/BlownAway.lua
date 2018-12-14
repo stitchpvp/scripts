@@ -3,7 +3,7 @@ function cast(Caster, Target, FallingSpeed, AirSpeed)
   AddProc(Caster, 1, 100)
   AddProc(Caster, 2, 100)
   AddProc(Caster, 11, 100)
-  AddProc(Caster, 12, 100
+  AddProc(Caster, 12, 100)
   AddProc(Caster, 15, 100)
   AddStoneskin(Caster, 9999, 1, 1)
   AddImmunitySpell(Caster, 1)
