@@ -1,6 +1,5 @@
 function hailed(NPC, Spawn)
  local choice = math.random(1, 3)
-  
   if choice == 1 then
     Say(NPC, "Take a gander, please. It is not often one encounters the perfect killing machine.", Spawn)
     PlayAnimation(NPC, 12182, Spawn)

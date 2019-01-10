@@ -20,20 +20,20 @@ function attacked(NPC, Spawn)
   for index, player in pairs(players) do
     SendPopUpMessage(player, "\\#ffffffA fiery golem was \\#ff0000attacked \\#ffffffby \\#ffff00" .. GetName(Spawn) .. "\\#ffffff!")
     SendMessage(player, "\\#ffffffA fiery golem was \\#ff0000attacked \\#ffffffby \\#ffff00" .. GetName(Spawn) .. "\\#ffffff!")
-    Say(NPC, "Doom! Doooooom!")
   end
+  Say(NPC, "Doom! Doooooom!")
 end
 
 function healthchanged(NPC, Spawn)
   local health_percent = GetHP(NPC) / GetMaxHP(NPC)
   if health_percent <= 0.50 and GetTempVariable(NPC, "prevent_loop") == nil then
     local players = GetPlayersInZone(GetZone(NPC))
-  	for index, player in pairs(players) do
+    for index, player in pairs(players) do
       SendPopUpMessage(player, "\\#ffffffA fiery golem's health is \\#ff0000deteriorating...")
       SendMessage(player, "\\#ffffffA fiery golem's health is \\#ff0000deteriorating...")
-      Say(NPC, "Ayyeeee! Attack! Attack!")
       SetTempVariable(NPC, "prevent_loop", "true")
     end
+    Say(NPC, "Ayyeeee! Attack! Attack!")
 	end
 end
 
@@ -42,8 +42,8 @@ function killed(NPC, Spawn)
   for index, player in pairs(players) do
     SendPopUpMessage(player, "\\#ffff00" .. GetName(Spawn) .. "\\#ffffff was \\#ff0000killed \\#ffffffby fiery golem!")
     SendMessage(player, "\\#ffff00" .. GetName(Spawn) .. "\\#ffffff was \\#ff0000killed \\#ffffffby fiery golem!")
-    Say(NPC, "You die now!")
   end
+  Say(NPC, "You die now!")
 end
 
 function death(NPC, Spawn)
@@ -52,6 +52,6 @@ function death(NPC, Spawn)
 	for index, player in pairs(players) do
 		SendPopUpMessage(player, "\\#ffffffA fiery golem was \\#ff0000slained \\#ffffffby \\#ffff00" .. GetName(Spawn) .. "\\#ffffff!")
 		SendMessage(player, "\\#ffffffA fiery golem was \\#ff0000slained \\#ffffffby \\#ffff00" .. GetName(Spawn) .. "\\#ffffff!")
-    Say(NPC, "N-nooo... howwww...???")
 	end
+  Say(NPC, "N-nooo... howwww...???")
 end
