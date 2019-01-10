@@ -4,7 +4,7 @@ max_line_length = false
 unused_args = false
 unused_globals = false
 
-std = {
+stds.emulator = {
   globals = {
     "AddCoin",
     "AddControlEffect",
@@ -383,3 +383,5 @@ std = {
     "Zone"
   }
 }
+
+std = "max+emulator"
