@@ -1,5 +1,5 @@
 allow_defined = true
-ignore = {"131", "211", "542"}
+ignore = {"131", "211", "542", "614"}
 max_line_length = false
 unused_args = false
 unused_globals = false
