@@ -4,7 +4,7 @@
     Script Date    : 2018.10.07 10:10:32
     Script Purpose :
                    :
---]]
+
 
 function spawn(NPC)
 	AddTimer(NPC, 900, "followguard_A")
@@ -50,3 +50,4 @@ end
 function respawn(NPC)
   spawn(NPC)
 end
+--]]
