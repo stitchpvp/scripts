@@ -25,14 +25,13 @@ end
 function Plaguebound(NPC, Spawn)
   local most_hated = GetMostHated(NPC)
   local group = GetGroup(most_hated)
+  local player = group[math.random(#group)]
 
   AddTimer(NPC, 45000, "Plaguebound")
 
-  local player = group[math.random(#group)]
-    if not IsAlive(player) then
-      return false
-    else
-      CastSpell(player, 5038031, 1)
-    end
+  if not IsAlive(player) then
+    return false
+  else
+    CastSpell(player, 5038031, 1)
   end
 end
