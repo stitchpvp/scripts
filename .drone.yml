@@ -1,10 +1,5 @@
-kind: pipeline
-name: default
-
-steps:
-- name: luacheck
-  image: tyrbo/luacheck
-  commands:
-  - luacheck .
-
-
+pipeline:
+  luacheck:
+    image: tyrbo/luacheck
+    commands:
+      - luacheck .
