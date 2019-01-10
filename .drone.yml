@@ -3,3 +3,10 @@ pipeline:
     image: tyrbo/luacheck
     commands:
       - luacheck .
+
+  notify:
+    image: plugins/slack
+    username: drone
+    secrets: [ slack_webhook ]
+    when:
+      status: [ success, failure ]
