@@ -1,4 +1,4 @@
-function cast(Caster, Target, UnconsciousHealth) 
+function cast(Caster, Target, UnconsciousHealth)
   AddSpellBonus(Caster, 661, UnconsciousHealth)
 end
 

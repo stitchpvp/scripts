@@ -6,6 +6,6 @@ function hailed(NPC, Spawn)
   elseif choice == 2 then
 	  Say(NPC, "Crazy!  What are you talking about?", Spawn)
   elseif choice == 3 then
-  	Say(NPC, "Land!  I see land!", Spawn)
+    Say(NPC, "Land!  I see land!", Spawn)
   end
 end

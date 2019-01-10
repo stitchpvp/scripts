@@ -1,7 +1,6 @@
 function hailed(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
 
 	if HasQuest(Spawn, 187) and GetQuestStep(Spawn, 187) == 1 then
 		AddConversationOption(conversation, "Orwen sent me to look for you.", "Option1")

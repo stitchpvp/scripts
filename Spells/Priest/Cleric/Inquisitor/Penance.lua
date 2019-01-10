@@ -6,7 +6,7 @@ end
 function proc(Caster, Target, ProcType, MinHeal, MaxHeal)
   if GetSpellTriggerCount() > 0 then
     local spell_caster = GetCaster()
-  
+
     RemoveTriggerFromSpell()
 
     ProcHeal(spell_caster, Caster, "Vengeful Faith", "Heal", MinHeal, MaxHeal, true)

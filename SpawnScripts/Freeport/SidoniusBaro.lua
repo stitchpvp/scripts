@@ -1,6 +1,6 @@
 function hailed(NPC, Spawn)
   local choice = math.random(1, 4)
-  
+
   if choice == 1 then
 	Say(NPC, "Poison testers, it's been my biggest seller for the past several months.  Of course poison was a close second.", Spawn)
 	PlayAnimation(NPC, 12030, Spawn)

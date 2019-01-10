@@ -3,7 +3,7 @@ function equipped(Item, Player)
   AddProc(Player, 12, 33, Item)
 end
 
-function proc(Item, Caster, Target)  
+function proc(Item, Caster, Target)
   if HasSpellEffect(Caster, 264113811) or HasSpellEffect(Caster, 63457943) or HasSpellEffect(Caster, 212713100) then
     return
   else

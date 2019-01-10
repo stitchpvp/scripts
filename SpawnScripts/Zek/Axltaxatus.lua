@@ -10,9 +10,9 @@ function hate_swap(NPC, Spawn)
 
   if IsInCombat(NPC) == true then
     if not IsAlive(player) then
-      AddHate(Caster, player2, 9999999, 1)
+      AddHate(NPC, player2, 9999999, 1)
     elseif IsAlive(player) then
-      AddHate(Caster, player, 9999999, 1)
+      AddHate(NPC, player, 9999999, 1)
     end
   end
 

@@ -1,4 +1,4 @@
-function cast(Caster, Target) 
+function cast(Caster, Target)
   AddProc(Caster, 15, 100)
 end
 

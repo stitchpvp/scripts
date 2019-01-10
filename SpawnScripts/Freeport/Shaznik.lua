@@ -1,6 +1,6 @@
 function hailed(NPC, Spawn)
   local choice = math.random(1, 4)
-  
+
   if choice == 1 then
 	Say(NPC, "In spite of the cost living, it's still quite a popular item.", Spawn)
 	PlayAnimation(NPC, 12030, Spawn)

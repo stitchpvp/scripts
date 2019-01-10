@@ -9,7 +9,6 @@ end
 
 function hailed(NPC, Spawn)
   local conversation = CreateConversation()
-  
   AddConversationOption(conversation, "Okay.")
   StartConversation(conversation, NPC, Spawn, "I've got these fine scrolls for sale, do take a look at them.")
 end

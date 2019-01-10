@@ -25,7 +25,7 @@ function manifested(NPC, Spawn)
   local sendmsgtoall = GetGroup(most_hated)
 
 -- only arcane is alive
-  if IsAlive(NPC) and not IsAlive(trauma) then 
+  if IsAlive(NPC) and not IsAlive(trauma) then
     if GetTempVariable(Grummus, "poxule_dead_part_two") == nil then
       if not HasGroup(most_hated) then
         SendPopUpMessage(most_hated, "Arcane poxule was up for too long and have manifested! The end of all that is...", 255, 0, 0)
@@ -36,7 +36,7 @@ function manifested(NPC, Spawn)
         SendMessage(players, "Arcane poxule was up for too long and have manifested! The end of all that is...", "red")
         end
       end
-	
+
       if GetTempVariable(NPC, "manifested_spawned") == nil then
         SpawnManifested(NPC, Spawn)
       end
@@ -54,7 +54,7 @@ function manifested(NPC, Spawn)
         SendMessage(players, "The poxules were up for too long and have manifested! The end of all that is...", "red")
         end
       end
-	
+
       if GetTempVariable(NPC, "manifested_spawned") == nil then
         SpawnManifested(NPC, Spawn)
       end
@@ -69,7 +69,7 @@ function SpawnManifested(Spawn)
   local most_hated = GetMostHated(Grummus)
 
   local manifested = SpawnMob(zone, 2520037, false, GetX(most_hated), GetY(most_hated), GetZ(most_hated), GetHeading(most_hated) - 90)
-  
+
   AddHate(most_hated, manifested, 1)
   SetTempVariable(Spawn, "manifested_spawned", "true")
   SetTempVariable(Grummus, "poxule_dead_part_one", "true")

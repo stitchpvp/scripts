@@ -14,7 +14,7 @@ function hailed(NPC, Spawn)
   local Valor = GetSpawn(NPC, 980013)
   local Health = GetSpawn(NPC, 2520010)
   local Disease = GetSpawn(NPC, 2520005)
-  
+
   if not GetTempVariable(NPC, "avatar_spawned") and not GetTempVariable(NPC, "choice_made") and not IsAlive(Valor) and not IsAlive(Health) and not IsAlive(Disease) then
     local conversation = CreateConversation()
 	AddConversationOption(conversation, "We are up for the task!", "list_of_choices")
@@ -60,11 +60,11 @@ function list_of_evil_choices(NPC, Spawn)
   end
 end
 
-function valoravatar(NPC)
+function valoravatar(NPC, Spawn)
   local Valor = GetSpawn(NPC, 980013)
   local Health = GetSpawn(NPC, 2520010)
   local Disease = GetSpawn(NPC, 2520005)
-  
+
   if not GetTempVariable(NPC, "avatar_spawned") and not GetTempVariable(NPC, "choice_made") and not IsAlive(Valor) and not IsAlive(Health) and not IsAlive(Disease) then
     AddTimer(NPC, 5000, "valoravatar2")
     Say(NPC, "I call forth the Avatar of Mithaniel Marr, lord of Valor, to be challenged by these mortals!")
@@ -85,11 +85,11 @@ function valoravatar2(NPC)
   end
 end
 
-function healthavatar(NPC)
+function healthavatar(NPC, Spawn)
   local Valor = GetSpawn(NPC, 980013)
   local Health = GetSpawn(NPC, 2520010)
   local Disease = GetSpawn(NPC, 2520005)
-  
+
   if not GetTempVariable(NPC, "avatar_spawned") and not GetTempVariable(NPC, "choice_made") and not IsAlive(Valor) and not IsAlive(Health) and not IsAlive(Disease) then
     AddTimer(NPC, 5000, "healthavatar2")
     Say(NPC, "I call forth the Avatar of Rodcet Nife, lord of health and bringer of life, to be assisted by these mortals!")
@@ -110,11 +110,11 @@ function healthavatar2(NPC)
   end
 end
 
-function diseaseavatar(NPC)
+function diseaseavatar(NPC, Spawn)
   local Valor = GetSpawn(NPC, 980013)
   local Health = GetSpawn(NPC, 2520010)
   local Disease = GetSpawn(NPC, 2520005)
-  
+
   if not GetTempVariable(NPC, "avatar_spawned") and not GetTempVariable(NPC, "choice_made") and not IsAlive(Valor) and not IsAlive(Health) and not IsAlive(Disease) then
     AddTimer(NPC, 5000, "diseaseavatar2")
     Say(NPC, "I call forth the Avatar of Bertoxxulous, god of disease and bringer of plague, to be challenged by these mortals!")

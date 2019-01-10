@@ -44,7 +44,6 @@ function followguard_A(NPC)
       MoveToLocation(NPC, leaderX + 2, leaderY, leaderZ, speed)
 		end
   end
-  speed = 2
 	AddTimer(NPC, 3000, "followguard_A")
 end
 

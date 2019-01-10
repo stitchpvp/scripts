@@ -19,8 +19,8 @@ function hailed(NPC, Spawn)
     StartConversation(conversation, NPC, Spawn, "You have done enough, " .. GetName(Spawn) .. ". Tunarian reinforcementsss are on their way to the Wilderwood. Our time for attack is now! Tayil will be glad to hear of your work. Speaking of Tayil, take these sssealed orders. She sssent them for you, and if I were you I would not ignore them.")
   elseif HasQuest(Spawn, 194) and GetQuestStep(Spawn, 193) == 3 then
     AddConversationOption(conversation, "Yes, those horse sentries have been a thorn in my side.", "begin_step_2")
-  	AddConversationOption(conversation, "Not now.")
-  	StartConversation(conversation, NPC, Spawn, "Nice work! As you probably noticed, there are additional Tunarian horse sentriesss being sssent into the Wilderwood to check on the mine. We need another distraction to thin out the Qeynosian forces even more. It's time to deal with those meddling sentriesss once and for all.")
+		AddConversationOption(conversation, "Not now.")
+		StartConversation(conversation, NPC, Spawn, "Nice work! As you probably noticed, there are additional Tunarian horse sentriesss being sssent into the Wilderwood to check on the mine. We need another distraction to thin out the Qeynosian forces even more. It's time to deal with those meddling sentriesss once and for all.")
   elseif not HasQuest(Spawn, 194) and HasCompletedQuest(Spawn, 194) then
     if not HasItem(Spawn, 12044) then
       AddConversationOption(conversation, "I need Tayil's sealed orders.", "summon_orders")

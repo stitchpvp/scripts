@@ -46,7 +46,7 @@ function hailed(NPC, Spawn)
         Say(NPC, "Kill it!", Spawn)
 
       elseif choice == 3 then
-        Say(NPC, "Destroy it!", Spawn)    
+        Say(NPC, "Destroy it!", Spawn)
       end
     end
   end

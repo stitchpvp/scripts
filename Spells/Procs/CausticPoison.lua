@@ -9,9 +9,9 @@ end
 function proc(Caster, Target, ProcType, MinDmg, MaxDmg)
   if GetSpellTriggerCount() > 0 then
     local spell_caster = GetCaster()
-  
+
     RemoveTriggerFromSpell()
-	
+
     ProcDamage(spell_caster, Target, "Caustic Poison", 9, MinDmg, MaxDmg)
   end
 end

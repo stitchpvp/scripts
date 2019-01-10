@@ -1,7 +1,7 @@
 function cast(Caster, Target)
   local weapon = GetEquippedItemBySlot(Caster, 0)
   local proc_chance = GetProcPercentageForWeapon(weapon, 5.0)
-  
+
   SetSpellTriggerCount(100, 1)
   AddProc(Target, 3, proc_chance)
 end

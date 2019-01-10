@@ -12,7 +12,7 @@ end
 
 function hailed(NPC, Spawn)
   local choice = math.random(1, 2)
-  
+
   if choice == 1 then
 	Say(NPC, "Do not challenge my authority, citizen.  In Freeport, the Overlord's word is law!", Spawn)
   elseif choice == 2 then

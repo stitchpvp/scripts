@@ -1,6 +1,6 @@
 function cast(Caster, Target, MinHate, MaxHate, Debuff)
   AddSpellBonus(Target, 203, Debuff)
-  
+
   if IsPlayer(Target) then
     AddControlEffect(Target, 15)
     AddSpellTimer(2000, "remove_taunt_lock", Caster, Target)

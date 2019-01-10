@@ -1,9 +1,9 @@
 function cast(Caster, Target, Accuracy, SkillAmt)
   local RANGER = 39
-  
+
   AddSpellBonus(Target, 682, Accuracy)
   AddSkillBonus(Target, GetSkillIDByName("Crushing"), SkillAmt)
-  
+
   if GetClass(Target) ~= RANGER then
 	AddSkillBonus(Target, GetSkillIDByName("Slashing"), SkillAmt)
 	AddSkillBonus(Target, GetSkillIDByName("Piercing"), SkillAmt)

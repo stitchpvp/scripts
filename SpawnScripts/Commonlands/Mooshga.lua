@@ -9,53 +9,53 @@ function hailed(NPC, Spawn)
   local conversation = CreateConversation()
 
   if not HasQuest(Spawn, 188) and not HasCompletedQuest(Spawn, 188) then
-	AddConversationOption(conversation, "I guess that depends on the menu.", "Quest1_Option1")
-	AddConversationOption(conversation, "No, I'm not hungry.")
-	StartConversation(conversation, NPC, Spawn, "Mooshga meet new friend! You look hungry. Mooshga hungry. You hungry?")
+	   AddConversationOption(conversation, "I guess that depends on the menu.", "Quest1_Option1")
+	   AddConversationOption(conversation, "No, I'm not hungry.")
+	   StartConversation(conversation, NPC, Spawn, "Mooshga meet new friend! You look hungry. Mooshga hungry. You hungry?")
   end
-	
+
   if HasQuest(Spawn, 188) and GetQuestStep(Spawn, 188) == 1 then
-	AddConversationOption(conversation, "Okay, okay. Mooshga, I'm going.")
-	StartConversation(conversation, NPC, Spawn, "You don't look hungry enough. You go away! NO FOOD FOR YOU!")
+	   AddConversationOption(conversation, "Okay, okay. Mooshga, I'm going.")
+	   StartConversation(conversation, NPC, Spawn, "You don't look hungry enough. You go away! NO FOOD FOR YOU!")
   elseif HasQuest(Spawn, 188) and GetQuestStep(Spawn, 188) == 2 then
-	AddConversationOption(conversation, "I bought you the ears you asked for.", "Quest1_Completed")
-	AddConversationOption(conversation, "Nothing right now.")
-	StartConversation(conversation, NPC, Spawn, "You back so quick! What you have for Mooshga?")
+	   AddConversationOption(conversation, "I bought you the ears you asked for.", "Quest1_Completed")
+	   AddConversationOption(conversation, "Nothing right now.")
+	   StartConversation(conversation, NPC, Spawn, "You back so quick! What you have for Mooshga?")
   end
-  
+
   if HasQuest(Spawn, 189) and GetQuestStep(Spawn, 189) == 1 then
-	AddConversationOption(conversation, "Okay, okay. Mooshga, I'm going.")
-	StartConversation(conversation, NPC, Spawn, "You don't look hungry enough. You go away! NO FOOD FOR YOU!")
+	   AddConversationOption(conversation, "Okay, okay. Mooshga, I'm going.")
+	   StartConversation(conversation, NPC, Spawn, "You don't look hungry enough. You go away! NO FOOD FOR YOU!")
   elseif HasQuest(Spawn, 189) and GetQuestStep(Spawn, 189) == 2 then
-	AddConversationOption(conversation, "I have the huge crab claws for your soup, Mooshga.", "Quest2_Completed")
-	AddConversationOption(conversation, "Nothing right now.")
-	StartConversation(conversation, NPC, Spawn, "You back so quick! What you have for Mooshga?")
+	   AddConversationOption(conversation, "I have the huge crab claws for your soup, Mooshga.", "Quest2_Completed")
+	   AddConversationOption(conversation, "Nothing right now.")
+	   StartConversation(conversation, NPC, Spawn, "You back so quick! What you have for Mooshga?")
   end
-  
+
   if HasQuest(Spawn, 190) and GetQuestStep(Spawn, 190) == 1 then
-	AddConversationOption(conversation, "Okay, okay. Mooshga, I'm going.")
-	StartConversation(conversation, NPC, Spawn, "You don't look hungry enough. You go away! NO FOOD FOR YOU!")
+	   AddConversationOption(conversation, "Okay, okay. Mooshga, I'm going.")
+	   StartConversation(conversation, NPC, Spawn, "You don't look hungry enough. You go away! NO FOOD FOR YOU!")
   elseif HasQuest(Spawn, 190) and GetQuestStep(Spawn, 190) == 2 then
-	AddConversationOption(conversation, "Good news Mooshga. I was able to gather the iron clusters you need to get your pot fixed.", "Quest3_Completed")
-	AddConversationOption(conversation, "Nothing right now.")
-	StartConversation(conversation, NPC, Spawn, "You back so quick! What you have for Mooshga?")
+	   AddConversationOption(conversation, "Good news Mooshga. I was able to gather the iron clusters you need to get your pot fixed.", "Quest3_Completed")
+	   AddConversationOption(conversation, "Nothing right now.")
+	   StartConversation(conversation, NPC, Spawn, "You back so quick! What you have for Mooshga?")
   end
-  
+
   if HasCompletedQuest(Spawn, 188) and not HasQuest(Spawn, 189) then
-	AddConversationOption(conversation, "Yes, I am. I would love more of your cooking, Mooshga.", "Quest2_Option1")
-	AddConversationOption(conversation, "What? No thanks... I just ate.")
-	StartConversation(conversation, NPC, Spawn, "You still look hungry! You hungry? Mooshga knows when people hungry. Mooshga will feed you but you do something for Mooshga first.")
+	   AddConversationOption(conversation, "Yes, I am. I would love more of your cooking, Mooshga.", "Quest2_Option1")
+	   AddConversationOption(conversation, "What? No thanks... I just ate.")
+	   StartConversation(conversation, NPC, Spawn, "You still look hungry! You hungry? Mooshga knows when people hungry. Mooshga will feed you but you do something for Mooshga first.")
   end
-  
+
   if HasCompletedQuest(Spawn, 189) and not HasQuest(Spawn, 190) then
-	AddConversationOption(conversation, "What happened, Mooshga?", "Quest3_Option1")
-	AddConversationOption(conversation, "You seem busy. I'll come back another time.")
-	StartConversation(conversation, NPC, Spawn, "The pot! Mooshga not believe what happened.")
+	   AddConversationOption(conversation, "What happened, Mooshga?", "Quest3_Option1")
+	   AddConversationOption(conversation, "You seem busy. I'll come back another time.")
+	   StartConversation(conversation, NPC, Spawn, "The pot! Mooshga not believe what happened.")
   end
-  
+
   if HasCompletedQuest(Spawn, 190) and not HasQuest(Spawn, 191) then
-	AddConversationOption(conversation, "Okay.")
-	StartConversation(conversation, NPC, Spawn, "Quest #4 coming soon!")
+	   AddConversationOption(conversation, "Okay.")
+	   StartConversation(conversation, NPC, Spawn, "Quest #4 coming soon!")
   end
 end
 
@@ -135,7 +135,7 @@ end
 function Quest3_Option1(NPC, Spawn)
 	FaceTarget(NPC, Spawn)
 	local conversation = CreateConversation()
-	
+
 	AddConversationOption(conversation, "Did you catch it?", "Quest3_Option2")
 	AddConversationOption(conversation, "Poor little squirrel. That's just mean, Mooshga. Goodbye.")
 	StartConversation(conversation, NPC, Spawn, "Well...  Mooshga was cooking. After put water in Moosgha's cooking pot when fire was really hot, tasty squirrel run by. Mooshga thought would make tasty appetizer for dinner. Mooshga chased tasty and forgot about boiling pot.")

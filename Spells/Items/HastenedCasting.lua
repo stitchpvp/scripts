@@ -1,4 +1,4 @@
-function cast(Caster, Target, Amount) 
+function cast(Caster, Target, Amount)
   SetSpellTriggerCount(1, 1)
   AddSpellBonus(Caster, 664, Amount)
   AddProc(Caster, 5, 100)
@@ -6,7 +6,7 @@ function cast(Caster, Target, Amount)
   AddProc(Caster, 12, 100)
 end
 
-function proc(Caster, Target, ProcType) 
+function proc(Caster, Target, ProcType)
   if GetSpellTriggerCount() > 0 then
     RemoveTriggerFromSpell()
   end

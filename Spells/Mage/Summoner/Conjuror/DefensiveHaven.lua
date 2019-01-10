@@ -1,6 +1,6 @@
 function precast(Caster, Target)
   local pet = GetPet(Caster)
-  
+
   if pet == nil then
 	return false, 38
   else

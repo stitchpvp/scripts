@@ -40,7 +40,7 @@ end
 
 function hailed(NPC, Spawn)
   local choice = math.random(1, 4)
-  
+
   if choice == 1 then
 	Say(NPC, "We don't sell contraband furnishings in our shop. We sell only pieces approved by the Overlord!", Spawn)
 	PlayAnimation(NPC, 12168, Spawn)

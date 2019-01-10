@@ -5,7 +5,7 @@ function cast(Caster, Target, MinDmg, MaxDmg)
   local power_percentage = GetMaxPower(Target) * -0.02
 
   ModifyPower(Target, power_percentage)
-  
+
   local roll_1 = math.random(1, 100)
   if roll_1 <= 10 then
     CastSpell(Target, 178326336, 1, Caster) -- Mischievous Incapacitation

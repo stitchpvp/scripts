@@ -1,6 +1,6 @@
 function hailed(NPC, Spawn)
   local choice = math.random(1, 3)
-  
+
   if choice == 1 then
 	Say(NPC, "Let me guess, you're looking for poison, right?", Spawn)
   elseif choice == 2 then

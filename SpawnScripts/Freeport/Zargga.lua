@@ -1,6 +1,6 @@
 function hailed(NPC, Spawn)
  local choice = math.random(1, 2)
-  
+
   if choice == 1 then
     Say(NPC, "Hello there, kind adventurer. My merchandise carries the seal of the Overlord himself!  Go ahead, take a look!", Spawn)
     PlayAnimation(NPC, 12167, Spawn)

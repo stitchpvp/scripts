@@ -8,7 +8,7 @@ function tick(Caster, Target)
 end
 
 function proc(Attacker, Target, ProcType)
-  ProcDamage(GetCaster(), Caster, "Shimmer of Disease", 8, 5, 25)
+  ProcDamage(GetCaster(), Attacker, "Shimmer of Disease", 8, 5, 25)
 end
 
 function remove(Caster, Target)

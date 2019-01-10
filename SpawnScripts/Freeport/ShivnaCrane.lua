@@ -1,6 +1,6 @@
 function hailed(NPC, Spawn)
   local choice = math.random(1, 4)
-  
+
   if choice == 1 then
 	Say(NPC, "Hey do you see any water around here?  Oh well, who needs to wash their hands?", Spawn)
 	PlayAnimation(NPC, 12240, Spawn)

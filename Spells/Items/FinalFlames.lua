@@ -1,8 +1,8 @@
-function cast(Caster, Target) 
+function cast(Caster, Target)
   AddProc(Caster, 5, 100)
 end
 
-function proc(Caster, Target, ProcType, Dmg) 
+function proc(Caster, Target, ProcType, Dmg)
   local enemy = GetTarget(Caster)
   local hp_percent = GetHP(enemy) / GetMaxHP(enemy)
 
