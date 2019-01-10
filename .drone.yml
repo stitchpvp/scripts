@@ -10,3 +10,9 @@ pipeline:
     secrets: [ slack_webhook ]
     when:
       status: [ success, failure ]
+
+  deploy:
+    image: plugins/webhook
+    secrets: [ webhook_username, webhook_password, webhook_urls ]
+    when:
+      status: [ success ]
