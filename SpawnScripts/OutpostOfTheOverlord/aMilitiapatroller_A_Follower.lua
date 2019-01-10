@@ -21,11 +21,11 @@ function followguard_A(NPC)
 
   if sli == 399195 then
 	  if GetDistance(NPC, guard_A_placement) >= 8 then
-		    speed = 5
-        MoveToLocation(NPC, leaderX - 2, leaderY, leaderZ, speed)
+			speed = 5
+			MoveToLocation(NPC, leaderX - 2, leaderY, leaderZ, speed)
     else
-        speed = 2
-        MoveToLocation(NPC, leaderX - 2, leaderY, leaderZ, speed)
+      speed = 2
+      MoveToLocation(NPC, leaderX - 2, leaderY, leaderZ, speed)
 		end
 	elseif sli == 399239 then
 		if GetDistance(NPC, guard_A_placement) >= 8 then
@@ -37,8 +37,8 @@ function followguard_A(NPC)
 		end
 	elseif sli == 399179 then
 		if GetDistance(NPC, guard_A_placement) >= 8 then
-      MoveToLocation(NPC, leaderX + 2, leaderY, leaderZ, speed)
 			speed = 5
+      MoveToLocation(NPC, leaderX + 2, leaderY, leaderZ, speed)
     else
       speed = 2
       MoveToLocation(NPC, leaderX + 2, leaderY, leaderZ, speed)
