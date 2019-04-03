@@ -7,7 +7,7 @@ function cast(Caster, Target, Attributes, Avoidance, Mitigation)
   AddSpellBonus(Target, 201, Mitigation)
   AddSpellBonus(Target, 202, Mitigation)
   AddSpellBonus(Target, 203, Mitigation)
-  AddProc(Target, 2, 25)
+  AddProc(Target, 2, 10)
 end
 
 function proc(Caster, Target, ProcType)

@@ -4,10 +4,10 @@ function cast(Caster, Target)
 end
 
 function proc(Caster, Target, ProcType, MinDmg)
-  if GetPlayerTriggerCount(Target) > 0 then
+  if GetPlayerTriggerCount(Caster) > 0 then
     local spell_caster = GetCaster()
 
-    RemoveTriggerFromPlayer(Target)
+    RemoveTriggerFromPlayer(Caster)
 
     ProcDamage(spell_caster, Target, "Fae Fires", 3, MinDmg, MinDmg)
   end
