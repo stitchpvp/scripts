@@ -6,6 +6,7 @@ function cast(Caster, Target, Heal, Attribute, Skills, Power)
   AddSkillBonus(Target, GetSkillIDByName("Disruption"), Skills)
   AddSkillBonus(Target, GetSkillIDByName("Subjugation"), Skills)
   AddSkillBonus(Target, GetSkillIDByName("Focus"), Skills)
+  SetIllusion(Target, 212)
 end
 
 function tick(Caster, Target, Heal, Attribute, Skills, Power)
@@ -15,4 +16,5 @@ end
 function remove(Caster, Target)
   RemoveSpellBonus(Target)
   RemoveSkillBonus(Target)
+  SetIllusion(Target, 0)
 end
