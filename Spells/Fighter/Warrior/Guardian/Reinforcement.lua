@@ -3,7 +3,7 @@ function cast(Caster, Target)
 end
 
 function proc(Caster, Target, ProcType, Hate)
-  AddHate(Caster, Target, MinHate, 1)
+  AddHate(Caster, Target, Hate, 1)
 end
 
 function remove(Caster, Target)
