@@ -14,4 +14,5 @@ end
 
 function remove(Caster, Target)
   RemoveSkillBonus(Target)
+  RemoveProc(Target)
 end
